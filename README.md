@@ -21,6 +21,8 @@ This project constitutes a collaborative work ("open source"). Federal employees
 
 ## License
 
+This project is licensed under the Eclipse Public License - v 1.0. Visit the [license](https://github.com/info-sharing-environment/NIEM-Modeling-Tool/blob/master/license.md) file for details.
+
 ## Privacy
 
 Comments, pull requests and any other messages received through this repository may be subject to the [Presidential Records Act](http://www.archives.gov/about/laws/presidential-records.html) and may be archived.
