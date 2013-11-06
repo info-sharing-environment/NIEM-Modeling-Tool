@@ -3,6 +3,8 @@ NIEM-Modeling-Tool
 
 NIEM UML Modeling Tool
 
+Watch this repo or sign up for [email updates](https://public.govdelivery.com/accounts/USODNIISE/subscriber/new?topic_id=USODNIISE_35) about this tool. We expect to launch beta here within the next week.
+
 ## Problem this Solves
 
 This simplifies building NIEM exchanges. (more coming soon)
