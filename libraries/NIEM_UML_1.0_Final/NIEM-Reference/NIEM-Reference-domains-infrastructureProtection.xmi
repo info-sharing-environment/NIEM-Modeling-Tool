@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="UTF-8"?><xmi:XMI xmlns:xmi="http://www.omg.org/spec/XMI/20110701">
+	
+	
+	
+	<uml:Model xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile" xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Model_Package_Description_Profile="http://www.omg.org/spec/NIEM-UML/20120501/Model_Package_Description_Profile" xmlns:uml="http://www.omg.org/spec/UML/20110701" xmi:type="uml:Model" xmi:id="_niem" name="niem"><packagedElement xmi:type="uml:Package" xmi:id="_niem-domains" name="domains">
+				
+				<packagedElement xmi:type="uml:Package" xmi:id="_niem-domains-infrastructureProtection" name="infrastructureProtection"><packagedElement xmi:type="uml:Package" xmi:id="_niem-domains-infrastructureProtection-2.1" name="2.1">
+						<packagedElement xmi:type="uml:Package" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection" name="infrastructureProtection">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-ownedComment" body="Infrastructure Protection">
+								<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection"/>
+							</ownedComment>
+							
+							<packagedElement xmi:type="uml:Class" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType" name="AssetCategoryType">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-ownedComment" body="A data type for a kind of asset.">
+									<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType"/>
+								</ownedComment>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-AssetCategoryName" name="AssetCategoryName" aggregation="composite">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-core#_niem-niem-core-2.0-niem-core-TextType">
+										
+									</type>
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-AssetCategoryName-ownedComment" body="A category name for a kind of asset.">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-AssetCategoryName"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-AssetCategoryName-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-AssetCategoryName-upperValue" value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-AssetCategoryID" name="AssetCategoryID" aggregation="composite">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-string">
+										
+									</type>
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-AssetCategoryID-ownedComment" body="An identifier of a kind of asset.">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-AssetCategoryID"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-AssetCategoryID-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-AssetCategoryID-upperValue" value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-SubSegmentName" name="SubSegmentName" aggregation="composite">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-core#_niem-niem-core-2.0-niem-core-TextType">
+										
+									</type>
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-SubSegmentName-ownedComment" body="The major grouping name for infrastructure to which the asset belongs.">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-SubSegmentName"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-SubSegmentName-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-SubSegmentName-upperValue" value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-Asset" name="Asset" aggregation="composite" type="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType" association="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-14">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-Asset-ownedComment" body="A data type for an asset in an infrastructure.">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-Asset"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-Asset-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-Asset-upperValue" value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-AssetCategoryDescriptionText" name="AssetCategoryDescriptionText" aggregation="composite">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-core#_niem-niem-core-2.0-niem-core-TextType">
+										
+									</type>
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-AssetCategoryDescriptionText-ownedComment" body="A description of the Asset Category based on the description provided in the Infrastructure Data Taxonomy (IDT).">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-AssetCategoryDescriptionText"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-AssetCategoryDescriptionText-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-AssetCategoryDescriptionText-upperValue" value="*"/>
+								</ownedAttribute>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Class" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder" name="NamespaceElementPropertyHolder">
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder-SubSegmentName" name="SubSegmentName" aggregation="composite">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-core#_niem-niem-core-2.0-niem-core-TextType">
+										
+									</type>
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder-SubSegmentName-ownedComment" body="The major grouping name for infrastructure to which the asset belongs.">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder-SubSegmentName"/>
+									</ownedComment>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder-SectorName" name="SectorName" aggregation="composite">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-core#_niem-niem-core-2.0-niem-core-TextType">
+										
+									</type>
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder-SectorName-ownedComment" body="The major grouping name of critical infrastructure to which the facility belongs.">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder-SectorName"/>
+									</ownedComment>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder-SubSectorName" name="SubSectorName" aggregation="composite">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-core#_niem-niem-core-2.0-niem-core-TextType">
+										
+									</type>
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder-SubSectorName-ownedComment" body="The major grouping name for infrastructure to which the asset belongs.">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder-SubSectorName"/>
+									</ownedComment>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder-SegmentName" name="SegmentName" aggregation="composite">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-core#_niem-niem-core-2.0-niem-core-TextType">
+										
+									</type>
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder-SegmentName-ownedComment" body="The major grouping name for infrastructure to which the asset belongs.">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder-SegmentName"/>
+									</ownedComment>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder-AssetCategoryName" name="AssetCategoryName" aggregation="composite">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-core#_niem-niem-core-2.0-niem-core-TextType">
+										
+									</type>
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder-AssetCategoryName-ownedComment" body="A category name for a kind of asset.">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder-AssetCategoryName"/>
+									</ownedComment>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder-Sector" name="Sector" aggregation="composite" type="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder-Sector-ownedComment" body="A sector (i.e., major grouping for infrastructure) to which the asset belongs. There are 18 such Sectors as outlined in the National Infrastructure Protection Plan.">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder-Sector"/>
+									</ownedComment>
+								</ownedAttribute>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Class" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType" name="AssetType">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-ownedComment" body="A data type for an asset in an infrastructure.">
+									<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType"/>
+								</ownedComment>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetName" name="AssetName" aggregation="composite">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-core#_niem-niem-core-2.0-niem-core-TextType">
+										
+									</type>
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetName-ownedComment" body="A name of asset (as determined by asset owner or identified on legal documentation) ">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetName"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetName-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetName-upperValue" value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetID" name="AssetID" aggregation="composite">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-string">
+										
+									</type>
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetID-ownedComment" body="A database-unique identifier for asset. ">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetID"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetID-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetID-upperValue" value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetAliasName" name="AssetAliasName" aggregation="composite">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-core#_niem-niem-core-2.0-niem-core-TextType">
+										
+									</type>
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetAliasName-ownedComment" body="Additional names, acronyms, or identifiers used to call out the asset">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetAliasName"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetAliasName-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetAliasName-upperValue" value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetStatusCode" name="AssetStatusCode" aggregation="composite" type="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetStatusCodeType">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetStatusCode-ownedComment" body="A status of an asset.">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetStatusCode"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetStatusCode-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetStatusCode-upperValue" value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetCategoryName" name="AssetCategoryName" aggregation="composite">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-core#_niem-niem-core-2.0-niem-core-TextType">
+										
+									</type>
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetCategoryName-ownedComment" body="A category name for a kind of asset.">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetCategoryName"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetCategoryName-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetCategoryName-upperValue" value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-Organization" name="Organization" aggregation="composite" association="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-7">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-core#_niem-niem-core-2.0-niem-core-OrganizationType">
+										
+									</type>
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-Organization-ownedComment" body="A unit which conducts some sort of business or operations.">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-Organization"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-Organization-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-Organization-upperValue" value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-Person" name="Person" aggregation="composite" association="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-9">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-core#_niem-niem-core-2.0-niem-core-PersonType">
+										
+									</type>
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-Person-ownedComment" body="A human being.">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-Person"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-Person-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-Person-upperValue" value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-ContactInformation" name="ContactInformation" aggregation="composite" association="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-11">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-core#_niem-niem-core-2.0-niem-core-ContactInformationType">
+										
+									</type>
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-ContactInformation-ownedComment" body="Details about how to contact a person or an organization.">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-ContactInformation"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-ContactInformation-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-ContactInformation-upperValue" value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-Location" name="Location" aggregation="composite" association="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-13">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-core#_niem-niem-core-2.0-niem-core-LocationType">
+										
+									</type>
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-Location-ownedComment" body="Details about a physical location.">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-Location"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-Location-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-Location-upperValue" value="*"/>
+								</ownedAttribute>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetStatusCodeType" name="AssetStatusCodeType">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetStatusCodeType-ownedComment" body="A data type for a status of an asset.">
+									<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetStatusCodeType"/>
+								</ownedComment>
+								<generalization xmi:type="uml:Generalization" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetStatusCodeType-generalization" general="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetStatusCodeSimpleType"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetStatusCodeSimpleType" name="AssetStatusCodeSimpleType">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetStatusCodeSimpleType-ownedComment" body="A data type for a status of an asset.">
+									<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetStatusCodeSimpleType"/>
+								</ownedComment>
+								<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetStatusCodeSimpleType-3" name="3">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetStatusCodeSimpleType-3-ownedComment" body="Retired">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetStatusCodeSimpleType-3"/>
+									</ownedComment>
+								</ownedLiteral>
+								<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetStatusCodeSimpleType-2" name="2">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetStatusCodeSimpleType-2-ownedComment" body="Temporarily Out of Service">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetStatusCodeSimpleType-2"/>
+									</ownedComment>
+								</ownedLiteral>
+								<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetStatusCodeSimpleType-1" name="1">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetStatusCodeSimpleType-1-ownedComment" body="Functioning">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetStatusCodeSimpleType-1"/>
+									</ownedComment>
+								</ownedLiteral>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-6">
+								<client xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-Organization"/>
+								<supplier href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-core#_niem-niem-core-2.0-niem-core-NamespaceElementPropertyHolder-Organization">
+									
+								</supplier>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Association" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-7">
+								<memberEnd xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-Organization"/>
+								<memberEnd xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-7-ownedEnd"/>
+								<ownedEnd xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-7-ownedEnd" isUnique="false" type="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType" association="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-7">
+									
+									
+								</ownedEnd>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-8">
+								<client xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-Person"/>
+								<supplier href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-core#_niem-niem-core-2.0-niem-core-IdentityType-Person">
+									
+								</supplier>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Association" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-9">
+								<memberEnd xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-Person"/>
+								<memberEnd xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-9-ownedEnd"/>
+								<ownedEnd xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-9-ownedEnd" isUnique="false" type="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType" association="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-9">
+									
+									
+								</ownedEnd>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-10">
+								<client xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-ContactInformation"/>
+								<supplier href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-core#_niem-niem-core-2.0-niem-core-NamespaceElementPropertyHolder-ContactInformation">
+									
+								</supplier>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Association" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-11">
+								<memberEnd xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-ContactInformation"/>
+								<memberEnd xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-11-ownedEnd"/>
+								<ownedEnd xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-11-ownedEnd" isUnique="false" type="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType" association="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-11">
+									
+									
+								</ownedEnd>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-12">
+								<client xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-Location"/>
+								<supplier href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-core#_niem-niem-core-2.0-niem-core-PersonEncounterType-Location">
+									
+								</supplier>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Association" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-13">
+								<memberEnd xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-Location"/>
+								<memberEnd xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-13-ownedEnd"/>
+								<ownedEnd xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-13-ownedEnd" isUnique="false" type="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType" association="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-13">
+									
+									
+								</ownedEnd>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Association" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-14">
+								<memberEnd xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-Asset"/>
+								<memberEnd xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-14-ownedEnd"/>
+								<ownedEnd xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-14-ownedEnd" isUnique="false" type="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType" association="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-14">
+									
+									
+								</ownedEnd>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Class" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType" name="SectorType">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType-ownedComment" body="A data type for a sector (i.e., major grouping of critical infrastructure) to which the asset belongs. There are 18 such Sectors as outlined in the National Infrastructure Protection Plan.">
+									<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType"/>
+								</ownedComment>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType-SectorName" name="SectorName" aggregation="composite">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-core#_niem-niem-core-2.0-niem-core-TextType">
+										
+									</type>
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType-SectorName-ownedComment" body="The major grouping name of critical infrastructure to which the facility belongs.">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType-SectorName"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType-SectorName-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType-SectorName-upperValue" value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType-SubSector" name="SubSector" aggregation="composite" type="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType" association="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-22">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType-SubSector-ownedComment" body="A major grouping within the sector to which the asset belongs  -see Infrastructure Taxonomy Ver.3">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType-SubSector"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType-SubSector-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType-SubSector-upperValue" value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType-SectorTaxonomyID" name="SectorTaxonomyID" aggregation="composite">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-string">
+										
+									</type>
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType-SectorTaxonomyID-ownedComment" body="The identification of each sector as used in the Taxonomy -see Infrastructure Taxonomy Ver.3">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType-SectorTaxonomyID"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType-SectorTaxonomyID-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType-SectorTaxonomyID-upperValue" value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType-SectorTaxonomyDescriptionText" name="SectorTaxonomyDescriptionText" aggregation="composite">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-core#_niem-niem-core-2.0-niem-core-TextType">
+										
+									</type>
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType-SectorTaxonomyDescriptionText-ownedComment" body="A description of the Sector based on the description provided in the Infrastructure Data Taxonomy (IDT).">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType-SectorTaxonomyDescriptionText"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType-SectorTaxonomyDescriptionText-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType-SectorTaxonomyDescriptionText-upperValue" value="*"/>
+								</ownedAttribute>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Class" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType" name="SubsectorType">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-ownedComment" body="A data type for a major grouping within the sector to which the asset belongs.">
+									<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType"/>
+								</ownedComment>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-SubSectorName" name="SubSectorName" aggregation="composite">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-core#_niem-niem-core-2.0-niem-core-TextType">
+										
+									</type>
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-SubSectorName-ownedComment" body="The major grouping name for infrastructure to which the asset belongs.">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-SubSectorName"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-SubSectorName-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-SubSectorName-upperValue" value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-SubSectorTaxonomyID" name="SubSectorTaxonomyID" aggregation="composite">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-string">
+										
+									</type>
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-SubSectorTaxonomyID-ownedComment" body="The major grouping identification of an infrastructure to which the asset belongs.">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-SubSectorTaxonomyID"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-SubSectorTaxonomyID-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-SubSectorTaxonomyID-upperValue" value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-SectorName" name="SectorName" aggregation="composite">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-core#_niem-niem-core-2.0-niem-core-TextType">
+										
+									</type>
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-SectorName-ownedComment" body="The major grouping name of critical infrastructure to which the facility belongs.">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-SectorName"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-SectorName-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-SectorName-upperValue" value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-Segment" name="Segment" aggregation="composite" type="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType" association="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-21">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-Segment-ownedComment" body="A major grouping within the subsector to which the asset belongs.">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-Segment"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-Segment-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-Segment-upperValue" value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-SubSectorTaxonomyDescriptionText" name="SubSectorTaxonomyDescriptionText" aggregation="composite">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-core#_niem-niem-core-2.0-niem-core-TextType">
+										
+									</type>
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-SubSectorTaxonomyDescriptionText-ownedComment" body="A description of the Sub Sector based on the description provided in the Infrastructure Data Taxonomy (IDT).">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-SubSectorTaxonomyDescriptionText"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-SubSectorTaxonomyDescriptionText-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-SubSectorTaxonomyDescriptionText-upperValue" value="*"/>
+								</ownedAttribute>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Class" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType" name="SegmentType">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-ownedComment" body="A data type for a major grouping within the subsector to which the asset belongs.">
+									<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType"/>
+								</ownedComment>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SegmentName" name="SegmentName" aggregation="composite">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-core#_niem-niem-core-2.0-niem-core-TextType">
+										
+									</type>
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SegmentName-ownedComment" body="The major grouping name for infrastructure to which the asset belongs.">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SegmentName"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SegmentName-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SegmentName-upperValue" value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SegmentTaxonomyID" name="SegmentTaxonomyID" aggregation="composite">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-string">
+										
+									</type>
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SegmentTaxonomyID-ownedComment" body="The major grouping identification of an infrastructure to which the asset belongs.">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SegmentTaxonomyID"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SegmentTaxonomyID-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SegmentTaxonomyID-upperValue" value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SubSectorName" name="SubSectorName" aggregation="composite">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-core#_niem-niem-core-2.0-niem-core-TextType">
+										
+									</type>
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SubSectorName-ownedComment" body="The major grouping name for infrastructure to which the asset belongs.">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SubSectorName"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SubSectorName-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SubSectorName-upperValue" value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SubSegment" name="SubSegment" aggregation="composite" type="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType" association="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-20">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SubSegment-ownedComment" body="A data type for a major grouping within the segment to which the asset belongs.">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SubSegment"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SubSegment-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SubSegment-upperValue" value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SegmentTaxonomyDescriptionText" name="SegmentTaxonomyDescriptionText" aggregation="composite">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-core#_niem-niem-core-2.0-niem-core-TextType">
+										
+									</type>
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SegmentTaxonomyDescriptionText-ownedComment" body="A description of the Segment based on the description provided in the Infrastructure Data Taxonomy (IDT).">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SegmentTaxonomyDescriptionText"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SegmentTaxonomyDescriptionText-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SegmentTaxonomyDescriptionText-upperValue" value="*"/>
+								</ownedAttribute>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Class" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType" name="SubsegmentType">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-ownedComment" body="A data type for a major grouping within the segment to which the asset belongs.">
+									<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType"/>
+								</ownedComment>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-SubSegmentName" name="SubSegmentName" aggregation="composite">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-core#_niem-niem-core-2.0-niem-core-TextType">
+										
+									</type>
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-SubSegmentName-ownedComment" body="The major grouping name for infrastructure to which the asset belongs.">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-SubSegmentName"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-SubSegmentName-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-SubSegmentName-upperValue" value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-SubSegmentTaxonomyID" name="SubSegmentTaxonomyID" aggregation="composite">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-string">
+										
+									</type>
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-SubSegmentTaxonomyID-ownedComment" body="The major grouping identification of an infrastructure to which the asset belongs.">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-SubSegmentTaxonomyID"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-SubSegmentTaxonomyID-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-SubSegmentTaxonomyID-upperValue" value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-SegmentName" name="SegmentName" aggregation="composite">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-core#_niem-niem-core-2.0-niem-core-TextType">
+										
+									</type>
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-SegmentName-ownedComment" body="The major grouping name for infrastructure to which the asset belongs.">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-SegmentName"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-SegmentName-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-SegmentName-upperValue" value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-AssetCategory" name="AssetCategory" aggregation="composite" type="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType" association="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-19">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-AssetCategory-ownedComment" body="A category for a kind of asset.">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-AssetCategory"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-AssetCategory-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-AssetCategory-upperValue" value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-SubSegmentDescriptionText" name="SubSegmentDescriptionText" aggregation="composite">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-core#_niem-niem-core-2.0-niem-core-TextType">
+										
+									</type>
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-SubSegmentDescriptionText-ownedComment" body="A description of the Sub Segment based on the description provided in the Infrastructure Data Taxonomy (IDT).">
+										<annotatedElement xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-SubSegmentDescriptionText"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-SubSegmentDescriptionText-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-SubSegmentDescriptionText-upperValue" value="*"/>
+								</ownedAttribute>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Association" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-19">
+								<memberEnd xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-AssetCategory"/>
+								<memberEnd xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-19-ownedEnd"/>
+								<ownedEnd xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-19-ownedEnd" isUnique="false" type="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType" association="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-19">
+									
+									
+								</ownedEnd>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Association" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-20">
+								<memberEnd xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SubSegment"/>
+								<memberEnd xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-20-ownedEnd"/>
+								<ownedEnd xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-20-ownedEnd" isUnique="false" type="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType" association="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-20">
+									
+									
+								</ownedEnd>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Association" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-21">
+								<memberEnd xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-Segment"/>
+								<memberEnd xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-21-ownedEnd"/>
+								<ownedEnd xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-21-ownedEnd" isUnique="false" type="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType" association="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-21">
+									
+									
+								</ownedEnd>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Association" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-22">
+								<memberEnd xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType-SubSector"/>
+								<memberEnd xmi:idref="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-22-ownedEnd"/>
+								<ownedEnd xmi:type="uml:Property" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-22-ownedEnd" isUnique="false" type="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType" association="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-22">
+									
+									
+								</ownedEnd>
+							</packagedElement>
+						</packagedElement>
+					</packagedElement><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-domains-infrastructureProtection-profileApplication-1">
+						<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_PIM_Profile">
+							
+						</appliedProfile>
+					</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-domains-infrastructureProtection-profileApplication-2">
+						<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-Model_Package_Description_Profile">
+							
+						</appliedProfile>
+					</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-domains-infrastructureProtection-profileApplication-3">
+						<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_Common_Profile">
+							
+						</appliedProfile>
+					</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-domains-infrastructureProtection-profileApplication-4">
+						<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_PSM_Profile">
+							
+						</appliedProfile>
+					</profileApplication></packagedElement>
+			</packagedElement></uml:Model>
+	
+	
+	
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-SectorName-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-SectorName" nillable="true" kind="element"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType-SectorTaxonomyDescriptionText-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType-SectorTaxonomyDescriptionText" nillable="true" kind="element"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SegmentName-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SegmentName" nillable="true" kind="element"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-AssetCategoryDescriptionText-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-AssetCategoryDescriptionText" nillable="true" kind="element"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-AssetCategoryName-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-AssetCategoryName" nillable="true" kind="element"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-Segment-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-Segment" nillable="true" kind="element"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder-SegmentName-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder-SegmentName" nillable="true" kind="element"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SubSectorName-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SubSectorName" nillable="true" kind="element"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-SubSectorTaxonomyID-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-SubSectorTaxonomyID" nillable="true" kind="element"/>
+	
+	<NIEM_Common_Profile:References xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-6-appliedStereotypeInstance" base_Realization="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-6"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-SubSegmentName-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-SubSegmentName" nillable="true" kind="element"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-ContactInformation-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-ContactInformation" nillable="true" kind="element"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-SubSectorTaxonomyDescriptionText-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-SubSectorTaxonomyDescriptionText" nillable="true" kind="element"/>
+	
+	
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-SubSectorName-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsectorType-SubSectorName" nillable="true" kind="element"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SubSegment-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SubSegment" nillable="true" kind="element"/>
+	
+	
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetID-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetID" nillable="true" kind="element"/>
+	
+	<NIEM_Common_Profile:References xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-10-appliedStereotypeInstance" base_Realization="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-10"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-Location-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-Location" nillable="true" kind="element"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-AssetCategory-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-AssetCategory" nillable="true" kind="element"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-AssetCategoryID-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-AssetCategoryID" nillable="true" kind="element"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetName-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetName" nillable="true" kind="element"/>
+	
+	<NIEM_Common_Profile:References xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-8-appliedStereotypeInstance" base_Realization="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-8"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetStatusCode-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetStatusCode" nillable="true" kind="element"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder-SubSegmentName-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder-SubSegmentName" nillable="true" kind="element"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType-SectorName-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType-SectorName" nillable="true" kind="element"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder-SectorName-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder-SectorName" nillable="true" kind="element"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder-AssetCategoryName-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder-AssetCategoryName" nillable="true" kind="element"/>
+	
+	
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType-SubSector-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType-SubSector" nillable="true" kind="element"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SegmentTaxonomyID-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SegmentTaxonomyID" nillable="true" kind="element"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SegmentTaxonomyDescriptionText-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SegmentType-SegmentTaxonomyDescriptionText" nillable="true" kind="element"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetAliasName-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetAliasName" nillable="true" kind="element"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-SubSegmentName-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-SubSegmentName" nillable="true" kind="element"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetCategoryName-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-AssetCategoryName" nillable="true" kind="element"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-SubSegmentTaxonomyID-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-SubSegmentTaxonomyID" nillable="true" kind="element"/>
+	
+	<NIEM_PIM_Profile:InformationModel xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-appliedStereotypeInstance" base_Package="_niem-domains-infrastructureProtection-2.1-infrastructureProtection" version="1" defaultPurpose="reference" isConformant="true" targetNamespace="http://niem.gov/niem/domains/infrastructureProtection/2.1"/>
+	
+	<NIEM_Common_Profile:References xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-12-appliedStereotypeInstance" base_Realization="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-packagedElement-12"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder-Sector-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder-Sector" nillable="true" kind="element"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-Organization-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-Organization" nillable="true" kind="element"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder-SubSectorName-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder-SubSectorName" nillable="true" kind="element"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-Person-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetType-Person" nillable="true" kind="element"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-Asset-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-AssetCategoryType-Asset" nillable="true" kind="element"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-SubSegmentDescriptionText-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-SubSegmentDescriptionText" nillable="true" kind="element"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-SegmentName-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SubsegmentType-SegmentName" nillable="true" kind="element"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType-SectorTaxonomyID-appliedStereotypeInstance" base_Property="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-SectorType-SectorTaxonomyID" nillable="true" kind="element"/>
+	
+	<NIEM_Common_Profile:PropertyHolder xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder-appliedStereotypeInstance" base_Class="_niem-domains-infrastructureProtection-2.1-infrastructureProtection-NamespaceElementPropertyHolder"/>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</xmi:XMI>

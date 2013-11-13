@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?><xmi:XMI xmlns:xmi="http://www.omg.org/spec/XMI/20110701">
+	
+	
+	
+	<uml:Model xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile" xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Model_Package_Description_Profile="http://www.omg.org/spec/NIEM-UML/20120501/Model_Package_Description_Profile" xmlns:uml="http://www.omg.org/spec/UML/20110701" xmi:type="uml:Model" xmi:id="_niem" name="niem"><packagedElement xmi:type="uml:Package" xmi:id="_niem-nlets" name="nlets"><packagedElement xmi:type="uml:Package" xmi:id="_niem-nlets-2.1" name="2.1">
+					<packagedElement xmi:type="uml:Package" xmi:id="_niem-nlets-2.1-nlets" name="nlets">
+						<ownedComment xmi:type="uml:Comment" xmi:id="_niem-nlets-2.1-nlets-ownedComment" body="NLETS - The International Justice and Public Safety Information Sharing Network">
+							<annotatedElement xmi:idref="_niem-nlets-2.1-nlets"/>
+						</ownedComment>
+						
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-nlets-2.1-nlets-AgencyAuthorizationCodeSimpleType" name="AgencyAuthorizationCodeSimpleType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-nlets-2.1-nlets-AgencyAuthorizationCodeSimpleType-ownedComment" body="A data type for an agency's access category to data.">
+								<annotatedElement xmi:idref="_niem-nlets-2.1-nlets-AgencyAuthorizationCodeSimpleType"/>
+							</ownedComment>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-nlets-2.1-nlets-AgencyAuthorizationCodeSimpleType-C" name="C">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-nlets-2.1-nlets-AgencyAuthorizationCodeSimpleType-C-ownedComment" body="criminal history access">
+									<annotatedElement xmi:idref="_niem-nlets-2.1-nlets-AgencyAuthorizationCodeSimpleType-C"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-nlets-2.1-nlets-AgencyAuthorizationCodeSimpleType-Z" name="Z">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-nlets-2.1-nlets-AgencyAuthorizationCodeSimpleType-Z-ownedComment" body="other NLETS message types">
+									<annotatedElement xmi:idref="_niem-nlets-2.1-nlets-AgencyAuthorizationCodeSimpleType-Z"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-nlets-2.1-nlets-AgencyAuthorizationCodeSimpleType-D" name="D">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-nlets-2.1-nlets-AgencyAuthorizationCodeSimpleType-D-ownedComment" body="DMV data access">
+									<annotatedElement xmi:idref="_niem-nlets-2.1-nlets-AgencyAuthorizationCodeSimpleType-D"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-nlets-2.1-nlets-AgencyAuthorizationCodeSimpleType-A" name="A">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-nlets-2.1-nlets-AgencyAuthorizationCodeSimpleType-A-ownedComment" body="administrative messages">
+									<annotatedElement xmi:idref="_niem-nlets-2.1-nlets-AgencyAuthorizationCodeSimpleType-A"/>
+								</ownedComment>
+							</ownedLiteral>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Class" xmi:id="_niem-nlets-2.1-nlets-NamespaceElementPropertyHolder" name="NamespaceElementPropertyHolder"/>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-nlets-2.1-nlets-AgencyAuthorizationCodeType" name="AgencyAuthorizationCodeType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-nlets-2.1-nlets-AgencyAuthorizationCodeType-ownedComment" body="A data type for an agency's access category to data.">
+								<annotatedElement xmi:idref="_niem-nlets-2.1-nlets-AgencyAuthorizationCodeType"/>
+							</ownedComment>
+							<generalization xmi:type="uml:Generalization" xmi:id="_niem-nlets-2.1-nlets-AgencyAuthorizationCodeType-generalization" general="_niem-nlets-2.1-nlets-AgencyAuthorizationCodeSimpleType"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-nlets-2.1-nlets-AgencyServiceHoursCodeSimpleType" name="AgencyServiceHoursCodeSimpleType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-nlets-2.1-nlets-AgencyServiceHoursCodeSimpleType-ownedComment" body="A data type for the availability of an agency.">
+								<annotatedElement xmi:idref="_niem-nlets-2.1-nlets-AgencyServiceHoursCodeSimpleType"/>
+							</ownedComment>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-nlets-2.1-nlets-AgencyServiceHoursCodeSimpleType-D" name="D">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-nlets-2.1-nlets-AgencyServiceHoursCodeSimpleType-D-ownedComment" body="Not 24 hr service, w/o terminal.">
+									<annotatedElement xmi:idref="_niem-nlets-2.1-nlets-AgencyServiceHoursCodeSimpleType-D"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-nlets-2.1-nlets-AgencyServiceHoursCodeSimpleType-A" name="A">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-nlets-2.1-nlets-AgencyServiceHoursCodeSimpleType-A-ownedComment" body="24 hr service w/terminal.">
+									<annotatedElement xmi:idref="_niem-nlets-2.1-nlets-AgencyServiceHoursCodeSimpleType-A"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-nlets-2.1-nlets-AgencyServiceHoursCodeSimpleType-B" name="B">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-nlets-2.1-nlets-AgencyServiceHoursCodeSimpleType-B-ownedComment" body="Not 24 hr service w/terminal.">
+									<annotatedElement xmi:idref="_niem-nlets-2.1-nlets-AgencyServiceHoursCodeSimpleType-B"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-nlets-2.1-nlets-AgencyServiceHoursCodeSimpleType-C" name="C">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-nlets-2.1-nlets-AgencyServiceHoursCodeSimpleType-C-ownedComment" body="24 hr service, w/o terminal.">
+									<annotatedElement xmi:idref="_niem-nlets-2.1-nlets-AgencyServiceHoursCodeSimpleType-C"/>
+								</ownedComment>
+							</ownedLiteral>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-nlets-2.1-nlets-AgencyServiceHoursCodeType" name="AgencyServiceHoursCodeType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-nlets-2.1-nlets-AgencyServiceHoursCodeType-ownedComment" body="A data type for the availability of an agency.">
+								<annotatedElement xmi:idref="_niem-nlets-2.1-nlets-AgencyServiceHoursCodeType"/>
+							</ownedComment>
+							<generalization xmi:type="uml:Generalization" xmi:id="_niem-nlets-2.1-nlets-AgencyServiceHoursCodeType-generalization" general="_niem-nlets-2.1-nlets-AgencyServiceHoursCodeSimpleType"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType" name="OrganizationCategoryCodeSimpleType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-ownedComment" body="A data type for the functional kinds of an organization.">
+								<annotatedElement xmi:idref="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType"/>
+							</ownedComment>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-JA" name="JA">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-JA-ownedComment" body="Any prosecutor.">
+									<annotatedElement xmi:idref="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-JA"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-NJ" name="NJ">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-NJ-ownedComment" body="Non-criminal justice agencies">
+									<annotatedElement xmi:idref="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-NJ"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-CJ" name="CJ">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-CJ-ownedComment" body="Will return all defined non-law enforcement criminal justice agencies and should be used as a general type for all ORIs ending in B, M, N, or Y.">
+									<annotatedElement xmi:idref="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-CJ"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-JJ" name="JJ">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-JJ-ownedComment" body="Any court agency.">
+									<annotatedElement xmi:idref="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-JJ"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-SO" name="SO">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-SO-ownedComment" body="Any agency of county government incl. parishes where apropos.">
+									<annotatedElement xmi:idref="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-SO"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-LE" name="LE">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-LE-ownedComment" body="Used as a catchall for any agency not fitting the above criteria.  May be used on inquiry or record creation.">
+									<annotatedElement xmi:idref="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-LE"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-FE" name="FE">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-FE-ownedComment" body="Federal agency.">
+									<annotatedElement xmi:idref="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-FE"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-JG" name="JG">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-JG-ownedComment" body="Any probation agency.">
+									<annotatedElement xmi:idref="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-JG"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-SA" name="SA">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-SA-ownedComment" body="Any agency employed by a state with statewide jurisdiction.">
+									<annotatedElement xmi:idref="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-SA"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-JC" name="JC">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-JC-ownedComment" body="Any corrections agency.">
+									<annotatedElement xmi:idref="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-JC"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-PD" name="PD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-PD-ownedComment" body="Any agency of city government.">
+									<annotatedElement xmi:idref="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-PD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-JF" name="JF">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-JF-ownedComment" body="Any Federal non-law enforcement criminal justice agency.">
+									<annotatedElement xmi:idref="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType-JF"/>
+								</ownedComment>
+							</ownedLiteral>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-nlets-2.1-nlets-OrganizationCategoryCodeType" name="OrganizationCategoryCodeType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-nlets-2.1-nlets-OrganizationCategoryCodeType-ownedComment" body="A data type for the functional kinds of an organization.">
+								<annotatedElement xmi:idref="_niem-nlets-2.1-nlets-OrganizationCategoryCodeType"/>
+							</ownedComment>
+							<generalization xmi:type="uml:Generalization" xmi:id="_niem-nlets-2.1-nlets-OrganizationCategoryCodeType-generalization" general="_niem-nlets-2.1-nlets-OrganizationCategoryCodeSimpleType"/>
+						</packagedElement>
+					</packagedElement>
+				</packagedElement><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-nlets-profileApplication-1">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_PIM_Profile">
+						
+					</appliedProfile>
+				</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-nlets-profileApplication-2">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-Model_Package_Description_Profile">
+						
+					</appliedProfile>
+				</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-nlets-profileApplication-3">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_Common_Profile">
+						
+					</appliedProfile>
+				</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-nlets-profileApplication-4">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_PSM_Profile">
+						
+					</appliedProfile>
+				</profileApplication></packagedElement></uml:Model>
+	
+	
+	
+	
+	<NIEM_PIM_Profile:InformationModel xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile" xmi:id="_niem-nlets-2.1-nlets-appliedStereotypeInstance" base_Package="_niem-nlets-2.1-nlets" isConformant="true" targetNamespace="http://niem.gov/niem/nlets/2.1" version="1" defaultPurpose="reference"/>
+	
+	<NIEM_Common_Profile:PropertyHolder xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-nlets-2.1-nlets-NamespaceElementPropertyHolder-appliedStereotypeInstance" base_Class="_niem-nlets-2.1-nlets-NamespaceElementPropertyHolder"/>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</xmi:XMI>

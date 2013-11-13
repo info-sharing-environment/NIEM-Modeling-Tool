@@ -1,0 +1,1239 @@
+<?xml version="1.0" encoding="UTF-8"?><xmi:XMI xmlns:xmi="http://www.omg.org/spec/XMI/20110701">
+	
+	
+	
+	<uml:Model xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile" xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Model_Package_Description_Profile="http://www.omg.org/spec/NIEM-UML/20120501/Model_Package_Description_Profile" xmlns:uml="http://www.omg.org/spec/UML/20110701" xmi:type="uml:Model" xmi:id="_niem" name="niem"><packagedElement xmi:type="uml:Package" xmi:id="_niem-icism" name="icism"><packagedElement xmi:type="uml:Package" xmi:id="_niem-icism-2.0" name="2.0">
+					<packagedElement xmi:type="uml:Package" xmi:id="_niem-icism-2.0-icism-metadata" name="icism-metadata">
+						<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-icism-metadata-ownedComment" body="This schema (icism-metadata.xsd) provides a method for using the Intelligence Community Information Security Marking (IC-ISM) standard, Version 2.0, dated 30 April 2004, in NIEM 2.0.  This schema defines a NIEM metadata element derived from s:MetadataType that contains the optional IC-ISM attributes.  Within an instance, an element links through its s:metadata attribute to the appropriate s:id attribute of the IC-ISM metadata container.  This schema cannot and does not use attributeGroups in IC-ISM.">
+							<annotatedElement xmi:idref="_niem-icism-2.0-icism-metadata"/>
+						</ownedComment>
+						
+						<packagedElement xmi:type="uml:Class" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType" name="ICISMMetadataType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-ownedComment" body="A data type for IC-ISM metadata about information security for the content of an element.">
+								<annotatedElement xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType"/>
+							</ownedComment>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-classification" name="classification" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-ClassificationType">
+								<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-classification-lowerValue"/>
+								
+								<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-classification-defaultValue" name="default"/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-ownerProducer" name="ownerProducer" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-ownerProducer_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-ownerProducer-ownedComment" body="&#xA;ISO 3166-1 trigraph(s) of the owner or producer country(ies) and/or&#xA;CAPCO-specified tetragraphs of international organizations.&#xA;Either (a) a single trigraph or tetragraph or (b) a space-delimited&#xA;list of trigraphs followed by tetragraphs. Trigraphs must be in&#xA;alphabetical order and tetragraphs must be in alphabetical order.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-ownerProducer"/>
+								</ownedComment>
+								<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-ownerProducer-lowerValue"/>
+								
+								<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-ownerProducer-defaultValue" name="default"/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-SCIcontrols" name="SCIcontrols" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SCIcontrols_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-SCIcontrols-ownedComment" body="&#xA;Authorized abbreviation(s) of SCI control system(s). Either&#xA;(a) a single abbreviation or (b) a space-delimited list of&#xA;abbreviations in the order prescribed in the CAPCO Register.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-SCIcontrols"/>
+								</ownedComment>
+								<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-SCIcontrols-lowerValue"/>
+								
+								<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-SCIcontrols-defaultValue" name="default"/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-SARIdentifier" name="SARIdentifier" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SARIdentifier_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-SARIdentifier-ownedComment" body="&#xA;Authorized Special Access Required program digraph(s) or&#xA;trigraph(s) preceded by &#34;SAR-&#34;. Either (a) a single digraph or&#xA;trigraph or (b) a space-delimited list of digraphs or trigraphs.&#xA;Example: &#34;SAR-ABC SAR-DEF ...&#34;&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-SARIdentifier"/>
+								</ownedComment>
+								<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-SARIdentifier-lowerValue"/>
+								
+								<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-SARIdentifier-defaultValue" name="default"/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-disseminationControls" name="disseminationControls" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-disseminationControls_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-disseminationControls-ownedComment" body="&#xA;Authorized dissemination control portion mark abbreviation(s).&#xA;Either (a) a single abbreviation or (b) a space-delimited list&#xA;of abbreviations in the order shown in the CAPCO Register.&#xA;Exception: For the &#34;REL&#34; abbreviation, omit the country code&#xA;trigraph(s) and instead place the trigraph(s) in the&#xA;&#34;releasableTo&#34; attribute value.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-disseminationControls"/>
+								</ownedComment>
+								<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-disseminationControls-lowerValue"/>
+								
+								<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-disseminationControls-defaultValue" name="default"/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-FGIsourceOpen" name="FGIsourceOpen" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceOpen_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-FGIsourceOpen-ownedComment" body="&#xA;Non-US classification portion marking for foreign government&#xA;information in a document portion. Use this attribute to record&#xA;a source country when the intent is to post the document to a&#xA;shared space with the source identified.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-FGIsourceOpen"/>
+								</ownedComment>
+								<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-FGIsourceOpen-lowerValue"/>
+								
+								<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-FGIsourceOpen-defaultValue" name="default"/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-FGIsourceProtected" name="FGIsourceProtected" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceProtected_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-FGIsourceProtected-ownedComment" body="&#xA;Non-US classification portion marking for foreign government&#xA;information in a document portion. Use this attribute to record&#xA;a source country when the intent is to filter out the identity of&#xA;the source prior to posting the document to a shared space.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-FGIsourceProtected"/>
+								</ownedComment>
+								<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-FGIsourceProtected-lowerValue"/>
+								
+								<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-FGIsourceProtected-defaultValue" name="default"/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-releasableTo" name="releasableTo" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-releasableTo_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-releasableTo-ownedComment" body="&#xA;ISO 3166-1 trigraphic codes of countries to which the associated&#xA;content can be released. Include &#34;USA&#34; in all instances. Use a space-&#xA;delimited list with &#34;USA&#34; first, followed by the other trigraph(s)&#xA;in alphabetical order.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-releasableTo"/>
+								</ownedComment>
+								<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-releasableTo-lowerValue"/>
+								
+								<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-releasableTo-defaultValue" name="default"/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-nonICmarkings" name="nonICmarkings" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-nonICmarkings_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-nonICmarkings-ownedComment" body="&#xA;Authorized non-IC portion marking abbreviation(s) from the CAPCO&#xA;Register. Either (a) a single non-IC abbreviated marking or&#xA;(b) a space-delimited list of abbreviations in the order shown&#xA;in the CAPCO Register.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-nonICmarkings"/>
+								</ownedComment>
+								<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-nonICmarkings-lowerValue"/>
+								
+								<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-nonICmarkings-defaultValue" name="default"/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-classifiedBy" name="classifiedBy" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classifiedBy_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-classifiedBy-ownedComment" body="&#xA;Use as specified by E.O. 12958.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-classifiedBy"/>
+								</ownedComment>
+								<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-classifiedBy-lowerValue"/>
+								
+								<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-classifiedBy-defaultValue" name="default"/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-classificationReason" name="classificationReason" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classificationReason_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-classificationReason-ownedComment" body="&#xA;A text string containing one or more paragraph numbers, 1.4(a)&#xA;through 1.4(h), taken from E.O. 12958, as amended. Enter the&#xA;paragraph references as they should appear in a&#xA;classification/declassification block.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-classificationReason"/>
+								</ownedComment>
+								<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-classificationReason-lowerValue"/>
+								
+								<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-classificationReason-defaultValue" name="default"/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-derivedFrom" name="derivedFrom" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-derivedFrom_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-derivedFrom-ownedComment" body="&#xA;A text string containing (a) the title and date of a specific source&#xA;document, or (b) the title and date of an organization classification&#xA;guide, or (c) the literal string &#34;Multiple Sources&#34;.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-derivedFrom"/>
+								</ownedComment>
+								<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-derivedFrom-lowerValue"/>
+								
+								<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-derivedFrom-defaultValue" name="default"/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-declassDate" name="declassDate" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassDate_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-declassDate-ownedComment" body="&#xA;A specific date, in the format YYYY-MM-DD, at which the applicable&#xA;information is automatically declassified.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-declassDate"/>
+								</ownedComment>
+								<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-declassDate-lowerValue"/>
+								
+								<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-declassDate-defaultValue" name="default"/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-declassEvent" name="declassEvent" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassEvent_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-declassEvent-ownedComment" body="&#xA;A textual description of an event that triggers declassification.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-declassEvent"/>
+								</ownedComment>
+								<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-declassEvent-lowerValue"/>
+								
+								<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-declassEvent-defaultValue" name="default"/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-declassException" name="declassException" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassException_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-declassException-ownedComment" body="&#xA;One or more of the exceptions to 25-year declassification:&#xA;specify &#34;25X1-human&#34;, &#34;25X1&#34;, &#34;25X2&#34;, ..., &#34;25X9&#34;. If more than&#xA;one exception applies, use a space-delimited list. If &#34;25X1-human&#34;&#xA;applies, it should be first in a list.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-declassException"/>
+								</ownedComment>
+								<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-declassException-lowerValue"/>
+								
+								<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-declassException-defaultValue" name="default"/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-typeOfExemptedSource" name="typeOfExemptedSource" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-typeOfExemptedSource_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-typeOfExemptedSource-ownedComment" body="&#xA;One or more tokens indicating that a source that is exempted from&#xA;automatic declassification applies. Specify &#34;OADR&#34;, &#34;X1&#34;, &#34;X2&#34;, ...,&#xA;&#34;X8&#34;. If more than one applies, use a space-delimited list.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-typeOfExemptedSource"/>
+								</ownedComment>
+								<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-typeOfExemptedSource-lowerValue"/>
+								
+								<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-typeOfExemptedSource-defaultValue" name="default"/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-dateOfExemptedSource" name="dateOfExemptedSource" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-dateOfExemptedSource_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-dateOfExemptedSource-ownedComment" body="&#xA;A specific date, in the format YYYY-MM-DD. Used in conjunction with&#xA;attribute &#34;typeOfExemptedSource.&#34; If there are multiple exempted&#xA;sources, specify the date of the exempted&#xA;source that has the most recent date.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-dateOfExemptedSource"/>
+								</ownedComment>
+								<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-dateOfExemptedSource-lowerValue"/>
+								
+								<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-dateOfExemptedSource-defaultValue" name="default"/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-declassManualReview" name="declassManualReview" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassManualReview_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-declassManualReview-ownedComment" body="&#xA;A true/false indication that manual review is required for&#xA;declassification. Use this attribute to force the appearance of&#xA;&#34;//MR&#34; in the header and footer marking titles. Use this attribute&#xA;ONLY when it is necessary to override the business logic applied to&#xA;classification and control markings in the document to determine&#xA;whether manual review is required.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-declassManualReview"/>
+								</ownedComment>
+								<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-declassManualReview-lowerValue"/>
+								
+								<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-declassManualReview-defaultValue" name="default"/>
+							</ownedAttribute>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-icism-metadata-packagedElement-2" name="ref">
+							<client xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-classification"/>
+							<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classification"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-icism-metadata-packagedElement-3" name="ref">
+							<client xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-ownerProducer"/>
+							<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-ownerProducer"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-icism-metadata-packagedElement-4" name="ref">
+							<client xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-SCIcontrols"/>
+							<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SCIcontrols"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-icism-metadata-packagedElement-5" name="ref">
+							<client xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-SARIdentifier"/>
+							<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SARIdentifier"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-icism-metadata-packagedElement-6" name="ref">
+							<client xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-disseminationControls"/>
+							<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-disseminationControls"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-icism-metadata-packagedElement-7" name="ref">
+							<client xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-FGIsourceOpen"/>
+							<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceOpen"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-icism-metadata-packagedElement-8" name="ref">
+							<client xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-FGIsourceProtected"/>
+							<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceProtected"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-icism-metadata-packagedElement-9" name="ref">
+							<client xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-releasableTo"/>
+							<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-releasableTo"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-icism-metadata-packagedElement-10" name="ref">
+							<client xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-nonICmarkings"/>
+							<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-nonICmarkings"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-icism-metadata-packagedElement-11" name="ref">
+							<client xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-classifiedBy"/>
+							<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classifiedBy"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-icism-metadata-packagedElement-12" name="ref">
+							<client xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-classificationReason"/>
+							<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classificationReason"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-icism-metadata-packagedElement-13" name="ref">
+							<client xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-derivedFrom"/>
+							<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-derivedFrom"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-icism-metadata-packagedElement-14" name="ref">
+							<client xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-declassDate"/>
+							<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassDate"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-icism-metadata-packagedElement-15" name="ref">
+							<client xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-declassEvent"/>
+							<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassEvent"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-icism-metadata-packagedElement-16" name="ref">
+							<client xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-declassException"/>
+							<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassException"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-icism-metadata-packagedElement-17" name="ref">
+							<client xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-typeOfExemptedSource"/>
+							<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-typeOfExemptedSource"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-icism-metadata-packagedElement-18" name="ref">
+							<client xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-dateOfExemptedSource"/>
+							<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-dateOfExemptedSource"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-icism-metadata-packagedElement-19" name="ref">
+							<client xmi:idref="_niem-icism-2.0-icism-metadata-ICISMMetadataType-declassManualReview"/>
+							<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassManualReview"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Class" xmi:id="_niem-icism-2.0-icism-metadata-NamespaceElementPropertyHolder" name="NamespaceElementPropertyHolder">
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-icism-metadata-NamespaceElementPropertyHolder-ICISMMetadata" name="ICISMMetadata" aggregation="composite" type="_niem-icism-2.0-icism-metadata-ICISMMetadataType"/>
+						</packagedElement>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Package" xmi:id="_niem-icism-2.0-IC-ISM-v2" name="IC-ISM-v2">
+						<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-ownedComment" body="&#xA;W3C XML Schema for the Intelligence Community Metadata Standard for&#xA;Information Security Marking (IC-ISM), which is part of the IC&#xA;standards for Information Assurance.&#xA;    ">
+							<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2"/>
+						</ownedComment>
+						
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-icism-2.0-IC-ISM-v2-ClassificationType" name="ClassificationType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-ClassificationType-ownedComment" body="&#xA;A simple type in which a name token is restricted to the US,&#xA;non-US, and joint classification portionmark abbreviations from &#xA;the CAPCO Register.&#xA;       ">
+								<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-ClassificationType"/>
+							</ownedComment>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-icism-2.0-IC-ISM-v2-ClassificationType-U" name="U">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-ClassificationType-U-ownedComment" body="&#xA;US, non-US or joint UNCLASSIFIED.&#xA;              ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-ClassificationType-U"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-icism-2.0-IC-ISM-v2-ClassificationType-C" name="C"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-icism-2.0-IC-ISM-v2-ClassificationType-S" name="S"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-icism-2.0-IC-ISM-v2-ClassificationType-TS" name="TS"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-icism-2.0-IC-ISM-v2-ClassificationType-R" name="R"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-icism-2.0-IC-ISM-v2-ClassificationType-CTS" name="CTS"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-icism-2.0-IC-ISM-v2-ClassificationType-CTS-B" name="CTS-B"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-icism-2.0-IC-ISM-v2-ClassificationType-CTS-BALK" name="CTS-BALK"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-icism-2.0-IC-ISM-v2-ClassificationType-NU" name="NU"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-icism-2.0-IC-ISM-v2-ClassificationType-NR" name="NR"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-icism-2.0-IC-ISM-v2-ClassificationType-NC" name="NC"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-icism-2.0-IC-ISM-v2-ClassificationType-NS" name="NS"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-icism-2.0-IC-ISM-v2-ClassificationType-NS-S" name="NS-S"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-icism-2.0-IC-ISM-v2-ClassificationType-NS-A" name="NS-A"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-icism-2.0-IC-ISM-v2-ClassificationType-CTSA" name="CTSA"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-icism-2.0-IC-ISM-v2-ClassificationType-NSAT" name="NSAT"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-icism-2.0-IC-ISM-v2-ClassificationType-NCA" name="NCA"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-packagedElement-2">
+							<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-ClassificationType"/>
+							<supplier href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-NMTOKEN">
+								
+							</supplier>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Class" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceElementPropertyHolder" name="NamespaceElementPropertyHolder"/>
+						<packagedElement xmi:type="uml:Package" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition" name="attributeGroupDefinition">
+							
+							<packagedElement xmi:type="uml:Class" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup" name="SecurityAttributesGroup">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-ownedComment" body="&#xA;The group of Information Security Marking attributes in which&#xA;the use of attributes 'classification' and 'ownerProducer' is&#xA;required. This group is to be contrasted with group&#xA;'SecurityAttributesOptionGroup' in which use of those attributes&#xA;is optional.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup"/>
+								</ownedComment>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-classification" name="classification" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-ClassificationType">
+									
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-classification-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-ownerProducer" name="ownerProducer" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-ownerProducer_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-ownerProducer-ownedComment" body="&#xA;ISO 3166-1 trigraph(s) of the owner or producer country(ies) and/or&#xA;CAPCO-specified tetragraphs of international organizations.&#xA;Either (a) a single trigraph or tetragraph or (b) a space-delimited&#xA;list of trigraphs followed by tetragraphs. Trigraphs must be in&#xA;alphabetical order and tetragraphs must be in alphabetical order.&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-ownerProducer"/>
+									</ownedComment>
+									
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-ownerProducer-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-SCIcontrols" name="SCIcontrols" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SCIcontrols_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-SCIcontrols-ownedComment" body="&#xA;Authorized abbreviation(s) of SCI control system(s). Either&#xA;(a) a single abbreviation or (b) a space-delimited list of&#xA;abbreviations in the order prescribed in the CAPCO Register.&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-SCIcontrols"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-SCIcontrols-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-SCIcontrols-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-SARIdentifier" name="SARIdentifier" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SARIdentifier_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-SARIdentifier-ownedComment" body="&#xA;Authorized Special Access Required program digraph(s) or&#xA;trigraph(s) preceded by &#34;SAR-&#34;. Either (a) a single digraph or&#xA;trigraph or (b) a space-delimited list of digraphs or trigraphs.&#xA;Example: &#34;SAR-ABC SAR-DEF ...&#34;&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-SARIdentifier"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-SARIdentifier-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-SARIdentifier-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-disseminationControls" name="disseminationControls" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-disseminationControls_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-disseminationControls-ownedComment" body="&#xA;Authorized dissemination control portion mark abbreviation(s).&#xA;Either (a) a single abbreviation or (b) a space-delimited list&#xA;of abbreviations in the order shown in the CAPCO Register.&#xA;Exception: For the &#34;REL&#34; abbreviation, omit the country code&#xA;trigraph(s) and instead place the trigraph(s) in the&#xA;&#34;releasableTo&#34; attribute value.&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-disseminationControls"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-disseminationControls-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-disseminationControls-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-FGIsourceOpen" name="FGIsourceOpen" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceOpen_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-FGIsourceOpen-ownedComment" body="&#xA;Non-US classification portion marking for foreign government&#xA;information in a document portion. Use this attribute to record&#xA;a source country when the intent is to post the document to a&#xA;shared space with the source identified.&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-FGIsourceOpen"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-FGIsourceOpen-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-FGIsourceOpen-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-FGIsourceProtected" name="FGIsourceProtected" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceProtected_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-FGIsourceProtected-ownedComment" body="&#xA;Non-US classification portion marking for foreign government&#xA;information in a document portion. Use this attribute to record&#xA;a source country when the intent is to filter out the identity of&#xA;the source prior to posting the document to a shared space.&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-FGIsourceProtected"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-FGIsourceProtected-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-FGIsourceProtected-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-releasableTo" name="releasableTo" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-releasableTo_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-releasableTo-ownedComment" body="&#xA;ISO 3166-1 trigraphic codes of countries to which the associated&#xA;content can be released. Include &#34;USA&#34; in all instances. Use a space-&#xA;delimited list with &#34;USA&#34; first, followed by the other trigraph(s)&#xA;in alphabetical order.&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-releasableTo"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-releasableTo-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-releasableTo-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-nonICmarkings" name="nonICmarkings" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-nonICmarkings_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-nonICmarkings-ownedComment" body="&#xA;Authorized non-IC portion marking abbreviation(s) from the CAPCO&#xA;Register. Either (a) a single non-IC abbreviated marking or&#xA;(b) a space-delimited list of abbreviations in the order shown&#xA;in the CAPCO Register.&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-nonICmarkings"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-nonICmarkings-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-nonICmarkings-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-classifiedBy" name="classifiedBy" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classifiedBy_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-classifiedBy-ownedComment" body="&#xA;Use as specified by E.O. 12958.&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-classifiedBy"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-classifiedBy-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-classifiedBy-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-classificationReason" name="classificationReason" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classificationReason_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-classificationReason-ownedComment" body="&#xA;A text string containing one or more paragraph numbers, 1.4(a)&#xA;through 1.4(h), taken from E.O. 12958, as amended. Enter the&#xA;paragraph references as they should appear in a&#xA;classification/declassification block.&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-classificationReason"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-classificationReason-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-classificationReason-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-derivedFrom" name="derivedFrom" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-derivedFrom_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-derivedFrom-ownedComment" body="&#xA;A text string containing (a) the title and date of a specific source&#xA;document, or (b) the title and date of an organization classification&#xA;guide, or (c) the literal string &#34;Multiple Sources&#34;.&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-derivedFrom"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-derivedFrom-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-derivedFrom-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-declassDate" name="declassDate" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassDate_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-declassDate-ownedComment" body="&#xA;A specific date, in the format YYYY-MM-DD, at which the applicable&#xA;information is automatically declassified.&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-declassDate"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-declassDate-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-declassDate-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-declassEvent" name="declassEvent" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassEvent_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-declassEvent-ownedComment" body="&#xA;A textual description of an event that triggers declassification.&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-declassEvent"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-declassEvent-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-declassEvent-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-declassException" name="declassException" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassException_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-declassException-ownedComment" body="&#xA;One or more of the exceptions to 25-year declassification:&#xA;specify &#34;25X1-human&#34;, &#34;25X1&#34;, &#34;25X2&#34;, ..., &#34;25X9&#34;. If more than&#xA;one exception applies, use a space-delimited list. If &#34;25X1-human&#34;&#xA;applies, it should be first in a list.&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-declassException"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-declassException-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-declassException-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-typeOfExemptedSource" name="typeOfExemptedSource" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-typeOfExemptedSource_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-typeOfExemptedSource-ownedComment" body="&#xA;One or more tokens indicating that a source that is exempted from&#xA;automatic declassification applies. Specify &#34;OADR&#34;, &#34;X1&#34;, &#34;X2&#34;, ...,&#xA;&#34;X8&#34;. If more than one applies, use a space-delimited list.&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-typeOfExemptedSource"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-typeOfExemptedSource-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-typeOfExemptedSource-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-dateOfExemptedSource" name="dateOfExemptedSource" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-dateOfExemptedSource_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-dateOfExemptedSource-ownedComment" body="&#xA;A specific date, in the format YYYY-MM-DD. Used in conjunction with&#xA;attribute &#34;typeOfExemptedSource.&#34; If there are multiple exempted&#xA;sources, specify the date of the exempted&#xA;source that has the most recent date.&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-dateOfExemptedSource"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-dateOfExemptedSource-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-dateOfExemptedSource-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-declassManualReview" name="declassManualReview" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassManualReview_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-declassManualReview-ownedComment" body="&#xA;A true/false indication that manual review is required for&#xA;declassification. Use this attribute to force the appearance of&#xA;&#34;//MR&#34; in the header and footer marking titles. Use this attribute&#xA;ONLY when it is necessary to override the business logic applied to&#xA;classification and control markings in the document to determine&#xA;whether manual review is required.&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-declassManualReview"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-declassManualReview-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-declassManualReview-defaultValue" name="default"/>
+								</ownedAttribute>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-2" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-classification"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classification"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-3" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-ownerProducer"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-ownerProducer"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-4" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-SCIcontrols"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SCIcontrols"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-5" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-SARIdentifier"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SARIdentifier"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-6" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-disseminationControls"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-disseminationControls"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-7" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-FGIsourceOpen"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceOpen"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-8" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-FGIsourceProtected"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceProtected"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-9" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-releasableTo"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-releasableTo"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-10" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-nonICmarkings"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-nonICmarkings"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-11" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-classifiedBy"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classifiedBy"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-12" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-classificationReason"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classificationReason"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-13" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-derivedFrom"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-derivedFrom"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-14" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-declassDate"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassDate"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-15" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-declassEvent"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassEvent"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-16" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-declassException"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassException"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-17" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-typeOfExemptedSource"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-typeOfExemptedSource"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-18" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-dateOfExemptedSource"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-dateOfExemptedSource"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-19" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-declassManualReview"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassManualReview"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Class" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup" name="SecurityAttributesOptionGroup">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-ownedComment" body="&#xA;The group of Information Security Marking attributes in which&#xA;the use of attributes 'classification' and 'ownerProducer'&#xA;is optional. This group is to be contrasted with group&#xA;'SecurityAttributesGroup' in which use of these attributes&#xA;is required.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup"/>
+								</ownedComment>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-classification" name="classification" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-ClassificationType">
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-classification-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-classification-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-ownerProducer" name="ownerProducer" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-ownerProducer_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-ownerProducer-ownedComment" body="&#xA;ISO 3166-1 trigraph(s) of the owner or producer country(ies) and/or&#xA;CAPCO-specified tetragraphs of international organizations.&#xA;Either (a) a single trigraph or tetragraph or (b) a space-delimited&#xA;list of trigraphs followed by tetragraphs. Trigraphs must be in&#xA;alphabetical order and tetragraphs must be in alphabetical order.&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-ownerProducer"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-ownerProducer-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-ownerProducer-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-SCIcontrols" name="SCIcontrols" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SCIcontrols_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-SCIcontrols-ownedComment" body="&#xA;Authorized abbreviation(s) of SCI control system(s). Either&#xA;(a) a single abbreviation or (b) a space-delimited list of&#xA;abbreviations in the order prescribed in the CAPCO Register.&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-SCIcontrols"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-SCIcontrols-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-SCIcontrols-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-SARIdentifier" name="SARIdentifier" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SARIdentifier_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-SARIdentifier-ownedComment" body="&#xA;Authorized Special Access Required program digraph(s) or&#xA;trigraph(s) preceded by &#34;SAR-&#34;. Either (a) a single digraph or&#xA;trigraph or (b) a space-delimited list of digraphs or trigraphs.&#xA;Example: &#34;SAR-ABC SAR-DEF ...&#34;&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-SARIdentifier"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-SARIdentifier-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-SARIdentifier-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-disseminationControls" name="disseminationControls" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-disseminationControls_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-disseminationControls-ownedComment" body="&#xA;Authorized dissemination control portion mark abbreviation(s).&#xA;Either (a) a single abbreviation or (b) a space-delimited list&#xA;of abbreviations in the order shown in the CAPCO Register.&#xA;Exception: For the &#34;REL&#34; abbreviation, omit the country code&#xA;trigraph(s) and instead place the trigraph(s) in the&#xA;&#34;releasableTo&#34; attribute value.&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-disseminationControls"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-disseminationControls-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-disseminationControls-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-FGIsourceOpen" name="FGIsourceOpen" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceOpen_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-FGIsourceOpen-ownedComment" body="&#xA;Non-US classification portion marking for foreign government&#xA;information in a document portion. Use this attribute to record&#xA;a source country when the intent is to post the document to a&#xA;shared space with the source identified.&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-FGIsourceOpen"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-FGIsourceOpen-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-FGIsourceOpen-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-FGIsourceProtected" name="FGIsourceProtected" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceProtected_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-FGIsourceProtected-ownedComment" body="&#xA;Non-US classification portion marking for foreign government&#xA;information in a document portion. Use this attribute to record&#xA;a source country when the intent is to filter out the identity of&#xA;the source prior to posting the document to a shared space.&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-FGIsourceProtected"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-FGIsourceProtected-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-FGIsourceProtected-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-releasableTo" name="releasableTo" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-releasableTo_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-releasableTo-ownedComment" body="&#xA;ISO 3166-1 trigraphic codes of countries to which the associated&#xA;content can be released. Include &#34;USA&#34; in all instances. Use a space-&#xA;delimited list with &#34;USA&#34; first, followed by the other trigraph(s)&#xA;in alphabetical order.&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-releasableTo"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-releasableTo-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-releasableTo-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-nonICmarkings" name="nonICmarkings" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-nonICmarkings_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-nonICmarkings-ownedComment" body="&#xA;Authorized non-IC portion marking abbreviation(s) from the CAPCO&#xA;Register. Either (a) a single non-IC abbreviated marking or&#xA;(b) a space-delimited list of abbreviations in the order shown&#xA;in the CAPCO Register.&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-nonICmarkings"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-nonICmarkings-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-nonICmarkings-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-classifiedBy" name="classifiedBy" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classifiedBy_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-classifiedBy-ownedComment" body="&#xA;Use as specified by E.O. 12958.&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-classifiedBy"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-classifiedBy-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-classifiedBy-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-classificationReason" name="classificationReason" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classificationReason_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-classificationReason-ownedComment" body="&#xA;A text string containing one or more paragraph numbers, 1.4(a)&#xA;through 1.4(h), taken from E.O. 12958, as amended. Enter the&#xA;paragraph references as they should appear in a&#xA;classification/declassification block.&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-classificationReason"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-classificationReason-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-classificationReason-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-derivedFrom" name="derivedFrom" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-derivedFrom_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-derivedFrom-ownedComment" body="&#xA;A text string containing (a) the title and date of a specific source&#xA;document, or (b) the title and date of an organization classification&#xA;guide, or (c) the literal string &#34;Multiple Sources&#34;.&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-derivedFrom"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-derivedFrom-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-derivedFrom-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-declassDate" name="declassDate" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassDate_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-declassDate-ownedComment" body="&#xA;A specific date, in the format YYYY-MM-DD, at which the applicable&#xA;information is automatically declassified.&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-declassDate"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-declassDate-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-declassDate-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-declassEvent" name="declassEvent" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassEvent_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-declassEvent-ownedComment" body="&#xA;A textual description of an event that triggers declassification.&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-declassEvent"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-declassEvent-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-declassEvent-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-declassException" name="declassException" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassException_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-declassException-ownedComment" body="&#xA;One or more of the exceptions to 25-year declassification:&#xA;specify &#34;25X1-human&#34;, &#34;25X1&#34;, &#34;25X2&#34;, ..., &#34;25X9&#34;. If more than&#xA;one exception applies, use a space-delimited list. If &#34;25X1-human&#34;&#xA;applies, it should be first in a list.&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-declassException"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-declassException-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-declassException-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-typeOfExemptedSource" name="typeOfExemptedSource" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-typeOfExemptedSource_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-typeOfExemptedSource-ownedComment" body="&#xA;One or more tokens indicating that a source that is exempted from&#xA;automatic declassification applies. Specify &#34;OADR&#34;, &#34;X1&#34;, &#34;X2&#34;, ...,&#xA;&#34;X8&#34;. If more than one applies, use a space-delimited list.&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-typeOfExemptedSource"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-typeOfExemptedSource-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-typeOfExemptedSource-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-dateOfExemptedSource" name="dateOfExemptedSource" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-dateOfExemptedSource_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-dateOfExemptedSource-ownedComment" body="&#xA;A specific date, in the format YYYY-MM-DD. Used in conjunction with&#xA;attribute &#34;typeOfExemptedSource.&#34; If there are multiple exempted&#xA;sources, specify the date of the exempted&#xA;source that has the most recent date.&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-dateOfExemptedSource"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-dateOfExemptedSource-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-dateOfExemptedSource-defaultValue" name="default"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-declassManualReview" name="declassManualReview" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassManualReview_._type">
+									<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-declassManualReview-ownedComment" body="&#xA;A true/false indication that manual review is required for&#xA;declassification. Use this attribute to force the appearance of&#xA;&#34;//MR&#34; in the header and footer marking titles. Use this attribute&#xA;ONLY when it is necessary to override the business logic applied to&#xA;classification and control markings in the document to determine&#xA;whether manual review is required.&#xA;      ">
+										<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-declassManualReview"/>
+									</ownedComment>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-declassManualReview-lowerValue"/>
+									
+									<defaultValue xmi:type="uml:LiteralString" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-declassManualReview-defaultValue" name="default"/>
+								</ownedAttribute>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-21" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-classification"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classification"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-22" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-ownerProducer"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-ownerProducer"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-23" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-SCIcontrols"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SCIcontrols"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-24" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-SARIdentifier"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SARIdentifier"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-25" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-disseminationControls"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-disseminationControls"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-26" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-FGIsourceOpen"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceOpen"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-27" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-FGIsourceProtected"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceProtected"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-28" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-releasableTo"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-releasableTo"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-29" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-nonICmarkings"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-nonICmarkings"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-30" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-classifiedBy"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classifiedBy"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-31" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-classificationReason"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classificationReason"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-32" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-derivedFrom"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-derivedFrom"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-33" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-declassDate"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassDate"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-34" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-declassEvent"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassEvent"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-35" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-declassException"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassException"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-36" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-typeOfExemptedSource"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-typeOfExemptedSource"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-37" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-dateOfExemptedSource"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-dateOfExemptedSource"/>
+							</packagedElement>
+							<packagedElement xmi:type="uml:Realization" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-packagedElement-38" name="ref">
+								<client xmi:idref="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-declassManualReview"/>
+								<supplier xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassManualReview"/>
+							</packagedElement>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Class" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder" name="NamespaceAttributePropertyHolder">
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classification" name="classification" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-ClassificationType"/>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceOpen" name="FGIsourceOpen" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceOpen_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceOpen-ownedComment" body="&#xA;Non-US classification portion marking for foreign government&#xA;information in a document portion. Use this attribute to record&#xA;a source country when the intent is to post the document to a&#xA;shared space with the source identified.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceOpen"/>
+								</ownedComment>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceProtected" name="FGIsourceProtected" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceProtected_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceProtected-ownedComment" body="&#xA;Non-US classification portion marking for foreign government&#xA;information in a document portion. Use this attribute to record&#xA;a source country when the intent is to filter out the identity of&#xA;the source prior to posting the document to a shared space.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceProtected"/>
+								</ownedComment>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassManualReview" name="declassManualReview" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassManualReview_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassManualReview-ownedComment" body="&#xA;A true/false indication that manual review is required for&#xA;declassification. Use this attribute to force the appearance of&#xA;&#34;//MR&#34; in the header and footer marking titles. Use this attribute&#xA;ONLY when it is necessary to override the business logic applied to&#xA;classification and control markings in the document to determine&#xA;whether manual review is required.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassManualReview"/>
+								</ownedComment>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-typeOfExemptedSource" name="typeOfExemptedSource" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-typeOfExemptedSource_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-typeOfExemptedSource-ownedComment" body="&#xA;One or more tokens indicating that a source that is exempted from&#xA;automatic declassification applies. Specify &#34;OADR&#34;, &#34;X1&#34;, &#34;X2&#34;, ...,&#xA;&#34;X8&#34;. If more than one applies, use a space-delimited list.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-typeOfExemptedSource"/>
+								</ownedComment>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SARIdentifier" name="SARIdentifier" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SARIdentifier_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SARIdentifier-ownedComment" body="&#xA;Authorized Special Access Required program digraph(s) or&#xA;trigraph(s) preceded by &#34;SAR-&#34;. Either (a) a single digraph or&#xA;trigraph or (b) a space-delimited list of digraphs or trigraphs.&#xA;Example: &#34;SAR-ABC SAR-DEF ...&#34;&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SARIdentifier"/>
+								</ownedComment>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-nonICmarkings" name="nonICmarkings" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-nonICmarkings_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-nonICmarkings-ownedComment" body="&#xA;Authorized non-IC portion marking abbreviation(s) from the CAPCO&#xA;Register. Either (a) a single non-IC abbreviated marking or&#xA;(b) a space-delimited list of abbreviations in the order shown&#xA;in the CAPCO Register.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-nonICmarkings"/>
+								</ownedComment>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassEvent" name="declassEvent" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassEvent_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassEvent-ownedComment" body="&#xA;A textual description of an event that triggers declassification.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassEvent"/>
+								</ownedComment>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassException" name="declassException" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassException_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassException-ownedComment" body="&#xA;One or more of the exceptions to 25-year declassification:&#xA;specify &#34;25X1-human&#34;, &#34;25X1&#34;, &#34;25X2&#34;, ..., &#34;25X9&#34;. If more than&#xA;one exception applies, use a space-delimited list. If &#34;25X1-human&#34;&#xA;applies, it should be first in a list.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassException"/>
+								</ownedComment>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-derivedFrom" name="derivedFrom" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-derivedFrom_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-derivedFrom-ownedComment" body="&#xA;A text string containing (a) the title and date of a specific source&#xA;document, or (b) the title and date of an organization classification&#xA;guide, or (c) the literal string &#34;Multiple Sources&#34;.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-derivedFrom"/>
+								</ownedComment>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classificationReason" name="classificationReason" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classificationReason_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classificationReason-ownedComment" body="&#xA;A text string containing one or more paragraph numbers, 1.4(a)&#xA;through 1.4(h), taken from E.O. 12958, as amended. Enter the&#xA;paragraph references as they should appear in a&#xA;classification/declassification block.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classificationReason"/>
+								</ownedComment>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-disseminationControls" name="disseminationControls" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-disseminationControls_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-disseminationControls-ownedComment" body="&#xA;Authorized dissemination control portion mark abbreviation(s).&#xA;Either (a) a single abbreviation or (b) a space-delimited list&#xA;of abbreviations in the order shown in the CAPCO Register.&#xA;Exception: For the &#34;REL&#34; abbreviation, omit the country code&#xA;trigraph(s) and instead place the trigraph(s) in the&#xA;&#34;releasableTo&#34; attribute value.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-disseminationControls"/>
+								</ownedComment>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SCIcontrols" name="SCIcontrols" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SCIcontrols_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SCIcontrols-ownedComment" body="&#xA;Authorized abbreviation(s) of SCI control system(s). Either&#xA;(a) a single abbreviation or (b) a space-delimited list of&#xA;abbreviations in the order prescribed in the CAPCO Register.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SCIcontrols"/>
+								</ownedComment>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-releasableTo" name="releasableTo" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-releasableTo_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-releasableTo-ownedComment" body="&#xA;ISO 3166-1 trigraphic codes of countries to which the associated&#xA;content can be released. Include &#34;USA&#34; in all instances. Use a space-&#xA;delimited list with &#34;USA&#34; first, followed by the other trigraph(s)&#xA;in alphabetical order.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-releasableTo"/>
+								</ownedComment>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classifiedBy" name="classifiedBy" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classifiedBy_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classifiedBy-ownedComment" body="&#xA;Use as specified by E.O. 12958.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classifiedBy"/>
+								</ownedComment>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-dateOfExemptedSource" name="dateOfExemptedSource" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-dateOfExemptedSource_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-dateOfExemptedSource-ownedComment" body="&#xA;A specific date, in the format YYYY-MM-DD. Used in conjunction with&#xA;attribute &#34;typeOfExemptedSource.&#34; If there are multiple exempted&#xA;sources, specify the date of the exempted&#xA;source that has the most recent date.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-dateOfExemptedSource"/>
+								</ownedComment>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-ownerProducer" name="ownerProducer" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-ownerProducer_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-ownerProducer-ownedComment" body="&#xA;ISO 3166-1 trigraph(s) of the owner or producer country(ies) and/or&#xA;CAPCO-specified tetragraphs of international organizations.&#xA;Either (a) a single trigraph or tetragraph or (b) a space-delimited&#xA;list of trigraphs followed by tetragraphs. Trigraphs must be in&#xA;alphabetical order and tetragraphs must be in alphabetical order.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-ownerProducer"/>
+								</ownedComment>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassDate" name="declassDate" aggregation="composite" type="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassDate_._type">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassDate-ownedComment" body="&#xA;A specific date, in the format YYYY-MM-DD, at which the applicable&#xA;information is automatically declassified.&#xA;      ">
+									<annotatedElement xmi:idref="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassDate"/>
+								</ownedComment>
+							</ownedAttribute>
+							<nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-ownerProducer_._type" name="ownerProducer_._type">
+								<generalization xmi:type="uml:Generalization" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-ownerProducer_._type-generalization">
+									<general href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-NMTOKENS">
+										
+									</general>
+								</generalization>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-ownerProducer_._type-item" name="item">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-NMTOKEN">
+										
+									</type>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-ownerProducer_._type-item-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-ownerProducer_._type-item-upperValue" value="*"/>
+								</ownedAttribute>
+							</nestedClassifier>
+							<nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SCIcontrols_._type" name="SCIcontrols_._type">
+								<generalization xmi:type="uml:Generalization" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SCIcontrols_._type-generalization">
+									<general href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-NMTOKENS">
+										
+									</general>
+								</generalization>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SCIcontrols_._type-item" name="item">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-NMTOKEN">
+										
+									</type>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SCIcontrols_._type-item-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SCIcontrols_._type-item-upperValue" value="*"/>
+								</ownedAttribute>
+							</nestedClassifier>
+							<nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SARIdentifier_._type" name="SARIdentifier_._type">
+								<generalization xmi:type="uml:Generalization" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SARIdentifier_._type-generalization">
+									<general href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-NMTOKENS">
+										
+									</general>
+								</generalization>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SARIdentifier_._type-item" name="item">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-NMTOKEN">
+										
+									</type>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SARIdentifier_._type-item-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SARIdentifier_._type-item-upperValue" value="*"/>
+								</ownedAttribute>
+							</nestedClassifier>
+							<nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-disseminationControls_._type" name="disseminationControls_._type">
+								<generalization xmi:type="uml:Generalization" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-disseminationControls_._type-generalization">
+									<general href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-NMTOKENS">
+										
+									</general>
+								</generalization>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-disseminationControls_._type-item" name="item">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-NMTOKEN">
+										
+									</type>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-disseminationControls_._type-item-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-disseminationControls_._type-item-upperValue" value="*"/>
+								</ownedAttribute>
+							</nestedClassifier>
+							<nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceOpen_._type" name="FGIsourceOpen_._type">
+								<generalization xmi:type="uml:Generalization" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceOpen_._type-generalization">
+									<general href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-NMTOKENS">
+										
+									</general>
+								</generalization>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceOpen_._type-item" name="item">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-NMTOKEN">
+										
+									</type>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceOpen_._type-item-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceOpen_._type-item-upperValue" value="*"/>
+								</ownedAttribute>
+							</nestedClassifier>
+							<nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceProtected_._type" name="FGIsourceProtected_._type">
+								<generalization xmi:type="uml:Generalization" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceProtected_._type-generalization">
+									<general href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-NMTOKENS">
+										
+									</general>
+								</generalization>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceProtected_._type-item" name="item">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-NMTOKEN">
+										
+									</type>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceProtected_._type-item-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceProtected_._type-item-upperValue" value="*"/>
+								</ownedAttribute>
+							</nestedClassifier>
+							<nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-releasableTo_._type" name="releasableTo_._type">
+								<generalization xmi:type="uml:Generalization" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-releasableTo_._type-generalization">
+									<general href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-NMTOKENS">
+										
+									</general>
+								</generalization>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-releasableTo_._type-item" name="item">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-NMTOKEN">
+										
+									</type>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-releasableTo_._type-item-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-releasableTo_._type-item-upperValue" value="*"/>
+								</ownedAttribute>
+							</nestedClassifier>
+							<nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-nonICmarkings_._type" name="nonICmarkings_._type">
+								<generalization xmi:type="uml:Generalization" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-nonICmarkings_._type-generalization">
+									<general href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-NMTOKENS">
+										
+									</general>
+								</generalization>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-nonICmarkings_._type-item" name="item">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-NMTOKEN">
+										
+									</type>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-nonICmarkings_._type-item-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-nonICmarkings_._type-item-upperValue" value="*"/>
+								</ownedAttribute>
+							</nestedClassifier>
+							<nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classifiedBy_._type" name="classifiedBy_._type">
+								<generalization xmi:type="uml:Generalization" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classifiedBy_._type-generalization">
+									<general href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-string">
+										
+									</general>
+								</generalization>
+							</nestedClassifier>
+							<nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classificationReason_._type" name="classificationReason_._type">
+								<generalization xmi:type="uml:Generalization" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classificationReason_._type-generalization">
+									<general href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-string">
+										
+									</general>
+								</generalization>
+							</nestedClassifier>
+							<nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-derivedFrom_._type" name="derivedFrom_._type">
+								<generalization xmi:type="uml:Generalization" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-derivedFrom_._type-generalization">
+									<general href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-string">
+										
+									</general>
+								</generalization>
+							</nestedClassifier>
+							<nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassDate_._type" name="declassDate_._type">
+								<generalization xmi:type="uml:Generalization" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassDate_._type-generalization">
+									<general href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-date">
+										
+									</general>
+								</generalization>
+							</nestedClassifier>
+							<nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassEvent_._type" name="declassEvent_._type">
+								<generalization xmi:type="uml:Generalization" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassEvent_._type-generalization">
+									<general href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-string">
+										
+									</general>
+								</generalization>
+							</nestedClassifier>
+							<nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassException_._type" name="declassException_._type">
+								<generalization xmi:type="uml:Generalization" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassException_._type-generalization">
+									<general href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-NMTOKENS">
+										
+									</general>
+								</generalization>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassException_._type-item" name="item">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-NMTOKEN">
+										
+									</type>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassException_._type-item-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassException_._type-item-upperValue" value="*"/>
+								</ownedAttribute>
+							</nestedClassifier>
+							<nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-typeOfExemptedSource_._type" name="typeOfExemptedSource_._type">
+								<generalization xmi:type="uml:Generalization" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-typeOfExemptedSource_._type-generalization">
+									<general href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-NMTOKENS">
+										
+									</general>
+								</generalization>
+								<ownedAttribute xmi:type="uml:Property" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-typeOfExemptedSource_._type-item" name="item">
+									<type href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-NMTOKEN">
+										
+									</type>
+									<lowerValue xmi:type="uml:LiteralInteger" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-typeOfExemptedSource_._type-item-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-typeOfExemptedSource_._type-item-upperValue" value="*"/>
+								</ownedAttribute>
+							</nestedClassifier>
+							<nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-dateOfExemptedSource_._type" name="dateOfExemptedSource_._type">
+								<generalization xmi:type="uml:Generalization" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-dateOfExemptedSource_._type-generalization">
+									<general href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-date">
+										
+									</general>
+								</generalization>
+							</nestedClassifier>
+							<nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassManualReview_._type" name="declassManualReview_._type">
+								<generalization xmi:type="uml:Generalization" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassManualReview_._type-generalization">
+									<general href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes-boolean">
+										
+									</general>
+								</generalization>
+							</nestedClassifier>
+						</packagedElement>
+					</packagedElement>
+				</packagedElement><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-icism-profileApplication-1">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_PIM_Profile">
+						
+					</appliedProfile>
+				</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-icism-profileApplication-2">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-Model_Package_Description_Profile">
+						
+					</appliedProfile>
+				</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-icism-profileApplication-3">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_Common_Profile">
+						
+					</appliedProfile>
+				</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-icism-profileApplication-4">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_PSM_Profile">
+						
+					</appliedProfile>
+				</profileApplication></packagedElement></uml:Model>
+	
+	
+	
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-classificationReason-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-classificationReason" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-SCIcontrols-appliedStereotypeInstance" base_Property="_niem-icism-2.0-icism-metadata-ICISMMetadataType-SCIcontrols" kind="attribute"/>
+	
+	<NIEM_Common_Profile:List xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceProtected_._type-appliedStereotypeInstance" base_DataType="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceProtected_._type"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceOpen-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceOpen" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-releasableTo-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-releasableTo" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-SCIcontrols-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-SCIcontrols" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassManualReview-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassManualReview" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-disseminationControls-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-disseminationControls" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-releasableTo-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-releasableTo" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-classificationReason-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-classificationReason" kind="attribute"/>
+	
+	<NIEM_Common_Profile:PropertyHolder xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-appliedStereotypeInstance" base_Class="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-dateOfExemptedSource-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-dateOfExemptedSource" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-declassEvent-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-declassEvent" kind="attribute"/>
+	
+	<NIEM_Common_Profile:PropertyHolder xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceElementPropertyHolder-appliedStereotypeInstance" base_Class="_niem-icism-2.0-IC-ISM-v2-NamespaceElementPropertyHolder"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-FGIsourceProtected-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-FGIsourceProtected" kind="attribute"/>
+	
+	
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classifiedBy-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classifiedBy" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-classification-appliedStereotypeInstance" base_Property="_niem-icism-2.0-icism-metadata-ICISMMetadataType-classification" kind="attribute"/>
+	
+	<NIEM_Common_Profile:List xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-nonICmarkings_._type-appliedStereotypeInstance" base_DataType="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-nonICmarkings_._type"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-SARIdentifier-appliedStereotypeInstance" base_Property="_niem-icism-2.0-icism-metadata-ICISMMetadataType-SARIdentifier" kind="attribute"/>
+	
+	<NIEM_Common_Profile:List xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-disseminationControls_._type-appliedStereotypeInstance" base_DataType="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-disseminationControls_._type"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SCIcontrols-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SCIcontrols" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-FGIsourceOpen-appliedStereotypeInstance" base_Property="_niem-icism-2.0-icism-metadata-ICISMMetadataType-FGIsourceOpen" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-declassDate-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-declassDate" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-declassException-appliedStereotypeInstance" base_Property="_niem-icism-2.0-icism-metadata-ICISMMetadataType-declassException" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-ownerProducer-appliedStereotypeInstance" base_Property="_niem-icism-2.0-icism-metadata-ICISMMetadataType-ownerProducer" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-declassManualReview-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-declassManualReview" kind="attribute"/>
+	
+	<NIEM_Common_Profile:ValueRestriction xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassDate_._type-appliedStereotypeInstance" base_DataType="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassDate_._type"/>
+	
+	
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-typeOfExemptedSource-appliedStereotypeInstance" base_Property="_niem-icism-2.0-icism-metadata-ICISMMetadataType-typeOfExemptedSource" kind="attribute"/>
+	
+	<NIEM_Common_Profile:ValueRestriction xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-derivedFrom_._type-appliedStereotypeInstance" base_DataType="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-derivedFrom_._type"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassException-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassException" kind="attribute"/>
+	
+	<NIEM_Common_Profile:ValueRestriction xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassManualReview_._type-appliedStereotypeInstance" base_DataType="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassManualReview_._type"/>
+	
+	<NIEM_PSM_Profile:XSDSimpleContent xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-packagedElement-2-appliedStereotypeInstance" base_Realization="_niem-icism-2.0-IC-ISM-v2-packagedElement-2"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-ownerProducer-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-ownerProducer" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-classification-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-classification" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-declassEvent-appliedStereotypeInstance" base_Property="_niem-icism-2.0-icism-metadata-ICISMMetadataType-declassEvent" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-SARIdentifier-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-SARIdentifier" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassDate-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassDate" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-classifiedBy-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-classifiedBy" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classificationReason-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classificationReason" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-releasableTo-appliedStereotypeInstance" base_Property="_niem-icism-2.0-icism-metadata-ICISMMetadataType-releasableTo" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-declassManualReview-appliedStereotypeInstance" base_Property="_niem-icism-2.0-icism-metadata-ICISMMetadataType-declassManualReview" kind="attribute"/>
+	
+	<NIEM_Common_Profile:ValueRestriction xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassEvent_._type-appliedStereotypeInstance" base_DataType="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassEvent_._type"/>
+	
+	<NIEM_PIM_Profile:InformationModel xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-appliedStereotypeInstance" base_Package="_niem-icism-2.0-IC-ISM-v2" isConformant="false" defaultPurpose="reference" targetNamespace="urn:us:gov:ic:ism:v2"/>
+	
+	<NIEM_Common_Profile:List xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-ownerProducer_._type-appliedStereotypeInstance" base_DataType="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-ownerProducer_._type"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-disseminationControls-appliedStereotypeInstance" base_Property="_niem-icism-2.0-icism-metadata-ICISMMetadataType-disseminationControls" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-typeOfExemptedSource-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-typeOfExemptedSource" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-classification-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-classification" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceProtected-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceProtected" kind="attribute"/>
+	
+	<NIEM_Common_Profile:List xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceOpen_._type-appliedStereotypeInstance" base_DataType="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-FGIsourceOpen_._type"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-icism-metadata-NamespaceElementPropertyHolder-ICISMMetadata-appliedStereotypeInstance" base_Property="_niem-icism-2.0-icism-metadata-NamespaceElementPropertyHolder-ICISMMetadata" nillable="false" kind="element"/>
+	
+	<NIEM_Common_Profile:List xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-releasableTo_._type-appliedStereotypeInstance" base_DataType="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-releasableTo_._type"/>
+	
+	
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-declassDate-appliedStereotypeInstance" base_Property="_niem-icism-2.0-icism-metadata-ICISMMetadataType-declassDate" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-SARIdentifier-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-SARIdentifier" kind="attribute"/>
+	
+	
+	
+	<NIEM_Common_Profile:MetadataType xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-appliedStereotypeInstance" base_Class="_niem-icism-2.0-icism-metadata-ICISMMetadataType"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassEvent-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassEvent" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-FGIsourceProtected-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-FGIsourceProtected" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-nonICmarkings-appliedStereotypeInstance" base_Property="_niem-icism-2.0-icism-metadata-ICISMMetadataType-nonICmarkings" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-ownerProducer-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-ownerProducer" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-dateOfExemptedSource-appliedStereotypeInstance" base_Property="_niem-icism-2.0-icism-metadata-ICISMMetadataType-dateOfExemptedSource" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-releasableTo-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-releasableTo" kind="attribute"/>
+	
+	<NIEM_Common_Profile:List xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-typeOfExemptedSource_._type-appliedStereotypeInstance" base_DataType="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-typeOfExemptedSource_._type"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-dateOfExemptedSource-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-dateOfExemptedSource" kind="attribute"/>
+	
+	<NIEM_Common_Profile:ValueRestriction xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classificationReason_._type-appliedStereotypeInstance" base_DataType="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classificationReason_._type"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-declassEvent-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-declassEvent" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-nonICmarkings-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-nonICmarkings" kind="attribute"/>
+	
+	
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-typeOfExemptedSource-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-typeOfExemptedSource" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-derivedFrom-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-derivedFrom" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classification-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classification" kind="attribute"/>
+	
+	<NIEM_Common_Profile:List xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassException_._type-appliedStereotypeInstance" base_DataType="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-declassException_._type"/>
+	
+	<NIEM_Common_Profile:PropertyHolder xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-icism-2.0-icism-metadata-NamespaceElementPropertyHolder-appliedStereotypeInstance" base_Class="_niem-icism-2.0-icism-metadata-NamespaceElementPropertyHolder"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-disseminationControls-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-disseminationControls" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-disseminationControls-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-disseminationControls" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-declassException-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-declassException" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-declassDate-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-declassDate" kind="attribute"/>
+	
+	<NIEM_PIM_Profile:InformationModel xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile" xmi:id="_niem-icism-2.0-icism-metadata-appliedStereotypeInstance" base_Package="_niem-icism-2.0-icism-metadata" isConformant="false" version="1" defaultPurpose="reference" targetNamespace="http://niem.gov/niem/icism/2.0"/>
+	
+	<NIEM_Common_Profile:ValueRestriction xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classifiedBy_._type-appliedStereotypeInstance" base_DataType="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-classifiedBy_._type"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-derivedFrom-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-derivedFrom" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-typeOfExemptedSource-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-typeOfExemptedSource" kind="attribute"/>
+	
+	<NIEM_Common_Profile:ValueRestriction xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-dateOfExemptedSource_._type-appliedStereotypeInstance" base_DataType="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-dateOfExemptedSource_._type"/>
+	
+	
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-classificationReason-appliedStereotypeInstance" base_Property="_niem-icism-2.0-icism-metadata-ICISMMetadataType-classificationReason" kind="attribute"/>
+	
+	<NIEM_Common_Profile:List xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SCIcontrols_._type-appliedStereotypeInstance" base_DataType="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SCIcontrols_._type"/>
+	
+	<NIEM_Common_Profile:List xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SARIdentifier_._type-appliedStereotypeInstance" base_DataType="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SARIdentifier_._type"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-classifiedBy-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-classifiedBy" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-dateOfExemptedSource-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-dateOfExemptedSource" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-nonICmarkings-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-nonICmarkings" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-FGIsourceOpen-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-FGIsourceOpen" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-FGIsourceOpen-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-FGIsourceOpen" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-derivedFrom-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-derivedFrom" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-nonICmarkings-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-nonICmarkings" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-FGIsourceProtected-appliedStereotypeInstance" base_Property="_niem-icism-2.0-icism-metadata-ICISMMetadataType-FGIsourceProtected" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-classifiedBy-appliedStereotypeInstance" base_Property="_niem-icism-2.0-icism-metadata-ICISMMetadataType-classifiedBy" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SARIdentifier-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-NamespaceAttributePropertyHolder-SARIdentifier" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-declassException-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-declassException" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-icism-metadata-ICISMMetadataType-derivedFrom-appliedStereotypeInstance" base_Property="_niem-icism-2.0-icism-metadata-ICISMMetadataType-derivedFrom" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-declassManualReview-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesOptionGroup-declassManualReview" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-SCIcontrols-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-SCIcontrols" kind="attribute"/>
+	
+	<NIEM_PSM_Profile:XSDProperty xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmi:id="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-ownerProducer-appliedStereotypeInstance" base_Property="_niem-icism-2.0-IC-ISM-v2-attributeGroupDefinition-SecurityAttributesGroup-ownerProducer" kind="attribute"/>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</xmi:XMI>

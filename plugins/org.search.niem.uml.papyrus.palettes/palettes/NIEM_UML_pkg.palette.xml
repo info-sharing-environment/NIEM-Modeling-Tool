@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<paletteDefinition>
+    <content>
+        <drawer iconpath="/icons/drawer.gif" id="NIEM_UML_Drawer" name="NIEM UML">
+            <aspectTool description="Create a NIEM-conformant Namespace"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_namespace.png" id="package.tool.package_NIEM_COMMON_NAMESPACE"
+                name="NIEM-conformant Namespace" refToolId="package.tool.package">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_Common_Profile::Namespace" />
+                    </stereotypesToApply>
+                </postAction>
+                <postAction id="org.search.niem.uml.papyrus.palettes.createDiagramActionProvider">
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a PIM Information Model"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_pim_information_model.png"
+                id="package.tool.package_NIEM_PIM_INFORMATION_DIMENSION" name="PIM Information Model" refToolId="package.tool.package">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_PIM_Profile::InformationModel">
+                            <property propertyName="NIEM_UML_Profile::NIEM_PIM_Profile::InformationModel::defaultPurpose">
+                                <value>extension</value>
+                            </property>
+                        </stereotype>
+                    </stereotypesToApply>
+                </postAction>
+                <postAction id="org.search.niem.uml.papyrus.palettes.createDiagramActionProvider">
+                </postAction>
+            </aspectTool>
+        </drawer>
+    </content>
+</paletteDefinition>

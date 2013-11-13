@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="org.search.niem.uml.application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="org.eclipse.ui.internal.ide.application.IDEApplication">
+         </run>
+      </application>
+   </extension>
+   
+     <extension id="ide" point="org.eclipse.core.runtime.products"> 
+      <product name="NIEM UML" application="org.search.niem.uml.application" description="%productBlurb"> 
+          <!-- For documentation on updating icons, see http://wiki.eclipse.org/Platform-releng/Updating_Branding -->
+          <property name="windowImages" value="niem_uml16.png,niem_uml32.png,niem_uml48.png,niem_uml64.png,niem_uml128.png"/> 
+          <property name="aboutImage" value="niem_uml_lg.gif"/> 
+          <property name="aboutText" value="Graphical editor for NIEM UML information exchanges"/> 
+          <property name="appName" value="NIEM UML"/> 
+          <property
+                name="startupForegroundColor"
+                value="000000"/>
+          <property
+                name="startupMessageRect"
+                value="55,90,340,20"/>
+          <property
+                name="startupProgressRect"
+                value="0,129,452,15"/>
+          <property
+                name="applicationXMI"
+                value="org.eclipse.platform/LegacyIDE.e4xmi">
+          </property>
+          <property
+                name="cssTheme"
+                value="org.eclipse.e4.ui.css.theme.e4_default">
+          </property>
+          <property
+                name="applicationCSSResources"
+          value="platform:/plugin/org.eclipse.platform/images/">
+          </property>
+          <property
+                name="preferenceCustomization"
+                value="plugin_customization.ini">
+          </property>
+      </product> 
+   </extension> 
+   
+
+</plugin>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.search.niem.mpd/src/main/java" editDirectory="/org.search.niem.mpd.edit/src/main/java"
+    modelPluginID="org.search.niem.mpd" modelName="Mpd-catalog-1" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    testsDirectory="/org.search.niem.mpd.tests/src/test/java" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="7.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>mpd-catalog-1.0.ecore</foreignModel>
+  <genPackages prefix="Cat" basePackage="org.search.niem.mpd" resource="XML" disposableProviderFactory="true"
+      fileExtensions="mpdxml" ecorePackage="mpd-catalog-1.0.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="mpd-catalog-1.0.ecore#//MPDClassCodeSimpleType">
+      <genEnumLiterals ecoreEnumLiteral="mpd-catalog-1.0.ecore#//MPDClassCodeSimpleType/release"/>
+      <genEnumLiterals ecoreEnumLiteral="mpd-catalog-1.0.ecore#//MPDClassCodeSimpleType/coreUpdate"/>
+      <genEnumLiterals ecoreEnumLiteral="mpd-catalog-1.0.ecore#//MPDClassCodeSimpleType/domainUpdate"/>
+      <genEnumLiterals ecoreEnumLiteral="mpd-catalog-1.0.ecore#//MPDClassCodeSimpleType/iepd"/>
+      <genEnumLiterals ecoreEnumLiteral="mpd-catalog-1.0.ecore#//MPDClassCodeSimpleType/eiem"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="mpd-catalog-1.0.ecore#//RelationshipCodeSimpleType">
+      <genEnumLiterals ecoreEnumLiteral="mpd-catalog-1.0.ecore#//RelationshipCodeSimpleType/versionOf"/>
+      <genEnumLiterals ecoreEnumLiteral="mpd-catalog-1.0.ecore#//RelationshipCodeSimpleType/specializes"/>
+      <genEnumLiterals ecoreEnumLiteral="mpd-catalog-1.0.ecore#//RelationshipCodeSimpleType/generalizes"/>
+      <genEnumLiterals ecoreEnumLiteral="mpd-catalog-1.0.ecore#//RelationshipCodeSimpleType/supersedes"/>
+      <genEnumLiterals ecoreEnumLiteral="mpd-catalog-1.0.ecore#//RelationshipCodeSimpleType/deprecates"/>
+      <genEnumLiterals ecoreEnumLiteral="mpd-catalog-1.0.ecore#//RelationshipCodeSimpleType/adapts"/>
+      <genEnumLiterals ecoreEnumLiteral="mpd-catalog-1.0.ecore#//RelationshipCodeSimpleType/updates"/>
+      <genEnumLiterals ecoreEnumLiteral="mpd-catalog-1.0.ecore#//RelationshipCodeSimpleType/conformsTo"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="mpd-catalog-1.0.ecore#//MPDClassCodeSimpleTypeObject"/>
+    <genDataTypes ecoreDataType="mpd-catalog-1.0.ecore#//MPDVersionIDSimpleType"/>
+    <genDataTypes ecoreDataType="mpd-catalog-1.0.ecore#//RelationshipCodeSimpleTypeObject"/>
+    <genDataTypes ecoreDataType="mpd-catalog-1.0.ecore#//SafeCurieSimpleType"/>
+    <genDataTypes ecoreDataType="mpd-catalog-1.0.ecore#//URISimpleType"/>
+    <genClasses ecoreClass="mpd-catalog-1.0.ecore#//AuthoritativeSourceType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//AuthoritativeSourceType/aSName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//AuthoritativeSourceType/aSAddressText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//AuthoritativeSourceType/aSWebSiteURL"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mpd-catalog-1.0.ecore#//AuthoritativeSourceType/pOC"/>
+    </genClasses>
+    <genClasses ecoreClass="mpd-catalog-1.0.ecore#//CatalogType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//CatalogType/artifactGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference mpd-catalog-1.0.ecore#//CatalogType/artifact"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mpd-catalog-1.0.ecore#//CatalogType/metadata"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//CatalogType/descriptionText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//CatalogType/mpdClassCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//CatalogType/mpdName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//CatalogType/mpdURI"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//CatalogType/mpdVersionID"/>
+    </genClasses>
+    <genClasses ecoreClass="mpd-catalog-1.0.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference mpd-catalog-1.0.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference mpd-catalog-1.0.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference mpd-catalog-1.0.ecore#//DocumentRoot/artifact"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//DocumentRoot/aSAddressText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//DocumentRoot/aSName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//DocumentRoot/aSWebSiteURL"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mpd-catalog-1.0.ecore#//DocumentRoot/authoritativeSource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mpd-catalog-1.0.ecore#//DocumentRoot/catalog"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//DocumentRoot/creationDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//DocumentRoot/domainText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//DocumentRoot/exchangePartnerName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//DocumentRoot/exchangePatternText"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mpd-catalog-1.0.ecore#//DocumentRoot/file"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mpd-catalog-1.0.ecore#//DocumentRoot/fileSet"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mpd-catalog-1.0.ecore#//DocumentRoot/folder"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//DocumentRoot/keywordText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//DocumentRoot/lastRevisionDate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mpd-catalog-1.0.ecore#//DocumentRoot/metadata"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//DocumentRoot/nextRevisionDate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mpd-catalog-1.0.ecore#//DocumentRoot/pOC"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//DocumentRoot/pOCEmail"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//DocumentRoot/pOCName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//DocumentRoot/pOCTelephone"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//DocumentRoot/purposeText"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mpd-catalog-1.0.ecore#//DocumentRoot/relationship"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//DocumentRoot/securityMarkingText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//DocumentRoot/statusText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//DocumentRoot/descriptionText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//DocumentRoot/externalURI"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//DocumentRoot/files"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//DocumentRoot/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//DocumentRoot/mpdClassCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//DocumentRoot/mpdName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//DocumentRoot/mpdURI"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//DocumentRoot/mpdVersionID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//DocumentRoot/natureURI"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//DocumentRoot/purposeURI"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//DocumentRoot/relationshipCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//DocumentRoot/relativePathName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//DocumentRoot/resourceURI"/>
+    </genClasses>
+    <genClasses ecoreClass="mpd-catalog-1.0.ecore#//FileSetType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mpd-catalog-1.0.ecore#//FileSetType/file"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//FileSetType/descriptionText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//FileSetType/externalURI"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//FileSetType/files"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//FileSetType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//FileSetType/natureURI"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//FileSetType/purposeURI"/>
+    </genClasses>
+    <genClasses ecoreClass="mpd-catalog-1.0.ecore#//FileType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//FileType/descriptionText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//FileType/externalURI"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//FileType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//FileType/natureURI"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//FileType/purposeURI"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//FileType/relativePathName"/>
+    </genClasses>
+    <genClasses ecoreClass="mpd-catalog-1.0.ecore#//FolderType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//FolderType/descriptionText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//FolderType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//FolderType/relativePathName"/>
+    </genClasses>
+    <genClasses ecoreClass="mpd-catalog-1.0.ecore#//MetadataType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//MetadataType/securityMarkingText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//MetadataType/creationDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//MetadataType/lastRevisionDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//MetadataType/nextRevisionDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//MetadataType/statusText"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mpd-catalog-1.0.ecore#//MetadataType/relationship"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//MetadataType/keywordText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//MetadataType/domainText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//MetadataType/purposeText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//MetadataType/exchangePatternText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//MetadataType/exchangePartnerName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mpd-catalog-1.0.ecore#//MetadataType/authoritativeSource"/>
+      <genOperations ecoreOperation="mpd-catalog-1.0.ecore#//MetadataType/setCreationDate">
+        <genParameters ecoreParameter="mpd-catalog-1.0.ecore#//MetadataType/setCreationDate/dateString"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="mpd-catalog-1.0.ecore#//POCType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//POCType/pOCName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//POCType/pOCEmail"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//POCType/pOCTelephone"/>
+    </genClasses>
+    <genClasses ecoreClass="mpd-catalog-1.0.ecore#//RelationshipType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//RelationshipType/descriptionText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//RelationshipType/relationshipCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mpd-catalog-1.0.ecore#//RelationshipType/resourceURI"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

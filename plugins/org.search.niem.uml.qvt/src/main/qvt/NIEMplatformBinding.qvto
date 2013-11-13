@@ -1,0 +1,630 @@
+import NIEMglobals;
+
+import org.search.niem.NiemQvt;
+
+modeltype XSD  uses 'http://www.eclipse.org/xsd/2002/XSD';
+
+//modeltype UML uses 'http://www.omg.org/spec/UML/20110701';
+// platform variants for UML
+modeltype ECORE uses 'http://www.eclipse.org/emf/2002/Ecore';
+modeltype UML uses 'http://www.eclipse.org/uml2/4.0.0/UML';
+//modeltype UML uses 'http://www.nomagic.com/magicdraw/UML/2.4.1';
+modeltype CAT  uses 'http://reference.niem.gov/niem/resource/mpd/catalog/1.0/';
+// modeltype MPD  uses 'http://www.omg.org/spec/NIEM-UML/20120501/Model_Package_Description_Profile';
+
+transformation NIEMplatformBinding;
+	main() {}	
+
+/////////////////////////abstract platform bindings
+// abstract helper UML::Element::isEditable():Boolean;// true if the context Element can be modified (i.e., not a library or shared resource)
+// abstract query UML::Element::IsStereotypeApplied(stereotype:UML::Stereotype):Boolean;// true if the stereotype has been applied to the context Element
+// abstract helper 	UML::Element::removeElement();// remove the context Element from the model
+// abstract helper UML::Element::ApplyStereotype(stereotype:UML::Stereotype):Stdlib::Element;// apply the stereotype to the context Element
+// abstract helper UML::MultiplicityElement::setLower(lower:Integer);// set the lower value of a MultiplicityElement
+// abstract helper UML::MultiplicityElement::setUpper(upper:Integer);// set the upper value of a MultiplicityElement
+// abstract query UML::Element::GetStereotypeApplication(stereotype:UML::Stereotype):Stdlib::Element;// get the instance of the stereotype applied to the context Element
+
+/*
+	Stereotype instance tag value setters.
+	Context is an applied stereotype instance.
+	Argument is value of tag to be set.
+	In the case of Enumerations, argument is the String value of the EnumerationLiteral name
+	
+	These are abstract to reflect variations of Stereotype instance implementations, which typically are either
+	*  A UML InstanceSpecification
+	*  A dynamic CMOF meta-model implementation
+*/	
+helper  Stdlib::Element::setInformationModelDefaultPurpose(defaultPurpose:String) { // set <<InformationModel>> defaultPurpose
+	self.oclAsType(ECORE::EObject).setInformationModelDefaultPurpose(defaultPurpose);
+} 
+helper  Stdlib::Element::setSchemaAppinfoConformantIndicator(isConformant:Boolean) { // set <<Namespace>> isConformant
+	self.oclAsType(ECORE::EObject).setSchemaAppinfoConformantIndicator(isConformant);
+}
+helper  Stdlib::Element::setSchemaVersion(version:String) { // set <<Namespace>> version
+	self.oclAsType(ECORE::EObject).setSchemaVersion(version);
+}
+helper  Stdlib::Element::setSchemaNamespace(namespace:String) { // set <<Namespace>> targetNamespace
+	self.oclAsType(ECORE::EObject).setSchemaNamespace(namespace);
+}
+helper  Stdlib::Element::setFileTypeExternalURI(externalURI:String) { // set <<ModelPackageDescriptionFile>> externalURI
+	self.oclAsType(ECORE::EObject).setFileTypeExternalURI(externalURI);
+}
+helper  Stdlib::Element::setFileTypeNatureCode(fullnatureURI:String) { // set <<ModelPackageDescriptionFile>> natureCode (argument is full URI, not the abbreviated code in the Enumeration)
+	self.oclAsType(ECORE::EObject).setFileTypeNatureCode(fullnatureURI);
+}
+helper  Stdlib::Element::setFileTypePurposeCode(fullpurposeURI:String) { // set <<ModelPackageDescriptionFile>> purposeCode (argument is full URI, not the abbreviated code in the Enumeration)
+	self.oclAsType(ECORE::EObject).setFileTypePurposeCode(fullpurposeURI);
+}
+helper  Stdlib::Element::setFileTypeDescriptionText(descriptionText:String) { // set <<ModelPackageDescriptionFile>> descriptionText
+	self.oclAsType(ECORE::EObject).setFileTypeDescriptionText(descriptionText);
+}
+helper  Stdlib::Element::setFileTypeRelativePathName(relativePathName:String) { // set <<ModelPackageDescriptionFile>> relativePathName
+    self.oclAsType(ECORE::EObject).setFileTypeRelativePathName(relativePathName);
+}
+helper  Stdlib::Element::setFileSetTypeNatureURI(natureURI:String) { // set <<ModelPackageDescriptionFileSet>> natureCode (argument is full URI, not the abbreviated code in the Enumeration)
+	self.oclAsType(ECORE::EObject).setFileSetTypeNatureURI(natureURI);
+}
+helper  Stdlib::Element::setFileSetTypePurposeURI(purposeURI:String) { // set <<ModelPackageDescriptionFileSet>> purposeCode (argument is full URI, not the abbreviated code in the Enumeration)
+	self.oclAsType(ECORE::EObject).setFileSetTypePurposeURI(purposeURI);
+}
+helper  Stdlib::Element::setNIEMPropertyKind(kind:String) { // set <<XSDProperty>> kind
+	self.oclAsType(ECORE::EObject).setNIEMPropertyKind(kind);
+}
+helper  Stdlib::Element::setNIEMPropertyNillable(nillable:Boolean) { // set <<XSDProperty>> nillable
+	self.oclAsType(ECORE::EObject).setNIEMPropertyNillable(nillable);
+}
+helper  Stdlib::Element::setNIEMSimpleTypeFractionDigits(value:Integer) { // set <<ValueRestriction>> fractionDigits
+	self.oclAsType(ECORE::EObject).setNIEMSimpleTypeFractionDigits(value);
+}
+helper  Stdlib::Element::setNIEMSimpleTypeLength(value:Integer) { // set <<ValueRestriction>> length
+	self.oclAsType(ECORE::EObject).setNIEMSimpleTypeLength(value);
+}
+helper  Stdlib::Element::setNIEMSimpleTypeMaxLength(value:Integer) { // set <<ValueRestriction>> maxLength
+	self.oclAsType(ECORE::EObject).setNIEMSimpleTypeMaxLength(value);
+}
+helper  Stdlib::Element::setNIEMSimpleTypeMinLength(value:Integer) { // set <<ValueRestriction>> minLength
+	self.oclAsType(ECORE::EObject).setNIEMSimpleTypeMinLength(value);
+}
+helper  Stdlib::Element::setNIEMSimpleTypeMaxExclusive(value:String) { // set <<ValueRestriction>> maxExclusive
+	self.oclAsType(ECORE::EObject).setNIEMSimpleTypeMaxExclusive(value);
+}
+helper  Stdlib::Element::setNIEMSimpleTypeMaxInclusive(value:String) { // set <<ValueRestriction>> maxInclusive
+	self.oclAsType(ECORE::EObject).setNIEMSimpleTypeMaxInclusive(value);
+}
+helper  Stdlib::Element::setNIEMSimpleTypeMinExclusive(value:String) { // set <<ValueRestriction>> minExclusive
+	self.oclAsType(ECORE::EObject).setNIEMSimpleTypeMinExclusive(value);
+}
+helper  Stdlib::Element::setNIEMSimpleTypeMinInclusive(value:String) { // set <<ValueRestriction>> minInclusive
+	self.oclAsType(ECORE::EObject).setNIEMSimpleTypeMinInclusive(value);
+}
+helper  Stdlib::Element::setNIEMSimpleTypeTotalDigits(value:Integer) { // set <<ValueRestriction>> totalDigits
+	self.oclAsType(ECORE::EObject).setNIEMSimpleTypeTotalDigits(value);
+}
+helper  Stdlib::Element::setNIEMSimpleTypeWhiteSpace(value:String) { // set <<XSDRepresentationRestriction>> whiteSpace
+	self.oclAsType(ECORE::EObject).setNIEMSimpleTypeWhiteSpace(value);
+}
+helper  Stdlib::Element::setNIEMSimpleTypePattern(value:Sequence(String)) { // set <<ValueRestriction>> pattern
+	self.oclAsType(ECORE::EObject).setNIEMSimpleTypePattern(value);
+}
+helper  Stdlib::Element::setNIEMAnyPropertyProcessContents(processContents:String) { // set <<XSDAnyProperty>> processContents
+	self.oclAsType(ECORE::EObject).setNIEMAnyPropertyProcessContents(processContents);
+}
+helper  Stdlib::Element::setNIEMAnyPropertyValueNamespace(valueNamespace:String) { // set <<XSDAnyProperty>> valueNamespace
+	self.oclAsType(ECORE::EObject).setNIEMAnyPropertyValueNamespace(valueNamespace);
+}
+// abstract helper  OclAny::isCatalogFolderType():Boolean;//
+// abstract helper   CAT::CatalogType::addCatalogFileSet(folder:CAT::FileSetType);
+// abstract helper CAT::CatalogType::addCatalogFolder(folderIn:CAT::FolderType);
+// abstract helper CAT::CatalogType::addCatalogFile(fileIn:CAT::FileType);
+// abstract helper CAT::FileSetType::addFileSetFiles(value:String);
+
+query Stdlib::Element::getFileTypePurposeURI():String {
+    return self.oclAsType(ECORE::EObject).getFileTypePurposeURI(); // TODO: make this statically typed
+}
+helper Stdlib::Element::getFileTypeNatureURI():String {
+	return self.oclAsType(ECORE::EObject).getFileTypeNatureURI(); // TODO: make this statically typed
+}
+helper Stdlib::Element::splitSchemas(referenceTarget:Stdlib::Element) {
+	self.oclAsType(ECORE::EObject).splitSchemas(referenceTarget.oclAsType(ECORE::EObject));
+}
+
+/*
+	Stereotype instance tag value getters.
+	Context is an applied stereotype instance.
+	The value of tag on the Stereotype instance is returned. 
+	In the case of Enumerations, return value is the String value of the EnumerationLiteral name
+	
+	These are abstract to reflect variations of Stereotype instance implementations, which typically are either
+	*  A UML InstanceSpecification
+	*  A dynamic CMOF meta-model implementation
+*/	
+
+query  Stdlib::Element::getInformationModelDefaultPurpose():String { // get <<InformationModel>> defaultPurpose
+	return self.oclAsType(ECORE::EObject).getInformationModelDefaultPurpose();
+}
+query  Stdlib::Element::getSchemaTargetNamespace():String { // get <<Namespace>> targetNamespace
+	return self.oclAsType(ECORE::EObject).getSchemaTargetNamespace();
+}
+query  Stdlib::Element::getPimSchemaConformantIndicator():Boolean { // get <<Namespace>> isConformant
+	return self.oclAsType(ECORE::EObject).getPimSchemaConformantIndicator();
+}
+query  Stdlib::Element::getPimSchemaVersion():String { // get <<Namespace>> version
+	return self.oclAsType(ECORE::EObject).getPimSchemaVersion();
+}
+query  Stdlib::Element::getNIEMSimpleTypeFractionDigits():Integer { // get <<ValueRestriction>> fractionDigits
+	return self.oclAsType(ECORE::EObject).getNIEMSimpleTypeFractionDigits();
+}
+query  Stdlib::Element::getNIEMSimpleTypeLength():Integer { // get <<ValueRestriction>> length
+	return self.oclAsType(ECORE::EObject).getNIEMSimpleTypeLength();
+}
+query  Stdlib::Element::getNIEMSimpleTypeMaxLength():Integer { // get <<ValueRestriction>> maxLength
+	return self.oclAsType(ECORE::EObject).getNIEMSimpleTypeMaxLength();
+}
+query  Stdlib::Element::getNIEMSimpleTypeMinLength():Integer { // get <<ValueRestriction>> minLength
+	return self.oclAsType(ECORE::EObject).getNIEMSimpleTypeMinLength();
+}
+query  Stdlib::Element::getNIEMSimpleTypeTotalDigits():Integer { // get <<ValueRestriction>> totalDigits
+	return self.oclAsType(ECORE::EObject).getNIEMSimpleTypeTotalDigits();
+}
+query  Stdlib::Element::getNIEMSimpleTypePattern():Sequence(String) { // get <<ValueRestriction>> pattern
+	return self.oclAsType(ECORE::EObject).getNIEMSimpleTypePattern();
+}
+query  Stdlib::Element::getNIEMSimpleTypeMaxExclusive():String { // get <<ValueRestriction>> maxExclusive
+	return self.oclAsType(ECORE::EObject).getNIEMSimpleTypeMaxExclusive();
+}
+query  Stdlib::Element::getNIEMSimpleTypeMaxInclusive():String { // get <<ValueRestriction>> maxInclusive
+	return self.oclAsType(ECORE::EObject).getNIEMSimpleTypeMaxInclusive();
+}
+query  Stdlib::Element::getNIEMSimpleTypeMinExclusive():String { // get <<ValueRestriction>> minExclusive
+	return self.oclAsType(ECORE::EObject).getNIEMSimpleTypeMinExclusive();
+}
+query  Stdlib::Element::getNIEMSimpleTypeMinInclusive():String { // get <<ValueRestriction>> minInclusive
+	return self.oclAsType(ECORE::EObject).getNIEMSimpleTypeMinInclusive();
+}
+query  Stdlib::Element::getXSDRepresentationRestrictionWhiteSpace():String { // get <<XSDRepresentationRestriction>> whiteSpace
+	return self.oclAsType(ECORE::EObject).getXSDRepresentationRestrictionWhiteSpace();
+}
+query  Stdlib::Element::getNIEMPropertyKind():String { // get <<XSDProperty>> kind
+	return self.oclAsType(ECORE::EObject).getNIEMPropertyKind();
+}
+query  Stdlib::Element::getAnyPropertyNamespace():String { // get <<XSDAnyProperty>> valueNamespace
+	return self.oclAsType(ECORE::EObject).getAnyPropertyNamespace();
+}
+query  Stdlib::Element::getAnyPropertyProcessContents():String { // get <<XSDAnyProperty>> processContents
+	return self.oclAsType(ECORE::EObject).getAnyPropertyProcessContents();
+}
+query  Stdlib::Element::getNIEMElementNillable():Boolean { // get <<XSDProperty>> nillable
+	return self.oclAsType(ECORE::EObject).getNIEMElementNillable();
+}
+query  Stdlib::Element::getXSDPropertyFixed():String { // get <<XSDProperty>> fixed
+	return self.oclAsType(ECORE::EObject).getXSDPropertyFixed();
+}
+query  Stdlib::Element::getMpdDescriptionText():String { // get <<ModelPackageDescription>> descriptionText
+	return self.oclAsType(ECORE::EObject).getMpdDescriptionText();
+}
+query  Stdlib::Element::getMpdBaseURI():String { // get <<ModelPackageDescription>> mpdBaseURI
+	return self.oclAsType(ECORE::EObject).getMpdBaseURI();
+}
+query  Stdlib::Element::getMpdVersionID():String { // get <<ModelPackageDescription>> mpdVersionID
+	return self.oclAsType(ECORE::EObject).getMpdVersionID();
+}
+query  Stdlib::Element::getMpdSecurityMarkingText():String { // get <<ModelPackageDescription>> SecurityMarkingText
+	return self.oclAsType(ECORE::EObject).getMpdSecurityMarkingText();
+}
+query  Stdlib::Element::getMpdStatusText():String { // get <<ModelPackageDescription>> StatusText
+	return self.oclAsType(ECORE::EObject).getMpdStatusText();
+}
+query  Stdlib::Element::getMpdKeywordText():Sequence(String) { // get <<ModelPackageDescription>> KeywordText
+	return self.oclAsType(ECORE::EObject).getMpdKeywordText();
+}
+query  Stdlib::Element::getMpdPOC():Sequence(Stdlib::Element) { // get <<ModelPackageDescription>> POC
+	return self.oclAsType(ECORE::EObject).getMpdPOCAsStdlib()->collect(e | e.oclAsType(Stdlib::Element));
+}
+query  Stdlib::Element::getMpdDomainText():Sequence(String) { // get <<ModelPackageDescription>> DomainText
+	return self.oclAsType(ECORE::EObject).getMpdDomainText();
+}
+query  Stdlib::Element::getMpdPurposeText():Sequence(String) { // get <<ModelPackageDescription>> PurposeText
+	return self.oclAsType(ECORE::EObject).getMpdPurposeText();
+}
+query  Stdlib::Element::getMpdExchangePatternText():Sequence(String) { // get <<ModelPackageDescription>> ExchangePatternText
+	return self.oclAsType(ECORE::EObject).getMpdExchangePatternText();
+}
+query  Stdlib::Element::getMpdExchangePartnerName():Sequence(String) { // get <<ModelPackageDescription>> ExchangePartnerName
+	return self.oclAsType(ECORE::EObject).getMpdExchangePartnerName();
+}
+query  Stdlib::Element::getMpdASName():String { // get <<ModelPackageDescription>> ASName
+	return self.oclAsType(ECORE::EObject).getMpdASName();
+}
+query  Stdlib::Element::getMpdASAddressText():String { // get <<ModelPackageDescription>> ASAddressText
+	return self.oclAsType(ECORE::EObject).getMpdASAddressText();
+}
+query  Stdlib::Element::getMpdASWebSiteURL():String { // get <<ModelPackageDescription>> ASWebSiteURL
+	return self.oclAsType(ECORE::EObject).getMpdASWebSiteURL();
+}
+query  Stdlib::Element::getMpdCreationDate():String { // get <<ModelPackageDescription>> CreationDate
+	return self.oclAsType(ECORE::EObject).getMpdCreationDate();
+}
+query  Stdlib::Element::getMpdPackageCode():String { // get <<ModelPackageDescription>> mpdClassCode
+	return self.oclAsType(ECORE::EObject).getMpdPackageCode();
+}
+query  Stdlib::Element::getPOCName():String { // get POCType POCName
+	return self.oclAsType(ECORE::EObject).getPOCName();
+}
+query  Stdlib::Element::getPOCEmail():Sequence(String) { // get POCType POCEmail
+	return self.oclAsType(ECORE::EObject).getPOCEmail();
+}
+query  Stdlib::Element::getPOCTelephone():Sequence(String) { // get POCType POCTelephone
+	return self.oclAsType(ECORE::EObject).getPOCTelephone();
+}
+query  Stdlib::Element::getFileSetTypePurposeCode():String { // get <<ModelPackageDescriptionFileSet>> purposeCode (as full URI, not the abbreviated code in the Enumeration)
+	return self.oclAsType(ECORE::EObject).getFileSetTypePurposeCode();
+}
+query  Stdlib::Element::getFileSetExternalURI():String { // get <<ModelPackageDescriptionFileSet>> externalURI
+	return self.oclAsType(ECORE::EObject).getFileSetExternalURI();
+}
+query  Stdlib::Element::getFileSetDescriptionText():String { // get <<ModelPackageDescriptionFileSet>> descriptionText
+	return self.oclAsType(ECORE::EObject).getFileSetDescriptionText();
+}
+query  Stdlib::Element::getFileTypePurposeCode():String { // get <<ModelPackageDescriptionFile>> purposeCode (as full URI, not the abbreviated code in the Enumeration)
+	return self.oclAsType(ECORE::EObject).getFileTypePurposeCode();
+}
+query  Stdlib::Element::getFileTypeExternalURI():String { // get <<ModelPackageDescriptionFile>> externalURI
+	return self.oclAsType(ECORE::EObject).getFileTypeExternalURI();
+}
+query  Stdlib::Element::getFileDescriptionText():String { // get <<ModelPackageDescriptionFile>> descriptionText
+	return self.oclAsType(ECORE::EObject).getFileDescriptionText();
+}
+query  Stdlib::Element::getRelationshipDescriptionText():String { // get <<ModelPackageDescriptionRelationship>> descriptionText
+	return self.oclAsType(ECORE::EObject).getRelationshipDescriptionText();
+}
+query  Stdlib::Element::getRelationshipCode():String { // get <<ModelPackageDescriptionRelationship>> relationshipCode
+	return self.oclAsType(ECORE::EObject).getRelationshipCode();
+}
+/*
+	apply the stereotype to the target, 
+	copy the values of the stereotype instance context to the new stereotype instance, 
+	return the new stereotype instance
+*/ 
+helper  Stdlib::Element::deepcloneStereotypeApplication(stereotype:UML::Stereotype,inout target:UML::Element):Stdlib::Element {
+	return self.oclAsType(ECORE::EObject).deepCloneStereotypeApplication(stereotype, target).oclAsType(Stdlib::Element);
+}
+/*
+	apply the <<Namespace>> stereotype to the target, 
+	copy the values of the <<InformationModel>> stereotype instance context to the new <<Namespace>> stereotype instance 
+*/ 
+helper  Stdlib::Element::cloneInformationModelToNamespace(inout target:Stdlib::Element) {
+ 	self.oclAsType(ECORE::EObject).cloneInformationModelToNamespace(target.oclAsType(ECORE::EObject));
+}
+/*
+	For the context CMOF extent,
+	For the URI of the extent,
+	return the last segment of the URI after truncating the file extension.
+*/
+helper Stdlib::Element::contextURI():String {
+	return self.oclAsType(ECORE::EObject).contextURI();
+}
+/*
+	Return a representation for the CMOF extent of the XSDSchema context
+*/
+helper XSD::XSDSchema::extent():Stdlib::Element {
+	return self.eXtent().oclAsType(ECORE::EObject);
+}
+
+/*
+	Sets the QName prefix used to reference the schema for schema namespace.
+*/
+// abstract helper XSD::XSDSchema::setSchemaForSchema(prefix:String,namespace:String);
+/*
+	Sets the QName prefix used to reference the given namespace.
+*/
+// abstract helper XSD::XSDSchema::setQNamePrefixToNamespace(prefix:String,namespace:String);
+/*
+	Return the location of the XSDSchema, relative to the root directory of the target ModelPackageDescription
+*/
+// abstract query XSD::XSDSchema::relativeMdpLocation():String;
+/*
+	Resolve and load the schema referenced by the XSDImport context.
+*/
+// abstract helper XSD::XSDImport::importSchema();
+/*
+Returns the value of the 'Application Information' attribute list for the XSDAnnotation context. 
+The list contents are of type org.w3c.dom.Element. 
+This represents the application information infoset property, i.e., a list of appinfo elements. 
+*/
+// abstract query XSD::XSDAnnotation::getXSDAnnotationApplicationInformation():OrderedSet(OclAny);
+/*
+In the context of an XSDAnnotation, creates and returns a new documentation org.w3c.dom.element using the containing schema's document as the factory. 
+*/
+// abstract helper XSD::XSDAnnotation::createUserInformation(sourceURI:String):OclAny;
+/*
+	In the context of an org.w3c.dom.Element, return all child org.w3c.dom.Elements
+*/
+// abstract query  OclAny::getElementElements():OrderedSet(OclAny);
+/*
+	In the context of an org.w3c.dom.Element, return the text content.
+*/
+// abstract query OclAny::getXSDElementValue():String;
+/*
+	In the context of an org.w3c.dom.Element, return the name.
+*/
+// abstract query OclAny::getElementName():String;
+/*
+	In the context of an org.w3c.dom.Element, return the namespace.
+*/
+// abstract query OclAny::getElementNamespace():String;
+/*
+	In the context of an org.w3c.dom.Element, set the textContent to provided value.
+*/
+// abstract helper OclAny::setTextContent(value:String);
+/*
+	in the context of an org.w3c.dom.Element, commit any changes to Element or its components (if necessary) 
+*/
+// abstract helper OclAny::commitInformation();
+/*
+	in the context of an XSDAnnotation, create or update an applicationInformation element,
+		for the given name within the NIEM appinfo2 namespace,
+		setting its textual content to the provided value 
+*/
+// abstract helper XSD::XSDAnnotation::setAppinfo2Element(value:String,owningSchema:XSD::XSDSchema,name:String);	
+/*
+	in the context of an XSDAnnotation, create or update an applicationInformation element,
+		for the given name within the NIEM appinfo namespace,
+		setting its textual content to the provided value 
+*/
+// abstract helper XSD::XSDAnnotation::setAppinfoElementValue(value:String,name:String);
+/*
+	in the context of an XSDAnnotation, create or update an applicationInformation element,
+		for the given elementName within the NIEM appinfo namespace,
+		set the appinfo:name attribute to the provided name
+		and set the appinfo:namespace to the provided namespace
+	in the case of elementName='AppliesTo', always add an element;
+	in all other cases, replace content of any existing element matching elementName (or add new element if no match)	
+*/
+// abstract helper XSD::XSDAnnotation::setAppinfoElement(elementName:String,name:String,namespace:String);
+/*
+	in the context of an org.w3c.dom.Element return the value of the appinfo:name attribute	
+*/
+// abstract query OclAny::getAppInfoName():String;
+/*
+	in the context of an org.w3c.dom.Element return the value of the appinfo:namespace attribute	
+*/
+// abstract query OclAny::getAppInfoNamespace():String;
+/*
+	in the context of an org.w3c.dom.Element, return whether or not there is an appinfo:namespace attribute	
+*/
+// abstract query OclAny::hasAppinfoNamespaceAttribute(name:String):Boolean;
+/*
+	in the context of an org.w3c.dom.Element, return whether or not there is an appinfo:name attribute	
+*/
+// abstract query OclAny::hasAppinfoNameAttribute(name:String):Boolean;
+/*
+	in the context of an XSDAnnotation, 
+	map the textual content of UserInformation to the body of a new Comment 
+	and append the new Comment to the ownedComments of the owner  
+*/
+// abstract helper 	XSD::XSDAnnotation::mapXSDAnnotation(owner:UML::Element);
+helper Stdlib::Element::getSchemaAtRelativeURI(relativeURI:String):Stdlib::Element {
+	return self.oclAsType(ECORE::EObject).getSchemaAtRelativeUri(relativeURI).oclAsType(Stdlib::Element);
+}
+helper  Stdlib::Element::setFileSetTypeDescriptionText(descriptionTextIn:String) {
+	self.oclAsType(ECORE::EObject).setFileSetTypeDescriptionText(descriptionTextIn);
+}
+helper  Stdlib::Element::setFileSetTypeExternalURI(externalURIIn:String) {
+    self.oclAsType(ECORE::EObject).setFileSetTypeExternalURI(externalURIIn);
+}
+helper  Stdlib::Element::setMpdVersionID(mpdVersionID:String) {
+    self.oclAsType(ECORE::EObject).setMpdVersionID(mpdVersionID);
+}
+helper  Stdlib::Element::setMpdBaseURI(mpdBaseURI:String) {
+    self.oclAsType(ECORE::EObject).setMpdBaseURI(mpdBaseURI);
+}
+helper  Stdlib::Element::setMpdDescriptionText(descriptionText:String) {
+    self.oclAsType(ECORE::EObject).setMpdDescriptionText(descriptionText);
+}
+helper  Stdlib::Element::setMpdSecurityMarkingText(SecurityMarkingText:String) {
+    self.oclAsType(ECORE::EObject).setMpdSecurityMarkingText(SecurityMarkingText);
+}
+
+helper  Stdlib::Element::setMpdCreationDate(CreationDate:String) {
+    self.oclAsType(ECORE::EObject).setMpdCreationDate(CreationDate);
+}
+helper  Stdlib::Element::setMpdStatusText(StatusText:String) {
+    self.oclAsType(ECORE::EObject).setMpdStatusText(StatusText);
+}
+helper  Stdlib::Element::setMpdKeywordText(KeywordText:Sequence(String)) {
+    self.oclAsType(ECORE::EObject).setMpdKeywordText(KeywordText);
+}
+helper  Stdlib::Element::setMpdDomainText(DomainText:Sequence(String)) {
+    self.oclAsType(ECORE::EObject).setMpdDomainText(DomainText);
+}
+helper  Stdlib::Element::setMpdPurposeText(PurposeText:Sequence(String)) {
+    self.oclAsType(ECORE::EObject).setMpdPurposeText(PurposeText);
+}
+helper  Stdlib::Element::setMpdExchangePatternText(ExchangePatternText:Sequence(String)) {
+    self.oclAsType(ECORE::EObject).setMpdExchangePatternText(ExchangePatternText);
+}
+helper  Stdlib::Element::setMpdExchangePartnerName(ExchangePartnerName:Sequence(String)) {
+    self.oclAsType(ECORE::EObject).setMpdExchangePartnerName(ExchangePartnerName);
+}
+helper  Stdlib::Element::setMpdASName(ASName:String) {
+    self.oclAsType(ECORE::EObject).setMpdASName(ASName);
+}
+helper  Stdlib::Element::setMpdASAddressText(ASAddressText:String) {
+    self.oclAsType(ECORE::EObject).setMpdASAddressText(ASAddressText);
+}
+helper  Stdlib::Element::setMpdASWebSiteURL(ASWebSiteURL:String) {
+    self.oclAsType(ECORE::EObject).setMpdASWebSiteURL(ASWebSiteURL);
+}
+helper  Stdlib::Element::setPOCPOCName(POCName:String) {
+    self.oclAsType(ECORE::EObject).setPOCPOCName(POCName);
+}
+helper  Stdlib::Element::setPOCPOCEmail(POCEmail:Sequence(String)) {
+    self.oclAsType(ECORE::EObject).setPOCPOCEmail(POCEmail);
+}
+helper  Stdlib::Element::setPOCPOCTelephone(POCTelephone:Sequence(String)) {
+    self.oclAsType(ECORE::EObject).setPOCPOCTelephone(POCTelephone);
+}
+helper  Stdlib::Element::setMpdPackageCode(packageCode:String) {
+    self.oclAsType(ECORE::EObject).setMpdPackageCode(packageCode);
+}
+helper  Stdlib::Element::getMpdPOCList():Stdlib::Element {
+	return self.oclAsType(ECORE::EObject).getMpdPocList().oclAsType(Stdlib::Element);
+}
+helper  Stdlib::Element::createPOCInstance():Stdlib::Element {
+	return self.oclAsType(ECORE::EObject).createPocInstance().oclAsType(Stdlib::Element);
+}
+
+
+////////////////////////////common helpers and queries
+/*
+	Retrieves the nearest package that owns (either directly or indirectly) this element, or the element itself (if it is a package). 
+*/
+query UML::Element::getNearestPackage():UML::Package=
+	if(self.oclIsKindOf(UML::Package)) then self.oclAsType(UML::Package)
+	else self.owner.getNearestPackage()
+	endif;	
+/*
+	Applies the current definition of the specified profile to this package 
+	and automatically applies required stereotypes in the profile to elements within this package's namespace hieararchy. 
+	If a different definition is already applied, 
+	automatically migrates any associated stereotype values on a "best effort" basis (matching classifiers and structural features by name). 
+*/	
+helper UML::Package::applyProfile(profile : UML::Profile){
+	var profileApplication: UML::ProfileApplication=new UML::ProfileApplication();
+	profileApplication.applyingPackage:=self;
+	profileApplication.appliedProfile:=profile;
+	log('applyProfile '+profile.qualifiedName+' to '+self.qualifiedName);
+	return;
+} 
+/*
+	The query allParents() gives all of the direct and indirect ancestors of a generalized Classifier. 
+	result = self.parents()->union(self.parents()->collect(p | p.allParents()) 
+*/
+query UML::Classifier::allParents():OrderedSet(UML::Classifier)=
+	self.general->select(g|(g<>self) and (g<>null)and not(g.oclIsUndefined()))
+	->union(self.general->select(g|(g<>self) and (g<>null)and not(g.oclIsUndefined())).allParents())->asOrderedSet();
+/*
+	Determines whether the specified profile is applied to this package. 
+*/	
+query UML::Package::isProfileApplied(profile:UML::Profile):Boolean=
+	self.profileApplication->exists(a|a.appliedProfile=profile);
+/*
+	In the context of a NIEM_PIM_Profile, initialize the global variables for its stereotypes. 
+*/
+helper UML::Profile::initLogicalProfileStereotypes(){
+		logicalProfile:=self;
+		NIEMRoleOfStereotype:=logicalProfile.getOwnedStereotype('RoleOf');
+		NIEMReferenceNameStereotype:=logicalProfile.getOwnedStereotype('ReferenceName');
+		NIEMRoleStereotype:=logicalProfile.getOwnedStereotype('RolePlayedBy');
+		NIEMAugmentsStereotype:=logicalProfile.getOwnedStereotype('Augments');
+		NIEMInformationModelStereotype:=logicalProfile.getOwnedStereotype('InformationModel');
+		return;
+}
+/*
+	In the context of a Model_Package_Description_Profile, initialize the global variables for its stereotypes. 
+*/
+helper UML::Profile::initProvisioningProfileStereotypes(){
+	provisioningProfile:=self;
+		prompdStereotype:=provisioningProfile.getOwnedStereotype(provisioningMpdStereotypeName);
+		NIEMModelPackageDescriptionRelationshipStereotype:=provisioningProfile.getOwnedStereotype('ModelPackageDescriptionRelationship');
+		NIEMModelPackageDescriptionFileStereotype:=provisioningProfile.getOwnedStereotype('ModelPackageDescriptionFile');
+		NIEMModelPackageDescriptionFileSetStereotype:=provisioningProfile.getOwnedStereotype('ModelPackageDescriptionFileSet');
+		packageCodeLiteralEnumeration:=provisioningProfile.packagedElement
+			->select(e|e.oclIsKindOf(UML::Enumeration)and (e.name='ModelPackageDescriptionClassCode')).oclAsType(UML::Enumeration)
+			->asSequence()->first();	
+		defaultPackageCodeLiteral:=packageCodeLiteralEnumeration.getOwnedLiteral(defaultPackageCodeName);
+	return;
+}
+/*
+	In the context of a NIEM_Common_Profile, initialize the global variables for its stereotypes. 
+*/
+helper UML::Profile::initStructureProfileStereotypes(){
+	structureProfile:=self;
+		NIEMAdapterStereotype:=structureProfile.getOwnedStereotype('AdapterType');
+		appliesToStereotype:=structureProfile.getOwnedStereotype('Application');
+		NIEMAssociationStereotype:=structureProfile.getOwnedStereotype('AssociationType');
+		NIEMAugmentationApplicationStereotype:=structureProfile.getOwnedStereotype('AugmentationApplication');
+		NIEMAugmentationStereotype:=structureProfile.getOwnedStereotype('AugmentationType');
+		NIEMChoiceStereotype:=structureProfile.getOwnedStereotype('Choice');
+		NIEMDescriptionStereotype:=structureProfile.getOwnedStereotype('Documentation');
+		NIEMListTypeStereotype:=structureProfile.getOwnedStereotype('List');
+		NIEMMetadataApplicationStereotype:=structureProfile.getOwnedStereotype('MetadataApplication');
+		NIEMMetadataStereotype:=structureProfile.getOwnedStereotype('MetadataType');
+		NIEMSchemaStereotype:=structureProfile.getOwnedStereotype(provisioningNdrSchemaStereotypeName);
+		NIEMTypeStereotype:=structureProfile.getOwnedStereotype('NIEMType');
+		NIEMObjectTypeStereotype:=structureProfile.getOwnedStereotype('ObjectType');
+		NIEMPropertyHolderStereotype:=structureProfile.getOwnedStereotype(propertyHolderStereotypeName);
+		NIEMReferencesStereotype:=structureProfile.getOwnedStereotype('References');
+		NIEMUnionTypeStereotype:=structureProfile.getOwnedStereotype('Union');
+		NIEMUnionOfStereotype:=structureProfile.getOwnedStereotype('UnionOf');
+		NIEMRestrictionStereotype:=structureProfile.getOwnedStereotype('Restriction');
+		NIEMSimpleTypeStereotype:=structureProfile.getOwnedStereotype('ValueRestriction');
+	return;
+}
+/*
+	In the context of a NIEM_PSM_Profile, initialize the global variables for its stereotypes. 
+*/
+helper UML::Profile::initNiemXsdProfileStereotypes(){
+	niemXsdProfile:=self;
+		NIEMPropertyStereotype:=niemXsdProfile.getOwnedStereotype('XSDProperty');
+		NIEMAnyPropertyStereotype:=niemXsdProfile.getOwnedStereotype('XSDAnyProperty');
+		NIEMRepresentationRestrictionStereotype:=niemXsdProfile.getOwnedStereotype('XSDRepresentationRestriction');
+		NIEMSimpleContentStereotype:=niemXsdProfile.getOwnedStereotype('XSDSimpleContent');
+		NIEMSequenceIdStereotype:=niemXsdProfile.getOwnedStereotype('SequenceID');
+		NIEMDeclarationStereotype:=niemXsdProfile.getOwnedStereotype('XSDDeclaration');
+	return;
+}
+/*
+	Retrieves the first Stereotype with the specified 'Name' from the 'Owned Stereotype' reference list. 
+*/
+query UML::Profile::getOwnedStereotype(stereotypeName:String):UML::Stereotype{
+		var stereotype:UML::Stereotype=self.ownedStereotype->select(s|s.name=stereotypeName)->asSequence()->first();
+		if(stereotype.oclIsUndefined())then{
+			log('ERROR: stereotype '+stereotypeName+' not found in profile '+self.name);
+			
+		}else{}endif;
+		return stereotype;
+	}
+/*
+	Retrieves the first EnumerationLiteral with the specified 'Name' from the 'Owned Literal' containment reference list. 
+*/			
+query	UML::Enumeration::getOwnedLiteral(schemaKind:String):UML::EnumerationLiteral=
+	self.ownedLiteral->select(l|l.name=schemaKind)->asSequence()->first();
+
+/*
+	In the context of a top-level Model,
+	find and initialize globals for all NIEM Profiles plus the XML Type Library
+*/
+helper UML::Model::initializeProfileGlobals() {
+	var allSourceProfiles:Sequence(UML::Profile)=self.getNIEMProfiles();
+	
+    allSourceProfiles
+        ->select(p|p.name=provisioningProfileName)->asSequence()->first().initProvisioningProfileStereotypes();//getProvisioningProfile();
+    allSourceProfiles->select(p|p.name=logicalProfileName)
+        ->asSequence()->first().initLogicalProfileStereotypes();
+    allSourceProfiles->select(p|p.name=structureProfileName)
+        ->asSequence()->first().initStructureProfileStereotypes();
+    allSourceProfiles->select(p|p.name=niemXsdProfileName)
+        ->asSequence()->first().initNiemXsdProfileStereotypes();
+    
+    umlXmlLibrary:=self.getNIEMXmlLibrary();
+    return;
+}
+
+/*
+	In the context of a name String, true if the name conforms with the NIEM RoleOf Element name rule
+*/
+query String::isRoleOfName():Boolean=self.startsWith('RoleOf') and (self<>'RoleOf');
+/*
+	In the context of a name String, return a converted name conforming to NCName (non-colonized name)
+*/
+query String::toNCName():String=self.replace('/','_').replace(' ','')
+	.replace('<','_').replace('>','_').replace('(','_').replace(')','_').replace(',','_').replace('=','');
+
+query UML::NamedElement::toRelativePathName(mpdRootPackage:UML::Package,isFolder:Boolean):String{
+    var umlPackagePath:String=self.qualifiedName.substringAfter(mpdRootPackage.qualifiedName).replace('::','/');
+    if(umlPackagePath='')then {umlPackagePath:='./';}else{umlPackagePath:='.'+umlPackagePath;}endif;
+    if(isFolder and not(umlPackagePath.endsWith('/')))then {umlPackagePath:=umlPackagePath+'/';}else{}endif;
+    if(self.IsStereotypeApplied(NIEMSchemaStereotype)and not(umlPackagePath.endsWith('.xsd')))then{umlPackagePath:=umlPackagePath+'.xsd';}else{}endif;
+    return umlPackagePath;
+}

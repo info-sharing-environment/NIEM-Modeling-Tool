@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><xmi:XMI xmlns:xmi="http://www.omg.org/spec/XMI/20110701">
+	
+	
+	
+	<uml:Model xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile" xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Model_Package_Description_Profile="http://www.omg.org/spec/NIEM-UML/20120501/Model_Package_Description_Profile" xmlns:uml="http://www.omg.org/spec/UML/20110701" xmi:type="uml:Model" xmi:id="_niem" name="niem"><packagedElement xmi:type="uml:Package" xmi:id="_niem-apco" name="apco"><packagedElement xmi:type="uml:Package" xmi:id="_niem-apco-2.1" name="2.1">
+					<packagedElement xmi:type="uml:Package" xmi:id="_niem-apco-2.1-apco" name="apco">
+						<ownedComment xmi:type="uml:Comment" xmi:id="_niem-apco-2.1-apco-ownedComment" body="Association of Public-Safety Communications Officials (APCO) - International, Inc.">
+							<annotatedElement xmi:idref="_niem-apco-2.1-apco"/>
+						</ownedComment>
+						
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-apco-2.1-apco-AlarmEventCategoryCodeSimpleType" name="AlarmEventCategoryCodeSimpleType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-apco-2.1-apco-AlarmEventCategoryCodeSimpleType-ownedComment" body="A data type for kinds of alarm events.">
+								<annotatedElement xmi:idref="_niem-apco-2.1-apco-AlarmEventCategoryCodeSimpleType"/>
+							</ownedComment>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-apco-2.1-apco-AlarmEventCategoryCodeSimpleType-Medical" name="Medical">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-apco-2.1-apco-AlarmEventCategoryCodeSimpleType-Medical-ownedComment" body="Medical Alarm">
+									<annotatedElement xmi:idref="_niem-apco-2.1-apco-AlarmEventCategoryCodeSimpleType-Medical"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-apco-2.1-apco-AlarmEventCategoryCodeSimpleType-FIRE" name="FIRE">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-apco-2.1-apco-AlarmEventCategoryCodeSimpleType-FIRE-ownedComment" body="Fire">
+									<annotatedElement xmi:idref="_niem-apco-2.1-apco-AlarmEventCategoryCodeSimpleType-FIRE"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-apco-2.1-apco-AlarmEventCategoryCodeSimpleType-Comm" name="Comm">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-apco-2.1-apco-AlarmEventCategoryCodeSimpleType-Comm-ownedComment" body="Communication Fail">
+									<annotatedElement xmi:idref="_niem-apco-2.1-apco-AlarmEventCategoryCodeSimpleType-Comm"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-apco-2.1-apco-AlarmEventCategoryCodeSimpleType-BURG" name="BURG">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-apco-2.1-apco-AlarmEventCategoryCodeSimpleType-BURG-ownedComment" body="Burglary">
+									<annotatedElement xmi:idref="_niem-apco-2.1-apco-AlarmEventCategoryCodeSimpleType-BURG"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-apco-2.1-apco-AlarmEventCategoryCodeSimpleType-Holdup" name="Holdup">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-apco-2.1-apco-AlarmEventCategoryCodeSimpleType-Holdup-ownedComment" body="Holdup / Duress">
+									<annotatedElement xmi:idref="_niem-apco-2.1-apco-AlarmEventCategoryCodeSimpleType-Holdup"/>
+								</ownedComment>
+							</ownedLiteral>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Class" xmi:id="_niem-apco-2.1-apco-NamespaceElementPropertyHolder" name="NamespaceElementPropertyHolder"/>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-apco-2.1-apco-AlarmEventCategoryCodeType" name="AlarmEventCategoryCodeType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-apco-2.1-apco-AlarmEventCategoryCodeType-ownedComment" body="A data type for kinds of alarm events.">
+								<annotatedElement xmi:idref="_niem-apco-2.1-apco-AlarmEventCategoryCodeType"/>
+							</ownedComment>
+							<generalization xmi:type="uml:Generalization" xmi:id="_niem-apco-2.1-apco-AlarmEventCategoryCodeType-generalization" general="_niem-apco-2.1-apco-AlarmEventCategoryCodeSimpleType"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-apco-2.1-apco-AlarmEventLocationCategoryCodeSimpleType" name="AlarmEventLocationCategoryCodeSimpleType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-apco-2.1-apco-AlarmEventLocationCategoryCodeSimpleType-ownedComment" body="A data type for the kinds of location at which an alarm event occurs.">
+								<annotatedElement xmi:idref="_niem-apco-2.1-apco-AlarmEventLocationCategoryCodeSimpleType"/>
+							</ownedComment>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-apco-2.1-apco-AlarmEventLocationCategoryCodeSimpleType-commercial" name="commercial">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-apco-2.1-apco-AlarmEventLocationCategoryCodeSimpleType-commercial-ownedComment" body="commercial">
+									<annotatedElement xmi:idref="_niem-apco-2.1-apco-AlarmEventLocationCategoryCodeSimpleType-commercial"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-apco-2.1-apco-AlarmEventLocationCategoryCodeSimpleType-residential" name="residential">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-apco-2.1-apco-AlarmEventLocationCategoryCodeSimpleType-residential-ownedComment" body="residential">
+									<annotatedElement xmi:idref="_niem-apco-2.1-apco-AlarmEventLocationCategoryCodeSimpleType-residential"/>
+								</ownedComment>
+							</ownedLiteral>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-apco-2.1-apco-AlarmEventLocationCategoryCodeType" name="AlarmEventLocationCategoryCodeType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-apco-2.1-apco-AlarmEventLocationCategoryCodeType-ownedComment" body="A data type for the kinds of location at which an alarm event occurs.">
+								<annotatedElement xmi:idref="_niem-apco-2.1-apco-AlarmEventLocationCategoryCodeType"/>
+							</ownedComment>
+							<generalization xmi:type="uml:Generalization" xmi:id="_niem-apco-2.1-apco-AlarmEventLocationCategoryCodeType-generalization" general="_niem-apco-2.1-apco-AlarmEventLocationCategoryCodeSimpleType"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-apco-2.1-apco-AlarmEventResponseActionCodeSimpleType" name="AlarmEventResponseActionCodeSimpleType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-apco-2.1-apco-AlarmEventResponseActionCodeSimpleType-ownedComment" body="A data type for actions requested of an alarm event responder.">
+								<annotatedElement xmi:idref="_niem-apco-2.1-apco-AlarmEventResponseActionCodeSimpleType"/>
+							</ownedComment>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-apco-2.1-apco-AlarmEventResponseActionCodeSimpleType-respond" name="respond">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-apco-2.1-apco-AlarmEventResponseActionCodeSimpleType-respond-ownedComment" body="respond">
+									<annotatedElement xmi:idref="_niem-apco-2.1-apco-AlarmEventResponseActionCodeSimpleType-respond"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-apco-2.1-apco-AlarmEventResponseActionCodeSimpleType-notify" name="notify">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-apco-2.1-apco-AlarmEventResponseActionCodeSimpleType-notify-ownedComment" body="notify">
+									<annotatedElement xmi:idref="_niem-apco-2.1-apco-AlarmEventResponseActionCodeSimpleType-notify"/>
+								</ownedComment>
+							</ownedLiteral>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-apco-2.1-apco-AlarmEventResponseActionCodeType" name="AlarmEventResponseActionCodeType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-apco-2.1-apco-AlarmEventResponseActionCodeType-ownedComment" body="A data type for actions requested of an alarm event responder.">
+								<annotatedElement xmi:idref="_niem-apco-2.1-apco-AlarmEventResponseActionCodeType"/>
+							</ownedComment>
+							<generalization xmi:type="uml:Generalization" xmi:id="_niem-apco-2.1-apco-AlarmEventResponseActionCodeType-generalization" general="_niem-apco-2.1-apco-AlarmEventResponseActionCodeSimpleType"/>
+						</packagedElement>
+					</packagedElement>
+				</packagedElement><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-apco-profileApplication-1">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_PIM_Profile">
+						
+					</appliedProfile>
+				</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-apco-profileApplication-2">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-Model_Package_Description_Profile">
+						
+					</appliedProfile>
+				</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-apco-profileApplication-3">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_Common_Profile">
+						
+					</appliedProfile>
+				</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-apco-profileApplication-4">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_PSM_Profile">
+						
+					</appliedProfile>
+				</profileApplication></packagedElement></uml:Model>
+	
+	
+	
+	
+	<NIEM_Common_Profile:PropertyHolder xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-apco-2.1-apco-NamespaceElementPropertyHolder-appliedStereotypeInstance" base_Class="_niem-apco-2.1-apco-NamespaceElementPropertyHolder"/>
+	
+	
+	
+	<NIEM_PIM_Profile:InformationModel xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile" xmi:id="_niem-apco-2.1-apco-appliedStereotypeInstance" base_Package="_niem-apco-2.1-apco" isConformant="true" version="1" targetNamespace="http://niem.gov/niem/apco/2.1" defaultPurpose="reference"/>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</xmi:XMI>

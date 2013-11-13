@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Composite xmlns="http://www.eclipse.org/xwt/presentation"
+    xmlns:uml="clr-namespace:org.eclipse.papyrus.uml.properties.widgets"
+    xmlns:ppe="clr-namespace:org.eclipse.papyrus.views.properties.widgets"
+    xmlns:j="clr-namespace:java.lang" xmlns:ppel="clr-namespace:org.eclipse.papyrus.views.properties.widgets.layout"
+    xmlns:x="http://www.eclipse.org/xwt">
+    <Composite.layout>
+        <ppel:PropertiesLayout></ppel:PropertiesLayout>
+    </Composite.layout>
+    <Composite>
+        <Composite.layout>
+            <ppel:PropertiesLayout></ppel:PropertiesLayout>
+        </Composite.layout>
+        <ppe:StringEditor input="{Binding}" property="UML:NamedElement:name"></ppe:StringEditor>
+    </Composite>
+    <Composite>
+        <Composite.layout>
+            <ppel:PropertiesLayout numColumns="2"></ppel:PropertiesLayout>
+        </Composite.layout>
+        <ppe:BooleanRadio input="{Binding}" property="UML:Property:isDerived"></ppe:BooleanRadio>
+        <ppe:BooleanRadio input="{Binding}" property="UML:Property:isDerivedUnion"></ppe:BooleanRadio>
+        <ppe:BooleanRadio input="{Binding}"
+            property="UML:RedefinableElement:isLeaf"></ppe:BooleanRadio>
+        <ppe:BooleanRadio input="{Binding}"
+            property="UML:MultiplicityElement:isOrdered"></ppe:BooleanRadio>
+        <ppe:BooleanRadio input="{Binding}"
+            property="UML:StructuralFeature:isReadOnly"></ppe:BooleanRadio>
+        <ppe:BooleanRadio input="{Binding}" property="UML:Feature:isStatic"></ppe:BooleanRadio>
+        <ppe:BooleanRadio input="{Binding}"
+            property="UML:MultiplicityElement:isUnique"></ppe:BooleanRadio>
+        <ppe:EnumCombo input="{Binding}" property="UML:NamedElement:visibility"></ppe:EnumCombo>
+        <ppe:ReferenceDialog input="{Binding}" property="UML:TypedElement:type"></ppe:ReferenceDialog>
+        <ppe:StringCombo input="{Binding}" property="Multiplicity:multiplicity"></ppe:StringCombo>
+        <ppe:ReferenceDialog input="{Binding}"
+            property="UML:Property:defaultValue"></ppe:ReferenceDialog>
+        <ppe:EnumCombo input="{Binding}" property="UML:Property:aggregation"></ppe:EnumCombo>
+        <ppe:MultiReference input="{Binding}"
+            property="UML:Property:subsettedProperty"></ppe:MultiReference>
+        <ppe:MultiReference property="UML:Property:redefinedProperty"
+            input="{Binding}"></ppe:MultiReference>
+    </Composite>
+    <Composite>
+        <Composite.layout>
+            <ppel:PropertiesLayout></ppel:PropertiesLayout>
+        </Composite.layout>
+        <ppe:MultiReference input="{Binding}" property="UML:Element:ownedComment"></ppe:MultiReference>
+    </Composite>
+</Composite>

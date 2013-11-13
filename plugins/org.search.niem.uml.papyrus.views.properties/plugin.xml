@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension point="org.eclipse.papyrus.views.properties.environment">
+      <environment environmentModel="Model/Environment.xmi">
+      </environment>
+   </extension>
+   <extension point="org.eclipse.papyrus.views.properties.context">
+      <context contextModel="Model/NIEM_UML.ctx">
+      </context>
+   </extension>
+   <extension
+         point="org.search.niem.uml.papyrus.lifecycleevents.lifecycleListeners">
+      <lifecycleListener
+            class="org.search.niem.uml.papyrus.views.properties.lifecycleevents.ModelSaveListener">
+      </lifecycleListener>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
+      <propertyContributor
+            contributorId="TreeOutlinePage"
+            tabDescriptorProvider="org.search.niem.uml.papyrus.views.properties.xwt.NIEMXwtTabDescriptorProvider">
+         <propertyCategory
+               category="org.eclipse.papyrus"></propertyCategory>
+      </propertyContributor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+            class="org.search.niem.uml.papyrus.views.properties.xwt.NIEMXwtTabDescriptorStartup"></startup>
+   </extension>
+</plugin>

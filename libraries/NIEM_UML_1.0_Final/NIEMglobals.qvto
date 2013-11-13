@@ -1,0 +1,120 @@
+modeltype UML uses 'http://www.omg.org/spec/UML/20110701';
+modeltype XSD  uses 'http://www.eclipse.org/xsd/2002/XSD';
+
+transformation NIEMGlobals()
+	;
+	main() {
+	}
+property substitutionGroupAffiliationTag:String='substitutionGroupAffiliation';
+property attributeGroupDefinitionPackageName:String='attributeGroupDefinition';
+property elementDeclarationClassName:String='elementDeclaration';
+property attributeDeclarationClassName:String='attributeDeclaration';
+
+property UMLPrimitiveTypesPackageName:String='PrimitiveTypes';// added UML Primitive Types Package name, part of QVT Stack Overflow reduction in Issue 18251: NIEM-UML Issue: Constraint schema
+property XMLPrimitiveTypesPackageName:String='XMLPrimitiveTypes';
+property schemaForSchemaNamespace:String='http://www.w3.org/2001/XMLSchema';
+
+property baseNiemNamespace:String='http://niem.gov/niem/';
+property appinfo2Namespace:String=baseNiemNamespace+'appinfo/2.1';	
+property natureURI:String=baseNiemNamespace+'resource/mpd/lexicon/1.0/nature#';
+property structuresNamespace:String=baseNiemNamespace+'structures/2.0';
+
+property provisioningMpdStereotypeName:String='ModelPackageDescription';
+property packageCodeLiteralEnumeration:UML::Enumeration=null;
+property defaultPackageCodeLiteral:UML::EnumerationLiteral=null;
+property defaultPackageCodeName:String='iepd';
+property provisioningNdrSchemaStereotypeName:String='Namespace';
+property propertyHolderStereotypeName:String='PropertyHolder';
+property logicalProfileName:String='NIEM_PIM_Profile';
+property structureProfileName:String='NIEM_Common_Profile';
+property niemXsdProfileName:String='NIEM_PSM_Profile';
+property provisioningProfileBaseName:String='Model_Package_Description';
+property provisioningProfileName:String=provisioningProfileBaseName+'_Profile';
+property modelGroupDefinitionPackageName:String='modelGroupDefinition';
+property structuresSchemaNamespace:String='http://niem.gov/niem/structures/2.0';
+property appinfoSchemaNamespace:String='http://niem.gov/niem/appinfo/2.0';
+property appinfo2SchemaNamespace:String='http://niem.gov/niem/appinfo/2.1';
+
+property proxySchemaNamespace:String='http://niem.gov/niem/proxy/xsd/2.0';
+property niemCoreSchemaNamespace:String='http://niem.gov/niem/niem-core/2.0';
+property NIEMBaseTypeObject:String='Object';
+property NIEMBaseTypeAssociation:String='Association';
+
+property appinfoNamespace:String=baseNiemNamespace+'appinfo/2.0';	
+property purposeURI:String=baseNiemNamespace+'resources/purposes/1#';
+property purposeExchangeSchema:String='exchange-schema';
+property purposeExchangeSchemaURI:String=purposeURI+purposeExchangeSchema;
+property natureFilesetURI:String=natureURI+'file-set';
+	
+property purposeConstraintSchemaURI:String=purposeURI+'constraint-schema';
+property purposeExtensionSchemaURI:String=purposeURI+'extension-schema';
+property purposeSubsetSchemaURI:String=purposeURI+'subset-schema';
+property purposeReferenceSchemaURI:String=purposeURI+'reference-schema';
+property purposeExchangeSchemaSetURI:String=purposeURI+'exchange-schema-set';
+property purposeExtensionSchemaSetURI:String=purposeURI+'extension-schema-set';
+property purposeSubsetSchemaSetURI:String=purposeURI+'subset-schema-set';
+property purposeReferenceSchemaSetURI:String=purposeURI+'reference-schema-set';
+property purposeConstraintSchemaSetURI:String=purposeURI+'constraint-schema-set';// part of Issue 18251: NIEM-UML Issue: Constraint schema 
+
+property purposeMasterDocumentURI:String=purposeURI+'master-document';
+property purposeChangelogURI:String=purposeURI+'changelog';
+property purposeCatalogURI:String=purposeURI+'catalog';
+property purposeTransformationURI:String=purposeURI+'transformation';
+property purposeDisplayURI:String=purposeURI+'display';
+property purposeSchemaURI:String=purposeURI+'schema';
+
+property natureZipURI:String=natureURI+'zip';
+property natureGifURI:String=natureURI+'gif';
+property natureXsltURI:String=natureURI+'xslt';
+property natureXsdURI:String=natureURI+'xsd';
+property natureDocURI:String=natureURI+'doc';
+property natureTxtURI:String=natureURI+'txt';
+property natureXmlURI:String=natureURI+'xml';
+
+property provisioningProfile:UML::Profile=null; // Model_Package_Description_Profile
+property logicalProfile:UML::Profile=null; // NIEM_PIM_Profile
+property structureProfile:UML::Profile=null; // NIEM_Common_Profile
+property niemXsdProfile:UML::Profile=null; // NIEM_PSM_Profile
+property NIEMSchemaStereotype:UML::Stereotype=null;
+
+property prompdStereotype:UML::Stereotype=null;
+property NIEMModelPackageDescriptionRelationshipStereotype:UML::Stereotype=null;
+
+property NIEMPropertyHolderStereotype:UML::Stereotype=null;
+property NIEMTypeStereotype:UML::Stereotype=null;
+
+property NIEMReferencesStereotype:UML::Stereotype=null;
+property NIEMChoiceStereotype:UML::Stereotype=null;
+
+property NIEMReferenceNameStereotype:UML::Stereotype=null;
+property appliesToStereotype:UML::Stereotype=null;
+property NIEMRoleOfStereotype:UML::Stereotype=null;
+property NIEMAugmentationStereotype:UML::Stereotype=null;
+property NIEMMetadataStereotype:UML::Stereotype=null;
+property NIEMAssociationStereotype:UML::Stereotype=null;
+property NIEMDescriptionStereotype:UML::Stereotype=null;
+property NIEMSimpleTypeStereotype:UML::Stereotype=null;
+
+property NIEMRoleStereotype:UML::Stereotype=null;
+property NIEMAugmentsStereotype:UML::Stereotype=null;
+property NIEMInformationModelStereotype:UML::Stereotype=null;
+property NIEMAdapterStereotype:UML::Stereotype=null;
+property NIEMUnionTypeStereotype:UML::Stereotype=null;
+property NIEMUnionOfStereotype:UML::Stereotype=null;
+property NIEMListTypeStereotype:UML::Stereotype=null;
+
+property NIEMObjectTypeStereotype:UML::Stereotype=null;
+property NIEMModelPackageDescriptionFileStereotype:UML::Stereotype=null;
+property NIEMModelPackageDescriptionFileSetStereotype:UML::Stereotype=null;
+property NIEMAnyPropertyStereotype:UML::Stereotype=null;
+property NIEMPropertyStereotype:UML::Stereotype=null;
+property NIEMAugmentationApplicationStereotype:UML::Stereotype=null;
+property NIEMMetadataApplicationStereotype:UML::Stereotype=null;
+property NIEMRestrictionStereotype:UML::Stereotype=null;
+property		NIEMSimpleContentStereotype:UML::Stereotype=null;
+property NIEMSequenceIdStereotype:UML::Stereotype=null;
+property NIEMRepresentationRestrictionStereotype:UML::Stereotype=null;
+property NIEMDeclarationStereotype:UML::Stereotype=null;
+ property umlXmlLibrary:UML::Model=null; // the NIEM XML Type library
+ 
+	

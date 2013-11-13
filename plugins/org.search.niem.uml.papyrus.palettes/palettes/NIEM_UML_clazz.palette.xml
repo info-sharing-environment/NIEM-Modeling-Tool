@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<paletteDefinition>
+    <content>
+        <drawer iconpath="/icons/drawer.gif" id="NIEM_UML_Drawer" name="NIEM UML">
+            <aspectTool description="Create a NIEM Adapter Type (AssociationClass)"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_adapter_type_association_class.png"
+                id="clazz.tool.associationclass_NIEM_COMMON_ADAPTER_TYPE" name="Adapter Type (AssociationClass)" refToolId="clazz.tool.associationclass">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_Common_Profile::AdapterType" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a NIEM Adapter Type (Class)"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_adapter_type_class.png"
+                id="clazz.tool.class_NIEM_COMMON_ADAPTER_TYPE" name="Adapter Type (Class)" refToolId="clazz.tool.class">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_Common_Profile::AdapterType" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a NIEM Association Type (AssociationClass)"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_association_type_association_class.png"
+                id="clazz.tool.associationclass_NIEM_COMMON_ASSOCIATION_TYPE" name="Association Type (AssociationClass)"
+                refToolId="clazz.tool.associationclass">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_Common_Profile::AssociationType" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a NIEM Association Type (Class)"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_association_type_class.png"
+                id="clazz.tool.class_NIEM_COMMON_ASSOCIATION_TYPE" name="Association Type (Class)" refToolId="clazz.tool.class">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_Common_Profile::AssociationType" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a NIEM Augmentation Application (Usage)"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_augmentation_application_usage.png"
+                id="clazz.tool.usage_NIEM_COMMON_AUGMENTATION_APPLICATION" name="Augmentation Application (Usage)" refToolId="clazz.tool.usage">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_Common_Profile::AugmentationApplication" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a NIEM Augmentation Type (AssociationClass)"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_augmentation_type_association_class.png"
+                id="clazz.tool.associationclass_NIEM_COMMON_AUGMENTATION_TYPE" name="Augmentation Type (AssociationClass)"
+                refToolId="clazz.tool.associationclass">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_Common_Profile::AugmentationType" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a NIEM Augmentation Type (Class)"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_augmentation_type_class.png"
+                id="clazz.tool.class_NIEM_COMMON_AUGMENTATION_TYPE" name="Augmentation Type (Class)" refToolId="clazz.tool.class">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_Common_Profile::AugmentationType" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a NIEM Augments (Generalization)"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_augments_generalization.png"
+                id="clazz.tool.generalization_NIEM_PIM_AUGMENTS" name="Augments (Generalization)" refToolId="clazz.tool.generalization">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_PIM_Profile::Augments" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a NIEM Choice (Class)"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_choice_class.png" id="clazz.tool.class_NIEM_COMMON_CHOICE"
+                name="Choice (Class)" refToolId="clazz.tool.class">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_Common_Profile::Choice" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a NIEM List"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_list_data_type.png" id="clazz.tool.datatype_NIEM_COMMON_LIST"
+                name="List (DataType)" refToolId="clazz.tool.datatype">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_Common_Profile::List" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a NIEM Metadata Application (Usage)"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_metadata_application_usage.png"
+                id="clazz.tool.usage_NIEM_COMMON_METADATA_APPLICATION" name="Metadata Application (Usage)" refToolId="clazz.tool.usage">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_Common_Profile::MetadataApplication" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a NIEM Metadata Type (AssociationClass)"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_metadata_type_association_class.png"
+                id="clazz.tool.associationclass_NIEM_COMMON_METADATA_TYPE" name="Metadata Type (AssociationClass)" refToolId="clazz.tool.associationclass">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_Common_Profile::MetadataType" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a NIEM Metadata Type (Class)"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_metadata_type_class.png"
+                id="clazz.tool.class_NIEM_COMMON_METADATA_TYPE" name="Metadata Type (Class)" refToolId="clazz.tool.class">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_Common_Profile::MetadataType" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a NIEM Object Type (Association Class)"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_object_type_association_class.png"
+                id="clazz.tool.associationclass_NIEM_COMMON_OBJECT_TYPE" name="Object Type (AssociationClass)" refToolId="clazz.tool.associationclass">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_Common_Profile::ObjectType" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a NIEM Object Type (Class)"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_object_type_class.png"
+                id="clazz.tool.class_NIEM_COMMON_OBJECT_TYPE" name="Object Type (Class)" refToolId="clazz.tool.class">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_Common_Profile::ObjectType" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a NIEM Property Holder (Class)"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_property_holder_class.png"
+                id="clazz.tool.class_NIEM_COMMON_PROPERTY_HOLDER" name="Property Holder (Class)" refToolId="clazz.tool.class">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_Common_Profile::PropertyHolder" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a NIEM References (Realization)"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_references_realization.png"
+                id="clazz.tool.realization_NIEM_COMMON_REFERENCES" name="References (Realization)" refToolId="clazz.tool.realization">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_Common_Profile::References" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a NIEM Restriction (InterfaceRealization)"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_code_type_interface_realization.png"
+                id="clazz.tool.interfacerealization_NIEM_COMMON_RESTRICTION" name="Restriction (InterfaceRealization)"
+                refToolId="clazz.tool.interfacerealization">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_Common_Profile::Restriction" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a NIEM Restriction (Realization)"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_code_type_realization.png"
+                id="clazz.tool.realization_NIEM_COMMON_RESTRICTION" name="Restriction (Realization)" refToolId="clazz.tool.realization">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_Common_Profile::Restriction" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a NIEM Restriction (Substitution)"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_code_type_substitution.png"
+                id="clazz.tool.substitution_NIEM_COMMON_RESTRICTION" name="Restriction (Substitution)" refToolId="clazz.tool.substitution">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_Common_Profile::Restriction" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a NIEM Role Of (Property)"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_role_of_property.png"
+                id="clazz.tool.property_NIEM_PIM_ROLE_OF" name="Role Of (Property)" refToolId="clazz.tool.property">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_PIM_Profile::RoleOf" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a NIEM Role Played By (Generalization)"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_role_played_by_generalization.png"
+                id="clazz.tool.generalization_NIEM_PIM_ROLE_PLAYED_BY" name="Role Played By (Generalization)" refToolId="clazz.tool.generalization">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_PIM_Profile::RolePlayedBy" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a NIEM Union"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_union_data_type.png"
+                id="clazz.tool.datatype_NIEM_COMMON_UNION" name="Union (DataType)" refToolId="clazz.tool.datatype">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_Common_Profile::Union" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a NIEM Union Of (Usage)"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_union_of_usage.png" id="clazz.tool.usage_NIEM_COMMON_UNION"
+                name="Union Of (Usage)" refToolId="clazz.tool.usage">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_Common_Profile::UnionOf" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a NIEM Value Restriction (DataType)"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_value_restriction_data_type.png"
+                id="clazz.tool.datatype_NIEM_COMMON_VALUE_RESTRICTION" name="Value Restriction (DataType)" refToolId="clazz.tool.datatype">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_Common_Profile::ValueRestriction" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a NIEM Value Restriction (Enumeration)"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_value_restriction_enumeration.png"
+                id="clazz.tool.enumeration_NIEM_COMMON_VALUE_RESTRICTION" name="Value Restriction (Enumeration)" refToolId="clazz.tool.enumeration">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_Common_Profile::ValueRestriction" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a NIEM Value Restriction (PrimitiveType)"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_value_restriction_primitive_type.png"
+                id="clazz.tool.primitivetype_NIEM_COMMON_VALUE_RESTRICTION" name="Value Restriction (PrimitiveType)"
+                refToolId="clazz.tool.primitivetype">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_Common_Profile::ValueRestriction" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a NIEM XSD Any Property"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_xsd_any_property.png"
+                id="clazz.tool.property_NIEM_PSM_XSD_ANY_PROPERTY" name="XSD Any Property (Property)" refToolId="clazz.tool.property">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_PSM_Profile::XSDAnyProperty" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a NIEM XSD Property"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_xsd_property.png" id="clazz.tool.property_NIEM_PSM_XSD_PROPERTY"
+                name="XSD Property (Property)" refToolId="clazz.tool.property">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_PSM_Profile::XSDProperty" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a NIEM XSD Representation Restriction (DataType)"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_xsd_representation_restriction_data_type.png"
+                id="clazz.tool.datatype_NIEM_PSM_XSD_REPRESENTATION_RESTRICTION" name="XSD Representation Restriction (DataType)"
+                refToolId="clazz.tool.datatype">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_PSM_Profile::XSDRepresentationRestriction" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a NIEM XSD Representation Restriction (Enumeration)"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_xsd_representation_restriction_enumeration.png"
+                id="clazz.tool.enumeration_NIEM_PSM_XSD_REPRESENTATION_RESTRICTION" name="XSD Representation Restriction (Enumeration)"
+                refToolId="clazz.tool.enumeration">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_PSM_Profile::XSDRepresentationRestriction" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a NIEM XSD Representation Restriction (PrimitiveType)"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_xsd_representation_restriction_primitive_type.png"
+                id="clazz.tool.primitivetype_NIEM_PSM_XSD_REPRESENTATION_RESTRICTION" name="XSD Representation Restriction (PrimitiveType)"
+                refToolId="clazz.tool.primitivetype">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_PSM_Profile::XSDRepresentationRestriction" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+            <aspectTool description="Create a NIEM XSD Simple Content (Realization)"
+                iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_xsd_simple_content_realization.png"
+                id="clazz.tool.realization_NIEM_PSM_XSD_SIMPLE_CONTENT" name="XSD Simple Content (Realization)" refToolId="clazz.tool.realization">
+                <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
+                    <stereotypesToApply>
+                        <stereotype stereotypeName="NIEM_UML_Profile::NIEM_PSM_Profile::XSDSimpleContent" />
+                    </stereotypesToApply>
+                </postAction>
+            </aspectTool>
+        </drawer>
+    </content>
+</paletteDefinition>

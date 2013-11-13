@@ -1,0 +1,2225 @@
+import NIEMplatformBinding;
+modeltype UML uses 'http://www.omg.org/spec/UML/20110701';
+// platform variants for UML
+//modeltype UML uses 'http://www.eclipse.org/uml2/4.0.0/UML';
+//modeltype UML uses 'http://www.nomagic.com/magicdraw/UML/2.4.1';
+modeltype XSD  uses 'http://www.eclipse.org/xsd/2002/XSD';
+/*
+	Transform NIEM-UML PSM Model to NIEM target artifacts, including XSD schemas
+	The NIEM infrastructure schemas are 4 incoming schemas, they should be in the directory structure of the target MPD
+	The XSD output will contain all mapped schemas; a platform-specific binding must serialize these schemas to their targeted
+		location within the MPD directory structure.  
+*/
+transformation NIEMpsm2xsd(in uml:UML,
+	in schemaForProxy:XSD,in schemaForStructures:XSD,in schemaForAppinfo:XSD,in schemaForAppinfo2:XSD,
+	out xsd:XSD
+	)
+	// the NIEMplatformBinding is defined primarily as a set of abstract query/helpers which require platform-specific implementations
+	extends transformation NIEMplatformBinding;
+	
+main() {
+		// perform initialization and mapping
+		NIEMpsm2mpdMain();
+	}
+//
+//  Global properties for psm2mpd; most are initialized to schema components within the NIEM infrastructure schemas
+// 	
+property mpdComponent:UML::Component=null;// The <<ModelPackageDescription>> being transformed
+
+property umlSchemaForStructures:XSD::XSDSchema=null;// NIEM structures schema
+property StructuresAugmentationElement:XSD::XSDElementDeclaration=null;// augmentation element within structures schema
+property StructuresReferenceType:XSD::XSDTypeDefinition=null;// reference type within structures schema
+property StructuresSimpleObjectAttributeGroup:XSD::XSDAttributeGroupDefinition=null;// simple object attribute group within structures schema
+property StructuresComplexObjectType:XSD::XSDComplexTypeDefinition=null;// ComplexObjectType within structures schema
+property StructuresAugmentationType:XSD::XSDComplexTypeDefinition=null;// AugmentationType within structures schema
+property StructuresMetadataType:XSD::XSDComplexTypeDefinition=null;// MetadataType within structures schema
+property StructuresAdapterType:XSD::XSDComplexTypeDefinition=null;// AdapterType within structures schema
+property StructuresSequenceID:XSD::XSDAttributeDeclaration=null;// SequenceID attribute within structures schema
+
+property umlSchemaForProxy:XSD::XSDSchema=null;// NIEM proxy schema
+property umlSchemaForAppinfo:XSD::XSDSchema=null;// NIEM appinfo schema
+property umlSchemaForAppinfo2:XSD::XSDSchema=null;// NIEM appinfo-2 schema
+
+property umlSchemaForSchema:XSD::XSDSchema=null;// Schema for Schemas
+property umlSchemaForSchemaToken:XSD::XSDSimpleTypeDefinition=null;// the simple type definition for "token"
+
+/*
+	NIEMpsm2mpdMain initializes global variables based on incoming infrastructure schemas, plus the profiles/type libraries in incoming UML model
+	
+*/	
+helper NIEMpsm2mpdMain(){
+	// initialize the NIEM infrastructure schemas based on incoming schemas
+	umlSchemaForProxy:=schemaForProxy.objectsOfType(XSD::XSDSchema)->asSequence()->first();
+	umlSchemaForStructures:=schemaForStructures.objectsOfType(XSD::XSDSchema)->asSequence()->first();
+	umlSchemaForAppinfo:=schemaForAppinfo.objectsOfType(XSD::XSDSchema)->asSequence()->first();
+	umlSchemaForAppinfo2:=schemaForAppinfo2.objectsOfType(XSD::XSDSchema)->asSequence()->first();
+	// initialize the Schema for Schemas
+	umlSchemaForSchema:=umlSchemaForProxy.schemaForSchema;
+	// initialize the "token" simpleTypeDefinition from Schema for Schemas
+	umlSchemaForSchemaToken:=umlSchemaForSchema.typeDefinitions->select(t|t.name='token').oclAsType(XSD::XSDSimpleTypeDefinition)->asSequence()->first();
+	// initialize components from the NIEM Structures schema	
+	StructuresReferenceType:=	'ReferenceType'.structuresClassifier();
+	StructuresAugmentationType:='AugmentationType'.structuresClassifier().oclAsType(XSD::XSDComplexTypeDefinition);
+	StructuresMetadataType:='MetadataType'.structuresClassifier().oclAsType(XSD::XSDComplexTypeDefinition);
+	StructuresAdapterType:='AdapterType'.structuresClassifier().oclAsType(XSD::XSDComplexTypeDefinition);
+	StructuresSimpleObjectAttributeGroup:=umlSchemaForStructures.attributeGroupDefinitions->select(t|t.name='SimpleObjectAttributeGroup')->asSequence()->first();
+	StructuresComplexObjectType:='ComplexObjectType'.structuresClassifier().oclAsType(XSD::XSDComplexTypeDefinition);
+	StructuresAugmentationElement:=umlSchemaForStructures.elementDeclarations->select(t|t.name='Augmentation')->asSequence()->first();
+
+	// find the root UML Model	
+	var rootUmlModel:UML::Model=uml.rootObjects()->select(r|r.oclIsKindOf(UML::Model)).oclAsType(UML::Model)->asSequence()->first();
+	// initialize the profile/stereotype/type library globals
+	rootUmlModel.initializeProfileGlobals();	
+	// find and transform qualifying <<ModelPackageDescription>>s		
+	rootUmlModel.allSubobjectsOfType(UML::Component).oclAsType(UML::Component)
+			->select(c|c.IsStereotypeApplied(prompdStereotype) 
+				and c.isEditable()
+				and not(c.getNearestPackage().getNearesProfileApplication(niemXsdProfile).oclIsUndefined())
+				and (c.getNearestPackage().getNearesProfileApplication(logicalProfile).oclIsUndefined())
+			)
+			->forEach(mpd){
+				// set current <<ModelPackageDescription>>
+				mpdComponent:=mpd;
+				log('mpdComponent '+mpdComponent.qualifiedName);
+				// create the MPD Catalog and transform all MPD artifacts
+				catalog();
+			};
+	return;
+}
+/*
+	catalog finds the <<Namespace>>s referenced by <<ModelPackageDescription>> and maps to AbstractXSDSchema
+	This may be overridden by platform-specific implementations to additionally produce the MPD Catalog 
+*/
+helper catalog(){
+	mpdComponent.getTopNiemFolders().nestedPackage.mapAbstractPackage();
+	return;
+}
+////////////////////////////////////mappings
+// AbstractXSDSchema disjuncts to handle <<Namespace>>
+mapping 	UML::Package::AbstractXSDSchema():XSD::XSDSchema@xsd 
+	disjuncts UML::Package::Namespace 
+	{}
+// AbstractXSDSchemaContent disjuncts to handle the various UML Elements/Stereotypes representing XSDSchemaContent  
+mapping 	UML::Element::AbstractXSDSchemaContent(xsdContainer:XSD::XSDConcreteComponent):XSD::XSDSchemaContent@xsd 
+disjuncts 
+	UML::EnumerationLiteral::XSDNotationDeclaration,
+	UML::Property::TopLevelElement_reference,
+	UML::Property::TopLevelElement_declaration,
+	UML::Property::XSDAttributeDeclaration_topLevel,
+	UML::Package::AbstractXSDImport,
+	UML::PackageImport::XSDInclude,
+	UML::Package::XSDRedefine,
+	UML::Element::AbstractXSDRedefineContent
+	{}
+// AbstractXSDImport disjuncts to create an XSDImport from "container" XSDSchema to self mapped as XSDSchema	
+mapping UML::Package::AbstractXSDImport(container:XSD::XSDSchema):XSD::XSDImport@xsd 
+disjuncts 
+	UML::Package::XSDImport
+	{}
+// 	AbstractXSDRedefineContent disjuncts to handle the various UML Elements/Stereotypes representing XSDRedefineContent 
+mapping UML::Element::AbstractXSDRedefineContent(xsdContainer:XSD::XSDConcreteComponent):XSD::XSDRedefineContent@xsd 
+	disjuncts 
+	UML::DataType::AbstractXSDTypeDefinition_dataType,
+	UML::Class::AbstractNIEMType,
+	UML::Class::NIEMModelGroupDefinition,
+	UML::Class::NIEMAttributeGroupDefinition
+	{}
+// 	AbstractXSDTypeDefinition_dataType disjuncts a UML DataType to handle various mappings to an XSDTypeDefinition 
+mapping UML::DataType::AbstractXSDTypeDefinition_dataType(inout psmOwner:XSD::XSDConcreteComponent):XSD::XSDTypeDefinition@xsd
+	disjuncts
+	UML::Enumeration::Enumeration,
+	UML::DataType::NIEMList,
+	UML::DataType::Union,
+	UML::DataType::ValueRestriction
+	{}
+// 	AbstractNIEMType disjuncts a <<NIEMType>> to handle various mappings to an XSDTypeDefinition 
+mapping UML::Class::AbstractNIEMType(inout psmOwner:XSD::XSDConcreteComponent):XSD::XSDTypeDefinition@xsd
+	disjuncts
+	UML::Class::AugmentationType,
+	UML::Class::AdapterType,
+	UML::Class::AssociationType,
+	UML::Class::MetadataType,
+	UML::Class::RoleType,
+	UML::Class::ObjectType_datatypeSimpleContent,
+	UML::Class::ObjectType_datatype,
+	UML::Class::ObjectType_class
+	{}
+	
+// 	AbstractXSDComplexTypeContent disjuncts a UML Classifier to handle various mappings to XSDComplexTypeContent 
+mapping UML::Classifier::AbstractXSDComplexTypeContent(xsdContainer:XSD::XSDConcreteComponent):XSD::XSDComplexTypeContent@xsd 
+disjuncts 
+	UML::Classifier::NIEMComplexTypeContentSimpleTypeDefinition,
+	UML::Classifier::XSDParticle,
+	UML::DataType::XSDSimpleTypeDefinitionDataType
+	{}
+	
+	
+	
+// 	AbstractXSDParticleContent disjuncts a UML Property to handle various mappings to XSDParticleContent within the context of a ComplexTypeDefinition 
+mapping UML::Property::AbstractXSDParticleContent(xsdContainer:XSD::XSDConcreteComponent):XSD::XSDParticleContent@xsd	
+disjuncts 
+	UML::Property::XSDModelGroupDefinition_Property,
+	UML::Property::AbstractXSDTerm
+	{}
+// 	AbstractXSDParticleContent disjuncts a UML Classifier to handle various mappings to XSDParticleContent within the context of a ComplexTypeDefinition 
+mapping UML::Classifier::AbstractXSDParticleContent(xsdContainer:XSD::XSDConcreteComponent):XSD::XSDParticleContent@xsd	
+disjuncts 
+	UML::Class::XSDModelGroupDefinition, 
+	UML::Classifier::AbstractXSDTerm
+	{}
+	
+// 	AbstractXSDTerm disjuncts a UML Classifier to handle various mappings to XSDTerm within the context of a ComplexTypeDefinition 
+mapping UML::Classifier::AbstractXSDTerm(xsdContainer:XSD::XSDConcreteComponent):XSD::XSDTerm@xsd	
+disjuncts UML::Class::XSDModelGroup
+	{}
+// 	AbstractXSDTerm disjuncts a UML Property to handle various mappings to XSDTerm within the context of a ComplexTypeDefinition 
+mapping UML::Property::AbstractXSDTerm(xsdContainer:XSD::XSDConcreteComponent):XSD::XSDTerm@xsd	
+disjuncts 
+	UML::Property::XSDAnyProperty,
+	UML::Property::Choice_property,
+	UML::Property::XSDModelGroup_Property,
+	UML::Property::XSDElementDeclaration_ref
+	{}
+	
+/*	
+// 	AbstractXSDTerm disjuncts a UML Element to handle various mappings to XSDConstrainingFacet within the context of a SimpleTypeDefinition
+ 
+mapping UML::Element::AbstractXSDConstrainingFacet(value:String,xsdContainer:XSD::XSDConcreteComponent):XSD::XSDConstrainingFacet@xsd 
+disjuncts 
+	UML::Element::XSDTotalDigitsFacet,
+	UML::Element::XSDMinInclusiveFacet,
+	UML::Element::XSDMinExclusiveFacet,
+	UML::Element::XSDLengthFacet,
+	UML::Element::XSDWhiteSpaceFacet,
+	UML::Element::XSDMaxLengthFacet,
+	UML::Element::XSDFractionDigitsFacet,
+	UML::Element::XSDMaxInclusiveFacet,
+	UML::Element::XSDMaxExclusiveFacet,
+	UML::Element::XSDMinLengthFacet,
+	UML::Element::XSDEnumerationFacet,
+	UML::Element::XSDPatternFacet
+	{}
+*/	
+// 	AbstractXSDAttributeGroupContent disjuncts a UML Property to handle various mappings to XSDAttributeGroupContent within the context of a ComplexTypeDefinition 
+mapping UML::Property::AbstractXSDAttributeGroupContent(inout psmOwner:XSD::XSDConcreteComponent):XSD::XSDAttributeGroupContent@xsd
+	disjuncts
+	UML::Property::XSDAttributeGroupContent_attributeGroupDefinition,
+	UML::Property::SequenceID,
+	UML::Property::XSDProperty_AttributeUse_ref,
+	UML::Property::XSDProperty_AttributeUse_anonymousType,
+	UML::Property::XSDProperty_AttributeUse_type
+	{}
+// 	AbstractXSDAttributeDeclaration_attributeUse disjuncts a UML Property to handle various mappings to XSDAttributeDeclaration within the context of a XSDAttributeUse 
+mapping UML::Property::AbstractXSDAttributeDeclaration_attributeUse(inout psmOwner:XSD::XSDConcreteComponent):XSD::XSDAttributeDeclaration@xsd
+	disjuncts
+	UML::Property::SequenceID_AttributeUse_attributeDeclaration,
+	UML::Property::XSDProperty_AttributeUse_attributeDeclaration,
+	UML::Property::XSDAttributeDeclaration_attributeUse
+	{}
+
+/////////////////////////////////////////////////////////////////end disjunctive mappings
+/////////////////////////////////////////////////////////////////start executable mappings
+// XSDSchema maps a UML Package to an XSDSchema; common logic for Schema construction, inherited by <<Namespace>> mapping
+mapping UML::Package::XSDSchema():XSD::XSDSchema@xsd
+{
+	log('XSDSchema '+self.qualifiedName);
+	// set the prefix used to reference schema for schema, and the schema for schema namespace (version).
+	result.setSchemaForSchema('xsd',schemaForSchemaNamespace);
+	this.schemaForSchema:=result.schemaForSchema;
+	// NIEM default values for some schema properties
+	attributeFormDefault:=XSDForm::qualified;
+	elementFormDefault:=XSDForm::qualified;
+}
+// maps <<Namespace>> to XSDSchema
+mapping UML::Package::Namespace():XSD::XSDSchema@xsd
+	inherits UML::Package::XSDSchema
+	when{self.IsStereotypeApplied(NIEMSchemaStereotype)}
+{
+	// get instance of Stereotype
+	var pimStereotypeInstance:Stdlib::Element=self.GetStereotypeApplication(NIEMSchemaStereotype).oclAsType(Stdlib::Element);
+	// set schema targetNamespace from <<Namespace>>
+	targetNamespace:=pimStereotypeInstance.getSchemaTargetNamespace();
+	// set prefix to be used for Schema namespace
+	result.setPrefixForSchemaNamespace();
+	
+	// determine and set Schema schemaLocation (as relative URI) based on relative UML qualifedName within an appliedProfile
+	var catalog:UML::Package:=self.getContainingCatalog();
+	var relativePath:String='';
+	if(catalog.oclIsUndefined())then{
+		relativePath:=self.qualifiedName;
+	}else{
+		relativePath:=self.qualifiedName.substringAfter(catalog.qualifiedName);
+	}endif;
+	relativePath:=relativePath.replace('::','/');
+	if(relativePath='')then {relativePath:='./';}else{relativePath:='.'+relativePath;}endif;
+	if(not(relativePath.endsWith('.xsd')))then{relativePath:=relativePath+'.xsd';}else{}endif;
+	schemaLocation:=relativePath;
+	
+	// determine schema imports; always import the NIEM infrastructure schemas
+	var infrastructureSchemas:Set(XSD::XSDSchema)=Set{umlSchemaForAppinfo,umlSchemaForAppinfo2,umlSchemaForStructures,umlSchemaForProxy};
+	infrastructureSchemas.map XSDImport_infrastructure(result);
+	
+	// set Schema version based on <<Namespace>> version
+	version:=pimStereotypeInstance.getPimSchemaVersion();
+	
+	// gather all references to schema components via typedElements, generalizations, dependencies;
+	// collect the schemas for those schema components in packageRefs
+	var packageRefs:Set(UML::Package)=Set{};
+	self.allSubobjectsOfKind(UML::Property).oclAsType(UML::Property)
+		->select(p|not(p.type.oclIsUndefined())).type->forEach(type){packageRefs+=type.getNearestNIEMSchemaPackage();};
+	self.allSubobjectsOfKind(UML::Classifier).oclAsType(UML::Classifier).general
+		->forEach(type){packageRefs+=type.getNearestNIEMSchemaPackage();};
+	self.allSubobjectsOfKind(UML::DirectedRelationship).oclAsType(UML::DirectedRelationship).target
+		->forEach(type){packageRefs+=type.getNearestNIEMSchemaPackage();};
+
+	// filter out those schemas which are unresolved or are this schema	
+	packageRefs:= packageRefs->select(p|not(p.oclIsUndefined() or (p=self)));
+	// map each of those referenced Schemas to an XSDImport	
+	packageRefs.map AbstractXSDImport(result);
+	// map owned comments to XSDAnnotation/documentation
+	self.ownedComment.mapAbstractDocumentation(result);
+	// map UML package contents to XSDSchemaContent
+	self.packagedElement.map AbstractXSDSchemaContent(result);
+	// map an model group definitions contained within nested packages to XSDSchemaContent
+	self.nestedPackage->select(t|t.isModelGroupDefinitions()).packagedElement.map AbstractXSDSchemaContent(result);
+	// map Properties contained by <<PropertyHolder>>s or AttributeGroupDefinitions to XSDSchemaContent
+	self.ownedType->select(t|
+		t.IsStereotypeApplied(NIEMPropertyHolderStereotype)
+		or t.isAttributeGroupDefinition()
+		)
+		.oclAsType(UML::Class).ownedAttribute.map AbstractXSDSchemaContent(result);
+		
+	// set the XSDAnnotation/appinfo ConformantIndicator to <<Namespace>> isConformant; default to true if the tag was not set	
+	var appinfoConformantIndicator:Boolean=pimStereotypeInstance.getPimSchemaConformantIndicator();
+	if(appinfoConformantIndicator.oclIsUndefined())then{appinfoConformantIndicator:=true;}endif;
+	var schemaAnnotation:XSD::XSDAnnotation=getAnnotation(result);
+	schemaAnnotation.setAppinfoElementValue(appinfoConformantIndicator.repr(),'i:ConformantIndicator');
+}
+/*
+	mapping for an <<ObjectType>> which has XSDSimpleTypeDefinition as its XSDComplexTypeContent (i.e., simpleContent)
+	The Class is mapped to an XSDComplexTypeDefinition with simpleContent whose baseType is defined by <<XSDSimpleContent>>
+*/
+mapping UML::Class::ObjectType_datatypeSimpleContent(inout psmOwner:XSD::XSDSchema):XSD::XSDComplexTypeDefinition@xsd 
+	inherits UML::Classifier::ObjectType
+	when{
+		self.isObjectType() 
+		and self.isPsmComplexTypeContentSimpleTypeDefinition()
+	}
+{
+	// map the supplier of the <<XSDSimpleContent>> to the  baseTypeDefinition of the XSDComplexTypeDefinition
+			self.simpleContent()->forEach(general){
+				var baseType:XSD::XSDTypeDefinition=general.toPsmClassifier();
+				baseType.mapBaseTypeDefinition(result);
+			};
+}
+/*
+	mapping for an <<ObjectType>> which is indirectly derived from a SimpleTypeDefinition
+	The Class is mapped to an XSDComplexTypeDefinition.  
+		UML generalization is mapped to the baseTypeDefinition of XSDComplexTypeDefinition.
+		UML generalization is also mapped to the appinfo:base in the XSDAnnotation of the XSDComplexTypeDefinition.
+*/
+mapping UML::Class::ObjectType_datatype(inout psmOwner:XSD::XSDSchema):XSD::XSDComplexTypeDefinition@xsd
+	inherits UML::Classifier::ObjectType
+	when{self.isObjectType() and self.inheritsPimSimpleTypeDefinition()}
+{
+	// set  appinfo:base to the (mapped) general of <<ObjectType>> self 
+	self.setBaseNiemClassifier(result,null);
+}
+/*
+	any other <<ObjectType>> maps to an XSDComplexTypeDefinition.
+		UML generalization is mapped to the baseTypeDefinition of XSDComplexTypeDefinition.
+		UML generalization is also mapped to the appinfo:base in the XSDAnnotation of the XSDComplexTypeDefinitionl.
+			If there is no generalization, appinfo:base becomes Structures:Object and baseTypeFeinfition is coerced Structures:ComplexObjectType, 
+*/
+mapping UML::Class::ObjectType_class(inout psmOwner:XSD::XSDSchema):XSD::XSDComplexTypeDefinition@xsd
+	inherits UML::Classifier::ObjectType
+	when{self.isObjectType()}
+{
+	// set  appinfo:base to the (mapped) general of <<ObjectType>> self. 
+	//		If there is no generalization, appinfo:base becomes Structures:Object 
+	//		and baseTypeDefinition is coerced to Structures:ComplexObjectType 
+	self.setBaseNiemClassifier(result,StructuresComplexObjectType);
+}
+/*
+	common logic for an <<ObjectType>>.
+	By default, appinfo:Base is set to  Structures:Object; any form of generalization will override this default
+*/
+mapping UML::Classifier::ObjectType(inout psmOwner:XSD::XSDSchema):XSD::XSDComplexTypeDefinition@xsd
+	inherits UML::Classifier::NIEMType
+{
+	// sets XSDAnnotation appinfo:Base to structures:Object
+	result.setTypeDefinitionAppinfoBase(NIEMBaseTypeObject);
+}
+
+/*
+	mapping for an NIEM RoleType.   A RoleType is an XSDComplexTypeDefinition containing a "RoleOf..." element.
+	Default value of appinfo:Base is Structures:Object, which will be overridden for any form of generalization.
+	XSDComplexTypeDefinition baseTypeDefinition is set to any form of generalization.
+	If no generalization, then baseTypeDefinition is Structures:ComplexObjectType.
+*/
+mapping UML::Class::RoleType(inout psmOwner:XSD::XSDSchema):XSD::XSDComplexTypeDefinition@xsd 
+	inherits UML::Classifier::NIEMType
+	when{self.isRoleType()}
+	{
+	result.setTypeDefinitionAppinfoBase(NIEMBaseTypeObject);
+	self.setBaseNiemClassifier(result,StructuresComplexObjectType);
+}
+/*
+	mapping for an <<AssociationType>> to an XSDComplexTypeDefinition.
+	Default value of appinfo:Base is Structures:Association, which will be overridden for any form of generalization.
+	XSDComplexTypeDefinition baseTypeDefinition is set to any form of generalization.
+	If no generalization, then baseTypeDefinition is Structures:ComplexObjectType.
+*/
+mapping UML::Class::AssociationType(inout psmOwner:XSD::XSDSchema):XSD::XSDComplexTypeDefinition@xsd 
+	inherits UML::Classifier::NIEMType
+	when{self.IsStereotypeApplied(NIEMAssociationStereotype)}
+	{
+	result.setTypeDefinitionAppinfoBase(NIEMBaseTypeAssociation);
+	self.setBaseNiemClassifier(result,StructuresComplexObjectType);
+}
+/*
+	mapping for a <<MetadataType>> to an XSDComplexTypeDefinition.
+	XSDComplexTypeDefinition baseTypeDefinition is set to Structures:MetadataType.
+	All <<MetadataApplication>> clientDependencies on <<MetadataType>> 
+		are mapped to an appinfo:AppliesTo for the mapped <<MetadataApplication>> supplier.
+	If there are no <<MetadataApplication>>s:
+		 an appinfo:AppliesTo is set to Structures:Object	 
+		 an appinfo:AppliesTo is set to Structures:Association	 
+*/
+mapping UML::Class::MetadataType(inout psmOwner:XSD::XSDSchema):XSD::XSDComplexTypeDefinition@xsd 
+	inherits UML::Classifier::NIEMType
+	when{self.IsStereotypeApplied(NIEMMetadataStereotype)}
+	{
+	self.setBaseNiemClassifier(result,StructuresMetadataType);
+	var metadataApplications:Set(UML::Classifier)=self.clientDependency
+			->select(d|d.IsStereotypeApplied(NIEMMetadataApplicationStereotype)).supplier.oclAsType(UML::Classifier)
+			->asSet();
+	var annotation:XSD::XSDAnnotation=getAnnotation(result);
+	metadataApplications->forEach(metadata){
+	
+				var xsdSchema:XSD::XSDSchema=metadata.getNearestNIEMSchemaPackage().map AbstractXSDSchema();
+				var xsdTypeDefinition:XSD::XSDNamedComponent=metadata.map AbstractXSDSchemaContent(xsdSchema).oclAsType(XSD::XSDNamedComponent);
+				var targetNamespace:String=xsdTypeDefinition.schema.targetNamespace;
+				var componentName:String=xsdTypeDefinition.name;
+				
+				annotation.setAppinfoElement('AppliesTo',componentName,targetNamespace);
+				
+		};	
+	// if element is metadata, and we had no appliesTo, then add entries for Object, Association
+	if(metadataApplications->isEmpty())then{
+		annotation.setAppinfoElement('AppliesTo','Object',structuresSchemaNamespace);
+		annotation.setAppinfoElement('AppliesTo','Association',structuresSchemaNamespace);
+	}else{}endif;
+}
+/*
+	mapping for an <<AdapterType>> to an XSDComplexTypeDefinition.
+*/
+mapping UML::Class::AdapterType(inout psmOwner:XSD::XSDSchema):XSD::XSDComplexTypeDefinition@xsd 
+	inherits UML::Classifier::NIEMType
+	when{self.IsStereotypeApplied(NIEMAdapterStereotype)}
+	{
+	var schemaAnnotation:XSD::XSDAnnotation=getAnnotation(result);
+	schemaAnnotation.setAppinfoElementValue('true','i:ExternalAdapterTypeIndicator');
+	
+}
+/*
+	mapping for an <<AugmentationType>> to an XSDComplexTypeDefinition.
+	XSDComplexTypeDefinition baseTypeDefinition is set to any form of generalization.
+	If no generalization, then baseTypeDefinition is Structures:AugmentationType.
+*/
+mapping UML::Class::AugmentationType(inout psmOwner:XSD::XSDSchema):XSD::XSDComplexTypeDefinition@xsd 
+	inherits UML::Classifier::NIEMType
+	when{self.isPimAugmentation()}
+	{
+			self.setBaseNiemClassifier(result,StructuresAugmentationType);
+}
+/*
+	mapping for a <<List>> to an XSDSimpleTypeDefinition.
+	The (mapped) type of the ownedAttribute is mapped to itemTypeDefinition of the XSDSimpleTypeDefinition, making is an XSD List. 
+*/
+mapping UML::DataType::NIEMList(inout psmOwner:XSD::XSDSchema):XSD::XSDSimpleTypeDefinition@xsd 
+	inherits UML::DataType::ValueRestriction
+	when{self.IsStereotypeApplied(NIEMListTypeStereotype)}	
+	{
+		self.ownedAttribute.type
+		->select(d|d.oclIsKindOf(UML::Classifier)).oclAsType(UML::Classifier)
+		->forEach(member){itemTypeDefinition:=member.toPsmClassifierSimpleType();};
+}
+/*
+	mapping for a <<Union>> to an XSDSimpleTypeDefinition.
+	The (mapped) type of the clientDependency suppliers are mapped to memberTypeDefinition of the XSDSimpleTypeDefinition, 
+		making is an XSD union. 
+*/
+mapping UML::DataType::Union(inout psmOwner:XSD::XSDSchema):XSD::XSDSimpleTypeDefinition@xsd
+	inherits UML::DataType::ValueRestriction
+	when{self.IsStereotypeApplied(NIEMUnionTypeStereotype)}	
+	{
+		self.clientDependency.supplier
+		->select(d|d.oclIsKindOf(UML::Classifier)).oclAsType(UML::Classifier)
+		->forEach(member){memberTypeDefinitions+=member.toPsmClassifierSimpleType();};
+}
+		
+/*
+	mapping for a <<ValueRestriction>>, <<List>>, <<Union>>, or an Enumeration to an XSDSimpleTypeDefinition.
+	By default, the XSDAnnotation appinfo:Base is set to Structures:Object. 
+	If this is a <<ValuteRestriction>>, then map <<ValueRestriction>> tags to corresponding XSD facets.
+	If this is a <<RepresentationRestriction>>, then map <<RepresentationRestriction>> tags to corresponding XSD facets.
+*/
+mapping UML::DataType::ValueRestriction(inout psmOwner:XSD::XSDSchema):XSD::XSDSimpleTypeDefinition@xsd 
+	inherits 
+		UML::DataType::XSDSimpleTypeDefinitionDataType,
+		UML::Classifier::NIEMTypeDefinition
+	when{self.oclIsKindOf(UML::DataType) and (self.isNIEMSimpleType() or self.oclIsKindOf(UML::Enumeration))}	
+	{
+		result.setTypeDefinitionAppinfoBase(NIEMBaseTypeObject);
+		if(self.IsStereotypeApplied(NIEMSimpleTypeStereotype))then{
+		var simpleTypeStereotypeInstance:Stdlib::Element=self.GetStereotypeApplication(NIEMSimpleTypeStereotype).oclAsType(Stdlib::Element);
+		simpleTypeStereotypeInstance.getNIEMSimpleTypeFractionDigits()->forEach(value){self.map XSDFractionDigitsFacet(value.repr(),result);};
+		simpleTypeStereotypeInstance.getNIEMSimpleTypeTotalDigits()->forEach(value){self.map XSDTotalDigitsFacet(value.repr(),result);};
+		simpleTypeStereotypeInstance.getNIEMSimpleTypeLength()->forEach(value){self.map XSDLengthFacet(value.repr(),result);};
+		simpleTypeStereotypeInstance.getNIEMSimpleTypeMaxExclusive()->forEach(value){self.map XSDMaxExclusiveFacet(value,result);};
+		simpleTypeStereotypeInstance.getNIEMSimpleTypeMaxInclusive()->forEach(value){self.map XSDMaxInclusiveFacet(value,result);};
+		simpleTypeStereotypeInstance.getNIEMSimpleTypeMinExclusive()->forEach(value){self.map XSDMinExclusiveFacet(value,result);};
+		simpleTypeStereotypeInstance.getNIEMSimpleTypeMinInclusive()->forEach(value){self.map XSDMinInclusiveFacet(value,result);};
+		simpleTypeStereotypeInstance.getNIEMSimpleTypeMaxLength()->forEach(value){self.map XSDMaxLengthFacet(value.repr(),result);};
+		simpleTypeStereotypeInstance.getNIEMSimpleTypeMinLength()->forEach(value){self.map XSDMinLengthFacet(value.repr(),result);};
+		simpleTypeStereotypeInstance.getNIEMSimpleTypePattern()->forEach(value){self.map XSDPatternFacet(value,result);};
+		}endif;
+		if(self.IsStereotypeApplied(NIEMRepresentationRestrictionStereotype))then{
+		var representationStereotypeInstance:Stdlib::Element=self.GetStereotypeApplication(NIEMRepresentationRestrictionStereotype).oclAsType(Stdlib::Element);
+		representationStereotypeInstance.getXSDRepresentationRestrictionWhiteSpace()->forEach(value){self.map XSDWhiteSpaceFacet(value,result);};
+		}endif;
+}
+/*
+	mapping for an Enumeration to an XSDSimpleTypeDefinition.
+	Each ownedLiteral is mapped to an XSDEnumerationFacet whose lexicalValue is the name of the EnumerationLiteral.
+		<<Documentation>> owned by the EnumerationLiteral is mapped to appinfo portion of XSDAnnotation on the XSDEnumerationFacet
+	If the Enumeration has no Generalization, then Schema for Schemas "token" is mapped to the baseTypeDefinition of XSDSimpleTypeDefinition. 
+*/
+mapping UML::Enumeration::Enumeration(inout psmOwner:XSD::XSDSchema):XSD::XSDSimpleTypeDefinition@xsd 
+	inherits UML::DataType::ValueRestriction
+	when{self.oclIsKindOf(UML::Enumeration)}	
+	{
+	// process content
+	var names:OrderedSet(UML::EnumerationLiteral)=self.ownedLiteral;
+	log('Enumeration '+self.qualifiedName+', size '+names->size().repr());
+	names->forEach(enumerationValue){
+		var facet:XSD::XSDEnumerationFacet=new XSD::XSDEnumerationFacet@xsd();
+		result.facetContents+=facet;
+		facet.lexicalValue:=enumerationValue.name;
+		enumerationValue.ownedComment->forEach(sourceComment){
+			var annotation:XSD::XSDAnnotation=new XSD::XSDAnnotation@xsd();
+			facet.annotation:=annotation;
+			if(annotation.schema.oclIsUndefined())then{
+				log('ERROR: failed to resolve schema for annotation of '+facet.repr()+', enumeration '+result.repr()+', owner '+psmOwner.repr());
+			}else{
+			var userInformation:OclAny=annotation.createUserInformation('');
+			sourceComment.annotationInformationElement(userInformation);
+			userInformation.commitInformation();
+			}endif;
+			};
+		};
+		/*
+	if(self.getGenerals()->isEmpty())then{
+	// must lead to xsd token base
+		umlSchemaForSchemaToken.mapBaseTypeDefinition(result);
+	}endif;
+	*/
+}
+/*
+	mapping for a ComplexType with simpleContent to an XSDSimpleTypeDefinition (as the XSDComplexTypeContent).
+	The XSDSimpleTypeDefinition becomes the content of the containing XSDComplexTypeDefinition.
+	A Structures:SimpleObjectAttributeGroup is also added to the containing XSDComplexTypeDefinition.
+*/
+mapping UML::Classifier::NIEMComplexTypeContentSimpleTypeDefinition(inout psmOwner:XSD::XSDComplexTypeDefinition):XSD::XSDSimpleTypeDefinition@xsd
+// 	inherits UML::Classifier::XSDTypeDefinition
+	when{self.isPsmComplexTypeContentSimpleTypeDefinition()}
+	
+{
+	init{}
+	psmOwner.content:=result;	
+	self.map NIEMSimpleObjectAttributeGroup(psmOwner);
+}
+/*
+	mapping for the production of an AttributeGroupDefinition (ref) as the attributeContents of an XSDComplexTypeDefinition.
+	The "ref" is set to the Structures::SimpleObjectAttributeGroup.
+*/
+mapping UML::Classifier::NIEMSimpleObjectAttributeGroup(inout psmClassifier:XSD::XSDComplexTypeDefinition):XSD::XSDAttributeGroupDefinition@xsd
+{
+	psmClassifier.attributeContents+=result;
+	resolvedAttributeGroupDefinition:=StructuresSimpleObjectAttributeGroup;
+}
+/*
+	common mapping for <<NIEMType>> to XSDComplexTypeDefinition.
+	The XSDComplexTypeDefinition "abstract" attribute is set to the <<NIEMType>> isAbstract attribute.
+	If there is an attribute of <<NIEMType>> whose type is an <<AugmentationType>>, then set the appinfo2:AugmentedElementIndicator=true.
+	If there is a <<Restriction>> client Dependency on <<NIEMType>>, set the XSDComplexTypeDefinition derivationMethod to 'restriction'.
+*/
+mapping UML::Classifier::NIEMType(
+	inout psmOwner:XSD::XSDSchema):XSD::XSDComplexTypeDefinition@xsd 
+	inherits UML::Classifier::NIEMTypeDefinition,
+		UML::Classifier::XSDComplexTypeDefinition
+	{
+		init{}
+	_abstract:=self.isAbstract;
+		if (self.attribute.type->exists(t|t.oclAsType(UML::Classifier).isAugmentationType()))then{
+//			setAppinfo2Element(getAnnotation(result),'true',psmOwner,'i2:AugmentedElementIndicator');
+			getAnnotation(result).setAppinfo2Element('true',psmOwner,'i2:AugmentedElementIndicator');
+			
+		}endif;
+	if (self.clientDependency->exists(t|t.IsStereotypeApplied(NIEMRestrictionStereotype)))then{
+		derivationMethod:=XSD::XSDDerivationMethod::restriction;
+	}endif;
+		
+}
+/*
+	common mapping for UML Property to XSDWildcard.
+	When the container is an XSDAttributeGroupDefinition, 
+		add the new XSDWildcard to the attributeWildcardContent of the XSDAttributeGroupDefinition.
+	When the container is an XSDParticle, 
+		add the new XSDWildcard to the content of the XSDParticle.
+		(due to implementation problem these actions are deferred until after XSDWildcard part of XSDParticle):
+		add the particle to the content of the particleContainer
+	Otherwise the container is an XSDComplexTypeDefinition, 
+		add the new XSDWildcard to the content of the XSDComplexTypeDefinition
+
+	Owned Comments of the Property are mapped to XSDAnnotation documentation elements.	 
+*/
+mapping 	UML::Property::XSDWildcard(xsdContainer:XSD::XSDConcreteComponent):XSD::XSDWildcard@xsd
+	{
+	switch{
+		case(xsdContainer.oclIsKindOf(XSD::XSDAttributeGroupDefinition)){
+			xsdContainer.oclAsType(XSD::XSDAttributeGroupDefinition).attributeWildcardContent:=result;
+		}case(xsdContainer.oclIsKindOf(XSD::XSDParticle)){
+				// particle container
+				var particle:XSD::XSDParticle=xsdContainer.oclAsType(XSD::XSDParticle);
+				particle.content:=result;
+				switch{
+					case(particleContainer.oclIsKindOf(XSD::XSDComplexTypeDefinition)){
+						particleContainer.oclAsType(XSD::XSDComplexTypeDefinition).content:=particle;
+					}else{
+						particleContainer.oclAsType(XSD::XSDModelGroup).contents+=particle;
+					};
+				};
+		}else{
+				xsdContainer.oclAsType(XSD::XSDComplexTypeDefinition).attributeWildcardContent:=result;
+			};
+		
+	};
+	self.ownedComment.mapAbstractDocumentation(result);
+}	
+/*
+	mapping for <<XSDAnyProperty>> to XSDWildcard.
+	<<XSDAnyProperty>> namespace tag is mapped to 
+		XSDWildcard lexicalNamespaceConstraint if it exists, in which case XSDWildcard namespaceConstraintCategory is set to 'set';
+		otherwise if namespace is not defined, XSDWildcard namespaceConstraintCategory is set to 'any';
+	<<XSDAnyProperty>> processContents tag is mapped to XSDWildcard processContents. 
+*/
+
+mapping 	UML::Property::XSDAnyProperty(xsdContainer:XSD::XSDConcreteComponent):XSD::XSDWildcard@xsd
+	inherits UML::Property::XSDWildcard
+	when{self.IsStereotypeApplied(NIEMAnyPropertyStereotype)}
+	{
+	var psmStereotypeInstance:Stdlib::Element=self.GetStereotypeApplication(NIEMAnyPropertyStereotype).oclAsType(Stdlib::Element);
+	var namespace:String=psmStereotypeInstance.getAnyPropertyNamespace();
+	if(namespace.oclIsUndefined())then{
+		namespaceConstraintCategory:=XSD::XSDNamespaceConstraintCategory::any;
+	}else{
+		lexicalNamespaceConstraint+=namespace;
+		namespaceConstraintCategory:=XSD::XSDNamespaceConstraintCategory::set;
+	}endif;
+	var sourceProcessContents:String=psmStereotypeInstance.getAnyPropertyProcessContents();
+	processContents:=switch{
+		case(sourceProcessContents='strict')XSD::XSDProcessContents::strict;
+		case(sourceProcessContents='lax')XSD::XSDProcessContents::lax;
+		case(sourceProcessContents='skip')XSD::XSDProcessContents::skip;
+	};
+	
+	
+
+}	
+/*
+	common mapping for a Property to XSDAttributeUse.
+*/
+mapping UML::Property::XSDProperty_AttributeUse(inout classifier:XSD::XSDConcreteComponent):XSD::XSDAttributeUse@xsd
+	inherits UML::Property::XSDAttributeUse
+	{
+	}
+/*
+	mapping for a <<SequenceID>> to XSDAttributeUse.
+*/
+mapping UML::Property::SequenceID(inout classifier:XSD::XSDConcreteComponent):XSD::XSDAttributeUse@xsd
+	inherits UML::Property::XSDProperty_AttributeUse
+	when{self.IsStereotypeApplied(NIEMSequenceIdStereotype)}
+	{
+	}
+/*
+	mapping for a <<SequenceID>> to XSDAttributeDeclaration as content of an XSDAttributeUse.
+	The "ref" of the XSDAttributeDeclaration is set to Structures::SequenceID.
+*/
+mapping UML::Property::SequenceID_AttributeUse_attributeDeclaration(inout attributeUse:XSD::XSDAttributeUse):XSD::XSDAttributeDeclaration@xsd
+	inherits UML::Property::XSDAttributeDeclaration_attributeUse
+	when{self.IsStereotypeApplied(NIEMSequenceIdStereotype)}
+	{
+		var topLevelProperty:XSD::XSDAttributeDeclaration=StructuresSequenceID;
+		resolvedAttributeDeclaration:=topLevelProperty;
+	}
+/*
+	mapping for a <<XSDProperty>> (kind=attribute) with explicit <<References>> to a top-level <<PropertyHolder>> <<XSDProperty>>
+		to XSDAttributeUse .
+*/
+mapping UML::Property::XSDProperty_AttributeUse_ref(inout classifier:XSD::XSDConcreteComponent):XSD::XSDAttributeUse@xsd
+	inherits UML::Property::XSDProperty_AttributeUse
+	when{self.isNiemAttribute() and self.referencesTopLevel()}
+	{
+	}
+/*
+	mapping for a <<XSDProperty>> (kind=attribute)  with explicit <<References>> to a top-level <<PropertyHolder>> <<XSDProperty>>
+		to XSDAttributeDeclaration as content of an XSDAttributeUse.
+	The <<XSDProperty>> <<references>> an <<XSDProperty>> in a <<PropertyHolder>>.   
+	That (mapped) top level XSDAttributeDeclaration becomes the "ref" of this new XSDAttributeDeclaration;  
+*/
+mapping UML::Property::XSDProperty_AttributeUse_attributeDeclaration(inout attributeUse:XSD::XSDAttributeUse):XSD::XSDAttributeDeclaration@xsd
+	inherits UML::Property::XSDAttributeDeclaration_attributeUse
+	when{self.isNiemAttribute() and self.referencesTopLevel()}
+	{
+		// get the referencedTopLevel
+		var topLevelProperty:XSD::XSDAttributeDeclaration=self.referencesTopLevelProperty().toPsmTopLevelAttribute();
+		resolvedAttributeDeclaration:=topLevelProperty;
+	}
+/*
+	mapping for a <<XSDProperty>> (kind=attribute) to XSDAttributeUse when type is anonymous.
+	(Note that this condition should not occur in a NIEM-conformant schema);
+*/
+mapping UML::Property::XSDProperty_AttributeUse_anonymousType(inout classifier:XSD::XSDConcreteComponent):XSD::XSDAttributeUse@xsd
+	inherits UML::Property::XSDProperty_AttributeUse
+	when{self.isNiemAttribute() and self.hasAnonymousType()}
+	{
+		// embedded attributeUse whose type is anonymous
+	}
+/*
+	mapping for a <<XSDProperty>> (kind=attribute) to XSDAttributeUse in all other cases.
+*/
+mapping UML::Property::XSDProperty_AttributeUse_type(inout classifier:XSD::XSDConcreteComponent):XSD::XSDAttributeUse@xsd
+	inherits UML::Property::XSDProperty_AttributeUse
+	when{self.isNiemAttribute()}
+	{
+		// other cases of embedded attributeUse
+	}
+/*
+	mapping for a Property whose type represents an XSDAttributeGroupDefinition 
+		to an XSDAttributeGroupDefinition as XSDAttributeGroupContent.
+*/
+	
+mapping UML::Property::XSDAttributeGroupContent_attributeGroupDefinition(inout classifier:XSD::XSDConcreteComponent):XSD::XSDAttributeGroupDefinition@xsd
+//	inherits UML::Property::NIEMFeature_init
+	inherits UML::Property::XSDAttributeGroupDefinition
+	when{self.type.isAttributeGroupDefinition()}
+	{
+	}
+
+/*
+	mapping for a Property whose type represents an XSDModelGroupDefinition  
+		to an XSDModelGroupDefinition.
+	The result XSDModelGroupDefinition is added to its container, depending upon container type:
+		the content of an XSDParticle
+		or contents of an XSDRedefine
+		or contents of an XSDSchema
+	The owned comments of the Property's type is added as XSDAnnotation documentation to the result XSDModelGroupDefinition.
+	The 'ref' of the result XSDModelGroupDefinition is set to the (mapped) type of the Property.	
+		  	
+*/
+mapping UML::Property::XSDModelGroupDefinition_Property(inout xsdContainer:XSD::XSDConcreteComponent):XSD::XSDModelGroupDefinition@xsd
+	when{self.type.getNearestPackage().isModelGroupDefinitions()}
+	{
+	switch{
+		case(xsdContainer.oclIsKindOf(XSD::XSDParticle)){
+				// particle container
+				var particle:XSD::XSDParticle=xsdContainer.oclAsType(XSD::XSDParticle);
+				particle.content:=result;
+				switch{
+					case(particleContainer.oclIsKindOf(XSD::XSDComplexTypeDefinition)){particleContainer.oclAsType(XSD::XSDComplexTypeDefinition).content:=particle;};
+					else{
+						particleContainer.oclAsType(XSD::XSDModelGroup).contents+=particle;
+					}
+				};
+			};
+		case (xsdContainer.oclIsKindOf(XSD::XSDRedefine))	{xsdContainer.oclAsType(XSD::XSDRedefine).contents+=result;};
+		else{
+				xsdContainer.oclAsType(XSD::XSDSchema).contents+=result;
+			};
+		
+	};
+		self.type.ownedComment.mapAbstractDocumentation(result);
+	resolvedModelGroupDefinition:=self.type.oclAsType(UML::Class).resolveModelGroupDefinitionReference();
+	}
+/*
+	mapping for a Property whose type is a <<Choice>>  
+		to an XSDModelGroup.
+	The result XSDModelGroup compositor is set to 'choice'.
+		  	
+*/
+mapping UML::Property::Choice_property(inout xsdContainer:XSD::XSDConcreteComponent):XSD::XSDModelGroup@xsd
+	inherits UML::Property::XSDModelGroup_base
+	when{self.type.isChoiceModelGroup()}
+	
+{
+	// the type will have been mapped from a nestedClassifier to a top level choice class
+	// no stereotype on the property in this case
+	compositor:=XSD::XSDCompositor::choice;
+	
+}
+/*
+	common mapping logic for a Property to an XSDModelGroup.
+	The result XSDModelGroup is added to its container, depending upon container type:
+		As the modelGroup of an XSDModelGroupDefinition
+		or the content of an XSDParticle.
+	Owned comments of he Property's type are mapped to XSDAnnotation documentation.
+	The Properties of the Property's type (i.e., the ModelGroup) are mapped to XSDParticle contained by the result XSDModelGroup.
+		  	
+*/
+mapping UML::Property::XSDModelGroup_base(inout xsdContainer:XSD::XSDConcreteComponent):XSD::XSDModelGroup@xsd
+	{
+	switch{
+		case(xsdContainer.oclIsKindOf(XSD::XSDModelGroupDefinition)){
+			xsdContainer.oclAsType(XSD::XSDModelGroupDefinition).modelGroup:=result;
+		}else{
+				// particle container
+				var particle:XSD::XSDParticle=xsdContainer.oclAsType(XSD::XSDParticle);
+				particle.content:=result;
+				switch{
+					case(particleContainer.oclIsKindOf(XSD::XSDComplexTypeDefinition)){
+						particleContainer.oclAsType(XSD::XSDComplexTypeDefinition).content:=particle;
+					}else{
+						particleContainer.oclAsType(XSD::XSDModelGroup).contents+=particle;
+					};
+				};
+		};
+		
+	};
+		self.type.ownedComment.mapAbstractDocumentation(result);
+	self.type.oclAsType(UML::Classifier).getOrderedProperties().map XSDParticle(result);
+		
+	}
+/*
+	mapping for a Property mapped to an XSDModelGroup, when the type of the Property is an anonymous ModelGroup.
+	The compositor of the result XSDModelGroup is set to 'sequence';
+		  	
+*/
+	
+mapping UML::Property::XSDModelGroup_Property(inout xsdContainer:XSD::XSDConcreteComponent):XSD::XSDModelGroup@xsd
+	inherits UML::Property::XSDModelGroup_base
+	when{self.type.isAnonymousModelGroup()}
+	{
+	compositor:=XSD::XSDCompositor::sequence;
+	}
+/*
+	mapping for a <<XSDProperty>> (kind=element) which explicitly <<References>> a top-level <<XSDProperty>> in a <<PropertyHolder>>
+		to an XSDElementDeclaration.
+	The referenced top-level <<XSDPropety>> becomes the "ref" of the result XSDElementDeclaration.
+		  	
+*/
+mapping UML::Property::XSDElementDeclaration_ref(inout classifier:XSD::XSDConcreteComponent):XSD::XSDElementDeclaration@xsd
+		inherits UML::Property::XSDElementDeclaration
+	when{self.isElementReference()}
+	{
+		var topLevelProperty:XSD::XSDElementDeclaration=self.referencesTopLevelProperty().toPsmTopLevelElement();
+		if(not(topLevelProperty.oclIsUndefined()))then {
+			result.resolvedElementDeclaration:=topLevelProperty;
+		}endif;
+	}
+
+/*
+	mapping for a Class representing a ModelGroupDefinition to XSDModelGroupDefinition
+		  	
+*/
+mapping UML::Class::NIEMModelGroupDefinition(inout psmOwner:XSD::XSDSchema):XSD::XSDModelGroupDefinition@xsd
+	inherits 
+		UML::Class::XSDModelGroupDefinition
+	when{self.getNearestPackage().isModelGroupDefinitions()}
+{
+}
+/*
+	mapping for a Class representing an AttributeGroupDefinition to XSDAttributeGroupDefinition
+	Each Property of the source Class is mapped to AttributeGroupContent
+		  	
+*/
+mapping UML::Class::NIEMAttributeGroupDefinition(inout psmOwner:XSD::XSDSchema):XSD::XSDAttributeGroupDefinition@xsd
+	inherits 
+		UML::Class::XSDAttributeGroupDefinition
+ 	when{self.isAttributeGroupDefinition()}
+{
+		self.getOrderedProperties().map AbstractXSDAttributeGroupContent(result);
+}
+/*
+	common mapping logic for a Classifier to XSDTypeDefinition.
+	Each general of the Classifier is mapped to a baseTypeDefinition of the XSDTypeDefinition.
+		  	
+*/
+mapping UML::Classifier::NIEMTypeDefinition(inout psmOwner:XSD::XSDConcreteComponent):XSD::XSDTypeDefinition@xsd
+{
+	init{}
+	if(self.isNIEMSimpleType())then {
+			self.getGeneralRestrictions().toPsmClassifierSimpleType().mapBaseTypeDefinition(result);
+		}
+		else {
+			self.getGeneralRestrictions().toPsmClassifier().mapBaseTypeDefinition(result);
+		} 
+		endif;
+}
+/*
+	Mapping for a top level <<XSDProperty>>(kind=attribute) to XSDAttributeDeclaration.
+	The typeDefinition of the result XSDAttributeDeclaration is set to the (mapped) type of the <<XSDProperty>>.
+		  	
+*/
+mapping UML::Property::XSDAttributeDeclaration_topLevel(
+		inout psmClass:XSD::XSDSchema):XSD::XSDAttributeDeclaration@xsd
+		inherits
+			UML::Property::XSDAttributeDeclaration 
+		{
+		result.typeDefinition:=self.type.oclAsType(UML::Classifier).toPsmClassifierSimpleType();
+		var pimStereotypeInstance:Stdlib::Element=self.GetStereotypeApplication(NIEMPropertyStereotype).oclAsType(Stdlib::Element);
+		var psmfixed:String=pimStereotypeInstance.getXSDPropertyFixed();
+		if(not(psmfixed.oclIsUndefined() and (psmfixed<>'')))then{
+			lexicalValue:=psmfixed;
+			constraint:=XSD::XSDConstraint::fixed;
+		}endif;
+		
+}
+/*
+	Common logic for Mapping a top level <<XSDProperty>>(kind=element) to XSDElementDeclaration.
+	Owned comments of the <<XSDProperty>> are mapped to XSDAnnotation documentation.
+	ClientDependencies of <<XSDProperty>> which are <<AugmentationApplication>> 
+		are mapped to an appinfo:AppliesTo element within the XSDAnnotation content of the result XSDElementDeclaration.
+		The appinfo:AppliesTo name and namespace are set according to 
+			the name of the referenced XSDTypeDefinition
+			the targetNamespace of the containing XSDSchema
+	subsettedProperties of <<XSDProperty>> map to substitutionGroupAffiliation for the result XSDElementDeclaration.
+		In this case, the appinfo:base annotation is added to the contained XSDAnnotation, referencing the subsettedProperty.
+	A substitutionGroupAffiliation will be set to Structures:AugmentationElement when the type of the <<XSDProperty>> is an <<AugmentationType>>
+		and there is otherwise no conflict with explict subsettedProperty declarations. 		 
+		  	
+*/
+mapping UML::Property::XSDElementDeclaration_topLevel(inout psmClass:XSD::XSDSchema):XSD::XSDElementDeclaration@xsd
+		inherits
+			UML::Property::XSDElementDeclaration 
+{
+			self.ownedComment.mapAbstractDocumentation(result);
+		self.clientDependency
+			->select(d|d.IsStereotypeApplied(NIEMAugmentationApplicationStereotype)).supplier
+			->forEach(augmentation){
+				var annotation:XSD::XSDAnnotation=getAnnotation(result);
+				var xsdSchema:XSD::XSDSchema=augmentation.getNearestNIEMSchemaPackage().map AbstractXSDSchema();
+				var xsdTypeDefinition:XSD::XSDNamedComponent=augmentation.map AbstractXSDSchemaContent(xsdSchema).oclAsType(XSD::XSDNamedComponent);
+				var targetNamespace:String=xsdTypeDefinition.schema.targetNamespace;
+				var componentName:String=xsdTypeDefinition.name;
+				
+				annotation.setAppinfoElement('AppliesTo',componentName,targetNamespace);
+			};
+		var isRoleOf:Boolean=result.name.isRoleOfName();
+		var isAugmentation:Boolean=
+			not(self.type.oclIsUndefined())
+			and self.type.oclAsType(UML::Classifier).isPimAugmentationType()
+			;
+		var isImplicitStructuresAugmentation:Boolean=isAugmentation and not(isRoleOf) and self.subsettedProperty->isEmpty();
+		self.subsettedProperty.toPsmTopLevelElement()->forEach(targetSubsettedProperty){
+			substitutionGroupAffiliation:=targetSubsettedProperty;
+			// also set the appinfoBase of the element
+			result.appInfoBase(targetSubsettedProperty);
+			
+		};
+		if(isImplicitStructuresAugmentation)then{
+			substitutionGroupAffiliation:=StructuresAugmentationElement;
+		}endif;
+
+}
+/*
+	Mapping a top level <<XSDProperty>>(kind=element) to XSDElementDeclaration.
+	'abstract' property of result XSDElementDeclaration is true if the <<XSDProperty>> is untyped.
+	<<XSDProperty>> nillable tag maps to 'nillable' property of result XSDElementDeclaration.
+	<<XSDProperty>> type maps to typeDefinition of result XSDElementDeclaration.
+		  	
+*/
+mapping UML::Property::TopLevelElement_declaration(inout psmClass:XSD::XSDSchema):XSD::XSDElementDeclaration@xsd
+		inherits UML::Property::XSDElementDeclaration_topLevel
+		when{self.isPsmXsdElement()}
+{
+	// apply the attributeDefinition stereotype
+	var pimStereotypeInstance:Stdlib::Element=self.GetStereotypeApplication(NIEMPropertyStereotype).oclAsType(Stdlib::Element);
+	var isPsmAbstract:Boolean=self.type.oclIsUndefined();
+	_abstract:=isPsmAbstract;
+	nillable:=(self.getNearestPackage().getSchemaPurpose()<>purposeExchangeSchemaURI)
+		and pimStereotypeInstance.getNIEMElementNillable();
+	typeDefinition:=self.type.oclAsType(UML::Classifier).toPsmClassifier();
+	var psmfixed:String=pimStereotypeInstance.getXSDPropertyFixed();
+	if(not(psmfixed.oclIsUndefined() and (psmfixed<>'')))then{
+		lexicalValue:=psmfixed;
+		constraint:=XSD::XSDConstraint::fixed;
+	}endif;
+}
+/*
+	Mapping a top level <<XSDProperty>>(kind=element) which is a 'Reference' to XSDElementDeclaration.
+	'abstract' property of result XSDElementDeclaration is false.
+	<<XSDProperty>> type is mapped to appinfo:ReferenceTarget in the XSDAnnotation content of result XSDElementDeclaration.
+	<<XSDProperty>> nillable tag maps to 'nillable' property of result XSDElementDeclaration.
+	
+	typeDefinition of result XSDElementDeclaration is set to Structures:ReferenceType.
+		  	
+*/
+mapping UML::Property::TopLevelElement_reference(inout psmClass:XSD::XSDSchema):XSD::XSDElementDeclaration@xsd
+		inherits UML::Property::XSDElementDeclaration_topLevel
+		when{self.isPsmXsdElement() and self.isReference()}
+{
+	// apply the attributeDefinition stereotype
+	if(not(self.type.oclIsUndefined()))then{
+	var topType:XSD::XSDTypeDefinition=self.type.oclAsType(UML::Classifier).toPsmClassifier();
+	getAnnotation(result).setAppinfoElement('ReferenceTarget',topType.name,topType.schema.targetNamespace);
+	}endif;
+	var pimStereotypeInstance:Stdlib::Element=self.GetStereotypeApplication(NIEMPropertyStereotype).oclAsType(Stdlib::Element);
+	_abstract:=false;
+	nillable:=(self.getNearestPackage().getSchemaPurpose()<>purposeExchangeSchemaURI)
+		and pimStereotypeInstance.getNIEMElementNillable();
+	typeDefinition:=StructuresReferenceType;
+}
+/*
+	Common logic for Mapping a <<XSDProperty>>(kind=element) to XSDElementDeclaration.
+	The result XSDElementDeclaration is added to its container.
+	
+*/
+mapping 	UML::Property::XSDElementDeclaration_base(xsdContainer:XSD::XSDConcreteComponent):XSD::XSDElementDeclaration@xsd 
+ 	inherits UML::StructuralFeature::XSDFeature
+{
+	init{
+		switch{
+			case(xsdContainer.oclIsKindOf(XSD::XSDSchema)){
+				xsdContainer.oclAsType(XSD::XSDSchema).contents+=result;
+			};
+			else{
+				// particle container
+				var particle:XSD::XSDParticle=xsdContainer.oclAsType(XSD::XSDParticle);
+				particle.content:=result;
+				switch{
+					case(particleContainer.oclIsKindOf(XSD::XSDComplexTypeDefinition)){
+						particleContainer.oclAsType(XSD::XSDComplexTypeDefinition).content:=particle;
+					}else{
+						particleContainer.oclAsType(XSD::XSDModelGroup).contents+=particle;
+					};
+				};
+			}
+		};
+	}
+}	
+/*
+	Common logic for Mapping a <<XSDProperty>>(kind=element) to XSDElementDeclaration.
+*/
+ mapping 	UML::Property::XSDElementDeclaration(xsdContainer:XSD::XSDConcreteComponent):XSD::XSDElementDeclaration@xsd 
+ 	inherits UML::Property::XSDElementDeclaration_base
+{
+	init{
+	}
+}
+	
+/*
+	Mapping a NIEM Infrastructure <<XSDSchema>> to XSDImport.
+	The result XSDImport is added to its containing XSDSchema.
+	The resolvedSchema property of the result XSDImport is the NIEM Infrastructure <<XSDSchema>>.
+	the schemaLocation property of the result XSDImport is set to the relative path between the importing Schema and the Infrastructure <<XSDSchema>>.
+	the namespace property of the result XSDImport is set to the targetNamespace of the Infrastructure <<XSDSchema>>.
+	The recommended prefix for the imported namespace is set for the importing <<XSDSchema>>.  
+*/
+mapping 	XSD::XSDSchema::XSDImport_infrastructure(inout xsdContainer:XSD::XSDSchema):XSD::XSDImport@xsd
+{
+	var schemaContents:Sequence(XSD::XSDSchemaContent)=xsdContainer.contents->asSequence();
+	xsdContainer.contents:=Sequence{result.oclAsType(XSD::XSDSchemaContent)}->union(schemaContents);
+	result.resolvedSchema:=self;
+	var referencedSchema:String='XMLschemas/'+self.schemaLocation.substringAfter('/XMLschemas/');
+
+	var thisSchema:String=xsdContainer.schemaLocation;
+	var relativePath:String=thisSchema.relativePathTo(referencedSchema);
+	if(relativePath.oclIsUndefined())then{
+		log('XSDSchemaDirective ERROR: failed to resolve relative path from '+thisSchema+'('+result.schema.targetNamespace+') to '+referencedSchema);
+	}else{
+		result.schemaLocation:=relativePath;
+	}endif;
+	var importNamespace:String=self.targetNamespace;
+	namespace:=importNamespace;
+	xsdContainer.setPrefixForNamespace(importNamespace);
+}
+/*
+	Common initialization logic for mapping a Package to an XSDImport.
+	The result XSDImport is added to its containing XSDSchema.
+	The resolvedSchema of the result XSDImport is set to the XSDSchema mapped from the <<Namespace>> context. 
+*/
+mapping 	UML::Package::XSDImport_init(inout xsdContainer:XSD::XSDSchema):XSD::XSDImport@xsd
+ 	inherits 
+ 		UML::Element::XSDSchemaDirective
+{
+	init{
+	xsdContainer.contents+=result;
+	result.resolvedSchema:=self.map AbstractXSDSchema();
+		
+	}
+}
+/*
+	Mapping a  <<Namespace>> context to XSDImport.
+	The <<Namespace>> ConformantIndicator of the context is mapped to the appinfo:ConformantIndicator in the XSDAnnotation contained 
+		by the result XSDImport.
+	the namespace property of the result XSDImport is set to the targetNamespace of the resolved <<XSDSchema>>.
+	The recommended prefix for the imported namespace is set for the importing <<XSDSchema>>.  
+*/
+mapping 	UML::Package::XSDImport(inout xsdContainer:XSD::XSDSchema):XSD::XSDImport@xsd
+ 	inherits 
+ 		UML::Package::XSDImport_init
+{
+	var xsdImport:XSD::XSDImport=result;
+	var importSchema:XSD::XSDSchema=xsdImport.resolvedSchema;
+	var importNamespace:String=importSchema.targetNamespace;
+		var appinfoConformantIndicator:Boolean=
+			(self.GetStereotypeApplication(NIEMSchemaStereotype).oclAsType(Stdlib::Element).getPimSchemaConformantIndicator())
+		;
+		if(not(appinfoConformantIndicator))then{
+			var schemaAnnotation:XSD::XSDAnnotation=getAnnotation(result);
+			schemaAnnotation.setAppinfoElementValue(appinfoConformantIndicator.repr(),'i:ConformantIndicator');
+		}endif;	
+			
+	if(importNamespace.oclIsUndefined())then{}else{
+		namespace:=importNamespace;
+		xsdContainer.setPrefixForNamespace(importNamespace);
+	}endif;
+}
+
+/*
+	Common logic for mapping an Element to an XSDSchemaDirective.
+	The schemaLocation of the result XSDSchemaDirective is set to the relative path between 
+		the <<XSDSchema>> container of the result XSDSchemaDirective
+		and the resolved <<XSDSchema>> being referenced.
+*/
+
+mapping 	UML::Element::XSDSchemaDirective(container:XSD::XSDSchema):XSD::XSDSchemaDirective@xsd
+{
+	init{
+	}
+	var schemaDirective:XSD::XSDSchemaDirective=result;
+		var referencedSchema:String=schemaDirective.resolvedSchema.schemaLocation;
+		var thisSchema:String=schemaDirective.schema.schemaLocation;
+		if(referencedSchema.oclIsUndefined())then{
+			log('ERROR: applyValuesndrSchemaDirective failed to resolve schema from '+thisSchema
+				+', to '+schemaDirective.oclAsType(XSD::XSDImport).schemaLocation
+				+', reference to uml '+element.oclAsType(UML::ElementImport).importedElement.qualifiedName);
+			
+		}else{
+			var relativePath:String=thisSchema.relativePathTo(referencedSchema);
+			if(relativePath.oclIsUndefined())then{
+				log('XSDSchemaDirective ERROR: failed to resolve relative path from '+thisSchema+'('+schemaDirective.schema.targetNamespace+') to '+referencedSchema);
+			}else{
+				schemaDirective.schemaLocation:=relativePath;
+			}endif;
+			
+		}endif;
+}
+
+
+/*
+	Common logic for mapping a Classifier to an XSDComplexTypeDefinition.
+	Classifier context isAbstract mapped to XSDComplexTypeDefinition abstract.
+	XSDComplexTypeDefinition contentTypeCategory set to elementOnly.
+	XSDComplexTypeDefinition derivationMethod set to extension.
+	XSDComplexTypeDefinition mixed set to false.
+	Classifier context general mapped to XSDComplexTypeDefinition baseTypeDefinition.
+	Classifier context mapped to XSDComplexTypeContent.
+	Classifier context attributes are provisionally mapped to XSDAnyProperty.
+	Classifier context attributes are provisionally mapped to XSDAttributeGroupContent.
+*/
+	
+mapping 	UML::Classifier::XSDComplexTypeDefinition(xsdContainer:XSD::XSDConcreteComponent):XSD::XSDComplexTypeDefinition@xsd 
+ 	inherits UML::Classifier::XSDTypeDefinition
+{
+	if(result.name<>'anySimpleType')then{
+		_abstract:=self.isAbstract;
+		contentTypeCategory:=XSD::XSDContentTypeCategory::elementOnly;
+		derivationMethod:=XSD::XSDDerivationMethod::extension;
+		mixed:=false;
+		
+		// need to know container
+		var baseType:XSD::XSDTypeDefinition=self.getGeneralRestrictions().toPsmClassifier()->asSequence()->first();
+		
+		if(not(baseType.oclIsUndefined()))then{baseTypeDefinition:=baseType;}endif;
+		self.map AbstractXSDComplexTypeContent(result);
+		self.attribute.map XSDAnyProperty(result);
+		self.attribute.map AbstractXSDAttributeGroupContent(result);
+	}endif;
+}	
+
+/*
+	mapping a top level <<Namespace>> EnumerationLiteral context to an XSDNotationDeclaration.
+	Result XSDNotationDeclaration added to XSDSchema.
+	EnumerationLiteral context owned Comments mapped to XSDAnnotation userInformation documentation.
+
+	This construct will not occur in NIEM conformant schemas.	
+*/
+mapping 	UML::EnumerationLiteral::XSDNotationDeclaration(xsdContainer:XSD::XSDSchema):XSD::XSDNotationDeclaration@xsd 
+ 	inherits UML::NamedElement::XSDNamedComponent
+{
+	xsdContainer.oclAsType(XSD::XSDSchema).contents+=result;
+		self.ownedComment.mapAbstractDocumentation(result);
+}	
+
+/*
+	mapping a Constraint context owned by a <<XSDProperty>> (kind=element) to an XSDIdentityConstraintDefinition.
+	result XSDIdentityConstraintDefinition added to container XSDElementDeclaration identityConstraintDefinitions.
+	Constraint context owned Comments mapped to XSDAnnotation userInformation documentation.
+	Constraint context constrainedElements, 
+		if they represent XSDIdentityConstraintDefinitions,  
+		are added to result  XSDIdentityConstraintDefinition referencedKey.
+
+	This construct will not occur in NIEM conformant schemas.	
+*/
+mapping 	UML::Constraint::XSDIdentityConstraintDefinition(xsdContainer:XSD::XSDConcreteComponent):XSD::XSDIdentityConstraintDefinition@xsd 
+ 	inherits UML::NamedElement::XSDNamedComponent
+{
+	xsdContainer.oclAsType(XSD::XSDElementDeclaration).identityConstraintDefinitions+=result;
+		self.ownedComment.mapAbstractDocumentation(result);
+	self.constrainedElement
+		->select(c|c.oclIsKindOf(UML::Constraint)).oclAsType(UML::Constraint)
+		->forEach(constrainedElement){
+		referencedKey:=constrainedElement.resolveIdentityConstraintDefinitionReference();
+	};
+}
+
+/*
+	Common logic for mapping a Classifier to an XSDTypeDefinition
+	The result XSDTypeDefinition is added to its container, depending upon container type.
+	Classifier context owned Comments mapped to XSDAnnotation userInformation documentation.
+*/
+mapping 	UML::Classifier::XSDTypeDefinition(xsdContainer:XSD::XSDConcreteComponent):XSD::XSDTypeDefinition@xsd 
+ 	inherits UML::NamedElement::XSDRedefinableComponent
+{
+	init{
+		switch{
+			case (xsdContainer.oclIsKindOf(XSD::XSDSchema)) {xsdContainer.oclAsType(XSD::XSDSchema).contents+=result;};
+			case (xsdContainer.oclIsKindOf(XSD::XSDComplexTypeDefinition)) {xsdContainer.oclAsType(XSD::XSDComplexTypeDefinition).content:=result.oclAsType(XSD::XSDComplexTypeContent);};
+			case (xsdContainer.oclIsKindOf(XSD::XSDAttributeDeclaration)) {xsdContainer.oclAsType(XSD::XSDAttributeDeclaration).anonymousTypeDefinition:=result.oclAsType(XSD::XSDSimpleTypeDefinition);};
+			case (xsdContainer.oclIsKindOf(XSD::XSDSimpleTypeDefinition)) {xsdContainer.oclAsType(XSD::XSDSimpleTypeDefinition).contents+=result.oclAsType(XSD::XSDSimpleTypeDefinition);};
+			case (xsdContainer.oclIsKindOf(XSD::XSDRedefine)) {xsdContainer.oclAsType(XSD::XSDRedefine).contents+=result;};
+			else {xsdContainer.oclAsType(XSD::XSDElementDeclaration).anonymousTypeDefinition:=result;};
+		};
+	}
+	self.ownedComment.mapAbstractDocumentation(result);
+}	
+/*
+	Common logic for mapping a DataType context to an XSDSimpleTypeDefinition
+	General of DataType context mapped to result XSDSimpleTypeDefinition baseTypeDefinition.
+*/
+mapping 	UML::DataType::XSDSimpleTypeDefinition(xsdContainer:XSD::XSDConcreteComponent):XSD::XSDSimpleTypeDefinition@xsd 
+ 	inherits UML::Classifier::XSDTypeDefinition
+{
+		// container set by TypeDefinition
+	self.getGeneralRestrictions()->forEach(general){
+	var generalSimpleTypeDefinition:XSD::XSDSimpleTypeDefinition=general.toPsmClassifier().oclAsType(XSD::XSDSimpleTypeDefinition);
+		
+		if(generalSimpleTypeDefinition.oclIsUndefined())then{
+			// happens when complexType has simpleContent; base may be complexType
+			var owner:XSD::XSDConcreteComponent=result.container;
+			var complexOwner:XSD::XSDComplexTypeDefinition=null;
+			if(owner.oclIsKindOf(XSD::XSDComplexTypeDefinition))then{
+				complexOwner:=owner.oclAsType(XSD::XSDComplexTypeDefinition);				
+			}endif;
+			assert error (complexOwner.oclIsUndefined() or complexOwner.baseTypeDefinition.oclIsUndefined()) with log('FAILED to resolve general '+general.metaClassName()+' '+general.qualifiedName+' from '+self.qualifiedName);
+		}	else{
+			baseTypeDefinition:=generalSimpleTypeDefinition;
+		}endif;
+	};
+}
+	
+/*
+	mapping a DataType context to an XSDSimpleTypeDefinition as a XSDComplexTypeContent 
+*/
+mapping 	UML::DataType::XSDSimpleTypeDefinitionDataType(inout xsdContainer:XSD::XSDConcreteComponent):XSD::XSDSimpleTypeDefinition@xsd 
+ 	inherits UML::DataType::XSDSimpleTypeDefinition
+	{
+		// container set by TypeDefinition
+}	
+/*
+	mapping a Class context to an XSDModelGroupDefinition as a XSDParticleContent or top-level XSDModelGroupDefinition.
+	mapping is enabled when the Class is contained by a ModelGroupDefinition Package (Symbol space for ModelGroupDefinitions).
+	The result XSDModelGroupDefinition is added to its container (which is XSDParticle,XSDRedefine, or XSDSchema);
+	Class context owned Comments mapped to XSDAnnotation userInformation documentation.
+	Class context is mapped to an XSDModelGroup contained by the result XSDModelGroupDefinition.
+*/
+mapping 	UML::Class::XSDModelGroupDefinition(xsdContainer:XSD::XSDConcreteComponent):XSD::XSDModelGroupDefinition@xsd 
+ 	inherits UML::NamedElement::XSDRedefinableComponent
+	when{self.getNearestPackage().isModelGroupDefinitions()}
+{
+	switch{
+		case(xsdContainer.oclIsKindOf(XSD::XSDParticle)){
+				// particle container
+				var particle:XSD::XSDParticle=xsdContainer.oclAsType(XSD::XSDParticle);
+				particle.content:=result;
+				switch{
+					case(particleContainer.oclIsKindOf(XSD::XSDComplexTypeDefinition)){particleContainer.oclAsType(XSD::XSDComplexTypeDefinition).content:=particle;};
+					else{
+						particleContainer.oclAsType(XSD::XSDModelGroup).contents+=particle;
+					}
+				};
+			};
+		case (xsdContainer.oclIsKindOf(XSD::XSDRedefine))	{xsdContainer.oclAsType(XSD::XSDRedefine).contents+=result;};
+		else{
+				xsdContainer.oclAsType(XSD::XSDSchema).contents+=result;
+			};
+		
+	};
+		self.ownedComment.mapAbstractDocumentation(result);
+	self.map XSDModelGroup(result);
+}	
+	
+/*
+	mapping a Class context to an XSDModelGroup.
+	The result XSDModelGroup is added to its container (which is XSDParticle or XSDParticle);
+	result XSDModelGroup compositor is set to 'sequence'.
+	Ordered Properties of Class context are mapped to XSDParticle.
+*/
+ mapping UML::Class::XSDModelGroup(xsdContainer:XSD::XSDConcreteComponent):XSD::XSDModelGroup@xsd 
+{
+	switch{
+		case(xsdContainer.oclIsKindOf(XSD::XSDModelGroupDefinition)){
+			xsdContainer.oclAsType(XSD::XSDModelGroupDefinition).modelGroup:=result;
+		}else{
+				// particle container
+				var particle:XSD::XSDParticle=xsdContainer.oclAsType(XSD::XSDParticle);
+				particle.content:=result;
+				switch{
+					case(particleContainer.oclIsKindOf(XSD::XSDComplexTypeDefinition)){
+						particleContainer.oclAsType(XSD::XSDComplexTypeDefinition).content:=particle;
+					}else{
+						particleContainer.oclAsType(XSD::XSDModelGroup).contents+=particle;
+					};
+				};
+		};
+		
+	};
+		compositor:=XSD::XSDCompositor::sequence;
+		self.getOrderedProperties().map XSDParticle(result);
+}
+
+/*
+	mapping a Property context to an XSDParticle.
+	Property lower maps to XSDParticle minOccurs.
+	Property upper maps to XSDParticle maxOccurs.
+	The Property context is mapped to XSDParticleContent.
+	
+*/
+mapping UML::Property::XSDParticle(inout xsdContainer:XSD::XSDConcreteComponent):XSD::XSDParticle@xsd 
+	when{
+		self.isElementReference()
+		or self.type.getNearestPackage().isModelGroupDefinitions()
+		or self.IsStereotypeApplied(NIEMAnyPropertyStereotype)
+		or self.type.isChoiceModelGroup()
+		or self.type.isAnonymousModelGroup()
+		}
+{
+	minOccurs:=self.lower;
+	maxOccurs:=self.upper;
+	particleContainer:=xsdContainer;
+	self.map AbstractXSDParticleContent(result);
+}
+
+	// particleContainer is used to defer assignment of container content, as a work-around to an implementation issue
+property particleContainer:XSD::XSDConcreteComponent=null;
+/*
+	mapping a Classifier context to an XSDParticle as XSDComplexTypeContent.
+	This happens when the XSDComplexType does not have simple content.
+	The Classifier context is mapped to the XSDParticleContent contained by the result XSDParticle. 
+*/
+mapping UML::Classifier::XSDParticle(inout xsdContainer:XSD::XSDConcreteComponent):XSD::XSDParticle@xsd 
+	when{
+		not(
+		self.isObjectType() 
+		and (self.isPsmComplexTypeContentSimpleTypeDefinition()or self.inheritsPimSimpleTypeDefinition())
+		)
+	}
+
+{
+	particleContainer:=xsdContainer;
+	self.map AbstractXSDParticleContent(result);
+}
+/*
+	common logic for mapping a Property context to an XSDAttributeGroupDefinition.
+	This mapping enabled when the type of the Property is an AttributeGroupDefinition.
+	The result XSDAttributeGroupDefinition is added to its container, which is either an XSDComplexTypeDefinition or XSDAttributeGroupDefinition.
+	The type of the Property context is mapped as the "ref" to a global XSDAttributeGroupDefinition.
+	
+	A NIEM conformant schema does not use this mapping.
+*/
+
+mapping 	UML::Property::XSDAttributeGroupDefinition(xsdContainer:XSD::XSDConcreteComponent):XSD::XSDAttributeGroupDefinition@xsd 
+ 	inherits UML::NamedElement::XSDRedefinableComponent
+ 	when{self.type.isAttributeGroupDefinition()}
+{
+	switch{
+		case(xsdContainer.oclIsKindOf(XSD::XSDComplexTypeDefinition)){
+			xsdContainer.oclAsType(XSD::XSDComplexTypeDefinition).attributeContents+=result;
+			name:=null;
+		}else{
+			xsdContainer.oclAsType(XSD::XSDAttributeGroupDefinition).contents+=result;
+		};
+		
+	};
+	var resolvedType:XSD::XSDAttributeGroupDefinition=self.type.oclAsType(UML::Class).resolveAttributeGroupDefinitionReference();
+	if(resolvedType.oclIsUndefined())then{}else{
+		resolvedAttributeGroupDefinition:=resolvedType;
+		name:=null;
+	}endif;
+}	
+/*
+	common logic for mapping a Class context to an XSDAttributeGroupDefinition.
+	This mapping enabled when the Class context is in the AttributeGroupDefinition symbol space.
+	The result XSDAttributeGroupDefinition is added to its container, which is either an XSDSchema or XSDRedefine
+	Owned Comments of the Class context are mapped to XSDAnnotation UserInformation documentation.
+	owned attributes of the Class context are conditionally mapped to XSDAnyProperty.
+	owned attributes of the Class context are conditionally mapped to XSDAttributeGroupContent.
+	
+	A NIEM conformant schema does not use this mapping.
+*/
+mapping 	UML::Class::XSDAttributeGroupDefinition(xsdContainer:XSD::XSDConcreteComponent):XSD::XSDAttributeGroupDefinition@xsd 
+ 	inherits UML::NamedElement::XSDRedefinableComponent
+ 	when{self.isAttributeGroupDefinition()}
+{
+	init{
+	}
+	switch{
+		case(xsdContainer.oclIsKindOf(XSD::XSDSchema)){
+			xsdContainer.oclAsType(XSD::XSDSchema).contents+=result;
+		}else{
+			xsdContainer.oclAsType(XSD::XSDRedefine).contents+=result;
+		};
+	};
+		self.ownedComment.mapAbstractDocumentation(result);
+	self.ownedAttribute.map AbstractXSDAttributeGroupContent(result);
+	self.ownedAttribute.map XSDAnyProperty(result);
+}	
+
+/*
+	common logic for mapping a StructuralFeature context to an XSDFeature.
+*/
+mapping 	UML::StructuralFeature::XSDFeature(xsdContainer:XSD::XSDConcreteComponent):XSD::XSDFeature@xsd
+ 	inherits UML::NamedElement::XSDNamedComponent
+{
+	init{
+		// container set by subtype
+	}
+}
+/*
+	common logic for mapping a NamedElement context to an XSDNamedComponent.
+	Unless result is an anonymousType, the NamedElement name is mapped to the XSDNamedComponent name.
+*/
+mapping 	UML::NamedElement::XSDNamedComponent(xsdContainer:XSD::XSDConcreteComponent):XSD::XSDNamedComponent@xsd
+{
+	init{}
+	// no name for anonymous types
+	if(self.isNamed())then{
+		name:=self.name;
+	}endif;
+}	
+/*
+	common logic for mapping a NamedElement context to an XSDRedefinableComponent.
+*/
+mapping 	UML::NamedElement::XSDRedefinableComponent(xsdContainer:XSD::XSDConcreteComponent):XSD::XSDRedefinableComponent@xsd
+ 	inherits UML::NamedElement::XSDNamedComponent
+{
+	init{}
+}	
+/*
+	common logic for mapping a UML Element context to an XSDFacet.
+	The provided value is mapped to XSDFacet lexicalValue.
+*/
+mapping 	UML::Element::XSDFacet(valueIn:String,xsdContainer:XSD::XSDConcreteComponent):XSD::XSDFacet@xsd
+{
+	init{
+		// container set by subtype
+	}
+	lexicalValue:=valueIn;
+}
+/*
+	mapping a UML Element context to an XSDTotalDigitsFacet.
+*/
+mapping 	UML::Element::XSDTotalDigitsFacet(valueIn:String,xsdContainer:XSD::XSDConcreteComponent):XSD::XSDTotalDigitsFacet@xsd
+ 	inherits UML::Element::XSDFixedFacet{}
+
+/*
+	common logic for mapping a UML Element context to an XSDFixedFacet.
+*/
+mapping 	UML::Element::XSDFixedFacet(value:String,xsdContainer:XSD::XSDConcreteComponent):XSD::XSDFixedFacet@xsd
+ 	inherits UML::Element::XSDConstrainingFacet
+{
+	init{}
+}
+/*
+	common logic for mapping a UML Element context to an XSDConstrainingFacet
+	The .result XSDConstrainingFacet is added to its container, which is an XSDSimpleTypeDefinition.
+*/
+mapping 	UML::Element::XSDConstrainingFacet(value:String,xsdContainer:XSD::XSDConcreteComponent):XSD::XSDConstrainingFacet@xsd
+ 	inherits UML::Element::XSDFacet
+{
+	init{
+		xsdContainer.oclAsType(XSD::XSDSimpleTypeDefinition).facetContents+=result;
+	}
+}
+/*
+	mapping a UML Element context to an XSDLengthFacet.
+*/
+mapping 	UML::Element::XSDLengthFacet(value:String,xsdContainer:XSD::XSDConcreteComponent):XSD::XSDLengthFacet@xsd
+ 	inherits UML::Element::XSDFixedFacet{}
+/*
+	mapping a UML Element context to an XSDWhiteSpaceFacet.
+*/
+mapping 	UML::Element::XSDWhiteSpaceFacet(value:String,xsdContainer:XSD::XSDConcreteComponent):XSD::XSDWhiteSpaceFacet@xsd
+ 	inherits UML::Element::XSDFixedFacet{}
+/*
+	mapping a UML Element context to an XSDMaxLengthFacet.
+*/
+mapping 	UML::Element::XSDMaxLengthFacet(value:String,xsdContainer:XSD::XSDConcreteComponent):XSD::XSDMaxLengthFacet@xsd
+ 	inherits UML::Element::XSDFixedFacet{}
+
+/*
+	mapping a UML Element context to an XSDFractionDigitsFacet.
+*/
+mapping 	UML::Element::XSDFractionDigitsFacet(value:String,xsdContainer:XSD::XSDConcreteComponent):XSD::XSDFractionDigitsFacet@xsd
+ 	inherits UML::Element::XSDFixedFacet{}
+/*
+	mapping a UML Element context to an XSDMinLengthFacet.
+*/
+mapping 	UML::Element::XSDMinLengthFacet(value:String,xsdContainer:XSD::XSDConcreteComponent):XSD::XSDMinLengthFacet@xsd
+ 	inherits UML::Element::XSDFixedFacet{}
+/*
+	mapping a UML Element context to an XSDEnumerationFacet.
+*/
+mapping 	UML::Element::XSDEnumerationFacet(value:String,xsdContainer:XSD::XSDConcreteComponent):XSD::XSDEnumerationFacet@xsd
+ 	inherits UML::Element::XSDRepeatableFacet
+{
+	init{}
+}
+/*
+	common logic for mapping a UML Element context to an XSDRepeatableFacet
+*/
+mapping 	UML::Element::XSDRepeatableFacet(value:String,xsdContainer:XSD::XSDConcreteComponent):XSD::XSDRepeatableFacet@xsd
+ 	inherits UML::Element::XSDConstrainingFacet
+{
+	init{}
+}
+/*
+	mapping a UML Element context to an XSDPatternFacet.
+*/
+mapping 	UML::Element::XSDPatternFacet(value:String,xsdContainer:XSD::XSDConcreteComponent):XSD::XSDPatternFacet@xsd
+ 	inherits UML::Element::XSDRepeatableFacet{}
+/*
+	mapping a UML Element context to an XSDMaxInclusiveFacet.
+*/
+mapping 	UML::Element::XSDMaxInclusiveFacet(value:String,xsdContainer:XSD::XSDConcreteComponent):XSD::XSDMaxInclusiveFacet@xsd
+ 	inherits UML::Element::XSDMaxFacet{}
+/*
+	mapping a UML Element context to an XSDMaxExclusiveFacet.
+*/
+mapping 	UML::Element::XSDMaxExclusiveFacet(value:String,xsdContainer:XSD::XSDConcreteComponent):XSD::XSDMaxExclusiveFacet@xsd
+ 	inherits UML::Element::XSDMaxFacet{}
+/*
+	mapping a UML Element context to an XSDMinInclusiveFacet.
+*/
+mapping 	UML::Element::XSDMinInclusiveFacet(value:String,xsdContainer:XSD::XSDConcreteComponent):XSD::XSDMinInclusiveFacet@xsd
+ 	inherits UML::Element::XSDMinFacet{}
+/*
+	mapping a UML Element context to an XSDMinExclusiveFacet.
+*/
+mapping 	UML::Element::XSDMinExclusiveFacet(value:String,xsdContainer:XSD::XSDConcreteComponent):XSD::XSDMinExclusiveFacet@xsd
+ 	inherits UML::Element::XSDMinFacet{}
+/*
+	mapping a UML Element context to an XSDMinFacet.
+*/
+mapping 	UML::Element::XSDMinFacet(value:String,xsdContainer:XSD::XSDConcreteComponent):XSD::XSDMinFacet@xsd
+ 	inherits UML::Element::XSDFixedFacet
+{init{}}
+/*
+	mapping a UML Element context to an XSDMaxFacet.
+*/
+
+mapping 	UML::Element::XSDMaxFacet(value:String,xsdContainer:XSD::XSDConcreteComponent):XSD::XSDMaxFacet@xsd
+ 	inherits UML::Element::XSDFixedFacet
+{init{}}
+	
+/*
+	mapping a PackageImport context to an XSDInclude
+	The result XSDInclude is added to the contents of its containing XSDSchema.
+	Owned Comments of the PackageImport context are mapped to XSDAnnotation UserInformation documentation.
+	The result XSDInclude resolvedSchema is set to the mapped importedPackage.
+	
+	This mapping is not activated for NIEM-conformant Schemas.
+*/	
+
+mapping 	UML::PackageImport::XSDInclude(inout xsdSchema:XSD::XSDSchema):XSD::XSDInclude@xsd
+ 	inherits UML::Element::XSDSchemaCompositor
+{
+	var schemaContents:Sequence(XSD::XSDSchemaContent)=xsdSchema.contents->asSequence();
+	xsdSchema.contents:=Sequence{result.oclAsType(XSD::XSDSchemaContent)}->union(schemaContents);
+		self.ownedComment.mapAbstractDocumentation(result);
+	resolvedSchema:=self.importedPackage.map AbstractXSDSchema();
+}
+/*
+	mapping a Package context to an XSDRedefine
+	The result XSDRedefine is added to the contents of its containing XSDSchema.
+	Owned Comments of the Package context are mapped to XSDAnnotation UserInformation documentation.
+	Packaged Elements of the Package context are mapped to XSDRedefineContent.
+	The result XSDRedefine resolvedSchema is set to the first importedPackage.
+	
+	This mapping is not activated for NIEM-conformant Schemas.
+*/	
+mapping 	UML::Package::XSDRedefine(xsdContainer:XSD::XSDSchema):XSD::XSDRedefine@xsd
+{
+	init{
+	}
+	var xsdSchema:XSD::XSDSchema=xsdContainer.oclAsType(XSD::XSDSchema);
+	var schemaContents:Sequence(XSD::XSDSchemaContent)=xsdSchema.contents->asSequence();
+	xsdSchema.contents:=Sequence{result.oclAsType(XSD::XSDSchemaContent)}->union(schemaContents);
+	self.ownedComment.mapAbstractDocumentation(result);
+	self.packagedElement.map AbstractXSDRedefineContent(result);
+	resolvedSchema:=self.packagedElement
+		->select(e|e.oclIsKindOf(UML::PackageImport))
+		.oclAsType(UML::PackageImport).importedPackage.map AbstractXSDSchema()
+		->asSequence()->first();
+}
+
+/*
+	common logic for mapping a UML Element context to an XSDSchemaCompositor
+*/	
+mapping 	UML::Element::XSDSchemaCompositor(xsdContainer:XSD::XSDSchema):XSD::XSDSchemaCompositor@xsd
+ 	inherits UML::Element::XSDSchemaDirective
+{
+	init{}
+}
+
+/*
+	common logic for mapping a <<XSDProperty>>(kind=attribute) context to an XSDAttributeDeclaration.
+	if Property context is top level (contained by a <<PropertyHolder>>), 
+		map Property owned Comments to XSDAnnotation userInformation documentation.
+	if type of Property context is anonymous, 
+		set the result XSDAttributeDeclaration typeDefinition and anonymousTypeDefinition to the mapped Property type.
+	otherwise		
+		set the result XSDAttributeDeclaration typeDefinition to the mapped Property type.
+*/	
+mapping 	UML::Property::XSDAttributeDeclaration_base(xsdContainer:XSD::XSDConcreteComponent):XSD::XSDAttributeDeclaration@xsd 
+	inherits UML::StructuralFeature::XSDFeature
+{
+	init{
+	}
+	if(self.owner.IsStereotypeApplied(NIEMPropertyHolderStereotype))then{
+		self.ownedComment.mapAbstractDocumentation(result);
+	}endif;
+	if(self.isTyped())then{
+		if(self.type.isAnonymousType())then{
+			typeDefinition:=self.type.oclAsType(UML::DataType).map AbstractXSDSchemaContent(result).oclAsType(XSD::XSDSimpleTypeDefinition);
+			anonymousTypeDefinition:=result.typeDefinition;
+		}else{
+			var simpleTypeDefinition:XSD::XSDSimpleTypeDefinition=self.type.oclAsType(UML::Classifier).toPsmClassifierSimpleType();
+			
+			if(not(simpleTypeDefinition.oclIsUndefined()))then{
+				typeDefinition:=simpleTypeDefinition;
+			}endif;
+		}endif;
+	}endif;
+}	
+
+/*
+	common logic for initialize mapping a top-level <<XSDProperty>>(kind=attribute) context to an XSDAttributeDeclaration.
+	Adds the top-level XSDAttributeDeclaration to the XSDSchema contents.
+*/	
+mapping 	UML::Property::XSDAttributeDeclaration_init(inout xsdContainer:XSD::XSDSchema):XSD::XSDAttributeDeclaration@xsd 
+	inherits UML::Property::XSDAttributeDeclaration_base
+{
+	init{
+			xsdContainer.contents+=result;
+	}
+}
+/*
+	common logic for mapping a <<XSDProperty>>(kind=attribute) context to an XSDAttributeUse.
+	Set result XSDAttributeUse 'use' based on multiplicity of the <<XSDProperty>> context.
+	maps the <<XSDProperty>> context to a contained XSDAttributeDeclaration.
+*/	
+mapping UML::Property::XSDAttributeUse( xsdContainer:XSD::XSDConcreteComponent):XSD::XSDAttributeUse@xsd 
+{
+	init{
+	}
+	switch{
+		case((self.lower=0)and (self.upper=0)){use:=XSD::XSDAttributeUseCategory::prohibited;};
+		case((self.lower=0)){use:=XSD::XSDAttributeUseCategory::optional;};
+		else{
+				use:=XSD::XSDAttributeUseCategory::required;
+		};
+	};
+	currentAttributeUse:=result;
+	self.map AbstractXSDAttributeDeclaration_attributeUse(xsdContainer);
+}
+// following property used to defer containment as work-around for implementation problem
+property currentAttributeUse:XSD::XSDAttributeUse=null;
+/*
+	common logic for initialization of mapping a <<XSDProperty>>(kind=attribute) context to an XSDAttributeDeclaration in context of an XSDAttributeUse.
+	Content of containing XSDAttributeUse is set to the result  XSDAttributeDeclaration.
+	Content of container of XSDAttributeUse is set to include XSDAttributeUse (deferred containment).
+*/	
+mapping 	UML::Property::XSDAttributeDeclaration_initAttributeUse(xsdContainer:XSD::XSDConcreteComponent):XSD::XSDAttributeDeclaration@xsd 
+	inherits UML::Property::XSDAttributeDeclaration_base
+{
+	init{
+		var attributeUse:XSD::XSDAttributeUse=currentAttributeUse;
+		attributeUse.content:=result;
+		switch{
+			case(xsdContainer.oclIsKindOf(XSD::XSDComplexTypeDefinition)){
+				xsdContainer.oclAsType(XSD::XSDComplexTypeDefinition).attributeContents+=attributeUse;
+			}else{
+				xsdContainer.oclAsType(XSD::XSDAttributeGroupDefinition).contents+=attributeUse;
+			};
+		};		
+	}
+}
+/*
+	Default mapping of an <<XSDProperty>> (kind=attribute) to XSDAttributeDeclaration
+*/
+mapping 	UML::Property::XSDAttributeDeclaration_attributeUse(inout xsdContainer:XSD::XSDConcreteComponent):XSD::XSDAttributeDeclaration@xsd 
+	inherits UML::Property::XSDAttributeDeclaration_initAttributeUse
+{
+	init{}
+}	
+/*
+	common logic for mapping top-level <<XSDProperty>>(kind=attribute) to XSDAttributeDeclaration
+*/
+mapping 	UML::Property::XSDAttributeDeclaration(inout xsdContainer:XSD::XSDSchema):XSD::XSDAttributeDeclaration@xsd 
+	inherits UML::Property::XSDAttributeDeclaration_init
+{
+	init{
+	}
+}	
+/////////////////////////////mappings end
+//////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////helpers
+//  true if the context is a nestedClassifier of a Class
+query UML::Element::isAnonymousType():Boolean=
+	self.oclIsKindOf(UML::Classifier) and self.owner.oclIsKindOf(UML::Class);
+helper UML::Property::resolveAttributeDeclarationReference():XSD::XSDAttributeDeclaration{
+	// resolve as top level type in referenced schema
+	var resolvedSchema:XSD::XSDSchema:=self.getNearestNIEMSchemaPackage().map AbstractXSDSchema();
+	assert error (not(resolvedSchema.oclIsUndefined())) with log('ERROR: failed to obtain schema for referenced uml attribute declaration '+self.qualifiedName);
+	return self.map AbstractXSDSchemaContent(resolvedSchema).oclAsType(XSD::XSDAttributeDeclaration);
+}
+helper UML::Property::resolveElementDeclarationReference():XSD::XSDElementDeclaration{
+	// resolve as top level type in referenced schema
+	var resolvedSchema:XSD::XSDSchema:=self.getNearestNIEMSchemaPackage().map AbstractXSDSchema();
+	assert error (not(resolvedSchema.oclIsUndefined())) with log('ERROR: failed to obtain schema for referenced uml element declaration '+self.qualifiedName);
+	var xsdReference:XSD::XSDSchemaContent=self.map AbstractXSDSchemaContent(resolvedSchema);
+	assert error (not(xsdReference.oclIsUndefined())) with log('ERROR: failed to obtain schema content for referenced uml element declaration '+self.qualifiedName);
+	assert error (xsdReference.oclIsKindOf(XSD::XSDElementDeclaration)) with log('ERROR: failed to obtain xsd element declaration for referenced uml element declaration '+self.qualifiedName+', saw '+xsdReference.repr());
+	return xsdReference.oclAsType(XSD::XSDElementDeclaration);
+}
+helper UML::Class::resolveModelGroupDefinitionReference():XSD::XSDModelGroupDefinition{
+	var resolvedSchema:XSD::XSDSchema:=self.getNearestNIEMSchemaPackage().map AbstractXSDSchema();
+	assert error (not(resolvedSchema.oclIsUndefined())) with log('ERROR: failed to obtain schema for referenced uml model group definition '+self.qualifiedName);
+	return self.map XSDModelGroupDefinition(resolvedSchema);
+}
+	
+helper UML::Class::resolveAttributeGroupDefinitionReference():XSD::XSDAttributeGroupDefinition{
+	var resolvedSchema:XSD::XSDSchema:=self.getNearestNIEMSchemaPackage().map AbstractXSDSchema();
+	assert error (not(resolvedSchema.oclIsUndefined())) with log('ERROR: failed to obtain schema for referenced uml attribute group definition '+self.qualifiedName);
+	return self.map AbstractXSDSchemaContent(resolvedSchema).oclAsType(XSD::XSDAttributeGroupDefinition);
+}
+
+helper UML::Constraint::resolveIdentityConstraintDefinitionReference():XSD::XSDIdentityConstraintDefinition{
+	var resolvedElement:XSD::XSDElementDeclaration:=self.constrainedElement
+		->select(e|e.oclIsKindOf(UML::Property)).oclAsType(UML::Property)
+		.resolveElementDeclarationReference()->first();
+	return self.map XSDIdentityConstraintDefinition(resolvedElement);
+}
+	
+;
+
+helper UML::Comment::annotationInformationElement(domElement:OclAny){
+	domElement.setTextContent(self.body);
+}
+/*
+helper Stdlib::Element::annotationInformationAttribute(domElement:OclAny){
+		var anamespace:String=self.getAttributeNamespace();
+		var aname:String=self.getAttributeName();
+		var avalue:String=self.getAttributeValue();
+		domElement.setAttributeNS(aname,anamespace,avalue);
+}
+*/		
+helper  XSD::XSDConcreteComponent::setTypeDefinitionAppinfoBase(appinfoBase:String){
+	getAnnotation(self).setAppinfoElement('Base',appinfoBase,structuresNamespace);		
+}
+
+query UML::Classifier::isObjectType():Boolean=
+	self.IsStereotypeApplied(NIEMObjectTypeStereotype);
+query UML::Property::isRoleOf():Boolean=
+	self.IsStereotypeApplied(NIEMRoleOfStereotype) or self.name.isRoleOfName();
+	
+query UML::Classifier::isRoleType():Boolean=
+	not(self.IsStereotypeApplied(NIEMPropertyHolderStereotype))
+	and(
+	self.attribute->select(a|a.isRoleOf())->notEmpty()
+	or self.generalization->select(g|g.IsStereotypeApplied(NIEMRoleStereotype))->notEmpty()
+	)
+;
+helper 	UML::Package::mapAbstractPackage(){
+	if(self.IsStereotypeApplied(NIEMSchemaStereotype))then{
+		self.map AbstractXSDSchema();
+	}else{
+		self.nestedPackage.mapAbstractPackage();
+	}endif;
+}
+query UML::Classifier::isNIEMSimpleType():Boolean=
+	self.IsStereotypeApplied(NIEMSimpleTypeStereotype) or self.IsStereotypeApplied(NIEMListTypeStereotype)
+		or self.IsStereotypeApplied(NIEMUnionTypeStereotype);
+query UML::Classifier::getOrderedProperties():OrderedSet(UML::Property){
+	switch{
+		case(self.oclIsKindOf(UML::Class)){
+			return self.oclAsType(UML::Class).ownedAttribute;
+		};
+	};
+			return self.oclAsType(UML::DataType).ownedAttribute;
+}
+query 	UML::Property::isNiemAttribute():Boolean=self.IsStereotypeApplied(NIEMPropertyStereotype)and not(self.isPsmXsdElement());
+
+query 	UML::Property::referencesTopLevelProperty():UML::Property=
+	self.clientDependency->select(d|d.IsStereotypeApplied(NIEMReferencesStereotype))
+	.supplier->select(s|s.oclIsKindOf(UML::Property))
+	.oclAsType(UML::Property)->asSequence()->first();
+query 	UML::Property::referencesTopLevel():Boolean=not(self.referencesTopLevelProperty().oclIsUndefined());
+query 	UML::Property::hasAnonymousType():Boolean=false;
+query 	UML::Type::isChoiceModelGroup():Boolean=
+	// if ModelGroup and compositor is choice
+	self.IsStereotypeApplied(NIEMChoiceStereotype) 
+	;
+query UML::Type::isAnonymousModelGroup():Boolean=
+	self.owner.oclIsKindOf(UML::Classifier) 
+	;
+query UML::Property::isElementReference():Boolean=
+	self.isPsmXsdElement() and (self.upper<>0) and not(self.isDerived) and (self.name<>null) and not(self.name.oclIsUndefined());
+query UML::NamedElement::getFileId():String=self.namespace.ownedMember->asSequence()->indexOf(self).repr().toNCName();
+helper XSD::XSDTypeDefinition::mapBaseTypeDefinition(inout psmOwner:XSD::XSDTypeDefinition){
+	switch{
+		case(self.oclIsKindOf(XSD::XSDSimpleTypeDefinition)and psmOwner.oclIsKindOf(XSD::XSDSimpleTypeDefinition)){
+			psmOwner.oclAsType(XSD::XSDSimpleTypeDefinition).baseTypeDefinition:=self.oclAsType(XSD::XSDSimpleTypeDefinition);
+			return;
+		};
+		case(psmOwner.oclIsKindOf(XSD::XSDComplexTypeDefinition)){
+			psmOwner.oclAsType(XSD::XSDComplexTypeDefinition).baseTypeDefinition:=self;
+			return;
+		};
+	};
+	log('ERROR: XSD::XSDTypeDefinition::mapBaseTypeDefinition illegal arguments '+psmOwner.repr()+' , '+self.repr());
+	return;
+}
+query UML::NamedElement::isNamed():Boolean{
+	switch{
+		case(self.isAnonymousType()){return false;}
+		case(
+			self.oclIsKindOf(UML::Property) 
+			and not(self.owner.IsStereotypeApplied(NIEMPropertyHolderStereotype))
+			){return false;}
+	};
+	return true;	
+}	
+query UML::Property::isTyped():Boolean{
+	switch{
+		case(
+			not(self.owner.IsStereotypeApplied(NIEMPropertyHolderStereotype))
+			){return false;}
+	};
+	return true;	
+}	
+query String::truncateLastSegment():String{
+	if(self.rfind('/')>1)then{
+		return self.substring(1,self.rfind('/')-1);
+	}else{}endif;
+	return '';//self;	
+}	
+
+query String::getPsmPackageName():String{
+	if(self.match('.*/.*'))then{
+		return self.truncateProtocol().truncateLastSegment().getLastSegment();
+	}else{}endif;
+	return self;
+}	
+
+query String::getPsmPackageGroupName():String{
+	if(self.match('.*/.*'))then{
+		return self.truncateProtocol().truncateLastSegment().truncateLastSegment().getLastSegment();
+	}else{}endif;
+	return self;
+}	
+query String::getPsmPackageOrgName():String{
+	if(self.match('.*/.*'))then{
+		return self.truncateProtocol().truncateLastSegment().truncateLastSegment().truncateLastSegment().getLastSegment();
+	}else{}endif;
+	return self;
+}	
+query String::getPsmPackageVersionName():String{
+	if(self.match('.*/.*'))then{
+		return self.getLastSegment();
+	}else{}endif;
+	return self;
+}
+query getSchemaImports():Set(UML::Usage)=
+	mpdComponent.clientDependency
+	->select(i|i.IsStereotypeApplied(NIEMModelPackageDescriptionFileStereotype))
+	.oclAsType(UML::Usage)->asSet();
+	
+	
+query UML::Classifier::isPimAugmentationType():Boolean{
+	if(self.IsStereotypeApplied(NIEMAugmentationStereotype))then {return true;}endif;
+	self.getGeneralRestrictions()->forEach(parent){if(parent.isPimAugmentationType())then {return true;}endif;};
+	return false;	
+}
+	
+query UML::Element::isPimAugmentation():Boolean=false;
+query UML::Class::isPimAugmentation():Boolean=self.IsStereotypeApplied(NIEMAugmentationStereotype);//stereotypedBy('Augmentation');
+query String::truncateProtocol():String{
+		return self.replace('http://','');
+}	
+query String::getLastSegment():String{
+	if((self.rfind('/')>0)and(self.rfind('/')<self.length()))then{
+		return self.substring(self.rfind('/')+1,self.length());
+	}else{}endif;
+	return self;	
+}	
+query UML::Classifier::getGeneralRestrictions():Set(UML::Classifier)=
+	self.general
+	->union(
+		self.clientDependency
+		->select(d|d.isStereotypeApplied(NIEMRestrictionStereotype))
+		.supplier->select(s|s.oclIsKindOf(UML::Classifier))
+		.oclAsType(UML::Classifier)
+		)->asSet();
+helper UML::Classifier::setBaseNiemClassifier(psmContext:XSD::XSDComplexTypeDefinition,
+		psmStructuresType:XSD::XSDComplexTypeDefinition
+	 ){
+	 var generals:Set(UML::Classifier)=self.getGeneralRestrictions();
+	if(generals->isEmpty() and not(psmStructuresType.oclIsUndefined()))then{
+			psmStructuresType.mapBaseTypeDefinition(psmContext);
+			if(psmStructuresType<>StructuresComplexObjectType)then psmContext.appInfoBase(psmStructuresType) endif;
+	
+	}else{
+		if(generals->isEmpty())then{
+			self.simpleContent()->forEach(general){
+				var baseType:XSD::XSDTypeDefinition=general.toPsmClassifier();
+				baseType.mapBaseTypeDefinition(psmContext);
+				
+				psmContext.appInfoBase(baseType);
+			};
+			
+		}else{
+		// appinfo base
+		generals->forEach(general){
+			psmContext.appInfoBase(general.toPsmClassifier());
+		};
+		}endif;
+	}endif;
+}
+query UML::Classifier::inheritsPimSimpleTypeDefinition():Boolean=false;
+query UML::DataType::inheritsPimSimpleTypeDefinition():Boolean=true;
+query UML::Class::inheritsPimSimpleTypeDefinition():Boolean=
+	self.getGeneralRestrictions()->exists(g|g.inheritsPimSimpleTypeDefinition())
+	or self.simpleContent()->notEmpty();
+query UML::Classifier::simpleContent():Sequence(UML::Classifier)=
+	self.clientDependency
+	->select(d|d.IsStereotypeApplied(NIEMSimpleContentStereotype))
+	.supplier->select(s|s.oclIsKindOf(UML::Classifier)).oclAsType(UML::Classifier)
+	->asSequence()
+	;
+	
+query UML::Classifier::isPimSimpleTypeDefinition():Boolean=false;
+query UML::Enumeration::isPimSimpleTypeDefinition():Boolean=not(self.ownedLiteral->isEmpty() and self.getGeneralRestrictions()->notEmpty());
+query UML::PrimitiveType::isPimSimpleTypeDefinition():Boolean=(
+		self.getGeneralRestrictions()->exists(g|g.isXmlPrimitive() 
+		)	
+		and self.ownedRule->notEmpty()
+		)or self.name.endsWith('Simple');
+helper String::structuresClassifier():XSD::XSDTypeDefinition=
+	umlSchemaForStructures.typeDefinitions->select(t|t.name=self)->asSequence()->first();
+helper XSD::XSDNamedComponent::appInfoBase(base:XSD::XSDNamedComponent){
+	getAnnotation(self).setAppinfoElement('Base',base.name,base.schema.targetNamespace);
+	return;
+}
+query UML::Property::isPsmXsdElement():Boolean=
+	self.IsStereotypeApplied(NIEMPropertyStereotype)
+	and self.GetStereotypeApplication(NIEMPropertyStereotype).oclAsType(Stdlib::Element).getNIEMPropertyKind()='element';
+query UML::Classifier::isPsmComplexTypeContentSimpleTypeDefinition():Boolean=
+	self.simpleContent()
+		->select(c|
+			c.oclIsKindOf(UML::DataType)and(
+				(c.isXmlPrimitive() and c.getUmlProxySchemaType().oclIsUndefined())
+				or not(c.isXmlPrimitive())
+			)	
+			)->notEmpty();
+query UML::Property::isReference():Boolean=
+	self.name.endsWith('Reference')
+	;
+helper UML::Property::toPsmTopLevelAttribute():XSD::XSDAttributeDeclaration{
+	return self.map AbstractXSDSchemaContent(
+		self.getNearestPackage().toPsmPackage()
+		).oclAsType(XSD::XSDAttributeDeclaration);
+}
+
+helper UML::Property::toPsmTopLevelElement():XSD::XSDElementDeclaration{
+	return self.map AbstractXSDSchemaContent(
+		self.getNearestPackage().toPsmPackage()
+		).oclAsType(XSD::XSDElementDeclaration);
+}
+
+helper UML::Classifier::toPsmClassifierSimpleType():XSD::XSDSimpleTypeDefinition{
+	// if an XMLPrimitiveTypes, then get the corresponding schema item
+	if(self.isXmlPrimitive())then{
+			return self.getUmlSchemaForSchemaType();
+	}endif;
+	return self.toPsmClassifier().oclAsType(XSD::XSDSimpleTypeDefinition);
+}
+	
+helper UML::Classifier::toPsmClassifier():XSD::XSDTypeDefinition{
+	if(self.isXmlPrimitive())then{
+			var proxyClassifier:XSD::XSDTypeDefinition=self.getUmlProxySchemaType();
+			if(proxyClassifier.oclIsUndefined())then{}else{return proxyClassifier;}endif;	
+			return self.getUmlSchemaForSchemaType();
+	}else{}endif;
+	return self.map AbstractXSDSchemaContent(self.getNearestPackage().toPsmPackage()).oclAsType(XSD::XSDTypeDefinition);
+	
+}
+helper UML::Package::toPsmPackage():XSD::XSDSchema{
+	// if this is top level package, result is mpdPackage; otherwise map to parent
+	return self.map AbstractXSDSchema();
+}
+// also if name matches an xml primitive even if it is in some other namespace like umlPrimitives or ea java.lang.String
+query UML::Classifier::isXmlPrimitive():Boolean=
+		(self.owner.oclAsType(UML::NamedElement).name=XMLPrimitiveTypesPackageName)
+		;
+		
+query UML::Package::getSchemaPurpose():String=
+	self.getPimElementImport()
+	.GetStereotypeApplication(NIEMModelPackageDescriptionFileStereotype)
+	.oclAsType(Stdlib::Element)
+	.getFileTypePurposeCode();
+			
+query UML::Package::getPimElementImport():UML::Usage=
+	getSchemaImports()
+			->select(e|(e.supplier->includes(self)) 
+			)
+			->asSequence()->first();
+	
+helper UML::Classifier::getUmlSchemaForSchemaType():XSD::XSDSimpleTypeDefinition{
+	return umlSchemaForSchema.typeDefinitions
+	->select(t|t.oclIsKindOf(XSD::XSDSimpleTypeDefinition)and(t.oclAsType(XSD::XSDSimpleTypeDefinition).name.toUpper()=self.name.toUpper()))
+	.oclAsType(XSD::XSDSimpleTypeDefinition)
+	->asSequence()->first();
+	}
+query UML::Type::getUmlProxySchemaType():XSD::XSDTypeDefinition=
+	return umlSchemaForProxy.typeDefinitions
+	->select(t|t.name.toUpper()=self.name.toUpper())
+		->asSequence()->first();
+
+		
+query UML::NamedElement::getContainingCatalog():UML::Package{
+	return self.getNearestPackage().getNearesProfileApplication(structureProfile);
+}
+helper  getAnnotation(inout component:XSD::XSDConcreteComponent):XSD::XSDAnnotation{
+	switch{
+		case(component.oclIsKindOf(XSD::XSDImport)){
+			var annotation:XSD::XSDAnnotation=component.oclAsType(XSD::XSDImport).annotation;
+			if(annotation.oclIsUndefined())then{
+				annotation:=new XSD::XSDAnnotation@xsd();
+				component.oclAsType(XSD::XSDImport).annotation:=annotation;
+			}endif;
+			return annotation;
+		};
+	
+		case(component.oclIsKindOf(XSD::XSDAttributeGroupDefinition)){
+			var annotation:XSD::XSDAnnotation=component.oclAsType(XSD::XSDAttributeGroupDefinition).annotation;
+			if(annotation.oclIsUndefined())then{
+				annotation:=new XSD::XSDAnnotation@xsd();
+				component.oclAsType(XSD::XSDAttributeGroupDefinition).annotation:=annotation;
+			}endif;
+			return annotation;
+		};
+		case(component.oclIsKindOf(XSD::XSDAttributeDeclaration)){
+			var annotation:XSD::XSDAnnotation=component.oclAsType(XSD::XSDAttributeDeclaration).annotation;
+			if(annotation.oclIsUndefined())then{
+				annotation:=new XSD::XSDAnnotation@xsd();
+				component.oclAsType(XSD::XSDAttributeDeclaration).annotation:=annotation;
+			}endif;
+			return annotation;
+		};
+		case(component.oclIsKindOf(XSD::XSDTypeDefinition)){
+			var annotation:XSD::XSDAnnotation=component.oclAsType(XSD::XSDTypeDefinition).annotation;
+			if(annotation.oclIsUndefined())then{
+				annotation:=new XSD::XSDAnnotation@xsd();
+				component.oclAsType(XSD::XSDTypeDefinition).annotation:=annotation;
+			}endif;
+			return annotation;
+		};
+		case(component.oclIsKindOf(XSD::XSDElementDeclaration)){
+			var annotation:XSD::XSDAnnotation=component.oclAsType(XSD::XSDElementDeclaration).annotation;
+			if(annotation.oclIsUndefined())then{
+				annotation:=new XSD::XSDAnnotation@xsd();
+				component.oclAsType(XSD::XSDElementDeclaration).annotation:=annotation;
+			}endif;
+			return annotation;
+		};
+		case(component.oclIsKindOf(XSD::XSDWildcard)){
+			var annotation:XSD::XSDAnnotation=component.oclAsType(XSD::XSDWildcard).annotation;
+			if(annotation.oclIsUndefined())then{
+				annotation:=new XSD::XSDAnnotation@xsd();
+				component.oclAsType(XSD::XSDWildcard).annotation:=annotation;
+			}endif;
+			return annotation;
+		};
+	
+		case(component.oclIsKindOf(XSD::XSDSchema)){
+			var schemaAnnotation:XSD::XSDAnnotation=component.oclAsType(XSD::XSDSchema).contents
+				->select(c|c.oclIsKindOf(XSD::XSDAnnotation)).oclAsType(XSD::XSDAnnotation)->asSequence()->first();
+			if(schemaAnnotation.oclIsUndefined())then{
+				schemaAnnotation:=new XSD::XSDAnnotation@xsd();
+				component.oclAsType(XSD::XSDSchema).contents+=schemaAnnotation;
+			}endif;
+			return schemaAnnotation;
+		};
+		
+	};
+	log('ERROR: getAnnotation illegal argument '+component.repr());
+	return null;
+}
+query String::pathToRoot():String{
+	// just follow our path to root and concatenate referencedLocation
+	if((self='.') or (self='platform:/resource') or self.endsWith('~') or (self=''))then{return '';}else{}endif;
+	return '../'+self.truncateLastSegment().pathToRoot();
+}
+query String::relativePathTo(referencedLocation:String):String{
+	// just follow our path to root and concatenate referencedLocation
+	return self.truncateLastSegment().pathToRoot()+referencedLocation;
+}
+	
+property prefixToNamespace:Sequence(Tuple(prefix:String,namespace:String)) = Sequence{
+		Tuple{prefix:String="ansi-nist",namespace:String="http://niem.gov/niem/ansi-nist/2.0"},
+		Tuple{prefix:String="ansi_d20",namespace:String="http://niem.gov/niem/ansi_d20/2.0"},
+		Tuple{prefix:String="apco",namespace:String="http://niem.gov/niem/apco/2.1"},
+		Tuple{prefix:String="atf",namespace:String="http://niem.gov/niem/atf/2.0"},
+		Tuple{prefix:String="can",namespace:String="http://niem.gov/niem/post-canada/2.0"},
+		Tuple{prefix:String="cap",namespace:String="urn:oasis:names:tc:emergency:cap:1.1"},
+		Tuple{prefix:String="cbrn",namespace:String="http://niem.gov/niem/domains/cbrn/2.1"},
+		Tuple{prefix:String="cbrncl",namespace:String="http://niem.gov/niem/cbrncl/2.1"},
+		Tuple{prefix:String="census",namespace:String="http://niem.gov/niem/census/2.0"},
+		Tuple{prefix:String="de",namespace:String="urn:oasis:names:tc:emergency:EDXL:DE:1.0"},
+		Tuple{prefix:String="dea",namespace:String="http://niem.gov/niem/dea/2.1"},
+		Tuple{prefix:String="dod_jcs-pub2.0",namespace:String="http://niem.gov/niem/dod_jcs-pub2.0-misc/2.0"},
+		Tuple{prefix:String="edxl",namespace:String="http://niem.gov/niem/edxl/2.1"},
+		Tuple{prefix:String="edxl-cap",namespace:String="http://niem.gov/niem/edxl/2.1"},
+		Tuple{prefix:String="edxl-de",namespace:String="http://niem.gov/niem/edxl-de/2.1"},
+		Tuple{prefix:String="edxl-have",namespace:String="http://niem.gov/niem/edxl-have/2.1"},
+		Tuple{prefix:String="em",namespace:String="http://niem.gov/niem/domains/emergencyManagement/2.1"},
+		Tuple{prefix:String="fbi",namespace:String="http://niem.gov/niem/fbi/2.0"},
+		Tuple{prefix:String="fips_10-4",namespace:String="http://niem.gov/niem/fips_10-4/2.0"},
+		Tuple{prefix:String="fips_5-2",namespace:String="http://niem.gov/niem/fips_5-2/2.0"},
+		Tuple{prefix:String="fips_6-4",namespace:String="http://niem.gov/niem/fips_6-4/2.0"},
+		Tuple{prefix:String="fs",namespace:String="http://niem.gov/niem/domains/familyServices/2.1"},
+		Tuple{prefix:String="gco",namespace:String="http://www.isotc211.org/2005/gco"},
+		Tuple{prefix:String="geo",namespace:String="http://niem.gov/niem/geospatial/2.1"},
+		Tuple{prefix:String="gmd",namespace:String="http://www.isotc211.org/2005/gmd"},
+		Tuple{prefix:String="gml",namespace:String="http://www.opengis.net/gml/3.2"},
+		Tuple{prefix:String="gmx",namespace:String="http://www.isotc211.org/2005/gmx"},
+		Tuple{prefix:String="gsr",namespace:String="http://www.isotc211.org/2005/gsr"},
+		Tuple{prefix:String="gss",namespace:String="http://www.isotc211.org/2005/gss"},
+		Tuple{prefix:String="gts",namespace:String="http://www.isotc211.org/2005/gts"},
+		Tuple{prefix:String="have",namespace:String="urn:oasis:names:tc:emergency:EDXL:HAVE:1.0"},
+		Tuple{prefix:String="have-codes",namespace:String="http://niem.gov/niem/have-codes/2.1"},
+		Tuple{prefix:String="hazmat",namespace:String="http://niem.gov/niem/hazmat/2.1"},
+		Tuple{prefix:String="im",namespace:String="http://niem.gov/niem/domains/immigration/2.1"},
+		Tuple{prefix:String="intel",namespace:String="http://niem.gov/niem/domains/intelligence/2.1"},
+		Tuple{prefix:String="ip",namespace:String="http://niem.gov/niem/domains/infrastructureProtection/2.1"},
+		Tuple{prefix:String="iso_3166",namespace:String="http://niem.gov/niem/iso_3166/2.0"},
+		Tuple{prefix:String="iso_4217",namespace:String="http://niem.gov/niem/iso_4217/2.0"},
+		Tuple{prefix:String="iso_639-3",namespace:String="http://niem.gov/niem/iso_639-3/2.0"},
+		Tuple{prefix:String="it",namespace:String="http://niem.gov/niem/domains/internationalTrade/2.1"},
+		Tuple{prefix:String="itis",namespace:String="http://niem.gov/niem/itis/2.1"},
+		Tuple{prefix:String="j",namespace:String="http://niem.gov/niem/domains/jxdm/4.1"},
+		Tuple{prefix:String="lasd",namespace:String="http://niem.gov/niem/lasd/2.0"},
+		Tuple{prefix:String="m",namespace:String="http://niem.gov/niem/domains/maritime/2.1"},
+		Tuple{prefix:String="mmucc_2",namespace:String="http://niem.gov/niem/mmucc_2/2.1"},
+		Tuple{prefix:String="mn_off",namespace:String="http://niem.gov/niem/mn_offense/2.0"},
+		Tuple{prefix:String="nc",namespace:String="http://niem.gov/niem/niem-core/2.0"},
+		Tuple{prefix:String="nga",namespace:String="http://niem.gov/niem/nga/2.0"},
+		Tuple{prefix:String="niem-xsd",namespace:String="http://niem.gov/niem/proxy/xsd/2.0"},
+		Tuple{prefix:String="nlets",namespace:String="http://niem.gov/niem/nlets/2.1"},
+		Tuple{prefix:String="nonauth",namespace:String="http://niem.gov/niem/nonauthoritative-code/2.0"},
+		Tuple{prefix:String="sar",namespace:String="http://niem.gov/niem/sar/2.1"},
+		Tuple{prefix:String="scr",namespace:String="http://niem.gov/niem/domains/screening/2.1"},
+		Tuple{prefix:String="twpdes",namespace:String="http://niem.gov/niem/twpdes/2.0"},
+		Tuple{prefix:String="ucr",namespace:String="http://niem.gov/niem/ucr/2.0"},
+		Tuple{prefix:String="unece",namespace:String="http://niem.gov/niem/unece_rec20-misc/2.0"},
+		Tuple{prefix:String="usps",namespace:String="http://niem.gov/niem/usps_states/2.0"},
+		Tuple{prefix:String="ut_offender",namespace:String="http://niem.gov/niem/ut_offender-tracking-misc/2.0"},
+		Tuple{prefix:String="xhtml",namespace:String="http://www.w3.org/1999/xhtml"},
+		Tuple{prefix:String="xlink",namespace:String="http://www.w3.org/1999/xlink"},
+		Tuple{prefix:String="i",namespace:String=appinfoSchemaNamespace},
+		Tuple{prefix:String="s",namespace:String="http://niem.gov/niem/structures/2.0"},
+		Tuple{prefix:String="xls",namespace:String="http://niem.gov/niem/external/ogc/xls/1.1.0/dhs-gmo/2.1.0"}
+};
+helper XSD::XSDSchema::setPrefixForNamespace(namespace:String){
+	// use standard prefixes
+	prefixToNamespace->forEach(entry){
+		if(entry.namespace=namespace)then{
+			self.setQNamePrefixToNamespace(entry.prefix,entry.namespace);
+			return;
+		}endif;
+	};
+}
+helper XSD::XSDSchema::setPrefixForSchemaNamespace(){
+	// also set appinfo
+	self.setPrefixForNamespace(appinfoSchemaNamespace);
+	prefixToNamespace->forEach(entry){
+		if(entry.namespace=self.targetNamespace)then{
+			self.setQNamePrefixToNamespace(entry.prefix,entry.namespace);
+			return;
+		}endif;
+	};
+	self.setQNamePrefixToNamespace('tns',self.targetNamespace);
+}
+
+property schemaForSchema:XSD::XSDSchema=null;
+	
+helper 	UML::Comment::mapAbstractDocumentation(inout xsdContainer:XSD::XSDConcreteComponent){
+	if(self.isDocumentation())then{
+		var annotation:XSD::XSDAnnotation=getAnnotation(xsdContainer);
+		var userInformation:OclAny=annotation.createUserInformation('');
+		self.annotationInformationElement(userInformation);
+		userInformation.commitInformation();
+	}endif;	
+}	
+	
+query UML::Comment::isDocumentation():Boolean=self.IsStereotypeApplied(NIEMDescriptionStereotype);
+query UML::Package::getNearesProfileApplication(profile:UML::Profile):UML::Package=
+	if(self.isProfileApplied(profile))then self else self.owner.getNearestPackage().getNearesProfileApplication(profile) endif;
+query UML::Component::getTopNiemFolders():Set(UML::Package)=
+	self.elementImport.importedElement.oclAsType(UML::NamedElement)->asSet()
+	->union(self.clientDependency.supplier->asSet())
+		->select(e|e.oclIsKindOf(UML::Package))
+		.oclAsType(UML::Package)
+		.getNearesProfileApplication(structureProfile)->asSet();
+query UML::Element::getNearestNIEMSchemaPackage():UML::Package{
+	var schemaPackage:UML::Package=self.getNearestPackage();
+	if(schemaPackage.IsStereotypeApplied(NIEMSchemaStereotype)) then {return schemaPackage;} endif;
+	var nestingPackage:UML::Package=schemaPackage.nestingPackage;
+	if(nestingPackage.oclIsUndefined())then{return null;}endif;
+	return nestingPackage.getNearestNIEMSchemaPackage();	
+}	
+query  UML::Package::isModelGroupDefinitions():Boolean{
+	return self.name=modelGroupDefinitionPackageName;
+}	
+query UML::Type::isAttributeGroupDefinition():Boolean=
+	self.name.endsWith('AttributeGroup');
+query UML::Classifier::isAugmentationType():Boolean=self.isStructuresAugmentationType() or 
+	self.allParents()->select(p|p.isNIEMComplexTypeDefinition() and p.isStructuresAugmentationType())->notEmpty();
+query UML::Classifier::isStructuresAugmentationType():Boolean=self.name='AugmentationType';
+query UML::Element::isNIEMComplexTypeDefinition():Boolean=self.oclIsKindOf(UML::Class);
+

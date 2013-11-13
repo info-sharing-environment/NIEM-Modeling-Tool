@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Composite xmlns="http://www.eclipse.org/xwt/presentation"
+    xmlns:nupe="clr-namespace:org.search.niem.uml.papyrus.views.properties.widgets"
+    xmlns:ppel="clr-namespace:org.eclipse.papyrus.views.properties.widgets.layout">
+    <Composite.layout>
+        <ppel:PropertiesLayout></ppel:PropertiesLayout>
+    </Composite.layout>
+    <Composite>
+        <Composite.layout>
+            <ppel:PropertiesLayout></ppel:PropertiesLayout>
+        </Composite.layout>
+        <nupe:POCTypeStringEditor input="{Binding}" property="NIEM UML:POCType:POCName"></nupe:POCTypeStringEditor>
+        <nupe:POCTypeMultiStringEditor input="{Binding}" property="NIEM UML:POCType:POCEmail"></nupe:POCTypeMultiStringEditor>
+        <nupe:POCTypeMultiStringEditor input="{Binding}" property="NIEM UML:POCType:POCTelephone"></nupe:POCTypeMultiStringEditor>
+    </Composite>
+</Composite>

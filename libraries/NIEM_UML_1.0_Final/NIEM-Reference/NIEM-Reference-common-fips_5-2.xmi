@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8"?><xmi:XMI xmlns:xmi="http://www.omg.org/spec/XMI/20110701">
+	
+	
+	
+	<uml:Model xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile" xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Model_Package_Description_Profile="http://www.omg.org/spec/NIEM-UML/20120501/Model_Package_Description_Profile" xmlns:uml="http://www.omg.org/spec/UML/20110701" xmi:type="uml:Model" xmi:id="_niem" name="niem"><packagedElement xmi:type="uml:Package" xmi:id="_niem-fips_5-2" name="fips_5-2"><packagedElement xmi:type="uml:Package" xmi:id="_niem-fips_5-2-2.0" name="2.0">
+					<packagedElement xmi:type="uml:Package" xmi:id="_niem-fips_5-2-2.0-fips_5-2" name="fips_5-2">
+						<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-ownedComment" body="Codes for the identification of the states, the District of Columbia and the outlying areas of the U.S., and associated areas from the Federal Information Processing Standards (FIPS) 5-2.">
+							<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2"/>
+						</ownedComment>
+						
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType" name="USStateCodeSimpleType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-ownedComment" body="A data type for states.">
+								<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType"/>
+							</ownedComment>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-WA" name="WA">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-WA-ownedComment" body="Washington">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-WA"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-NE" name="NE">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-NE-ownedComment" body="Nebraska">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-NE"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-MI" name="MI">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-MI-ownedComment" body="Michigan">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-MI"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-NM" name="NM">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-NM-ownedComment" body="New Mexico">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-NM"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-MD" name="MD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-MD-ownedComment" body="Maryland">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-MD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-KY" name="KY">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-KY-ownedComment" body="Kentucky">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-KY"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-OR" name="OR">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-OR-ownedComment" body="Oregon">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-OR"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-ID" name="ID">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-ID-ownedComment" body="Idaho">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-ID"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-MT" name="MT">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-MT-ownedComment" body="Montana">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-MT"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-WV" name="WV">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-WV-ownedComment" body="West Virginia">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-WV"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-UT" name="UT">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-UT-ownedComment" body="Utah">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-UT"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-CA" name="CA">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-CA-ownedComment" body="California">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-CA"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-AR" name="AR">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-AR-ownedComment" body="Arkansas">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-AR"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-NJ" name="NJ">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-NJ-ownedComment" body="New Jersey">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-NJ"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-VT" name="VT">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-VT-ownedComment" body="Vermont">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-VT"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-AL" name="AL">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-AL-ownedComment" body="Alabama">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-AL"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-FL" name="FL">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-FL-ownedComment" body="Florida">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-FL"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-MS" name="MS">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-MS-ownedComment" body="Mississippi">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-MS"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-UM" name="UM">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-UM-ownedComment" body="Baker Island, Howland Island, Jarvis Island, Johnston Atoll, Kingman Reef, Midway Islands, Navassa Island, Palmyra Atoll, U.S. Minor Outlying Islands, Wake Island">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-UM"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-NY" name="NY">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-NY-ownedComment" body="New York">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-NY"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-LA" name="LA">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-LA-ownedComment" body="Louisiana">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-LA"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-CT" name="CT">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-CT-ownedComment" body="Connecticut">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-CT"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-DE" name="DE">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-DE-ownedComment" body="Delaware">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-DE"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-GU" name="GU">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-GU-ownedComment" body="Guam">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-GU"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-OH" name="OH">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-OH-ownedComment" body="Ohio">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-OH"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-WI" name="WI">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-WI-ownedComment" body="Wisconsin">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-WI"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-AZ" name="AZ">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-AZ-ownedComment" body="Arizona">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-AZ"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-ME" name="ME">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-ME-ownedComment" body="Maine">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-ME"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-ND" name="ND">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-ND-ownedComment" body="North Dakota">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-ND"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-PA" name="PA">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-PA-ownedComment" body="Pennsylvania">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-PA"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-IN" name="IN">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-IN-ownedComment" body="Indiana">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-IN"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-CO" name="CO">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-CO-ownedComment" body="Colorado">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-CO"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-GA" name="GA">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-GA-ownedComment" body="Georgia">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-GA"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-WY" name="WY">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-WY-ownedComment" body="Wyoming">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-WY"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-VI" name="VI">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-VI-ownedComment" body="Virgin Islands of the U.S.">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-VI"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-NH" name="NH">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-NH-ownedComment" body="New Hampshire">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-NH"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-TX" name="TX">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-TX-ownedComment" body="Texas">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-TX"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-AK" name="AK">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-AK-ownedComment" body="Alaska">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-AK"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-RI" name="RI">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-RI-ownedComment" body="Rhode Island">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-RI"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-OK" name="OK">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-OK-ownedComment" body="Oklahoma">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-OK"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-IL" name="IL">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-IL-ownedComment" body="Illinois">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-IL"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-MN" name="MN">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-MN-ownedComment" body="Minnesota">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-MN"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-NC" name="NC">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-NC-ownedComment" body="North Carolina">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-NC"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-HI" name="HI">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-HI-ownedComment" body="Hawaii">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-HI"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-DC" name="DC">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-DC-ownedComment" body="District of Columbia">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-DC"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-MP" name="MP">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-MP-ownedComment" body="Northern Mariana Islands">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-MP"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-IA" name="IA">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-IA-ownedComment" body="Iowa">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-IA"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-PR" name="PR">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-PR-ownedComment" body="Puerto Rico">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-PR"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-SD" name="SD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-SD-ownedComment" body="South Dakota">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-SD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-TN" name="TN">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-TN-ownedComment" body="Tennessee">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-TN"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-VA" name="VA">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-VA-ownedComment" body="Virginia">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-VA"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-MO" name="MO">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-MO-ownedComment" body="Missouri">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-MO"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-NV" name="NV">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-NV-ownedComment" body="Nevada">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-NV"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-PW" name="PW">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-PW-ownedComment" body="Palau">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-PW"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-MH" name="MH">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-MH-ownedComment" body="Marshall Islands">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-MH"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-MA" name="MA">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-MA-ownedComment" body="Massachusetts">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-MA"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-SC" name="SC">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-SC-ownedComment" body="South Carolina">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-SC"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-FM" name="FM">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-FM-ownedComment" body="Federated States of Micronesia">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-FM"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-AS" name="AS">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-AS-ownedComment" body="American Samoa">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-AS"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-KS" name="KS">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-KS-ownedComment" body="Kansas">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType-KS"/>
+								</ownedComment>
+							</ownedLiteral>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Class" xmi:id="_niem-fips_5-2-2.0-fips_5-2-NamespaceElementPropertyHolder" name="NamespaceElementPropertyHolder"/>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeType" name="USStateCodeType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeType-ownedComment" body="A data type for states.">
+								<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateCodeType"/>
+							</ownedComment>
+							<generalization xmi:type="uml:Generalization" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateCodeType-generalization" general="_niem-fips_5-2-2.0-fips_5-2-USStateCodeSimpleType"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType" name="USStateNumericCodeSimpleType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-ownedComment" body="A data type for states.">
+								<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType"/>
+							</ownedComment>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-05" name="05">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-05-ownedComment" body="Arkansas">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-05"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-26" name="26">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-26-ownedComment" body="Michigan">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-26"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-71" name="71">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-71-ownedComment" body="Midway Islands">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-71"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-69" name="69">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-69-ownedComment" body="Northern Mariana Islands">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-69"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-01" name="01">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-01-ownedComment" body="Alabama">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-01"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-42" name="42">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-42-ownedComment" body="Pennsylvania">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-42"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-21" name="21">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-21-ownedComment" body="Kentucky">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-21"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-56" name="56">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-56-ownedComment" body="Wyoming">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-56"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-35" name="35">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-35-ownedComment" body="New Mexico">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-35"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-89" name="89">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-89-ownedComment" body="Kingman Reef">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-89"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-51" name="51">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-51-ownedComment" body="Virginia">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-51"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-47" name="47">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-47-ownedComment" body="Tennessee">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-47"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-25" name="25">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-25-ownedComment" body="Massachusetts">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-25"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-16" name="16">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-16-ownedComment" body="Idaho">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-16"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-49" name="49">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-49-ownedComment" body="Utah">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-49"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-11" name="11">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-11-ownedComment" body="District of Columbia">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-11"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-72" name="72">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-72-ownedComment" body="Puerto Rico">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-72"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-81" name="81">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-81-ownedComment" body="Baker Island">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-81"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-76" name="76">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-76-ownedComment" body="Navassa Island">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-76"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-45" name="45">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-45-ownedComment" body="South Carolina">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-45"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-27" name="27">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-27-ownedComment" body="Minnesota">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-27"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-66" name="66">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-66-ownedComment" body="Guam">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-66"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-46" name="46">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-46-ownedComment" body="South Dakota">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-46"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-19" name="19">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-19-ownedComment" body="Iowa">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-19"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-41" name="41">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-41-ownedComment" body="Oregon">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-41"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-68" name="68">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-68-ownedComment" body="Marshall Islands">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-68"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-18" name="18">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-18-ownedComment" body="Indiana">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-18"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-02" name="02">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-02-ownedComment" body="Alaska">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-02"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-20" name="20">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-20-ownedComment" body="Kansas">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-20"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-17" name="17">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-17-ownedComment" body="Illinois">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-17"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-86" name="86">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-86-ownedComment" body="Jarvis Island">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-86"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-55" name="55">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-55-ownedComment" body="Wisconsin">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-55"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-06" name="06">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-06-ownedComment" body="California">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-06"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-31" name="31">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-31-ownedComment" body="Nebraska">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-31"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-24" name="24">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-24-ownedComment" body="Maryland">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-24"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-48" name="48">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-48-ownedComment" body="Texas">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-48"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-67" name="67">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-67-ownedComment" body="Johnston Atoll">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-67"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-54" name="54">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-54-ownedComment" body="West Virginia">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-54"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-84" name="84">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-84-ownedComment" body="Howland Island">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-84"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-28" name="28">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-28-ownedComment" body="Mississippi">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-28"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-09" name="09">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-09-ownedComment" body="Connecticut">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-09"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-12" name="12">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-12-ownedComment" body="Florida">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-12"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-79" name="79">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-79-ownedComment" body="Wake Island">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-79"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-36" name="36">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-36-ownedComment" body="New York">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-36"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-64" name="64">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-64-ownedComment" body="Federated States of Micronesia">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-64"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-29" name="29">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-29-ownedComment" body="Missouri">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-29"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-32" name="32">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-32-ownedComment" body="Nevada">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-32"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-60" name="60">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-60-ownedComment" body="American Samoa">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-60"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-08" name="08">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-08-ownedComment" body="Colorado">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-08"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-40" name="40">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-40-ownedComment" body="Oklahoma">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-40"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-70" name="70">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-70-ownedComment" body="Palau">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-70"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-04" name="04">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-04-ownedComment" body="Arizona">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-04"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-30" name="30">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-30-ownedComment" body="Montana">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-30"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-34" name="34">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-34-ownedComment" body="New Jersey">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-34"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-53" name="53">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-53-ownedComment" body="Washington">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-53"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-22" name="22">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-22-ownedComment" body="Louisiana">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-22"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-95" name="95">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-95-ownedComment" body="Palmyra Atoll">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-95"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-50" name="50">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-50-ownedComment" body="Vermont">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-50"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-78" name="78">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-78-ownedComment" body="Virgin Islands of the U.S.">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-78"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-13" name="13">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-13-ownedComment" body="Georgia">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-13"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-33" name="33">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-33-ownedComment" body="New Hampshire">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-33"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-15" name="15">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-15-ownedComment" body="Hawaii">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-15"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-10" name="10">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-10-ownedComment" body="Delaware">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-10"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-44" name="44">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-44-ownedComment" body="Rhode Island">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-44"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-37" name="37">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-37-ownedComment" body="North Carolina">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-37"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-38" name="38">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-38-ownedComment" body="North Dakota">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-38"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-23" name="23">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-23-ownedComment" body="Maine">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-23"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-39" name="39">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-39-ownedComment" body="Ohio">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-39"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-74" name="74">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-74-ownedComment" body="U.S. Minor Outlying Islands">
+									<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType-74"/>
+								</ownedComment>
+							</ownedLiteral>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeType" name="USStateNumericCodeType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeType-ownedComment" body="A data type for states.">
+								<annotatedElement xmi:idref="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeType"/>
+							</ownedComment>
+							<generalization xmi:type="uml:Generalization" xmi:id="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeType-generalization" general="_niem-fips_5-2-2.0-fips_5-2-USStateNumericCodeSimpleType"/>
+						</packagedElement>
+					</packagedElement>
+				</packagedElement><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-fips_5-2-profileApplication-1">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_PIM_Profile">
+						
+					</appliedProfile>
+				</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-fips_5-2-profileApplication-2">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-Model_Package_Description_Profile">
+						
+					</appliedProfile>
+				</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-fips_5-2-profileApplication-3">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_Common_Profile">
+						
+					</appliedProfile>
+				</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-fips_5-2-profileApplication-4">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_PSM_Profile">
+						
+					</appliedProfile>
+				</profileApplication></packagedElement></uml:Model>
+	
+	
+	
+	
+	<NIEM_PIM_Profile:InformationModel xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile" xmi:id="_niem-fips_5-2-2.0-fips_5-2-appliedStereotypeInstance" base_Package="_niem-fips_5-2-2.0-fips_5-2" version="1" defaultPurpose="reference" targetNamespace="http://niem.gov/niem/fips_5-2/2.0" isConformant="true"/>
+	
+	<NIEM_Common_Profile:PropertyHolder xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-fips_5-2-2.0-fips_5-2-NamespaceElementPropertyHolder-appliedStereotypeInstance" base_Class="_niem-fips_5-2-2.0-fips_5-2-NamespaceElementPropertyHolder"/>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</xmi:XMI>

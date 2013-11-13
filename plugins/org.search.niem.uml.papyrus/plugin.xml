@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="org.search.niem.uml.papyrus.lifecycleevents.lifecycleListeners" name="org.search.niem.uml.papyrus.lifecycleevents.lifecycleListeners" schema="schema/org.search.niem.uml.papyrus.lifecycleevents.lifecycleListeners.exsd"/>
+   <extension point="org.eclipse.papyrus.infra.core.service">
+      <serviceFactory 
+            classname="org.search.niem.uml.papyrus.NiemModelSetServiceFactory" 
+            description="The service loading Models - Overload the original service to handle UML resources properly." 
+            id="org.eclipse.papyrus.infra.core.resource.ModelSet" 
+            priority="6" startKind="startup">
+      </serviceFactory>
+   </extension>
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+            class="org.search.niem.uml.papyrus.editor.NIEMModelLifecycleRegistry">
+      </startup>
+   </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <wizard
+            category="org.search.niem.uml.ui"
+            class="org.search.niem.uml.papyrus.wizards.NewNiemModelWizard"
+            descriptionImage="icons/full/wizban/new_niem_uml_wiz.png"
+            finalPerspective="org.search.niem.uml.perspective"
+            icon="icons/full/obj16/niem_uml_new_file.png"
+            id="org.search.niem.uml.papyrus.wizards.NewNiemModelWizard"
+            name="%_UI_NewNiemModelWizard_name">
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="org.search.niem.uml.papyrus.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="org.search.niem.uml.ui.preferences.PreferencePage"
+            class="org.search.niem.uml.papyrus.preferences.ModelPreferencePage"
+            id="org.search.niem.uml.papyrus.preferences.ModelPreferencePage"
+            name="%_UI_ModelPreferences_name">
+      </page> 
+      <page
+            category="org.search.niem.uml.ui.preferences.PreferencePage"
+            class="org.search.niem.uml.papyrus.preferences.ClassDiagramPreferencePage"
+            id="org.search.niem.uml.search.ui.preferences.ClassDiagramPreferencePage"
+            name="%_UI_ClassDiagramPreferences_name">
+      </page>
+   </extension>
+</plugin>

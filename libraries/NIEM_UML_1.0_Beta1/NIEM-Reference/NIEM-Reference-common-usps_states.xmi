@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/spec/XMI/20110701">
+	<uml:Model
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile"
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:Model_Package_Description_Profile="http://www.omg.org/spec/NIEM-UML/20120501/Model_Package_Description_Profile"
+		xmlns:uml="http://www.omg.org/spec/UML/20110701" xmi:type="uml:Model" xmi:id="_niem"
+		name="niem">
+		<packagedElement xmi:type="uml:Package" xmi:id="_niem-usps_states" name="usps_states">
+			<packagedElement xmi:type="uml:Package" xmi:id="_niem-usps_states-2.0" name="2.0">
+				<packagedElement xmi:type="uml:Package" xmi:id="_niem-usps_states-2.0-usps_states"
+					name="usps_states">
+					<ownedComment xmi:type="uml:Comment"
+						xmi:id="_niem-usps_states-2.0-usps_states-ownedComment"
+						body="U.S. state and possession abbreviations from the U.S. Postal Service (USPS).">
+						<annotatedElement xmi:idref="_niem-usps_states-2.0-usps_states"/>
+					</ownedComment>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType"
+						name="USStateCodeSimpleType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-ownedComment"
+							body="A data type for states.">
+							<annotatedElement
+								xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType"
+							/>
+						</ownedComment>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-AK"
+							name="AK">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-AK-ownedComment"
+								body="ALASKA">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-AK"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-ME"
+							name="ME">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-ME-ownedComment"
+								body="MAINE">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-ME"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-NJ"
+							name="NJ">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-NJ-ownedComment"
+								body="NEW JERSEY">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-NJ"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-WA"
+							name="WA">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-WA-ownedComment"
+								body="WASHINGTON">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-WA"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-AP"
+							name="AP">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-AP-ownedComment"
+								body="Armed Forces Pacific">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-AP"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-NY"
+							name="NY">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-NY-ownedComment"
+								body="NEW YORK">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-NY"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-IA"
+							name="IA">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-IA-ownedComment"
+								body="IOWA">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-IA"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-MO"
+							name="MO">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-MO-ownedComment"
+								body="MISSOURI">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-MO"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-CT"
+							name="CT">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-CT-ownedComment"
+								body="CONNECTICUT">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-CT"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-AS"
+							name="AS">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-AS-ownedComment"
+								body="AMERICAN SAMOA">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-AS"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-AA"
+							name="AA">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-AA-ownedComment"
+								body="Armed Forces Americas (except Canada)">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-AA"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-WY"
+							name="WY">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-WY-ownedComment"
+								body="WYOMING">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-WY"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-VI"
+							name="VI">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-VI-ownedComment"
+								body="VIRGIN ISLANDS">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-VI"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-GU"
+							name="GU">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-GU-ownedComment"
+								body="GUAM ">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-GU"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-PR"
+							name="PR">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-PR-ownedComment"
+								body="PUERTO RICO">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-PR"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-FM"
+							name="FM">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-FM-ownedComment"
+								body="FEDERATED STATES OF MICRONESIA">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-FM"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-OK"
+							name="OK">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-OK-ownedComment"
+								body="OKLAHOMA">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-OK"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-OH"
+							name="OH">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-OH-ownedComment"
+								body="OHIO">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-OH"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-MN"
+							name="MN">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-MN-ownedComment"
+								body="MINNESOTA">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-MN"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-FL"
+							name="FL">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-FL-ownedComment"
+								body="FLORIDA">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-FL"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-MD"
+							name="MD">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-MD-ownedComment"
+								body="MARYLAND">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-MD"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-VA"
+							name="VA">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-VA-ownedComment"
+								body="VIRGINIA ">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-VA"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-GA"
+							name="GA">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-GA-ownedComment"
+								body="GEORGIA">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-GA"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-CO"
+							name="CO">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-CO-ownedComment"
+								body="COLORADO ">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-CO"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-IN"
+							name="IN">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-IN-ownedComment"
+								body="INDIANA">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-IN"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-SD"
+							name="SD">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-SD-ownedComment"
+								body="SOUTH DAKOTA">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-SD"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-UT"
+							name="UT">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-UT-ownedComment"
+								body="UTAH">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-UT"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-MI"
+							name="MI">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-MI-ownedComment"
+								body="MICHIGAN">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-MI"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-PW"
+							name="PW">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-PW-ownedComment"
+								body="PALAU">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-PW"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-KY"
+							name="KY">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-KY-ownedComment"
+								body="KENTUCKY">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-KY"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-DE"
+							name="DE">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-DE-ownedComment"
+								body="DELAWARE">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-DE"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-CA"
+							name="CA">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-CA-ownedComment"
+								body="CALIFORNIA ">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-CA"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-HI"
+							name="HI">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-HI-ownedComment"
+								body="HAWAII">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-HI"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-MA"
+							name="MA">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-MA-ownedComment"
+								body="MASSACHUSETTS">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-MA"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-NM"
+							name="NM">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-NM-ownedComment"
+								body="NEW MEXICO">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-NM"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-RI"
+							name="RI">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-RI-ownedComment"
+								body="RHODE ISLAND">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-RI"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-AL"
+							name="AL">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-AL-ownedComment"
+								body="ALABAMA">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-AL"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-DC"
+							name="DC">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-DC-ownedComment"
+								body="DISTRICT OF COLUMBIA">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-DC"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-OR"
+							name="OR">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-OR-ownedComment"
+								body="OREGON">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-OR"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-TX"
+							name="TX">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-TX-ownedComment"
+								body="TEXAS">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-TX"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-LA"
+							name="LA">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-LA-ownedComment"
+								body="LOUISIANA">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-LA"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-TN"
+							name="TN">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-TN-ownedComment"
+								body="TENNESSEE">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-TN"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-NE"
+							name="NE">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-NE-ownedComment"
+								body="NEBRASKA">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-NE"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-NC"
+							name="NC">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-NC-ownedComment"
+								body="NORTH CAROLINA">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-NC"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-AZ"
+							name="AZ">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-AZ-ownedComment"
+								body="ARIZONA ">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-AZ"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-NH"
+							name="NH">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-NH-ownedComment"
+								body="NEW HAMPSHIRE">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-NH"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-WV"
+							name="WV">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-WV-ownedComment"
+								body="WEST VIRGINIA">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-WV"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-IL"
+							name="IL">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-IL-ownedComment"
+								body="ILLINOIS">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-IL"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-AR"
+							name="AR">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-AR-ownedComment"
+								body="ARKANSAS">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-AR"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-MT"
+							name="MT">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-MT-ownedComment"
+								body="MONTANA">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-MT"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-VT"
+							name="VT">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-VT-ownedComment"
+								body="VERMONT">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-VT"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-MS"
+							name="MS">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-MS-ownedComment"
+								body="MISSISSIPPI">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-MS"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-SC"
+							name="SC">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-SC-ownedComment"
+								body="SOUTH CAROLINA">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-SC"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-KS"
+							name="KS">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-KS-ownedComment"
+								body="KANSAS">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-KS"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-NV"
+							name="NV">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-NV-ownedComment"
+								body="NEVADA">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-NV"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-MP"
+							name="MP">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-MP-ownedComment"
+								body="NORTHERN MARIANA ISLANDS">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-MP"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-MH"
+							name="MH">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-MH-ownedComment"
+								body="MARSHALL ISLANDS">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-MH"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-AE"
+							name="AE">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-AE-ownedComment"
+								body="Armed Forces Africa, Canada, Europe, Middle East">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-AE"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-ND"
+							name="ND">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-ND-ownedComment"
+								body="NORTH DAKOTA">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-ND"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-ID"
+							name="ID">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-ID-ownedComment"
+								body="IDAHO">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-ID"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-PA"
+							name="PA">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-PA-ownedComment"
+								body="PENNSYLVANIA">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-PA"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-WI"
+							name="WI">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-WI-ownedComment"
+								body="WISCONSIN">
+								<annotatedElement
+									xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType-WI"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Class"
+						xmi:id="_niem-usps_states-2.0-usps_states-NamespaceElementPropertyHolder"
+						name="NamespaceElementPropertyHolder"/>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeType"
+						name="USStateCodeType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeType-ownedComment"
+							body="A data type for states.">
+							<annotatedElement
+								xmi:idref="_niem-usps_states-2.0-usps_states-USStateCodeType"/>
+						</ownedComment>
+						<generalization xmi:type="uml:Generalization"
+							xmi:id="_niem-usps_states-2.0-usps_states-USStateCodeType-generalization"
+							general="_niem-usps_states-2.0-usps_states-USStateCodeSimpleType"/>
+					</packagedElement>
+				</packagedElement>
+			</packagedElement>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-usps_states-profileApplication-1">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_PIM_Profile"
+				> </appliedProfile>
+			</profileApplication>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-usps_states-profileApplication-2">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-Model_Package_Description_Profile"
+				> </appliedProfile>
+			</profileApplication>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-usps_states-profileApplication-3">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_Common_Profile"
+				> </appliedProfile>
+			</profileApplication>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-usps_states-profileApplication-4">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_PSM_Profile"
+				> </appliedProfile>
+			</profileApplication>
+		</packagedElement>
+	</uml:Model>
+	<NIEM_PIM_Profile:InformationModel
+		xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile"
+		xmi:id="_niem-usps_states-2.0-usps_states-appliedStereotypeInstance"
+		base_Package="_niem-usps_states-2.0-usps_states" defaultPurpose="reference" version="1"
+		targetNamespace="http://niem.gov/niem/usps_states/2.0" isConformant="true"/>
+	<NIEM_Common_Profile:PropertyHolder
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-usps_states-2.0-usps_states-NamespaceElementPropertyHolder-appliedStereotypeInstance"
+		base_Class="_niem-usps_states-2.0-usps_states-NamespaceElementPropertyHolder"/>
+</xmi:XMI>

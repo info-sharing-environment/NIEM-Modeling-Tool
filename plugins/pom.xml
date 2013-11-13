@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>org.search.niem.plugins</artifactId>
+	<packaging>pom</packaging>
+	<name>org.search.niem.plugins</name>
+	<description>Parent project for the org.search.niem plug-in and fragment projects</description>
+
+	<parent>
+		<groupId>org.search</groupId>
+		<artifactId>org.search.niem</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<properties>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.7</maven.compiler.target>
+	</properties>
+
+	<profiles>
+		<profile>
+			<id>sign</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-jarsigner-plugin</artifactId>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-source-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<executions>
+					<execution>
+						<id>plugin-source</id>
+						<goals>
+							<goal>plugin-source</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+  <modules>
+    <module>org.search.niem.uml</module>
+    <module>org.search.niem.uml.tests</module>
+    <module>org.search.niem.uml.resources</module>
+    <module>org.search.niem.mpd</module>
+    <module>org.search.niem.uml.qvt</module>
+    <module>org.search.niem.uml.qvt.ui</module>
+    <module>org.search.niem.uml.library</module>
+    <module>org.search.niem.uml.examples</module>
+    <module>org.search.niem.uml.search</module>
+    <module>org.search.niem.uml.search.ui</module>
+    <module>org.search.niem.uml.papyrus</module>
+    <module>org.search.niem.uml.merge</module>
+    <module>org.search.niem.uml.papyrus.views.properties</module>
+    <module>org.search.niem.uml.papyrus.palettes</module>
+    <module>org.search.niem.uml.papyrus.editors</module>
+    <module>org.search.niem.uml.evl</module>
+    <module>org.search.niem.uml.ui</module>
+    <module>org.search.niem.uml.ui.tests</module>
+    <module>org.search.niem.uml.ui.acceptance_tests</module>
+    <module>org.search.niem.xsd.library</module>
+    <module>org.search.niem.uml.application</module>
+  </modules>
+</project>

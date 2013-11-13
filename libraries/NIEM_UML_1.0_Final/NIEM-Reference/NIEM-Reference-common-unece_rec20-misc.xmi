@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?><xmi:XMI xmlns:xmi="http://www.omg.org/spec/XMI/20110701">
+	
+	
+	
+	<uml:Model xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile" xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Model_Package_Description_Profile="http://www.omg.org/spec/NIEM-UML/20120501/Model_Package_Description_Profile" xmlns:uml="http://www.omg.org/spec/UML/20110701" xmi:type="uml:Model" xmi:id="_niem" name="niem"><packagedElement xmi:type="uml:Package" xmi:id="_niem-unece_rec20-misc" name="unece_rec20-misc"><packagedElement xmi:type="uml:Package" xmi:id="_niem-unece_rec20-misc-2.0" name="2.0">
+					<packagedElement xmi:type="uml:Package" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc" name="unece_rec20-misc">
+						<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-ownedComment" body="Miscellaneous unit of measure codes from the United Nations Economic Commission for Europe Recommendation No. 20, Codes for Units of Measure used in International Trade.">
+							<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc"/>
+						</ownedComment>
+						
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType" name="LengthCodeSimpleType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-ownedComment" body="A data type for units of measurements for a length value.">
+								<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType"/>
+							</ownedComment>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-HMT" name="HMT">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-HMT-ownedComment" body="hectometre">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-HMT"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-A71" name="A71">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-A71-ownedComment" body="femtometre">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-A71"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-X1" name="X1">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-X1-ownedComment" body="chain">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-X1"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-A12" name="A12">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-A12-ownedComment" body="astronomical unit">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-A12"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-A45" name="A45">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-A45-ownedComment" body="decametre">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-A45"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-4H" name="4H">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-4H-ownedComment" body="micrometre (micron)">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-4H"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-A11" name="A11">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-A11-ownedComment" body="angstrom">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-A11"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-C52" name="C52">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-C52-ownedComment" body="picometre">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-C52"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-B57" name="B57">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-B57-ownedComment" body="light year">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-B57"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-CMT" name="CMT">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-CMT-ownedComment" body="centimetre">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-CMT"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-MTR" name="MTR">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-MTR-ownedComment" body="metre">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-MTR"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-AK" name="AK">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-AK-ownedComment" body="fathom">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-AK"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-C45" name="C45">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-C45-ownedComment" body="nanometre">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-C45"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-KMT" name="KMT">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-KMT-ownedComment" body="kilometre">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-KMT"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-M7" name="M7">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-M7-ownedComment" body="micro-inch">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-M7"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-MMT" name="MMT">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-MMT-ownedComment" body="millimetre">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-MMT"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-INH" name="INH">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-INH-ownedComment" body="inch">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-INH"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-77" name="77">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-77-ownedComment" body="milli-inch">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-77"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-YRD" name="YRD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-YRD-ownedComment" body="yard">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-YRD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-FOT" name="FOT">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-FOT-ownedComment" body="foot">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-FOT"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-NMI" name="NMI">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-NMI-ownedComment" body="nautical mile">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-NMI"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-DMT" name="DMT">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-DMT-ownedComment" body="decimetre">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-DMT"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-C63" name="C63">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-C63-ownedComment" body="parsec">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-C63"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-SMI" name="SMI">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-SMI-ownedComment" body="mile (statute mile)">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType-SMI"/>
+								</ownedComment>
+							</ownedLiteral>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Class" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-NamespaceElementPropertyHolder" name="NamespaceElementPropertyHolder"/>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeType" name="LengthCodeType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeType-ownedComment" body="A data type for units of measurements for a length value.">
+								<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeType"/>
+							</ownedComment>
+							<generalization xmi:type="uml:Generalization" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeType-generalization" general="_niem-unece_rec20-misc-2.0-unece_rec20-misc-LengthCodeSimpleType"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType" name="MassCodeSimpleType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-ownedComment" body="A data type for units of measurement for a weight value.">
+								<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType"/>
+							</ownedComment>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-KGM" name="KGM">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-KGM-ownedComment" body="kilogram">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-KGM"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-DTN" name="DTN">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-DTN-ownedComment" body="decitonne">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-DTN"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-STN" name="STN">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-STN-ownedComment" body="ton (US) or short ton (UK/US)">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-STN"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-GRM" name="GRM">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-GRM-ownedComment" body="gram">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-GRM"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-APZ" name="APZ">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-APZ-ownedComment" body="troy ounce or apothecary ounce">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-APZ"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-TNE" name="TNE">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-TNE-ownedComment" body="tonne (metric ton)">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-TNE"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-STI" name="STI">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-STI-ownedComment" body="stone (UK)">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-STI"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-Mg" name="Mg">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-Mg-ownedComment" body="megagram">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-Mg"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-CWA" name="CWA">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-CWA-ownedComment" body="hundred pounds (cwt) / hundred weight (US)">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-CWA"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-LBR" name="LBR">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-LBR-ownedComment" body="pound">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-LBR"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-2U" name="2U">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-2U-ownedComment" body="megagram">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-2U"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-DG" name="DG">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-DG-ownedComment" body="decigram">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-DG"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-HGM" name="HGM">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-HGM-ownedComment" body="hectogram">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-HGM"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-KTN" name="KTN">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-KTN-ownedComment" body="kilotonne">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-KTN"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-LTN" name="LTN">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-LTN-ownedComment" body="ton (UK) or long ton (US)">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-LTN"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-CGM" name="CGM">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-CGM-ownedComment" body="centigram">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-CGM"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-ONZ" name="ONZ">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-ONZ-ownedComment" body="ounce">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-ONZ"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-MC" name="MC">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-MC-ownedComment" body="microgram">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-MC"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-DJ" name="DJ">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-DJ-ownedComment" body="decagram">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-DJ"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-CWI" name="CWI">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-CWI-ownedComment" body="hundred weight (UK)">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-CWI"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-MGM" name="MGM">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-MGM-ownedComment" body="milligram">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-MGM"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-GRN" name="GRN">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-GRN-ownedComment" body="grain">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType-GRN"/>
+								</ownedComment>
+							</ownedLiteral>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeType" name="MassCodeType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeType-ownedComment" body="A data type for units of measurement for a weight value.">
+								<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeType"/>
+							</ownedComment>
+							<generalization xmi:type="uml:Generalization" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeType-generalization" general="_niem-unece_rec20-misc-2.0-unece_rec20-misc-MassCodeSimpleType"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType" name="TimeCodeSimpleType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-ownedComment" body="A data type for units of time.">
+								<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType"/>
+							</ownedComment>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-D42" name="D42">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-D42-ownedComment" body="tropical year">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-D42"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-B52" name="B52">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-B52-ownedComment" body="kilosecond">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-B52"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-HUR" name="HUR">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-HUR-ownedComment" body="hour">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-HUR"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-WEE" name="WEE">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-WEE-ownedComment" body="week">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-WEE"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-C26" name="C26">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-C26-ownedComment" body="millisecond">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-C26"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-ANN" name="ANN">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-ANN-ownedComment" body="year">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-ANN"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-MON" name="MON">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-MON-ownedComment" body="month">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-MON"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-DAY" name="DAY">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-DAY-ownedComment" body="day">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-DAY"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-MIN" name="MIN">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-MIN-ownedComment" body="minute [unit of time]">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-MIN"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-B98" name="B98">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-B98-ownedComment" body="microsecond">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-B98"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-C47" name="C47">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-C47-ownedComment" body="nanosecond">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-C47"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-SEC" name="SEC">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-SEC-ownedComment" body="second [unit of time]">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType-SEC"/>
+								</ownedComment>
+							</ownedLiteral>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeType" name="TimeCodeType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeType-ownedComment" body="A data type for units of time.">
+								<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeType"/>
+							</ownedComment>
+							<generalization xmi:type="uml:Generalization" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeType-generalization" general="_niem-unece_rec20-misc-2.0-unece_rec20-misc-TimeCodeSimpleType"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType" name="VelocityCodeSimpleType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType-ownedComment" body="A data type for units of measurement for a speed or velocity.">
+								<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType"/>
+							</ownedComment>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType-HM" name="HM">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType-HM-ownedComment" body="mile per hour">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType-HM"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType-2X" name="2X">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType-2X-ownedComment" body="metre per minute">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType-2X"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType-2M" name="2M">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType-2M-ownedComment" body="centimetre per second">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType-2M"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType-KNT" name="KNT">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType-KNT-ownedComment" body="knot">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType-KNT"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType-FR" name="FR">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType-FR-ownedComment" body="foot per minute">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType-FR"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType-MTS" name="MTS">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType-MTS-ownedComment" body="metre per second">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType-MTS"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType-KMH" name="KMH">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType-KMH-ownedComment" body="kilometre per hour">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType-KMH"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType-C16" name="C16">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType-C16-ownedComment" body="millimetre per second">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType-C16"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType-IU" name="IU">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType-IU-ownedComment" body="inch per second">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType-IU"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType-FS" name="FS">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType-FS-ownedComment" body="foot per second">
+									<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType-FS"/>
+								</ownedComment>
+							</ownedLiteral>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeType" name="VelocityCodeType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeType-ownedComment" body="A data type for units of measurement for a speed or velocity.">
+								<annotatedElement xmi:idref="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeType"/>
+							</ownedComment>
+							<generalization xmi:type="uml:Generalization" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeType-generalization" general="_niem-unece_rec20-misc-2.0-unece_rec20-misc-VelocityCodeSimpleType"/>
+						</packagedElement>
+					</packagedElement>
+				</packagedElement><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-unece_rec20-misc-profileApplication-1">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_PIM_Profile">
+						
+					</appliedProfile>
+				</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-unece_rec20-misc-profileApplication-2">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-Model_Package_Description_Profile">
+						
+					</appliedProfile>
+				</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-unece_rec20-misc-profileApplication-3">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_Common_Profile">
+						
+					</appliedProfile>
+				</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-unece_rec20-misc-profileApplication-4">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_PSM_Profile">
+						
+					</appliedProfile>
+				</profileApplication></packagedElement></uml:Model>
+	
+	
+	
+	
+	
+	
+	<NIEM_Common_Profile:PropertyHolder xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-NamespaceElementPropertyHolder-appliedStereotypeInstance" base_Class="_niem-unece_rec20-misc-2.0-unece_rec20-misc-NamespaceElementPropertyHolder"/>
+	
+	<NIEM_PIM_Profile:InformationModel xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile" xmi:id="_niem-unece_rec20-misc-2.0-unece_rec20-misc-appliedStereotypeInstance" base_Package="_niem-unece_rec20-misc-2.0-unece_rec20-misc" targetNamespace="http://niem.gov/niem/unece_rec20-misc/2.0" defaultPurpose="reference" version="1" isConformant="true"/>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</xmi:XMI>

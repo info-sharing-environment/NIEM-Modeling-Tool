@@ -1,0 +1,1926 @@
+import NIEMplatformBinding;
+modeltype UML uses 'http://www.omg.org/spec/UML/20110701';
+// platform variants for UML
+//modeltype UML uses 'http://www.eclipse.org/uml2/4.0.0/UML';
+//modeltype UML uses 'http://www.nomagic.com/magicdraw/UML/2.4.1';
+modeltype XSD  uses 'http://www.eclipse.org/xsd/2002/XSD';
+modeltype CAT  uses 'http://reference.niem.gov/niem/resource/mpd/catalog/1.0/';
+
+transformation NIEMmpdartifact2model (inout pimUml:UML);
+main() {
+	NIEMmpd2pim_run();
+}	
+property expandSchemaContent:Boolean=true;
+property saveMpdRoot:UML::Package=null;	
+property schemaTargetNamespaces:Sequence(Tuple(schema:UML::Package,targetNamespace:String)) = Sequence{};
+property catalog:CAT::CatalogType=null;
+property documentRoot:CAT::DocumentRoot=null;
+	
+helper NIEMmpd2pim_run() {
+		
+	mpdRootPackage:=
+			pimUml.rootObjects()
+			->select(r|r.oclIsKindOf(UML::Model)).oclAsType(UML::Model)
+			->asSequence()->first();
+	mpdRootPackage.oclAsType(UML::Model).initializeProfileGlobals();	
+		gatherCatalogedSchemas(mpdRootPackage);
+		// now fully expand schema content
+		expandSchemaContent:=true;
+		var schemaPackages:Set(UML::Package)=
+			mpdRootPackage.allSubobjectsOfType(UML::Package).oclAsType(UML::Package)
+			->select(p|p.isEditable() and (p.IsStereotypeApplied(NIEMSchemaStereotype) or p.IsStereotypeApplied(NIEMInformationModelStereotype)))
+			->asSet();
+		log('expandSchemaContent from '+mpdRootPackage.qualifiedName+', schema count='+schemaPackages->size().repr());
+		schemaPackages->sortedBy(p|p.name).expandSchemaContent();
+		// schemaPackages may have changed during expandSchemaContent
+		schemaPackages:=
+			mpdRootPackage.allSubobjectsOfType(UML::Package).oclAsType(UML::Package)
+			->select(p|p.isEditable() and (p.IsStereotypeApplied(NIEMSchemaStereotype) or p.IsStereotypeApplied(NIEMInformationModelStereotype)))
+			->asSet();
+	// weed out property holders
+
+		log('propertyHolder adjust');
+		schemaPackages.ownedType
+			->select(t|t.IsStereotypeApplied(NIEMPropertyHolderStereotype) or t.IsStereotypeApplied(NIEMInformationModelStereotype))
+			.oclAsType(UML::Class).adjustPropertyHolders();
+		
+		log('remove propertyHolder temporary realizations');
+		schemaPackages.ownedType
+			->select(t|t.IsStereotypeApplied(NIEMPropertyHolderStereotype))
+			.oclAsType(UML::Class).adjustPropertyHolderRealizations();
+		return;
+	}
+///////////////////
+
+helper UML::Package::expandSchemaContent(){
+	var schema:XSD::XSDSchema=self.invresolveone(XSD::XSDSchema).oclAsType(XSD::XSDSchema);
+	log('expandSchemaContent '+schema.targetNamespace+', '+self.qualifiedName);
+	schema.contents.mapAbstractXSDSchemaContent(self);
+	return ;	
+}
+helper UML::Class::adjustPropertyHolders(){
+	var propertyHolder:UML::Class=self;
+	var allProperties:Set(UML::Property)=self.ownedAttribute->asSet();
+	var sourceHoldingProperties:Set(UML::Property)=
+        allProperties
+        ->select(p|
+        	p.isSubsetCluster() 
+        	or (p.type.oclIsUndefined())
+        	or p.getTargetDirectedRelationships()
+        		->select(r|
+        			r.oclIsKindOf(UML::Realization) 
+        			and (r.oclAsType(UML::Realization).isAnotherSchema())
+	        	)->notEmpty()
+	        or (p.getTargetDirectedRelationships()	
+        		->select(r|r.oclIsKindOf(UML::Realization)) 
+	        	->size()
+	        	<>1
+	        	)
+	        )
+        ->asSet();
+		propertyHolder.ownedAttribute:=sourceHoldingProperties;
+		propertyHolder.name:='Namespace'+if(self.name.startsWith('element'))then 'Element' else 'Attribute' endif+'PropertyHolder';        
+	// split out the subsetsProperty clusters to another property holder; cluster by top level
+	// for each, create a separate property holder based on property head name
+	// for remote heads, add inheritance to the referenced head container
+	// also need to change name-based surrogate match
+	
+	var sourceSubsettingProperties:Set(UML::Property)=
+		sourceHoldingProperties->select(p|
+        	p.isSubsetCluster() 
+        	or (p.type.oclIsUndefined())
+        	);
+	var sourcePropertyHeads:Set(UML::Property)=sourceSubsettingProperties
+		->select(p|p.isSubstitutionGroupHead())
+		->union(sourceSubsettingProperties.getSourceSubsetsExternalPropertyHead()->asSet());
+	sourcePropertyHeads->forEach(head){
+			head.makeTargetSubsetPropertyHolder(sourceSubsettingProperties,self.getNearestPackage());
+		};
+		// remove unnecessary realizations and properties
+		log('adjustPropertyHolders removing extra realizations and properties');
+	allProperties->forEach(p){
+		p.getTargetDirectedRelationships()
+		->select(r|r.oclIsKindOf(UML::Realization)).oclAsType(UML::Realization)
+        		->select(r|
+        			(r.isSubstitutionGroupAffiliation()
+        			or not(r.isAnotherSchema())
+        			)and p.owner.oclIsUndefined()
+        			)
+        		->forEach(removed){
+        			removed.client:=Set{};
+        			removed.supplier:=Set{};
+        			removed.removeElement();
+        		};
+        		
+        if(p.owner.oclIsUndefined())then{
+        		p.removeElement();
+        	}endif;		
+	};	
+	return ;	
+}
+helper UML::Class::adjustPropertyHolderRealizations(){
+	self.ownedAttribute.getTargetDirectedRelationships()
+		->select(r|r.oclIsKindOf(UML::Realization)).oclAsType(UML::Realization)
+        		->select(r|
+        			r.isSubstitutionGroupAffiliation()
+	       			or not(r.isAnotherSchema())
+        			)
+        		->forEach(removed){
+        			removed.client:=Set{};
+        			removed.supplier:=Set{};
+        			removed.removeElement();
+        			//pimUml.removeElement(removed);
+        		};
+	return ;	
+}
+
+query UML::Property::getSourceSubsetsExternalPropertyHead():Set(UML::Property){
+	var affiliation:UML::Property=self.getSubstitutionGroupAffiliation();
+	if(affiliation.oclIsUndefined() or (affiliation.getNearestPackage()=self.getNearestPackage()))then{return Set{};}endif;
+	return Set{affiliation};
+}	
+
+query UML::Realization::isAnotherSchema():Boolean{
+	var clientSchema:UML::Package=self.client.getNearestPackage()->asSequence()->first();
+	var supplierSchema:UML::Package=self.supplier.getNearestPackage()->asSequence()->first();
+	return clientSchema<>supplierSchema;
+	}
+
+query UML::Property::isSubsetCluster():Boolean=
+	not(self.getSubstitutionGroupAffiliation().oclIsUndefined())
+	or self.getSubstitutionGroupAffiliationInverse()->notEmpty();
+query UML::Property::isSubstitutionGroupHead():Boolean=
+	self.getSubstitutionGroupAffiliation().oclIsUndefined()
+	and (self.getSubstitutionGroupAffiliationInverse()->notEmpty() or (self.type.oclIsUndefined()));
+query UML::Dependency::isSubstitutionGroupAffiliation():Boolean=
+	self.oclIsKindOf(UML::Realization) 
+			and (self.oclAsType(UML::Realization).name=substitutionGroupAffiliationTag);
+query UML::Property::getSubstitutionGroupAffiliation():UML::Property=
+	self.clientDependency
+		->select(r|r.isSubstitutionGroupAffiliation()).supplier
+		->select(c|c.oclIsKindOf(UML::Property) )
+		.oclAsType(UML::Property)
+		->asSequence()->first();
+query UML::Property::getSubstitutionGroupAffiliationInverse():Set(UML::Property)=
+	self.getTargetDirectedRelationships()
+		->select(r|r.oclIsKindOf(UML::Realization)).oclAsType(UML::Realization)
+		->select(r|r.isSubstitutionGroupAffiliation()).client
+		->select(c|c.oclIsKindOf(UML::Property))
+		.oclAsType(UML::Property)
+		->asSet();
+
+helper UML::Property::makeTargetSubsetPropertyHolder(
+		sourceSubsettingProperties:Set(UML::Property),
+			inout schemaPackage:UML::Package
+			){
+	log('makeTargetSubsetPropertyHolder for '+self.qualifiedName);
+	var headProperty:UML::Property=self; 
+	var propertyHolder:UML::Class=new UML::Class@pimUml(); 
+		schemaPackage.packagedElement+=propertyHolder;
+		propertyHolder.ApplyStereotype(NIEMPropertyHolderStereotype);
+		
+		if(self.getNearestPackage()=schemaPackage)then{
+			propertyHolder.ownedAttribute+=headProperty;
+			headProperty.isDerivedUnion:=true;
+		}else{
+			// generalization required
+			var generalization:UML::Generalization=new UML::Generalization@pimUml(); 
+			generalization.specific:=propertyHolder;
+			generalization.general:=headProperty.owner.oclAsType(UML::Classifier);
+		}endif;	
+        propertyHolder.ownedAttribute+=sourceSubsettingProperties->select(p|p.subsetsSource(self));
+		propertyHolder.name:=self.name+'PropertyHolder';  
+	return;     
+}
+query UML::Property::subsetsSource(subsettedProperty:UML::Property):Boolean{
+	if(self=subsettedProperty)then {return false;}endif;
+	var affiliation:UML::Property=self.getSubstitutionGroupAffiliation();
+	if(affiliation.oclIsUndefined())then{return false;}endif;
+	return (affiliation=subsettedProperty) or affiliation.subsetsSource(subsettedProperty);
+	}
+
+
+helper 	XSD::XSDSchema::contentmapAbstractXSDSchemaContent(targetPackage:UML::Package)
+{
+	if(expandSchemaContent)then{
+		self.contents.mapAbstractXSDSchemaContent(targetPackage);
+	}else{
+	// defer processing of all but imports
+	self.contents
+	->select(c|c.oclIsKindOf(XSD::XSDSchemaDirective)).oclAsType(XSD::XSDSchemaDirective)	
+	->forEach(content){
+ 			content.mapAbstractXSDSchemaContent(targetPackage);
+ 		};
+ 	}endif;	
+	return;
+}
+
+////////////////////
+helper XSD::XSDSchema::mapAbstractXSDSchema():UML::Package{
+	return self.map AbstractXSDSchema();
+}
+helper XSD::XSDSchemaContent::mapAbstractXSDSchemaContent(umlContainer:UML::Element):UML::Element{
+	switch{
+		case(self.oclIsKindOf(XSD::XSDAnnotation)){
+			self.oclAsType(XSD::XSDAnnotation).mapXSDAnnotation(umlContainer);
+        	return null;
+        	};
+	};
+	var umlContent:UML::Element=self.map AbstractXSDSchemaContent(umlContainer);
+ 	return umlContent;
+ 	}
+helper UML::Package::applyNIEMSchemaStereotype():Stdlib::Element{
+	return self.ApplyStereotype(NIEMInformationModelStereotype);
+}
+helper XSD::XSDSchema::setModelInformationDefaultPurpose(fileTypePurposeURI:String,pimNdrSchemaInstance:Stdlib::Element){
+	var defaultPurpose:String='extension';
+	var schemaKind:String=null;
+	if(not(fileTypePurposeURI.oclIsUndefined()))then{schemaKind:=fileTypePurposeURI.substringAfter('#').replace('-schema','');}endif;
+	if(schemaKind.oclIsUndefined())then{
+		if(self.targetNamespace.startsWith(baseNiemNamespace))then{
+			defaultPurpose:='subset';
+			
+		}endif;
+	}else{
+		defaultPurpose:=schemaKind;
+	}endif;
+	pimNdrSchemaInstance.setInformationModelDefaultPurpose(defaultPurpose);
+	 	return;
+	 }
+/////////////////////////////////////////////////////////////////////////////////////
+property pimRoot:UML::Model=null;
+property mpdRootPackage:UML::Package=null;
+property mpdComponent:UML::Component=null;
+
+///////////////////
+
+helper XSD::XSDSchemaContent::resolveSchemaContentReference():UML::NamedElement{
+	var umlSchema:UML::Package=self.schema.mapAbstractXSDSchema();
+	if(umlSchema.oclIsUndefined())then{
+		// for schema for schema or proxy, get xml primitives library
+		var targetNamespace:String=self.schema.targetNamespace;
+		if(self.oclIsKindOf(XSD::XSDTypeDefinition) and ((targetNamespace=schemaForSchemaNamespace)or(targetNamespace=proxySchemaNamespace)))then{
+			umlXmlLibrary.ownedType->select(t|t.name.toUpper()=self.oclAsType(XSD::XSDTypeDefinition).name.toUpper())->forEach(type){return type;}
+		}else{
+		}endif;
+		return null;
+	}endif;
+	var resolvedType:UML::NamedElement= self.mapAbstractXSDSchemaContent(umlSchema).oclAsType(UML::NamedElement);
+	return resolvedType;
+}
+
+/////////////////////////////////////////////////mapping disjuncts
+
+mapping XSD::XSDSchema::AbstractXSDSchema():UML::Package
+	disjuncts XSD::XSDSchema::MPDSchema
+	{}
+mapping 	XSD::XSDSchemaContent::AbstractXSDSchemaContent(umlContainer:UML::Element):UML::Element 
+disjuncts 
+	XSD::XSDElementDeclaration::NDRElementDeclaration_topLevel,
+	XSD::XSDElementDeclaration::XSDElementDeclaration_augmentation,
+	XSD::XSDElementDeclaration::XSDElementDeclaration_roleOf,	
+	XSD::XSDElementDeclaration::NDRElementDeclaration,
+	XSD::XSDAttributeDeclaration::XSDAttributeDeclaration_sequenceId,
+	XSD::XSDAttributeDeclaration::NDRAttributeDeclaration,
+	XSD::XSDRedefineContent::NDRAbstractXSDRedefineContent
+	{}
+mapping XSD::XSDRedefineContent::NDRAbstractXSDRedefineContent(umlContainer:UML::Element):UML::Element
+disjuncts XSD::XSDAnnotation::XSDAnnotation,
+	XSD::XSDRedefinableComponent::NDRAbstractXSDRedefinableComponent
+	{}
+mapping XSD::XSDRedefinableComponent::NDRAbstractXSDRedefinableComponent(umlContainer:UML::Element):UML::PackageableElement
+disjuncts 
+	XSD::XSDAttributeGroupDefinition::NDRAbstractXSDAttributeGroupDefinition,
+	XSD::XSDTypeDefinition::NDRAbstractXSDTypeDefinition,
+	XSD::XSDModelGroupDefinition::XSDModelGroupDefinition
+	{}
+mapping 	XSD::XSDTypeDefinition::NDRAbstractXSDTypeDefinition(umlContainer:UML::Element):UML::Classifier
+disjuncts XSD::XSDComplexTypeDefinition::NDRAbstractXSDComplexTypeDefinition,
+	XSD::XSDSimpleTypeDefinition::NDRAbstractXSDSimpleTypeDefinition  {}
+mapping XSD::XSDComplexTypeDefinition::NDRAbstractXSDComplexTypeDefinition(umlContainer:UML::Element):UML::Classifier
+	disjuncts 
+	
+	XSD::XSDComplexTypeDefinition::XSDComplexTypeDefinition_Enumeration,
+
+	XSD::XSDComplexTypeDefinition::XSDComplexTypeDefinition_PrimitiveType,
+	XSD::XSDComplexTypeDefinition::NDRComplexTypeDefinitionDataType,
+
+	XSD::XSDComplexTypeDefinition::XSDTypeDefinition_Class_AssociationType,
+	XSD::XSDComplexTypeDefinition::XSDTypeDefinition_Class_AugmentationType,
+	XSD::XSDComplexTypeDefinition::XSDTypeDefinition_Class_MetadataType,
+	XSD::XSDComplexTypeDefinition::XSDTypeDefinition_Class_AdapterType,
+	
+	XSD::XSDComplexTypeDefinition::XSDTypeDefinition_Class_ObjectType
+	{}
+mapping XSD::XSDSimpleTypeDefinition::NDRAbstractXSDSimpleTypeDefinition(umlContainer:UML::Element):UML::Classifier 
+disjuncts 
+	XSD::XSDSimpleTypeDefinition::XSDTypeDefinition_Enumeration,
+	XSD::XSDSimpleTypeDefinition::XSDTypeDefinition_UnionType,
+	XSD::XSDSimpleTypeDefinition::XSDTypeDefinition_ListType,
+	XSD::XSDSimpleTypeDefinition::XSDTypeDefinition_PrimitiveType,
+	XSD::XSDSimpleTypeDefinition::NDRSimpleTypeDefinitionDataType
+	{}
+mapping 	XSD::XSDAttributeGroupDefinition::NDRAbstractXSDAttributeGroupDefinition(umlContainer:UML::Element):UML::Class 
+disjuncts XSD::XSDAttributeGroupDefinition::NDRAttributeGroupDefinition,
+	XSD::XSDAttributeGroupDefinition::XSDAttributeGroupDefinition
+	{}
+mapping 	XSD::XSDTypeDefinition::AbstractXSDTypeDefinition(umlContainer:UML::Element):UML::Classifier
+disjuncts XSD::XSDComplexTypeDefinition::AbstractXSDComplexTypeDefinition,
+	XSD::XSDSimpleTypeDefinition::AbstractXSDSimpleTypeDefinition  {}
+mapping XSD::XSDComplexTypeDefinition::AbstractXSDComplexTypeDefinition(umlContainer:UML::Element):UML::Classifier
+	disjuncts
+	XSD::XSDComplexTypeDefinition::XSDComplexTypeDefinitionDataType,
+	XSD::XSDComplexTypeDefinition::XSDComplexTypeDefinition
+	{}
+
+mapping XSD::XSDSimpleTypeDefinition::AbstractXSDSimpleTypeDefinition(umlContainer:UML::Element):UML::Classifier
+disjuncts
+	XSD::XSDSimpleTypeDefinition::XSDSimpleTypeDefinitionDataType
+	{}
+mapping XSD::XSDTypeDefinition::AbstractBaseTypeDefinition(general:UML::Classifier,specificClient:UML::Classifier):UML::Element@pimUml
+	disjuncts
+	XSD::XSDTypeDefinition::BaseTypeDefinition_enumeration,
+	XSD::XSDTypeDefinition::BaseTypeDefinition_enumeration_simpleContent,
+	XSD::XSDTypeDefinition::BaseTypeDefinition_primitiveType,
+	XSD::XSDComplexTypeDefinition::BaseTypeDefinition_simpleContent_lib,
+	XSD::XSDComplexTypeDefinition::BaseTypeDefinition_restriction,
+	XSD::XSDTypeDefinition::BaseTypeDefinition_lib
+	{}
+	
+/////////////////////////////////////////////////mapping end disjuncts
+mapping 	XSD::XSDSchema::MPDSchema_init():UML::Package@pimUml 
+	inherits XSD::XSDSchema::XSDSchema
+{
+	init{
+	var ownerPackage:UML::Package=self.relativeMdpLocation().getOwnerPackage(mpdRootPackage);
+	ownerPackage.packagedElement+=result;
+	}
+}
+mapping 	XSD::XSDSchema::MPDSchema():UML::Package@pimUml 
+	inherits XSD::XSDSchema::MPDSchema_init
+	when{self.isMapped()}
+{
+	///////////////////
+		var pimNdrSchemaInstance:Stdlib::Element=result.applyNIEMSchemaStereotype();
+		log("informationModel "+pimNdrSchemaInstance.repr());
+		// set version, conformant, purpose
+		pimNdrSchemaInstance.setSchemaAppinfoConformantIndicator(self.appinfoConformantIndicator());
+		pimNdrSchemaInstance.setSchemaVersion(self.version);
+		pimNdrSchemaInstance.setSchemaNamespace(self.targetNamespace);
+	
+		self.setModelInformationDefaultPurpose(null,pimNdrSchemaInstance);
+		//////////////
+	}
+
+mapping XSD::XSDElementDeclaration::XSDElementDeclaration_augmentation(umlOwningClass:UML::Element):UML::Property@pimUml
+	inherits XSD::XSDElementDeclaration::NDRElementDeclaration
+	when{
+		 self.elementDeclarationReference
+		and not(self.resolvedElementDeclaration.type.oclIsUndefined())
+		and self.resolvedElementDeclaration.type.oclIsKindOf(XSD::XSDComplexTypeDefinition)
+		and self.resolvedElementDeclaration.type.oclAsType(XSD::XSDComplexTypeDefinition).isAugmentationType()
+	}
+{
+	self.resolvedElementDeclaration.annotation.applyAppliesToAugmentation(result.oclAsType(UML::NamedElement));
+}
+mapping XSD::XSDElementDeclaration::XSDElementDeclaration_roleOf(umlOwningClass:UML::Element):UML::Property@pimUml
+	inherits XSD::XSDElementDeclaration::NDRElementDeclaration
+	when{self.resolvedElementDeclaration.name.startsWith('RoleOf')}
+{
+}
+mapping XSD::XSDAttributeDeclaration::XSDAttributeDeclaration_sequenceId(umlOwningClass:UML::Element):UML::Property@pimUml
+	inherits XSD::XSDAttributeDeclaration::NDRAttributeDeclaration
+	when{
+		(self.resolvedAttributeDeclaration.name='sequenceID')
+		and self.attributeDeclarationReference
+		and (self.resolvedAttributeDeclaration.schema.targetNamespace=structuresSchemaNamespace)
+	}
+{
+	var targetStereotypeInstance:Stdlib::Element=result.ApplyStereotype(NIEMSequenceIdStereotype);
+}
+mapping 	XSD::XSDElementDeclaration::NDRElementDeclaration_topLevel(umlOwningClass:UML::Element):UML::Property@pimUml 
+ 	inherits XSD::XSDElementDeclaration::XSDElementDeclaration
+ 	// if abstract, untyped, or part of cluster, or ref'd by external or ref'd more than once or not at all
+ 	when {not(self.elementDeclarationReference)
+ 	}
+{
+	// the appliesTo should really be at the top level
+	if(not(self.type.oclIsUndefined())
+		and self.type.oclIsKindOf(XSD::XSDComplexTypeDefinition)
+		and self.type.oclAsType(XSD::XSDComplexTypeDefinition).isAugmentationType()
+	)then{
+		self.annotation.applyAppliesToAugmentation(result.oclAsType(UML::NamedElement));
+	}endif;	
+	
+}
+mapping 	XSD::XSDElementDeclaration::NDRElementDeclaration(umlOwningClass:UML::Element):UML::Property@pimUml 
+ 	inherits XSD::XSDElementDeclaration::XSDElementDeclaration
+ 	when {self.elementDeclarationReference}
+{
+}
+mapping 	XSD::XSDComplexTypeDefinition::NDRComplexTypeDefinitionDataType(umlContainer:UML::Element):UML::DataType@pimUml 
+ 	inherits XSD::XSDComplexTypeDefinition::XSDComplexTypeDefinitionDataType,
+ 	XSD::XSDComplexTypeDefinition::NDRComplexTypeDefinitionCommon
+ 	when{not(self.content.oclIsUndefined()) and self.content.oclIsKindOf(XSD::XSDSimpleTypeDefinition)}
+{
+}	
+mapping 	XSD::XSDComplexTypeDefinition::NDRComplexTypeDefinition(umlContainer:UML::Element):UML::Class@pimUml 
+ 	inherits XSD::XSDComplexTypeDefinition::XSDComplexTypeDefinition,
+ 	XSD::XSDComplexTypeDefinition::NDRComplexTypeDefinitionCommon
+{
+}	
+
+mapping 	XSD::XSDComplexTypeDefinition::NDRComplexTypeDefinitionCommon(umlContainer:UML::Element):UML::Classifier@pimUml
+	inherits XSD::XSDTypeDefinition::NDRTypeDefinition 
+{
+	init{}
+}	
+
+mapping 	XSD::XSDTypeDefinition::NDRTypeDefinition(umlContainer:UML::Element):UML::Classifier@pimUml 
+{
+	init{}
+}	
+mapping 	XSD::XSDSimpleTypeDefinition::NDRSimpleTypeDefinitionDataType(umlContainer:UML::Element):UML::DataType@pimUml 
+ 	inherits XSD::XSDSimpleTypeDefinition::XSDSimpleTypeDefinitionDataType,XSD::XSDTypeDefinition::NDRTypeDefinition
+{
+	init{}
+}	
+
+mapping XSD::XSDComplexTypeDefinition::XSDComplexTypeDefinition_Enumeration(umlContainer:UML::Element):UML::Enumeration@pimUml 
+ 	inherits XSD::XSDComplexTypeDefinition::XSDComplexTypeDefinitionDataType,
+	 	XSD::XSDComplexTypeDefinition::NDRComplexTypeDefinitionCommon
+	when{self.isEnumeration()}
+	{
+}
+mapping XSD::XSDSimpleTypeDefinition::XSDTypeDefinition_Enumeration(umlContainer:UML::Element):UML::Enumeration@pimUml 
+	inherits XSD::XSDSimpleTypeDefinition::XSDSimpleTypeDefinitionDataType,
+		XSD::XSDTypeDefinition::NDRTypeDefinition
+	when{self.isEnumeration()}
+	{
+	self.mapXSDEnumerationFacet(result);
+}
+
+helper XSD::XSDSimpleTypeDefinition::mapXSDEnumerationFacet(psmOwner:UML::Enumeration){
+	var enumFacets:OrderedSet(XSD::XSDEnumerationFacet)=self.enumerationFacets;
+	log('mapXSDEnumerationFacet '+psmOwner.qualifiedName+', size='+enumFacets->size().repr());
+	enumFacets->forEach(facet){
+		var umlEnumLiteral:UML::EnumerationLiteral=new UML::EnumerationLiteral@pimUml();
+		umlEnumLiteral.name:=facet.value->asSequence()->first().repr();
+		umlEnumLiteral.enumeration:=psmOwner;
+		facet.annotation.mapXSDAnnotation(umlEnumLiteral);
+	};
+	return;
+}
+mapping 	XSD::XSDAttributeDeclaration::NDRAttributeDeclaration(umlContainer:UML::Element):UML::Property@pimUml 
+ 	inherits XSD::XSDAttributeDeclaration::XSDAttributeDeclaration
+{
+	var targetStereotypeInstance:Stdlib::Element=result.ApplyStereotype(NIEMPropertyStereotype);
+	targetStereotypeInstance.setNIEMPropertyKind('attribute');
+}
+
+mapping 	XSD::XSDAttributeGroupDefinition::NDRAttributeGroupDefinition(umlContainer:UML::Element):UML::Class@pimUml 
+ 	inherits XSD::XSDAttributeGroupDefinition::XSDAttributeGroupDefinition
+{
+}
+/////////////////////////////////////////////////end mapping
+// override to add ndrProfile
+query XSD::XSDComplexTypeDefinition::isAugmentationType():Boolean=
+	switch{
+		case(self.annotation.isAppinfoStructuresAugmentationTypeBase() or(
+			(self.name='AugmentationType') and (self.schema.targetNamespace=structuresSchemaNamespace)
+			)) true;
+		case(not(
+			self.baseTypeDefinition.oclIsUndefined()
+			or not(self.baseTypeDefinition.oclIsKindOf(XSD::XSDComplexTypeDefinition))
+			or (self.baseTypeDefinition=self)
+			)) self.baseTypeDefinition.oclAsType(XSD::XSDComplexTypeDefinition).isAugmentationType();
+		else false;	
+	};
+query XSD::XSDComplexTypeDefinition::isObjectType():Boolean=
+	switch{
+		case(self.annotation.isAppinfoStructuresObjectBase()) true;
+		case(not(
+			self.baseTypeDefinition.oclIsUndefined()
+			or not(self.baseTypeDefinition.oclIsKindOf(XSD::XSDComplexTypeDefinition))
+			or (self.baseTypeDefinition=self)
+			)) self.baseTypeDefinition.oclAsType(XSD::XSDComplexTypeDefinition).isObjectType();
+		else false;	
+	};
+query XSD::XSDComplexTypeDefinition::isMetadataType():Boolean=
+	switch{
+		case(self.annotation.isAppinfoMetadataTypeBase()) true;
+		case(not(
+			self.baseTypeDefinition.oclIsUndefined()
+			or not(self.baseTypeDefinition.oclIsKindOf(XSD::XSDComplexTypeDefinition))
+			or (self.baseTypeDefinition=self)
+			)) self.baseTypeDefinition.oclAsType(XSD::XSDComplexTypeDefinition).isMetadataType();
+		else false;	
+	};
+query XSD::XSDComplexTypeDefinition::isAssociationType():Boolean=
+	switch{
+		case(self.annotation.isAppinfoAssociationTypeBase()) true;
+		case(not(
+			self.baseTypeDefinition.oclIsUndefined()
+			or not(self.baseTypeDefinition.oclIsKindOf(XSD::XSDComplexTypeDefinition))
+			or (self.baseTypeDefinition=self)
+			)) self.baseTypeDefinition.oclAsType(XSD::XSDComplexTypeDefinition).isAssociationType();
+		else false;	
+	};
+
+///////////////////////////////////////////////utility queries
+
+query XSD::XSDAnnotation::getAppinfoAugmentedTypeIndicator():Boolean{
+	self.getXSDAnnotationApplicationInformation().getElementElements()
+	->select(i|i.isAppinfoAugmentedTypeIndicator())
+	->forEach(conformantIndicatorElement){
+		return conformantIndicatorElement.getXSDElementValue().asBoolean();
+	};
+	return false;
+};
+query XSD::XSDAnnotation::getAppinfoAugmentedElementIndicator():Boolean{
+	self.getXSDAnnotationApplicationInformation().getElementElements()
+	->select(i|i.isAppinfoAugmentedElementIndicator())
+	->forEach(conformantIndicatorElement){
+		return conformantIndicatorElement.getXSDElementValue().asBoolean();
+	};
+	return false;
+};
+query XSD::XSDAnnotation::getAppinfoDeprecated():Boolean{
+	self.getXSDAnnotationApplicationInformation().getElementElements()
+	->select(i|i.isAppinfoDeprecatedElement())
+	->forEach(conformantIndicatorElement){
+		return conformantIndicatorElement.getXSDElementValue().asBoolean();
+	};
+	return false;
+};
+query XSD::XSDSchema::appinfoConformantIndicator():Boolean{
+	self.contents
+	->select(a|a.oclIsKindOf(XSD::XSDAnnotation)).oclAsType(XSD::XSDAnnotation).getXSDAnnotationApplicationInformation().getElementElements()
+	->select(i|i.isAppinfoConformantIndicatorElement())
+	->forEach(conformantIndicatorElement){
+		return conformantIndicatorElement.getXSDElementValue().asBoolean();
+	};
+	return false;// default to false if not defined
+};
+query XSD::XSDImport::appinfoConformantIndicator():Boolean{
+	self.annotation.getXSDAnnotationApplicationInformation().getElementElements()
+	->select(i|i.isAppinfoConformantIndicatorElement())
+	->forEach(conformantIndicatorElement){
+		return conformantIndicatorElement.getXSDElementValue().asBoolean();
+	};
+	return true;// default to true if not defined
+};
+
+helper  Stdlib::Element::setComplexTypeDefinitionMixed(mixed:Boolean){
+}
+helper XSD::XSDAnnotation::applyAppliesToAugmentation(element:UML::NamedElement){
+	self.getXSDAnnotationApplicationInformation().getElementElements()
+		->select(i|i.isAppinfoAppliesToElement()).map AugmentationApplication(element,self);
+	return;	
+}
+helper XSD::XSDAnnotation::applyAppliesToMetadata(element:UML::NamedElement){
+	self.getXSDAnnotationApplicationInformation().getElementElements()
+		->select(i|i.isAppinfoAppliesToElement() and not(i.isAppliesToGeneric()))
+		.map MetadataApplication(element,self);
+	return;	
+}
+helper OclAny::assertHasAppliesToType(context:XSD::XSDConcreteComponent):Boolean{
+	var appliesToTypeXSD:XSD::XSDTypeDefinition=self.referencedTypeDefinition(context);
+	if(appliesToTypeXSD.oclIsUndefined())then{
+		log('ERROR: referenced  appliesTo component not found from '+context.container.repr());
+		return false;
+	}endif;
+	return true;
+	
+}
+mapping OclAny::AugmentationApplication(element:UML::NamedElement,context:XSD::XSDConcreteComponent):UML::Usage@pimUml
+	when{self.assertHasAppliesToType(context)}
+{
+	name:='appliesTo';
+	
+	element.getNearestPackage().packagedElement+=result;
+	var appliesToTypeXSD:XSD::XSDTypeDefinition=self.referencedTypeDefinition(context);
+	var umlTypeSchema:UML::Package=appliesToTypeXSD.schema.mapAbstractXSDSchema();
+	var appliesToType:UML::NamedElement=
+		appliesToTypeXSD.mapAbstractXSDSchemaContent(umlTypeSchema).oclAsType(UML::NamedElement);
+	
+	supplier+=appliesToType;
+	client+=element;
+	result.ApplyStereotype(NIEMAugmentationApplicationStereotype);
+}
+
+mapping OclAny::MetadataApplication(element:UML::NamedElement,context:XSD::XSDConcreteComponent):UML::Usage@pimUml
+	when{self.assertHasAppliesToType(context)}
+	
+{
+	name:='appliesTo';
+	
+	element.getNearestPackage().packagedElement+=result;
+	var appliesToTypeXSD:XSD::XSDTypeDefinition=self.referencedTypeDefinition(context);
+	var umlTypeSchema:UML::Package=appliesToTypeXSD.schema.mapAbstractXSDSchema();
+	var appliesToType:UML::NamedElement=
+		appliesToTypeXSD.mapAbstractXSDSchemaContent(umlTypeSchema).oclAsType(UML::NamedElement);
+	supplier+=appliesToType;
+	client+=element;
+	result.ApplyStereotype(NIEMMetadataApplicationStereotype);
+	
+}
+query XSD::XSDComplexTypeDefinition::isRole():Boolean=
+	self.resolvedElements()->exists(e|e.name.startsWith('RoleOf'));
+
+query XSD::XSDComplexTypeDefinition::resolvedElements():Sequence(XSD::XSDElementDeclaration)=
+	self.content->select(c|c.oclIsKindOf(XSD::XSDParticle)).oclAsType(XSD::XSDParticle).resolvedElements()->asSequence();
+query XSD::XSDParticle::resolvedElements():Sequence(XSD::XSDElementDeclaration)=self.content.resolvedElements();
+query XSD::XSDParticleContent::resolvedElements():Sequence(XSD::XSDElementDeclaration)=
+	switch{
+		case(self.oclIsKindOf(XSD::XSDElementDeclaration))  Sequence{self.oclAsType(XSD::XSDElementDeclaration).resolvedElementDeclaration};
+		case(self.oclIsKindOf(XSD::XSDModelGroup))  self.oclAsType(XSD::XSDModelGroup).contents.resolvedElements();
+		case(self.oclIsKindOf(XSD::XSDModelGroupDefinition))  self.oclAsType(XSD::XSDModelGroupDefinition).resolvedModelGroupDefinition.modelGroup.contents.resolvedElements();
+		else Sequence{};
+	};
+query XSD::XSDAnnotation::isAppinfoExternalAdapterTypeIndicator():Boolean=
+	self.getXSDAnnotationApplicationInformation().getElementElements()
+	->select(i|i.isAppinfoExternalAdapterTypeIndicatorElement())->notEmpty();
+
+query XSD::XSDAnnotation::isAppinfoAppliesTo():Boolean=
+	self.getXSDAnnotationApplicationInformation().getElementElements()
+	->select(i|i.isAppinfoAppliesToElement())->notEmpty();
+
+query XSD::XSDAnnotation::isAppinfoReferenceTarget():Boolean=
+	self.getXSDAnnotationApplicationInformation().getElementElements()
+	->select(i|i.isAppinfoReferenceTargetElement())->notEmpty();
+
+query XSD::XSDAnnotation::isAppinfoMetadataTypeBase():Boolean=
+	self.getXSDAnnotationApplicationInformation().getElementElements()
+	->select(i|i.isAppinfoBaseElement() and(
+			i.hasAppinfoStructuresAttribute('MetadataType')
+			or i.referencedTypeDefinition(self).annotation.isAppinfoMetadataTypeBase()
+		))->notEmpty();
+
+query XSD::XSDAnnotation::isAppinfoAssociationTypeBase():Boolean=
+	self.getXSDAnnotationApplicationInformation().getElementElements()
+	->select(i|i.isAppinfoBaseElement() and(
+			i.hasAppinfoStructuresAttribute('Association')
+			or i.referencedTypeDefinition(self).annotation.isAppinfoAssociationTypeBase()
+		))->notEmpty();
+
+query XSD::XSDAnnotation::isAppinfoStructuresAugmentationTypeBase():Boolean=
+	self.getXSDAnnotationApplicationInformation().getElementElements()
+	->select(i|i.isAppinfoBaseElement() and i.hasAppinfoStructuresAttribute('AugmentationType'))->notEmpty();
+query XSD::XSDAnnotation::isAppinfoStructuresMetadataTypeBase():Boolean=
+	self.getXSDAnnotationApplicationInformation().getElementElements()
+	->select(i|i.isAppinfoBaseElement() and i.hasAppinfoStructuresAttribute('MetadataType'))->notEmpty();
+
+query XSD::XSDAnnotation::getAppinfoBase():String{
+	self.getXSDAnnotationApplicationInformation().getElementElements()
+	->select(i|i.isAppinfoBaseElement() and i.hasAppinfoNamespaceAttribute(structuresNamespace)
+		and ((i.getAppInfoName()='Object')or(i.getAppInfoName()='Association'))
+		)->forEach(i){return i.getAppInfoName();};
+	return null;
+};
+query XSD::XSDAnnotation::isAppinfoStructuresObjectBase():Boolean=
+	self.getXSDAnnotationApplicationInformation().getElementElements()
+	->select(i|i.isAppinfoBaseElement() and (
+		i.hasAppinfoStructuresAttribute('Object')
+		or i.referencedTypeDefinition(self).annotation.isAppinfoStructuresObjectBase()
+		))
+	->notEmpty();
+
+query OclAny::isAppinfoAugmentedTypeIndicator():Boolean=self.isAppinfo2Element() and (self.getElementName()='AugmentedTypeIndicator');
+query OclAny::isAppinfoAugmentedElementIndicator():Boolean=self.isAppinfo2Element() and (self.getElementName()='AugmentedElementIndicator');
+query OclAny::isAppinfoDeprecatedElement():Boolean=self.isAppinfoElement() and (self.getElementName()='Deprecated');
+query OclAny::isAppinfoConformantIndicatorElement():Boolean=self.isAppinfoElement() and (self.getElementName()='ConformantIndicator');
+query OclAny::isAppinfoExternalAdapterTypeIndicatorElement():Boolean=self.isAppinfoElement() and (self.getElementName()='ExternalAdapterTypeIndicator');
+query OclAny::isAppinfoBaseElement():Boolean=self.isAppinfoElement() and (self.getElementName()='Base');
+query OclAny::isAppinfoAppliesToElement():Boolean=self.isAppinfoElement() and (self.getElementName()='AppliesTo');
+query OclAny::isAppliesToGeneric():Boolean=self.getAppInfoNamespace()=structuresNamespace;
+query OclAny::hasAppinfoStructuresAttribute(name:String):Boolean=self.hasAppinfoNamespaceAttribute(structuresNamespace)and self.hasAppinfoNameAttribute(name);
+query OclAny::isAppinfo2Element():Boolean=self.getElementNamespace()=appinfo2Namespace;
+query OclAny::referencedElementDeclaration(context:XSD::XSDConcreteComponent):XSD::XSDElementDeclaration=
+	// self is a DOM Element
+	self.referencedSchemas(context).contents->select(s|s.oclIsKindOf(XSD::XSDElementDeclaration) and
+		(s.oclAsType(XSD::XSDElementDeclaration).name=self.getAppInfoName())
+		).oclAsType(XSD::XSDElementDeclaration)
+	->asSequence()->first();
+//////////////////////////////////////////// 
+
+mapping XSD::XSDComplexTypeDefinition::XSDTypeDefinition_StructuredClassifier(umlContainer:UML::Element):UML::Class@pimUml
+	inherits XSD::XSDComplexTypeDefinition::NDRComplexTypeDefinition
+		
+	{
+	init{}
+}
+mapping XSD::XSDComplexTypeDefinition::XSDTypeDefinition_Class(umlContainer:UML::Element):UML::Class@pimUml
+	inherits 
+	XSD::XSDComplexTypeDefinition::XSDTypeDefinition_StructuredClassifier 
+	{
+}
+mapping XSD::XSDComplexTypeDefinition::XSDTypeDefinition_Class_AssociationType(umlContainer:UML::Element):UML::Class@pimUml 
+	inherits
+	 
+		XSD::XSDComplexTypeDefinition::XSDTypeDefinition_Class,
+		XSD::XSDTypeDefinition::XSDTypeDefinition_AssociationType
+		when{self.isAssociationType()}
+	{
+}
+mapping XSD::XSDTypeDefinition::XSDTypeDefinition_AssociationType(umlContainer:UML::Element):UML::Classifier@pimUml 
+	{
+	init{}
+	result.ApplyStereotype(NIEMAssociationStereotype);
+}
+mapping XSD::XSDComplexTypeDefinition::XSDTypeDefinition_Class_AugmentationType(umlContainer:UML::Element):UML::Class@pimUml 
+	inherits 
+		XSD::XSDComplexTypeDefinition::XSDTypeDefinition_Class,
+		XSD::XSDTypeDefinition::XSDTypeDefinition_AugmentationType
+		when{self.isAugmentationType()}
+	{
+}
+mapping XSD::XSDTypeDefinition::XSDTypeDefinition_AugmentationType(umlContainer:UML::Element):UML::Classifier@pimUml 
+	{
+	init{}
+	result.ApplyStereotype(NIEMAugmentationStereotype);
+		self.annotation.applyAppliesToAugmentation(result);
+}
+mapping XSD::XSDComplexTypeDefinition::XSDTypeDefinition_Class_MetadataType(umlContainer:UML::Element):UML::Class@pimUml 
+	inherits 
+		XSD::XSDComplexTypeDefinition::XSDTypeDefinition_Class,
+		XSD::XSDTypeDefinition::XSDTypeDefinition_MetadataType
+		when{self.isMetadataType()}
+	{
+}
+mapping XSD::XSDTypeDefinition::XSDTypeDefinition_MetadataType(umlContainer:UML::Element):UML::Classifier@pimUml 
+	{
+	init{}
+	result.ApplyStereotype(NIEMMetadataStereotype);
+		self.annotation.applyAppliesToMetadata(result);
+}
+mapping XSD::XSDComplexTypeDefinition::XSDTypeDefinition_Class_AdapterType(umlContainer:UML::Element):UML::Class@pimUml 
+	inherits 
+		XSD::XSDComplexTypeDefinition::XSDTypeDefinition_Class,
+		XSD::XSDTypeDefinition::XSDTypeDefinition_AdapterType
+		when{self.annotation.isAppinfoExternalAdapterTypeIndicator()}
+	{
+}
+mapping XSD::XSDTypeDefinition::XSDTypeDefinition_AdapterType(umlContainer:UML::Element):UML::Classifier@pimUml 
+	{
+	init{}
+	result.ApplyStereotype(NIEMAdapterStereotype);
+}
+mapping XSD::XSDComplexTypeDefinition::XSDTypeDefinition_Class_ObjectType(umlContainer:UML::Element):UML::Class@pimUml 
+	inherits 
+		XSD::XSDComplexTypeDefinition::XSDTypeDefinition_Class,
+		XSD::XSDTypeDefinition::XSDTypeDefinition_ObjectType
+	{
+}
+mapping XSD::XSDTypeDefinition::XSDTypeDefinition_ObjectType(umlContainer:UML::Element):UML::Classifier@pimUml 
+	{
+	init{}
+}
+mapping XSD::XSDComplexTypeDefinition::XSDComplexTypeDefinition_PrimitiveType(umlContainer:UML::Element):UML::PrimitiveType@pimUml 
+	inherits XSD::XSDComplexTypeDefinition::XSDComplexTypeDefinitionCommon
+	when{self.isPrimitiveType()}
+{
+	init{
+	}
+	self.attributeContents.attributeGroupContent(result,result);
+	self.attributeWildcardContent.map XSDWildcard(result).name:='anyAttribute';
+	self.syntheticWildcard.map XSDWildcard(result).name:='anyAttribute';
+	
+}
+	
+mapping XSD::XSDSimpleTypeDefinition::XSDTypeDefinition_PrimitiveType(umlContainer:UML::Element):UML::PrimitiveType@pimUml 
+	inherits XSD::XSDSimpleTypeDefinition::XSDSimpleTypeDefinition
+	when{self.isPrimitiveType()}
+{
+	// need to distinguish between primitives which were simpleTypeDefinitions: so these always get a stereotype
+	var psmSimpleTypeDefinitionInstance:Stdlib::Element=result.ApplyStereotype(NIEMSimpleTypeStereotype);
+	if(self.facetContents->notEmpty())then{
+	self.facetContents->forEach(rule){
+		switch{
+			case(rule.oclIsKindOf(XSD::XSDFractionDigitsFacet))
+				psmSimpleTypeDefinitionInstance.setNIEMSimpleTypeFractionDigits(rule.oclAsType(XSD::XSDFractionDigitsFacet).value);
+			case(rule.oclIsKindOf(XSD::XSDMaxExclusiveFacet))
+				psmSimpleTypeDefinitionInstance.setNIEMSimpleTypeMaxExclusive(rule.oclAsType(XSD::XSDMaxExclusiveFacet).value.repr());
+			case(rule.oclIsKindOf(XSD::XSDMaxInclusiveFacet))
+				psmSimpleTypeDefinitionInstance.setNIEMSimpleTypeMaxInclusive(rule.oclAsType(XSD::XSDMaxInclusiveFacet).value.repr());
+			case(rule.oclIsKindOf(XSD::XSDPatternFacet))
+				psmSimpleTypeDefinitionInstance.setNIEMSimpleTypePattern(rule.oclAsType(XSD::XSDPatternFacet).value->asSequence());
+			case(rule.oclIsKindOf(XSD::XSDTotalDigitsFacet))
+				psmSimpleTypeDefinitionInstance.setNIEMSimpleTypeTotalDigits(rule.oclAsType(XSD::XSDTotalDigitsFacet).value);
+			case(rule.oclIsKindOf(XSD::XSDWhiteSpaceFacet)){
+				//psmSimpleTypeDefinitionInstance.setNIEMSimpleTypeWhiteSpace(rule.oclAsType(XSD::XSDWhiteSpaceFacet).value.repr());
+				var restrictionInstance:Stdlib::Element=result.ApplyStereotype(NIEMRepresentationRestrictionStereotype).oclAsType(Stdlib::Element);
+				restrictionInstance.setNIEMSimpleTypeWhiteSpace(rule.oclAsType(XSD::XSDWhiteSpaceFacet).value.repr());
+				};
+			case(rule.oclIsKindOf(XSD::XSDLengthFacet))
+				psmSimpleTypeDefinitionInstance.setNIEMSimpleTypeLength(rule.oclAsType(XSD::XSDLengthFacet).value);
+			case(rule.oclIsKindOf(XSD::XSDMinExclusiveFacet))
+				psmSimpleTypeDefinitionInstance.setNIEMSimpleTypeMinExclusive(rule.oclAsType(XSD::XSDMinExclusiveFacet).value.repr());
+			case(rule.oclIsKindOf(XSD::XSDMinInclusiveFacet))
+				psmSimpleTypeDefinitionInstance.setNIEMSimpleTypeMinInclusive(rule.oclAsType(XSD::XSDMinInclusiveFacet).value.repr());
+			case(rule.oclIsKindOf(XSD::XSDMaxLengthFacet))
+				psmSimpleTypeDefinitionInstance.setNIEMSimpleTypeMaxLength(rule.oclAsType(XSD::XSDMaxLengthFacet).value);
+			case(rule.oclIsKindOf(XSD::XSDMinLengthFacet))
+				psmSimpleTypeDefinitionInstance.setNIEMSimpleTypeMinLength(rule.oclAsType(XSD::XSDMinLengthFacet).value);
+			
+		};
+	};
+	}endif;
+}
+query XSD::XSDSimpleTypeDefinition::isUnionType():Boolean=self.variety.repr()='union';
+query XSD::XSDSimpleTypeDefinition::isListType():Boolean=self.variety.repr()='list';
+mapping XSD::XSDSimpleTypeDefinition::XSDTypeDefinition_UnionType(umlContainer:UML::Element):UML::PrimitiveType@pimUml 
+	inherits XSD::XSDSimpleTypeDefinition::XSDSimpleTypeDefinition
+	when{self.isUnionType()}
+{
+	result.ApplyStereotype(NIEMUnionTypeStereotype);
+}
+mapping XSD::XSDSimpleTypeDefinition::XSDTypeDefinition_ListType(umlContainer:UML::Element):UML::PrimitiveType@pimUml 
+	inherits XSD::XSDSimpleTypeDefinition::XSDSimpleTypeDefinition
+	when{self.isListType()}
+{
+	result.ApplyStereotype(NIEMListTypeStereotype);
+}
+query XSD::XSDTypeDefinition::isXmlToken():Boolean{
+	switch{
+		case(self.oclIsKindOf(XSD::XSDSimpleTypeDefinition)and (self.name='token')and(self.schema.targetNamespace=schemaForSchemaNamespace)){
+			return true;
+		}
+	};
+	return false;
+}
+mapping XSD::XSDTypeDefinition::BaseTypeDefinition_lib(generalSupplier:UML::Classifier,specificClient:UML::Classifier):UML::Generalization@pimUml
+	when{
+		not(specificClient.oclIsKindOf(UML::Enumeration))
+		and (self.baseType.schema.targetNamespace<>structuresSchemaNamespace)
+		and (
+				(specificClient.oclIsKindOf(UML::Class) and generalSupplier.oclIsKindOf(UML::Class))
+				or(specificClient.oclIsKindOf(UML::PrimitiveType) and generalSupplier.oclIsKindOf(UML::PrimitiveType))
+			)
+	}
+{	
+		specific:=specificClient;
+		general:=generalSupplier;
+}
+
+mapping XSD::XSDComplexTypeDefinition::BaseTypeDefinition_restriction(generalSupplier:UML::Classifier,specificClient:UML::Classifier):UML::Realization@pimUml
+	when{
+		(self.derivationMethod.repr()='restriction')
+		and (specificClient.oclIsKindOf(UML::Class) and generalSupplier.oclIsKindOf(UML::Class))
+	}
+{	
+		client+=specificClient;
+		supplier+=generalSupplier;
+		specificClient.getNearestPackage().packagedElement+=result;
+	result.ApplyStereotype(NIEMRestrictionStereotype);
+}
+
+mapping XSD::XSDComplexTypeDefinition::BaseTypeDefinition_simpleContent_lib(generalSupplier:UML::PrimitiveType,specificClient:UML::Classifier):UML::Realization@pimUml
+	when{
+		not(specificClient.oclIsKindOf(UML::Enumeration))
+		and generalSupplier.oclIsKindOf(UML::PrimitiveType)
+		
+		 and (
+		 	not(self.baseTypeDefinition.oclIsKindOf(XSD::XSDComplexTypeDefinition))
+		 	or (self.baseTypeDefinition.schema.targetNamespace=proxySchemaNamespace)
+		 )
+		 }
+{	
+		client+=specificClient;
+		supplier+=generalSupplier;
+		specificClient.getNearestPackage().packagedElement+=result;
+	result.ApplyStereotype(NIEMSimpleContentStereotype);
+}
+
+mapping XSD::XSDTypeDefinition::BaseTypeDefinition_primitiveType(generalSupplier:UML::PrimitiveType,specificClient:UML::PrimitiveType):UML::Generalization@pimUml
+	when{
+		(self.baseType.schema.targetNamespace<>structuresSchemaNamespace)
+		and generalSupplier.oclIsKindOf(UML::PrimitiveType)
+		and specificClient.oclIsKindOf(UML::PrimitiveType)
+	}
+{	
+		specific:=specificClient;
+		general:=generalSupplier;
+}
+
+mapping XSD::XSDTypeDefinition::BaseTypeDefinition_enumeration(generalSupplier:UML::Enumeration,specificClient:UML::Enumeration):UML::Generalization@pimUml
+when{
+		 generalSupplier.oclIsKindOf(UML::Enumeration)
+		and specificClient.oclIsKindOf(UML::Enumeration)
+}
+{	
+		specific:=specificClient;
+		general:=generalSupplier;
+}
+
+mapping XSD::XSDTypeDefinition::BaseTypeDefinition_enumeration_simpleContent(general:UML::DataType,specificClient:UML::Enumeration):UML::Realization@pimUml
+	when{
+		not(self.baseType.isXmlToken())
+		and (self.baseType.schema.targetNamespace<>structuresSchemaNamespace)
+		and general.oclIsKindOf(UML::DataType)
+		and specificClient.oclIsKindOf(UML::Enumeration)
+	}
+{	
+		client+=specificClient;
+		supplier+=general;
+		specificClient.getNearestPackage().packagedElement+=result;
+		// TODO: change to Restriction?
+		result.ApplyStereotype(NIEMSimpleContentStereotype);
+		
+}
+
+mapping 	XSD::XSDSchema::XSDSchema():UML::Package@pimUml //inherits XSD::XSDScope::XSDScope
+{
+	log('XSDSchema '+self.targetNamespace+' at '+self.schemaLocation+', extent '+self.extent().contextURI().repr());
+	name:=self.extent().contextURI();
+		self.contentmapAbstractXSDSchemaContent(result);
+}
+
+mapping 	XSD::XSDAnnotation::XSDAnnotation(inout owner:UML::Element):UML::Comment@pimUml
+{
+	init{}
+	owner.ownedComment+=result;
+	annotatedElement+=owner;
+}
+mapping 	XSD::XSDNotationDeclaration::XSDNotationDeclaration(owner:UML::Element):UML::EnumerationLiteral@pimUml
+ 	inherits XSD::XSDNamedComponent::XSDNamedComponent
+{
+	init{}
+	owner.oclAsType(UML::Package).packagedElement+=result;
+	self.annotation.mapXSDAnnotation(result);
+}
+
+mapping 	XSD::XSDIdentityConstraintDefinition::XSDIdentityConstraintDefinition(owner:UML::Element):UML::Constraint@pimUml
+ 	inherits XSD::XSDNamedComponent::XSDNamedComponent
+{
+	init{}
+	owner->switch(context){
+		case (context.oclIsKindOf(UML::Namespace)) context.oclAsType(UML::Namespace).ownedRule+=result;
+		else context.owner.oclAsType(UML::Namespace).ownedRule+=result;
+	};
+	constrainedElement:=owner;
+	if(not(self.referencedKey.oclIsUndefined()))then{
+		var umlPropertyOwner:UML::Property=self.referencedKey.container.oclAsType(XSD::XSDSchemaContent).resolveSchemaContentReference().oclAsType(UML::Property);
+		var constraint:UML::Constraint=self.referencedKey.map XSDIdentityConstraintDefinition(umlPropertyOwner);
+		constrainedElement+=constraint;
+	}endif;
+	self.selector.map XSDXPathDefinition(result);
+	self.fields.map XSDXPathDefinition(result);
+	self.annotation.mapXSDAnnotation(result);
+}
+mapping 	XSD::XSDXPathDefinition::XSDXPathDefinition(inout owner:UML::Element):UML::Comment@pimUml
+{
+	init{}
+	owner.ownedComment+=result;
+	annotatedElement+=owner;
+	self.annotation.mapXSDAnnotation(result);
+}
+mapping 	XSD::XSDTypeDefinition::XSDTypeDefinition(owner:UML::Element):UML::Classifier@pimUml
+ 	inherits XSD::XSDRedefinableComponent::XSDRedefinableComponent
+{
+	init{}
+	owner->switch(context){
+		case(context.oclIsKindOf(UML::Package))context.oclAsType(UML::Package).packagedElement+=result;
+		else context.oclAsType(UML::Class).nestedClassifier+=result;
+	};
+	self.annotation.mapXSDAnnotation(result);
+	self.derivationAnnotation.mapXSDAnnotation(result);
+}
+mapping 	XSD::XSDSimpleTypeDefinition::XSDSimpleTypeDefinitionDataType(umlContainer:UML::Element):UML::DataType@pimUml
+ 	inherits XSD::XSDSimpleTypeDefinition::XSDSimpleTypeDefinition
+{
+	init{}
+}
+
+mapping 	XSD::XSDComplexTypeDefinition::XSDComplexTypeDefinitionCommon(umlContainer:UML::Element):UML::Classifier@pimUml
+ 	inherits XSD::XSDTypeDefinition::XSDTypeDefinition
+{
+	init{}
+	// ownership aestablished by XSDTypeDefinition
+
+	isAbstract:=self._abstract;
+	self.contentAnnotation.mapXSDAnnotation(result);
+	if(not(self.baseTypeDefinition.oclIsUndefined() or (self=self.baseTypeDefinition) or self.baseTypeDefinition.isAnyType()))then{
+		var resolvedSchemaContentReference:UML::NamedElement=self.baseTypeDefinition.resolveSchemaContentReference();
+		if(not(resolvedSchemaContentReference.oclIsUndefined()))then{
+			self.map AbstractBaseTypeDefinition(resolvedSchemaContentReference.oclAsType(UML::Classifier),result);
+		}endif;
+	}endif;
+}
+mapping 	XSD::XSDFeature::XSDFeature(umlOwningClassifier:UML::Element):UML::Property@pimUml
+ 	inherits XSD::XSDNamedComponent::XSDNamedComponent
+{
+	init{}
+	// in case classifier was already established or switched
+	if(result.owner.oclIsUndefined())then{
+		umlOwningClassifier->switch(context) {
+			case (context.oclIsKindOf(UML::Classifier)) context.oclAsType(UML::Classifier).setOwnedAttribute(result);
+			else {
+				var umlSchema:UML::Package=context.oclAsType(UML::Package);
+				var className:String=self.getSchemaFeatureClassName();
+				var featureClass:UML::Class=className.getSchemaLevelFeatureClass(umlSchema);
+				if(result.owner.oclIsUndefined())then{
+					featureClass.setOwnedAttribute(result);
+				}endif;	
+			};
+		};
+	}endif;
+	aggregation:=UML::AggregationKind::composite;
+}
+
+
+mapping 	XSD::XSDModelGroupDefinition::XSDModelGroupDefinition(umlContainer:UML::Element):UML::Class@pimUml
+ 	inherits XSD::XSDRedefinableComponent::XSDRedefinableComponent
+{
+	init{}
+	var modelGroupPackage:UML::Package=self.getSchemaContentPackage();
+	modelGroupPackage.packagedElement+=result;
+	self.annotation.mapXSDAnnotation(result);
+	self.ModelGroupDefinition(result);
+	if(result.name.oclIsUndefined())then{name:='nested_ModelGroupDefinition';}endif;
+}
+
+mapping 	XSD::XSDAttributeDeclaration::XSDAttributeDeclaration(umlContainer:UML::Element):UML::Property@pimUml
+ 	inherits XSD::XSDFeature::XSDFeature
+{
+	init{}
+	// ownership set by XSDFeature
+	self.resolvedAttributeDeclaration.annotation.mapXSDAnnotation(result);
+	if(self.anonymousTypeDefinition.oclIsUndefined())then{
+		var umlType:UML::NamedElement=self.typeDefinition.resolveSchemaContentReference();
+		if(not(umlType.oclIsUndefined()))then{
+		type:=umlType.oclAsType(UML::Classifier);
+		}endif;
+
+	}else{
+		var umlOwningClass:UML::Class=self.umlOwningClassProxy(result);
+		type:=self.anonymousTypeDefinition.map AbstractXSDSchemaContent(umlOwningClass).oclAsType(UML::Type);
+		
+	}endif;
+	if(self.attributeDeclarationReference)then{
+		var referencedAttributeDeclaration:XSD::XSDAttributeDeclaration=self.resolvedAttributeDeclaration;
+		var referencedUmlAttribute:UML::Property=referencedAttributeDeclaration.resolveSchemaContentReference().oclAsType(UML::Property);
+		name:=referencedAttributeDeclaration.name;
+		if(not(referencedUmlAttribute.oclIsUndefined()))then{
+		self.reference(result,referencedUmlAttribute,'ref');
+		}endif;
+		var umlType:UML::NamedElement=null;
+		if(referencedAttributeDeclaration.anonymousTypeDefinition.oclIsUndefined())then{
+			umlType:=referencedAttributeDeclaration.typeDefinition.resolveSchemaContentReference();
+			
+		}else{
+			var umlOwningClass:UML::Class=referencedAttributeDeclaration.umlOwningClassProxy(referencedUmlAttribute);
+			umlType:=referencedAttributeDeclaration.anonymousTypeDefinition.map AbstractXSDSchemaContent(umlOwningClass).oclAsType(UML::NamedElement);
+			
+			
+		}endif;
+		if(not(umlType.oclIsUndefined()))then{
+			type:=umlType.oclAsType(UML::Classifier);
+		}endif;
+		
+	}endif;
+}
+mapping 	XSD::XSDAttributeGroupDefinition::XSDAttributeGroupDefinition(umlContainer:UML::Element):UML::Class@pimUml
+ 	inherits XSD::XSDRedefinableComponent::XSDRedefinableComponent
+{
+	init{}
+	// owner is nominally the top level attributeGroupPackage, may become nested in another attributeGroupDefinition
+	 var attributeGroupPackage:UML::Package=self.getSchemaContentPackage();
+		attributeGroupPackage.packagedElement+=result;
+	self.annotation.mapXSDAnnotation(result);
+	self.contents.attributeGroupContent(result,result);
+	self.attributeWildcardContent.map XSDWildcard(result).name:='anyAttribute';
+	self.syntheticWildcard.map XSDWildcard(result).name:='anyAttribute';
+}
+
+mapping 	XSD::XSDWildcard::XSDWildcard(umlContainer:UML::Element):UML::Property@pimUml
+{
+	init{}
+	// container must be a ComplexTypeDefinition or AttributeGroupDefinition either of which are a Classifier
+	umlContainer.oclAsType(UML::Classifier).setOwnedAttribute(result);
+		var targetWildcardInstance:Stdlib::Element=result.ApplyStereotype(NIEMAnyPropertyStereotype);
+		targetWildcardInstance.setNIEMAnyPropertyProcessContents(
+			switch{
+				case (self.processContents=XSDProcessContents::lax)'lax';
+				case (self.processContents=XSDProcessContents::strict)'strict';
+				else 'skip';
+				}
+			);
+		self.lexicalNamespaceConstraint
+			->forEach(namespaceConstraint){
+				targetWildcardInstance.setNIEMAnyPropertyValueNamespace(namespaceConstraint);
+			};
+	self.annotation.mapXSDAnnotation(result);
+}
+mapping 	XSD::XSDNamedComponent::XSDNamedComponent(umlContainer:UML::Element):UML::NamedElement@pimUml
+{
+	init{}
+	name:=if(self.name.oclIsUndefined())then self.aliasName else self.name endif;
+}
+mapping 	XSD::XSDRedefinableComponent::XSDRedefinableComponent(umlContainer:UML::Element):UML::NamedElement@pimUml
+ 	inherits XSD::XSDNamedComponent::XSDNamedComponent
+{
+	init{}
+}
+mapping 	XSD::XSDImport::XSDImport_init(umlContainer:UML::Element):UML::ElementImport@pimUml
+ 	inherits XSD::XSDSchemaDirective::XSDSchemaDirective
+{
+	init{
+		result.importingNamespace:=self.schema.mapAbstractXSDSchema();
+
+	}
+}
+mapping 	XSD::XSDImport::XSDImport(umlContainer:UML::Element):UML::ElementImport@pimUml
+ 	inherits XSD::XSDImport::XSDImport_init
+{
+	init{
+	}
+	self.annotation.mapXSDAnnotation(result);
+	////////////////////////////////////////
+	self.importSchema();
+	assert error (not(self.resolvedSchema.oclIsUndefined())) with log('failed to resolve schema at '+self.schemaLocation+' from schema '+self.schema.targetNamespace+' at '+self.schema.schemaLocation);
+	importedElement:=self.resolvedSchema.mapAbstractXSDSchema();
+}
+mapping 	XSD::XSDInclude::XSDInclude(umlContainer:UML::Element):UML::PackageImport@pimUml
+ 	inherits XSD::XSDSchemaCompositor::XSDSchemaCompositor
+{
+	init{
+		result.importingNamespace:=self.schema.mapAbstractXSDSchema();
+	}
+	self.annotation.mapXSDAnnotation(result);
+}
+
+mapping 	XSD::XSDSchemaDirective::XSDSchemaDirective(umlContainer:UML::Element):UML::DirectedRelationship@pimUml
+{
+	init{}
+}
+
+mapping 	XSD::XSDRedefine::XSDRedefine(umlContainer:UML::Element):UML::Package@pimUml
+{
+	init{
+		self.schema.mapAbstractXSDSchema().packagedElement+=result;
+
+	}
+	var packageImport:UML::PackageImport=new UML::PackageImport@pimUml();
+	packageImport.importingNamespace:=result;
+	packageImport.importedPackage:=self.resolvedSchema.mapAbstractXSDSchema();
+	self.contents.mapAbstractXSDSchemaContent(result);
+}
+mapping 	XSD::XSDSchemaCompositor::XSDSchemaCompositor(umlContainer:UML::Element):UML::PackageImport@pimUml
+ 	inherits XSD::XSDSchemaDirective::XSDSchemaDirective
+{
+	init{
+		result.importingNamespace:=self.schema.mapAbstractXSDSchema();
+
+	}
+	////////////////////////////////
+	if(self.resolvedSchema.oclIsUndefined())then{
+		log('ERROR: failed to resolve schema at '+self.schemaLocation+' from '+self.schema.targetNamespace+' at '+self.schema.schemaLocation);
+	}else{importedPackage:=self.resolvedSchema.mapAbstractXSDSchema();}endif;
+
+
+}
+mapping XSD::XSDModelGroup::XSDModelGroup(umlContainer:UML::Element):UML::Class@pimUml
+{
+	init{}
+	// temporary owner is schema, caller should adjust owner
+	self.schema.mapAbstractXSDSchema().packagedElement+=result;
+
+	self.ModelGroup(result);
+}
+
+ mapping 	XSD::XSDElementDeclaration::XSDElementDeclaration(umlOwningClass:UML::Element):UML::Property@pimUml
+ 	inherits XSD::XSDFeature::XSDFeature
+{
+	init{}
+// stereotype if nillable
+	var targetStereotypeInstance:Stdlib::Element=result.ApplyStereotype(NIEMPropertyStereotype);
+	targetStereotypeInstance.setNIEMPropertyNillable(self.resolvedElementDeclaration.nillable);
+	targetStereotypeInstance.setNIEMPropertyKind('element');
+	var resolvedElementDeclaration:XSD::XSDElementDeclaration=self.resolvedElementDeclaration;
+
+	self.resolvedElementDeclaration.annotation.mapXSDAnnotation(result);
+	if(self.anonymousTypeDefinition.oclIsUndefined())then{
+		var umlType:UML::NamedElement=self.typeDefinition.resolveSchemaContentReference();
+		if(not(umlType.oclIsUndefined()))then{
+			type:=umlType.oclAsType(UML::Classifier);
+		}endif;
+
+	}else{
+		var umlOwningClassProxy:UML::Class=self.umlOwningClassProxy(result);
+		type:=self.anonymousTypeDefinition.map AbstractXSDTypeDefinition(umlOwningClassProxy);
+	}endif;
+	self.identityConstraintDefinitions.map XSDIdentityConstraintDefinition(result);
+	if(self.elementDeclarationReference)then{
+		name:=resolvedElementDeclaration.name;
+		// type, cardinality via particle, reference for eanother namespace
+		var umlType:UML::NamedElement=resolvedElementDeclaration.typeDefinition.resolveSchemaContentReference();
+		if(not(umlType.oclIsUndefined()))then{
+			type:=umlType.oclAsType(UML::Classifier);
+		}endif;
+		// reference if another schema, a subset cluster; suppress if ref to structures schema (for sequenceID)
+		// just make the references anyway and clean up later
+			var resolvedElement:UML::NamedElement=resolvedElementDeclaration.resolveSchemaContentReference();
+			if(not(resolvedElement.oclIsUndefined()))then{
+				resolvedElement.map PropertyReference(result);
+			}endif;
+		// and copy comments if none locally
+		if(self.annotation.userInformation->isEmpty())then{
+			resolvedElementDeclaration.annotation.mapXSDAnnotation(result);
+		}endif;
+		
+	}endif;
+	
+	if(resolvedElementDeclaration.typeDefinition.isRoleReference())then{
+		aggregation:=UML::AggregationKind::none;
+		var referenceTarget:UML::Classifier=resolvedElementDeclaration.getPimReferenceTarget().oclAsType(UML::Classifier);
+		 type:=referenceTarget;
+		 if(not(type.oclIsUndefined()) and self.elementDeclarationReference)then{
+		 	// make an association, this is an associationEnd other associationEnd owned by Association
+		 	var association:UML::Association=new UML::Association@pimUml();
+		 	result.getNearestPackage().packagedElement+=association;
+		 	association.memberEnd+=result;
+		 	var otherProperty:UML::Property=new UML::Property@pimUml();
+		 	otherProperty.type:=result.owner.oclAsType(UML::Type);
+		 	otherProperty.aggregation:=UML::AggregationKind::none;
+			otherProperty.setLower(0);
+			otherProperty.setUpper(-1);
+			otherProperty.isDerived:=false;
+			otherProperty.isReadOnly:=false;
+			otherProperty.isOrdered:=false;
+			otherProperty.isUnique:=false;
+		 	association.ownedEnd+=otherProperty;
+		 }endif;
+	}else{
+		// if type is not primitive, make an association, this is an associationEnd other associationEnd owned by Association
+		if(not(result.type.oclIsUndefined()) 
+			and result.type.oclIsKindOf(UML::Class) 
+			and self.elementDeclarationReference
+		)then{
+		 	var association:UML::Association=new UML::Association@pimUml();
+		 	result.getNearestPackage().packagedElement+=association;
+		 	association.memberEnd+=result;
+		 	var otherProperty:UML::Property=new UML::Property@pimUml();
+		 	otherProperty.type:=result.owner.oclAsType(UML::Type);
+		 	otherProperty.aggregation:=UML::AggregationKind::none;
+			otherProperty.setLower(1);
+			otherProperty.setUpper(1);
+			otherProperty.isDerived:=false;
+			otherProperty.isReadOnly:=false;
+			otherProperty.isOrdered:=false;
+			otherProperty.isUnique:=false;
+		 	association.ownedEnd+=otherProperty;
+		}endif;
+		
+	}endif;
+	
+	
+	if(resolvedElementDeclaration.isSubstitutionGroupHead())then{
+		isDerivedUnion:=true;
+	}endif;
+	if(not(self.substitutionGroupAffiliation.oclIsUndefined()))then{
+		var umlType:UML::NamedElement=self.substitutionGroupAffiliation.resolveSchemaContentReference();
+		if(not(umlType.oclIsUndefined()))then{
+			subsettedProperty+=umlType.oclAsType(UML::Property);
+			self.reference(result,umlType,substitutionGroupAffiliationTag);// a transitory relation, will be remove later
+		}endif;
+	}endif;
+}
+query XSD::XSDTypeDefinition::isRoleReference():Boolean=(self.name='ReferenceType') and (self.schema.targetNamespace=structuresSchemaNamespace);
+query XSD::XSDElementDeclaration::getPimReferenceTarget():UML::Type{
+	// determine base
+	self.annotation.getXSDAnnotationApplicationInformation().getElementElements()
+		->select(i|i.isAppinfoReferenceTargetElement())->forEach(ref){
+			var appliesToTypeXSD:XSD::XSDTypeDefinition=ref.referencedTypeDefinition(self);
+			if(appliesToTypeXSD.oclIsUndefined())then{
+				return null;
+			}else{}endif;
+			return appliesToTypeXSD.resolveSchemaContentReference().oclAsType(UML::Type);
+	};
+	return null;
+}
+
+query XSD::XSDElementDeclaration::isSubstitutionGroupHead():Boolean=
+	 (self.typeDefinition.oclIsUndefined())
+	or (self.typeDefinition.isAnyType())
+	;
+
+mapping UML::NamedElement::PropertyReference(clientFeature:UML::Property):UML::Realization@pimUml
+	// do not hook up unless supplier is another schema or is a subset cluster 
+	// suppress hookup if reference is to structures schema (for sequenceID)
+{
+	client+=clientFeature;	
+	clientFeature.getNearestPackage().packagedElement+=result;
+	supplier+=self;
+	result.ApplyStereotype(NIEMReferencesStereotype);
+}
+
+mapping 	XSD::XSDComplexTypeDefinition::XSDComplexTypeDefinition(umlContainer:UML::Element):UML::Class@pimUml
+ 	inherits XSD::XSDComplexTypeDefinition::XSDComplexTypeDefinitionCommon
+{
+	init{}
+	// owner established by XSDTypeDefinition, stereotype established by XSDComplexTypeDefinitionCommon
+	
+	if(not(self.content.oclIsUndefined()))then{
+		self.content.oclAsType(XSD::XSDParticle)->forEach(particle){
+			particle.content.ParticleContent(result,particle);
+		};
+	}endif;
+	self.attributeContents.attributeGroupContent(result,result);
+	self.attributeWildcardContent.map XSDWildcard(result).name:='anyAttribute';
+	self.syntheticWildcard.map XSDWildcard(result).name:='anyAttribute';
+}
+
+mapping 	XSD::XSDComplexTypeDefinition::XSDComplexTypeDefinitionDataType(umlContainer:UML::Element):UML::DataType@pimUml
+ 	inherits XSD::XSDComplexTypeDefinition::XSDComplexTypeDefinitionCommon
+ 	when{not(self.content.oclIsUndefined()) and self.content.oclIsKindOf(XSD::XSDSimpleTypeDefinition)}
+{
+	init{}
+	// owner established by XSDTypeDefinition, stereotype established by XSDComplexTypeDefinitionCommon
+	// simpleType folded into same uml class
+	self.content.oclAsType(XSD::XSDSimpleTypeDefinition)->forEach(simpleTypeDefinition){
+		simpleTypeDefinition.simpleTypeDefinitionContent(result);
+		simpleTypeDefinition.annotation.mapXSDAnnotation(result);
+		simpleTypeDefinition.derivationAnnotation.mapXSDAnnotation(result);
+	};
+	var umlOwningClass:UML::Class=self.getSchemaFeatureClass(result);
+	self.attributeContents.attributeGroupContent(result,umlOwningClass);
+	self.attributeWildcardContent.map XSDWildcard(result).name:='anyAttribute';
+	self.syntheticWildcard.map XSDWildcard(result).name:='anyAttribute';
+}
+mapping 	XSD::XSDSimpleTypeDefinition::XSDSimpleTypeDefinition(umlContainer:UML::Element):UML::Classifier@pimUml
+ 	inherits XSD::XSDTypeDefinition::XSDTypeDefinition
+{
+	init{}
+	// owner established by XSDTypeDefinition
+	self.simpleTypeDefinitionContent(result);
+}
+
+//////////////////////////////////////////////////////////////////////////////////////constructors
+constructor UML::Class::Class(className:String){
+	name:=className;
+}
+
+constructor UML::Package::Package(className:String){
+	name:=className;
+}
+constructor UML::Realization::Realization(className:String){
+	name:=className;
+}
+constructor UML::Usage::Usage(className:String){
+	name:=className;
+}
+///////////////////////queries
+query XSD::XSDFeature::umlOwningClassProxy(umlProperty:UML::Property):UML::Class=
+	umlProperty.owner.oclAsType(UML::Classifier)->switch(test){
+		case(test.oclIsKindOf(UML::Class)) test.oclAsType(UML::Class);
+		else self.getSchemaFeatureClass(umlProperty);
+	}->asSequence()->first();
+abstract helper	XSD::XSDAttributeGroupContent::attributeGroupContent(inout umlClassifier:UML::Classifier,umlOwningClass:UML::Classifier);
+helper	XSD::XSDAttributeUse::attributeGroupContent(inout umlClassifier:UML::Classifier,umlOwningClass:UML::Classifier){
+	var useProperty:UML::Property=self.content.mapAbstractXSDSchemaContent(umlClassifier).oclAsType(UML::Property);
+	var literalString:UML::LiteralString=new UML::LiteralString@pimUml();
+	literalString.name:=self.constraint.repr();
+	literalString.value:=self.lexicalValue;
+	useProperty.defaultValue:=literalString;
+	useProperty.setLower(1);
+	useProperty.setUpper(1);
+	self.use->switch(use){
+		case (use=XSD::XSDAttributeUseCategory::optional) useProperty.setLower(0);
+		case (use=XSD::XSDAttributeUseCategory::required) 'doNothing';
+		else {
+			useProperty.setLower(0);
+			useProperty.setUpper(0);
+		};
+	};
+	return;
+}
+helper	XSD::XSDAttributeGroupDefinition::attributeGroupContent(inout umlClassifier:UML::Classifier,inout umlOwningClass:UML::Class){
+		var umlSchema:UML::Package=self.resolvedAttributeGroupDefinition.schema.mapAbstractXSDSchema();
+	if(umlSchema.oclIsUndefined())then{return;}endif;
+	var attributeGroupDefinitionProperty:UML::Property=new UML::Property@pimUml();
+	attributeGroupDefinitionProperty.name:=self.getComponentName();
+	umlClassifier.setOwnedAttribute(attributeGroupDefinitionProperty);
+
+	if(self.attributeGroupDefinitionReference)then{
+		// type of property is resolved group
+
+		attributeGroupDefinitionProperty.type:=
+			self.resolvedAttributeGroupDefinition.mapAbstractXSDSchemaContent(umlSchema).oclAsType(UML::Classifier);
+
+	}else{
+		// create nested classifier and it becomes type of property
+		var umlNestedClassifier:UML::Classifier=
+			self.mapAbstractXSDSchemaContent(umlOwningClass).oclAsType(UML::Classifier);
+		attributeGroupDefinitionProperty.type:=umlNestedClassifier;
+	}endif;
+}
+
+query XSD::XSDConcreteComponent::getSchemaContentPackage():UML::Package{
+	var umlSchema:UML::Package=self.schema.mapAbstractXSDSchema();
+
+	var packageName:String=self.getSchemaContentPackageName();
+
+	var schemaLevelPackage:UML::Package=umlSchema.nestedPackage->select(t|t.name=packageName)->asSequence()->first().oclAsType(UML::Package);
+	if(schemaLevelPackage.oclIsUndefined())then{
+		schemaLevelPackage:=new UML::Package@pimUml(packageName);
+		umlSchema.packagedElement+=schemaLevelPackage;
+		// we should apply stereotype now
+	}endif;
+	return schemaLevelPackage;
+
+}
+abstract query XSD::XSDConcreteComponent::getSchemaContentPackageName():String;
+query XSD::XSDModelGroupDefinition::getSchemaContentPackageName():String=modelGroupDefinitionPackageName;
+query XSD::XSDAttributeGroupDefinition::getSchemaContentPackageName():String=attributeGroupDefinitionPackageName;
+query XSD::XSDConcreteComponent::getSchemaFeatureClass(umlProperty:UML::NamedElement):UML::Class{
+	var umlSchema:UML::Package=umlProperty.getNearestPackage();
+	var className:String=self.getSchemaFeatureClassName();
+	return className.getSchemaLevelFeatureClass(umlSchema);
+}
+query XSD::XSDConcreteComponent::getSchemaFeatureClassName():String=elementDeclarationClassName;
+query XSD::XSDElementDeclaration::getSchemaFeatureClassName():String=elementDeclarationClassName;
+query XSD::XSDAttributeDeclaration::getSchemaFeatureClassName():String=attributeDeclarationClassName;
+
+helper String::getSchemaLevelFeatureClass(inout umlSchema:UML::Package):UML::Class{
+	var featureClass:UML::Class=umlSchema.packagedElement->select(t|t.name=self)->asSequence()->first().oclAsType(UML::Class);
+	if(featureClass.oclIsUndefined())then{
+		featureClass:=new UML::Class@pimUml(self);
+		umlSchema.packagedElement+=featureClass;
+		// we should apply stereotype now
+		var featureStereotype:UML::Stereotype=NIEMPropertyHolderStereotype;
+		var stereotypeInstance:Stdlib::Element=featureClass.ApplyStereotype(featureStereotype);
+		
+		
+	}endif;
+	return featureClass;
+}
+
+query XSD::XSDTypeDefinition::isAnyType():Boolean=self.name='anyType';
+query XSD::XSDTypeDefinition::isAnySimpleType():Boolean=self.name='anySimpleType';
+
+////////////////////////helpers
+abstract helper XSD::XSDParticleContent::ParticleContent(inout umlClass:UML::Class,in particle:XSD::XSDParticle);
+helper XSD::XSDElementDeclaration::ParticleContent(inout umlClass:UML::Class,in particle:XSD::XSDParticle){
+			var attribute:UML::Property=self.mapAbstractXSDSchemaContent(umlClass).oclAsType(UML::Property);
+	attribute.setLower(particle.minOccurs);
+	attribute.setUpper(particle.maxOccurs);
+}
+helper XSD::XSDModelGroup::ParticleContent(inout umlClass:UML::Class,in particle:XSD::XSDParticle){
+	// fold in
+	self.ModelGroup(umlClass);
+}
+helper XSD::XSDModelGroupDefinition::ParticleContent(inout umlClass:UML::Class,in particle:XSD::XSDParticle){
+	// fold in
+	self.ModelGroupDefinition(umlClass);
+}
+helper XSD::XSDWildcard::ParticleContent(inout umlClass:UML::Class,in particle:XSD::XSDParticle){
+	var attribute:UML::Property=self.map XSDWildcard(umlClass);
+	attribute.name:='any';
+	attribute.setLower(particle.minOccurs);
+	attribute.setUpper(particle.maxOccurs);
+}
+helper XSD::XSDConcreteComponent::reference(inout umlOwner:UML::NamedElement,
+	 in resolvedDeclarationReference:UML::NamedElement,referenceName:String):UML::Realization{
+	 	if(resolvedDeclarationReference.oclIsUndefined())then{
+	 		log('ERROR: reference supplier undefined for client '+umlOwner.qualifiedName);
+	 	}endif;
+		var declarationReference:UML::Realization=new UML::Realization@pimUml(referenceName);
+		var umlPackage:UML::Package=umlOwner.getNearestPackage();
+		umlPackage.packagedElement+=declarationReference;
+		declarationReference.client+=umlOwner;
+		declarationReference.supplier+=resolvedDeclarationReference;
+		return declarationReference;
+}
+helper XSD::XSDConcreteComponent::unionMemberType(inout union:UML::NamedElement,
+	 in memberType:UML::NamedElement,referenceName:String):UML::Usage{
+	 	if(memberType.oclIsUndefined())then{
+	 		log('ERROR: union member undefined for union '+union.qualifiedName);
+	 	}endif;
+//		var declarationReference:UML::Realization=new UML::Realization@pimUml(referenceName);
+		var declarationReference:UML::Usage=new UML::Usage@pimUml(referenceName);
+		var umlPackage:UML::Package=union.getNearestPackage();
+		umlPackage.packagedElement+=declarationReference;
+//		declarationReference.client+=memberType;
+//		declarationReference.supplier+=union;
+		declarationReference.supplier+=memberType;
+		declarationReference.client+=union;
+		declarationReference.applyStereotype(NIEMUnionOfStereotype);
+		return declarationReference;
+}
+////////////////////////////////////////stereotypes
+//////////////////////////////////end schemaContent
+helper 	XSD::XSDSimpleTypeDefinition::simpleTypeDefinitionContent(inout umlClassifier:UML::Classifier)
+{
+	if(not(
+		self.baseTypeDefinition.oclIsUndefined()
+		or (self=self.baseTypeDefinition)
+		or self.baseTypeDefinition.isAnyType()
+                or self.baseTypeDefinition.isAnySimpleType()
+		or (umlClassifier.general->size()>0)
+		))then{
+		var umlGeneral:UML::NamedElement=self.baseTypeDefinition.resolveSchemaContentReference();
+		if(not(umlGeneral.oclIsUndefined() or umlClassifier.general->includes(umlGeneral.oclAsType(UML::Classifier))))then{
+			self.map AbstractBaseTypeDefinition(umlGeneral.oclAsType(UML::Classifier),umlClassifier);
+			
+		}endif;
+	}endif;
+
+	var commonClass:UML::Class= self.getSchemaFeatureClass(umlClassifier);
+	self.contents->forEach(content){
+		// non-niem conformant embedded simpleTypeDefinition
+		// if this were a class instead of datatype, then we could used nestedClassifier.
+		// probably need to do this via properties now and move class up to a common place
+		var contentClassifier:UML::Classifier= content.mapAbstractXSDSchemaContent(commonClass).oclAsType(UML::Classifier);
+		switch{
+			case(self.memberTypeDefinitions->includes(content)) {
+					self.unionMemberType(umlClassifier,contentClassifier,'memberType');
+				}
+			case(self.itemTypeDefinition=content) {
+				var itemTypeDefinition:UML::Property=new UML::Property@pimUml();
+				itemTypeDefinition.name:='item';
+				itemTypeDefinition.type:=contentClassifier;
+				itemTypeDefinition.setLower(0);
+				itemTypeDefinition.setUpper(-1);
+				umlClassifier.setOwnedAttribute(itemTypeDefinition);
+				
+				}
+			else {
+				// otherwise a restriction to an anonymous SimpleType
+				self.reference(umlClassifier,contentClassifier,'restriction');
+			}
+		};
+	};
+
+	self.memberTypeDefinitions->select(t|not(self.contents->includes(t)))->forEach(memberTypeDefinition){
+		// a realization whose supplier is the union
+		self.unionMemberType(umlClassifier,memberTypeDefinition.resolveSchemaContentReference(),'memberType');
+
+	};
+	if(not(self.itemTypeDefinition.oclIsUndefined() or self.contents->includes(self.itemTypeDefinition)))then{
+		// add a property whose type is the content type, cardinality 0..*, name='item'
+		var itemTypeDefinition:UML::Property=new UML::Property@pimUml();
+		itemTypeDefinition.name:='item';
+		itemTypeDefinition.type:=self.itemTypeDefinition.resolveSchemaContentReference().oclAsType(UML::Type);
+		itemTypeDefinition.setLower(0);
+		itemTypeDefinition.setUpper(-1);
+		umlClassifier.setOwnedAttribute(itemTypeDefinition);
+	}endif;
+}
+helper XSD::XSDModelGroup::ModelGroup(inout umlClass:UML::Class){
+	self.annotation.mapXSDAnnotation(umlClass);
+	self.contents->forEach(particle){particle.content.modelGroupParticleContent(umlClass,particle);};
+	return;
+}
+
+helper XSD::XSDModelGroupDefinition::ModelGroupDefinition(inout umlClass:UML::Class){
+	if(self.modelGroupDefinitionReference)then{
+		var umlSchema:UML::Package=self.resolvedModelGroupDefinition.schema.mapAbstractXSDSchema();
+		self.reference(umlClass,
+			self.resolvedModelGroupDefinition.mapAbstractXSDSchemaContent(umlSchema).oclAsType(UML::NamedElement),'ref');
+	}endif;
+	if(not(self.modelGroup.oclIsUndefined()))then{
+		self.modelGroup.ModelGroup(umlClass);
+	}endif;
+}
+abstract helper XSD::XSDParticleContent::modelGroupParticleContent(inout umlClass:UML::Class,in particle:XSD::XSDParticle);
+
+helper XSD::XSDElementDeclaration::modelGroupParticleContent(inout umlClass:UML::Class,in particle:XSD::XSDParticle){
+	var attribute:UML::Property=self.mapAbstractXSDSchemaContent(umlClass).oclAsType(UML::Property);
+	attribute.setLower(particle.minOccurs);
+	attribute.setUpper(particle.maxOccurs);
+}
+helper XSD::XSDWildcard::modelGroupParticleContent(inout umlClass:UML::Class,in particle:XSD::XSDParticle){
+	var attribute:UML::Property=self.map XSDWildcard(umlClass);
+	attribute.name:='any';
+	attribute.setLower(particle.minOccurs);
+	attribute.setUpper(particle.maxOccurs);
+}
+helper XSD::XSDModelGroup::modelGroupParticleContent(inout umlClass:UML::Class,in particle:XSD::XSDParticle){
+	var modelGroup:UML::Class=self.map XSDModelGroup(umlClass);
+	// as nestedClassifier
+	var index:Integer=particle.container.oclAsType(XSD::XSDModelGroup).particles->indexOf(particle);
+	var modelGroupName:String=self.compositor.repr()+'_'+(index.repr());
+	umlClass.nestedClassifier+=modelGroup;
+	modelGroup.name:=modelGroupName;
+	modelGroup.ApplyStereotype(NIEMChoiceStereotype);
+	// and type of a property
+	var attribute:UML::Property=new UML::Property@pimUml();
+	attribute.type:=modelGroup;
+	attribute.name:=modelGroupName;
+	attribute.setLower(particle.minOccurs);
+	attribute.setUpper(particle.maxOccurs);
+	umlClass.ownedAttribute+=attribute;
+	return;
+}
+helper XSD::XSDModelGroupDefinition::modelGroupParticleContent(inout umlClass:UML::Class,in particle:XSD::XSDParticle){
+	// fold in
+	self.ModelGroupDefinition(umlClass);
+	var modelGroupDefinition:UML::Class=self.mapAbstractXSDSchemaContent(umlClass).oclAsType(UML::Class);
+	// as nestedClassifier
+	// and type of a property
+	var attribute:UML::Property=new UML::Property@pimUml();
+	attribute.type:=modelGroupDefinition;
+	attribute.name:='modelGroupDefinition';
+	attribute.setLower(particle.minOccurs);
+	attribute.setUpper(particle.maxOccurs);
+	umlClass.ownedAttribute+=attribute;
+	return;
+}
+helper UML::Classifier::setOwnedAttribute(umlProperty:UML::Property){
+	log('setOwnedAttribute.Classifier ERROR UNEXPECTED CALL '+self.qualifiedName);
+}
+helper UML::Class::setOwnedAttribute(umlProperty:UML::Property){
+	var umlClassifier:UML::Class=self;
+	umlClassifier.ownedAttribute+=umlProperty;
+	return;
+}
+helper UML::DataType::setOwnedAttribute(umlProperty:UML::Property){
+	var umlClassifier:UML::DataType=self;
+	umlClassifier.ownedAttribute+=umlProperty;
+	return;
+}
+
+///////////////////////////////abstract	platform bindings
+/////////// temporary
+query XSD::XSDNamedComponent::getComponentName():String{
+	if(self.name.oclIsUndefined())then{return self.aliasName;}else{}endif;
+	return self.name;
+}
+
+////////DO NOT REMOVE, these are now resident in super since sub does not override properly; these to be documented as abstract
+
+query OclAny::isAppinfoReferenceTargetElement():Boolean=self.isAppinfoElement() and (self.getElementName()='ReferenceTarget');
+query OclAny::isAppinfoElement():Boolean=self.getElementNamespace()=appinfoNamespace;
+query OclAny::referencedTypeDefinition(context:XSD::XSDConcreteComponent):XSD::XSDTypeDefinition=
+	// self is a DOM Element
+	self.referencedSchemas(context).contents->select(s|s.oclIsKindOf(XSD::XSDTypeDefinition) and
+		(s.oclAsType(XSD::XSDTypeDefinition).name=self.getAppInfoName())
+		).oclAsType(XSD::XSDTypeDefinition)
+	->asSequence()->first();
+	
+query OclAny::referencedSchemas(context:XSD::XSDConcreteComponent):Set(XSD::XSDSchema){
+	var appInfoNamespace:String=self.getAppInfoNamespace();
+	if(appInfoNamespace.oclIsUndefined())then{
+		return Set{context.schema};
+	}endif;
+	// make sure imported schemas have been resolved
+	context.schema.contents
+			->select(c|c.oclIsKindOf(XSD::XSDImport)).oclAsType(XSD::XSDImport)
+			->forEach(schemaImport){
+				if(schemaImport.resolvedSchema.oclIsUndefined())then{schemaImport.importSchema();}endif;
+			};
+		var resolvedSchemas:Sequence(XSD::XSDSchema)=context.schema.contents
+			->select(c|c.oclIsKindOf(XSD::XSDSchemaDirective)).oclAsType(XSD::XSDSchemaDirective).resolvedSchema;
+		var referencedSchemas:Set(XSD::XSDSchema)=resolvedSchemas
+			->union(Sequence{context.schema})
+			->select(s|s.targetNamespace=appInfoNamespace)
+			->asSet();
+		if(referencedSchemas->isEmpty())then{
+			log("ERROR: no schemas found for "+appInfoNamespace+', resolvedSchema count='+resolvedSchemas->size().repr()+' from '+context.schema.targetNamespace+' at location '+context.schema.schemaLocation);
+		}	else{}endif;
+		return referencedSchemas;
+}
+query XSD::XSDSchema::isMapped():Boolean{
+	var targetNamespace=self.targetNamespace;
+	if((targetNamespace=schemaForSchemaNamespace)
+	or (targetNamespace=structuresSchemaNamespace)
+	or (targetNamespace=appinfoSchemaNamespace)
+	or (targetNamespace=proxySchemaNamespace))then {return false;}endif;
+	return true;
+}
+helper UML::Package::applyProfile(profile : UML::Profile){
+	var profileApplication: UML::ProfileApplication=new UML::ProfileApplication@pimUml();
+	profileApplication.applyingPackage:=self;
+	profileApplication.appliedProfile:=profile;
+	return;
+}
+
+ 
+
+
+query String::toRelativeMdpLocation():String{
+	var location:String=self;
+	if(location.startsWith('./'))then {location:=location.substringAfter('./');} else {} endif;
+	if(location.endsWith('/'))then {location:=location.substring(1,location.size()-1);} else {} endif;
+	return location;
+};
+query String::toBaseName():String{
+	var index:Integer=self.rfind('/');
+	if(index>0)then{return self.substring(index+1,self.size());}else{}endif;
+	return self;
+};
+
+helper String::getOwnerPackage(inout topPackage:UML::Package):UML::Package{
+	var topPackageName:String=self.substringBefore('/');
+	if(topPackageName.oclIsUndefined())then{return topPackage;}
+	else{}endif;
+	topPackage.nestedPackage->select(p|p.name=topPackageName)->forEach(existingPackage){
+		return self.substringAfter('/').getOwnerPackage(existingPackage);
+	};
+	var newPackage:UML::Package=new UML::Package@pimUml();
+	newPackage.name:=topPackageName;
+	topPackage.packagedElement+=newPackage;
+	return self.substringAfter('/').getOwnerPackage(newPackage);
+}
+abstract query XSD::XSDTypeDefinition::isEnumeration():Boolean;
+query XSD::XSDComplexTypeDefinition::isEnumeration():Boolean=
+	not(self.baseTypeDefinition.oclIsUndefined()) 
+	and (self.baseTypeDefinition<>self) 
+	and self.baseTypeDefinition.isEnumeration();
+query XSD::XSDSimpleTypeDefinition::isEnumeration():Boolean{
+	if(self.enumerationFacets->notEmpty())then{return true;}endif;
+	if(self.baseTypeDefinition.oclIsUndefined()or (self.baseTypeDefinition=self))then{return false;}endif;
+	return self.baseTypeDefinition.isEnumeration();
+}	
+abstract query XSD::XSDTypeDefinition::isPrimitiveType():Boolean;
+query XSD::XSDSimpleTypeDefinition::isPrimitiveType():Boolean=true;
+query XSD::XSDComplexTypeDefinition::isPrimitiveType():Boolean=
+	not(self.baseTypeDefinition.oclIsUndefined())
+	and (self.baseTypeDefinition<>self) 
+	and self.baseTypeDefinition.isPrimitiveType();
+
+/////////////////////////////////////////////////////
+
+helper UML::Package::removeEmptyPackages(){
+	self.nestedPackage.removeEmptyPackages();
+	if(self.packagedElement->isEmpty())then 
+		self.removeElement() 
+//        pimUml.removeElement(self)
+	endif;
+}
+
+///////////platform-specific MPD catalog 
+//abstract helper 		gatherCatalogedSchemas(mpdRootPackage:UML::Package);
+helper 		gatherCatalogedSchemas(mpdRootPackage:UML::Package){
+	saveMpdRoot:=mpdRootPackage;
+		mpdRootPackage.allSubobjectsOfType(UML::Package).oclAsType(UML::Package)
+			->select(p|p.IsStereotypeApplied(NIEMSchemaStereotype))
+			->forEach(schemaPackage){
+				var schemaTuple:Tuple(schema:UML::Package,
+						targetNamespace:String)=
+						Tuple{schema:UML::Package=schemaPackage,
+						targetNamespace:String=schemaPackage.GetStereotypeApplication(NIEMSchemaStereotype).oclAsType(Stdlib::Element).getSchemaTargetNamespace()};
+				log('Schema proxy for '+schemaTuple.targetNamespace+', '+schemaTuple.schema.qualifiedName);		
+				schemaTargetNamespaces+=schemaTuple;		
+			};
+		log('schemaTuple proxies '+schemaTargetNamespaces->size().repr());	
+		mapInit();
+		catalog.map CatalogType();
+		return;
+}
+
+helper mapInit(){
+
+//	var annotation:CMOF::EAnnotation=new CMOF::EAnnotation('mapInit');
+//	blackboxHook.eAnnotations+=annotation;
+	return;
+ 	}
+mapping 	CAT::CatalogType::CatalogType():UML::Model@pimUml
+{
+//	mpdRootPackage.packagedElement+=result;
+	mpdRootPackage:=result;
+	mpdRootPackage.name:=self.mpdName;
+	result.applyProfile(logicalProfile);
+	result.applyProfile(provisioningProfile);
+	result.applyProfile(structureProfile);
+	result.applyProfile(niemXsdProfile);
+	viewpoint:='PSM';
+	self.map MpdCatalog_ProvisioningComponent(result);
+}
+mapping 	CAT::CatalogType::MpdCatalog_ProvisioningComponent(
+	inout newPackage:UML::Package):UML::Component@pimUml{
+	
+	
+	newPackage.packagedElement+=result;
+	mpdComponent:=result;
+	var baseModelName:String= self.mpdName;
+	name:=baseModelName+'.component';
+	// process all content
+	// create the items, establish containment, set stereotypes and apply tags discretely
+	self.artifact->select(f|f.oclIsKindOf(CAT::FileType)).oclAsType(CAT::FileType)->forEach(file){
+		file.addFileType(mpdComponent);
+	};
+	self.artifact->select(f|f.oclIsKindOf(CAT::FileSetType)).oclAsType(CAT::FileSetType).map FileSetType();
+	
+	var pimmpd:Stdlib::Element=result.applyStereotype(prompdStereotype);
+	pimmpd.setMpdVersionID(self.mpdVersionID);
+	pimmpd.setMpdBaseURI(self.mpdURI.expandURI());
+	pimmpd.setMpdDescriptionText(self.descriptionText);
+	self.metadata->forEach(metadata){
+		pimmpd.setMpdSecurityMarkingText(metadata.securityMarkingText);
+		pimmpd.setMpdCreationDate(metadata.creationDate.repr());
+
+		pimmpd.setMpdStatusText(metadata.statusText);
+		pimmpd.setMpdKeywordText(metadata.keywordText);
+		pimmpd.setMpdDomainText(metadata.domainText);
+		pimmpd.setMpdPurposeText(metadata.purposeText);
+		pimmpd.setMpdExchangePatternText(metadata.exchangePatternText);
+		pimmpd.setMpdExchangePartnerName(metadata.exchangePartnerName);
+		
+		metadata.authoritativeSource->forEach(authoritativeSource){
+			pimmpd.setMpdASName(authoritativeSource.aSName);
+			pimmpd.setMpdASAddressText(authoritativeSource.aSAddressText);
+			pimmpd.setMpdASWebSiteURL(authoritativeSource.aSWebSiteURL);
+			pimmpd.setMpdPackageCode('release');
+			var pimPOCList:Stdlib::Element=pimmpd.getMpdPOCList();
+			authoritativeSource.pOC->forEach(poc){
+				var pimpoc:Stdlib::Element=pimPOCList.createPOCInstance();
+				pimpoc.setPOCPOCName(poc.pOCName);
+				pimpoc.setPOCPOCEmail(poc.pOCEmail);
+				pimpoc.setPOCPOCTelephone(poc.pOCTelephone);
+			};
+		};
+	};
+	
+	
+}
+
+mapping 	CAT::FileType::FileType(
+	inout pimPackage:UML::NamedElement,inout pimComponent:UML::Component)
+	:UML::Usage@pimUml
+{
+	supplier+=pimPackage;
+	client+=pimComponent;
+	pimComponent.packagedElement+=result;
+	var pimNdrSchemaInstance:Stdlib::Element=result.ApplyStereotype(NIEMModelPackageDescriptionFileStereotype);
+	// set version, conformant, purpose
+	pimNdrSchemaInstance.setFileTypeDescriptionText(self.descriptionText);
+	pimNdrSchemaInstance.setFileTypeExternalURI(self.externalURI.expandURI());
+	pimNdrSchemaInstance.setFileTypeNatureCode(self.natureURI.expandURI());
+	pimNdrSchemaInstance.setFileTypePurposeCode(self.purposeURI.expandURI());
+	if(pimPackage.IsStereotypeApplied(NIEMInformationModelStereotype))then{
+		pimNdrSchemaInstance.setFileTypeNatureCode(natureXsdURI);
+	}endif;
+}
+
+mapping 	CAT::FileType::FileTypePackage(inout ownerPackage:UML::Package):UML::Package@pimUml
+{
+	var umlPackagePath:String=self.relativePathName.toRelativeMdpLocation();
+	ownerPackage.packagedElement+=result;
+	result.name:=umlPackagePath.toBaseName();
+}
+	
+helper 	CAT::FileType::addFileType(inout pimComponent:UML::Component):UML::Usage
+{
+	var umlPackagePath:String=self.relativePathName.toRelativeMdpLocation();
+	var ownerPackage:UML::Package=umlPackagePath.getOwnerPackage(mpdRootPackage);
+	var fileTypePackage:UML::Package=null;
+	if(self.relativePathName.endsWith('.xsd'))then{
+//		var schema:XSD::XSDSchema=self.oclAsType(CMOF::EObject).getSchemaAtRelativeURI(self.relativePathName).oclAsType(XSD::XSDSchema);
+		var schema:XSD::XSDSchema=self.oclAsType(Stdlib::Element).getSchemaAtRelativeURI(self.relativePathName).oclAsType(XSD::XSDSchema);
+		log('getSchemaAt '+self.relativePathName+' = '+schema.repr());
+		if(not(schema.oclIsUndefined()))then{
+			// and map it as schema
+			fileTypePackage:=schema.mapAbstractXSDSchema();
+			if(fileTypePackage.oclIsUndefined())then{return null;}endif;
+			ownerPackage.packagedElement+=fileTypePackage;
+			var stereotypeInstance:Stdlib::Element=fileTypePackage.GetStereotypeApplication(NIEMInformationModelStereotype).oclAsType(Stdlib::Element);
+			if(not(stereotypeInstance.oclIsUndefined()))then{
+				
+				schema.setModelInformationDefaultPurpose(self.purposeURI.expandURI(),stereotypeInstance);
+			}endif;
+		}endif;
+	}endif;	
+	if((fileTypePackage=null))then{
+		fileTypePackage:=self.map FileTypePackage(ownerPackage);
+	}endif;
+	return self.map FileType(fileTypePackage,pimComponent);
+}
+mapping 	CAT::FileSetType::FileSetType():UML::Component@pimUml
+{
+	// perhaps a dependency with multiple sources as the referenced files; (ref vs containment? - flag in FileType)	
+	name:=self.id;
+	mpdComponent.packagedElement+=result;
+	self.file->forEach(file){
+		var referencedFile:UML::NamedElement=file.addFileType(result);
+	};
+	// referenced files
+	self.files->select(f|not(f.oclIsUndefined()))->forEach(fileRef){
+		var file:CAT::FileType=catalog.allSubobjectsOfKind(CAT::FileType).oclAsType(CAT::FileType)->select(f|f.id=fileRef.repr())->asSequence()->first();
+		var referencedFile:UML::Usage=file.addFileType(mpdComponent);
+		if(not(referencedFile.oclIsUndefined()))then{
+		var elementImport:UML::ElementImport=new UML::ElementImport@pimUml();
+		elementImport.importedElement:=referencedFile;
+		elementImport.importingNamespace:=result;
+		}endif;
+	};
+	var artifactStereotype:UML::Stereotype=NIEMModelPackageDescriptionFileSetStereotype;
+	var stereotypeInstance:Stdlib::Element=result.ApplyStereotype(artifactStereotype);
+
+	stereotypeInstance.setFileSetTypeDescriptionText(self.descriptionText);
+	stereotypeInstance.setFileSetTypeExternalURI(self.externalURI.expandURI());
+	stereotypeInstance.setFileSetTypeNatureURI(self.natureURI.expandURI());
+	stereotypeInstance.setFileSetTypePurposeURI(self.purposeURI.expandURI());
+}	
+query String::expandURI():String{
+	if(self.oclIsUndefined())then {return self;} else{}endif;
+	if(self.startsWith('[') and self.endsWith(']'))then{
+		var prefix:String=self.substringAfter('[').substringBefore(':');
+		var local:String=self.substringAfter(':').substringBefore(']');		
+		var namespace:String=documentRoot.xMLNSPrefixMap->select(e|e.key=prefix).value->first();
+		//log('expandURI '+self+', '+prefix+', '+local+', '+namespace);
+		return namespace+local;
+	}else{}endif;
+	return self;
+};

@@ -1,0 +1,1602 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emof:Package xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:emof="http://schema.omg.org/spec/MOF/2.0/emof.xml" xmi:id="xsd"
+    name="xsd" uri="http://www.eclipse.org/xsd/2002/XSD">
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDAnnotation" name="XSDAnnotation"
+      superClass="xsd.XSDComponent xsd.XSDRedefineContent">
+    <ownedAttribute xmi:id="xsd.XSDAnnotation.applicationInformation" name="applicationInformation"
+        isOrdered="true" lower="0" upper="*" type="xsd.DOMElement"/>
+    <ownedAttribute xmi:id="xsd.XSDAnnotation.userInformation" name="userInformation"
+        isOrdered="true" lower="0" upper="*" type="xsd.DOMElement"/>
+    <ownedAttribute xmi:id="xsd.XSDAnnotation.attributes" name="attributes" isOrdered="true"
+        lower="0" upper="*" type="xsd.DOMAttr"/>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDAttributeDeclaration" name="XSDAttributeDeclaration"
+      superClass="xsd.XSDFeature xsd.XSDSchemaContent">
+    <ownedAttribute xmi:id="xsd.XSDAttributeDeclaration.attributeDeclarationReference"
+        name="attributeDeclarationReference" isOrdered="true" lower="0" isReadOnly="true">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#Boolean"/>
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDAttributeDeclaration.annotation" name="annotation"
+        isOrdered="true" lower="0" type="xsd.XSDAnnotation" isComposite="true"/>
+    <ownedAttribute xmi:id="xsd.XSDAttributeDeclaration.anonymousTypeDefinition" name="anonymousTypeDefinition"
+        isOrdered="true" lower="0" type="xsd.XSDSimpleTypeDefinition" isComposite="true"/>
+    <ownedAttribute xmi:id="xsd.XSDAttributeDeclaration.typeDefinition" name="typeDefinition"
+        isOrdered="true" type="xsd.XSDSimpleTypeDefinition">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDAttributeDeclaration.resolvedAttributeDeclaration"
+        name="resolvedAttributeDeclaration" isOrdered="true" type="xsd.XSDAttributeDeclaration">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDAttributeGroupContent" name="XSDAttributeGroupContent"
+      isAbstract="true" superClass="xsd.XSDConcreteComponent"/>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDAttributeGroupDefinition" name="XSDAttributeGroupDefinition"
+      superClass="xsd.XSDRedefinableComponent xsd.XSDAttributeGroupContent xsd.XSDRedefineContent">
+    <ownedAttribute xmi:id="xsd.XSDAttributeGroupDefinition.attributeGroupDefinitionReference"
+        name="attributeGroupDefinitionReference" isOrdered="true" lower="0" isReadOnly="true">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#Boolean"/>
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDAttributeGroupDefinition.annotation" name="annotation"
+        isOrdered="true" lower="0" type="xsd.XSDAnnotation" isComposite="true"/>
+    <ownedAttribute xmi:id="xsd.XSDAttributeGroupDefinition.contents" name="contents"
+        isOrdered="true" lower="0" upper="*" type="xsd.XSDAttributeGroupContent" isComposite="true"/>
+    <ownedAttribute xmi:id="xsd.XSDAttributeGroupDefinition.attributeUses" name="attributeUses"
+        isOrdered="true" lower="0" upper="*" type="xsd.XSDAttributeUse">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDAttributeGroupDefinition.attributeWildcardContent"
+        name="attributeWildcardContent" isOrdered="true" lower="0" type="xsd.XSDWildcard"
+        isComposite="true"/>
+    <ownedAttribute xmi:id="xsd.XSDAttributeGroupDefinition.attributeWildcard" name="attributeWildcard"
+        isOrdered="true" lower="0" type="xsd.XSDWildcard">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDAttributeGroupDefinition.resolvedAttributeGroupDefinition"
+        name="resolvedAttributeGroupDefinition" isOrdered="true" type="xsd.XSDAttributeGroupDefinition">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDAttributeGroupDefinition.syntheticWildcard" name="syntheticWildcard"
+        isOrdered="true" lower="0" type="xsd.XSDWildcard" isComposite="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <transient>true</transient>
+      </xmi:Extension>
+    </ownedAttribute>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDAttributeUse" name="XSDAttributeUse"
+      superClass="xsd.XSDComponent xsd.XSDAttributeGroupContent">
+    <ownedAttribute xmi:id="xsd.XSDAttributeUse.required" name="required" isOrdered="true"
+        lower="0">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDAttributeUse.value" name="value" isOrdered="true"
+        lower="0" type="xsd.Value"/>
+    <ownedAttribute xmi:id="xsd.XSDAttributeUse.constraint" name="constraint" isOrdered="true"
+        lower="0" type="xsd.XSDConstraint">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <unsettable>true</unsettable>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDAttributeUse.use" name="use" isOrdered="true" lower="0"
+        type="xsd.XSDAttributeUseCategory">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <unsettable>true</unsettable>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDAttributeUse.lexicalValue" name="lexicalValue"
+        isOrdered="true" lower="0">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDAttributeUse.attributeDeclaration" name="attributeDeclaration"
+        isOrdered="true" type="xsd.XSDAttributeDeclaration">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDAttributeUse.content" name="content" isOrdered="true"
+        type="xsd.XSDAttributeDeclaration" isComposite="true"/>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDBoundedFacet" name="XSDBoundedFacet"
+      superClass="xsd.XSDFundamentalFacet">
+    <ownedAttribute xmi:id="xsd.XSDBoundedFacet.value" name="value" isOrdered="true"
+        lower="0">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#Boolean"/>
+    </ownedAttribute>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDCardinalityFacet" name="XSDCardinalityFacet"
+      superClass="xsd.XSDFundamentalFacet">
+    <ownedAttribute xmi:id="xsd.XSDCardinalityFacet.value" name="value" isOrdered="true"
+        lower="0" type="xsd.XSDCardinality"/>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDComplexTypeContent" name="XSDComplexTypeContent"
+      isAbstract="true" superClass="xsd.XSDComponent"/>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDComplexTypeDefinition" name="XSDComplexTypeDefinition"
+      superClass="xsd.XSDTypeDefinition xsd.XSDScope">
+    <ownedAttribute xmi:id="xsd.XSDComplexTypeDefinition.derivationMethod" name="derivationMethod"
+        isOrdered="true" lower="0" type="xsd.XSDDerivationMethod" default="restriction">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <unsettable>true</unsettable>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDComplexTypeDefinition.final" name="final" isOrdered="true"
+        lower="0" upper="*" type="xsd.XSDComplexFinal"/>
+    <ownedAttribute xmi:id="xsd.XSDComplexTypeDefinition.abstract" name="abstract"
+        isOrdered="true" lower="0">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#Boolean"/>
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <unsettable>true</unsettable>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDComplexTypeDefinition.contentTypeCategory" name="contentTypeCategory"
+        isOrdered="true" lower="0" type="xsd.XSDContentTypeCategory"/>
+    <ownedAttribute xmi:id="xsd.XSDComplexTypeDefinition.prohibitedSubstitutions"
+        name="prohibitedSubstitutions" isOrdered="true" lower="0" upper="*" type="xsd.XSDProhibitedSubstitutions"/>
+    <ownedAttribute xmi:id="xsd.XSDComplexTypeDefinition.lexicalFinal" name="lexicalFinal"
+        isOrdered="true" lower="0" upper="*" type="xsd.XSDComplexFinal">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <unsettable>true</unsettable>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDComplexTypeDefinition.block" name="block" isOrdered="true"
+        lower="0" upper="*" type="xsd.XSDProhibitedSubstitutions">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <unsettable>true</unsettable>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDComplexTypeDefinition.mixed" name="mixed" isOrdered="true"
+        lower="0">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#Boolean"/>
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <unsettable>true</unsettable>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDComplexTypeDefinition.contentAnnotation" name="contentAnnotation"
+        isOrdered="true" lower="0" type="xsd.XSDAnnotation" isComposite="true"/>
+    <ownedAttribute xmi:id="xsd.XSDComplexTypeDefinition.baseTypeDefinition" name="baseTypeDefinition"
+        isOrdered="true" type="xsd.XSDTypeDefinition">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDComplexTypeDefinition.content" name="content" isOrdered="true"
+        lower="0" type="xsd.XSDComplexTypeContent" isComposite="true"/>
+    <ownedAttribute xmi:id="xsd.XSDComplexTypeDefinition.contentType" name="contentType"
+        isOrdered="true" lower="0" type="xsd.XSDComplexTypeContent">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDComplexTypeDefinition.attributeUses" name="attributeUses"
+        isOrdered="true" lower="0" upper="*" type="xsd.XSDAttributeUse">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDComplexTypeDefinition.attributeContents" name="attributeContents"
+        isOrdered="true" lower="0" upper="*" type="xsd.XSDAttributeGroupContent" isComposite="true"/>
+    <ownedAttribute xmi:id="xsd.XSDComplexTypeDefinition.attributeWildcard" name="attributeWildcard"
+        isOrdered="true" lower="0" type="xsd.XSDWildcard">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDComplexTypeDefinition.attributeWildcardContent"
+        name="attributeWildcardContent" isOrdered="true" lower="0" type="xsd.XSDWildcard"
+        isComposite="true"/>
+    <ownedAttribute xmi:id="xsd.XSDComplexTypeDefinition.rootTypeDefinition" name="rootTypeDefinition"
+        isOrdered="true" type="xsd.XSDTypeDefinition" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDComplexTypeDefinition.syntheticParticle" name="syntheticParticle"
+        isOrdered="true" lower="0" type="xsd.XSDParticle" isComposite="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <transient>true</transient>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDComplexTypeDefinition.syntheticWildcard" name="syntheticWildcard"
+        isOrdered="true" lower="0" type="xsd.XSDWildcard" isComposite="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <transient>true</transient>
+      </xmi:Extension>
+    </ownedAttribute>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDComponent" name="XSDComponent" isAbstract="true"
+      superClass="xsd.XSDConcreteComponent"/>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDConcreteComponent" name="XSDConcreteComponent"
+      isAbstract="true">
+    <ownedAttribute xmi:id="xsd.XSDConcreteComponent.element" name="element" isOrdered="true"
+        lower="0" type="xsd.DOMElement"/>
+    <ownedAttribute xmi:id="xsd.XSDConcreteComponent.container" name="container" isOrdered="true"
+        lower="0" type="xsd.XSDConcreteComponent" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDConcreteComponent.rootContainer" name="rootContainer"
+        isOrdered="true" type="xsd.XSDConcreteComponent" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDConcreteComponent.schema" name="schema" isOrdered="true"
+        lower="0" type="xsd.XSDSchema" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDConcreteComponent.diagnostics" name="diagnostics"
+        isOrdered="true" lower="0" upper="*" type="xsd.XSDDiagnostic" isComposite="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDConstrainingFacet" name="XSDConstrainingFacet"
+      isAbstract="true" superClass="xsd.XSDFacet"/>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDDiagnostic" name="XSDDiagnostic"
+      superClass="xsd.XSDConcreteComponent">
+    <ownedAttribute xmi:id="xsd.XSDDiagnostic.severity" name="severity" isOrdered="true"
+        lower="0" type="xsd.XSDDiagnosticSeverity"/>
+    <ownedAttribute xmi:id="xsd.XSDDiagnostic.message" name="message" isOrdered="true"
+        lower="0">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDDiagnostic.locationURI" name="locationURI" isOrdered="true"
+        lower="0">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDDiagnostic.line" name="line" isOrdered="true" lower="0"
+        default="1">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDDiagnostic.column" name="column" isOrdered="true"
+        lower="0" default="1">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDDiagnostic.node" name="node" isOrdered="true" lower="0"
+        type="xsd.DOMNode"/>
+    <ownedAttribute xmi:id="xsd.XSDDiagnostic.annotationURI" name="annotationURI"
+        isOrdered="true" lower="0">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDDiagnostic.key" name="key" isOrdered="true" lower="0">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDDiagnostic.substitutions" name="substitutions"
+        isOrdered="true" lower="0" upper="*">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDDiagnostic.components" name="components" isOrdered="true"
+        upper="*" type="xsd.XSDConcreteComponent">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDDiagnostic.primaryComponent" name="primaryComponent"
+        isOrdered="true" type="xsd.XSDConcreteComponent">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDElementDeclaration" name="XSDElementDeclaration"
+      superClass="xsd.XSDFeature xsd.XSDSchemaContent xsd.XSDTerm">
+    <ownedAttribute xmi:id="xsd.XSDElementDeclaration.nillable" name="nillable" isOrdered="true"
+        lower="0">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#Boolean"/>
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <unsettable>true</unsettable>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDElementDeclaration.disallowedSubstitutions" name="disallowedSubstitutions"
+        isOrdered="true" lower="0" upper="*" type="xsd.XSDDisallowedSubstitutions"/>
+    <ownedAttribute xmi:id="xsd.XSDElementDeclaration.substitutionGroupExclusions"
+        name="substitutionGroupExclusions" isOrdered="true" lower="0" upper="*" type="xsd.XSDSubstitutionGroupExclusions"/>
+    <ownedAttribute xmi:id="xsd.XSDElementDeclaration.abstract" name="abstract" isOrdered="true"
+        lower="0">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#Boolean"/>
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <unsettable>true</unsettable>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDElementDeclaration.lexicalFinal" name="lexicalFinal"
+        isOrdered="true" lower="0" upper="*" type="xsd.XSDProhibitedSubstitutions">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <unsettable>true</unsettable>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDElementDeclaration.block" name="block" isOrdered="true"
+        lower="0" upper="*" type="xsd.XSDDisallowedSubstitutions">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <unsettable>true</unsettable>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDElementDeclaration.elementDeclarationReference"
+        name="elementDeclarationReference" isOrdered="true" lower="0" isReadOnly="true">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#Boolean"/>
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDElementDeclaration.circular" name="circular" isOrdered="true"
+        lower="0" isReadOnly="true">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#Boolean"/>
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDElementDeclaration.annotation" name="annotation"
+        isOrdered="true" lower="0" type="xsd.XSDAnnotation" isComposite="true"/>
+    <ownedAttribute xmi:id="xsd.XSDElementDeclaration.anonymousTypeDefinition" name="anonymousTypeDefinition"
+        isOrdered="true" lower="0" type="xsd.XSDTypeDefinition" isComposite="true"/>
+    <ownedAttribute xmi:id="xsd.XSDElementDeclaration.typeDefinition" name="typeDefinition"
+        isOrdered="true" type="xsd.XSDTypeDefinition">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDElementDeclaration.identityConstraintDefinitions"
+        name="identityConstraintDefinitions" isOrdered="true" lower="0" upper="*"
+        type="xsd.XSDIdentityConstraintDefinition" isComposite="true"/>
+    <ownedAttribute xmi:id="xsd.XSDElementDeclaration.resolvedElementDeclaration"
+        name="resolvedElementDeclaration" isOrdered="true" type="xsd.XSDElementDeclaration">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDElementDeclaration.substitutionGroupAffiliation"
+        name="substitutionGroupAffiliation" isOrdered="true" lower="0" type="xsd.XSDElementDeclaration">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDElementDeclaration.substitutionGroup" name="substitutionGroup"
+        isOrdered="true" lower="0" upper="*" type="xsd.XSDElementDeclaration">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDEnumerationFacet" name="XSDEnumerationFacet"
+      superClass="xsd.XSDRepeatableFacet">
+    <ownedAttribute xmi:id="xsd.XSDEnumerationFacet.value" name="value" isOrdered="true"
+        lower="0" upper="*" type="xsd.Value"/>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDFacet" name="XSDFacet" isAbstract="true"
+      superClass="xsd.XSDComponent">
+    <ownedAttribute xmi:id="xsd.XSDFacet.lexicalValue" name="lexicalValue" isOrdered="true"
+        lower="0">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDFacet.facetName" name="facetName" isOrdered="true"
+        lower="0" isReadOnly="true">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#String"/>
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDFacet.effectiveValue" name="effectiveValue" isOrdered="true"
+        lower="0" type="xsd.Value" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDFacet.annotation" name="annotation" isOrdered="true"
+        lower="0" type="xsd.XSDAnnotation" isComposite="true"/>
+    <ownedAttribute xmi:id="xsd.XSDFacet.simpleTypeDefinition" name="simpleTypeDefinition"
+        isOrdered="true" lower="0" type="xsd.XSDSimpleTypeDefinition" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDFeature" name="XSDFeature" isAbstract="true"
+      superClass="xsd.XSDNamedComponent">
+    <ownedAttribute xmi:id="xsd.XSDFeature.value" name="value" isOrdered="true" lower="0"
+        type="xsd.Value"/>
+    <ownedAttribute xmi:id="xsd.XSDFeature.constraint" name="constraint" isOrdered="true"
+        lower="0" type="xsd.XSDConstraint">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <unsettable>true</unsettable>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDFeature.form" name="form" isOrdered="true" lower="0"
+        type="xsd.XSDForm">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <unsettable>true</unsettable>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDFeature.lexicalValue" name="lexicalValue" isOrdered="true"
+        lower="0">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDFeature.global" name="global" isOrdered="true"
+        lower="0" isReadOnly="true">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#Boolean"/>
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDFeature.featureReference" name="featureReference"
+        isOrdered="true" lower="0" isReadOnly="true">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#Boolean"/>
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDFeature.scope" name="scope" isOrdered="true" lower="0"
+        type="xsd.XSDScope" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDFeature.resolvedFeature" name="resolvedFeature"
+        isOrdered="true" type="xsd.XSDFeature" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDFeature.type" name="type" isOrdered="true" type="xsd.XSDTypeDefinition"
+        isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDFixedFacet" name="XSDFixedFacet"
+      isAbstract="true" superClass="xsd.XSDConstrainingFacet">
+    <ownedAttribute xmi:id="xsd.XSDFixedFacet.fixed" name="fixed" isOrdered="true"
+        lower="0">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#Boolean"/>
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <unsettable>true</unsettable>
+      </xmi:Extension>
+    </ownedAttribute>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDFractionDigitsFacet" name="XSDFractionDigitsFacet"
+      superClass="xsd.XSDFixedFacet">
+    <ownedAttribute xmi:id="xsd.XSDFractionDigitsFacet.value" name="value" isOrdered="true"
+        lower="0">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#Integer"/>
+    </ownedAttribute>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDFundamentalFacet" name="XSDFundamentalFacet"
+      isAbstract="true" superClass="xsd.XSDFacet"/>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDIdentityConstraintDefinition" name="XSDIdentityConstraintDefinition"
+      superClass="xsd.XSDNamedComponent">
+    <ownedAttribute xmi:id="xsd.XSDIdentityConstraintDefinition.identityConstraintCategory"
+        name="identityConstraintCategory" isOrdered="true" lower="0" type="xsd.XSDIdentityConstraintCategory"/>
+    <ownedAttribute xmi:id="xsd.XSDIdentityConstraintDefinition.annotation" name="annotation"
+        isOrdered="true" lower="0" type="xsd.XSDAnnotation" isComposite="true"/>
+    <ownedAttribute xmi:id="xsd.XSDIdentityConstraintDefinition.referencedKey" name="referencedKey"
+        isOrdered="true" lower="0" type="xsd.XSDIdentityConstraintDefinition">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDIdentityConstraintDefinition.selector" name="selector"
+        isOrdered="true" type="xsd.XSDXPathDefinition" isComposite="true"/>
+    <ownedAttribute xmi:id="xsd.XSDIdentityConstraintDefinition.fields" name="fields"
+        isOrdered="true" upper="*" type="xsd.XSDXPathDefinition" isComposite="true"/>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDImport" name="XSDImport" superClass="xsd.XSDSchemaDirective">
+    <ownedAttribute xmi:id="xsd.XSDImport.namespace" name="namespace" isOrdered="true"
+        lower="0">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDImport.annotation" name="annotation" isOrdered="true"
+        lower="0" type="xsd.XSDAnnotation" isComposite="true"/>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDInclude" name="XSDInclude" superClass="xsd.XSDSchemaCompositor">
+    <ownedAttribute xmi:id="xsd.XSDInclude.annotation" name="annotation" isOrdered="true"
+        lower="0" type="xsd.XSDAnnotation" isComposite="true"/>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDLengthFacet" name="XSDLengthFacet"
+      superClass="xsd.XSDFixedFacet">
+    <ownedAttribute xmi:id="xsd.XSDLengthFacet.value" name="value" isOrdered="true"
+        lower="0">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#Integer"/>
+    </ownedAttribute>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDMaxExclusiveFacet" name="XSDMaxExclusiveFacet"
+      superClass="xsd.XSDMaxFacet"/>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDMaxFacet" name="XSDMaxFacet" isAbstract="true"
+      superClass="xsd.XSDFixedFacet">
+    <ownedAttribute xmi:id="xsd.XSDMaxFacet.value" name="value" isOrdered="true" lower="0"
+        type="xsd.Value"/>
+    <ownedAttribute xmi:id="xsd.XSDMaxFacet.inclusive" name="inclusive" isOrdered="true"
+        lower="0" isReadOnly="true">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#Boolean"/>
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDMaxFacet.exclusive" name="exclusive" isOrdered="true"
+        lower="0" isReadOnly="true">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#Boolean"/>
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+      </xmi:Extension>
+    </ownedAttribute>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDMaxInclusiveFacet" name="XSDMaxInclusiveFacet"
+      superClass="xsd.XSDMaxFacet"/>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDMaxLengthFacet" name="XSDMaxLengthFacet"
+      superClass="xsd.XSDFixedFacet">
+    <ownedAttribute xmi:id="xsd.XSDMaxLengthFacet.value" name="value" isOrdered="true"
+        lower="0">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#Integer"/>
+    </ownedAttribute>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDMinExclusiveFacet" name="XSDMinExclusiveFacet"
+      superClass="xsd.XSDMinFacet"/>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDMinFacet" name="XSDMinFacet" isAbstract="true"
+      superClass="xsd.XSDFixedFacet">
+    <ownedAttribute xmi:id="xsd.XSDMinFacet.value" name="value" isOrdered="true" lower="0"
+        type="xsd.Value"/>
+    <ownedAttribute xmi:id="xsd.XSDMinFacet.inclusive" name="inclusive" isOrdered="true"
+        lower="0" isReadOnly="true">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#Boolean"/>
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDMinFacet.exclusive" name="exclusive" isOrdered="true"
+        lower="0" isReadOnly="true">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#Boolean"/>
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+      </xmi:Extension>
+    </ownedAttribute>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDMinInclusiveFacet" name="XSDMinInclusiveFacet"
+      superClass="xsd.XSDMinFacet"/>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDMinLengthFacet" name="XSDMinLengthFacet"
+      superClass="xsd.XSDFixedFacet">
+    <ownedAttribute xmi:id="xsd.XSDMinLengthFacet.value" name="value" isOrdered="true"
+        lower="0">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#Integer"/>
+    </ownedAttribute>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDModelGroup" name="XSDModelGroup"
+      superClass="xsd.XSDTerm">
+    <ownedAttribute xmi:id="xsd.XSDModelGroup.compositor" name="compositor" isOrdered="true"
+        lower="0" type="xsd.XSDCompositor"/>
+    <ownedAttribute xmi:id="xsd.XSDModelGroup.annotation" name="annotation" isOrdered="true"
+        lower="0" type="xsd.XSDAnnotation" isComposite="true"/>
+    <ownedAttribute xmi:id="xsd.XSDModelGroup.contents" name="contents" isOrdered="true"
+        lower="0" upper="*" type="xsd.XSDParticle" isComposite="true"/>
+    <ownedAttribute xmi:id="xsd.XSDModelGroup.particles" name="particles" isOrdered="true"
+        upper="*" type="xsd.XSDParticle">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDModelGroupDefinition" name="XSDModelGroupDefinition"
+      superClass="xsd.XSDRedefinableComponent xsd.XSDParticleContent xsd.XSDRedefineContent">
+    <ownedAttribute xmi:id="xsd.XSDModelGroupDefinition.modelGroupDefinitionReference"
+        name="modelGroupDefinitionReference" isOrdered="true" lower="0" isReadOnly="true">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#Boolean"/>
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDModelGroupDefinition.annotation" name="annotation"
+        isOrdered="true" lower="0" type="xsd.XSDAnnotation" isComposite="true"/>
+    <ownedAttribute xmi:id="xsd.XSDModelGroupDefinition.modelGroup" name="modelGroup"
+        isOrdered="true" type="xsd.XSDModelGroup" isComposite="true"/>
+    <ownedAttribute xmi:id="xsd.XSDModelGroupDefinition.resolvedModelGroupDefinition"
+        name="resolvedModelGroupDefinition" isOrdered="true" type="xsd.XSDModelGroupDefinition">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDNamedComponent" name="XSDNamedComponent"
+      isAbstract="true" superClass="xsd.XSDComponent">
+    <ownedAttribute xmi:id="xsd.XSDNamedComponent.name" name="name" isOrdered="true"
+        lower="0">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDNamedComponent.targetNamespace" name="targetNamespace"
+        isOrdered="true" lower="0">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDNamedComponent.aliasName" name="aliasName" isOrdered="true"
+        lower="0" isReadOnly="true">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#String"/>
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDNamedComponent.uRI" name="uRI" isOrdered="true"
+        lower="0" isReadOnly="true">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#String"/>
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDNamedComponent.aliasURI" name="aliasURI" isOrdered="true"
+        lower="0" isReadOnly="true">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#String"/>
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDNamedComponent.qName" name="qName" isOrdered="true"
+        lower="0" isReadOnly="true">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#String"/>
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+      </xmi:Extension>
+    </ownedAttribute>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDNotationDeclaration" name="XSDNotationDeclaration"
+      superClass="xsd.XSDNamedComponent xsd.XSDSchemaContent">
+    <ownedAttribute xmi:id="xsd.XSDNotationDeclaration.systemIdentifier" name="systemIdentifier"
+        isOrdered="true" lower="0">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDNotationDeclaration.publicIdentifier" name="publicIdentifier"
+        isOrdered="true" lower="0">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDNotationDeclaration.annotation" name="annotation"
+        isOrdered="true" lower="0" type="xsd.XSDAnnotation" isComposite="true"/>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDNumericFacet" name="XSDNumericFacet"
+      superClass="xsd.XSDFundamentalFacet">
+    <ownedAttribute xmi:id="xsd.XSDNumericFacet.value" name="value" isOrdered="true"
+        lower="0">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#Boolean"/>
+    </ownedAttribute>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDOrderedFacet" name="XSDOrderedFacet"
+      superClass="xsd.XSDFundamentalFacet">
+    <ownedAttribute xmi:id="xsd.XSDOrderedFacet.value" name="value" isOrdered="true"
+        lower="0" type="xsd.XSDOrdered"/>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDParticle" name="XSDParticle" superClass="xsd.XSDComplexTypeContent">
+    <ownedAttribute xmi:id="xsd.XSDParticle.minOccurs" name="minOccurs" isOrdered="true"
+        lower="0" default="1">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#Integer"/>
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <unsettable>true</unsettable>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDParticle.maxOccurs" name="maxOccurs" isOrdered="true"
+        lower="0" default="1">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#Integer"/>
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <unsettable>true</unsettable>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDParticle.content" name="content" isOrdered="true"
+        type="xsd.XSDParticleContent" isComposite="true"/>
+    <ownedAttribute xmi:id="xsd.XSDParticle.term" name="term" isOrdered="true" type="xsd.XSDTerm">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDParticleContent" name="XSDParticleContent"
+      isAbstract="true" superClass="xsd.XSDConcreteComponent"/>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDPatternFacet" name="XSDPatternFacet"
+      superClass="xsd.XSDRepeatableFacet">
+    <ownedAttribute xmi:id="xsd.XSDPatternFacet.value" name="value" isOrdered="true"
+        lower="0" upper="*">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#String"/>
+    </ownedAttribute>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDRedefinableComponent" name="XSDRedefinableComponent"
+      isAbstract="true" superClass="xsd.XSDNamedComponent xsd.XSDRedefineContent">
+    <ownedAttribute xmi:id="xsd.XSDRedefinableComponent.circular" name="circular"
+        isOrdered="true" lower="0" isReadOnly="true">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#Boolean"/>
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+      </xmi:Extension>
+    </ownedAttribute>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDRedefineContent" name="XSDRedefineContent"
+      isAbstract="true" superClass="xsd.XSDSchemaContent"/>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDRedefine" name="XSDRedefine" superClass="xsd.XSDSchemaCompositor">
+    <ownedAttribute xmi:id="xsd.XSDRedefine.annotations" name="annotations" isOrdered="true"
+        lower="0" upper="*" type="xsd.XSDAnnotation">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDRedefine.contents" name="contents" isOrdered="true"
+        lower="0" upper="*" type="xsd.XSDRedefineContent" isComposite="true"/>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDRepeatableFacet" name="XSDRepeatableFacet"
+      isAbstract="true" superClass="xsd.XSDConstrainingFacet">
+    <ownedAttribute xmi:id="xsd.XSDRepeatableFacet.annotations" name="annotations"
+        isOrdered="true" lower="0" upper="*" type="xsd.XSDAnnotation">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDSchema" name="XSDSchema" superClass="xsd.XSDScope">
+    <ownedAttribute xmi:id="xsd.XSDSchema.document" name="document" isOrdered="true"
+        lower="0" type="xsd.DOMDocument"/>
+    <ownedAttribute xmi:id="xsd.XSDSchema.schemaLocation" name="schemaLocation" isOrdered="true"
+        lower="0">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSchema.targetNamespace" name="targetNamespace"
+        isOrdered="true" lower="0">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSchema.attributeFormDefault" name="attributeFormDefault"
+        isOrdered="true" lower="0" type="xsd.XSDForm" default="unqualified">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <unsettable>true</unsettable>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSchema.elementFormDefault" name="elementFormDefault"
+        isOrdered="true" lower="0" type="xsd.XSDForm" default="unqualified">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <unsettable>true</unsettable>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSchema.finalDefault" name="finalDefault" isOrdered="true"
+        lower="0" upper="*" type="xsd.XSDProhibitedSubstitutions">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <unsettable>true</unsettable>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSchema.blockDefault" name="blockDefault" isOrdered="true"
+        lower="0" upper="*" type="xsd.XSDDisallowedSubstitutions">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <unsettable>true</unsettable>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSchema.version" name="version" isOrdered="true"
+        lower="0">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSchema.contents" name="contents" isOrdered="true"
+        lower="0" upper="*" type="xsd.XSDSchemaContent" isComposite="true"/>
+    <ownedAttribute xmi:id="xsd.XSDSchema.elementDeclarations" name="elementDeclarations"
+        isOrdered="true" lower="0" upper="*" type="xsd.XSDElementDeclaration">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSchema.attributeDeclarations" name="attributeDeclarations"
+        isOrdered="true" lower="0" upper="*" type="xsd.XSDAttributeDeclaration">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSchema.attributeGroupDefinitions" name="attributeGroupDefinitions"
+        isOrdered="true" lower="0" upper="*" type="xsd.XSDAttributeGroupDefinition">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSchema.typeDefinitions" name="typeDefinitions"
+        isOrdered="true" lower="0" upper="*" type="xsd.XSDTypeDefinition">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSchema.modelGroupDefinitions" name="modelGroupDefinitions"
+        isOrdered="true" lower="0" upper="*" type="xsd.XSDModelGroupDefinition">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSchema.identityConstraintDefinitions" name="identityConstraintDefinitions"
+        isOrdered="true" lower="0" upper="*" type="xsd.XSDIdentityConstraintDefinition">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSchema.notationDeclarations" name="notationDeclarations"
+        isOrdered="true" lower="0" upper="*" type="xsd.XSDNotationDeclaration">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSchema.annotations" name="annotations" isOrdered="true"
+        lower="0" upper="*" type="xsd.XSDAnnotation">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSchema.allDiagnostics" name="allDiagnostics" isOrdered="true"
+        lower="0" upper="*" type="xsd.XSDDiagnostic">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSchema.referencingDirectives" name="referencingDirectives"
+        isOrdered="true" lower="0" upper="*" type="xsd.XSDSchemaDirective">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSchema.rootVersion" name="rootVersion" isOrdered="true"
+        type="xsd.XSDSchema" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSchema.originalVersion" name="originalVersion"
+        isOrdered="true" lower="0" type="xsd.XSDSchema" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSchema.incorporatedVersions" name="incorporatedVersions"
+        isOrdered="true" lower="0" upper="*" type="xsd.XSDSchema" isComposite="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSchema.schemaForSchema" name="schemaForSchema"
+        isOrdered="true" type="xsd.XSDSchema" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDSchemaCompositor" name="XSDSchemaCompositor"
+      isAbstract="true" superClass="xsd.XSDSchemaDirective">
+    <ownedAttribute xmi:id="xsd.XSDSchemaCompositor.incorporatedSchema" name="incorporatedSchema"
+        isOrdered="true" lower="0" type="xsd.XSDSchema">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDSchemaContent" name="XSDSchemaContent"
+      isAbstract="true" superClass="xsd.XSDConcreteComponent"/>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDSchemaDirective" name="XSDSchemaDirective"
+      isAbstract="true" superClass="xsd.XSDSchemaContent">
+    <ownedAttribute xmi:id="xsd.XSDSchemaDirective.schemaLocation" name="schemaLocation"
+        isOrdered="true" lower="0">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSchemaDirective.resolvedSchema" name="resolvedSchema"
+        isOrdered="true" lower="0" type="xsd.XSDSchema">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDScope" name="XSDScope" isAbstract="true"
+      superClass="xsd.XSDComponent"/>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDSimpleTypeDefinition" name="XSDSimpleTypeDefinition"
+      superClass="xsd.XSDTypeDefinition xsd.XSDComplexTypeContent">
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.variety" name="variety" isOrdered="true"
+        lower="0" type="xsd.XSDVariety">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <unsettable>true</unsettable>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.final" name="final" isOrdered="true"
+        lower="0" upper="*" type="xsd.XSDSimpleFinal"/>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.lexicalFinal" name="lexicalFinal"
+        isOrdered="true" lower="0" upper="*" type="xsd.XSDSimpleFinal">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <unsettable>true</unsettable>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.validFacets" name="validFacets"
+        isOrdered="true" lower="0" upper="*">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.contents" name="contents"
+        isOrdered="true" lower="0" upper="*" type="xsd.XSDSimpleTypeDefinition" isComposite="true"/>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.facetContents" name="facetContents"
+        isOrdered="true" lower="0" upper="*" type="xsd.XSDConstrainingFacet" isComposite="true"/>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.facets" name="facets" isOrdered="true"
+        lower="0" upper="*" type="xsd.XSDConstrainingFacet">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.memberTypeDefinitions" name="memberTypeDefinitions"
+        isOrdered="true" lower="0" upper="*" type="xsd.XSDSimpleTypeDefinition">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.fundamentalFacets" name="fundamentalFacets"
+        isOrdered="true" upper="*" type="xsd.XSDFundamentalFacet" isComposite="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <transient>true</transient>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.baseTypeDefinition" name="baseTypeDefinition"
+        isOrdered="true" type="xsd.XSDSimpleTypeDefinition">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.primitiveTypeDefinition" name="primitiveTypeDefinition"
+        isOrdered="true" lower="0" type="xsd.XSDSimpleTypeDefinition">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.itemTypeDefinition" name="itemTypeDefinition"
+        isOrdered="true" lower="0" type="xsd.XSDSimpleTypeDefinition">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.rootTypeDefinition" name="rootTypeDefinition"
+        isOrdered="true" type="xsd.XSDSimpleTypeDefinition" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.minFacet" name="minFacet"
+        isOrdered="true" lower="0" type="xsd.XSDMinFacet" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.maxFacet" name="maxFacet"
+        isOrdered="true" lower="0" type="xsd.XSDMaxFacet" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.maxInclusiveFacet" name="maxInclusiveFacet"
+        isOrdered="true" lower="0" type="xsd.XSDMaxInclusiveFacet" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.minInclusiveFacet" name="minInclusiveFacet"
+        isOrdered="true" lower="0" type="xsd.XSDMinInclusiveFacet" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.minExclusiveFacet" name="minExclusiveFacet"
+        isOrdered="true" lower="0" type="xsd.XSDMinExclusiveFacet" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.maxExclusiveFacet" name="maxExclusiveFacet"
+        isOrdered="true" lower="0" type="xsd.XSDMaxExclusiveFacet" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.lengthFacet" name="lengthFacet"
+        isOrdered="true" lower="0" type="xsd.XSDLengthFacet" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.whiteSpaceFacet" name="whiteSpaceFacet"
+        isOrdered="true" lower="0" type="xsd.XSDWhiteSpaceFacet" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.enumerationFacets" name="enumerationFacets"
+        isOrdered="true" lower="0" upper="*" type="xsd.XSDEnumerationFacet" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.patternFacets" name="patternFacets"
+        isOrdered="true" lower="0" upper="*" type="xsd.XSDPatternFacet" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.cardinalityFacet" name="cardinalityFacet"
+        isOrdered="true" type="xsd.XSDCardinalityFacet" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.numericFacet" name="numericFacet"
+        isOrdered="true" type="xsd.XSDNumericFacet" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.maxLengthFacet" name="maxLengthFacet"
+        isOrdered="true" lower="0" type="xsd.XSDMaxLengthFacet" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.minLengthFacet" name="minLengthFacet"
+        isOrdered="true" lower="0" type="xsd.XSDMinLengthFacet" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.totalDigitsFacet" name="totalDigitsFacet"
+        isOrdered="true" lower="0" type="xsd.XSDTotalDigitsFacet" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.fractionDigitsFacet" name="fractionDigitsFacet"
+        isOrdered="true" lower="0" type="xsd.XSDFractionDigitsFacet" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.orderedFacet" name="orderedFacet"
+        isOrdered="true" type="xsd.XSDOrderedFacet" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.boundedFacet" name="boundedFacet"
+        isOrdered="true" type="xsd.XSDBoundedFacet" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.effectiveMaxFacet" name="effectiveMaxFacet"
+        isOrdered="true" lower="0" type="xsd.XSDMaxFacet" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.effectiveWhiteSpaceFacet"
+        name="effectiveWhiteSpaceFacet" isOrdered="true" lower="0" type="xsd.XSDWhiteSpaceFacet"
+        isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.effectiveMaxLengthFacet" name="effectiveMaxLengthFacet"
+        isOrdered="true" lower="0" type="xsd.XSDMaxLengthFacet" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.effectiveFractionDigitsFacet"
+        name="effectiveFractionDigitsFacet" isOrdered="true" lower="0" type="xsd.XSDFractionDigitsFacet"
+        isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.effectivePatternFacet" name="effectivePatternFacet"
+        isOrdered="true" lower="0" type="xsd.XSDPatternFacet" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.effectiveEnumerationFacet"
+        name="effectiveEnumerationFacet" isOrdered="true" lower="0" type="xsd.XSDEnumerationFacet"
+        isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.effectiveTotalDigitsFacet"
+        name="effectiveTotalDigitsFacet" isOrdered="true" lower="0" type="xsd.XSDTotalDigitsFacet"
+        isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.effectiveMinLengthFacet" name="effectiveMinLengthFacet"
+        isOrdered="true" lower="0" type="xsd.XSDMinLengthFacet" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.effectiveLengthFacet" name="effectiveLengthFacet"
+        isOrdered="true" lower="0" type="xsd.XSDLengthFacet" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.effectiveMinFacet" name="effectiveMinFacet"
+        isOrdered="true" lower="0" type="xsd.XSDMinFacet" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDSimpleTypeDefinition.syntheticFacets" name="syntheticFacets"
+        isOrdered="true" lower="0" upper="*" type="xsd.XSDFacet" isComposite="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <transient>true</transient>
+      </xmi:Extension>
+    </ownedAttribute>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDTerm" name="XSDTerm" isAbstract="true"
+      superClass="xsd.XSDComponent xsd.XSDParticleContent"/>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDTotalDigitsFacet" name="XSDTotalDigitsFacet"
+      superClass="xsd.XSDFixedFacet">
+    <ownedAttribute xmi:id="xsd.XSDTotalDigitsFacet.value" name="value" isOrdered="true"
+        lower="0">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#Integer"/>
+    </ownedAttribute>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDTypeDefinition" name="XSDTypeDefinition"
+      isAbstract="true" superClass="xsd.XSDRedefinableComponent xsd.XSDRedefineContent">
+    <ownedAttribute xmi:id="xsd.XSDTypeDefinition.annotation" name="annotation" isOrdered="true"
+        lower="0" type="xsd.XSDAnnotation" isComposite="true"/>
+    <ownedAttribute xmi:id="xsd.XSDTypeDefinition.derivationAnnotation" name="derivationAnnotation"
+        isOrdered="true" lower="0" type="xsd.XSDAnnotation" isComposite="true"/>
+    <ownedAttribute xmi:id="xsd.XSDTypeDefinition.annotations" name="annotations"
+        isOrdered="true" lower="0" upper="*" type="xsd.XSDAnnotation">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDTypeDefinition.rootType" name="rootType" isOrdered="true"
+        type="xsd.XSDTypeDefinition" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDTypeDefinition.baseType" name="baseType" isOrdered="true"
+        type="xsd.XSDTypeDefinition" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDTypeDefinition.simpleType" name="simpleType" isOrdered="true"
+        lower="0" type="xsd.XSDSimpleTypeDefinition" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDTypeDefinition.complexType" name="complexType"
+        isOrdered="true" lower="0" type="xsd.XSDParticle" isReadOnly="true">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <volatile>true</volatile>
+        <transient>true</transient>
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDWhiteSpaceFacet" name="XSDWhiteSpaceFacet"
+      superClass="xsd.XSDFixedFacet">
+    <ownedAttribute xmi:id="xsd.XSDWhiteSpaceFacet.value" name="value" isOrdered="true"
+        lower="0" type="xsd.XSDWhiteSpace"/>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDWildcard" name="XSDWildcard" superClass="xsd.XSDTerm">
+    <ownedAttribute xmi:id="xsd.XSDWildcard.namespaceConstraintCategory" name="namespaceConstraintCategory"
+        isOrdered="true" lower="0" type="xsd.XSDNamespaceConstraintCategory"/>
+    <ownedAttribute xmi:id="xsd.XSDWildcard.namespaceConstraint" name="namespaceConstraint"
+        isOrdered="true" lower="0" upper="*">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDWildcard.processContents" name="processContents"
+        isOrdered="true" lower="0" type="xsd.XSDProcessContents">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <unsettable>true</unsettable>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDWildcard.lexicalNamespaceConstraint" name="lexicalNamespaceConstraint"
+        isOrdered="true" lower="0" upper="*">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#String"/>
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <unsettable>true</unsettable>
+      </xmi:Extension>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDWildcard.annotation" name="annotation" isOrdered="true"
+        lower="0" type="xsd.XSDAnnotation" isComposite="true"/>
+    <ownedAttribute xmi:id="xsd.XSDWildcard.annotations" name="annotations" isOrdered="true"
+        lower="0" upper="*" type="xsd.XSDAnnotation">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <resolveProxies>false</resolveProxies>
+      </xmi:Extension>
+    </ownedAttribute>
+  </ownedType>
+  <ownedType xmi:type="emof:Class" xmi:id="xsd.XSDXPathDefinition" name="XSDXPathDefinition"
+      superClass="xsd.XSDComponent">
+    <ownedAttribute xmi:id="xsd.XSDXPathDefinition.variety" name="variety" isOrdered="true"
+        lower="0" type="xsd.XSDXPathVariety"/>
+    <ownedAttribute xmi:id="xsd.XSDXPathDefinition.value" name="value" isOrdered="true"
+        lower="0">
+      <type xmi:type="emof:PrimitiveType" href="http://schema.omg.org/spec/MOF/2.0/emof.xml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="xsd.XSDXPathDefinition.annotation" name="annotation" isOrdered="true"
+        lower="0" type="xsd.XSDAnnotation" isComposite="true"/>
+  </ownedType>
+  <ownedType xmi:type="emof:PrimitiveType" xmi:id="xsd.DOMAttr" name="DOMAttr">
+    <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+      <instanceClassName>org.w3c.dom.Attr</instanceClassName>
+    </xmi:Extension>
+  </ownedType>
+  <ownedType xmi:type="emof:PrimitiveType" xmi:id="xsd.DOMDocument" name="DOMDocument">
+    <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+      <instanceClassName>org.w3c.dom.Document</instanceClassName>
+    </xmi:Extension>
+  </ownedType>
+  <ownedType xmi:type="emof:PrimitiveType" xmi:id="xsd.DOMElement" name="DOMElement">
+    <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+      <instanceClassName>org.w3c.dom.Element</instanceClassName>
+    </xmi:Extension>
+  </ownedType>
+  <ownedType xmi:type="emof:PrimitiveType" xmi:id="xsd.DOMNode" name="DOMNode">
+    <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+      <instanceClassName>org.w3c.dom.Node</instanceClassName>
+    </xmi:Extension>
+  </ownedType>
+  <ownedType xmi:type="emof:PrimitiveType" xmi:id="xsd.Value" name="Value">
+    <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+      <instanceClassName>java.lang.Object</instanceClassName>
+    </xmi:Extension>
+  </ownedType>
+  <ownedType xmi:type="emof:Enumeration" xmi:id="xsd.XSDAttributeUseCategory" name="XSDAttributeUseCategory">
+    <ownedLiteral xmi:id="xsd.XSDAttributeUseCategory.optional" name="optional"/>
+    <ownedLiteral xmi:id="xsd.XSDAttributeUseCategory.prohibited" name="prohibited">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>1</value>
+      </xmi:Extension>
+    </ownedLiteral>
+    <ownedLiteral xmi:id="xsd.XSDAttributeUseCategory.required" name="required">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>2</value>
+      </xmi:Extension>
+    </ownedLiteral>
+  </ownedType>
+  <ownedType xmi:type="emof:Enumeration" xmi:id="xsd.XSDCardinality" name="XSDCardinality">
+    <ownedLiteral xmi:id="xsd.XSDCardinality.finite" name="finite"/>
+    <ownedLiteral xmi:id="xsd.XSDCardinality.countablyInfinite" name="countablyInfinite">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>1</value>
+      </xmi:Extension>
+    </ownedLiteral>
+  </ownedType>
+  <ownedType xmi:type="emof:Enumeration" xmi:id="xsd.XSDComplexFinal" name="XSDComplexFinal">
+    <ownedLiteral xmi:id="xsd.XSDComplexFinal.extension" name="extension"/>
+    <ownedLiteral xmi:id="xsd.XSDComplexFinal.restriction" name="restriction">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>1</value>
+      </xmi:Extension>
+    </ownedLiteral>
+    <ownedLiteral xmi:id="xsd.XSDComplexFinal.all" name="all">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>2</value>
+      </xmi:Extension>
+    </ownedLiteral>
+  </ownedType>
+  <ownedType xmi:type="emof:Enumeration" xmi:id="xsd.XSDCompositor" name="XSDCompositor">
+    <ownedLiteral xmi:id="xsd.XSDCompositor.all" name="all"/>
+    <ownedLiteral xmi:id="xsd.XSDCompositor.choice" name="choice">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>1</value>
+      </xmi:Extension>
+    </ownedLiteral>
+    <ownedLiteral xmi:id="xsd.XSDCompositor.sequence" name="sequence">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>2</value>
+      </xmi:Extension>
+    </ownedLiteral>
+  </ownedType>
+  <ownedType xmi:type="emof:Enumeration" xmi:id="xsd.XSDConstraint" name="XSDConstraint">
+    <ownedLiteral xmi:id="xsd.XSDConstraint.default" name="default"/>
+    <ownedLiteral xmi:id="xsd.XSDConstraint.fixed" name="fixed">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>1</value>
+      </xmi:Extension>
+    </ownedLiteral>
+  </ownedType>
+  <ownedType xmi:type="emof:Enumeration" xmi:id="xsd.XSDContentTypeCategory" name="XSDContentTypeCategory">
+    <ownedLiteral xmi:id="xsd.XSDContentTypeCategory.empty" name="empty"/>
+    <ownedLiteral xmi:id="xsd.XSDContentTypeCategory.simple" name="simple">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>1</value>
+      </xmi:Extension>
+    </ownedLiteral>
+    <ownedLiteral xmi:id="xsd.XSDContentTypeCategory.mixed" name="mixed">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>2</value>
+      </xmi:Extension>
+    </ownedLiteral>
+    <ownedLiteral xmi:id="xsd.XSDContentTypeCategory.elementOnly" name="elementOnly">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>3</value>
+      </xmi:Extension>
+    </ownedLiteral>
+  </ownedType>
+  <ownedType xmi:type="emof:Enumeration" xmi:id="xsd.XSDDerivationMethod" name="XSDDerivationMethod">
+    <ownedLiteral xmi:id="xsd.XSDDerivationMethod.extension" name="extension"/>
+    <ownedLiteral xmi:id="xsd.XSDDerivationMethod.restriction" name="restriction">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>1</value>
+      </xmi:Extension>
+    </ownedLiteral>
+  </ownedType>
+  <ownedType xmi:type="emof:Enumeration" xmi:id="xsd.XSDDiagnosticSeverity" name="XSDDiagnosticSeverity">
+    <ownedLiteral xmi:id="xsd.XSDDiagnosticSeverity.fatal" name="fatal"/>
+    <ownedLiteral xmi:id="xsd.XSDDiagnosticSeverity.error" name="error">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>1</value>
+      </xmi:Extension>
+    </ownedLiteral>
+    <ownedLiteral xmi:id="xsd.XSDDiagnosticSeverity.warning" name="warning">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>2</value>
+      </xmi:Extension>
+    </ownedLiteral>
+    <ownedLiteral xmi:id="xsd.XSDDiagnosticSeverity.information" name="information">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>3</value>
+      </xmi:Extension>
+    </ownedLiteral>
+  </ownedType>
+  <ownedType xmi:type="emof:Enumeration" xmi:id="xsd.XSDDisallowedSubstitutions" name="XSDDisallowedSubstitutions">
+    <ownedLiteral xmi:id="xsd.XSDDisallowedSubstitutions.substitution" name="substitution"/>
+    <ownedLiteral xmi:id="xsd.XSDDisallowedSubstitutions.extension" name="extension">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>1</value>
+      </xmi:Extension>
+    </ownedLiteral>
+    <ownedLiteral xmi:id="xsd.XSDDisallowedSubstitutions.restriction" name="restriction">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>2</value>
+      </xmi:Extension>
+    </ownedLiteral>
+    <ownedLiteral xmi:id="xsd.XSDDisallowedSubstitutions.all" name="all">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>3</value>
+      </xmi:Extension>
+    </ownedLiteral>
+  </ownedType>
+  <ownedType xmi:type="emof:Enumeration" xmi:id="xsd.XSDForm" name="XSDForm">
+    <ownedLiteral xmi:id="xsd.XSDForm.qualified" name="qualified"/>
+    <ownedLiteral xmi:id="xsd.XSDForm.unqualified" name="unqualified">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>1</value>
+      </xmi:Extension>
+    </ownedLiteral>
+  </ownedType>
+  <ownedType xmi:type="emof:Enumeration" xmi:id="xsd.XSDIdentityConstraintCategory"
+      name="XSDIdentityConstraintCategory">
+    <ownedLiteral xmi:id="xsd.XSDIdentityConstraintCategory.key" name="key"/>
+    <ownedLiteral xmi:id="xsd.XSDIdentityConstraintCategory.keyref" name="keyref">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>1</value>
+      </xmi:Extension>
+    </ownedLiteral>
+    <ownedLiteral xmi:id="xsd.XSDIdentityConstraintCategory.unique" name="unique">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>2</value>
+      </xmi:Extension>
+    </ownedLiteral>
+  </ownedType>
+  <ownedType xmi:type="emof:Enumeration" xmi:id="xsd.XSDNamespaceConstraintCategory"
+      name="XSDNamespaceConstraintCategory">
+    <ownedLiteral xmi:id="xsd.XSDNamespaceConstraintCategory.any" name="any"/>
+    <ownedLiteral xmi:id="xsd.XSDNamespaceConstraintCategory.not" name="not">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>1</value>
+      </xmi:Extension>
+    </ownedLiteral>
+    <ownedLiteral xmi:id="xsd.XSDNamespaceConstraintCategory.set" name="set">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>2</value>
+      </xmi:Extension>
+    </ownedLiteral>
+  </ownedType>
+  <ownedType xmi:type="emof:Enumeration" xmi:id="xsd.XSDOrdered" name="XSDOrdered">
+    <ownedLiteral xmi:id="xsd.XSDOrdered.false" name="false"/>
+    <ownedLiteral xmi:id="xsd.XSDOrdered.partial" name="partial">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>1</value>
+      </xmi:Extension>
+    </ownedLiteral>
+    <ownedLiteral xmi:id="xsd.XSDOrdered.total" name="total">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>2</value>
+      </xmi:Extension>
+    </ownedLiteral>
+  </ownedType>
+  <ownedType xmi:type="emof:Enumeration" xmi:id="xsd.XSDProcessContents" name="XSDProcessContents">
+    <ownedLiteral xmi:id="xsd.XSDProcessContents.strict" name="strict"/>
+    <ownedLiteral xmi:id="xsd.XSDProcessContents.lax" name="lax">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>1</value>
+      </xmi:Extension>
+    </ownedLiteral>
+    <ownedLiteral xmi:id="xsd.XSDProcessContents.skip" name="skip">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>2</value>
+      </xmi:Extension>
+    </ownedLiteral>
+  </ownedType>
+  <ownedType xmi:type="emof:Enumeration" xmi:id="xsd.XSDProhibitedSubstitutions" name="XSDProhibitedSubstitutions">
+    <ownedLiteral xmi:id="xsd.XSDProhibitedSubstitutions.extension" name="extension"/>
+    <ownedLiteral xmi:id="xsd.XSDProhibitedSubstitutions.restriction" name="restriction">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>1</value>
+      </xmi:Extension>
+    </ownedLiteral>
+    <ownedLiteral xmi:id="xsd.XSDProhibitedSubstitutions.all" name="all">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>2</value>
+      </xmi:Extension>
+    </ownedLiteral>
+  </ownedType>
+  <ownedType xmi:type="emof:Enumeration" xmi:id="xsd.XSDSimpleFinal" name="XSDSimpleFinal">
+    <ownedLiteral xmi:id="xsd.XSDSimpleFinal.list" name="list"/>
+    <ownedLiteral xmi:id="xsd.XSDSimpleFinal.restriction" name="restriction">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>1</value>
+      </xmi:Extension>
+    </ownedLiteral>
+    <ownedLiteral xmi:id="xsd.XSDSimpleFinal.union" name="union">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>2</value>
+      </xmi:Extension>
+    </ownedLiteral>
+    <ownedLiteral xmi:id="xsd.XSDSimpleFinal.all" name="all">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>3</value>
+      </xmi:Extension>
+    </ownedLiteral>
+  </ownedType>
+  <ownedType xmi:type="emof:Enumeration" xmi:id="xsd.XSDSubstitutionGroupExclusions"
+      name="XSDSubstitutionGroupExclusions">
+    <ownedLiteral xmi:id="xsd.XSDSubstitutionGroupExclusions.extension" name="extension"/>
+    <ownedLiteral xmi:id="xsd.XSDSubstitutionGroupExclusions.restriction" name="restriction">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>1</value>
+      </xmi:Extension>
+    </ownedLiteral>
+  </ownedType>
+  <ownedType xmi:type="emof:Enumeration" xmi:id="xsd.XSDVariety" name="XSDVariety">
+    <ownedLiteral xmi:id="xsd.XSDVariety.atomic" name="atomic"/>
+    <ownedLiteral xmi:id="xsd.XSDVariety.list" name="list">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>1</value>
+      </xmi:Extension>
+    </ownedLiteral>
+    <ownedLiteral xmi:id="xsd.XSDVariety.union" name="union">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>2</value>
+      </xmi:Extension>
+    </ownedLiteral>
+  </ownedType>
+  <ownedType xmi:type="emof:Enumeration" xmi:id="xsd.XSDWhiteSpace" name="XSDWhiteSpace">
+    <ownedLiteral xmi:id="xsd.XSDWhiteSpace.preserve" name="preserve"/>
+    <ownedLiteral xmi:id="xsd.XSDWhiteSpace.replace" name="replace">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>1</value>
+      </xmi:Extension>
+    </ownedLiteral>
+    <ownedLiteral xmi:id="xsd.XSDWhiteSpace.collapse" name="collapse">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>2</value>
+      </xmi:Extension>
+    </ownedLiteral>
+  </ownedType>
+  <ownedType xmi:type="emof:Enumeration" xmi:id="xsd.XSDXPathVariety" name="XSDXPathVariety">
+    <ownedLiteral xmi:id="xsd.XSDXPathVariety.selector" name="selector"/>
+    <ownedLiteral xmi:id="xsd.XSDXPathVariety.field" name="field">
+      <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+        <value>1</value>
+      </xmi:Extension>
+    </ownedLiteral>
+  </ownedType>
+  <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
+    <nsPrefix>xsd</nsPrefix>
+  </xmi:Extension>
+</emof:Package>

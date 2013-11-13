@@ -1,0 +1,877 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/spec/XMI/20110701">
+	<uml:Model
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile"
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:Model_Package_Description_Profile="http://www.omg.org/spec/NIEM-UML/20120501/Model_Package_Description_Profile"
+		xmlns:uml="http://www.omg.org/spec/UML/20110701" xmi:type="uml:Model" xmi:id="_niem"
+		name="niem">
+		<packagedElement xmi:type="uml:Package" xmi:id="_niem-twpdes" name="twpdes">
+			<packagedElement xmi:type="uml:Package" xmi:id="_niem-twpdes-2.0" name="2.0">
+				<packagedElement xmi:type="uml:Package" xmi:id="_niem-twpdes-2.0-twpdes"
+					name="twpdes">
+					<ownedComment xmi:type="uml:Comment"
+						xmi:id="_niem-twpdes-2.0-twpdes-ownedComment"
+						body="Terrorist Watchlist Person Data Exchange Standard">
+						<annotatedElement xmi:idref="_niem-twpdes-2.0-twpdes"/>
+					</ownedComment>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-twpdes-2.0-twpdes-DateAccuracyIndicatorCodeSimpleType"
+						name="DateAccuracyIndicatorCodeSimpleType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-twpdes-2.0-twpdes-DateAccuracyIndicatorCodeSimpleType-ownedComment"
+							body="A data type for a subjective assessment that indicates belief that date content is exact or accurate. ">
+							<annotatedElement
+								xmi:idref="_niem-twpdes-2.0-twpdes-DateAccuracyIndicatorCodeSimpleType"
+							/>
+						</ownedComment>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-DateAccuracyIndicatorCodeSimpleType-Unknown"
+							name="Unknown">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-DateAccuracyIndicatorCodeSimpleType-Unknown-ownedComment"
+								body="The accuracy of the specified date is not known.">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-DateAccuracyIndicatorCodeSimpleType-Unknown"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-DateAccuracyIndicatorCodeSimpleType-Exact"
+							name="Exact">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-DateAccuracyIndicatorCodeSimpleType-Exact-ownedComment"
+								body="The specified date exhibits or is marked by strict, particular, and complete accordance with fact or a standard.">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-DateAccuracyIndicatorCodeSimpleType-Exact"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-DateAccuracyIndicatorCodeSimpleType-Circa"
+							name="Circa">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-DateAccuracyIndicatorCodeSimpleType-Circa-ownedComment"
+								body="Accuracy of the actual date is at, in, or of approximately about the specified date">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-DateAccuracyIndicatorCodeSimpleType-Circa"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Class"
+						xmi:id="_niem-twpdes-2.0-twpdes-NamespaceElementPropertyHolder"
+						name="NamespaceElementPropertyHolder"/>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-twpdes-2.0-twpdes-DateAccuracyIndicatorCodeType"
+						name="DateAccuracyIndicatorCodeType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-twpdes-2.0-twpdes-DateAccuracyIndicatorCodeType-ownedComment"
+							body="A data type for a subjective assessment that indicates belief that date content is exact or accurate. ">
+							<annotatedElement
+								xmi:idref="_niem-twpdes-2.0-twpdes-DateAccuracyIndicatorCodeType"/>
+						</ownedComment>
+						<generalization xmi:type="uml:Generalization"
+							xmi:id="_niem-twpdes-2.0-twpdes-DateAccuracyIndicatorCodeType-generalization"
+							general="_niem-twpdes-2.0-twpdes-DateAccuracyIndicatorCodeSimpleType"/>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-twpdes-2.0-twpdes-ProperNameFormCategoryCodeSimpleType"
+						name="ProperNameFormCategoryCodeSimpleType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameFormCategoryCodeSimpleType-ownedComment"
+							body="A data type for kinds of shapes and structures of a proper name.">
+							<annotatedElement
+								xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameFormCategoryCodeSimpleType"
+							/>
+						</ownedComment>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameFormCategoryCodeSimpleType-Variant"
+							name="Variant">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameFormCategoryCodeSimpleType-Variant-ownedComment"
+								body="Differing from a norm or standard.">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameFormCategoryCodeSimpleType-Variant"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameFormCategoryCodeSimpleType-Transliterated"
+							name="Transliterated">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameFormCategoryCodeSimpleType-Transliterated-ownedComment"
+								body="To transcribe from one alphabet to another.">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameFormCategoryCodeSimpleType-Transliterated"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameFormCategoryCodeSimpleType-Original"
+							name="Original">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameFormCategoryCodeSimpleType-Original-ownedComment"
+								body="Preceding all others in time or being as first made.">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameFormCategoryCodeSimpleType-Original"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameFormCategoryCodeSimpleType-Normalized"
+							name="Normalized">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameFormCategoryCodeSimpleType-Normalized-ownedComment"
+								body="The imposition of a standard.">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameFormCategoryCodeSimpleType-Normalized"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-twpdes-2.0-twpdes-ProperNameFormCategoryCodeType"
+						name="ProperNameFormCategoryCodeType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameFormCategoryCodeType-ownedComment"
+							body="A data type for kinds of shapes and structures of a proper name.">
+							<annotatedElement
+								xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameFormCategoryCodeType"/>
+						</ownedComment>
+						<generalization xmi:type="uml:Generalization"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameFormCategoryCodeType-generalization"
+							general="_niem-twpdes-2.0-twpdes-ProperNameFormCategoryCodeSimpleType"/>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType"
+						name="ProperNameScriptCodeSimpleType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-ownedComment"
+							body="A data type for a set of symbols used by a written language.">
+							<annotatedElement
+								xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType"/>
+						</ownedComment>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Deseret"
+							name="Deseret">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Deseret-ownedComment"
+								body="Deseret">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Deseret"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Greek"
+							name="Greek">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Greek-ownedComment"
+								body="Greek">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Greek"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Hangul"
+							name="Hangul">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Hangul-ownedComment"
+								body="Hangul">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Hangul"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-CanadianSyllabics"
+							name="CanadianSyllabics">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-CanadianSyllabics-ownedComment"
+								body="Canadian Syllabics">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-CanadianSyllabics"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Gothic"
+							name="Gothic">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Gothic-ownedComment"
+								body="Gothic">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Gothic"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Tibetan"
+							name="Tibetan">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Tibetan-ownedComment"
+								body="Tibetan">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Tibetan"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Katakana"
+							name="Katakana">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Katakana-ownedComment"
+								body="Katakana">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Katakana"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Telugu"
+							name="Telugu">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Telugu-ownedComment"
+								body="Telugu">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Telugu"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Arabic"
+							name="Arabic">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Arabic-ownedComment"
+								body="Arabic">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Arabic"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-OldItalic"
+							name="OldItalic">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-OldItalic-ownedComment"
+								body="Old Italic">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-OldItalic"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Ethiopic"
+							name="Ethiopic">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Ethiopic-ownedComment"
+								body="Ethiopic">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Ethiopic"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Malayalam"
+							name="Malayalam">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Malayalam-ownedComment"
+								body="Malayalam">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Malayalam"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Myanmar"
+							name="Myanmar">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Myanmar-ownedComment"
+								body="Myanmar">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Myanmar"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Lao"
+							name="Lao">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Lao-ownedComment"
+								body="Lao">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Lao"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Syriac"
+							name="Syriac">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Syriac-ownedComment"
+								body="Syriac">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Syriac"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Yi"
+							name="Yi">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Yi-ownedComment"
+								body="Yi">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Yi"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Armenian"
+							name="Armenian">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Armenian-ownedComment"
+								body="Armenian">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Armenian"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Runic"
+							name="Runic">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Runic-ownedComment"
+								body="Runic">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Runic"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Bengali"
+							name="Bengali">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Bengali-ownedComment"
+								body="Bengali">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Bengali"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Shavian"
+							name="Shavian">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Shavian-ownedComment"
+								body="Shavian">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Shavian"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Latin"
+							name="Latin">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Latin-ownedComment"
+								body="Latin">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Latin"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Ugaritic"
+							name="Ugaritic">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Ugaritic-ownedComment"
+								body="Ugaritic">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Ugaritic"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Thaana"
+							name="Thaana">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Thaana-ownedComment"
+								body="Thaana">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Thaana"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Han"
+							name="Han">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Han-ownedComment"
+								body="Han">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Han"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-LinearB"
+							name="LinearB">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-LinearB-ownedComment"
+								body="Linear B">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-LinearB"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-TaiLe"
+							name="TaiLe">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-TaiLe-ownedComment"
+								body="Tai Le">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-TaiLe"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Cherokee"
+							name="Cherokee">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Cherokee-ownedComment"
+								body="Cherokee">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Cherokee"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Sinhala"
+							name="Sinhala">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Sinhala-ownedComment"
+								body="Sinhala">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Sinhala"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Cypriot"
+							name="Cypriot">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Cypriot-ownedComment"
+								body="Cypriot">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Cypriot"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Tagalog"
+							name="Tagalog">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Tagalog-ownedComment"
+								body="Tagalog">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Tagalog"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Khmer"
+							name="Khmer">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Khmer-ownedComment"
+								body="Khmer">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Khmer"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Gurmukhi"
+							name="Gurmukhi">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Gurmukhi-ownedComment"
+								body="Gurmukhi">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Gurmukhi"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Osmanya"
+							name="Osmanya">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Osmanya-ownedComment"
+								body="Osmanya">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Osmanya"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Bopomofo"
+							name="Bopomofo">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Bopomofo-ownedComment"
+								body="Bopomofo">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Bopomofo"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Kannada"
+							name="Kannada">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Kannada-ownedComment"
+								body="Kannada">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Kannada"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Thai"
+							name="Thai">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Thai-ownedComment"
+								body="Thai">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Thai"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Ogham"
+							name="Ogham">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Ogham-ownedComment"
+								body="Ogham">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Ogham"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Georgian"
+							name="Georgian">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Georgian-ownedComment"
+								body="Georgian">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Georgian"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Hiragana"
+							name="Hiragana">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Hiragana-ownedComment"
+								body="Hiragana">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Hiragana"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Oriya"
+							name="Oriya">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Oriya-ownedComment"
+								body="Oriya">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Oriya"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Devanagari"
+							name="Devanagari">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Devanagari-ownedComment"
+								body="Devanagari">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Devanagari"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Buhid"
+							name="Buhid">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Buhid-ownedComment"
+								body="Buhid">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Buhid"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Tagbanwa"
+							name="Tagbanwa">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Tagbanwa-ownedComment"
+								body="Tagbanwa">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Tagbanwa"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Limbu"
+							name="Limbu">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Limbu-ownedComment"
+								body="Limbu">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Limbu"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Hebrew"
+							name="Hebrew">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Hebrew-ownedComment"
+								body="Hebrew">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Hebrew"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Mongolian"
+							name="Mongolian">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Mongolian-ownedComment"
+								body="Mongolian">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Mongolian"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Tamil"
+							name="Tamil">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Tamil-ownedComment"
+								body="Tamil">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Tamil"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Hanunoo"
+							name="Hanunoo">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Hanunoo-ownedComment"
+								body="Hanunoo">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Hanunoo"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Cyrillic"
+							name="Cyrillic">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Cyrillic-ownedComment"
+								body="Cyrillic">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Cyrillic"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Gujarati"
+							name="Gujarati">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Gujarati-ownedComment"
+								body="Gujarati">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType-Gujarati"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeType"
+						name="ProperNameScriptCodeType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeType-ownedComment"
+							body="A data type for a set of symbols used by a written language.">
+							<annotatedElement
+								xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeType"/>
+						</ownedComment>
+						<generalization xmi:type="uml:Generalization"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeType-generalization"
+							general="_niem-twpdes-2.0-twpdes-ProperNameScriptCodeSimpleType"/>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-twpdes-2.0-twpdes-ProperNameTransliterationCodeSimpleType"
+						name="ProperNameTransliterationCodeSimpleType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameTransliterationCodeSimpleType-ownedComment"
+							body="A data type for an encoding to transcribe from one alphabet to another.">
+							<annotatedElement
+								xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameTransliterationCodeSimpleType"
+							/>
+						</ownedComment>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameTransliterationCodeSimpleType-Arabic"
+							name="Arabic">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameTransliterationCodeSimpleType-Arabic-ownedComment"
+								body="Arabic">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameTransliterationCodeSimpleType-Arabic"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameTransliterationCodeSimpleType-Hindi"
+							name="Hindi">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameTransliterationCodeSimpleType-Hindi-ownedComment"
+								body="Hindi">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameTransliterationCodeSimpleType-Hindi"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameTransliterationCodeSimpleType-Urdu"
+							name="Urdu">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-ProperNameTransliterationCodeSimpleType-Urdu-ownedComment"
+								body="Urdu">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameTransliterationCodeSimpleType-Urdu"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-twpdes-2.0-twpdes-ProperNameTransliterationCodeType"
+						name="ProperNameTransliterationCodeType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameTransliterationCodeType-ownedComment"
+							body="A data type for an encoding to transcribe from one alphabet to another.">
+							<annotatedElement
+								xmi:idref="_niem-twpdes-2.0-twpdes-ProperNameTransliterationCodeType"
+							/>
+						</ownedComment>
+						<generalization xmi:type="uml:Generalization"
+							xmi:id="_niem-twpdes-2.0-twpdes-ProperNameTransliterationCodeType-generalization"
+							general="_niem-twpdes-2.0-twpdes-ProperNameTransliterationCodeSimpleType"
+						/>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-twpdes-2.0-twpdes-QualityValidityCategoryCodeSimpleType"
+						name="QualityValidityCategoryCodeSimpleType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-twpdes-2.0-twpdes-QualityValidityCategoryCodeSimpleType-ownedComment"
+							body="A data type for categories that describe the level of probability that the data is trustworthy.">
+							<annotatedElement
+								xmi:idref="_niem-twpdes-2.0-twpdes-QualityValidityCategoryCodeSimpleType"
+							/>
+						</ownedComment>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-QualityValidityCategoryCodeSimpleType-Low"
+							name="Low">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-QualityValidityCategoryCodeSimpleType-Low-ownedComment"
+								body="Low probability that the data is trustworthy">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-QualityValidityCategoryCodeSimpleType-Low"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-QualityValidityCategoryCodeSimpleType-High"
+							name="High">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-QualityValidityCategoryCodeSimpleType-High-ownedComment"
+								body="High probability that the data is trustworthy">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-QualityValidityCategoryCodeSimpleType-High"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-twpdes-2.0-twpdes-QualityValidityCategoryCodeSimpleType-Medium"
+							name="Medium">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-twpdes-2.0-twpdes-QualityValidityCategoryCodeSimpleType-Medium-ownedComment"
+								body="Medium probability that the data is trustworthy">
+								<annotatedElement
+									xmi:idref="_niem-twpdes-2.0-twpdes-QualityValidityCategoryCodeSimpleType-Medium"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-twpdes-2.0-twpdes-QualityValidityCategoryCodeType"
+						name="QualityValidityCategoryCodeType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-twpdes-2.0-twpdes-QualityValidityCategoryCodeType-ownedComment"
+							body="A data type for categories that describe the level of probability that the data is trustworthy.">
+							<annotatedElement
+								xmi:idref="_niem-twpdes-2.0-twpdes-QualityValidityCategoryCodeType"
+							/>
+						</ownedComment>
+						<generalization xmi:type="uml:Generalization"
+							xmi:id="_niem-twpdes-2.0-twpdes-QualityValidityCategoryCodeType-generalization"
+							general="_niem-twpdes-2.0-twpdes-QualityValidityCategoryCodeSimpleType"
+						/>
+					</packagedElement>
+				</packagedElement>
+			</packagedElement>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-twpdes-profileApplication-1">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_PIM_Profile"
+				> </appliedProfile>
+			</profileApplication>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-twpdes-profileApplication-2">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-Model_Package_Description_Profile"
+				> </appliedProfile>
+			</profileApplication>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-twpdes-profileApplication-3">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_Common_Profile"
+				> </appliedProfile>
+			</profileApplication>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-twpdes-profileApplication-4">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_PSM_Profile"
+				> </appliedProfile>
+			</profileApplication>
+		</packagedElement>
+	</uml:Model>
+	<NIEM_Common_Profile:PropertyHolder
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-twpdes-2.0-twpdes-NamespaceElementPropertyHolder-appliedStereotypeInstance"
+		base_Class="_niem-twpdes-2.0-twpdes-NamespaceElementPropertyHolder"/>
+	<NIEM_PIM_Profile:InformationModel
+		xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile"
+		xmi:id="_niem-twpdes-2.0-twpdes-appliedStereotypeInstance"
+		base_Package="_niem-twpdes-2.0-twpdes" targetNamespace="http://niem.gov/niem/twpdes/2.0"
+		version="1" isConformant="true" defaultPurpose="reference"/>
+</xmi:XMI>

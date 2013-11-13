@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Composite xmlns:ppe="clr-namespace:org.eclipse.papyrus.views.properties.widgets"
+    xmlns="http://www.eclipse.org/xwt/presentation" xmlns:x="http://www.eclipse.org/xwt"
+    xmlns:ppel="clr-namespace:org.eclipse.papyrus.views.properties.widgets.layout"
+    xmlns:j="clr-namespace:java.lang">
+    <Composite.layout>
+        <ppel:PropertiesLayout></ppel:PropertiesLayout>
+    </Composite.layout>
+    <Composite>
+        <Composite.layout>
+            <ppel:PropertiesLayout></ppel:PropertiesLayout>
+        </Composite.layout>
+        <ppe:BooleanRadio input="{Binding}"
+            property="UML:Generalization:isSubstitutable"></ppe:BooleanRadio>
+    </Composite>
+    <Composite>
+        <Composite.layout>
+            <ppel:PropertiesLayout></ppel:PropertiesLayout>
+        </Composite.layout>
+        <ppe:MultiReference input="{Binding}"
+            property="UML:Element:ownedComment"></ppe:MultiReference>
+    </Composite>
+</Composite>

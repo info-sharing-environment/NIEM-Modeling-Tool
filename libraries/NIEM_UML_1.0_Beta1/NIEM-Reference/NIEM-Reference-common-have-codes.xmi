@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/spec/XMI/20110701">
+	<uml:Model
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile"
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:Model_Package_Description_Profile="http://www.omg.org/spec/NIEM-UML/20120501/Model_Package_Description_Profile"
+		xmlns:uml="http://www.omg.org/spec/UML/20110701" xmi:type="uml:Model" xmi:id="_niem"
+		name="niem">
+		<packagedElement xmi:type="uml:Package" xmi:id="_niem-have-codes" name="have-codes">
+			<packagedElement xmi:type="uml:Package" xmi:id="_niem-have-codes-2.1" name="2.1">
+				<packagedElement xmi:type="uml:Package" xmi:id="_niem-have-codes-2.1-have-codes"
+					name="have-codes">
+					<ownedComment xmi:type="uml:Comment"
+						xmi:id="_niem-have-codes-2.1-have-codes-ownedComment"
+						body="EDXL Hospital AVailability Exchange (HAVE) code sets">
+						<annotatedElement xmi:idref="_niem-have-codes-2.1-have-codes"/>
+					</ownedComment>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-have-codes-2.1-have-codes-AvailabilityStatusCodeSimpleType"
+						name="AvailabilityStatusCodeSimpleType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-have-codes-2.1-have-codes-AvailabilityStatusCodeSimpleType-ownedComment"
+							body="A data type for a code set of service availability.">
+							<annotatedElement
+								xmi:idref="_niem-have-codes-2.1-have-codes-AvailabilityStatusCodeSimpleType"
+							/>
+						</ownedComment>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-AvailabilityStatusCodeSimpleType-Adequate"
+							name="Adequate">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-AvailabilityStatusCodeSimpleType-Adequate-ownedComment"
+								body="Meets the current needs">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-AvailabilityStatusCodeSimpleType-Adequate"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-AvailabilityStatusCodeSimpleType-Insufficient"
+							name="Insufficient">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-AvailabilityStatusCodeSimpleType-Insufficient-ownedComment"
+								body="Current needs are not being met">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-AvailabilityStatusCodeSimpleType-Insufficient"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Class"
+						xmi:id="_niem-have-codes-2.1-have-codes-NamespaceElementPropertyHolder"
+						name="NamespaceElementPropertyHolder"/>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-have-codes-2.1-have-codes-AvailabilityStatusCodeType"
+						name="AvailabilityStatusCodeType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-have-codes-2.1-have-codes-AvailabilityStatusCodeType-ownedComment"
+							body="A data type for a code set of service availability.">
+							<annotatedElement
+								xmi:idref="_niem-have-codes-2.1-have-codes-AvailabilityStatusCodeType"
+							/>
+						</ownedComment>
+						<generalization xmi:type="uml:Generalization"
+							xmi:id="_niem-have-codes-2.1-have-codes-AvailabilityStatusCodeType-generalization"
+							general="_niem-have-codes-2.1-have-codes-AvailabilityStatusCodeSimpleType"
+						/>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-have-codes-2.1-have-codes-BedCategoryCodeSimpleType"
+						name="BedCategoryCodeSimpleType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-have-codes-2.1-have-codes-BedCategoryCodeSimpleType-ownedComment"
+							body="A data type for a code set of available Bed Types.">
+							<annotatedElement
+								xmi:idref="_niem-have-codes-2.1-have-codes-BedCategoryCodeSimpleType"
+							/>
+						</ownedComment>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-BedCategoryCodeSimpleType-MedicalSurgical"
+							name="MedicalSurgical">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-BedCategoryCodeSimpleType-MedicalSurgical-ownedComment"
+								body="Capacity status for medical-surgical beds. &#xA;i. These are also thought of as ward beds.  &#xA;ii. These beds may or may not include cardiac telemetry capability">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-BedCategoryCodeSimpleType-MedicalSurgical"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-BedCategoryCodeSimpleType-AdultICU"
+							name="AdultICU">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-BedCategoryCodeSimpleType-AdultICU-ownedComment"
+								body="Capacity status for adult ICU bed type. &#xA;i. These can support critically ill or injured patients, including ventilator support.  &#xA;ii. This category includes all major subtypes of ICU beds, including neuro, cardiac, trauma, or medical, with the exception t">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-BedCategoryCodeSimpleType-AdultICU"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-BedCategoryCodeSimpleType-PediatricICU"
+							name="PediatricICU">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-BedCategoryCodeSimpleType-PediatricICU-ownedComment"
+								body="i. Capacity status for pediatric ICU beds. This is similar to adult ICU beds, but for patients 17-years-old and younger.&#xA;">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-BedCategoryCodeSimpleType-PediatricICU"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-BedCategoryCodeSimpleType-Pediatrics"
+							name="Pediatrics">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-BedCategoryCodeSimpleType-Pediatrics-ownedComment"
+								body="i. Capacity status for pediatrics beds. These are ward medical/surgical beds for patients 17-years-old and younger.&#xA;">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-BedCategoryCodeSimpleType-Pediatrics"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-BedCategoryCodeSimpleType-Psychiatric"
+							name="Psychiatric">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-BedCategoryCodeSimpleType-Psychiatric-ownedComment"
+								body="i. Capacity status for psychiatric beds. These are ward beds on a closed/locked psychiatric unit or ward beds where a patient will be attended by a sitter.">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-BedCategoryCodeSimpleType-Psychiatric"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-BedCategoryCodeSimpleType-Burn"
+							name="Burn">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-BedCategoryCodeSimpleType-Burn-ownedComment"
+								body="Capacity status for burn beds. &#xA;i. These are thought of as burn ICU beds, either approved by the American Burn Association or self-designated. &#xA;ii. These beds are NOT to be included in other ICU bed counts.">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-BedCategoryCodeSimpleType-Burn"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-BedCategoryCodeSimpleType-OtherIsolation"
+							name="OtherIsolation">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-BedCategoryCodeSimpleType-OtherIsolation-ownedComment"
+								body="i. Capacity status for other isolation beds. These provide isolation where airflow is not a concern.  NOTE: This value may represent available beds included in the counts of other types. &#xA;">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-BedCategoryCodeSimpleType-OtherIsolation"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-BedCategoryCodeSimpleType-OperatingRooms"
+							name="OperatingRooms">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-BedCategoryCodeSimpleType-OperatingRooms-ownedComment"
+								body="i. Capacity status for operating rooms which are equipped staffed and could be made available for patient care in a short period of time.&#xA;">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-BedCategoryCodeSimpleType-OperatingRooms"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-BedCategoryCodeSimpleType-NegativeFlowIsolation"
+							name="NegativeFlowIsolation">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-BedCategoryCodeSimpleType-NegativeFlowIsolation-ownedComment"
+								body="i. Capacity status for negative airflow isolation beds. These provide respiratory isolation. NOTE: This value may represent available beds included in the counts of other types. &#xA;">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-BedCategoryCodeSimpleType-NegativeFlowIsolation"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-have-codes-2.1-have-codes-BedCategoryCodeType"
+						name="BedCategoryCodeType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-have-codes-2.1-have-codes-BedCategoryCodeType-ownedComment"
+							body="A data type for a code set of available Bed Types.">
+							<annotatedElement
+								xmi:idref="_niem-have-codes-2.1-have-codes-BedCategoryCodeType"/>
+						</ownedComment>
+						<generalization xmi:type="uml:Generalization"
+							xmi:id="_niem-have-codes-2.1-have-codes-BedCategoryCodeType-generalization"
+							general="_niem-have-codes-2.1-have-codes-BedCategoryCodeSimpleType"/>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-have-codes-2.1-have-codes-CapacityStatusCodeSimpleType"
+						name="CapacityStatusCodeSimpleType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-have-codes-2.1-have-codes-CapacityStatusCodeSimpleType-ownedComment"
+							body="A data type for a code set of bed kind or sub-category bed kind.">
+							<annotatedElement
+								xmi:idref="_niem-have-codes-2.1-have-codes-CapacityStatusCodeSimpleType"
+							/>
+						</ownedComment>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-CapacityStatusCodeSimpleType-VacantAvailable"
+							name="VacantAvailable">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-CapacityStatusCodeSimpleType-VacantAvailable-ownedComment"
+								body="The type of bed is available.">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-CapacityStatusCodeSimpleType-VacantAvailable"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-CapacityStatusCodeSimpleType-NotAvailable"
+							name="NotAvailable">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-CapacityStatusCodeSimpleType-NotAvailable-ownedComment"
+								body="The type of bed is not available.">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-CapacityStatusCodeSimpleType-NotAvailable"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-have-codes-2.1-have-codes-CapacityStatusCodeType"
+						name="CapacityStatusCodeType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-have-codes-2.1-have-codes-CapacityStatusCodeType-ownedComment"
+							body="A data type for a code set of bed kind or sub-category bed kind.">
+							<annotatedElement
+								xmi:idref="_niem-have-codes-2.1-have-codes-CapacityStatusCodeType"/>
+						</ownedComment>
+						<generalization xmi:type="uml:Generalization"
+							xmi:id="_niem-have-codes-2.1-have-codes-CapacityStatusCodeType-generalization"
+							general="_niem-have-codes-2.1-have-codes-CapacityStatusCodeSimpleType"/>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-have-codes-2.1-have-codes-ClinicalStatusCodeSimpleType"
+						name="ClinicalStatusCodeSimpleType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-have-codes-2.1-have-codes-ClinicalStatusCodeSimpleType-ownedComment"
+							body="A data type for a code set of the clinical status of the facility.">
+							<annotatedElement
+								xmi:idref="_niem-have-codes-2.1-have-codes-ClinicalStatusCodeSimpleType"
+							/>
+						</ownedComment>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-ClinicalStatusCodeSimpleType-Level1"
+							name="Level1">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-ClinicalStatusCodeSimpleType-Level1-ownedComment"
+								body="Hospital clinical resources are operating at Level-1 surge conditions.">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-ClinicalStatusCodeSimpleType-Level1"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-ClinicalStatusCodeSimpleType-Full"
+							name="Full">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-ClinicalStatusCodeSimpleType-Full-ownedComment"
+								body="Hospital clinical resources are exceeded and acceptable care cannot be provided to additional patients. Diversion or community surge response is required.">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-ClinicalStatusCodeSimpleType-Full"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-ClinicalStatusCodeSimpleType-Normal"
+							name="Normal">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-ClinicalStatusCodeSimpleType-Normal-ownedComment"
+								body="Hospital clinical resources are operating within normal conditions.">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-ClinicalStatusCodeSimpleType-Normal"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-ClinicalStatusCodeSimpleType-Level2"
+							name="Level2">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-ClinicalStatusCodeSimpleType-Level2-ownedComment"
+								body="Hospital clinical resources are operating at Level-2 surge conditions.">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-ClinicalStatusCodeSimpleType-Level2"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-have-codes-2.1-have-codes-ClinicalStatusCodeType"
+						name="ClinicalStatusCodeType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-have-codes-2.1-have-codes-ClinicalStatusCodeType-ownedComment"
+							body="A data type for a code set of the clinical status of the facility.">
+							<annotatedElement
+								xmi:idref="_niem-have-codes-2.1-have-codes-ClinicalStatusCodeType"/>
+						</ownedComment>
+						<generalization xmi:type="uml:Generalization"
+							xmi:id="_niem-have-codes-2.1-have-codes-ClinicalStatusCodeType-generalization"
+							general="_niem-have-codes-2.1-have-codes-ClinicalStatusCodeSimpleType"/>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-have-codes-2.1-have-codes-DeconCapacityCodeSimpleType"
+						name="DeconCapacityCodeSimpleType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-have-codes-2.1-have-codes-DeconCapacityCodeSimpleType-ownedComment"
+							body="A data type for a code set of the capacity for chemical/biological/radiological patient decontamination.">
+							<annotatedElement
+								xmi:idref="_niem-have-codes-2.1-have-codes-DeconCapacityCodeSimpleType"
+							/>
+						</ownedComment>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-DeconCapacityCodeSimpleType-Full"
+							name="Full">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-DeconCapacityCodeSimpleType-Full-ownedComment"
+								body="In use at maximum capacity">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-DeconCapacityCodeSimpleType-Full"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-DeconCapacityCodeSimpleType-Open"
+							name="Open">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-DeconCapacityCodeSimpleType-Open-ownedComment"
+								body="In use and able to accept additional patients">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-DeconCapacityCodeSimpleType-Open"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-DeconCapacityCodeSimpleType-Exceeded"
+							name="Exceeded">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-DeconCapacityCodeSimpleType-Exceeded-ownedComment"
+								body="Needs exceed available capacity">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-DeconCapacityCodeSimpleType-Exceeded"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-DeconCapacityCodeSimpleType-Inactive"
+							name="Inactive">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-DeconCapacityCodeSimpleType-Inactive-ownedComment"
+								body="Not being used, but available if needed">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-DeconCapacityCodeSimpleType-Inactive"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-have-codes-2.1-have-codes-DeconCapacityCodeType"
+						name="DeconCapacityCodeType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-have-codes-2.1-have-codes-DeconCapacityCodeType-ownedComment"
+							body="A data type for a code set of the capacity for chemical/biological/radiological patient decontamination.">
+							<annotatedElement
+								xmi:idref="_niem-have-codes-2.1-have-codes-DeconCapacityCodeType"/>
+						</ownedComment>
+						<generalization xmi:type="uml:Generalization"
+							xmi:id="_niem-have-codes-2.1-have-codes-DeconCapacityCodeType-generalization"
+							general="_niem-have-codes-2.1-have-codes-DeconCapacityCodeSimpleType"/>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-have-codes-2.1-have-codes-EMSOffloadStatusCodeSimpleType"
+						name="EMSOffloadStatusCodeSimpleType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-have-codes-2.1-have-codes-EMSOffloadStatusCodeSimpleType-ownedComment"
+							body="A data type for a code set of offload times of ambulance capabilities.">
+							<annotatedElement
+								xmi:idref="_niem-have-codes-2.1-have-codes-EMSOffloadStatusCodeSimpleType"
+							/>
+						</ownedComment>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-EMSOffloadStatusCodeSimpleType-Delayed"
+							name="Delayed">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-EMSOffloadStatusCodeSimpleType-Delayed-ownedComment"
+								body="The time required to offload the patient is longer than typical.">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-EMSOffloadStatusCodeSimpleType-Delayed"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-EMSOffloadStatusCodeSimpleType-Normal"
+							name="Normal">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-EMSOffloadStatusCodeSimpleType-Normal-ownedComment"
+								body="The time required to offload the patient is typical.">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-EMSOffloadStatusCodeSimpleType-Normal"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-have-codes-2.1-have-codes-EMSOffloadStatusCodeType"
+						name="EMSOffloadStatusCodeType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-have-codes-2.1-have-codes-EMSOffloadStatusCodeType-ownedComment"
+							body="A data type for a code set of offload times of ambulance capabilities.">
+							<annotatedElement
+								xmi:idref="_niem-have-codes-2.1-have-codes-EMSOffloadStatusCodeType"
+							/>
+						</ownedComment>
+						<generalization xmi:type="uml:Generalization"
+							xmi:id="_niem-have-codes-2.1-have-codes-EMSOffloadStatusCodeType-generalization"
+							general="_niem-have-codes-2.1-have-codes-EMSOffloadStatusCodeSimpleType"
+						/>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-have-codes-2.1-have-codes-EMSTrafficStatusCodeSimpleType"
+						name="EMSTrafficStatusCodeSimpleType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-have-codes-2.1-have-codes-EMSTrafficStatusCodeSimpleType-ownedComment"
+							body="A data type for a code set of the status of EMS traffic operations.">
+							<annotatedElement
+								xmi:idref="_niem-have-codes-2.1-have-codes-EMSTrafficStatusCodeSimpleType"
+							/>
+						</ownedComment>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-EMSTrafficStatusCodeSimpleType-NotApplicable"
+							name="NotApplicable">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-EMSTrafficStatusCodeSimpleType-NotApplicable-ownedComment"
+								body="Not Applicable. This hospital does not have an emergency department.">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-EMSTrafficStatusCodeSimpleType-NotApplicable"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-EMSTrafficStatusCodeSimpleType-Closed"
+							name="Closed">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-EMSTrafficStatusCodeSimpleType-Closed-ownedComment"
+								body="Requesting re-route of EMS traffic to other facilities.">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-EMSTrafficStatusCodeSimpleType-Closed"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-EMSTrafficStatusCodeSimpleType-Normal"
+							name="Normal">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-EMSTrafficStatusCodeSimpleType-Normal-ownedComment"
+								body="Accepting all EMS traffic">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-EMSTrafficStatusCodeSimpleType-Normal"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-EMSTrafficStatusCodeSimpleType-Advisory"
+							name="Advisory">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-EMSTrafficStatusCodeSimpleType-Advisory-ownedComment"
+								body="Experiencing specific resource limitations which may affect transport of some EMS traffic.">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-EMSTrafficStatusCodeSimpleType-Advisory"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-have-codes-2.1-have-codes-EMSTrafficStatusCodeType"
+						name="EMSTrafficStatusCodeType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-have-codes-2.1-have-codes-EMSTrafficStatusCodeType-ownedComment"
+							body="A data type for a code set of the status of EMS traffic operations.">
+							<annotatedElement
+								xmi:idref="_niem-have-codes-2.1-have-codes-EMSTrafficStatusCodeType"
+							/>
+						</ownedComment>
+						<generalization xmi:type="uml:Generalization"
+							xmi:id="_niem-have-codes-2.1-have-codes-EMSTrafficStatusCodeType-generalization"
+							general="_niem-have-codes-2.1-have-codes-EMSTrafficStatusCodeSimpleType"
+						/>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-have-codes-2.1-have-codes-EOCPlanCodeSimpleType"
+						name="EOCPlanCodeSimpleType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-have-codes-2.1-have-codes-EOCPlanCodeSimpleType-ownedComment"
+							body="A data type for a code set of whether the hospital has activated its Emergency Operations Plan (EOP)">
+							<annotatedElement
+								xmi:idref="_niem-have-codes-2.1-have-codes-EOCPlanCodeSimpleType"/>
+						</ownedComment>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-EOCPlanCodeSimpleType-Inactive"
+							name="Inactive"/>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-EOCPlanCodeSimpleType-Active"
+							name="Active"/>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-have-codes-2.1-have-codes-EOCPlanCodeType"
+						name="EOCPlanCodeType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-have-codes-2.1-have-codes-EOCPlanCodeType-ownedComment"
+							body="A data type for a code set of whether the hospital has activated its Emergency Operations Plan (EOP)">
+							<annotatedElement
+								xmi:idref="_niem-have-codes-2.1-have-codes-EOCPlanCodeType"/>
+						</ownedComment>
+						<generalization xmi:type="uml:Generalization"
+							xmi:id="_niem-have-codes-2.1-have-codes-EOCPlanCodeType-generalization"
+							general="_niem-have-codes-2.1-have-codes-EOCPlanCodeSimpleType"/>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-have-codes-2.1-have-codes-EOCStatusCodeSimpleType"
+						name="EOCStatusCodeSimpleType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-have-codes-2.1-have-codes-EOCStatusCodeSimpleType-ownedComment"
+							body="A data type for a code set of whether the Emergency Operations Center (EOC) is currently operating.">
+							<annotatedElement
+								xmi:idref="_niem-have-codes-2.1-have-codes-EOCStatusCodeSimpleType"
+							/>
+						</ownedComment>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-EOCStatusCodeSimpleType-Inactive"
+							name="Inactive"/>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-EOCStatusCodeSimpleType-Active"
+							name="Active"/>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-have-codes-2.1-have-codes-EOCStatusCodeType"
+						name="EOCStatusCodeType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-have-codes-2.1-have-codes-EOCStatusCodeType-ownedComment"
+							body="A data type for a code set of whether the Emergency Operations Center (EOC) is currently operating.">
+							<annotatedElement
+								xmi:idref="_niem-have-codes-2.1-have-codes-EOCStatusCodeType"/>
+						</ownedComment>
+						<generalization xmi:type="uml:Generalization"
+							xmi:id="_niem-have-codes-2.1-have-codes-EOCStatusCodeType-generalization"
+							general="_niem-have-codes-2.1-have-codes-EOCStatusCodeSimpleType"/>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-have-codes-2.1-have-codes-FacilityStatusCodeSimpleType"
+						name="FacilityStatusCodeSimpleType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-have-codes-2.1-have-codes-FacilityStatusCodeSimpleType-ownedComment"
+							body="A data type for a code set of facility status.">
+							<annotatedElement
+								xmi:idref="_niem-have-codes-2.1-have-codes-FacilityStatusCodeSimpleType"
+							/>
+						</ownedComment>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-FacilityStatusCodeSimpleType-Compromised"
+							name="Compromised">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-FacilityStatusCodeSimpleType-Compromised-ownedComment"
+								body="General operations of the facility have been affected due to damage, operating on emergency backup systems, or facility contamination.">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-FacilityStatusCodeSimpleType-Compromised"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-FacilityStatusCodeSimpleType-Closed"
+							name="Closed">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-FacilityStatusCodeSimpleType-Closed-ownedComment"
+								body="Indicates that a hospital is no longer capable of providing services and only emergency services/restoration personnel may remain in the facility.">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-FacilityStatusCodeSimpleType-Closed"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-FacilityStatusCodeSimpleType-Normal"
+							name="Normal">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-FacilityStatusCodeSimpleType-Normal-ownedComment"
+								body="No conditions exist that adversely affect the general operations of the facility.">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-FacilityStatusCodeSimpleType-Normal"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-FacilityStatusCodeSimpleType-Evacuating"
+							name="Evacuating">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-FacilityStatusCodeSimpleType-Evacuating-ownedComment"
+								body="Indicates that a hospital is in the process of a partial or full evacuation.">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-FacilityStatusCodeSimpleType-Evacuating"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-have-codes-2.1-have-codes-FacilityStatusCodeType"
+						name="FacilityStatusCodeType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-have-codes-2.1-have-codes-FacilityStatusCodeType-ownedComment"
+							body="A data type for a code set of facility status.">
+							<annotatedElement
+								xmi:idref="_niem-have-codes-2.1-have-codes-FacilityStatusCodeType"/>
+						</ownedComment>
+						<generalization xmi:type="uml:Generalization"
+							xmi:id="_niem-have-codes-2.1-have-codes-FacilityStatusCodeType-generalization"
+							general="_niem-have-codes-2.1-have-codes-FacilityStatusCodeSimpleType"/>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-have-codes-2.1-have-codes-MorgueCapacityCodeSimpleType"
+						name="MorgueCapacityCodeSimpleType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-have-codes-2.1-have-codes-MorgueCapacityCodeSimpleType-ownedComment"
+							body="A data type for a code set of the status of the morgue capacity.">
+							<annotatedElement
+								xmi:idref="_niem-have-codes-2.1-have-codes-MorgueCapacityCodeSimpleType"
+							/>
+						</ownedComment>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-MorgueCapacityCodeSimpleType-Full"
+							name="Full">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-MorgueCapacityCodeSimpleType-Full-ownedComment"
+								body="All normal space is in use">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-MorgueCapacityCodeSimpleType-Full"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-MorgueCapacityCodeSimpleType-Exceeded"
+							name="Exceeded">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-MorgueCapacityCodeSimpleType-Exceeded-ownedComment"
+								body="Storage needs exceed available space">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-MorgueCapacityCodeSimpleType-Exceeded"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-MorgueCapacityCodeSimpleType-Open"
+							name="Open">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-MorgueCapacityCodeSimpleType-Open-ownedComment"
+								body="Space is available">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-MorgueCapacityCodeSimpleType-Open"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-have-codes-2.1-have-codes-MorgueCapacityCodeType"
+						name="MorgueCapacityCodeType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-have-codes-2.1-have-codes-MorgueCapacityCodeType-ownedComment"
+							body="A data type for a code set of the status of the morgue capacity.">
+							<annotatedElement
+								xmi:idref="_niem-have-codes-2.1-have-codes-MorgueCapacityCodeType"/>
+						</ownedComment>
+						<generalization xmi:type="uml:Generalization"
+							xmi:id="_niem-have-codes-2.1-have-codes-MorgueCapacityCodeType-generalization"
+							general="_niem-have-codes-2.1-have-codes-MorgueCapacityCodeSimpleType"/>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-have-codes-2.1-have-codes-SecurityStatusCodeSimpleType"
+						name="SecurityStatusCodeSimpleType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-have-codes-2.1-have-codes-SecurityStatusCodeSimpleType-ownedComment"
+							body="A data type for a code set of the status of security procedures in the hospital.">
+							<annotatedElement
+								xmi:idref="_niem-have-codes-2.1-have-codes-SecurityStatusCodeSimpleType"
+							/>
+						</ownedComment>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-SecurityStatusCodeSimpleType-Quarantine"
+							name="Quarantine">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-SecurityStatusCodeSimpleType-Quarantine-ownedComment"
+								body="Based on a public health emergency, the entry and exit of the facility is controlled by public health officials">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-SecurityStatusCodeSimpleType-Quarantine"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-SecurityStatusCodeSimpleType-RestrictedAccess"
+							name="RestrictedAccess">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-SecurityStatusCodeSimpleType-RestrictedAccess-ownedComment"
+								body="Based on security needs, the hospital has activated procedures to allow access to the facility through a reduced number of controlled entrances.">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-SecurityStatusCodeSimpleType-RestrictedAccess"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-SecurityStatusCodeSimpleType-Elevated"
+							name="Elevated">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-SecurityStatusCodeSimpleType-Elevated-ownedComment"
+								body="The hospital has activated increased security procedures (awareness, surveillance) due to a potential threat, or specific security related event i.e. increase in local threat level, VIP, bomb threat.">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-SecurityStatusCodeSimpleType-Elevated"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-SecurityStatusCodeSimpleType-Normal"
+							name="Normal">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-SecurityStatusCodeSimpleType-Normal-ownedComment"
+								body="The hospital is operating under routine security procedures.">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-SecurityStatusCodeSimpleType-Normal"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-have-codes-2.1-have-codes-SecurityStatusCodeSimpleType-Lockdown"
+							name="Lockdown">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-have-codes-2.1-have-codes-SecurityStatusCodeSimpleType-Lockdown-ownedComment"
+								body="Based on security needs, the hospital has activated procedures to control entry to the facility to authorized persons only.">
+								<annotatedElement
+									xmi:idref="_niem-have-codes-2.1-have-codes-SecurityStatusCodeSimpleType-Lockdown"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-have-codes-2.1-have-codes-SecurityStatusCodeType"
+						name="SecurityStatusCodeType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-have-codes-2.1-have-codes-SecurityStatusCodeType-ownedComment"
+							body="A data type for a code set of the status of security procedures in the hospital.">
+							<annotatedElement
+								xmi:idref="_niem-have-codes-2.1-have-codes-SecurityStatusCodeType"/>
+						</ownedComment>
+						<generalization xmi:type="uml:Generalization"
+							xmi:id="_niem-have-codes-2.1-have-codes-SecurityStatusCodeType-generalization"
+							general="_niem-have-codes-2.1-have-codes-SecurityStatusCodeSimpleType"/>
+					</packagedElement>
+				</packagedElement>
+			</packagedElement>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-have-codes-profileApplication-1">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_PIM_Profile"
+				> </appliedProfile>
+			</profileApplication>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-have-codes-profileApplication-2">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-Model_Package_Description_Profile"
+				> </appliedProfile>
+			</profileApplication>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-have-codes-profileApplication-3">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_Common_Profile"
+				> </appliedProfile>
+			</profileApplication>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-have-codes-profileApplication-4">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_PSM_Profile"
+				> </appliedProfile>
+			</profileApplication>
+		</packagedElement>
+	</uml:Model>
+	<NIEM_Common_Profile:PropertyHolder
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-have-codes-2.1-have-codes-NamespaceElementPropertyHolder-appliedStereotypeInstance"
+		base_Class="_niem-have-codes-2.1-have-codes-NamespaceElementPropertyHolder"/>
+	<NIEM_PIM_Profile:InformationModel
+		xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile"
+		xmi:id="_niem-have-codes-2.1-have-codes-appliedStereotypeInstance"
+		base_Package="_niem-have-codes-2.1-have-codes"
+		targetNamespace="http://niem.gov/niem/have-codes/2.1" isConformant="true" version="1"
+		defaultPurpose="reference"/>
+</xmi:XMI>

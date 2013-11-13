@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="org.search.niem.uml.ui.PerspectiveFactory"
+            icon="icons/full/eview16/niem_uml_perspective.png"
+            id="org.search.niem.uml.perspective"
+            name="%_UI_NiemUmlPerspective_name">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="org.search.niem.uml.ui"
+            name="NIEM UML">
+      </category>
+   </extension>
+   <!--
+   <extension
+         id="org.search.niem.uml.model"
+         point="org.eclipse.e4.workbench.model">
+      <fragment
+            uri="fragment.e4xmi">
+      </fragment>
+   </extension>
+   -->
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="org.search.niem.uml.ui.preferences.PreferencePage"
+            id="org.search.niem.uml.ui.preferences.PreferencePage"
+            name="%_UI_Preferences_name">
+      </page>
+   </extension>
+</plugin>

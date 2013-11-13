@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?><xmi:XMI xmlns:xmi="http://www.omg.org/spec/XMI/20110701">
+	
+	
+	
+	<uml:Model xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile" xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Model_Package_Description_Profile="http://www.omg.org/spec/NIEM-UML/20120501/Model_Package_Description_Profile" xmlns:uml="http://www.omg.org/spec/UML/20110701" xmi:type="uml:Model" xmi:id="_niem" name="niem"><packagedElement xmi:type="uml:Package" xmi:id="_niem-itis" name="itis"><packagedElement xmi:type="uml:Package" xmi:id="_niem-itis-2.1" name="2.1">
+					<packagedElement xmi:type="uml:Package" xmi:id="_niem-itis-2.1-itis" name="itis">
+						<ownedComment xmi:type="uml:Comment" xmi:id="_niem-itis-2.1-itis-ownedComment" body="Integrated Transportation Information System">
+							<annotatedElement xmi:idref="_niem-itis-2.1-itis"/>
+						</ownedComment>
+						
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-itis-2.1-itis-LightingCodeSimpleType" name="LightingCodeSimpleType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-itis-2.1-itis-LightingCodeSimpleType-ownedComment" body="A data type for lighting conditions.">
+								<annotatedElement xmi:idref="_niem-itis-2.1-itis-LightingCodeSimpleType"/>
+							</ownedComment>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-itis-2.1-itis-LightingCodeSimpleType-lighting-unknown" name="lighting-unknown">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-itis-2.1-itis-LightingCodeSimpleType-lighting-unknown-ownedComment" body="lighting unknown">
+									<annotatedElement xmi:idref="_niem-itis-2.1-itis-LightingCodeSimpleType-lighting-unknown"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-itis-2.1-itis-LightingCodeSimpleType-artificial-interior-light" name="artificial-interior-light">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-itis-2.1-itis-LightingCodeSimpleType-artificial-interior-light-ownedComment" body="artificial interior light">
+									<annotatedElement xmi:idref="_niem-itis-2.1-itis-LightingCodeSimpleType-artificial-interior-light"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-itis-2.1-itis-LightingCodeSimpleType-artificial-exterior-light" name="artificial-exterior-light">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-itis-2.1-itis-LightingCodeSimpleType-artificial-exterior-light-ownedComment" body="artificial exterior light">
+									<annotatedElement xmi:idref="_niem-itis-2.1-itis-LightingCodeSimpleType-artificial-exterior-light"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-itis-2.1-itis-LightingCodeSimpleType-moonlight" name="moonlight">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-itis-2.1-itis-LightingCodeSimpleType-moonlight-ownedComment" body="moonlight">
+									<annotatedElement xmi:idref="_niem-itis-2.1-itis-LightingCodeSimpleType-moonlight"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-itis-2.1-itis-LightingCodeSimpleType-dusk" name="dusk">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-itis-2.1-itis-LightingCodeSimpleType-dusk-ownedComment" body="dusk">
+									<annotatedElement xmi:idref="_niem-itis-2.1-itis-LightingCodeSimpleType-dusk"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-itis-2.1-itis-LightingCodeSimpleType-daylight" name="daylight">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-itis-2.1-itis-LightingCodeSimpleType-daylight-ownedComment" body="daylight">
+									<annotatedElement xmi:idref="_niem-itis-2.1-itis-LightingCodeSimpleType-daylight"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-itis-2.1-itis-LightingCodeSimpleType-darkness" name="darkness">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-itis-2.1-itis-LightingCodeSimpleType-darkness-ownedComment" body="darkness">
+									<annotatedElement xmi:idref="_niem-itis-2.1-itis-LightingCodeSimpleType-darkness"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-itis-2.1-itis-LightingCodeSimpleType-dawn" name="dawn">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-itis-2.1-itis-LightingCodeSimpleType-dawn-ownedComment" body="dawn">
+									<annotatedElement xmi:idref="_niem-itis-2.1-itis-LightingCodeSimpleType-dawn"/>
+								</ownedComment>
+							</ownedLiteral>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Class" xmi:id="_niem-itis-2.1-itis-NamespaceElementPropertyHolder" name="NamespaceElementPropertyHolder"/>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-itis-2.1-itis-LightingCodeType" name="LightingCodeType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-itis-2.1-itis-LightingCodeType-ownedComment" body="A data type for lighting conditions.">
+								<annotatedElement xmi:idref="_niem-itis-2.1-itis-LightingCodeType"/>
+							</ownedComment>
+							<generalization xmi:type="uml:Generalization" xmi:id="_niem-itis-2.1-itis-LightingCodeType-generalization" general="_niem-itis-2.1-itis-LightingCodeSimpleType"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType" name="WeatherConditionsCodeSimpleType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-ownedComment" body="A data type for weather conditions.">
+								<annotatedElement xmi:idref="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType"/>
+							</ownedComment>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-uV-index-low" name="uV-index-low">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-uV-index-low-ownedComment" body="uV index - low">
+									<annotatedElement xmi:idref="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-uV-index-low"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-clear-skies" name="clear-skies">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-clear-skies-ownedComment" body="clear skies">
+									<annotatedElement xmi:idref="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-clear-skies"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-overcast" name="overcast">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-overcast-ownedComment" body="overcast">
+									<annotatedElement xmi:idref="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-overcast"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-dry" name="dry">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-dry-ownedComment" body="dry">
+									<annotatedElement xmi:idref="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-dry"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-mostly-cloudy" name="mostly-cloudy">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-mostly-cloudy-ownedComment" body="mostly cloudy">
+									<annotatedElement xmi:idref="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-mostly-cloudy"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-mostly-sunny" name="mostly-sunny">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-mostly-sunny-ownedComment" body="mostly sunny">
+									<annotatedElement xmi:idref="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-mostly-sunny"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-uV-index-very-low" name="uV-index-very-low">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-uV-index-very-low-ownedComment" body="uV index - very low">
+									<annotatedElement xmi:idref="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-uV-index-very-low"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-fair-skies" name="fair-skies">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-fair-skies-ownedComment" body="fair skies">
+									<annotatedElement xmi:idref="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-fair-skies"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-mostly-clear" name="mostly-clear">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-mostly-clear-ownedComment" body="mostly clear">
+									<annotatedElement xmi:idref="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-mostly-clear"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-ozone-alert" name="ozone-alert">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-ozone-alert-ownedComment" body="ozone alert">
+									<annotatedElement xmi:idref="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-ozone-alert"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-uV-index-moderate" name="uV-index-moderate">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-uV-index-moderate-ownedComment" body="uV index - moderate">
+									<annotatedElement xmi:idref="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-uV-index-moderate"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-barometric-pressure" name="barometric-pressure">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-barometric-pressure-ownedComment" body="barometric pressure">
+									<annotatedElement xmi:idref="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-barometric-pressure"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-partly-cloudy" name="partly-cloudy">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-partly-cloudy-ownedComment" body="partly cloudy">
+									<annotatedElement xmi:idref="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-partly-cloudy"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-uV-index-high" name="uV-index-high">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-uV-index-high-ownedComment" body="uV index - high">
+									<annotatedElement xmi:idref="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-uV-index-high"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-uV-index-very-high" name="uV-index-very-high">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-uV-index-very-high-ownedComment" body="uV index - very high">
+									<annotatedElement xmi:idref="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-uV-index-very-high"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-sunny" name="sunny">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-sunny-ownedComment" body="sunny">
+									<annotatedElement xmi:idref="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-sunny"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-partly-sunny" name="partly-sunny">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-partly-sunny-ownedComment" body="partly sunny">
+									<annotatedElement xmi:idref="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-partly-sunny"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-cloudy" name="cloudy">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-cloudy-ownedComment" body="cloudy">
+									<annotatedElement xmi:idref="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-cloudy"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-mostly-dry" name="mostly-dry">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-mostly-dry-ownedComment" body="mostly dry">
+									<annotatedElement xmi:idref="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType-mostly-dry"/>
+								</ownedComment>
+							</ownedLiteral>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeType" name="WeatherConditionsCodeType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeType-ownedComment" body="A data type for weather conditions.">
+								<annotatedElement xmi:idref="_niem-itis-2.1-itis-WeatherConditionsCodeType"/>
+							</ownedComment>
+							<generalization xmi:type="uml:Generalization" xmi:id="_niem-itis-2.1-itis-WeatherConditionsCodeType-generalization" general="_niem-itis-2.1-itis-WeatherConditionsCodeSimpleType"/>
+						</packagedElement>
+					</packagedElement>
+				</packagedElement><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-itis-profileApplication-1">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_PIM_Profile">
+						
+					</appliedProfile>
+				</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-itis-profileApplication-2">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-Model_Package_Description_Profile">
+						
+					</appliedProfile>
+				</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-itis-profileApplication-3">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_Common_Profile">
+						
+					</appliedProfile>
+				</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-itis-profileApplication-4">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_PSM_Profile">
+						
+					</appliedProfile>
+				</profileApplication></packagedElement></uml:Model>
+	
+	
+	
+	
+	<NIEM_PIM_Profile:InformationModel xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile" xmi:id="_niem-itis-2.1-itis-appliedStereotypeInstance" base_Package="_niem-itis-2.1-itis" isConformant="true" version="1" defaultPurpose="reference" targetNamespace="http://niem.gov/niem/itis/2.1"/>
+	
+	<NIEM_Common_Profile:PropertyHolder xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-itis-2.1-itis-NamespaceElementPropertyHolder-appliedStereotypeInstance" base_Class="_niem-itis-2.1-itis-NamespaceElementPropertyHolder"/>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</xmi:XMI>

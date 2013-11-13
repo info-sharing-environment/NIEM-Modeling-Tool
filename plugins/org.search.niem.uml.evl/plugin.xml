@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.epsilon.evl.emf.validation">
+      <constraintsBinding
+            constraints="src/main/evl/targetNamespace.evl"
+            namespaceURI="http://www.eclipse.org/uml2/4.0.0/UML">
+      </constraintsBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.ide.markerResolution">
+      <markerResolutionGenerator
+            class="org.eclipse.epsilon.evl.emf.validation.EvlMarkerResolutionGenerator"
+            markerType="org.eclipse.emf.ecore.diagnostic">
+      </markerResolutionGenerator>
+   </extension>
+   <extension
+         point="org.eclipse.epsilon.common.dt.tool">
+      <tool
+            class="org.search.niem.uml.evl.validation.NiemValidationTool"
+            defaultName="NiemValidationTool">
+      </tool>
+   </extension>
+   <extension
+         point="org.search.niem.uml.papyrus.lifecycleevents.lifecycleListeners">
+      <lifecycleListener
+            class="org.search.niem.uml.evl.validation.ModelValidationListener">
+      </lifecycleListener>
+   </extension>
+</plugin>

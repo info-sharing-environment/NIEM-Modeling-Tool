@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/spec/XMI/20110701">
+	<uml:Model
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile"
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:Model_Package_Description_Profile="http://www.omg.org/spec/NIEM-UML/20120501/Model_Package_Description_Profile"
+		xmlns:uml="http://www.omg.org/spec/UML/20110701" xmi:type="uml:Model" xmi:id="_niem"
+		name="niem">
+		<packagedElement xmi:type="uml:Package" xmi:id="_niem-dod_jcs-pub2.0-misc"
+			name="dod_jcs-pub2.0-misc">
+			<packagedElement xmi:type="uml:Package" xmi:id="_niem-dod_jcs-pub2.0-misc-2.0"
+				name="2.0">
+				<packagedElement xmi:type="uml:Package"
+					xmi:id="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc"
+					name="dod_jcs-pub2.0-misc">
+					<ownedComment xmi:type="uml:Comment"
+						xmi:id="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-ownedComment"
+						body="Intelligence discipline codes from the U.S. Department of Defense (DoD) Joint Publication 2.01.">
+						<annotatedElement
+							xmi:idref="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc"/>
+					</ownedComment>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-DocumentIntelligenceCategoryCodeSimpleType"
+						name="DocumentIntelligenceCategoryCodeSimpleType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-DocumentIntelligenceCategoryCodeSimpleType-ownedComment"
+							body="A data type for natures or genres of a document or resource.">
+							<annotatedElement
+								xmi:idref="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-DocumentIntelligenceCategoryCodeSimpleType"
+							/>
+						</ownedComment>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-DocumentIntelligenceCategoryCodeSimpleType-TECHINT"
+							name="TECHINT">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-DocumentIntelligenceCategoryCodeSimpleType-TECHINT-ownedComment"
+								body="Technical Intelligence">
+								<annotatedElement
+									xmi:idref="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-DocumentIntelligenceCategoryCodeSimpleType-TECHINT"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-DocumentIntelligenceCategoryCodeSimpleType-HUMINT"
+							name="HUMINT">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-DocumentIntelligenceCategoryCodeSimpleType-HUMINT-ownedComment"
+								body="Human Intelligence">
+								<annotatedElement
+									xmi:idref="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-DocumentIntelligenceCategoryCodeSimpleType-HUMINT"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-DocumentIntelligenceCategoryCodeSimpleType-SIGINT"
+							name="SIGINT">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-DocumentIntelligenceCategoryCodeSimpleType-SIGINT-ownedComment"
+								body="Signals Intelligence">
+								<annotatedElement
+									xmi:idref="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-DocumentIntelligenceCategoryCodeSimpleType-SIGINT"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-DocumentIntelligenceCategoryCodeSimpleType-MASINT"
+							name="MASINT">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-DocumentIntelligenceCategoryCodeSimpleType-MASINT-ownedComment"
+								body="Measurement and Signature Intelligence">
+								<annotatedElement
+									xmi:idref="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-DocumentIntelligenceCategoryCodeSimpleType-MASINT"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-DocumentIntelligenceCategoryCodeSimpleType-IMINT"
+							name="IMINT">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-DocumentIntelligenceCategoryCodeSimpleType-IMINT-ownedComment"
+								body="Imagery Intelligence">
+								<annotatedElement
+									xmi:idref="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-DocumentIntelligenceCategoryCodeSimpleType-IMINT"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-DocumentIntelligenceCategoryCodeSimpleType-CI"
+							name="CI">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-DocumentIntelligenceCategoryCodeSimpleType-CI-ownedComment"
+								body="Counter-Intelligence">
+								<annotatedElement
+									xmi:idref="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-DocumentIntelligenceCategoryCodeSimpleType-CI"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-DocumentIntelligenceCategoryCodeSimpleType-OSINT"
+							name="OSINT">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-DocumentIntelligenceCategoryCodeSimpleType-OSINT-ownedComment"
+								body="Open Source Intelligence">
+								<annotatedElement
+									xmi:idref="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-DocumentIntelligenceCategoryCodeSimpleType-OSINT"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Class"
+						xmi:id="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-NamespaceElementPropertyHolder"
+						name="NamespaceElementPropertyHolder"/>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-DocumentIntelligenceCategoryCodeType"
+						name="DocumentIntelligenceCategoryCodeType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-DocumentIntelligenceCategoryCodeType-ownedComment"
+							body="A data type for natures or genres of a document or resource.">
+							<annotatedElement
+								xmi:idref="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-DocumentIntelligenceCategoryCodeType"
+							/>
+						</ownedComment>
+						<generalization xmi:type="uml:Generalization"
+							xmi:id="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-DocumentIntelligenceCategoryCodeType-generalization"
+							general="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-DocumentIntelligenceCategoryCodeSimpleType"
+						/>
+					</packagedElement>
+				</packagedElement>
+			</packagedElement>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-dod_jcs-pub2.0-misc-profileApplication-1">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_PIM_Profile"
+				> </appliedProfile>
+			</profileApplication>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-dod_jcs-pub2.0-misc-profileApplication-2">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-Model_Package_Description_Profile"
+				> </appliedProfile>
+			</profileApplication>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-dod_jcs-pub2.0-misc-profileApplication-3">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_Common_Profile"
+				> </appliedProfile>
+			</profileApplication>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-dod_jcs-pub2.0-misc-profileApplication-4">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_PSM_Profile"
+				> </appliedProfile>
+			</profileApplication>
+		</packagedElement>
+	</uml:Model>
+	<NIEM_PIM_Profile:InformationModel
+		xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile"
+		xmi:id="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-appliedStereotypeInstance"
+		base_Package="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc" defaultPurpose="reference"
+		version="1" targetNamespace="http://niem.gov/niem/dod_jcs-pub2.0-misc/2.0"
+		isConformant="true"/>
+	<NIEM_Common_Profile:PropertyHolder
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-NamespaceElementPropertyHolder-appliedStereotypeInstance"
+		base_Class="_niem-dod_jcs-pub2.0-misc-2.0-dod_jcs-pub2.0-misc-NamespaceElementPropertyHolder"
+	/>
+</xmi:XMI>

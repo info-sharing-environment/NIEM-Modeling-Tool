@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.search.searchPages">
+      <page
+            class="org.search.niem.uml.search.ui.ReferenceLibrarySearchPage"
+            icon="icons/full/eview16/niem_search_page.png"
+            id="org.search.niem.uml.search.ui.searchPage"
+            label="%_UI_NIEM_SearchPage_label">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.search.searchResultViewPages">
+      <viewPage
+            class="org.search.niem.uml.search.ui.ReferenceLibrarySearchResultPage"
+            icon="icons/full/eview16/niem_search_result_page.png"
+            id="org.search.niem.uml.search.ui.ReferenceLibrarySearchResultPage"
+            label="%_UI_NIEM_SearchResultPage_label"
+            searchResultClass="org.search.niem.uml.search.ui.ReferenceLibrarySearchResult">
+      </viewPage>
+   </extension>
+</plugin>

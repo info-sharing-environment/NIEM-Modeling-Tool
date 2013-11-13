@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+    <extension point="org.eclipse.papyrus.uml.extensionpoints.UMLProfile">
+        <profile description="NIEM UML Profile" iconpath="icons/full/obj16/niem_profile.png" name="NIEM_UML_Profile"
+            path="pathmap://NIEM_UML/NIEM-UML-Profile.xmi#NIEM_UML_Profile-NIEM_UML_Profile" provider="niem.gov">
+        </profile>
+    </extension>
+    <extension point="org.eclipse.papyrus.uml.extensionpoints.UMLLibrary">
+        <library description="NIEM Xml Primitive Types Library" iconpath="icons/full/obj16/niem_reference_library.png"
+            name="NIEM Reference" path="pathmap://NIEM_UML/XmlPrimitiveTypes.xmi" provider="niem.gov">
+        </library>
+    </extension>
+    <extension point="org.eclipse.papyrus.uml.diagram.common.paletteDefinition">
+        <paletteDefinition ID="org.search.niem.uml.ui.palette.NIEM_UML_pkg" class="org.eclipse.papyrus.uml.diagram.common.service.PluginPaletteProvider"
+            icon="icons/full/obj16/niem_palette.png" name="NIEM UML Package Diagram Elements" path="palettes/NIEM_UML_pkg.palette.xml">
+            <Priority name="Medium">
+            </Priority>
+            <editor id="org.eclipse.papyrus.uml.diagram.pkg">
+            </editor>
+        </paletteDefinition>
+    </extension>
+    <extension point="org.eclipse.papyrus.uml.diagram.common.paletteDefinition">
+        <paletteDefinition ID="org.search.niem.uml.ui.palette.NIEM_UML_clazz" class="org.eclipse.papyrus.uml.diagram.common.service.PluginPaletteProvider"
+            icon="icons/full/obj16/niem_palette.png" name="NIEM UML Class Diagram Elements" path="palettes/NIEM_UML_clazz.palette.xml">
+            <Priority name="Medium">
+            </Priority>
+            <editor id="org.eclipse.papyrus.uml.diagram.clazz">
+            </editor>
+        </paletteDefinition>
+    </extension>
+    <extension point="org.eclipse.papyrus.uml.diagram.common.aspectToolProvider">
+        <aspectToolProvider class="org.search.niem.uml.papyrus.palettes.DiagramAspectActionProvider"
+            description="This provider creates an action that adds a new diagram for the given element." icon="icons/full/obj16/create_diagram_action.png"
+            id="org.search.niem.uml.papyrus.palettes.createDiagramActionProvider" name="Create Diagram">
+            <Priority name="Lowest">
+            </Priority>
+        </aspectToolProvider>
+    </extension>
+</plugin>

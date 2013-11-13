@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmi:id="_kmOhQHWmEeKXC6-lP8ogtA">
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_VgsaoHWoEeKXC6-lP8ogtA" featurename="children" parentElementId="PerspectiveStack">
+    <elements xsi:type="advanced:Perspective" xmi:id="_mvdAsHYsEeKXC6-lP8ogtA" elementId="org.search.niem.uml.perspective" label="%_UI_NiemUmlPerspective_name" iconURI="platform:/plugin/org.search.niem.uml.ui/icons/full/eview16/niem_uml_perspective.png" tooltip="%_UI_NiemUmlPerspective_tooltip">
+      <children xsi:type="basic:PartSashContainer" xmi:id="_wI1VwHc7EeKKd4U_lqCLnw" elementId="org.search.niem.uml.ui.partsashcontainer.0" horizontal="true">
+        <children xsi:type="basic:PartStack" xmi:id="_eyVvcHZIEeKXC6-lP8ogtA" elementId="org.search.niem.uml.ui.partstack.left.views" containerData="2500" selectedElement="_ReA18Hc1EeKKd4U_lqCLnw">
+          <tags>newtablook</tags>
+          <tags>org.eclipse.e4.primaryNavigationStack</tags>
+          <children xsi:type="basic:Part" xmi:id="_ReA18Hc1EeKKd4U_lqCLnw" elementId="org.eclipse.ui.navigator.ProjectExplorer" containerData="" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Project Explorer" iconURI="platform:/plugin/org.eclipse.ui.navigator.resources//icons/full/eview16/resource_persp.gif" tooltip="Workspace" closeable="true">
+            <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;0&quot;/>"/>
+            <tags>View</tags>
+            <tags>categoryTag:General</tags>
+            <menus xmi:id="_3B6_YHc5EeKKd4U_lqCLnw" elementId="org.eclipse.ui.navigator.ProjectExplorer">
+              <tags>ViewMenu</tags>
+            </menus>
+            <toolbar xmi:id="_jFKWAHc5EeKKd4U_lqCLnw" elementId="org.eclipse.ui.navigator.ProjectExplorer" visible="false"/>
+          </children>
+        </children>
+        <children xsi:type="basic:PartSashContainer" xmi:id="_C602AHZIEeKXC6-lP8ogtA" elementId="org.search.niem.uml.ui.partsashcontainer.middle" containerData="7500">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_BQbogHc_EeKKd4U_lqCLnw" elementId="" containerData="6500" horizontal="true">
+            <children xsi:type="advanced:Placeholder" xmi:id="_NCL-UHdKEeKKd4U_lqCLnw" elementId="org.eclipse.ui.editorss" ref="_IxaFoHdKEeKKd4U_lqCLnw"/>
+          </children>
+          <children xsi:type="basic:PartStack" xmi:id="_YDRkoHczEeKKd4U_lqCLnw" elementId="org.search.niem.uml.ui.partstack.bottom.views" containerData="3500">
+            <children xsi:type="basic:Part" xmi:id="_1ClhsHc1EeKKd4U_lqCLnw" elementId="org.eclipse.search.ui.views.SearchView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Search" iconURI="platform:/plugin/org.eclipse.search//icons/full/eview16/searchres.gif" closeable="true">
+              <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&lt;view isPinned=&quot;false&quot;>&lt;view IMemento.internal.id=&quot;&quot; org.eclipse.search.lastActivation=&quot;0&quot;/>&lt;/view>"/>
+              <menus xmi:id="_eZsMwHc2EeKKd4U_lqCLnw" elementId="org.eclipse.search.ui.views.SearchView">
+                <tags>ViewMenu</tags>
+              </menus>
+              <toolbar xmi:id="_Ik_KUHc2EeKKd4U_lqCLnw" elementId="org.eclipse.search.ui.views.SearchView"/>
+            </children>
+          </children>
+        </children>
+      </children>
+    </elements>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_S9NV0HdLEeKKd4U_lqCLnw" featurename="sharedElements" parentElementId="IDEWindow">
+    <elements xsi:type="advanced:Area" xmi:id="_IxaFoHdKEeKKd4U_lqCLnw" elementId="org.eclipse.ui.editorss" selectedElement="_tky6cHc1EeKKd4U_lqCLnw">
+      <children xsi:type="basic:PartStack" xmi:id="_tky6cHc1EeKKd4U_lqCLnw" elementId="org.eclipse.e4.primaryDataStack" containerData="">
+        <tags>newtablook</tags>
+        <tags>org.eclipse.e4.primaryDataStack</tags>
+        <tags>EditorStack</tags>
+        <children xsi:type="basic:Part" xmi:id="_GAePEHdKEeKKd4U_lqCLnw" elementId="org.search.niem.uml.ui.editorpart"/>
+      </children>
+    </elements>
+  </fragments>
+</fragment:ModelFragments>

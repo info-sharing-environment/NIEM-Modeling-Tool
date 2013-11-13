@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/spec/XMI/20110701">
+	<uml:Model
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile"
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:Model_Package_Description_Profile="http://www.omg.org/spec/NIEM-UML/20120501/Model_Package_Description_Profile"
+		xmlns:uml="http://www.omg.org/spec/UML/20110701" xmi:type="uml:Model" xmi:id="_niem"
+		name="niem">
+		<packagedElement xmi:type="uml:Package" xmi:id="_niem-sar" name="sar">
+			<packagedElement xmi:type="uml:Package" xmi:id="_niem-sar-2.1" name="2.1">
+				<packagedElement xmi:type="uml:Package" xmi:id="_niem-sar-2.1-sar" name="sar">
+					<ownedComment xmi:type="uml:Comment" xmi:id="_niem-sar-2.1-sar-ownedComment"
+						body="Suspicious Activity Reporting">
+						<annotatedElement xmi:idref="_niem-sar-2.1-sar"/>
+					</ownedComment>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType"
+						name="TargetSectorCodeSimpleType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-ownedComment"
+							body="A data type for the broad categorization of infrastructure type.">
+							<annotatedElement
+								xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType"/>
+						</ownedComment>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-EMRG" name="EMRG">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-EMRG-ownedComment"
+								body="Emergency Services">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-EMRG"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-TELCM" name="TELCM">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-TELCM-ownedComment"
+								body="Telecommunications">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-TELCM"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-SPCFXN"
+							name="SPCFXN">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-SPCFXN-ownedComment"
+								body="Special Function">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-SPCFXN"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-LIVSTK"
+							name="LIVSTK">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-LIVSTK-ownedComment"
+								body="Livestock">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-LIVSTK"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-OTHR" name="OTHR">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-OTHR-ownedComment"
+								body="Other">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-OTHR"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-WATR" name="WATR">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-WATR-ownedComment"
+								body="Water">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-WATR"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-EDU" name="EDU">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-EDU-ownedComment"
+								body="Education">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-EDU"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-COMM" name="COMM">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-COMM-ownedComment"
+								body="Commercial Assets">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-COMM"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-AGRI" name="AGRI">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-AGRI-ownedComment"
+								body="Food, Agriculture, Livestock">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-AGRI"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-HAZMAT"
+							name="HAZMAT">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-HAZMAT-ownedComment"
+								body="Chemical, Hazardous Material">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-HAZMAT"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-CHEM" name="CHEM">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-CHEM-ownedComment"
+								body="Chemical">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-CHEM"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-CORR" name="CORR">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-CORR-ownedComment"
+								body="Correctional Location">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-CORR"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-NATRL" name="NATRL">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-NATRL-ownedComment"
+								body="Natural Threats">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-NATRL"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-CSTL" name="CSTL">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-CSTL-ownedComment"
+								body="Coastal Facilities">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-CSTL"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-PRSN" name="PRSN">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-PRSN-ownedComment"
+								body="Person">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-PRSN"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-TACTCP"
+							name="TACTCP">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-TACTCP-ownedComment"
+								body="Tactical Command Post">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-TACTCP"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-HLTH" name="HLTH">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-HLTH-ownedComment"
+								body="Healthcare, Public Health">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-HLTH"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-GVTBLDG"
+							name="GVTBLDG">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-GVTBLDG-ownedComment"
+								body="Government Facilities">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-GVTBLDG"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-MAIL" name="MAIL">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-MAIL-ownedComment"
+								body="Postal, Shipping">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-MAIL"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-RETL" name="RETL">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-RETL-ownedComment"
+								body="Retail">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-RETL"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-ENTMT" name="ENTMT">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-ENTMT-ownedComment"
+								body="Entertainment Venue">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-ENTMT"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-CULTR" name="CULTR">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-CULTR-ownedComment"
+								body="Cultural/Religious/Ethnical">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-CULTR"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-TRANS" name="TRANS">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-TRANS-ownedComment"
+								body="Transportation">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-TRANS"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-NCLR" name="NCLR">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-NCLR-ownedComment"
+								body="Nuclear Facilities">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-NCLR"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-MNMT" name="MNMT">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-MNMT-ownedComment"
+								body="National Monument, Icon">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-MNMT"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-POP" name="POP">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-POP-ownedComment"
+								body="Population">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-POP"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-FIN" name="FIN">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-FIN-ownedComment"
+								body="Banking, Finance">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-FIN"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-DFNSE" name="DFNSE">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-DFNSE-ownedComment"
+								body="Defense Industrial Base">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-DFNSE"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-DAMS" name="DAMS">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-DAMS-ownedComment"
+								body="Dams">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-DAMS"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-ENRG" name="ENRG">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-ENRG-ownedComment"
+								body="Energy, Utilities">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-ENRG"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-IT" name="IT">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-IT-ownedComment"
+								body="Information Technology">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-IT"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-MASS" name="MASS">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-MASS-ownedComment"
+								body="Mass Gathering Location">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-MASS"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-MFG" name="MFG">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-MFG-ownedComment"
+								body="Manufacturing">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-MFG"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-UTL" name="UTL">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-UTL-ownedComment"
+								body="Utilities">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeSimpleType-UTL"/>
+							</ownedComment>
+						</ownedLiteral>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Class"
+						xmi:id="_niem-sar-2.1-sar-NamespaceElementPropertyHolder"
+						name="NamespaceElementPropertyHolder"/>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-sar-2.1-sar-TargetSectorCodeType" name="TargetSectorCodeType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeType-ownedComment"
+							body="A data type for the broad categorization of infrastructure type.">
+							<annotatedElement xmi:idref="_niem-sar-2.1-sar-TargetSectorCodeType"/>
+						</ownedComment>
+						<generalization xmi:type="uml:Generalization"
+							xmi:id="_niem-sar-2.1-sar-TargetSectorCodeType-generalization"
+							general="_niem-sar-2.1-sar-TargetSectorCodeSimpleType"/>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType"
+						name="TipClassCodeSimpleType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-ownedComment"
+							body="A data type for a kind of threat to which the tip or lead pertains.">
+							<annotatedElement xmi:idref="_niem-sar-2.1-sar-TipClassCodeSimpleType"/>
+						</ownedComment>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-FUND" name="FUND">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-FUND-ownedComment"
+								body="Terrorism Funding">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TipClassCodeSimpleType-FUND"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-CYBER" name="CYBER">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-CYBER-ownedComment"
+								body="Cyberstalking">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TipClassCodeSimpleType-CYBER"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-SPCSSBST"
+							name="SPCSSBST">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-SPCSSBST-ownedComment"
+								body="Suspicious Substance">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TipClassCodeSimpleType-SPCSSBST"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-BIO" name="BIO">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-BIO-ownedComment"
+								body="Biological">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TipClassCodeSimpleType-BIO"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-FRAUD" name="FRAUD">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-FRAUD-ownedComment"
+								body="Fraud">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TipClassCodeSimpleType-FRAUD"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-HATE" name="HATE">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-HATE-ownedComment"
+								body="Hate Crime">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TipClassCodeSimpleType-HATE"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-CNTFTG" name="CNTFTG">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-CNTFTG-ownedComment"
+								body="Counterfitting">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TipClassCodeSimpleType-CNTFTG"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-INFRA" name="INFRA">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-INFRA-ownedComment"
+								body="Critical Infrastructure">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TipClassCodeSimpleType-INFRA"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-SPCSA" name="SPCSA">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-SPCSA-ownedComment"
+								body="Suspicious Activity">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TipClassCodeSimpleType-SPCSA"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-VRUS" name="VRUS">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-VRUS-ownedComment"
+								body="Virus/Worm">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TipClassCodeSimpleType-VRUS"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-SPCSP" name="SPCSP">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-SPCSP-ownedComment"
+								body="Suspicious Person">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TipClassCodeSimpleType-SPCSP"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-EXPL" name="EXPL">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-EXPL-ownedComment"
+								body="Explosives">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TipClassCodeSimpleType-EXPL"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-CTMN" name="CTMN">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-CTMN-ownedComment"
+								body="Contaimination">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TipClassCodeSimpleType-CTMN"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-INCEND" name="INCEND">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-INCEND-ownedComment"
+								body="Incendiary">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TipClassCodeSimpleType-INCEND"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-NCLR" name="NCLR">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-NCLR-ownedComment"
+								body="Nuclear/Radiological">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TipClassCodeSimpleType-NCLR"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-LAUND" name="LAUND">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-LAUND-ownedComment"
+								body="Money Laundering">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TipClassCodeSimpleType-LAUND"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-CHEM" name="CHEM">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-CHEM-ownedComment"
+								body="Chemical">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TipClassCodeSimpleType-CHEM"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-THRTPUB" name="THRTPUB">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TipClassCodeSimpleType-THRTPUB-ownedComment"
+								body="Threat Against Public Figure">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TipClassCodeSimpleType-THRTPUB"/>
+							</ownedComment>
+						</ownedLiteral>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-sar-2.1-sar-TipClassCodeType" name="TipClassCodeType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-sar-2.1-sar-TipClassCodeType-ownedComment"
+							body="A data type for a kind of threat to which the tip or lead pertains.">
+							<annotatedElement xmi:idref="_niem-sar-2.1-sar-TipClassCodeType"/>
+						</ownedComment>
+						<generalization xmi:type="uml:Generalization"
+							xmi:id="_niem-sar-2.1-sar-TipClassCodeType-generalization"
+							general="_niem-sar-2.1-sar-TipClassCodeSimpleType"/>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-sar-2.1-sar-TipDomainCodeSimpleType"
+						name="TipDomainCodeSimpleType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-sar-2.1-sar-TipDomainCodeSimpleType-ownedComment"
+							body="A data type for a broad category of threat to which the tip or lead pertains.">
+							<annotatedElement xmi:idref="_niem-sar-2.1-sar-TipDomainCodeSimpleType"
+							/>
+						</ownedComment>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TipDomainCodeSimpleType-G" name="G">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TipDomainCodeSimpleType-G-ownedComment"
+								body="Suspicious Incident">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TipDomainCodeSimpleType-G"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TipDomainCodeSimpleType-D" name="D">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TipDomainCodeSimpleType-D-ownedComment"
+								body="Financial Incident">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TipDomainCodeSimpleType-D"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TipDomainCodeSimpleType-F" name="F">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TipDomainCodeSimpleType-F-ownedComment"
+								body="Security Issue">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TipDomainCodeSimpleType-F"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TipDomainCodeSimpleType-H" name="H">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TipDomainCodeSimpleType-H-ownedComment"
+								body="Threats/Crimes Against Persons">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TipDomainCodeSimpleType-H"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TipDomainCodeSimpleType-E" name="E">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TipDomainCodeSimpleType-E-ownedComment"
+								body="Intelligence">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TipDomainCodeSimpleType-E"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TipDomainCodeSimpleType-A" name="A">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TipDomainCodeSimpleType-A-ownedComment"
+								body="Criminal Incident">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TipDomainCodeSimpleType-A"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TipDomainCodeSimpleType-B" name="B">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TipDomainCodeSimpleType-B-ownedComment"
+								body="Critical Infrastructure">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TipDomainCodeSimpleType-B"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-sar-2.1-sar-TipDomainCodeSimpleType-C" name="C">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-sar-2.1-sar-TipDomainCodeSimpleType-C-ownedComment"
+								body="Cyber Crime">
+								<annotatedElement
+									xmi:idref="_niem-sar-2.1-sar-TipDomainCodeSimpleType-C"/>
+							</ownedComment>
+						</ownedLiteral>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-sar-2.1-sar-TipDomainCodeType" name="TipDomainCodeType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-sar-2.1-sar-TipDomainCodeType-ownedComment"
+							body="A data type for a broad category of threat to which the tip or lead pertains.">
+							<annotatedElement xmi:idref="_niem-sar-2.1-sar-TipDomainCodeType"/>
+						</ownedComment>
+						<generalization xmi:type="uml:Generalization"
+							xmi:id="_niem-sar-2.1-sar-TipDomainCodeType-generalization"
+							general="_niem-sar-2.1-sar-TipDomainCodeSimpleType"/>
+					</packagedElement>
+				</packagedElement>
+			</packagedElement>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-sar-profileApplication-1">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_PIM_Profile"
+				> </appliedProfile>
+			</profileApplication>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-sar-profileApplication-2">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-Model_Package_Description_Profile"
+				> </appliedProfile>
+			</profileApplication>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-sar-profileApplication-3">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_Common_Profile"
+				> </appliedProfile>
+			</profileApplication>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-sar-profileApplication-4">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_PSM_Profile"
+				> </appliedProfile>
+			</profileApplication>
+		</packagedElement>
+	</uml:Model>
+	<NIEM_Common_Profile:PropertyHolder
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-sar-2.1-sar-NamespaceElementPropertyHolder-appliedStereotypeInstance"
+		base_Class="_niem-sar-2.1-sar-NamespaceElementPropertyHolder"/>
+	<NIEM_PIM_Profile:InformationModel
+		xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile"
+		xmi:id="_niem-sar-2.1-sar-appliedStereotypeInstance" base_Package="_niem-sar-2.1-sar"
+		isConformant="true" version="1" defaultPurpose="reference"
+		targetNamespace="http://niem.gov/niem/sar/2.1"/>
+</xmi:XMI>

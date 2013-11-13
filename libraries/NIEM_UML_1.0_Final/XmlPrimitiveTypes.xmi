@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/spec/XMI/20110701"
+  xmlns:uml="http://www.omg.org/spec/UML/20110701"
+  xmlns:StandardProfileL2="http://www.omg.org/spec/UML/20100901/StandardProfileL2">
+<!-- change xmlns:xmi per Issue 18180: Problem with XmiPrimitiveTypes.xmi in the NIEM specification (niem-uml-ftf)
+<xmi:XMI xmlns:xmi="http://schema.omg.org/spec/XMI/2.1"
+  xmlns:uml="http://www.omg.org/spec/UML/20110701"
+  xmlns:StandardProfileL2="http://www.omg.org/spec/UML/20100901/StandardProfileL2">
+  -->
+  <uml:Model xmi:id="XMLPrimitiveTypes" xmi:uuid="725A27D7-D31F-496C-9AC9-0FAB06445254"
+    xmi:type="uml:Model">
+    <name>XMLPrimitiveTypes</name>
+    <packagedElement xmi:id="XMLPrimitiveTypes-duration"
+      xmi:uuid="725A27D7-D31F-4035-9B0D-0FABB5003909" xmi:type="uml:PrimitiveType">
+      <name>duration</name>
+      <generalization xmi:id="XMLPrimitiveTypes-duration-generalization"
+        xmi:uuid="725A27D7-D31F-4D27-919C-0FABC0566709" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-anyAtomicType"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-dayTimeDuration"
+      xmi:uuid="725A27D7-D31F-4099-9461-0FAB4C8FCB08" xmi:type="uml:PrimitiveType">
+      <name>dayTimeDuration</name>
+      <generalization xmi:id="XMLPrimitiveTypes-dayTimeDuration-generalization"
+        xmi:uuid="725A27D7-D31F-4C1C-94D5-0FAB943C9D98" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-duration"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-byte" xmi:uuid="725A27D7-D31F-4105-980C-0FAB5DB8A6E3"
+      xmi:type="uml:PrimitiveType">
+      <name>byte</name>
+      <generalization xmi:id="XMLPrimitiveTypes-byte-generalization"
+        xmi:uuid="725A27D7-D31F-4B36-9DD0-0FABD41C1D69" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-short"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-gMonth"
+      xmi:uuid="725A27D7-D31F-411F-9AFD-0FABE836AFED" xmi:type="uml:PrimitiveType">
+      <name>gMonth</name>
+      <generalization xmi:id="XMLPrimitiveTypes-gMonth-generalization"
+        xmi:uuid="725A27D7-D31F-4F1F-91F7-0FABC2F37C73" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-anyAtomicType"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-anySimpleType"
+      xmi:uuid="725A27D7-D31F-41C1-9C38-0FAB1B45505C" xmi:type="uml:PrimitiveType">
+      <name>anySimpleType</name>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-anyAtomicType"
+      xmi:uuid="725A27D7-D31F-41C5-9D8A-0FABCF194BD4" xmi:type="uml:PrimitiveType">
+      <name>anyAtomicType</name>
+      <generalization xmi:id="XMLPrimitiveTypes-anyAtomicType-generalization"
+        xmi:uuid="725A27D7-D31F-41CB-930A-0FAB93CB090B" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-anySimpleType"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-gYearMonth"
+      xmi:uuid="725A27D7-D31F-429F-9BBB-0FAB02C6FF31" xmi:type="uml:PrimitiveType">
+      <name>gYearMonth</name>
+      <generalization xmi:id="XMLPrimitiveTypes-gYearMonth-generalization"
+        xmi:uuid="725A27D7-D31F-4AAB-9A58-0FABC0309A9C" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-anyAtomicType"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-dateTimeStamp"
+      xmi:uuid="725A27D7-D31F-42D5-922C-0FAB41AF81CE" xmi:type="uml:PrimitiveType">
+      <name>dateTimeStamp</name>
+      <generalization xmi:id="XMLPrimitiveTypes-dateTimeStamp-generalization"
+        xmi:uuid="725A27D7-D31F-4635-97D3-0FAB80B248ED" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-dateTime"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-ENTITIES"
+      xmi:uuid="725A27D7-D31F-42F9-93CE-0FAB3A4327E8" xmi:type="uml:PrimitiveType">
+      <name>ENTITIES</name>
+      <generalization xmi:id="XMLPrimitiveTypes-ENTITIES-generalization"
+        xmi:uuid="725A27D7-D31F-4B82-98B2-0FAB5C8D24BC" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-ENTITIESBase"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-ID" xmi:uuid="725A27D7-D31F-430E-95AF-0FAB817575D1"
+      xmi:type="uml:PrimitiveType">
+      <name>ID</name>
+      <generalization xmi:id="XMLPrimitiveTypes-ID-generalization"
+        xmi:uuid="725A27D7-D31F-4E76-9FF5-0FAB1C973E57" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-NCName"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-NMTOKENS"
+      xmi:uuid="725A27D7-D31F-433C-9F91-0FAB5BF7F713" xmi:type="uml:PrimitiveType">
+      <name>NMTOKENS</name>
+      <generalization xmi:id="XMLPrimitiveTypes-NMTOKENS-generalization"
+        xmi:uuid="725A27D7-D31F-434B-9330-0FAB44F9248F" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-NMTOKENSBase"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-unsignedLong"
+      xmi:uuid="725A27D7-D31F-43C9-9F3A-0FABC88F7A35" xmi:type="uml:PrimitiveType">
+      <name>unsignedLong</name>
+      <generalization xmi:id="XMLPrimitiveTypes-unsignedLong-generalization"
+        xmi:uuid="725A27D7-D31F-45AB-9D52-0FAB9AA962DB" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-nonNegativeInteger"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-nonNegativeInteger"
+      xmi:uuid="725A27D7-D31F-43EE-907A-0FABB1FD90AC" xmi:type="uml:PrimitiveType">
+      <name>nonNegativeInteger</name>
+      <generalization xmi:id="XMLPrimitiveTypes-nonNegativeInteger-generalization"
+        xmi:uuid="725A27D7-D31F-4234-9202-0FAB23CB4113" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-integer"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-hexBinary"
+      xmi:uuid="725A27D7-D31F-446F-9627-0FAB2845B2AC" xmi:type="uml:PrimitiveType">
+      <name>hexBinary</name>
+      <generalization xmi:id="XMLPrimitiveTypes-hexBinary-generalization"
+        xmi:uuid="725A27D7-D31F-4A3B-93B5-0FABA9331813" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-anyAtomicType"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-negativeInteger"
+      xmi:uuid="725A27D7-D31F-4484-9766-0FAB18AC30AC" xmi:type="uml:PrimitiveType">
+      <name>negativeInteger</name>
+      <generalization xmi:id="XMLPrimitiveTypes-negativeInteger-generalization"
+        xmi:uuid="725A27D7-D31F-4E79-92A2-0FABCACDFEA0" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-nonPositiveInteger"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-NCName"
+      xmi:uuid="725A27D7-D31F-4499-97A4-0FABA7C72167" xmi:type="uml:PrimitiveType">
+      <name>NCName</name>
+      <generalization xmi:id="XMLPrimitiveTypes-NCName-generalization"
+        xmi:uuid="725A27D7-D31F-4FE6-96FF-0FABB64F17FF" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-Name"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-ENTITIESBase"
+      xmi:uuid="725A27D7-D31F-44B6-9F2C-0FAB10FF8EFD" xmi:type="uml:PrimitiveType">
+      <name>ENTITIESBase</name>
+      <generalization xmi:id="XMLPrimitiveTypes-ENTITIESBase-generalization"
+        xmi:uuid="725A27D7-D31F-4A1B-9CDA-0FAB34F052A1" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-anySimpleType"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-normalizedString"
+      xmi:uuid="725A27D7-D31F-44E0-9BCC-0FAB5E3D72E5" xmi:type="uml:PrimitiveType">
+      <name>normalizedString</name>
+      <generalization xmi:id="XMLPrimitiveTypes-normalizedString-generalization"
+        xmi:uuid="725A27D7-D31F-4DB4-9AE7-0FAB243C856B" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-string"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-NMTOKEN"
+      xmi:uuid="725A27D7-D31F-452C-96DF-0FAB78A51F93" xmi:type="uml:PrimitiveType">
+      <name>NMTOKEN</name>
+      <generalization xmi:id="XMLPrimitiveTypes-NMTOKEN-generalization"
+        xmi:uuid="725A27D7-D31F-48AF-97C1-0FAB0223864F" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-token"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-language"
+      xmi:uuid="725A27D7-D31F-452E-9908-0FAB90B45277" xmi:type="uml:PrimitiveType">
+      <name>language</name>
+      <generalization xmi:id="XMLPrimitiveTypes-language-generalization"
+        xmi:uuid="725A27D7-D31F-4F7C-920F-0FABB565EFDE" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-token"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-time" xmi:uuid="725A27D7-D31F-453E-95E5-0FABD380CC66"
+      xmi:type="uml:PrimitiveType">
+      <name>time</name>
+      <generalization xmi:id="XMLPrimitiveTypes-time-generalization"
+        xmi:uuid="725A27D7-D31F-40F0-9347-0FABCAE7721E" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-anySimpleType"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-IDREFS"
+      xmi:uuid="725A27D7-D31F-4554-9357-0FABC811C2E1" xmi:type="uml:PrimitiveType">
+      <name>IDREFS</name>
+      <generalization xmi:id="XMLPrimitiveTypes-IDREFS-generalization"
+        xmi:uuid="725A27D7-D31F-4A13-964D-0FAB020F7EDA" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-IDREFSBase"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-IDREF"
+      xmi:uuid="725A27D7-D31F-45D0-9340-0FABF4D62DC2" xmi:type="uml:PrimitiveType">
+      <name>IDREF</name>
+      <generalization xmi:id="XMLPrimitiveTypes-IDREF-generalization"
+        xmi:uuid="725A27D7-D31F-4E10-912E-0FABAF7449F4" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-NCName"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-date" xmi:uuid="725A27D7-D31F-4626-90E3-0FAB4B17FAC0"
+      xmi:type="uml:PrimitiveType">
+      <name>date</name>
+      <generalization xmi:id="XMLPrimitiveTypes-date-generalization"
+        xmi:uuid="725A27D7-D31F-4E40-9FA7-0FAB18017359" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-anyAtomicType"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-string"
+      xmi:uuid="725A27D7-D31F-462D-9CA4-0FAB5F833699" xmi:type="uml:PrimitiveType">
+      <name>string</name>
+      <generalization xmi:id="XMLPrimitiveTypes-string-generalization"
+        xmi:uuid="725A27D7-D31F-4488-9229-0FABE7AE569D" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-anyAtomicType"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-gDay" xmi:uuid="725A27D7-D31F-46B1-98A6-0FAB5A38DB94"
+      xmi:type="uml:PrimitiveType">
+      <name>gDay</name>
+      <generalization xmi:id="XMLPrimitiveTypes-gDay-generalization"
+        xmi:uuid="725A27D7-D31F-46C3-9862-0FABBF6CF40C" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-anyAtomicType"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-boolean"
+      xmi:uuid="725A27D7-D31F-46B3-9666-0FAB4519F6CF" xmi:type="uml:PrimitiveType">
+      <name>boolean</name>
+      <generalization xmi:id="XMLPrimitiveTypes-boolean-generalization"
+        xmi:uuid="725A27D7-D31F-44EF-92C4-0FAB0D597EC7" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-anyAtomicType"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-NOTATION"
+      xmi:uuid="725A27D7-D31F-46F5-9A08-0FAB6AD1DB81" xmi:type="uml:PrimitiveType">
+      <name>NOTATION</name>
+      <generalization xmi:id="XMLPrimitiveTypes-NOTATION-generalization"
+        xmi:uuid="725A27D7-D31F-4EC6-9B41-0FABEC57D4E3" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-anyAtomicType"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-integer"
+      xmi:uuid="725A27D7-D31F-4721-93C5-0FAB295196E5" xmi:type="uml:PrimitiveType">
+      <name>integer</name>
+      <generalization xmi:id="XMLPrimitiveTypes-integer-generalization"
+        xmi:uuid="725A27D7-D31F-4E63-93D4-0FAB5BC2BA11" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-decimal"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-QName"
+      xmi:uuid="725A27D7-D31F-473D-9E81-0FAB71B5A12F" xmi:type="uml:PrimitiveType">
+      <name>QName</name>
+      <generalization xmi:id="XMLPrimitiveTypes-QName-generalization"
+        xmi:uuid="725A27D7-D31F-449B-955D-0FAB2C0249EC" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-anyAtomicType"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-unsignedShort"
+      xmi:uuid="725A27D7-D31F-47A4-967F-0FAB19C16E85" xmi:type="uml:PrimitiveType">
+      <name>unsignedShort</name>
+      <generalization xmi:id="XMLPrimitiveTypes-unsignedShort-generalization"
+        xmi:uuid="725A27D7-D31F-42E0-9C24-0FAB8643844E" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-unsignedInt"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-Name" xmi:uuid="725A27D7-D31F-485E-9022-0FABFFFB2653"
+      xmi:type="uml:PrimitiveType">
+      <name>Name</name>
+      <generalization xmi:id="XMLPrimitiveTypes-Name-generalization"
+        xmi:uuid="725A27D7-D31F-42E2-9C2A-0FAB99DFF477" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-token"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-unsignedByte"
+      xmi:uuid="725A27D7-D31F-48D3-9007-0FABF675EEBF" xmi:type="uml:PrimitiveType">
+      <name>unsignedByte</name>
+      <generalization xmi:id="XMLPrimitiveTypes-unsignedByte-generalization"
+        xmi:uuid="725A27D7-D31F-4344-9F64-0FABFB0666CE" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-unsignedShort"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-yearMonthDuration"
+      xmi:uuid="725A27D7-D31F-48E6-96C9-0FAB210DE56F" xmi:type="uml:PrimitiveType">
+      <name>yearMonthDuration</name>
+      <generalization xmi:id="XMLPrimitiveTypes-yearMonthDuration-generalization"
+        xmi:uuid="725A27D7-D31F-4C6E-9A8A-0FABEACEA24C" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-duration"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-decimal"
+      xmi:uuid="725A27D7-D31F-4911-997B-0FABC92C982D" xmi:type="uml:PrimitiveType">
+      <name>decimal</name>
+      <generalization xmi:id="XMLPrimitiveTypes-decimal-generalization"
+        xmi:uuid="725A27D7-D31F-4F5D-938B-0FAB17516684" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-anyAtomicType"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-gMonthDay"
+      xmi:uuid="725A27D7-D31F-49D2-9496-0FAB0FD5EA8E" xmi:type="uml:PrimitiveType">
+      <name>gMonthDay</name>
+      <generalization xmi:id="XMLPrimitiveTypes-gMonthDay-generalization"
+        xmi:uuid="725A27D7-D31F-46B5-966B-0FAB5A61A921" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-anyAtomicType"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-dateTime"
+      xmi:uuid="725A27D7-D31F-4A77-99D8-0FABEC4F2CA4" xmi:type="uml:PrimitiveType">
+      <name>dateTime</name>
+      <generalization xmi:id="XMLPrimitiveTypes-dateTime-generalization"
+        xmi:uuid="725A27D7-D31F-4D65-9AA9-0FAB06F38D1D" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-anyAtomicType"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-base64Binary"
+      xmi:uuid="725A27D7-D31F-4ABB-993F-0FABCC55B330" xmi:type="uml:PrimitiveType">
+      <name>base64Binary</name>
+      <generalization xmi:id="XMLPrimitiveTypes-base64Binary-generalization"
+        xmi:uuid="725A27D7-D31F-46E8-973A-0FABEB5CC9E5" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-anyAtomicType"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-IDREFSBase"
+      xmi:uuid="725A27D7-D31F-4B48-9E47-0FAB1684995F" xmi:type="uml:PrimitiveType">
+      <name>IDREFSBase</name>
+      <generalization xmi:id="XMLPrimitiveTypes-IDREFSBase-generalization"
+        xmi:uuid="725A27D7-D31F-43BF-9632-0FABBD7683F5" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-anySimpleType"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-long" xmi:uuid="725A27D7-D31F-4B49-9E15-0FAB5481EA2A"
+      xmi:type="uml:PrimitiveType">
+      <name>long</name>
+      <generalization xmi:id="XMLPrimitiveTypes-long-generalization"
+        xmi:uuid="725A27D7-D31F-4808-92D2-0FAB0A23843F" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-integer"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-float"
+      xmi:uuid="725A27D7-D31F-4B58-9E23-0FAB3A18964D" xmi:type="uml:PrimitiveType">
+      <name>float</name>
+      <generalization xmi:id="XMLPrimitiveTypes-float-generalization"
+        xmi:uuid="725A27D7-D31F-4E12-90F8-0FABE6098C2C" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-anyAtomicType"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-unsignedInt"
+      xmi:uuid="725A27D7-D31F-4B59-9872-0FABF077F7CD" xmi:type="uml:PrimitiveType">
+      <name>unsignedInt</name>
+      <generalization xmi:id="XMLPrimitiveTypes-unsignedInt-generalization"
+        xmi:uuid="725A27D7-D31F-492D-9359-0FAB1E5D94FD" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-unsignedLong"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-nonPositiveInteger"
+      xmi:uuid="725A27D7-D31F-4B87-92F5-0FABF7C80E57" xmi:type="uml:PrimitiveType">
+      <name>nonPositiveInteger</name>
+      <generalization xmi:id="XMLPrimitiveTypes-nonPositiveInteger-generalization"
+        xmi:uuid="725A27D7-D31F-40D3-95DF-0FAB2132DB72" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-integer"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-token"
+      xmi:uuid="725A27D7-D31F-4B90-9772-0FABC9441C7A" xmi:type="uml:PrimitiveType">
+      <name>token</name>
+      <generalization xmi:id="XMLPrimitiveTypes-token-generalization"
+        xmi:uuid="725A27D7-D31F-4F7B-95FF-0FAB69F63252" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-normalizedString"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-ENTITY"
+      xmi:uuid="725A27D7-D31F-4C69-9DC7-0FABA627FA61" xmi:type="uml:PrimitiveType">
+      <name>ENTITY</name>
+      <generalization xmi:id="XMLPrimitiveTypes-ENTITY-generalization"
+        xmi:uuid="725A27D7-D31F-4513-97BF-0FABFB2A24FB" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-NCName"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-NMTOKENSBase"
+      xmi:uuid="725A27D7-D31F-4C9B-96B4-0FAB53C4B2E2" xmi:type="uml:PrimitiveType">
+      <name>NMTOKENSBase</name>
+      <generalization xmi:id="XMLPrimitiveTypes-NMTOKENSBase-generalization"
+        xmi:uuid="725A27D7-D31F-4E8B-9F69-0FABE9064341" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-anySimpleType"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-gYear"
+      xmi:uuid="725A27D7-D31F-4D04-92F3-0FABEDE33F22" xmi:type="uml:PrimitiveType">
+      <name>gYear</name>
+      <generalization xmi:id="XMLPrimitiveTypes-gYear-generalization"
+        xmi:uuid="725A27D7-D31F-4547-9B33-0FAB2F671007" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-anyAtomicType"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-positiveInteger"
+      xmi:uuid="725A27D7-D31F-4D11-98F5-0FABD543E24B" xmi:type="uml:PrimitiveType">
+      <name>positiveInteger</name>
+      <generalization xmi:id="XMLPrimitiveTypes-positiveInteger-generalization"
+        xmi:uuid="725A27D7-D31F-46FC-9C42-0FAB54F73403" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-nonNegativeInteger"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-longObject"
+      xmi:uuid="725A27D7-D31F-4D2B-91A5-0FAB077A6C1D" xmi:type="uml:PrimitiveType">
+      <name>longObject</name>
+      <generalization xmi:id="XMLPrimitiveTypes-longObject-generalization"
+        xmi:uuid="725A27D7-D31F-495F-9EFE-0FAB36351870" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-long"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-short"
+      xmi:uuid="725A27D7-D31F-4E47-95F4-0FAB59C054A5" xmi:type="uml:PrimitiveType">
+      <name>short</name>
+      <generalization xmi:id="XMLPrimitiveTypes-short-generalization"
+        xmi:uuid="725A27D7-D31F-4ACC-9EEE-0FAB3DE823F2" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-int"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-int" xmi:uuid="725A27D7-D31F-4E90-91C9-0FAB5511AF08"
+      xmi:type="uml:PrimitiveType">
+      <name>int</name>
+      <generalization xmi:id="XMLPrimitiveTypes-int-generalization"
+        xmi:uuid="725A27D7-D31F-4C28-9898-0FAB9D7FEDFC" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-long"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-double"
+      xmi:uuid="725A27D7-D31F-4ECD-90D2-0FABD7DCC0F9" xmi:type="uml:PrimitiveType">
+      <name>double</name>
+      <generalization xmi:id="XMLPrimitiveTypes-double-generalization"
+        xmi:uuid="725A27D7-D31F-49E5-9665-0FAB46702B4A" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-anyAtomicType"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:id="XMLPrimitiveTypes-anyURI"
+      xmi:uuid="725A27D7-D31F-4FD7-9C90-0FABDF384175" xmi:type="uml:PrimitiveType">
+      <name>anyURI</name>
+      <generalization xmi:id="XMLPrimitiveTypes-anyURI-generalization"
+        xmi:uuid="725A27D7-D31F-4B8F-9F13-0FAB4BCE2D7F" xmi:type="uml:Generalization">
+        <general xmi:idref="XMLPrimitiveTypes-anyAtomicType"/>
+      </generalization>
+    </packagedElement>
+  </uml:Model>
+  <StandardProfileL2:ModelLibrary xmi:id="_1"
+    xmi:uuid="725A27D7-D31F-48DF-969F-0FABD82A4F77">
+    <base_Package xmi:idref="XMLPrimitiveTypes"/>
+  </StandardProfileL2:ModelLibrary>
+</xmi:XMI>

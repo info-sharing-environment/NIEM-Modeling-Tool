@@ -1,0 +1,1852 @@
+<?xml version="1.0" encoding="UTF-8"?><xmi:XMI xmlns:xmi="http://www.omg.org/spec/XMI/20110701">
+	
+	
+	
+	<uml:Model xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile" xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Model_Package_Description_Profile="http://www.omg.org/spec/NIEM-UML/20120501/Model_Package_Description_Profile" xmlns:uml="http://www.omg.org/spec/UML/20110701" xmi:type="uml:Model" xmi:id="_niem" name="niem"><packagedElement xmi:type="uml:Package" xmi:id="_niem-mn_offense" name="mn_offense"><packagedElement xmi:type="uml:Package" xmi:id="_niem-mn_offense-2.0" name="2.0">
+					<packagedElement xmi:type="uml:Package" xmi:id="_niem-mn_offense-2.0-mn_offense" name="mn_offense">
+						<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-ownedComment" body="Statute and offense codes from the state of Minnesota.">
+							<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense"/>
+						</ownedComment>
+						
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType" name="OffenseCodeSimpleType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-ownedComment" body="A data type for Uniform Crime Reporting (UCR) offense codes.">
+								<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType"/>
+							</ownedComment>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-611" name="611">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-611-ownedComment" body="Not to Possess Firearm-Juvenile">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-611"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.011" name="260.011">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.011-ownedComment" body="Theft - Alters/Removes Serial No.">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.011"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-160" name="160">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-160-ownedComment" body="Murder - Unborn">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-160"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-999" name="999">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-999-ownedComment" body="Miscellaneous">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-999"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-920" name="920">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-920-ownedComment" body="Misconduct Affecting Public Official">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-920"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.12" name="300.12">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.12-ownedComment" body="Cont. Sub. Possession - First Degree">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.12"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-419" name="419">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-419-ownedComment" body="Traffic">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-419"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-941" name="941">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-941-ownedComment" body="State Lottery">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-941"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-662" name="662">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-662-ownedComment" body="Furnishing Dangerous Weapon-Felony">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-662"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-912" name="912">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-912-ownedComment" body="Occupational Health and Safety">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-912"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-550" name="550">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-550-ownedComment" body="Juvenile Controlled Substance Offender">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-550"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-263" name="263">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-263-ownedComment" body="Dishonored Checks">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-263"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-120.2" name="120.2">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-120.2-ownedComment" body="Murder 2  ">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-120.2"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-902" name="902">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-902-ownedComment" body="Contribute Delinquency Minor">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-902"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-153" name="153">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-153-ownedComment" body="CV Injury - Bodily Harm">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-153"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-202" name="202">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-202-ownedComment" body="Negligent Fires">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-202"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-400.04" name="400.04">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-400.04-ownedComment" body="DWI - .10 or more">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-400.04"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-665" name="665">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-665-ownedComment" body="Dangerous Weapons-Misdemeanors and Gross Misdemeanors">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-665"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-161" name="161">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-161-ownedComment" body="Manslaughter - Unborn">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-161"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-970.03" name="970.03">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-970.03-ownedComment" body="Contempt">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-970.03"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-541" name="541">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-541-ownedComment" body="Underage Drinking and Driving">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-541"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-239" name="239">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-239-ownedComment" body="Other Damage/Trespass Property Crime">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-239"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-932" name="932">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-932-ownedComment" body="Disorderly Conduct ">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-932"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.003" name="260.003">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.003-ownedComment" body="Theft by False Representation">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.003"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-160.2" name="160.2">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-160.2-ownedComment" body="Murder 2 - Unborn">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-160.2"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-953.01" name="953.01">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-953.01-ownedComment" body="Minors in Sexual Materials - Use">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-953.01"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-900" name="900">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-900-ownedComment" body="Child Neglect/Child Endangerment">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-900"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-102" name="102">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-102-ownedComment" body="Malicious Punishment">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-102"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-403.01" name="403.01">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-403.01-ownedComment" body="DWI - First Degree">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-403.01"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-221.3" name="221.3">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-221.3-ownedComment" body="Cellular Counterfeiting 3">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-221.3"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-401.02" name="401.02">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-401.02-ownedComment" body="DWI - .04 within 2 hrs">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-401.02"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-160.1" name="160.1">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-160.1-ownedComment" body="Murder 1 - Unborn">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-160.1"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-931.2" name="931.2">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-931.2-ownedComment" body="Riot 2">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-931.2"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-404.02" name="404.02">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-404.02-ownedComment" body="DWI - Motor Boat">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-404.02"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-110.4" name="110.4">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-110.4-ownedComment" body="CSC 4">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-110.4"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-235" name="235">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-235-ownedComment" body="Trespass on Critical Public Service Facilities, Pipeline, Utility">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-235"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-402.06" name="402.06">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-402.06-ownedComment" body="DWI - Aircraft - Hazardous Substance">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-402.06"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-910" name="910">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-910-ownedComment" body="Health Care Regulation">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-910"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-210.3" name="210.3">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-210.3-ownedComment" body="Burglary 3">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-210.3"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-909" name="909">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-909-ownedComment" body="Crime Against Family">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-909"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-221" name="221">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-221-ownedComment" body="Cellular Phone Counterfeiting">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-221"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-913" name="913">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-913-ownedComment" body="Health and Safety">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-913"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-414" name="414">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-414-ownedComment" body="Vehicle Equipment/Safety/Inspection">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-414"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-491" name="491">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-491-ownedComment" body="Off-Road Vehicle">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-491"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-901" name="901">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-901-ownedComment" body="Non-Support of Spouse or Child">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-901"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-991.01" name="991.01">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-991.01-ownedComment" body="Alcohol Related Fish and Game">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-991.01"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-971.02" name="971.02">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-971.02-ownedComment" body="Fleeing">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-971.02"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.013" name="260.013">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.013-ownedComment" body="Theft - Not Pay for Services">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.013"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-210.4" name="210.4">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-210.4-ownedComment" body="Burglary 4">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-210.4"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-400.07" name="400.07">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-400.07-ownedComment" body="DWI - Hazardous Substance">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-400.07"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-221.1" name="221.1">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-221.1-ownedComment" body="Cellular Counterfeiting 1">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-221.1"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-219" name="219">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-219-ownedComment" body="Burglary">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-219"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.4" name="300.4">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.4-ownedComment" body="Cont. Substance - Fourth Degree">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.4"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-493" name="493">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-493-ownedComment" body="Highway/Road">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-493"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-625" name="625">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-625-ownedComment" body="Ineligible to receive, ship, or transport pistol or semiautomatic military-style assault weapon">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-625"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-103.03" name="103.03">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-103.03-ownedComment" body="Replica Firearm/BB Gun">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-103.03"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-402.08" name="402.08">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-402.08-ownedComment" body="DWI - Aircraft - Within 8 hrs. of consuming Alcohol/Cont. Sub.">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-402.08"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-971" name="971">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-971-ownedComment" body="Escape/Fleeing">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-971"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-952" name="952">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-952-ownedComment" body="Obscene Materials">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-952"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-130" name="130">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-130-ownedComment" body="Kidnapping">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-130"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-403.02" name="403.02">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-403.02-ownedComment" body="DWI - Second Degree">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-403.02"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-400.08" name="400.08">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-400.08-ownedComment" body="DWI - Schedule I &amp; II Cont. Sub. Other than Marijuana">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-400.08"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-109" name="109">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-109-ownedComment" body="Assault">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-109"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-660" name="660">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-660-ownedComment" body="Firearm Transfer/Silencers Prohibited-Felony">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-660"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-974.02" name="974.02">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-974.02-ownedComment" body="Obstruction of Legal Process">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-974.02"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-401.07" name="401.07">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-401.07-ownedComment" body="DWI - School Bus/Head Start - Misd.">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-401.07"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-406.02" name="406.02">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-406.02-ownedComment" body="Refusal to Test - Aircraft">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-406.02"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-100.1" name="100.1">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-100.1-ownedComment" body="Assault 1">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-100.1"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-200.3" name="200.3">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-200.3-ownedComment" body="Arson 3">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-200.3"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-400.05" name="400.05">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-400.05-ownedComment" body="DWI - .10 or more within 2 hrs.">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-400.05"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-990" name="990">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-990-ownedComment" body="Animal Welfare">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-990"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-914" name="914">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-914-ownedComment" body="Liquor">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-914"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-580" name="580">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-580-ownedComment" body="Juvenile Petty Offender">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-580"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-405.04" name="405.04">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-405.04-ownedComment" body="DWI Mandatory Penalties- Fifth Offense">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-405.04"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-922" name="922">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-922-ownedComment" body="Violation of Regulation/Licensing Rule">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-922"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-141.1" name="141.1">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-141.1-ownedComment" body="Agg. Robbery 1">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-141.1"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.007" name="260.007">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.007-ownedComment" body="Theft - Coin Operated Machine">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.007"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-290" name="290">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-290-ownedComment" body="Fraudulent Trade/Commerce">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-290"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-400.02" name="400.02">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-400.02-ownedComment" body="DWI - Controlled Substance">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-400.02"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-170.01" name="170.01">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-170.01-ownedComment" body="Order for Protection">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-170.01"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-103.01" name="103.01">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-103.01-ownedComment" body="Crime of Violence">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-103.01"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-233" name="233">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-233-ownedComment" body="Game/Fishing/Hunting Property Crime">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-233"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-129" name="129">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-129-ownedComment" body="Homicide">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-129"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-229" name="229">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-229-ownedComment" body="Forgery">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-229"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-170.04" name="170.04">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-170.04-ownedComment" body="Domestic Abuse No Contact Order">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-170.04"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.42" name="300.42">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.42-ownedComment" body="Cont. Sub. Possession - Fourth Degree">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.42"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-261" name="261">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-261-ownedComment" body="Financial Transaction Card Fraud">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-261"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-400.03" name="400.03">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-400.03-ownedComment" body="DWI - Combined Alcohol/Cont. Sub./Hazardous Sub.">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-400.03"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-243" name="243">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-243-ownedComment" body="Pawnbrokers/Junk Dealers - Stolen Property">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-243"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-179" name="179">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-179-ownedComment" body="Harassment/Stalking">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-179"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-970" name="970">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-970-ownedComment" body="Judicial Process">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-970"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-979" name="979">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-979-ownedComment" body="Adminstration of Justice">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-979"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-404" name="404">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-404-ownedComment" body="Permit Other DWI/Mentally Impaired to Operate">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-404"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-520" name="520">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-520-ownedComment" body="Juvenile Curfew Offense">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-520"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-645" name="645">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-645-ownedComment" body="Weapon without Permit">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-645"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-170" name="170">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-170-ownedComment" body="Restraining Orders">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-170"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-103" name="103">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-103-ownedComment" body="Terroristic Threats">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-103"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.52" name="300.52">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.52-ownedComment" body="Cont. Sub. Possession - Fifth Degree">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.52"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-972.01" name="972.01">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-972.01-ownedComment" body="Contraband">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-972.01"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-661" name="661">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-661-ownedComment" body="Furnishing Dangerous Weapon to Minors-Felony">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-661"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-170.03" name="170.03">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-170.03-ownedComment" body="Juv. Court Restr. Order">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-170.03"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-110.2" name="110.2">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-110.2-ownedComment" body="CSC 2">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-110.2"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-405.07" name="405.07">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-405.07-ownedComment" body="DWI Mandatory Penalties-Felony">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-405.07"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-590" name="590">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-590-ownedComment" body="CHIPS">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-590"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-403.04" name="403.04">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-403.04-ownedComment" body="DWI - Fourth Degree">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-403.04"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-401.05" name="401.05">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-401.05-ownedComment" body="DWI - School Bus/Head Start - GM - Child Under 16">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-401.05"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-920.01" name="920.01">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-920.01-ownedComment" body="Misconduct by Public Official">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-920.01"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300" name="300">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300-ownedComment" body="Cont. Substance Crime">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-201" name="201">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-201-ownedComment" body="Wildfire Arson">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-201"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.015" name="260.015">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.015-ownedComment" body="Theft - Diversion of Corp. Property">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.015"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.006" name="260.006">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.006-ownedComment" body="Theft - Finds Lost Property">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.006"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-650" name="650">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-650-ownedComment" body="Tear Gas/Electronic Incapacitation Device">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-650"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-499" name="499">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-499-ownedComment" body="Traffic/Transportation">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-499"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-976" name="976">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-976-ownedComment" body="Conspiracy">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-976"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.22" name="300.22">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.22-ownedComment" body="Cont. Sub. Possession - Second Degree">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.22"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-402.01" name="402.01">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-402.01-ownedComment" body="DWI - Aircraft - Alcohol">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-402.01"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-401" name="401">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-401-ownedComment" body="Commercial Vehicle DWI">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-401"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-409" name="409">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-409-ownedComment" body="DWI/Alcohol">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-409"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-931.1" name="931.1">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-931.1-ownedComment" body="Riot 1">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-931.1"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-230" name="230">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-230-ownedComment" body="Criminal Damage to Property">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-230"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-251" name="251">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-251-ownedComment" body="Worker's Compensation Fraud">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-251"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-997" name="997">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-997-ownedComment" body="Crimes in Furtherance of Terrorism">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-997"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-402.04" name="402.04">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-402.04-ownedComment" body="DWI - Aircraft - .04 or more">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-402.04"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-969" name="969">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-969-ownedComment" body="Weapon">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-969"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-903" name="903">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-903-ownedComment" body="Contribute to Need for Child Protection">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-903"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-429" name="429">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-429-ownedComment" body="MV Reg./Title/Licensing/Sale">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-429"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-974.01" name="974.01">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-974.01-ownedComment" body="Aiding an Offender">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-974.01"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-953.02" name="953.02">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-953.02-ownedComment" body="Minors in Sexual Materials - Possess/Disseminate">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-953.02"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-951" name="951">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-951-ownedComment" body="Indecent Exposure">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-951"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-420" name="420">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-420-ownedComment" body="MV Registration">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-420"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-231" name="231">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-231-ownedComment" body="Trespass">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-231"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-111" name="111">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-111-ownedComment" body="Solicit Children to Engage in Sexual Conduct">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-111"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-664" name="664">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-664-ownedComment" body="Possession Dangerous Weapon in Court House or State Building-Felony">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-664"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-510" name="510">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-510-ownedComment" body="Juvenile Runaway">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-510"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-933" name="933">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-933-ownedComment" body="Interference with Privacy">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-933"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-269" name="269">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-269-ownedComment" body="Theft">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-269"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-961" name="961">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-961-ownedComment" body="Not to Possess Firearm">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-961"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.3" name="300.3">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.3-ownedComment" body="Cont. Substance - Third Degree">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.3"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-234" name="234">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-234-ownedComment" body="Damage to Property of Critical Public Service Facilities, Pipeline, Utility">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-234"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-199" name="199">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-199-ownedComment" body="Person Offense">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-199"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-241" name="241">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-241-ownedComment" body="Bringing Stolen Goods into State">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-241"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.11" name="300.11">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.11-ownedComment" body="Cont. Sub. Sale - First Degree">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.11"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-402.07" name="402.07">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-402.07-ownedComment" body="DWI - Aircraft - Schedule I or II">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-402.07"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-630" name="630">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-630-ownedComment" body="Illegal Firearm/Ammunition">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-630"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-209" name="209">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-209-ownedComment" body="Arson Fires">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-209"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-970.04" name="970.04">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-970.04-ownedComment" body="Failure to Appear">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-970.04"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-405.05" name="405.05">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-405.05-ownedComment" body="DWI - Mandatory Consecutive Sentences">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-405.05"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-221.2" name="221.2">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-221.2-ownedComment" body="Cellular Counterfeiting 2">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-221.2"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-200.2" name="200.2">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-200.2-ownedComment" body="Arson 2">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-200.2"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-242" name="242">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-242-ownedComment" body="Precious Metal Dealers - Stolen Property">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-242"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-403" name="403">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-403-ownedComment" body="Driving While Impaired (Degree)">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-403"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-966" name="966">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-966-ownedComment" body="Firearm Discharge">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-966"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-415" name="415">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-415-ownedComment" body="MV Insurance Violation">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-415"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-240" name="240">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-240-ownedComment" body="Receiving Stolen Property">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-240"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-977" name="977">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-977-ownedComment" body="Failure of Predatory Offenders to Register">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-977"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-163.01" name="163.01">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-163.01-ownedComment" body="CV Homicide - Death/Unborn">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-163.01"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-666" name="666">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-666-ownedComment" body="Firearm Removal or Alteration of Serial Number">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-666"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-610" name="610">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-610-ownedComment" body="Not to Possess Firearm">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-610"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-291" name="291">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-291-ownedComment" body="Tampering">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-291"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-200.1" name="200.1">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-200.1-ownedComment" body="Arson 1">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-200.1"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-220" name="220">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-220-ownedComment" body="Check Forgery">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-220"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-299" name="299">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-299-ownedComment" body="Property Offense">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-299"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-230.31" name="230.31">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-230.31-ownedComment" body="Criminal Damage to Property 3 - Bias">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-230.31"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.004" name="260.004">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.004-ownedComment" body="Theft by Swindle">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.004"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-501.1" name="501.1">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-501.1-ownedComment" body="Juvenile Truancy - Habitual">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-501.1"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-973" name="973">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-973-ownedComment" body="Misconduct by Justice Official">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-973"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-930" name="930">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-930-ownedComment" body="Disorderly House">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-930"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-100.5" name="100.5">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-100.5-ownedComment" body="Assault 5">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-100.5"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-923" name="923">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-923-ownedComment" body="Election &amp; Campaign Regulation">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-923"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-530" name="530">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-530-ownedComment" body="Juvenile Tobacco Offense">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-530"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-501" name="501">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-501-ownedComment" body="Juvenile Truancy">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-501"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-911" name="911">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-911-ownedComment" body="Environmental Regulation">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-911"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-161.2" name="161.2">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-161.2-ownedComment" body="Manslaughter 2 - unborn">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-161.2"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.21" name="300.21">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.21-ownedComment" body="Cont. Sub. Sale - Second Degree">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.21"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-929" name="929">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-929-ownedComment" body="Crime Against Government">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-929"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-249" name="249">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-249-ownedComment" body="Stolen Property">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-249"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-293" name="293">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-293-ownedComment" body="Financial Exploit. - Vulnerable Adult">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-293"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-931.3" name="931.3">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-931.3-ownedComment" body="Riot 3">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-931.3"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-404.04" name="404.04">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-404.04-ownedComment" body="DWI - Aircraft">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-404.04"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-200" name="200">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-200-ownedComment" body="Arson 1-3">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-200"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-110.1" name="110.1">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-110.1-ownedComment" body="CSC 1">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-110.1"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-121.1" name="121.1">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-121.1-ownedComment" body="Manslaughter 1">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-121.1"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-961.02" name="961.02">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-961.02-ownedComment" body="Not to Possess Firearm - Convicted Crime of Violence">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-961.02"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-410" name="410">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-410-ownedComment" body="Obstruction of Traffic">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-410"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-132" name="132">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-132-ownedComment" body="Deprive Custodial Rights">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-132"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-668" name="668">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-668-ownedComment" body="Prohibited Substances">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-668"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-937" name="937">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-937-ownedComment" body="Disturbing Peace">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-937"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-402.05" name="402.05">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-402.05-ownedComment" body="DWI - Aircraft - .04 within 2 hrs.">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-402.05"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-100.2" name="100.2">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-100.2-ownedComment" body="Assault 2">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-100.2"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-972" name="972">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-972-ownedComment" body="Prison/Jails">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-972"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-916" name="916">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-916-ownedComment" body="Tobacco">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-916"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-938" name="938">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-938-ownedComment" body="Disturbing Privacy">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-938"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-161.1" name="161.1">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-161.1-ownedComment" body="Manslaughter 1 - unborn">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-161.1"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.008" name="260.008">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.008-ownedComment" body="Theft of Trade Secret">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.008"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-230.2" name="230.2">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-230.2-ownedComment" body="Criminal Damage to Property 2 - Bias">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-230.2"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-560" name="560">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-560-ownedComment" body="Juvenile Traffic Offender">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-560"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-413" name="413">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-413-ownedComment" body="School Bus Safety">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-413"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-500" name="500">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-500-ownedComment" body="Juvenile Status Offense/CHIPS">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-500"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-210.1" name="210.1">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-210.1-ownedComment" body="Burglary 1">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-210.1"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-170.02" name="170.02">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-170.02-ownedComment" body="Harassment Restr. Order">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-170.02"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-252" name="252">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-252-ownedComment" body="General Assistance Fraud">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-252"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-412" name="412">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-412-ownedComment" body="Stopping and Parking Provision">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-412"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-100" name="100">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-100-ownedComment" body="Assault 1-5">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-100"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-141.2" name="141.2">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-141.2-ownedComment" body="Agg. Robbery 2">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-141.2"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-392" name="392">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-392-ownedComment" body="Anhydrous Ammonia">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-392"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-965" name="965">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-965-ownedComment" body="Tear Gas/Electronic Incapacitation Device">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-965"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-663" name="663">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-663-ownedComment" body="Possession Dangerous Weapon on School Property">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-663"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-975" name="975">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-975-ownedComment" body="Attempt">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-975"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-612" name="612">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-612-ownedComment" body="Not to Possess Firearm-Convicted Crime of Violence">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-612"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-406" name="406">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-406-ownedComment" body="Refusal to Test - MV and Aircraft">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-406"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-120.3" name="120.3">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-120.3-ownedComment" body="Murder 3  ">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-120.3"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.002" name="260.002">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.002-ownedComment" body="Theft of Movable Property - Legal Interest">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.002"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-172" name="172">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-172-ownedComment" body="Obscene/Harassing Phone Call">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-172"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-140" name="140">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-140-ownedComment" body="Simple Robbery">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-140"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-599" name="599">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-599-ownedComment" body="Juvenile Unknown">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-599"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-601" name="601">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-601-ownedComment" body="Explosive/Incendiary Device">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-601"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-141" name="141">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-141-ownedComment" body="Aggravated Robbery">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-141"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-162.3" name="162.3">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-162.3-ownedComment" body="Assault 3 - Unborn">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-162.3"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-100.3" name="100.3">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-100.3-ownedComment" body="Assault 3">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-100.3"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-112" name="112">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-112-ownedComment" body="Incest">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-112"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.2" name="300.2">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.2-ownedComment" body="Cont. Substance - Second Degree">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.2"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-949" name="949">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-949-ownedComment" body="Gambling">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-949"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-163" name="163">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-163-ownedComment" body="Crim. Veh. Homicide/Inj. - Unborn">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-163"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-160.3" name="160.3">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-160.3-ownedComment" body="Murder 3 - Unborn">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-160.3"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.005" name="260.005">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.005-ownedComment" body="Theft - Temporary">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.005"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-540" name="540">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-540-ownedComment" body="Juvenile Alcohol Offense">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-540"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-402" name="402">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-402-ownedComment" body="Aircraft DWI">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-402"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-960" name="960">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-960-ownedComment" body="Explosive/Incendiary Device">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-960"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-101" name="101">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-101-ownedComment" body="Domestic Assault">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-101"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-964" name="964">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-964-ownedComment" body="Weapon without Permit">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-964"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-254" name="254">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-254-ownedComment" body="Fraud - Federal Food Stamps">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-254"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-962" name="962">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-962-ownedComment" body="Illegal Firearm/Ammunition">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-962"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-292" name="292">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-292-ownedComment" body="State Lottery Fraud">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-292"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-162.1" name="162.1">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-162.1-ownedComment" body="Assault 1 - Unborn">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-162.1"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.5" name="300.5">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.5-ownedComment" body="Cont. Substance - Fifth Degree">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.5"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-131" name="131">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-131-ownedComment" body="False Imprisonment">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-131"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.53" name="300.53">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.53-ownedComment" body="Cont. Sub. Fraud - Fifth Degree">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.53"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-404.03" name="404.03">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-404.03-ownedComment" body="DWI - Off Road/Motorized Bicycle">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-404.03"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-139" name="139">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-139-ownedComment" body="Kidnapping">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-139"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-992" name="992">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-992-ownedComment" body="Employer Misconduct">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-992"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-391" name="391">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-391-ownedComment" body="Sale Simulated Cont. Substance">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-391"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-405" name="405">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-405-ownedComment" body="DWI Mandatory Penalties/Consecutive Sentences">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-405"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.54" name="300.54">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.54-ownedComment" body="Cont. Sub. Unknown - Fifth Degree">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.54"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-253" name="253">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-253-ownedComment" body="Unemployment Fraud">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-253"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-103.02" name="103.02">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-103.02-ownedComment" body="Explosives">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-103.02"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-411" name="411">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-411-ownedComment" body="Driving Rule">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-411"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-110.5" name="110.5">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-110.5-ownedComment" body="CSC 5">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-110.5"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-171" name="171">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-171-ownedComment" body="Harassment/Stalking  ">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-171"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-640" name="640">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-640-ownedComment" body="Firearm Transfer">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-640"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-150" name="150">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-150-ownedComment" body="CV Homicide">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-150"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-970.02" name="970.02">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-970.02-ownedComment" body="Tampering">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-970.02"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-399" name="399">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-399-ownedComment" body="Drug Offense">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-399"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-232" name="232">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-232-ownedComment" body="Computer Related Property Crime">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-232"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.009" name="260.009">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.009-ownedComment" body="Theft of Leased/Rented Property">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.009"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-264" name="264">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-264-ownedComment" body="Counterfeited Intellectual Property">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-264"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-162" name="162">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-162-ownedComment" body="Assault - Unborn">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-162"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-200.4" name="200.4">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-200.4-ownedComment" body="Arson 4">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-200.4"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-151" name="151">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-151-ownedComment" body="CV Injury - Great Bodily Harm">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-151"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.41" name="300.41">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.41-ownedComment" body="Cont. Sub. Sale - Fourth Degree">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.41"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-915" name="915">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-915-ownedComment" body="Violation of Reporting Requirement">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-915"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-405.03" name="405.03">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-405.03-ownedComment" body="DWI Mandatory Penalties- Fourth Offense">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-405.03"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-210" name="210">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-210-ownedComment" body="Burglary 1-4">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-210"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-954" name="954">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-954-ownedComment" body="Harmful Materials to Minors">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-954"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-230.3" name="230.3">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-230.3-ownedComment" body="Criminal Damage to Property 3">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-230.3"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.017" name="260.017">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.017-ownedComment" body="Theft - MV Use without consent">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.017"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.32" name="300.32">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.32-ownedComment" body="Cont. Sub. Possession - Third Degree">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.32"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-961.01" name="961.01">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-961.01-ownedComment" body="Not to Possess Firearm - Juvenile">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-961.01"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-939" name="939">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-939-ownedComment" body="Disturbing Peace/Privacy">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-939"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-121.2" name="121.2">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-121.2-ownedComment" body="Manslaughter 2  ">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-121.2"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-390" name="390">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-390-ownedComment" body="Import Controlled Substance">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-390"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260" name="260">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260-ownedComment" body="Theft Statute">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-921" name="921">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-921-ownedComment" body="Taxes">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-921"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-494" name="494">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-494-ownedComment" body="Accident">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-494"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-169" name="169">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-169-ownedComment" body="Crime Against Unborn">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-169"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-402.02" name="402.02">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-402.02-ownedComment" body="DWI - Aircraft - Cont. Sub.">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-402.02"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-400.06" name="400.06">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-400.06-ownedComment" body="DWI - .20 or more wihtin 2 hrs.">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-400.06"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-110.3" name="110.3">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-110.3-ownedComment" body="CSC 3">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-110.3"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-406.01" name="406.01">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-406.01-ownedComment" body="Refusal to Test - Motor Vehicle">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-406.01"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-152" name="152">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-152-ownedComment" body="CV Injury - Substantial Bodily Harm">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-152"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-934" name="934">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-934-ownedComment" body="Interference with Communication">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-934"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-100.4" name="100.4">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-100.4-ownedComment" body="Assault 4">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-100.4"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-400" name="400">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-400-ownedComment" body="Driving While Impaired (DWI)">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-400"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-162.2" name="162.2">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-162.2-ownedComment" body="Assault 2 - Unborn">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-162.2"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.1" name="300.1">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.1-ownedComment" body="Cont. Substance - First Degree">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.1"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-210.2" name="210.2">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-210.2-ownedComment" body="Burglary 2">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-210.2"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-405.06" name="405.06">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-405.06-ownedComment" body="DWI - Permissive Consecutive Sentences; multiple offense">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-405.06"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-400.01" name="400.01">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-400.01-ownedComment" body="DWI - Alcohol">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-400.01"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-100.41" name="100.41">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-100.41-ownedComment" body="Assault 4 - Motivated by Bias">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-100.41"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-230.1" name="230.1">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-230.1-ownedComment" body="Criminal Damage to Property 1">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-230.1"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-998" name="998">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-998-ownedComment" body="Crime for Benefit of Gang">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-998"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-991" name="991">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-991-ownedComment" body="Fish and Game (Other)">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-991"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-699" name="699">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-699-ownedComment" body="Weapon Offense">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-699"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-918" name="918">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-918-ownedComment" body="Railroads/Transit Facilities/Providers">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-918"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-490" name="490">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-490-ownedComment" body=" Airplane/Aeronautics">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-490"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-119" name="119">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-119-ownedComment" body="Sex Offense">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-119"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-953" name="953">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-953-ownedComment" body="Minors in Sexual Materials">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-953"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.012" name="260.012">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.012-ownedComment" body="Theft - Cable TV Services">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.012"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-416" name="416">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-416-ownedComment" body="Motorcycle Provision">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-416"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-110" name="110">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-110-ownedComment" body="Criminal Sexual Conduct">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-110"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-163.02" name="163.02">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-163.02-ownedComment" body="CV Injury - Great Bodily Harm/Unborn">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-163.02"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-402.03" name="402.03">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-402.03-ownedComment" body="DWI - Aircraft - Combined Alcohol/Cont. Sub./Hazardous Substance">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-402.03"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-970.01" name="970.01">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-970.01-ownedComment" body="Perjury">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-970.01"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-149" name="149">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-149-ownedComment" body="Robbery">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-149"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-259" name="259">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-259-ownedComment" body="Govt. Assistance Fraud/Theft">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-259"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-171.01" name="171.01">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-171.01-ownedComment" body="Harassment/Stalking - motivated by bias">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-171.01"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.001" name="260.001">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.001-ownedComment" body="Theft of Movable Property">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.001"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-974" name="974">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-974-ownedComment" body="Obstruction of Justice">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-974"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-403.03" name="403.03">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-403.03-ownedComment" body="DWI - Third Degree">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-403.03"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-294" name="294">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-294-ownedComment" body="Poss Shoplifting Gear/Burg. Tools/Code Grabbing Device">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-294"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-405.02" name="405.02">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-405.02-ownedComment" body="DWI Mandatory Penalties- Third Offense">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-405.02"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-971.01" name="971.01">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-971.01-ownedComment" body="Escape ">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-971.01"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-667" name="667">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-667-ownedComment" body="Weapon of Mass Destruction">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-667"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-931" name="931">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-931-ownedComment" body="Riot">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-931"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.01" name="260.01">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.01-ownedComment" body="Theft - Alters/Removes I.D. No.">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.01"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-265" name="265">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-265-ownedComment" body="Possesion/Sale Stolen or Counterfeit Checks">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-265"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-401.06" name="401.06">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-401.06-ownedComment" body="DWI - School Bus/Head Start - GM - within 10 yrs of prior">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-401.06"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-190" name="190">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-190-ownedComment" body="Drive-by Shooting">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-190"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-950" name="950">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-950-ownedComment" body="Prostitution">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-950"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-120" name="120">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-120-ownedComment" body="Murder">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-120"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-250" name="250">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-250-ownedComment" body="Wrongfully Obtain Public Assistance ">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-250"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-405.01" name="405.01">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-405.01-ownedComment" body="DWI Mandatory Penalties - Second Offense">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-405.01"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-230.4" name="230.4">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-230.4-ownedComment" body="Criminal Damage to Property 4">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-230.4"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-940" name="940">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-940-ownedComment" body="Pari Mutual Gambling">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-940"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-262" name="262">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-262-ownedComment" body="Identity Theft">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-262"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-919" name="919">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-919-ownedComment" body="Public Health/Safety/Environment">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-919"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-421" name="421">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-421-ownedComment" body="MV Licensing">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-421"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.51" name="300.51">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.51-ownedComment" body="Cont. Sub. Sale - Fifth Degree">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.51"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-173" name="173">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-173-ownedComment" body="Harassment - Letter/Tel. Pkg.">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-173"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.014" name="260.014">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.014-ownedComment" body="Theft - Telecommunications">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.014"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-959" name="959">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-959-ownedComment" body="Sex Related">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-959"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-120.1" name="120.1">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-120.1-ownedComment" body="Murder 1">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-120.1"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-401.04" name="401.04">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-401.04-ownedComment" body="DWI - School bus/Head Start - Any Amount">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-401.04"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-924" name="924">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-924-ownedComment" body="Public Information Data Practices">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-924"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-121" name="121">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-121-ownedComment" body="Manslaughter">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-121"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-492" name="492">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-492-ownedComment" body="Water Craft">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-492"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-255" name="255">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-255-ownedComment" body="Medical Assisstance Fraud">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-255"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.016" name="260.016">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.016-ownedComment" body="Theft - Diversion of Corp. Property">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-260.016"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-404.01" name="404.01">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-404.01-ownedComment" body="DWI - Snowmobile &amp; ATV">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-404.01"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-159" name="159">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-159-ownedComment" body="CVH &amp; Injury">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-159"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-963" name="963">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-963-ownedComment" body="Firearm Transfer">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-963"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-422" name="422">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-422-ownedComment" body="MV Title">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-422"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.31" name="300.31">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.31-ownedComment" body="Cont. Sub. Sale - Third Degree">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType-300.31"/>
+								</ownedComment>
+							</ownedLiteral>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Class" xmi:id="_niem-mn_offense-2.0-mn_offense-NamespaceElementPropertyHolder" name="NamespaceElementPropertyHolder"/>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeType" name="OffenseCodeType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeType-ownedComment" body="A data type for Uniform Crime Reporting (UCR) offense codes.">
+								<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseCodeType"/>
+							</ownedComment>
+							<generalization xmi:type="uml:Generalization" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseCodeType-generalization" general="_niem-mn_offense-2.0-mn_offense-OffenseCodeSimpleType"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseLevelCodeSimpleType" name="OffenseLevelCodeSimpleType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseLevelCodeSimpleType-ownedComment" body="A data type for levels of an incident.">
+								<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseLevelCodeSimpleType"/>
+							</ownedComment>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseLevelCodeSimpleType-P" name="P">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseLevelCodeSimpleType-P-ownedComment" body="Petty Misdemeanor">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseLevelCodeSimpleType-P"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseLevelCodeSimpleType-M" name="M">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseLevelCodeSimpleType-M-ownedComment" body="Misdemeanor">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseLevelCodeSimpleType-M"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseLevelCodeSimpleType-F" name="F">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseLevelCodeSimpleType-F-ownedComment" body="Felony">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseLevelCodeSimpleType-F"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseLevelCodeSimpleType-G" name="G">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseLevelCodeSimpleType-G-ownedComment" body="Gross Misdemeanor">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseLevelCodeSimpleType-G"/>
+								</ownedComment>
+							</ownedLiteral>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseLevelCodeType" name="OffenseLevelCodeType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseLevelCodeType-ownedComment" body="A data type for levels of an incident.">
+								<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-OffenseLevelCodeType"/>
+							</ownedComment>
+							<generalization xmi:type="uml:Generalization" xmi:id="_niem-mn_offense-2.0-mn_offense-OffenseLevelCodeType-generalization" general="_niem-mn_offense-2.0-mn_offense-OffenseLevelCodeSimpleType"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-mn_offense-2.0-mn_offense-StatuteCategoryCodeSimpleType" name="StatuteCategoryCodeSimpleType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-StatuteCategoryCodeSimpleType-ownedComment" body="A data type for kinds of statutes.">
+								<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-StatuteCategoryCodeSimpleType"/>
+							</ownedComment>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-StatuteCategoryCodeSimpleType-D" name="D">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-StatuteCategoryCodeSimpleType-D-ownedComment" body="Definition">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-StatuteCategoryCodeSimpleType-D"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-StatuteCategoryCodeSimpleType-B" name="B">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-StatuteCategoryCodeSimpleType-B-ownedComment" body="Both C and P">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-StatuteCategoryCodeSimpleType-B"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-StatuteCategoryCodeSimpleType-N" name="N">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-StatuteCategoryCodeSimpleType-N-ownedComment" body="Not Chargeable">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-StatuteCategoryCodeSimpleType-N"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-StatuteCategoryCodeSimpleType-P" name="P">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-StatuteCategoryCodeSimpleType-P-ownedComment" body="Penalty">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-StatuteCategoryCodeSimpleType-P"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-StatuteCategoryCodeSimpleType-J" name="J">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-StatuteCategoryCodeSimpleType-J-ownedComment" body="Juvenile Status/CHIP">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-StatuteCategoryCodeSimpleType-J"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-mn_offense-2.0-mn_offense-StatuteCategoryCodeSimpleType-C" name="C">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-StatuteCategoryCodeSimpleType-C-ownedComment" body="Charging">
+									<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-StatuteCategoryCodeSimpleType-C"/>
+								</ownedComment>
+							</ownedLiteral>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-mn_offense-2.0-mn_offense-StatuteCategoryCodeType" name="StatuteCategoryCodeType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-mn_offense-2.0-mn_offense-StatuteCategoryCodeType-ownedComment" body="A data type for kinds of statutes.">
+								<annotatedElement xmi:idref="_niem-mn_offense-2.0-mn_offense-StatuteCategoryCodeType"/>
+							</ownedComment>
+							<generalization xmi:type="uml:Generalization" xmi:id="_niem-mn_offense-2.0-mn_offense-StatuteCategoryCodeType-generalization" general="_niem-mn_offense-2.0-mn_offense-StatuteCategoryCodeSimpleType"/>
+						</packagedElement>
+					</packagedElement>
+				</packagedElement><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-mn_offense-profileApplication-1">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_PIM_Profile">
+						
+					</appliedProfile>
+				</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-mn_offense-profileApplication-2">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-Model_Package_Description_Profile">
+						
+					</appliedProfile>
+				</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-mn_offense-profileApplication-3">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_Common_Profile">
+						
+					</appliedProfile>
+				</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-mn_offense-profileApplication-4">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_PSM_Profile">
+						
+					</appliedProfile>
+				</profileApplication></packagedElement></uml:Model>
+	
+	
+	
+	
+	
+	
+	<NIEM_Common_Profile:PropertyHolder xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-mn_offense-2.0-mn_offense-NamespaceElementPropertyHolder-appliedStereotypeInstance" base_Class="_niem-mn_offense-2.0-mn_offense-NamespaceElementPropertyHolder"/>
+	
+	<NIEM_PIM_Profile:InformationModel xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile" xmi:id="_niem-mn_offense-2.0-mn_offense-appliedStereotypeInstance" base_Package="_niem-mn_offense-2.0-mn_offense" defaultPurpose="reference" targetNamespace="http://niem.gov/niem/mn_offense/2.0" version="1" isConformant="true"/>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</xmi:XMI>

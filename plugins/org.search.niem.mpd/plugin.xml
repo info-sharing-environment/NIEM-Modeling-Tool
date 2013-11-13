@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?eclipse version="3.4"?><plugin>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://reference.niem.gov/niem/resource/mpd/catalog/1.0/"
+            class="org.search.niem.mpd.cat.CatPackage"
+            genModel="model/mpd-catalog-1.0.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="mpdxml"
+            class="org.search.niem.mpd.cat.util.CatResourceFactoryImpl"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.wst.xml.core.catalogContributions">
+      <catalogContribution>
+         <uri
+               name="http://reference.niem.gov/niem/resource/mpd/catalog/1.0/"
+               uri="http://reference.niem.gov/niem/resource/mpd/catalog/1.0/mpd-catalog-1.0.xsd">
+         </uri>
+      </catalogContribution>
+   </extension>
+   
+   <extension
+         point="org.eclipse.core.contenttype.contentTypes">
+      <content-type
+            base-type="org.eclipse.core.runtime.xml"
+            file-extensions="xml,mpdxml"
+            id="org.search.niem.mpd.catalog"
+            name="%_UI_MPD_content_type"
+            priority="normal">
+         <describer class="org.eclipse.core.runtime.content.XMLRootElementContentDescriber2">
+            <parameter name="element" value="{http://reference.niem.gov/niem/resource/mpd/catalog/1.0/}Catalog"/>
+         </describer>
+      </content-type>
+   </extension>
+   
+   <extension point="org.eclipse.emf.ecore.content_parser">
+      <parser
+            contentTypeIdentifier="org.search.niem.mpd"
+            class="org.search.niem.mpd.cat.util.CatResourceFactoryImpl"/>
+   </extension>
+   
+</plugin>

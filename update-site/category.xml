@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description name="NIEM UML Update Site" url="http://www.search.org/niem-uml/update-site">
+      NIEM UML P2 Repository
+   </description>
+   <feature url="features/org.search.niem.uml.feature_1.0.0.qualifier.jar" id="org.search.niem.uml.feature" version="1.0.0.qualifier">
+      <category name="org.search.niem.uml_category"/>
+   </feature>
+   <feature url="features/org.eclipse.epsilon.evl.emf.validation.feature_1.1.0.201309101707.jar" id="org.eclipse.epsilon.evl.emf.validation.feature" version="1.1.0.201309101707">
+      <category name="org.search.niem.uml_category"/>
+   </feature>
+   <feature url="features/org.eclipse.epsilon.core.feature_1.1.0.201309101707.jar" id="org.eclipse.epsilon.core.feature" version="1.1.0.201309101707">
+      <category name="org.search.niem.uml_category"/>
+   </feature>
+   <feature url="features/org.eclipse.epsilon.emf.feature_1.1.0.201309101707.jar" id="org.eclipse.epsilon.emf.feature" version="1.1.0.201309101707">
+      <category name="org.search.niem.uml_category"/>
+   </feature>
+   <feature url="features/org.eclipse.epsilon.core.dependencies.feature_1.1.0.201309101707.jar" id="org.eclipse.epsilon.core.dependencies.feature" version="1.1.0.201309101707">
+      <category name="org.search.niem.uml_category"/>
+   </feature>
+   <feature url="features/org.eclipse.epsilon.core.dt.feature_1.1.0.201309101707.jar" id="org.eclipse.epsilon.core.dt.feature" version="1.1.0.201309101707">
+      <category name="org.search.niem.uml_category"/>
+   </feature>
+   <category-def name="org.search.niem.uml_category" label="NIEM UML">
+      <description>
+         NIEM UML
+      </description>
+   </category-def>
+</site>

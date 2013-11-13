@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Model_Package_Description_Profile="http://www.omg.org/spec/NIEM-UML/20120501/Model_Package_Description_Profile" xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile" xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http://www.omg.org/spec/NIEM-UML/20120501/Model_Package_Description_Profile pathmap://NIEM_UML/NIEM-UML-Profile.xmi#NIEM_UML_Profile-Model_Package_Description_Profile-ePackage http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile pathmap://NIEM_UML/NIEM-UML-Profile.xmi#NIEM_UML_Profile-NIEM_Common_Profile-ePackage http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile pathmap://NIEM_UML/NIEM-UML-Profile.xmi#NIEM_UML_Profile-NIEM_PIM_Profile-ePackage http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile pathmap://NIEM_UML/NIEM-UML-Profile.xmi#NIEM_UML_Profile-NIEM_PSM_Profile-ePackage">
+  <uml:Model xmi:id="eee_1045467100313_135436_1" name="Data">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_7b3022e_1329450429157_64745_1523" annotatedElement="eee_1045467100313_135436_1">
+      <body>Author:${author}
+Created:${current_date_time}
+Title:${title}
+Comment:${comment}
+</body>
+    </ownedComment>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_OcSGYM6BEeKCzt4Pk4Naug">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/XMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_17_0_3_7b3022e_1329450445274_400438_1659" name="${model_name}PIM">
+      <packagedElement xmi:type="uml:Package" xmi:id="_17_0_3_7b3022e_1329450471291_982463_1660" name="${model_name}NIEMCoreSubset">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_1_2_7b3022e_1336672240431_581440_12154" annotatedElement="_17_0_3_7b3022e_1329450471291_982463_1660">
+          <body>Subset of NIEM core for ${model_name}</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_17_0_3_7b3022e_1329453270363_60558_13258" clientDependency="_17_0_3_7b3022e_1331504320594_65223_22400" name="${model_name}Extension">
+        <packagedElement xmi:type="uml:Usage" xmi:id="_17_0_3_7b3022e_1331504320594_65223_22400" client="_17_0_3_7b3022e_1329453270363_60558_13258" supplier="_17_0_3_7b3022e_1329450471291_982463_1660"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_17_0_3_7b3022e_1329514607499_935077_12500" clientDependency="_17_0_3_7b3022e_1331504317842_538549_22394" name="${model_name}Exchange">
+        <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_7b3022e_1329514640010_851232_12525" name="${model_name}Exchange">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_1_2_7b3022e_1336672498142_901041_12188" annotatedElement="_17_0_3_7b3022e_1329514640010_851232_12525">
+            <body>The information exchanged about ${model_name}</body>
+          </ownedComment>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Usage" xmi:id="_17_0_3_7b3022e_1331504317842_538549_22394" client="_17_0_3_7b3022e_1329514607499_935077_12500" supplier="_17_0_3_7b3022e_1329453270363_60558_13258"/>
+      </packagedElement>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_17_0_1_2_24a0131_1335266301240_27012_11963">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_73UqEI-NEeKWqrTisKkBnA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="pathmap://NIEM_UML/NIEM-UML-Profile.xmi#NIEM_UML_Profile-NIEM_Common_Profile-ePackage"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="pathmap://NIEM_UML/NIEM-UML-Profile.xmi#NIEM_UML_Profile-NIEM_Common_Profile"/>
+      </profileApplication>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_17_0_1_2_24a0131_1335266301869_193577_11964">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_73VRII-NEeKWqrTisKkBnA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="pathmap://NIEM_UML/NIEM-UML-Profile.xmi#NIEM_UML_Profile-NIEM_PIM_Profile-ePackage"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="pathmap://NIEM_UML/NIEM-UML-Profile.xmi#NIEM_UML_Profile-NIEM_PIM_Profile"/>
+      </profileApplication>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_7aMnoLFXEeKdh9PEkZ3oGA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_7aWYoLFXEeKdh9PEkZ3oGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="pathmap://NIEM_UML/NIEM-UML-Profile.xmi#NIEM_UML_Profile-NIEM_PSM_Profile-ePackage"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="pathmap://NIEM_UML/NIEM-UML-Profile.xmi#NIEM_UML_Profile-NIEM_PSM_Profile"/>
+      </profileApplication>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_17_0_3_7b3022e_1329518769276_42028_14147" name="${model_name}IEPD">
+      <packagedElement xmi:type="uml:Component" xmi:id="_17_0_1_2_7b3022e_1336669907440_95067_13199" name="${model_name}IEPD">
+        <elementImport xmi:type="uml:ElementImport" xmi:id="_17_0_1_2_7b3022e_1336669998542_738711_13237" importedElement="_17_0_3_7b3022e_1329514607499_935077_12500"/>
+      </packagedElement>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_17_0_1_2_24a0131_1335266231863_979480_11962">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__xeygI-NEeKWqrTisKkBnA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="pathmap://NIEM_UML/NIEM-UML-Profile.xmi#NIEM_UML_Profile-Model_Package_Description_Profile-ePackage"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="pathmap://NIEM_UML/NIEM-UML-Profile.xmi#NIEM_UML_Profile-Model_Package_Description_Profile"/>
+      </profileApplication>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_17_0_1_2_24a0131_1335261878228_614227_12537" name="niem"/>
+  </uml:Model>
+  <Model_Package_Description_Profile:ModelPackageDescription xmi:id="_17_0_1_2_7b3022e_1336669931756_453263_13231" base_Component="_17_0_1_2_7b3022e_1336669907440_95067_13199" mpdBaseURI="http://example/MPD" mpdVersionID="1.0" mpdClassCode="iepd" StatusText="Prototype">
+    <ExchangePartnerName>${exchange_partner_name}</ExchangePartnerName>
+  </Model_Package_Description_Profile:ModelPackageDescription>
+  <NIEM_PSM_Profile:XSDProperty xmi:id="NIEM_PSM_Profile_Placeholder"/>
+  <NIEM_Common_Profile:References xmi:id="NIEM_Common_Profile_Placeholder"/>
+  <NIEM_PIM_Profile:InformationModel xmi:id="_17_0_3_7b3022e_1329518940818_660033_14315" base_Package="_17_0_3_7b3022e_1329453270363_60558_13258" targetNamespace="http://example/Extension" defaultPurpose="extension"/>
+  <NIEM_PIM_Profile:InformationModel xmi:id="_17_0_3_7b3022e_1329518943105_480248_14318" base_Package="_17_0_3_7b3022e_1329450471291_982463_1660" targetNamespace="http://niem.gov/niem/niem-core/2.0"/>
+  <NIEM_PIM_Profile:InformationModel xmi:id="_17_0_3_7b3022e_1329518936276_666442_14312" base_Package="_17_0_3_7b3022e_1329514607499_935077_12500" targetNamespace="http://example/Exchange" defaultPurpose="exchange"/>
+</xmi:XMI>

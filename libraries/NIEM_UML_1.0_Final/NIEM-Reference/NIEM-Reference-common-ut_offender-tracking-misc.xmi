@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="UTF-8"?><xmi:XMI xmlns:xmi="http://www.omg.org/spec/XMI/20110701">
+	
+	
+	
+	<uml:Model xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile" xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Model_Package_Description_Profile="http://www.omg.org/spec/NIEM-UML/20120501/Model_Package_Description_Profile" xmlns:uml="http://www.omg.org/spec/UML/20110701" xmi:type="uml:Model" xmi:id="_niem" name="niem"><packagedElement xmi:type="uml:Package" xmi:id="_niem-ut_offender-tracking-misc" name="ut_offender-tracking-misc"><packagedElement xmi:type="uml:Package" xmi:id="_niem-ut_offender-tracking-misc-2.0" name="2.0">
+					<packagedElement xmi:type="uml:Package" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc" name="ut_offender-tracking-misc">
+						<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-ownedComment" body="Plea and military discharge codes from the Utah Offender Tracking Database, version 2.03.">
+							<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc"/>
+						</ownedComment>
+						
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType" name="CaseDispositionDecisionCategoryCodeSimpleType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-ownedComment" body="A data type for disposition decisions for a case.">
+								<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType"/>
+							</ownedComment>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-216" name="216">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-216-ownedComment" body="ADULT ARREST">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-216"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-214" name="214">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-214-ownedComment" body="DIVERSION">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-214"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-208" name="208">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-208-ownedComment" body="TOT">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-208"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-215" name="215">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-215-ownedComment" body="DISPO UNKNOWN">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-215"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-203" name="203">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-203-ownedComment" body="DEPORTED">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-203"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-206" name="206">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-206-ownedComment" body="BAIL/ROR">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-206"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-211" name="211">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-211-ownedComment" body="NO BILL">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-211"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-218" name="218">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-218-ownedComment" body="REBOOKED">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-218"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-212" name="212">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-212-ownedComment" body="REFER JUVENILE">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-212"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-201" name="201">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-201-ownedComment" body="ADMIN DISCH (MILITARY)">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-201"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-217" name="217">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-217-ownedComment" body="DETERM COMPETENCY">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-217"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-205" name="205">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-205-ownedComment" body="HELD">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-205"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-207" name="207">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-207-ownedComment" body="NOT PROSECUTED">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-207"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-204" name="204">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-204-ownedComment" body="VOLUNTARY DEPORTED">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-204"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-210" name="210">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-210-ownedComment" body="BAIL FORF">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-210"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-213" name="213">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-213-ownedComment" body="CONSOLIDATED">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-213"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-219" name="219">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-219-ownedComment" body="RECEIVED">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType-219"/>
+								</ownedComment>
+							</ownedLiteral>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Class" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-NamespaceElementPropertyHolder" name="NamespaceElementPropertyHolder"/>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeType" name="CaseDispositionDecisionCategoryCodeType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeType-ownedComment" body="A data type for disposition decisions for a case.">
+								<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeType"/>
+							</ownedComment>
+							<generalization xmi:type="uml:Generalization" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeType-generalization" general="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-CaseDispositionDecisionCategoryCodeSimpleType"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeSimpleType" name="MilitaryDischargeCategoryCodeSimpleType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeSimpleType-ownedComment" body="A data type for kinds of discharges a person may receive from military service.">
+								<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeSimpleType"/>
+							</ownedComment>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeSimpleType-M" name="M">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeSimpleType-M-ownedComment" body="MEDICAL">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeSimpleType-M"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeSimpleType-O" name="O">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeSimpleType-O-ownedComment" body="OTHER">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeSimpleType-O"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeSimpleType-D" name="D">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeSimpleType-D-ownedComment" body="DISHONORABLE">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeSimpleType-D"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeSimpleType-H" name="H">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeSimpleType-H-ownedComment" body="HONORABLE">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeSimpleType-H"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeSimpleType-U" name="U">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeSimpleType-U-ownedComment" body="UNKNOWN">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeSimpleType-U"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeSimpleType-Q" name="Q">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeSimpleType-Q-ownedComment" body="UNDESIRABLE">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeSimpleType-Q"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeSimpleType-G" name="G">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeSimpleType-G-ownedComment" body="GENERAL">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeSimpleType-G"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeSimpleType-N" name="N">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeSimpleType-N-ownedComment" body="NOT APPLICABLE">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeSimpleType-N"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeSimpleType-B" name="B">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeSimpleType-B-ownedComment" body="BAD CONDUCT">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeSimpleType-B"/>
+								</ownedComment>
+							</ownedLiteral>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeType" name="MilitaryDischargeCategoryCodeType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeType-ownedComment" body="A data type for kinds of discharges a person may receive from military service.">
+								<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeType"/>
+							</ownedComment>
+							<generalization xmi:type="uml:Generalization" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeType-generalization" general="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-MilitaryDischargeCategoryCodeSimpleType"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-PleaCategoryCodeSimpleType" name="PleaCategoryCodeSimpleType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-PleaCategoryCodeSimpleType-ownedComment" body="A data type for kinds of pleas.">
+								<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-PleaCategoryCodeSimpleType"/>
+							</ownedComment>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-PleaCategoryCodeSimpleType-N" name="N">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-PleaCategoryCodeSimpleType-N-ownedComment" body="NOT GUILTY">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-PleaCategoryCodeSimpleType-N"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-PleaCategoryCodeSimpleType-X" name="X">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-PleaCategoryCodeSimpleType-X-ownedComment" body="NO PLEA ENTERED">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-PleaCategoryCodeSimpleType-X"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-PleaCategoryCodeSimpleType-U" name="U">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-PleaCategoryCodeSimpleType-U-ownedComment" body="UNKNOWN">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-PleaCategoryCodeSimpleType-U"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-PleaCategoryCodeSimpleType-M" name="M">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-PleaCategoryCodeSimpleType-M-ownedComment" body="GUILTY/MENTAL ILL">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-PleaCategoryCodeSimpleType-M"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-PleaCategoryCodeSimpleType-I" name="I">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-PleaCategoryCodeSimpleType-I-ownedComment" body="N GUILTY/INSANITY">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-PleaCategoryCodeSimpleType-I"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-PleaCategoryCodeSimpleType-A" name="A">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-PleaCategoryCodeSimpleType-A-ownedComment" body="PLEA IN ABEYANCE">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-PleaCategoryCodeSimpleType-A"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-PleaCategoryCodeSimpleType-G" name="G">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-PleaCategoryCodeSimpleType-G-ownedComment" body="GUILTY">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-PleaCategoryCodeSimpleType-G"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-PleaCategoryCodeSimpleType-C" name="C">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-PleaCategoryCodeSimpleType-C-ownedComment" body="NO CONTEST">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-PleaCategoryCodeSimpleType-C"/>
+								</ownedComment>
+							</ownedLiteral>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-PleaCategoryCodeType" name="PleaCategoryCodeType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-PleaCategoryCodeType-ownedComment" body="A data type for kinds of pleas.">
+								<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-PleaCategoryCodeType"/>
+							</ownedComment>
+							<generalization xmi:type="uml:Generalization" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-PleaCategoryCodeType-generalization" general="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-PleaCategoryCodeSimpleType"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionLevelCodeSimpleType" name="SupervisionLevelCodeSimpleType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionLevelCodeSimpleType-ownedComment" body="A data type for levels of supervision required for a person.">
+								<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionLevelCodeSimpleType"/>
+							</ownedComment>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionLevelCodeSimpleType-3-HIGH_RISK" name="3-HIGH RISK"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionLevelCodeSimpleType-COMPACT_OUT" name="COMPACT OUT"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionLevelCodeSimpleType-FUGITIVE" name="FUGITIVE"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionLevelCodeSimpleType-2-MODERATE_RISK" name="2-MODERATE RISK"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionLevelCodeSimpleType-4-EXTREME_RISK" name="4-EXTREME RISK"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionLevelCodeSimpleType-ISP_II" name="ISP II"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionLevelCodeSimpleType-1-LOW_RISK" name="1-LOW RISK"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionLevelCodeSimpleType-RESID_IN-STATE_CUSTD" name="RESID/IN-STATE CUSTD"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionLevelCodeSimpleType-ISP_I" name="ISP I"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionLevelCodeType" name="SupervisionLevelCodeType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionLevelCodeType-ownedComment" body="A data type for levels of supervision required for a person.">
+								<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionLevelCodeType"/>
+							</ownedComment>
+							<generalization xmi:type="uml:Generalization" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionLevelCodeType-generalization" general="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionLevelCodeSimpleType"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType" name="SupervisionRestrictionCodeSimpleType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-ownedComment" body="A data type for restrictions placed upon a person under supervision.">
+								<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType"/>
+							</ownedComment>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-ALCOHOL" name="ALCOHOL">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-ALCOHOL-ownedComment" body="Not consume any alcoholic beverages or have them under control or in my possession at any time.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-ALCOHOL"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-CURFEW" name="CURFEW">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-CURFEW-ownedComment" body="Be at place of residence between the hours of the designated curfew times every day of the week unless otherwise approved by the supervising AP&amp;P Officer, and comply with the confinement schedule and the confinement area.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-CURFEW"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-EMPLOYMENT" name="EMPLOYMENT">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-EMPLOYMENT-ownedComment" body="Unless otherwise authorized by the AP&amp;P Officer; seek, obtain and maintain verifiable, lawful, full-time employment (32 hours per week minimum) as approved by the AP&amp;P Officer.  Notify the AP&amp;P Officer of any change in my employment within 48 hours of the change.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-EMPLOYMENT"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-VICIOUS_DOGS" name="VICIOUS DOGS">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-VICIOUS_DOGS-ownedComment" body="Not own, possess, maintain or raise vicious dogs, nor keep them on the premises where I reside.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-VICIOUS_DOGS"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-STOLEN_VEHICLE" name="STOLEN VEHICLE">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-STOLEN_VEHICLE-ownedComment" body="Not be an occupant in any stolen vehicle, or vehicle I should have known was stolen.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-STOLEN_VEHICLE"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-TRUTHFULNESS" name="TRUTHFULNESS">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-TRUTHFULNESS-ownedComment" body="I will be cooperative, compliant and truthful in all my dealings with Adult Probation and Parole.  If arrested, cited or questioned by a peace officer; notify the AP&amp;P Officer within 48 hours.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-TRUTHFULNESS"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-NO_CONTACT_W_VICTM" name="NO CONTACT W/VICTM">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-NO_CONTACT_W_VICTM-ownedComment" body="No contact with the victim nor the victims family.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-NO_CONTACT_W_VICTM"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-EXPLOIT_MATERIAL" name="EXPLOIT MATERIAL">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-EXPLOIT_MATERIAL-ownedComment" body="Not have in my possession or under my control any material that describes or depicts human nudity, the exploitation of children, consensual sex acts, non-consensual sex acts, sexual acts involving force or violence including, but not limited to:  computer programs, computer links, photographs, drawings, video tapes, audio tapes, magazines, books, literature, writings, etc. without prior approval from Adult Probation and Parole.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-EXPLOIT_MATERIAL"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-REGISTRATION_DNA" name="REGISTRATION/DNA">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-REGISTRATION_DNA-ownedComment" body="Comply with the requirements of Utah Sex Offender Registration and DNA specimen requirements.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-REGISTRATION_DNA"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-FREQUENT_SCHOOLS" name="FREQUENT SCHOOLS">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-FREQUENT_SCHOOLS-ownedComment" body="Not visit or frequent any school ground unless I am a student registered at that school and present during appropriate class hours.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-FREQUENT_SCHOOLS"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-FEES" name="FEES">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-FEES-ownedComment" body="I will pay supervision fees as determined by the Department of Corrections.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-FEES"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-SEARCHES" name="SEARCHES">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-SEARCHES-ownedComment" body="I will permit officers of Adult Probation and Parole to search my person, residence, vehicle or any other property under my control without a warrant at any time, day or night, upon reasonable suspicion to ensure compliance with conditions of my parole.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-SEARCHES"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-REPORTING" name="REPORTING">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-REPORTING-ownedComment" body="Not abscond from probation supervision.  A-Reporting: Report as directed by the Department of Corrections.  B-Residence: Establish and reside at a residence of record and not change residence without first obtaining permission from the AP&amp;P Officer.  C-Leaving the State: Not leave the state of Utah, even briefly, or any other state to which I am released or transferred without prior written permission from the AP&amp;P Officer.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-REPORTING"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-CONDUCT" name="CONDUCT">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-CONDUCT-ownedComment" body="I will obey all state, federal and municipal laws.  I will submit DNA identifier as required by law.  If arrested, cited or questioned by a peace officer; I will notify my AP&amp;P Officer within 48 hours of the incident.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-CONDUCT"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-EMPLOYMENT_VERIFY" name="EMPLOYMENT VERIFY">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-EMPLOYMENT_VERIFY-ownedComment" body="Provide check stubs or other verification of employment to Adult Probation and Parole at least twice monthly.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-EMPLOYMENT_VERIFY"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-LEAVE_COUNTY" name="LEAVE COUNTY">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-LEAVE_COUNTY-ownedComment" body="Not leave county of residence without prior authorization from Adult Probation and Parole.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-LEAVE_COUNTY"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-RELEASE" name="RELEASE">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-RELEASE-ownedComment" body="On the day of my release from the institution of confinement, I will report to my assigned AP&amp;P Officer unless otherwise approved in writing from Adult Probation and Parole.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-RELEASE"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-ABSCONDING" name="ABSCONDING">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-ABSCONDING-ownedComment" body="I will not abscond from parole supervision.  A-Reporting: I will report as directed by the Utah Department of Corrections.  B-Residence: I will establish and reside at a residence of record and will not change my residence without first obtaining permission from my AP&amp;P Officer.  C-Leaving the State: I will not leave the state of Utah, even briefly, or any other state to which I am released or transferred without prior written permission from my AP&amp;P Officer.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-ABSCONDING"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-CHILDREN_CONGREGATE" name="CHILDREN CONGREGATE">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-CHILDREN_CONGREGATE-ownedComment" body="Not enter places or events where children congregate including, but not limited to:  schools, playgrounds, parks, arcades, parties, family functions, holiday festivities or any other place or function where children are present or reasonably expected to be present without prior written approval from Adult Probation and Parole or without the supervision of a responsible adult previously approved by Adult Probation and Parole.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-CHILDREN_CONGREGATE"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-NOT_AT_COURT" name="NOT AT COURT">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-NOT_AT_COURT-ownedComment" body="Not appear in court or at a court building where other known gang member(s) are present and/or where a judicial proceeding involving a gang member is in progress, unless a party to proceedings in that court or subpoenaedto appear.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-NOT_AT_COURT"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-MONTHLY_PAYMENTS" name="MONTHLY PAYMENTS">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-MONTHLY_PAYMENTS-ownedComment" body="Make monthly payments toward any fine, restitution or supervision fees at a rate determined by the supervising AP&amp;P Officer.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-MONTHLY_PAYMENTS"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-UNEMPLOYED" name="UNEMPLOYED">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-UNEMPLOYED-ownedComment" body="If unemployed, may be ordered to report to an assigned work project on Monday, Wednesday and Friday at 8 am.  Understand that this is work for which no compensation will be received.  Work on this assigned work project from 8 am to 5 pm or until dismissed by the project supervisor or the supervising agent.  on Tuesday and Thursday, report to the Adult Probation and Parole Office at 8 am with a list of potential employers; then go into the community and look for work.  Make a list of the places visited during the day.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-UNEMPLOYED"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-ELECTRONIC_MONITOR" name="ELECTRONIC MONITOR">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-ELECTRONIC_MONITOR-ownedComment" body="Participate in electronic surveillance when offense(s) occurred in the evening or nighttime hours.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-ELECTRONIC_MONITOR"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-SUBSTANCE_TESTING" name="SUBSTANCE TESTING">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-SUBSTANCE_TESTING-ownedComment" body="Agree to submit to urinalysis or other tests for marijuana, narcotics, controlled substances, alcohol or other drugs upon reasonable suspicion as ascertained by, and at the request of, any AP&amp;P Officer to ensure compliance with the conditions of the Intensive Supervision Program.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-SUBSTANCE_TESTING"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-HOME_VISITS" name="HOME VISITS">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-HOME_VISITS-ownedComment" body="I will permit visits to my place of residence by officers of Adult Probation and Parole for the purpose of ensuring compliance with the conditions of my parole. I will not interfere with this requirement; i.e. having vicious dogs, perimeter security doors, refusing to open the door, etc.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-HOME_VISITS"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-DISCONNECT_PHONE" name="DISCONNECT PHONE">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-DISCONNECT_PHONE-ownedComment" body="Not disconnect the telephone line, power cord, or tamper with the transmitter in any way without prior authorization from the supervising AP&amp;P Officer or the Electronic Monitoring Staff.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-DISCONNECT_PHONE"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-SEX_STIMULUS_MATERIA" name="SEX STIMULUS MATERIA">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-SEX_STIMULUS_MATERIA-ownedComment" body="Not have in my possession or under my control any material that acts as a sexual stimulus for my particular deviancy(s) including, but not limited to:  computer programs, computer links, photographs, drawings, video tapes, audio tapes, magazines, books, literature, writings, etc. without the written approval from Adult Probation and Parole.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-SEX_STIMULUS_MATERIA"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-GANG_MEMBERS" name="GANG MEMBERS">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-GANG_MEMBERS-ownedComment" body="Not associate with any known gang member.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-GANG_MEMBERS"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-DRUGS" name="DRUGS">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-DRUGS-ownedComment" body="Abstain from the illegal use, possession, control, delivery, production, manufacture or distribution of marijuana, narcotics, controlled substances or other drugs as defined in the Controlled Substances Act, Utah Code Annotated 58-37-2 as amended.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-DRUGS"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-DNA" name="DNA">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-DNA-ownedComment" body="Comply with Utah Code Annotated Section 53-10-403-406 by submitting an adequate DNA specimen, and, unless determination is made that there is no ability to pay, reimburse the responsible agency $75.00 for the cost of obtaining the specimen.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-DNA"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-NOT_DATE" name="NOT DATE">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-NOT_DATE-ownedComment" body="Not date persons with children residing at home under the age of 18 without prior written approval of Adult Probation and Parole.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-NOT_DATE"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-SIGNS_GESTURES" name="SIGNS/GESTURES">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-SIGNS_GESTURES-ownedComment" body="Not display any gang signs, gestures or any posturing associated with any specific gang(s).">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-SIGNS_GESTURES"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-PHONE_SERVICES" name="PHONE SERVICES">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-PHONE_SERVICES-ownedComment" body="Understand the phone line may not have Call Waiting, Call Forwarding, Voice Mail or Caller ID; nor an answering machine, cordless phone, fax machine, computer modem or cellular phone used on the phone line.  Bring copies of phone bill to the supervising agent on a monthly basis for verification if needed.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-PHONE_SERVICES"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-PAGER" name="PAGER">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-PAGER-ownedComment" body="Not be in possession of any beeper or paging device, except in the course of lawful employment.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-PAGER"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-CHEMICAL_ANALYSIS" name="CHEMICAL ANALYSIS">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-CHEMICAL_ANALYSIS-ownedComment" body="Abstain from the illegal use, possession, control, delivery, production, manufacture or distribution of controlled substances (58-37-2 U.C.A.) and submit to tests of breath or body fluids to ensure compliance with the Probation Agreement.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-CHEMICAL_ANALYSIS"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-ENTERTAIN_LURE" name="ENTERTAIN/LURE">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-ENTERTAIN_LURE-ownedComment" body="Not have in my possession or under my control any items or materials either designed for, or used to, entertain, lure or attract the attention of children under the age of 18 without prior written approval from Adult Probation and Parole.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-ENTERTAIN_LURE"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-HMU_ABUSE" name="HMU ABUSE">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-HMU_ABUSE-ownedComment" body="Not physically abuse the electronic monitoring equipment; i.e. Home Monitoring Unit (HMU), transmitter or band.  If the HMU, transmitter or band is lost, damaged or tampered with; understand responsibility for the replacement and/or repair cost of the equipment.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-HMU_ABUSE"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-FIREARM_AMMUITION" name="FIREARM/AMMUITION">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-FIREARM_AMMUITION-ownedComment" body="Not have in my possession, in my custody, under my control, in a vehicle in which I am a passenger, or on the premises where I reside: (1) any firearm or replica thereof, (2) ammunition, or (3) dangerous weapon (any item which, in the manner of its use or intended use, is capable of causing death or serious bodily injury), and further, I shall not associate with, or be in the company of, any individual who has firearms or dangerous weapons in their possession or under their control.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-FIREARM_AMMUITION"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-ARREST-CITATIONS" name="ARREST-CITATIONS">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-ARREST-CITATIONS-ownedComment" body="Report any arrests or citations to Adult Probation and Parole within eight hours of occurrence.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-ARREST-CITATIONS"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-ASSOCIATION" name="ASSOCIATION">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-ASSOCIATION-ownedComment" body="Not knowingly associate with any person who is involved in criminal activity or who has been convicted of a felony without approval from the AP&amp;P Officer.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-ASSOCIATION"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-GED_DIPLOMA" name="GED/DIPLOMA">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-GED_DIPLOMA-ownedComment" body="Earn a GED and/or high school diploma or complete vocational training or an apprentice program as directed.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-GED_DIPLOMA"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-INSIGNIAS_EMBLEMS" name="INSIGNIAS/EMBLEMS">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-INSIGNIAS_EMBLEMS-ownedComment" body="Not wear, display, use or possess any insignias, emblems or clothing associated with a specific gang(s) including, but not limited to: belt buckles, jewelry, caps/hats, jackets, shoes/shoe laces, scarves/bandanas, shirts inscribed &#34;In Memory Of&#34; a deceased or incarcerated gang member, or other articles of clothing modified to represent a particular gang(s).">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-INSIGNIAS_EMBLEMS"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-VISITS" name="VISITS">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-VISITS-ownedComment" body="Permit visits to my place of residence, my place of employment or elsewhere by officers of Adult Probation and Parole for the purpose of ensuring compliance with the conditions of the Probation Agreement.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-VISITS"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-THERAPY" name="THERAPY">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-THERAPY-ownedComment" body="Enter into, participate in and successfully complete sex offender therapy as determined by the treating facility, therapists and the Utah Department of Corrections.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-THERAPY"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-PAINT_PENS" name="PAINT/PENS">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-PAINT_PENS-ownedComment" body="Not have in my possession or under my control spray paint, spray can tips, large marking pens or other items commonly used to create graffiti, or tagger magazines.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-PAINT_PENS"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-PORNOGRAPHY" name="PORNOGRAPHY">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-PORNOGRAPHY-ownedComment" body="Not view nor have in possession any pornographic material or material exploiting children or depicting unconsensual sex acts or acts involving force or violence.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-PORNOGRAPHY"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-DOCUMENTS_DATA_PHOTO" name="DOCUMENTS/DATA/PHOTO">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-DOCUMENTS_DATA_PHOTO-ownedComment" body="Not have in my possession any written materials, documents, computer data, photographs which give evidence of gang involvement or activity such as: (1) membership or enemy lists, (2) articles which contain or have upon them gang-associated graffiti, drawings or lettering, (3) photographs or newspaper clippings of gang members, gang crimes or activities including obituaries, (4) photographs of myself in gang clothing, demonstrating hand signs or holding weapons.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-DOCUMENTS_DATA_PHOTO"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-DRIVER_LICENSE_ID" name="DRIVER LICENSE/ID">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-DRIVER_LICENSE_ID-ownedComment" body="Obtain and carry on my person at all times a valid Utah Driver License, Utah Identification Card or other approved photo identification.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-DRIVER_LICENSE_ID"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-SPECIAL" name="SPECIAL">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-SPECIAL-ownedComment" body="Abide by the following special conditions as ordered by the Board of Pardons.  (enter special conditions)">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-SPECIAL"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-FREQUENT_GANG_PLACES" name="FREQUENT GANG PLACES">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-FREQUENT_GANG_PLACES-ownedComment" body="Not frequent places where known gang members congregate.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-FREQUENT_GANG_PLACES"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-FIREARMS_USED" name="FIREARMS USED">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-FIREARMS_USED-ownedComment" body="Not be involved in activities in which, or frequent places at which, firearms or dangerous weapons are used, legally or otherwise including, but not limited to, hunting or target shooting.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-FIREARMS_USED"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-SUPERVISION_FEE" name="SUPERVISION FEE">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-SUPERVISION_FEE-ownedComment" body="Agree to pay a supervision fee of $30 per month unless granted a waiver by the Department of Corrections under the provisions of Utah Statute 64-13-21.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-SUPERVISION_FEE"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-VEHICLE" name="VEHICLE">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-VEHICLE-ownedComment" body="Not operate any vehicle other than those reported to Adult Probation and Parole.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-VEHICLE"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-TREATMENT_COUNSELING" name="TREATMENT/COUNSELING">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-TREATMENT_COUNSELING-ownedComment" body="Enter into, participate in and complete treatment, counseling or therapy as directed.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-TREATMENT_COUNSELING"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-LAW_ENFORCE_CONTACT" name="LAW ENFORCE CONTACT">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-LAW_ENFORCE_CONTACT-ownedComment" body="If/when contacted by law enforcement, I shall provide my true name, place of residence (street address, not PO Box) and date of birth, and inform the officer(s) of my probation or parole status; I shall report such contact to my supervising agent within 48 hours, including the date and the nature of the contact, the law enforcement agency and any potential charges.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-LAW_ENFORCE_CONTACT"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-ALCOHOL_ESTABLISHMNT" name="ALCOHOL ESTABLISHMNT">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-ALCOHOL_ESTABLISHMNT-ownedComment" body="Not enter any place where alcoholic beverages are being consumed or served as the chief item of order.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-ALCOHOL_ESTABLISHMNT"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-RESIDENCE" name="RESIDENCE">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-RESIDENCE-ownedComment" body="Residence and residence changes must be approved by Adult Probation and Parole.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-RESIDENCE"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-POLYGRAPH" name="POLYGRAPH">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-POLYGRAPH-ownedComment" body="Submit to random polygraph examinations.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-POLYGRAPH"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-VICTIM_CONTACT" name="VICTIM CONTACT">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-VICTIM_CONTACT-ownedComment" body="Have no direct or indirect contact with the victim(s) or victims family without prior written approval from Adult Probation and Parole.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-VICTIM_CONTACT"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-WEAPONS" name="WEAPONS">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-WEAPONS-ownedComment" body="Not possess, have under control, have in my custody or on the premises where residing any explosives, firearmsor dangerous weapons.  (Dangerous weapon is defined as any item that in the manner of its use or intended use is capable of causing death or serious bodily injury.)  Exceptions to this condition may be made by the supervising agent and must be in writing.  This waiver will only apply to individuals on probation for a misdemeanor and who have never been convicted of a felony.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-WEAPONS"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-INTERSTATE_COMPACT" name="INTERSTATE COMPACT">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-INTERSTATE_COMPACT-ownedComment" body="Execute and adhere to the terms of the Interstate Compact Waiver and Agreement if probation or parole is served outside the state of Utah.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-INTERSTATE_COMPACT"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-CHILDREN_UNDER_18" name="CHILDREN UNDER 18">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-CHILDREN_UNDER_18-ownedComment" body="Have no contact or association with children under the age of 18 without prior written approval of Adult Probation and Parole.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-CHILDREN_UNDER_18"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-PROVIDE_PHONE_LINE" name="PROVIDE PHONE LINE">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-PROVIDE_PHONE_LINE-ownedComment" body="Understand the Electronic Monitoring Program requires provision, at personal expense, of a phone line for the use of the HMU.  Understand the HMU may cause some disturbance with existing phone line.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-PROVIDE_PHONE_LINE"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-FINANCIAL_AGREEMENT" name="FINANCIAL AGREEMENT">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-FINANCIAL_AGREEMENT-ownedComment" body="Obtain permission from the supervising AP&amp;P Officer before entering into any financial agreement requiring installment payments.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-FINANCIAL_AGREEMENT"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-NO_ALCOHOL" name="NO ALCOHOL">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-NO_ALCOHOL-ownedComment" body="Not consume, have in my possession or under my control alcoholic beverages, or frequent businesses where alcohol is the chief item of order.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-NO_ALCOHOL"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-HMU_MOVE" name="HMU MOVE">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-HMU_MOVE-ownedComment" body="Not move the Home Monitoring Unit (HMU) without prior authorization from the supervising AP&amp;P Officer or the Electronic Monitoring Staff.">
+									<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType-HMU_MOVE"/>
+								</ownedComment>
+							</ownedLiteral>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeType" name="SupervisionRestrictionCodeType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeType-ownedComment" body="A data type for restrictions placed upon a person under supervision.">
+								<annotatedElement xmi:idref="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeType"/>
+							</ownedComment>
+							<generalization xmi:type="uml:Generalization" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeType-generalization" general="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-SupervisionRestrictionCodeSimpleType"/>
+						</packagedElement>
+					</packagedElement>
+				</packagedElement><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-ut_offender-tracking-misc-profileApplication-1">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_PIM_Profile">
+						
+					</appliedProfile>
+				</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-ut_offender-tracking-misc-profileApplication-2">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-Model_Package_Description_Profile">
+						
+					</appliedProfile>
+				</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-ut_offender-tracking-misc-profileApplication-3">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_Common_Profile">
+						
+					</appliedProfile>
+				</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-ut_offender-tracking-misc-profileApplication-4">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_PSM_Profile">
+						
+					</appliedProfile>
+				</profileApplication></packagedElement></uml:Model>
+	
+	
+	
+	
+	<NIEM_Common_Profile:PropertyHolder xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-NamespaceElementPropertyHolder-appliedStereotypeInstance" base_Class="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-NamespaceElementPropertyHolder"/>
+	
+	<NIEM_PIM_Profile:InformationModel xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile" xmi:id="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc-appliedStereotypeInstance" base_Package="_niem-ut_offender-tracking-misc-2.0-ut_offender-tracking-misc" targetNamespace="http://niem.gov/niem/ut_offender-tracking-misc/2.0" defaultPurpose="reference" version="1" isConformant="true"/>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</xmi:XMI>

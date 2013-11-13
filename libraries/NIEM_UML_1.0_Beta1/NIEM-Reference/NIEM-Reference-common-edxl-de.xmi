@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/spec/XMI/20110701">
+	<uml:Model
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile"
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:Model_Package_Description_Profile="http://www.omg.org/spec/NIEM-UML/20120501/Model_Package_Description_Profile"
+		xmlns:uml="http://www.omg.org/spec/UML/20110701" xmi:type="uml:Model" xmi:id="_niem"
+		name="niem">
+		<packagedElement xmi:type="uml:Package" xmi:id="_niem-external" name="external"/>
+		<packagedElement xmi:type="uml:Package" xmi:id="_niem-edxl-de" name="edxl-de">
+			<packagedElement xmi:type="uml:Package" xmi:id="_niem-edxl-de-2.1" name="2.1">
+				<packagedElement xmi:type="uml:Package" xmi:id="_niem-edxl-de-2.1-edxl-de"
+					name="edxl-de">
+					<ownedComment xmi:type="uml:Comment"
+						xmi:id="_niem-edxl-de-2.1-edxl-de-ownedComment" body="Distribution Element">
+						<annotatedElement xmi:idref="_niem-edxl-de-2.1-edxl-de"/>
+					</ownedComment>
+					<packagedElement xmi:type="uml:Class"
+						xmi:id="_niem-edxl-de-2.1-edxl-de-DistributionElementAdapterType"
+						name="DistributionElementAdapterType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-edxl-de-2.1-edxl-de-DistributionElementAdapterType-ownedComment"
+							body="A data type for a standard message distribution framework for data sharing among emergency information systems using the XML-based Emergency Data Exchange Language (EDXL).">
+							<annotatedElement
+								xmi:idref="_niem-edxl-de-2.1-edxl-de-DistributionElementAdapterType"
+							/>
+						</ownedComment>
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-edxl-de-2.1-edxl-de-DistributionElementAdapterType-EDXLDistribution"
+							name="EDXLDistribution" aggregation="composite"
+							association="_niem-edxl-de-2.1-edxl-de-packagedElement-3">
+							<type
+								href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-external-de.xmi#_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type"> </type>
+							<lowerValue xmi:type="uml:LiteralInteger"
+								xmi:id="_niem-edxl-de-2.1-edxl-de-DistributionElementAdapterType-EDXLDistribution-lowerValue"/>
+							<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+								xmi:id="_niem-edxl-de-2.1-edxl-de-DistributionElementAdapterType-EDXLDistribution-upperValue"
+								value="*"/>
+						</ownedAttribute>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Realization"
+						xmi:id="_niem-edxl-de-2.1-edxl-de-packagedElement-2">
+						<client
+							xmi:idref="_niem-edxl-de-2.1-edxl-de-DistributionElementAdapterType-EDXLDistribution"/>
+						<supplier
+							href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-external-de.xmi#_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution"
+						> </supplier>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Association"
+						xmi:id="_niem-edxl-de-2.1-edxl-de-packagedElement-3">
+						<memberEnd
+							xmi:idref="_niem-edxl-de-2.1-edxl-de-DistributionElementAdapterType-EDXLDistribution"/>
+						<memberEnd xmi:idref="_niem-edxl-de-2.1-edxl-de-packagedElement-3-ownedEnd"/>
+						<ownedEnd xmi:type="uml:Property"
+							xmi:id="_niem-edxl-de-2.1-edxl-de-packagedElement-3-ownedEnd"
+							isUnique="false"
+							type="_niem-edxl-de-2.1-edxl-de-DistributionElementAdapterType"
+							association="_niem-edxl-de-2.1-edxl-de-packagedElement-3"> </ownedEnd>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Class"
+						xmi:id="_niem-edxl-de-2.1-edxl-de-NamespaceElementPropertyHolder"
+						name="NamespaceElementPropertyHolder">
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-edxl-de-2.1-edxl-de-NamespaceElementPropertyHolder-DistributionElementAdapter"
+							name="DistributionElementAdapter" aggregation="composite"
+							type="_niem-edxl-de-2.1-edxl-de-DistributionElementAdapterType">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-edxl-de-2.1-edxl-de-NamespaceElementPropertyHolder-DistributionElementAdapter-ownedComment"
+								body="A standard message distribution framework for data sharing among emergency information systems using the XML-based Emergency Data Exchange Language (EDXL).">
+								<annotatedElement
+									xmi:idref="_niem-edxl-de-2.1-edxl-de-NamespaceElementPropertyHolder-DistributionElementAdapter"
+								/>
+							</ownedComment>
+						</ownedAttribute>
+					</packagedElement>
+				</packagedElement>
+			</packagedElement>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-edxl-de-profileApplication-1">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_PIM_Profile"
+				> </appliedProfile>
+			</profileApplication>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-edxl-de-profileApplication-2">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-Model_Package_Description_Profile"
+				> </appliedProfile>
+			</profileApplication>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-edxl-de-profileApplication-3">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_Common_Profile"
+				> </appliedProfile>
+			</profileApplication>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-edxl-de-profileApplication-4">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_PSM_Profile"
+				> </appliedProfile>
+			</profileApplication>
+		</packagedElement>
+	</uml:Model>
+	<NIEM_Common_Profile:References
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-edxl-de-2.1-edxl-de-packagedElement-2-appliedStereotypeInstance"
+		base_Realization="_niem-edxl-de-2.1-edxl-de-packagedElement-2"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-edxl-de-2.1-edxl-de-DistributionElementAdapterType-EDXLDistribution-appliedStereotypeInstance"
+		base_Property="_niem-edxl-de-2.1-edxl-de-DistributionElementAdapterType-EDXLDistribution"
+		nillable="false" kind="element"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-edxl-de-2.1-edxl-de-NamespaceElementPropertyHolder-DistributionElementAdapter-appliedStereotypeInstance"
+		base_Property="_niem-edxl-de-2.1-edxl-de-NamespaceElementPropertyHolder-DistributionElementAdapter"
+		nillable="true" kind="element"/>
+	<NIEM_Common_Profile:PropertyHolder
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-edxl-de-2.1-edxl-de-NamespaceElementPropertyHolder-appliedStereotypeInstance"
+		base_Class="_niem-edxl-de-2.1-edxl-de-NamespaceElementPropertyHolder"/>
+	<NIEM_PIM_Profile:InformationModel
+		xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile"
+		xmi:id="_niem-edxl-de-2.1-edxl-de-appliedStereotypeInstance"
+		base_Package="_niem-edxl-de-2.1-edxl-de" defaultPurpose="reference" isConformant="true"
+		version="1" targetNamespace="http://niem.gov/niem/edxl-de/2.1"/>
+	<NIEM_Common_Profile:AdapterType
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-edxl-de-2.1-edxl-de-DistributionElementAdapterType-appliedStereotypeInstance"
+		base_Class="_niem-edxl-de-2.1-edxl-de-DistributionElementAdapterType"/>
+</xmi:XMI>

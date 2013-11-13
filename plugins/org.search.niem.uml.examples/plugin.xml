@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="org.search.niem.uml.examples.NIEM_UML"
+            name="%_UI_NiemUmlExampleCategory_name"
+            parentCategory="org.eclipse.ui.Examples">
+      </category>
+      <wizard
+            category="org.eclipse.ui.Examples/org.search.niem.uml.examples.NIEM_UML"
+            class="org.eclipse.emf.common.ui.wizard.ExampleInstallerWizard"
+            icon="icons/full/ctool16/niem_uml_new_example.png"
+            id="org.search.niem.uml.examples.NIEM_UMLWizard"
+            name="%_UI_NiemUmlWizard_name"
+            project="true">
+         <description>
+            %_UI_NiemUmlWizard_desc
+         </description>
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.emf.common.ui.examples">
+      <example
+            id="org.search.niem.uml.examples.NIEM_UML"
+            pageImage="icons/full/wizban/new_niem_uml_wiz.png"
+            wizardID="org.search.niem.uml.examples.NIEM_UMLWizard">
+         <projectDescriptor
+               contentURI="src/main/resources/org.search.niem.uml.examples/"
+               description="%_UI_NiemUmlProject_desc"
+               name="org.search.niem.uml.examples">
+         </projectDescriptor>
+      </example>
+   </extension>
+
+</plugin>

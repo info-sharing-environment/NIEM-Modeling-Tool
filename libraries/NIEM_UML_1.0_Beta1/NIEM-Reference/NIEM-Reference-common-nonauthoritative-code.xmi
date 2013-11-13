@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/spec/XMI/20110701">
+	<uml:Model
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile"
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:Model_Package_Description_Profile="http://www.omg.org/spec/NIEM-UML/20120501/Model_Package_Description_Profile"
+		xmlns:uml="http://www.omg.org/spec/UML/20110701" xmi:type="uml:Model" xmi:id="_niem"
+		name="niem">
+		<packagedElement xmi:type="uml:Package" xmi:id="_niem-nonauthoritative-code"
+			name="nonauthoritative-code">
+			<packagedElement xmi:type="uml:Package" xmi:id="_niem-nonauthoritative-code-2.0"
+				name="2.0">
+				<packagedElement xmi:type="uml:Package"
+					xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code"
+					name="nonauthoritative-code">
+					<ownedComment xmi:type="uml:Comment"
+						xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-ownedComment"
+						body="Non-authoritative codes for the direction of a person's pose in an image.">
+						<annotatedElement
+							xmi:idref="_niem-nonauthoritative-code-2.0-nonauthoritative-code"/>
+					</ownedComment>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-FamilyKinshipCodeSimpleType"
+						name="FamilyKinshipCodeSimpleType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-FamilyKinshipCodeSimpleType-ownedComment">
+							<annotatedElement
+								xmi:idref="_niem-nonauthoritative-code-2.0-nonauthoritative-code-FamilyKinshipCodeSimpleType"
+							/>
+						</ownedComment>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-FamilyKinshipCodeSimpleType-foster"
+							name="foster"/>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-FamilyKinshipCodeSimpleType-biological"
+							name="biological"/>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-FamilyKinshipCodeSimpleType-marriage"
+							name="marriage"/>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-FamilyKinshipCodeSimpleType-adoption"
+							name="adoption"/>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Class"
+						xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-NamespaceElementPropertyHolder"
+						name="NamespaceElementPropertyHolder"/>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-FamilyKinshipCodeType"
+						name="FamilyKinshipCodeType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-FamilyKinshipCodeType-ownedComment">
+							<annotatedElement
+								xmi:idref="_niem-nonauthoritative-code-2.0-nonauthoritative-code-FamilyKinshipCodeType"
+							/>
+						</ownedComment>
+						<generalization xmi:type="uml:Generalization"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-FamilyKinshipCodeType-generalization"
+							general="_niem-nonauthoritative-code-2.0-nonauthoritative-code-FamilyKinshipCodeSimpleType"
+						/>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-ImagePoseCodeSimpleType"
+						name="ImagePoseCodeSimpleType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-ImagePoseCodeSimpleType-ownedComment"
+							body="A data type for angles of an entitys pose in a photograph.">
+							<annotatedElement
+								xmi:idref="_niem-nonauthoritative-code-2.0-nonauthoritative-code-ImagePoseCodeSimpleType"
+							/>
+						</ownedComment>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-ImagePoseCodeSimpleType-Oblique"
+							name="Oblique">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-ImagePoseCodeSimpleType-Oblique-ownedComment"
+								body="The object in the image is facing a quarter view.">
+								<annotatedElement
+									xmi:idref="_niem-nonauthoritative-code-2.0-nonauthoritative-code-ImagePoseCodeSimpleType-Oblique"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-ImagePoseCodeSimpleType-Frontal"
+							name="Frontal">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-ImagePoseCodeSimpleType-Frontal-ownedComment"
+								body="The object in the image is facing the front.">
+								<annotatedElement
+									xmi:idref="_niem-nonauthoritative-code-2.0-nonauthoritative-code-ImagePoseCodeSimpleType-Frontal"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-ImagePoseCodeSimpleType-Side"
+							name="Side">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-ImagePoseCodeSimpleType-Side-ownedComment"
+								body="The object in the image is facing the side.">
+								<annotatedElement
+									xmi:idref="_niem-nonauthoritative-code-2.0-nonauthoritative-code-ImagePoseCodeSimpleType-Side"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-ImagePoseCodeType"
+						name="ImagePoseCodeType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-ImagePoseCodeType-ownedComment"
+							body="A data type for angles of an entitys pose in a photograph.">
+							<annotatedElement
+								xmi:idref="_niem-nonauthoritative-code-2.0-nonauthoritative-code-ImagePoseCodeType"
+							/>
+						</ownedComment>
+						<generalization xmi:type="uml:Generalization"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-ImagePoseCodeType-generalization"
+							general="_niem-nonauthoritative-code-2.0-nonauthoritative-code-ImagePoseCodeSimpleType"
+						/>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-MarriageCategoryCodeSimpleType"
+						name="MarriageCategoryCodeSimpleType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-MarriageCategoryCodeSimpleType-ownedComment">
+							<annotatedElement
+								xmi:idref="_niem-nonauthoritative-code-2.0-nonauthoritative-code-MarriageCategoryCodeSimpleType"
+							/>
+						</ownedComment>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-MarriageCategoryCodeSimpleType-civil_union"
+							name="civil union"/>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-MarriageCategoryCodeSimpleType-unknown"
+							name="unknown"/>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-MarriageCategoryCodeSimpleType-common_law"
+							name="common law"/>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-MarriageCategoryCodeSimpleType-married"
+							name="married"/>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-MarriageCategoryCodeType"
+						name="MarriageCategoryCodeType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-MarriageCategoryCodeType-ownedComment">
+							<annotatedElement
+								xmi:idref="_niem-nonauthoritative-code-2.0-nonauthoritative-code-MarriageCategoryCodeType"
+							/>
+						</ownedComment>
+						<generalization xmi:type="uml:Generalization"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-MarriageCategoryCodeType-generalization"
+							general="_niem-nonauthoritative-code-2.0-nonauthoritative-code-MarriageCategoryCodeSimpleType"
+						/>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-MarriageStatusCodeSimpleType"
+						name="MarriageStatusCodeSimpleType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-MarriageStatusCodeSimpleType-ownedComment">
+							<annotatedElement
+								xmi:idref="_niem-nonauthoritative-code-2.0-nonauthoritative-code-MarriageStatusCodeSimpleType"
+							/>
+						</ownedComment>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-MarriageStatusCodeSimpleType-unknown"
+							name="unknown"/>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-MarriageStatusCodeSimpleType-separated"
+							name="separated"/>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-MarriageStatusCodeSimpleType-married"
+							name="married"/>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-MarriageStatusCodeSimpleType-widowed"
+							name="widowed"/>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-MarriageStatusCodeSimpleType-divorced"
+							name="divorced"/>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-MarriageStatusCodeType"
+						name="MarriageStatusCodeType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-MarriageStatusCodeType-ownedComment">
+							<annotatedElement
+								xmi:idref="_niem-nonauthoritative-code-2.0-nonauthoritative-code-MarriageStatusCodeType"
+							/>
+						</ownedComment>
+						<generalization xmi:type="uml:Generalization"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-MarriageStatusCodeType-generalization"
+							general="_niem-nonauthoritative-code-2.0-nonauthoritative-code-MarriageStatusCodeSimpleType"
+						/>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType"
+						name="PersonNameCategoryCodeSimpleType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-ownedComment"
+							body="A data type for possible kinds of names.">
+							<annotatedElement
+								xmi:idref="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType"
+							/>
+						</ownedComment>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-handle"
+							name="handle">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-handle-ownedComment"
+								body="An electronic pseudonym; intended to conceal the user's true identity.  Commonly used areas include the Internet, chatrooms, networks, bulletin board systems (BBS), and Citizen's Band (CB) radio; sometimes used by radio operators as an alternative to a call sign.  May or may not be used for criminal deception.  (also screen name)">
+								<annotatedElement
+									xmi:idref="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-handle"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-aka"
+							name="aka">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-aka-ownedComment"
+								body="Also known as, e.g., a stage name">
+								<annotatedElement
+									xmi:idref="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-aka"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-dba"
+							name="dba">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-dba-ownedComment"
+								body="Doing business as">
+								<annotatedElement
+									xmi:idref="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-dba"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-moniker"
+							name="moniker">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-moniker-ownedComment"
+								body="A nickname specifically used by gang members or criminals to hide real identity for criminal purposes.">
+								<annotatedElement
+									xmi:idref="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-moniker"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-call_sign"
+							name="call sign">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-call_sign-ownedComment"
+								body="A registered radio identifier used by amateur radio operators; usually a string of alpha-numeric characters.">
+								<annotatedElement
+									xmi:idref="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-call_sign"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-pseudonym"
+							name="pseudonym">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-pseudonym-ownedComment"
+								body="A fictitious name, especially a pen name; not normally for criminal purposes.">
+								<annotatedElement
+									xmi:idref="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-pseudonym"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-nickname"
+							name="nickname">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-nickname-ownedComment"
+								body="A descriptive name added to or replacing the actual name of a person, place, or thing.  A familiar or shortened form of a proper name.  (also street name)">
+								<annotatedElement
+									xmi:idref="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-nickname"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-user_id"
+							name="user id">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-user_id-ownedComment"
+								body="A number or name which is unique to a particular user of a computer or group of computers which share user information.  A user id is not normally used for criminal intent, unless it is being used without authorization.  An operating system uses the user id to represent the user in its data structures, e.g. the owner of a file or process, the person attempting to access a system resource. (also uid, userid)">
+								<annotatedElement
+									xmi:idref="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-user_id"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-alias"
+							name="alias">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-alias-ownedComment"
+								body="An assumed or alternate name suspected to be in use for deception; usually involves criminal intent.  A term used in legal proceedings to connect the different names of anyone who has gone by two or more, and whose true name is for any cause doubtful.">
+								<annotatedElement
+									xmi:idref="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-alias"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-other"
+							name="other">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-other-ownedComment"
+								body="None of the other types is appropriate.  (Explain in text field.)">
+								<annotatedElement
+									xmi:idref="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-other"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-provided"
+							name="provided">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-provided-ownedComment"
+								body="A name communicated by an individual directly or through documentation being carried; obtained from the source of the record and which is not known to be an alias or aka name.">
+								<annotatedElement
+									xmi:idref="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-provided"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-fka"
+							name="fka">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-fka-ownedComment"
+								body="Formerly known as">
+								<annotatedElement
+									xmi:idref="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-fka"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-unknown"
+							name="unknown">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-unknown-ownedComment"
+								body="Indefinite; unsure of this type of name.">
+								<annotatedElement
+									xmi:idref="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType-unknown"
+								/>
+							</ownedComment>
+						</ownedLiteral>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeType"
+						name="PersonNameCategoryCodeType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeType-ownedComment"
+							body="A data type for possible kinds of names.">
+							<annotatedElement
+								xmi:idref="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeType"
+							/>
+						</ownedComment>
+						<generalization xmi:type="uml:Generalization"
+							xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeType-generalization"
+							general="_niem-nonauthoritative-code-2.0-nonauthoritative-code-PersonNameCategoryCodeSimpleType"
+						/>
+					</packagedElement>
+				</packagedElement>
+			</packagedElement>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-nonauthoritative-code-profileApplication-1">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_PIM_Profile"
+				> </appliedProfile>
+			</profileApplication>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-nonauthoritative-code-profileApplication-2">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-Model_Package_Description_Profile"
+				> </appliedProfile>
+			</profileApplication>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-nonauthoritative-code-profileApplication-3">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_Common_Profile"
+				> </appliedProfile>
+			</profileApplication>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-nonauthoritative-code-profileApplication-4">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_PSM_Profile"
+				> </appliedProfile>
+			</profileApplication>
+		</packagedElement>
+	</uml:Model>
+	<NIEM_PIM_Profile:InformationModel
+		xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile"
+		xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-appliedStereotypeInstance"
+		base_Package="_niem-nonauthoritative-code-2.0-nonauthoritative-code" isConformant="true"
+		version="1" defaultPurpose="reference"
+		targetNamespace="http://niem.gov/niem/nonauthoritative-code/2.0"/>
+	<NIEM_Common_Profile:PropertyHolder
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-nonauthoritative-code-2.0-nonauthoritative-code-NamespaceElementPropertyHolder-appliedStereotypeInstance"
+		base_Class="_niem-nonauthoritative-code-2.0-nonauthoritative-code-NamespaceElementPropertyHolder"
+	/>
+</xmi:XMI>

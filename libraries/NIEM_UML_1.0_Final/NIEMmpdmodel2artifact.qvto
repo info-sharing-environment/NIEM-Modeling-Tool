@@ -1,0 +1,180 @@
+import NIEMpsm2xsd;
+modeltype UML uses 'http://www.omg.org/spec/UML/20110701';
+
+modeltype XSD  uses 'http://www.eclipse.org/xsd/2002/XSD';
+modeltype CAT  uses 'http://reference.niem.gov/niem/resource/mpd/catalog/1.0/';
+
+
+transformation NIEMmpdmodel2artifact(in uml:UML,
+	in schemaForProxy:XSD,in schemaForStructures:XSD,in schemaForAppinfo:XSD,in schemaForAppinfo2:XSD,
+//	out changeLog:CHANGELOG,
+	in targetLocation:XSD,
+	out xsd:XSD,
+	//inout blackboxAdapter:CMOF,
+	out cat:CAT)
+	extends transformation 
+	NIEMpsm2xsd(uml:UML,schemaForProxy:XSD,schemaForStructures:XSD,schemaForAppinfo:XSD,
+		schemaForAppinfo2:XSD,xsd:XSD);
+
+	main() {
+		NIEMpsm2mpdMain();
+		xsd.objectsOfType(XSD::XSDSchema)->forEach(schema){
+			log('psm2mpd schema '+schema.repr());
+		};
+		xsd.objectsOfType(XSD::XSDSchema)->asSequence()->first().oclAsType(Stdlib::Element)
+			.splitSchemas(targetLocation.rootObjects()->asSequence()->first().oclAsType(Stdlib::Element));
+			
+		
+	return;
+	}
+property saveMpdRoot:UML::Package=null;	
+property schemaTargetNamespaces:Sequence(Tuple(schema:UML::Package,targetNamespace:String)) = Sequence{};
+property documentRoot:CAT::DocumentRoot=null;
+property catalog:CAT::CatalogType=null;
+property mpdRootPackage:UML::Package=null;
+	
+helper catalog(){
+		var documentRoot:CAT::DocumentRoot:=new CAT::DocumentRoot();
+		documentRoot.catalog+=mpdComponent.map ModelPackageDescription();
+	
+		// dummy changelog
+//		var changeLog:CHANGELOG::ChangeLogType=new CHANGELOG::ChangeLogType@changeLog();
+//		log('changeLog '+changeLog.repr());
+/*		
+		var proxyText:PROXY::_String:=new PROXY::_String(); 
+		proxyText.value:='Sample Summary';
+		var proxySubmitter:PROXY::_String:=new PROXY::_String(); 
+		proxySubmitter.value:='Sample Submitter';
+*/		
+//		changeLog.changeLogSummaryText:=proxyText;
+//		changeLog.changeLogSubmitterName:=proxySubmitter;
+		return;
+}
+
+mapping UML::Component	::ModelPackageDescription():CAT::CatalogType
+{
+	mpdComponent:=self;
+	self.getTopNiemFolders().nestedPackage.mapAbstractPackage();
+	log('processCatalog start ');
+	self.packagedElement
+		->select(t|t.IsStereotypeApplied(NIEMModelPackageDescriptionFileSetStereotype))
+		.oclAsType(UML::Component)
+		.map ModelPackageDescriptionFileSet(result);
+	// mpd
+	var pimmpd:Stdlib::Element=self.GetStereotypeApplication(prompdStereotype).oclAsType(Stdlib::Element);
+
+	var md:CAT::MetadataType=new CAT::MetadataType();
+	metadata:=md;
+	var as:CAT::AuthoritativeSourceType=new CAT::AuthoritativeSourceType();
+	md.authoritativeSource:=as;
+	descriptionText:=pimmpd.getMpdDescriptionText();
+	mpdURI:=pimmpd.getMpdBaseURI();
+	mpdName:=mpdURI.getLastSegment();
+	mpdVersionID:=pimmpd.getMpdVersionID();
+	
+	md.securityMarkingText:=pimmpd.getMpdSecurityMarkingText();
+//TODO	md.creationDate:=self.getAnyValue(artifactStereotype,'CreationDate').oclAsType(XSD::Date);
+//pimmpd.getMpdCreationDate()
+	md.statusText:=pimmpd.getMpdStatusText();
+	md.keywordText:=pimmpd.getMpdKeywordText();
+	md.domainText:=pimmpd.getMpdDomainText();
+	md.purposeText:=pimmpd.getMpdPurposeText();
+	md.exchangePatternText:=pimmpd.getMpdExchangePatternText();
+	md.exchangePartnerName:=pimmpd.getMpdExchangePartnerName();
+	as.aSName:=pimmpd.getMpdASName();
+	as.aSAddressText:=pimmpd.getMpdASAddressText();
+	as.aSWebSiteURL:=pimmpd.getMpdASWebSiteURL();
+	pimmpd.getMpdPOC()->forEach(poc){
+		var POC:CAT::POCType=new CAT::POCType();
+		POC.pOCName:=poc.getPOCName();
+		POC.pOCEmail:=poc.getPOCEmail();
+		POC.pOCTelephone:=poc.getPOCTelephone();
+		as.pOC+=POC;
+	};
+	self.clientDependency.map ModelPackageDescriptionRelationship(md);
+	self.clientDependency
+		->select(t|t.IsStereotypeApplied(NIEMModelPackageDescriptionFileStereotype)).oclAsType(UML::Usage)
+		.map ModelPackageDescriptionFile(result);
+}
+mapping UML::Dependency::ModelPackageDescriptionRelationship(inout md:CAT::MetadataType):CAT::RelationshipType
+	when{self.IsStereotypeApplied(NIEMModelPackageDescriptionRelationshipStereotype)}
+{
+		var relationshipType:Stdlib::Element=self.GetStereotypeApplication(NIEMModelPackageDescriptionRelationshipStereotype).oclAsType(Stdlib::Element);
+		descriptionText:=relationshipType.getRelationshipDescriptionText();
+		var code:String=relationshipType.getRelationshipCode();
+		relationshipCode:=switch{
+			case(code='versionOf') CAT::RelationshipCodeSimpleType::versionOf;
+			case(code='specializes') CAT::RelationshipCodeSimpleType::specializes;
+			case(code='generalizes') CAT::RelationshipCodeSimpleType::generalizes;
+			case(code='supersedes') CAT::RelationshipCodeSimpleType::supersedes;
+			case(code='deprecates') CAT::RelationshipCodeSimpleType::deprecates;
+			case(code='adapts') CAT::RelationshipCodeSimpleType::adapts;
+			case(code='updates') CAT::RelationshipCodeSimpleType::updates;
+			else CAT::RelationshipCodeSimpleType::conformsTo;
+			};
+		md.relationship+=result;
+}
+mapping UML::Usage::ModelPackageDescriptionFile(inout catalog:CAT::CatalogType):CAT::FileType{
+	catalog.addCatalogFile(result);
+	var schemaPackage:UML::NamedElement=self.supplier->asSequence()->first();
+	relativePathName:=schemaPackage.toRelativePathName(schemaPackage.getNearestPackage().getNearesProfileApplication(niemXsdProfile),result);
+	var pimmpd:Stdlib::Element=self.GetStereotypeApplication(NIEMModelPackageDescriptionFileStereotype).oclAsType(Stdlib::Element);
+	// if relativePathName explicitly specified in <<ModelPackageDescriptionFile>>, use it; part of Issue 18361: PSM Representation for XSD Complex Type 
+	var explicitRelativePathName:String =pimmpd.getFileTypeRelativePathName();
+	if(not(explicitRelativePathName.oclIsUndefined()) and (explicitRelativePathName<>''))then{
+		relativePathName:=explicitRelativePathName;
+	}endif;
+	descriptionText:=pimmpd.getFileDescriptionText();
+	id:=self.getFileId();
+	externalURI:=pimmpd.getFileTypeExternalURI();
+	natureURI:=pimmpd.getFileTypeNatureURI();
+	purposeURI:=pimmpd.getFileTypePurposeURI();
+}
+mapping UML::Usage::ModelPackageDescriptionFile(inout fileSet:CAT::FileSetType):CAT::FileType{
+	fileSet.file+=result;
+	var schemaPackage:UML::NamedElement=self.supplier->asSequence()->first();
+	
+	relativePathName:=schemaPackage.toRelativePathName(schemaPackage.getNearestPackage().getNearesProfileApplication(niemXsdProfile),result);
+	var pimmpd:Stdlib::Element=self.GetStereotypeApplication(NIEMModelPackageDescriptionFileStereotype).oclAsType(Stdlib::Element);
+	// if relativePathName explicitly specified in <<ModelPackageDescriptionFile>>, use it; part of Issue 18361: PSM Representation for XSD Complex Type 
+	var explicitRelativePathName:String =pimmpd.getFileTypeRelativePathName();
+	if(not(explicitRelativePathName.oclIsUndefined()) and (explicitRelativePathName<>''))then{
+		relativePathName:=explicitRelativePathName;
+	}endif;
+	descriptionText:=pimmpd.getFileDescriptionText();
+	id:=self.getFileId();
+	externalURI:=pimmpd.getFileTypeExternalURI();
+	natureURI:=pimmpd.getFileTypeNatureURI();
+	purposeURI:=pimmpd.getFileTypePurposeURI();
+}
+	
+mapping UML::Component::ModelPackageDescriptionFileSet(inout catalog:CAT::CatalogType):CAT::FileSetType{
+	catalog.addCatalogFileSet(result);
+	self.elementImport.importedElement->select(e|e.IsStereotypeApplied(NIEMModelPackageDescriptionFileStereotype))
+		.oclAsType(UML::Usage)->forEach(fileType){result.addFileSetFiles(fileType.getFileId());};
+	self.clientDependency->select(e|e.IsStereotypeApplied(NIEMModelPackageDescriptionFileStereotype))
+		.oclAsType(UML::Usage).map ModelPackageDescriptionFile(result);
+	
+	var pimMpdFileSetStereotypeInstance:Stdlib::Element=self.GetStereotypeApplication(NIEMModelPackageDescriptionFileSetStereotype).oclAsType(Stdlib::Element);
+	natureURI:=natureFilesetURI;
+	purposeURI:=pimMpdFileSetStereotypeInstance.getFileSetTypePurposeCode();
+	id:='fs_'+self.getFileId();
+	externalURI:=pimMpdFileSetStereotypeInstance.getFileSetExternalURI();
+	descriptionText:=pimMpdFileSetStereotypeInstance.getFileSetDescriptionText();
+	
+}
+mapping 	UML::NamedElement::FolderType(inout catalog:CAT::CatalogType,mpdRootPackage:UML::Model):CAT::FolderType 
+{
+	catalog.addCatalogFolder(result);
+	relativePathName:=self.toRelativePathName(mpdRootPackage,result);
+}
+query UML::NamedElement::toRelativePathName(mpdRootPackage:UML::Package,artifact:OclAny):String{
+	var umlPackagePath:String=self.qualifiedName.substringAfter(mpdRootPackage.qualifiedName).replace('::','/');
+	if(umlPackagePath='')then {umlPackagePath:='./';}else{umlPackagePath:='.'+umlPackagePath;}endif;
+//	if(artifact.oclIsKindOf(CAT::FolderType) and not(umlPackagePath.endsWith('/')))then {umlPackagePath:=umlPackagePath+'/';}else{}endif;
+	if(artifact.isCatalogFolderType() and not(umlPackagePath.endsWith('/')))then {umlPackagePath:=umlPackagePath+'/';}else{}endif;
+	if(self.IsStereotypeApplied(NIEMSchemaStereotype)and not(umlPackagePath.endsWith('.xsd')))then{umlPackagePath:=umlPackagePath+'.xsd';}else{}endif;
+	return umlPackagePath;
+}
+//////////////////////////////////////
+

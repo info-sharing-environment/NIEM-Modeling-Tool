@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?eclipse version="3.4"?><plugin>
+   <extension point="org.eclipse.emf.ecore.uri_mapping">
+      <mapping source="pathmap://NIEM_REFERENCE/" target="platform:/plugin/org.search.niem.uml.library/uml/NIEM-Reference/">
+      </mapping>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.uri_mapping">
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference" target="pathmap://NIEM_REFERENCE">
+      </mapping>
+   </extension>
+</plugin>

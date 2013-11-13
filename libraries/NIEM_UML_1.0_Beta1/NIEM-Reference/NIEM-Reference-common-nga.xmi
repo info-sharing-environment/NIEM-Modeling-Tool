@@ -1,0 +1,2029 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/spec/XMI/20110701">
+	<uml:Model
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile"
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:Model_Package_Description_Profile="http://www.omg.org/spec/NIEM-UML/20120501/Model_Package_Description_Profile"
+		xmlns:uml="http://www.omg.org/spec/UML/20110701" xmi:type="uml:Model" xmi:id="_niem"
+		name="niem">
+		<packagedElement xmi:type="uml:Package" xmi:id="_niem-nga" name="nga">
+			<packagedElement xmi:type="uml:Package" xmi:id="_niem-nga-2.0" name="2.0">
+				<packagedElement xmi:type="uml:Package" xmi:id="_niem-nga-2.0-nga" name="nga">
+					<ownedComment xmi:type="uml:Comment" xmi:id="_niem-nga-2.0-nga-ownedComment"
+						body="National Geospatial Agency">
+						<annotatedElement xmi:idref="_niem-nga-2.0-nga"/>
+					</ownedComment>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType" name="DatumCodeSimpleType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ownedComment">
+							<annotatedElement xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType"/>
+						</ownedComment>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-F" name="SAN-F">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-F-ownedComment"
+								body="Ecuador (Excluding Galapagos Islands) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-F"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-GAA" name="GAA">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-GAA-ownedComment"
+								body="Republic of Maldives ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-GAA"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ASQ" name="ASQ">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ASQ-ownedComment"
+								body="Marcus Island ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-ASQ"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-BOO" name="BOO">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-BOO-ownedComment"
+								body="Colombia ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-BOO"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SCK" name="SCK">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SCK-ownedComment"
+								body="Namibia ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-SCK"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-C" name="SAN-C">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-C-ownedComment"
+								body="Brazil ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-C"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-MIK" name="MIK">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-MIK-ownedComment"
+								body="Mahe Island ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-MIK"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-L" name="NAS-L">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-L-ownedComment"
+								body="Mexico ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-L"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAR-E" name="NAR-E">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAR-E-ownedComment"
+								body="Aleutian Islands ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-NAR-E"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-PRP-F" name="PRP-F">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-PRP-F-ownedComment"
+								body="Guyana ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-PRP-F"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ARF-E" name="ARF-E">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ARF-E-ownedComment"
+								body="Zaire ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-ARF-E"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-AIN-A" name="AIN-A">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-AIN-A-ownedComment"
+								body="Bahrain Island ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-AIN-A"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-HKD" name="HKD">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-HKD-ownedComment"
+								body="Hong Kong ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-HKD"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EAS" name="EAS">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EAS-ownedComment"
+								body="Easter Island ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-EAS"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAH-C" name="NAH-C">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAH-C-ownedComment"
+								body="Saudi Arabia ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-NAH-C"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SAE" name="SAE">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SAE-ownedComment"
+								body="Espirito Santo Island ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-SAE"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-TOY-C" name="TOY-C">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-TOY-C-ownedComment"
+								body="Okinawa (TOY-C) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-TOY-C"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAR-B" name="NAR-B">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAR-B-ownedComment"
+								body="Canada ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-NAR-B"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-B" name="EUR-B">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-B-ownedComment"
+								body="Greece ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-B"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-MIN-B" name="MIN-B">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-MIN-B-ownedComment"
+								body="Nigeria ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-MIN-B"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NSD" name="NSD">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NSD-ownedComment"
+								body="Algeria ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-NSD"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-L" name="SAN-L">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-L-ownedComment"
+								body="Venezuela ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-L"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-LUZ-B" name="LUZ-B">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-LUZ-B-ownedComment"
+								body="Mindanao ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-LUZ-B"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-PIT" name="PIT">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-PIT-ownedComment"
+								body="Pitcairn Island ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-PIT"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-HIT" name="HIT">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-HIT-ownedComment"
+								body="Southern Chile (near 53 degree S)">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-HIT"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-TDC" name="TDC">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-TDC-ownedComment"
+								body="Tristan da Cunha (TDC) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-TDC"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-OGB-M" name="OGB-M">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-OGB-M-ownedComment"
+								body="Mean Solution (England, Isle of Man, Scotland, Shetland Islands and Wales) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-OGB-M"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-PRP-D" name="PRP-D">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-PRP-D-ownedComment"
+								body="Colombia ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-PRP-D"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-AUA" name="AUA">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-AUA-ownedComment"
+								body="Australia and Tasmania ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-AUA"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-DOB" name="DOB">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-DOB-ownedComment"
+								body="Gusdalcanal Island ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-DOB"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-VOR" name="VOR">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-VOR-ownedComment"
+								body="Algeria (VOR) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-VOR"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-Q" name="NAS-Q">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-Q-ownedComment"
+								body="Bahamas (Excluding San Salvador Island) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-Q"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-S" name="EUR-S">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-S-ownedComment"
+								body="Iraq,Israel,Jordan,Kuwait,Lebanon,Saudi Arabia &amp; Syria">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-S"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-OHA-C" name="OHA-C">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-OHA-C-ownedComment"
+								body="Maui ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-OHA-C"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-R" name="NAS-R">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-R-ownedComment"
+								body="San Salvador Island ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-R"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-N" name="NAS-N">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-N-ownedComment"
+								body="Central America (Belize, Costa Rica, El Salvador, Guatemala, Hondoruras and Nicaragua) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-N"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-CCD" name="CCD">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-CCD-ownedComment"
+								body="Czechoslovakia ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-CCD"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-C" name="EUR-C">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-C-ownedComment"
+								body="Norway &amp; Finland">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-C"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-LCF" name="LCF">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-LCF-ownedComment"
+								body="Cayman Brac Island ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-LCF"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-G" name="SAN-G">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-G-ownedComment"
+								body="Guyana ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-G"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-REU" name="REU">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-REU-ownedComment"
+								body="Mascarene Islands ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-REU"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-KEG" name="KEG">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-KEG-ownedComment"
+								body="Kerguelen Island ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-KEG"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-MPO" name="MPO">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-MPO-ownedComment"
+								body="Gabon ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-MPO"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-COA" name="COA">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-COA-ownedComment"
+								body="Brazil ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-COA"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-CAI" name="CAI">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-CAI-ownedComment"
+								body="Argentina ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-CAI"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-PLN" name="PLN">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-PLN-ownedComment"
+								body="Canary Islands ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-PLN"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAP" name="NAP">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAP-ownedComment"
+								body="Trinidad and Tobago ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-NAP"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-WAK" name="WAK">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-WAK-ownedComment"
+								body="Wake Atoll (WAK) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-WAK"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-M" name="SAN-M">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-M-ownedComment"
+								body="Mean Solution (Argentina, Bolivia, Brazil, Chile, Colombia, Ecuador, Guyana, Paraguay, Peru, Trinidad and Tobago, and Venezuela ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-M"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-TRN" name="TRN">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-TRN-ownedComment"
+								body="Tern Island ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-TRN"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-PTN" name="PTN">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-PTN-ownedComment"
+								body="Congo ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-PTN"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-OGB-C" name="OGB-C">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-OGB-C-ownedComment"
+								body="Scotland and Shetland Islands ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-OGB-C"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ISG" name="ISG">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ISG-ownedComment"
+								body="South Georgia Island ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-ISG"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-IDN" name="IDN">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-IDN-ownedComment"
+								body="Indonesian ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-IDN"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-JOH" name="JOH">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-JOH-ownedComment"
+								body="Johnston Island ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-JOH"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-G" name="EUR-G">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-G-ownedComment"
+								body="England, Scotland, Channel &amp; Shetland Islands">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-G"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SPK-D" name="SPK-D">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SPK-D-ownedComment"
+								body="Latvia ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-SPK-D"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-K" name="SAN-K">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-K-ownedComment"
+								body="Trinidad &amp; Tobago">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-K"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-YAC" name="YAC">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-YAC-ownedComment"
+								body="Uruguay (YAC) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-YAC"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-KAN" name="KAN">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-KAN-ownedComment"
+								body="Sri Lanka ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-KAN"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-MAS" name="MAS">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-MAS-ownedComment"
+								body="Eritrea (Ethiopia) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-MAS"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-AIN-B" name="AIN-B">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-AIN-B-ownedComment"
+								body="Saudi Arabia ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-AIN-B"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-HEN" name="HEN">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-HEN-ownedComment"
+								body="Afghanistan ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-HEN"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ENW" name="ENW">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ENW-ownedComment"
+								body="Marshall Islands (ENW) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-ENW"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-BAT" name="BAT">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-BAT-ownedComment"
+								body="Sumatra (Indonesia) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-BAT"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ATF" name="ATF">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ATF-ownedComment"
+								body="Iwo Jima ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-ATF"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ARF-B" name="ARF-B">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ARF-B-ownedComment"
+								body="Lesotho ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-ARF-B"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-TIL" name="TIL">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-TIL-ownedComment"
+								body="Brunei and East Malaysia (Sarwak and Sabah) (TIL) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-TIL"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-H" name="NAS-H">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-H-ownedComment"
+								body="Manitoba and Ontario ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-H"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-IND-P" name="IND-P">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-IND-P-ownedComment"
+								body="Pakistan ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-IND-P"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-W" name="NAS-W">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-W-ownedComment"
+								body="Aleutian Islands- West of 180 degrees W">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-W"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-OHA-B" name="OHA-B">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-OHA-B-ownedComment"
+								body="Kauai ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-OHA-B"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-GIZ" name="GIZ">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-GIZ-ownedComment"
+								body="Gizo Island (New Georgia Islands) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-GIZ"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-BUR" name="BUR">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-BUR-ownedComment"
+								body="Bangka and Belitung Islands (Indonesia) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-BUR"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-OGB-A" name="OGB-A">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-OGB-A-ownedComment"
+								body="England ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-OGB-A"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-KEA" name="KEA">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-KEA-ownedComment"
+								body="West Malaysia and Singapore ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-KEA"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-H" name="SAN-H">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-H-ownedComment"
+								body="Paraguay ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-H"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-I" name="SAN-I">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-I-ownedComment"
+								body="Peru ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-I"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-PUR" name="PUR">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-PUR-ownedComment"
+								body="Puerto Rico and Virginia Islands ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-PUR"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ADI-M" name="ADI-M">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ADI-M-ownedComment"
+								body="Mean Solution ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-ADI-M"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-CAC" name="CAC">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-CAC-ownedComment"
+								body="Mean Solution ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-CAC"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-FLO" name="FLO">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-FLO-ownedComment"
+								body="Corvo and Flores Islands (Azores) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-FLO"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-HER" name="HER">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-HER-ownedComment"
+								body="Yugoslavia (Prior to 1990) Slovenia, Croatia, Bosnia, and Herzegovina Serbia ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-HER"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-LIB" name="LIB">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-LIB-ownedComment"
+								body="Liberia ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-LIB"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ZAN" name="ZAN">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ZAN-ownedComment"
+								body="Suriname (ZAN) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-ZAN"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAH-B" name="NAH-B">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAH-B-ownedComment"
+								body="United Arab Emirates ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-NAH-B"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-U" name="NAS-U">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-U-ownedComment"
+								body="Greenland (Hayes Peninsula) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-U"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ASM" name="ASM">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ASM-ownedComment"
+								body="Montserrat, Leeward Islands ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-ASM"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-I" name="NAS-I">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-I-ownedComment"
+								body="Northwest Territories &amp; Saskatchewan">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-I"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAH-A" name="NAH-A">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAH-A-ownedComment"
+								body="Masirah Island (Oman) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-NAH-A"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SRL" name="SRL">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SRL-ownedComment"
+								body="Sierra Leone 1960 ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-SRL"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SHB" name="SHB">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SHB-ownedComment"
+								body="St, Helena Island ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-SHB"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EUS" name="EUS">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EUS-ownedComment"
+								body="Mean Solution (Austria,Finland, Netherlands, Norway, Spain, Sweden &amp; Switzerland)">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-EUS"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ING-B" name="ING-B">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ING-B-ownedComment"
+								body="Con Son Island (Vietnam) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-ING-B"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-C" name="NAS-C">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-C-ownedComment"
+								body="Mean Solution (CONUS) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-C"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SPK-F" name="SPK-F">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SPK-F-ownedComment"
+								body="Albania ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-SPK-F"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EST" name="EST">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EST-ownedComment"
+								body="Estonia ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-EST"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-P" name="NAS-P">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-P-ownedComment"
+								body="Caribbean (Antigua Island, Barbados, Caicos Islands, Cuba, Dominican Republic, Grand Cayman, Jamaica and Turks Islands) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-P"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-D" name="EUR-D">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-D-ownedComment"
+								body="Portugal &amp; Spain">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-D"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-OHA-A" name="OHA-A">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-OHA-A-ownedComment"
+								body="Hawaii ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-OHA-A"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-F" name="EUR-F">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-F-ownedComment"
+								body="Egypt ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-F"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ARF-H" name="ARF-H">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ARF-H-ownedComment"
+								body="Burundi ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-ARF-H"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-HJO" name="HJO">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-HJO-ownedComment"
+								body="Iceland ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-HJO"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAR-D" name="NAR-D">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAR-D-ownedComment"
+								body="Mexico and Central America ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-NAR-D"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-PRP-H" name="PRP-H">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-PRP-H-ownedComment"
+								body="Venezuela ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-PRP-H"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-IBE" name="IBE">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-IBE-ownedComment"
+								body="Efate and Erromango Islands ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-IBE"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ADI-A" name="ADI-A">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ADI-A-ownedComment"
+								body="Ethiopia ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-ADI-A"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-GEO" name="GEO">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-GEO-ownedComment"
+								body="New Zealand ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-GEO"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-AMA" name="AMA">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-AMA-ownedComment"
+								body="America Samoa Islands ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-AMA"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-PHA" name="PHA">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-PHA-ownedComment"
+								body="Djibouti ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-PHA"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-E" name="SAN-E">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-E-ownedComment"
+								body="Colombia ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-E"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-OGB-D" name="OGB-D">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-OGB-D-ownedComment"
+								body="Wales ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-OGB-D"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-IST" name="IST">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-IST-ownedComment"
+								body="Diego Garcia ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-IST"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ARF-C" name="ARF-C">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ARF-C-ownedComment"
+								body="Malawi ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-ARF-C"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ADI-B" name="ADI-B">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ADI-B-ownedComment"
+								body="Sudan ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-ADI-B"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-GSE" name="GSE">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-GSE-ownedComment"
+								body="Kalimantan (Indonesia) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-GSE"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-TOY-M" name="TOY-M">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-TOY-M-ownedComment"
+								body="Mean Solution (Japan, Okinawa, South Korea)(TOY-M) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-TOY-M"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-M" name="EUR-M">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-M-ownedComment"
+								body="Mean Solution ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-M"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-E" name="NAS-E">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-E-ownedComment"
+								body="Canada Mean Solution (Incl Newfoundland) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-E"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SPK-B" name="SPK-B">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SPK-B-ownedComment"
+								body="Poland ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-SPK-B"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-POS" name="POS">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-POS-ownedComment"
+								body="Porto Santo and Madeira Islands ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-POS"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-CHU" name="CHU">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-CHU-ownedComment"
+								body="Paraguay ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-CHU"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-A" name="EUR-A">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-A-ownedComment"
+								body="Western Europe ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-A"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-CAZ" name="CAZ">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-CAZ-ownedComment"
+								body="Camp McMurdo Area, Antarctica ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-CAZ"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-QUO" name="QUO">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-QUO-ownedComment"
+								body="South Greenland ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-QUO"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-DID" name="DID">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-DID-ownedComment"
+								body="Deception Island, Antarctica ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-DID"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-MVS" name="MVS">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-MVS-ownedComment"
+								body="Viti Levu Islands (Fiji Islands) (MVS) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-MVS"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ARS-A" name="ARS-A">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ARS-A-ownedComment"
+								body="Kenya ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-ARS-A"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-TOY-A" name="TOY-A">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-TOY-A-ownedComment"
+								body="Japan (TOY-A) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-TOY-A"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-D" name="NAS-D">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-D-ownedComment"
+								body="Alaska (Excluding Aleutian Islands) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-D"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-PRP-C" name="PRP-C">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-PRP-C-ownedComment"
+								body="Chile -Southern Chile (near 43 degrees S)">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-PRP-C"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-OGB-B" name="OGB-B">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-OGB-B-ownedComment"
+								body="England, Isle of Man, and Wales ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-OGB-B"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ING-A" name="ING-A">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ING-A-ownedComment"
+								body="Vietnam (near 16N) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-ING-A"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-GUA" name="GUA">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-GUA-ownedComment"
+								body="Guam ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-GUA"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-V" name="NAS-V">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-V-ownedComment"
+								body="Aleutian Islands -East of 180 degrees W">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-V"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-AIA" name="AIA">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-AIA-ownedComment"
+								body="Antigua, Leeward Islands ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-AIA"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ARS-M" name="ARS-M">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ARS-M-ownedComment"
+								body="Mean Solution ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-ARS-M"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-J" name="SAN-J">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-J-ownedComment"
+								body="Baltra, Galapagos Islands ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-J"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-T" name="EUR-T">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-T-ownedComment"
+								body="Tunisia ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-T"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-PRP-E" name="PRP-E">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-PRP-E-ownedComment"
+								body="Ecuador ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-PRP-E"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ADI-E" name="ADI-E">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ADI-E-ownedComment"
+								body="Burkina Faso ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-ADI-E"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-AFG" name="AFG">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-AFG-ownedComment"
+								body="Somalia ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-AFG"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-MER" name="MER">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-MER-ownedComment"
+								body="Morocco ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-MER"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-IRL" name="IRL">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-IRL-ownedComment"
+								body="Ireland ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-IRL"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-OHA-M" name="OHA-M">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-OHA-M-ownedComment"
+								body="Mean Solution ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-OHA-M"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SAP" name="SAP">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SAP-ownedComment"
+								body="East Falkland Island ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-SAP"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SPK-C" name="SPK-C">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SPK-C-ownedComment"
+								body="Czechoslovakia ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-SPK-C"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-MIN-A" name="MIN-A">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-MIN-A-ownedComment"
+								body="Cameroon ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-MIN-A"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-CHI" name="CHI">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-CHI-ownedComment"
+								body="Chatham Island (New Zealand) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-CHI"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-MOD" name="MOD">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-MOD-ownedComment"
+								body="Sardinia ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-MOD"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-QAT" name="QAT">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-QAT-ownedComment"
+								body="Qatar ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-QAT"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-PRP-M" name="PRP-M">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-PRP-M-ownedComment"
+								body="Mean Solution (Bolivia, Chile, Colombia, Ecuador, Guyana, Peru, and Venezuela) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-PRP-M"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAR-A" name="NAR-A">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAR-A-ownedComment"
+								body="Alaska (Excluding Aleutian Islands) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-NAR-A"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-INF-A" name="INF-A">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-INF-A-ownedComment"
+								body="Thailand ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-INF-A"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ANO" name="ANO">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ANO-ownedComment"
+								body="Cocos Islands ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-ANO"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-L" name="EUR-L">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-L-ownedComment"
+								body="Malta ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-L"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-HTN" name="HTN">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-HTN-ownedComment"
+								body="Taiwan ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-HTN"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-PTB" name="PTB">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-PTB-ownedComment"
+								body="Mean Solution (Burkina Faso and Niger) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-PTB"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SPK-G" name="SPK-G">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SPK-G-ownedComment"
+								body="Romania ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-SPK-G"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-PUK" name="PUK">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-PUK-ownedComment"
+								body="Russia ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-PUK"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-BID" name="BID">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-BID-ownedComment"
+								body="Guinea-Bissau ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-BID"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ARF-F" name="ARF-F">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ARF-F-ownedComment"
+								body="Zambia ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-ARF-F"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-TOY-B" name="TOY-B">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-TOY-B-ownedComment"
+								body="South Korea (TOY-B) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-TOY-B"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-I" name="EUR-I">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-I-ownedComment"
+								body="Sardinia (Italy) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-I"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-CAP" name="CAP">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-CAP-ownedComment"
+								body="South Africa ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-CAP"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-T" name="NAS-T">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-T-ownedComment"
+								body="Cuba ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-T"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SAO" name="SAO">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SAO-ownedComment"
+								body="Sao Miguel, Santa Maria Islands (Azores) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-SAO"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-B" name="NAS-B">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-B-ownedComment"
+								body="Western United States ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-B"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-D" name="SAN-D">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-D-ownedComment"
+								body="Chile ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-D"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-J" name="EUR-J">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-J-ownedComment"
+								body="Sicily (Italy) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-J"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-KUS" name="KUS">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-KUS-ownedComment"
+								body="Caroline Islands, Fed. States of Micronesia ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-KUS"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-OHA-D" name="OHA-D">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-OHA-D-ownedComment"
+								body="Oahu ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-OHA-D"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-G" name="NAS-G">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-G-ownedComment"
+								body="Eastern Canada (Newfoundland, New Brunswich, Nova Scotia and Quebec) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-G"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-B" name="SAN-B">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-B-ownedComment"
+								body="Bolivia ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-B"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-TAN" name="TAN">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-TAN-ownedComment"
+								body="Madagascar (TAN) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-TAN"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-FOT" name="FOT">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-FOT-ownedComment"
+								body="Nevis, St. Kitts, Leeward Islands ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-FOT"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAR-C" name="NAR-C">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAR-C-ownedComment"
+								body="CONUS ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-NAR-C"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ARF-A" name="ARF-A">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ARF-A-ownedComment"
+								body="Botswana ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-ARF-A"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ASC" name="ASC">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ASC-ownedComment"
+								body="Ascension Island ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-ASC"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-PRP-A" name="PRP-A">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-PRP-A-ownedComment"
+								body="Bolivia ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-PRP-A"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-BER" name="BER">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-BER-ownedComment"
+								body="Bermuda Islands ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-BER"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-J" name="NAS-J">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-J-ownedComment"
+								body="Yukon ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-J"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-LUZ-A" name="LUZ-A">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-LUZ-A-ownedComment"
+								body="Philippines (Excluding Mindanao Island) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-LUZ-A"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SPK-A" name="SPK-A">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SPK-A-ownedComment"
+								body="Hungary ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-SPK-A"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SGM" name="SGM">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SGM-ownedComment"
+								body="Salvage Islands ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-SGM"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ADI-C" name="ADI-C">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ADI-C-ownedComment"
+								body="Mali ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-ADI-C"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-MID" name="MID">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-MID-ownedComment"
+								body="Midway Islands ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-MID"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-PRP-G" name="PRP-G">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-PRP-G-ownedComment"
+								body="Peru ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-PRP-G"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-O" name="NAS-O">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-O-ownedComment"
+								body="Canal Zone ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-O"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ADI-D" name="ADI-D">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ADI-D-ownedComment"
+								body="Senegal ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-ADI-D"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-AUG" name="AUG">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-AUG-ownedComment"
+								body="Australia and Tasmania ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-AUG"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-IND-I" name="IND-I">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-IND-I-ownedComment"
+								body="India &amp; Nepal">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-IND-I"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-LEH" name="LEH">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-LEH-ownedComment"
+								body="Ghana ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-LEH"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-A" name="NAS-A">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-A-ownedComment"
+								body="Eastern United States ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-A"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SOA" name="SOA">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SOA-ownedComment"
+								body="Singapore (SOA) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-SOA"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ADI-F" name="ADI-F">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ADI-F-ownedComment"
+								body="Cameroon ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-ADI-F"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-K" name="EUR-K">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-K-ownedComment"
+								body="England, Ireland, Scotland &amp; Shetland Islands">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-K"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-OEG" name="OEG">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-OEG-ownedComment"
+								body="Egypt ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-OEG"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SPK-E" name="SPK-E">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SPK-E-ownedComment"
+								body="Kazakhstan ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-SPK-E"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ARF-M" name="ARF-M">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ARF-M-ownedComment"
+								body="Mean Solution ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-ARF-M"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-IND-B" name="IND-B">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-IND-B-ownedComment"
+								body="Bangladesh ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-IND-B"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-DAL" name="DAL">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-DAL-ownedComment"
+								body="Guinea ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-DAL"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-E" name="EUR-E">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-E-ownedComment"
+								body="Cyprus ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-E"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-CAO" name="CAO">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-CAO-ownedComment"
+								body="Phoenix Islands ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-CAO"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-PRP-B" name="PRP-B">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-PRP-B-ownedComment"
+								body="Chile -Northern Chile (near 19 degrees S)">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-PRP-B"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-GRA" name="GRA">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-GRA-ownedComment"
+								body="Faial, Graciosa, Pico, Sao Jorge &amp; Terceira Islands">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-GRA"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-FAH" name="FAH">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-FAH-ownedComment"
+								body="Oman ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-FAH"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-VOI" name="VOI">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-VOI-ownedComment"
+								body="Algeria (VOI) ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-VOI"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-CGE" name="CGE">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-CGE-ownedComment"
+								body="Tunisia ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-CGE"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-INH-A" name="INH-A">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-INH-A-ownedComment"
+								body="Thailand ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-INH-A"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-F" name="NAS-F">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-F-ownedComment"
+								body="Alberta and British Columbia ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-NAS-F"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ARF-G" name="ARF-G">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ARF-G-ownedComment"
+								body="Zimbabwe ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-ARF-G"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ARS-B" name="ARS-B">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ARS-B-ownedComment"
+								body="Tanzania ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-ARS-B"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAR-H" name="NAR-H">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-NAR-H-ownedComment"
+								body="Hawaii ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-NAR-H"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-A" name="SAN-A">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-A-ownedComment"
+								body="Argentina ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-SAN-A"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-H" name="EUR-H">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-H-ownedComment"
+								body="Iran ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-EUR-H"/>
+							</ownedComment>
+						</ownedLiteral>
+						<ownedLiteral xmi:type="uml:EnumerationLiteral"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ARF-D" name="ARF-D">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-nga-2.0-nga-DatumCodeSimpleType-ARF-D-ownedComment"
+								body="Swaziland ">
+								<annotatedElement
+									xmi:idref="_niem-nga-2.0-nga-DatumCodeSimpleType-ARF-D"/>
+							</ownedComment>
+						</ownedLiteral>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Class"
+						xmi:id="_niem-nga-2.0-nga-NamespaceElementPropertyHolder"
+						name="NamespaceElementPropertyHolder"/>
+					<packagedElement xmi:type="uml:Enumeration"
+						xmi:id="_niem-nga-2.0-nga-DatumCodeType" name="DatumCodeType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeType-ownedComment">
+							<annotatedElement xmi:idref="_niem-nga-2.0-nga-DatumCodeType"/>
+						</ownedComment>
+						<generalization xmi:type="uml:Generalization"
+							xmi:id="_niem-nga-2.0-nga-DatumCodeType-generalization"
+							general="_niem-nga-2.0-nga-DatumCodeSimpleType"/>
+					</packagedElement>
+				</packagedElement>
+			</packagedElement>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-nga-profileApplication-1">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_PIM_Profile"
+				> </appliedProfile>
+			</profileApplication>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-nga-profileApplication-2">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-Model_Package_Description_Profile"
+				> </appliedProfile>
+			</profileApplication>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-nga-profileApplication-3">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_Common_Profile"
+				> </appliedProfile>
+			</profileApplication>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-nga-profileApplication-4">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_PSM_Profile"
+				> </appliedProfile>
+			</profileApplication>
+		</packagedElement>
+	</uml:Model>
+	<NIEM_Common_Profile:PropertyHolder
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-nga-2.0-nga-NamespaceElementPropertyHolder-appliedStereotypeInstance"
+		base_Class="_niem-nga-2.0-nga-NamespaceElementPropertyHolder"/>
+	<NIEM_PIM_Profile:InformationModel
+		xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile"
+		xmi:id="_niem-nga-2.0-nga-appliedStereotypeInstance" base_Package="_niem-nga-2.0-nga"
+		targetNamespace="http://niem.gov/niem/nga/2.0" defaultPurpose="reference"
+		isConformant="true" version="1"/>
+</xmi:XMI>

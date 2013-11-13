@@ -1,0 +1,747 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/spec/XMI/20110701">
+	<uml:Model
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile"
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:Model_Package_Description_Profile="http://www.omg.org/spec/NIEM-UML/20120501/Model_Package_Description_Profile"
+		xmlns:uml="http://www.omg.org/spec/UML/20110701" xmi:type="uml:Model" xmi:id="_niem"
+		name="niem">
+		<packagedElement xmi:type="uml:Package" xmi:id="_niem-external" name="external">
+			<packagedElement xmi:type="uml:Package" xmi:id="_niem-external-de" name="de">
+				<packagedElement xmi:type="uml:Package" xmi:id="_niem-external-de-1.0" name="1.0">
+					<packagedElement xmi:type="uml:Package" xmi:id="_niem-external-de-1.0-de"
+						name="de">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-external-de-1.0-de-ownedComment-1">
+							<annotatedElement xmi:idref="_niem-external-de-1.0-de"/>
+						</ownedComment>
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-external-de-1.0-de-ownedComment-2">
+							<annotatedElement xmi:idref="_niem-external-de-1.0-de"/>
+						</ownedComment>
+						<packagedElement xmi:type="uml:Class"
+							xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder"
+							name="NamespaceElementPropertyHolder">
+							<ownedAttribute xmi:type="uml:Property"
+								xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution"
+								name="EDXLDistribution" aggregation="composite"
+								type="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type"/>
+							<nestedClassifier xmi:type="uml:Class"
+								xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type"
+								name="EDXLDistribution_._type">
+								<ownedAttribute xmi:type="uml:Property"
+									xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-distributionID"
+									name="distributionID" aggregation="composite">
+									<type
+										href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string"
+									> </type>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property"
+									xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-senderID"
+									name="senderID" aggregation="composite">
+									<type
+										href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string"
+									> </type>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property"
+									xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-dateTimeSent"
+									name="dateTimeSent" aggregation="composite">
+									<type
+										href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-dateTime"
+									> </type>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property"
+									xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-distributionStatus"
+									name="distributionStatus" aggregation="composite"
+									type="_niem-external-de-1.0-de-statusValues"> </ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property"
+									xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-distributionType"
+									name="distributionType" aggregation="composite"
+									type="_niem-external-de-1.0-de-typeValues"> </ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property"
+									xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-combinedConfidentiality"
+									name="combinedConfidentiality" aggregation="composite">
+									<type
+										href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string"
+									> </type>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property"
+									xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-language"
+									name="language" aggregation="composite">
+									<type
+										href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string"> </type>
+									<lowerValue xmi:type="uml:LiteralInteger"
+										xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-language-lowerValue"
+									/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property"
+									xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-senderRole"
+									name="senderRole" aggregation="composite"
+									type="_niem-external-de-1.0-de-valueListType">
+									<lowerValue xmi:type="uml:LiteralInteger"
+										xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-senderRole-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+										xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-senderRole-upperValue"
+										value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property"
+									xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-recipientRole"
+									name="recipientRole" aggregation="composite"
+									type="_niem-external-de-1.0-de-valueListType">
+									<lowerValue xmi:type="uml:LiteralInteger"
+										xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-recipientRole-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+										xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-recipientRole-upperValue"
+										value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property"
+									xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-keyword"
+									name="keyword" aggregation="composite"
+									type="_niem-external-de-1.0-de-valueListType">
+									<lowerValue xmi:type="uml:LiteralInteger"
+										xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-keyword-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+										xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-keyword-upperValue"
+										value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property"
+									xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-distributionReference"
+									name="distributionReference" aggregation="composite">
+									<type
+										href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string"> </type>
+									<lowerValue xmi:type="uml:LiteralInteger"
+										xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-distributionReference-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+										xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-distributionReference-upperValue"
+										value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property"
+									xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-explicitAddress"
+									name="explicitAddress" aggregation="composite"
+									type="_niem-external-de-1.0-de-valueSchemeType">
+									<lowerValue xmi:type="uml:LiteralInteger"
+										xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-explicitAddress-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+										xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-explicitAddress-upperValue"
+										value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property"
+									xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-targetArea"
+									name="targetArea" aggregation="composite"
+									type="_niem-external-de-1.0-de-targetAreaType">
+									<lowerValue xmi:type="uml:LiteralInteger"
+										xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-targetArea-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+										xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-targetArea-upperValue"
+										value="*"/>
+								</ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property"
+									xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-contentObject"
+									name="contentObject" aggregation="composite"
+									type="_niem-external-de-1.0-de-contentObjectType">
+									<lowerValue xmi:type="uml:LiteralInteger"
+										xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-contentObject-lowerValue"/>
+									<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+										xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-contentObject-upperValue"
+										value="*"/>
+								</ownedAttribute>
+							</nestedClassifier>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration"
+							xmi:id="_niem-external-de-1.0-de-statusValues" name="statusValues">
+							<ownedLiteral xmi:type="uml:EnumerationLiteral"
+								xmi:id="_niem-external-de-1.0-de-statusValues-Actual" name="Actual"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral"
+								xmi:id="_niem-external-de-1.0-de-statusValues-Exercise"
+								name="Exercise"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral"
+								xmi:id="_niem-external-de-1.0-de-statusValues-System" name="System"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral"
+								xmi:id="_niem-external-de-1.0-de-statusValues-Test" name="Test"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Realization"
+							xmi:id="_niem-external-de-1.0-de-packagedElement-3">
+							<client xmi:idref="_niem-external-de-1.0-de-statusValues"/>
+							<supplier
+								href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-NMTOKEN"
+							> </supplier>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration"
+							xmi:id="_niem-external-de-1.0-de-typeValues" name="typeValues">
+							<ownedLiteral xmi:type="uml:EnumerationLiteral"
+								xmi:id="_niem-external-de-1.0-de-typeValues-Report" name="Report"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral"
+								xmi:id="_niem-external-de-1.0-de-typeValues-Update" name="Update"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral"
+								xmi:id="_niem-external-de-1.0-de-typeValues-Cancel" name="Cancel"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral"
+								xmi:id="_niem-external-de-1.0-de-typeValues-Request" name="Request"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral"
+								xmi:id="_niem-external-de-1.0-de-typeValues-Response"
+								name="Response"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral"
+								xmi:id="_niem-external-de-1.0-de-typeValues-Dispatch"
+								name="Dispatch"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral"
+								xmi:id="_niem-external-de-1.0-de-typeValues-Ack" name="Ack"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral"
+								xmi:id="_niem-external-de-1.0-de-typeValues-Error" name="Error"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral"
+								xmi:id="_niem-external-de-1.0-de-typeValues-SensorConfiguration"
+								name="SensorConfiguration"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral"
+								xmi:id="_niem-external-de-1.0-de-typeValues-SensorControl"
+								name="SensorControl"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral"
+								xmi:id="_niem-external-de-1.0-de-typeValues-SensorStatus"
+								name="SensorStatus"/>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral"
+								xmi:id="_niem-external-de-1.0-de-typeValues-SensorDetection"
+								name="SensorDetection"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Realization"
+							xmi:id="_niem-external-de-1.0-de-packagedElement-5">
+							<client xmi:idref="_niem-external-de-1.0-de-typeValues"/>
+							<supplier
+								href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-NMTOKEN"
+							> </supplier>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Class"
+							xmi:id="_niem-external-de-1.0-de-valueListType" name="valueListType">
+							<ownedAttribute xmi:type="uml:Property"
+								xmi:id="_niem-external-de-1.0-de-valueListType-valueListUrn"
+								name="valueListUrn" aggregation="composite">
+								<type
+									href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string"
+								> </type>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property"
+								xmi:id="_niem-external-de-1.0-de-valueListType-value" name="value"
+								aggregation="composite">
+								<type
+									href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string"> </type>
+								<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+									xmi:id="_niem-external-de-1.0-de-valueListType-value-upperValue"
+									value="*"/>
+							</ownedAttribute>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Class"
+							xmi:id="_niem-external-de-1.0-de-valueSchemeType" name="valueSchemeType">
+							<ownedAttribute xmi:type="uml:Property"
+								xmi:id="_niem-external-de-1.0-de-valueSchemeType-explicitAddressScheme"
+								name="explicitAddressScheme" aggregation="composite">
+								<type
+									href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string"
+								> </type>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property"
+								xmi:id="_niem-external-de-1.0-de-valueSchemeType-explicitAddressValue"
+								name="explicitAddressValue" aggregation="composite">
+								<type
+									href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string"> </type>
+								<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+									xmi:id="_niem-external-de-1.0-de-valueSchemeType-explicitAddressValue-upperValue"
+									value="*"/>
+							</ownedAttribute>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Class"
+							xmi:id="_niem-external-de-1.0-de-targetAreaType" name="targetAreaType">
+							<ownedAttribute xmi:type="uml:Property"
+								xmi:id="_niem-external-de-1.0-de-targetAreaType-circle"
+								name="circle" aggregation="composite">
+								<type
+									href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string"> </type>
+								<lowerValue xmi:type="uml:LiteralInteger"
+									xmi:id="_niem-external-de-1.0-de-targetAreaType-circle-lowerValue"/>
+								<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+									xmi:id="_niem-external-de-1.0-de-targetAreaType-circle-upperValue"
+									value="*"/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property"
+								xmi:id="_niem-external-de-1.0-de-targetAreaType-polygon"
+								name="polygon" aggregation="composite">
+								<type
+									href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string"> </type>
+								<lowerValue xmi:type="uml:LiteralInteger"
+									xmi:id="_niem-external-de-1.0-de-targetAreaType-polygon-lowerValue"/>
+								<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+									xmi:id="_niem-external-de-1.0-de-targetAreaType-polygon-upperValue"
+									value="*"/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property"
+								xmi:id="_niem-external-de-1.0-de-targetAreaType-country"
+								name="country" aggregation="composite">
+								<type
+									href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string"> </type>
+								<lowerValue xmi:type="uml:LiteralInteger"
+									xmi:id="_niem-external-de-1.0-de-targetAreaType-country-lowerValue"/>
+								<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+									xmi:id="_niem-external-de-1.0-de-targetAreaType-country-upperValue"
+									value="*"/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property"
+								xmi:id="_niem-external-de-1.0-de-targetAreaType-subdivision"
+								name="subdivision" aggregation="composite">
+								<type
+									href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string"> </type>
+								<lowerValue xmi:type="uml:LiteralInteger"
+									xmi:id="_niem-external-de-1.0-de-targetAreaType-subdivision-lowerValue"/>
+								<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+									xmi:id="_niem-external-de-1.0-de-targetAreaType-subdivision-upperValue"
+									value="*"/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property"
+								xmi:id="_niem-external-de-1.0-de-targetAreaType-locCodeUN"
+								name="locCodeUN" aggregation="composite">
+								<type
+									href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string"> </type>
+								<lowerValue xmi:type="uml:LiteralInteger"
+									xmi:id="_niem-external-de-1.0-de-targetAreaType-locCodeUN-lowerValue"/>
+								<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+									xmi:id="_niem-external-de-1.0-de-targetAreaType-locCodeUN-upperValue"
+									value="*"/>
+							</ownedAttribute>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Class"
+							xmi:id="_niem-external-de-1.0-de-contentObjectType"
+							name="contentObjectType">
+							<ownedAttribute xmi:type="uml:Property"
+								xmi:id="_niem-external-de-1.0-de-contentObjectType-contentDescription"
+								name="contentDescription" aggregation="composite">
+								<type
+									href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string"> </type>
+								<lowerValue xmi:type="uml:LiteralInteger"
+									xmi:id="_niem-external-de-1.0-de-contentObjectType-contentDescription-lowerValue"
+								/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property"
+								xmi:id="_niem-external-de-1.0-de-contentObjectType-contentKeyword"
+								name="contentKeyword" aggregation="composite"
+								type="_niem-external-de-1.0-de-valueListType">
+								<lowerValue xmi:type="uml:LiteralInteger"
+									xmi:id="_niem-external-de-1.0-de-contentObjectType-contentKeyword-lowerValue"/>
+								<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+									xmi:id="_niem-external-de-1.0-de-contentObjectType-contentKeyword-upperValue"
+									value="*"/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property"
+								xmi:id="_niem-external-de-1.0-de-contentObjectType-incidentID"
+								name="incidentID" aggregation="composite">
+								<type
+									href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string"> </type>
+								<lowerValue xmi:type="uml:LiteralInteger"
+									xmi:id="_niem-external-de-1.0-de-contentObjectType-incidentID-lowerValue"
+								/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property"
+								xmi:id="_niem-external-de-1.0-de-contentObjectType-incidentDescription"
+								name="incidentDescription" aggregation="composite">
+								<type
+									href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string"> </type>
+								<lowerValue xmi:type="uml:LiteralInteger"
+									xmi:id="_niem-external-de-1.0-de-contentObjectType-incidentDescription-lowerValue"
+								/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property"
+								xmi:id="_niem-external-de-1.0-de-contentObjectType-originatorRole"
+								name="originatorRole" aggregation="composite"
+								type="_niem-external-de-1.0-de-valueListType">
+								<lowerValue xmi:type="uml:LiteralInteger"
+									xmi:id="_niem-external-de-1.0-de-contentObjectType-originatorRole-lowerValue"/>
+								<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+									xmi:id="_niem-external-de-1.0-de-contentObjectType-originatorRole-upperValue"
+									value="*"/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property"
+								xmi:id="_niem-external-de-1.0-de-contentObjectType-consumerRole"
+								name="consumerRole" aggregation="composite"
+								type="_niem-external-de-1.0-de-valueListType">
+								<lowerValue xmi:type="uml:LiteralInteger"
+									xmi:id="_niem-external-de-1.0-de-contentObjectType-consumerRole-lowerValue"/>
+								<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+									xmi:id="_niem-external-de-1.0-de-contentObjectType-consumerRole-upperValue"
+									value="*"/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property"
+								xmi:id="_niem-external-de-1.0-de-contentObjectType-confidentiality"
+								name="confidentiality" aggregation="composite">
+								<type
+									href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string"> </type>
+								<lowerValue xmi:type="uml:LiteralInteger"
+									xmi:id="_niem-external-de-1.0-de-contentObjectType-confidentiality-lowerValue"
+								/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property"
+								xmi:id="_niem-external-de-1.0-de-contentObjectType-ownedAttribute__from_Class-8"
+								name="choice_8"
+								type="_niem-external-de-1.0-de-contentObjectType-nestedClassifier"> </ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property"
+								xmi:id="_niem-external-de-1.0-de-contentObjectType-any" name="any">
+								<lowerValue xmi:type="uml:LiteralInteger"
+									xmi:id="_niem-external-de-1.0-de-contentObjectType-any-lowerValue"/>
+								<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+									xmi:id="_niem-external-de-1.0-de-contentObjectType-any-upperValue"
+									value="*"/>
+							</ownedAttribute>
+							<nestedClassifier xmi:type="uml:Class"
+								xmi:id="_niem-external-de-1.0-de-contentObjectType-nestedClassifier"
+								name="choice_8">
+								<ownedAttribute xmi:type="uml:Property"
+									xmi:id="_niem-external-de-1.0-de-contentObjectType-nestedClassifier-nonXMLContent"
+									name="nonXMLContent" aggregation="composite"
+									type="_niem-external-de-1.0-de-nonXMLContentType"> </ownedAttribute>
+								<ownedAttribute xmi:type="uml:Property"
+									xmi:id="_niem-external-de-1.0-de-contentObjectType-nestedClassifier-xmlContent"
+									name="xmlContent" aggregation="composite"
+									type="_niem-external-de-1.0-de-xmlContentType"
+								> </ownedAttribute>
+							</nestedClassifier>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Class"
+							xmi:id="_niem-external-de-1.0-de-nonXMLContentType"
+							name="nonXMLContentType">
+							<ownedAttribute xmi:type="uml:Property"
+								xmi:id="_niem-external-de-1.0-de-nonXMLContentType-mimeType"
+								name="mimeType" aggregation="composite">
+								<type
+									href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string"
+								> </type>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property"
+								xmi:id="_niem-external-de-1.0-de-nonXMLContentType-size" name="size"
+								aggregation="composite">
+								<type
+									href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-integer"> </type>
+								<lowerValue xmi:type="uml:LiteralInteger"
+									xmi:id="_niem-external-de-1.0-de-nonXMLContentType-size-lowerValue"
+								/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property"
+								xmi:id="_niem-external-de-1.0-de-nonXMLContentType-digest"
+								name="digest" aggregation="composite">
+								<type
+									href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string"> </type>
+								<lowerValue xmi:type="uml:LiteralInteger"
+									xmi:id="_niem-external-de-1.0-de-nonXMLContentType-digest-lowerValue"
+								/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property"
+								xmi:id="_niem-external-de-1.0-de-nonXMLContentType-uri" name="uri"
+								aggregation="composite">
+								<type
+									href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-anyURI"> </type>
+								<lowerValue xmi:type="uml:LiteralInteger"
+									xmi:id="_niem-external-de-1.0-de-nonXMLContentType-uri-lowerValue"
+								/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property"
+								xmi:id="_niem-external-de-1.0-de-nonXMLContentType-contentData"
+								name="contentData" aggregation="composite">
+								<type
+									href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-base64Binary"> </type>
+								<lowerValue xmi:type="uml:LiteralInteger"
+									xmi:id="_niem-external-de-1.0-de-nonXMLContentType-contentData-lowerValue"
+								/>
+							</ownedAttribute>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Class"
+							xmi:id="_niem-external-de-1.0-de-xmlContentType" name="xmlContentType">
+							<ownedAttribute xmi:type="uml:Property"
+								xmi:id="_niem-external-de-1.0-de-xmlContentType-keyXMLContent"
+								name="keyXMLContent" aggregation="composite"
+								type="_niem-external-de-1.0-de-anyXMLType">
+								<lowerValue xmi:type="uml:LiteralInteger"
+									xmi:id="_niem-external-de-1.0-de-xmlContentType-keyXMLContent-lowerValue"/>
+								<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+									xmi:id="_niem-external-de-1.0-de-xmlContentType-keyXMLContent-upperValue"
+									value="*"/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property"
+								xmi:id="_niem-external-de-1.0-de-xmlContentType-embeddedXMLContent"
+								name="embeddedXMLContent" aggregation="composite"
+								type="_niem-external-de-1.0-de-anyXMLType">
+								<lowerValue xmi:type="uml:LiteralInteger"
+									xmi:id="_niem-external-de-1.0-de-xmlContentType-embeddedXMLContent-lowerValue"/>
+								<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+									xmi:id="_niem-external-de-1.0-de-xmlContentType-embeddedXMLContent-upperValue"
+									value="*"/>
+							</ownedAttribute>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Class"
+							xmi:id="_niem-external-de-1.0-de-anyXMLType" name="anyXMLType">
+							<ownedAttribute xmi:type="uml:Property"
+								xmi:id="_niem-external-de-1.0-de-anyXMLType-any" name="any">
+								<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+									xmi:id="_niem-external-de-1.0-de-anyXMLType-any-upperValue"
+									value="*"/>
+							</ownedAttribute>
+							<ownedAttribute xmi:type="uml:Property"
+								xmi:id="_niem-external-de-1.0-de-anyXMLType-anyAttribute"
+								name="anyAttribute"/>
+						</packagedElement>
+					</packagedElement>
+				</packagedElement>
+				<profileApplication xmi:type="uml:ProfileApplication"
+					xmi:id="_niem-external-de-profileApplication-1">
+					<appliedProfile
+						href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_PIM_Profile"
+					> </appliedProfile>
+				</profileApplication>
+				<profileApplication xmi:type="uml:ProfileApplication"
+					xmi:id="_niem-external-de-profileApplication-2">
+					<appliedProfile
+						href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-Model_Package_Description_Profile"
+					> </appliedProfile>
+				</profileApplication>
+				<profileApplication xmi:type="uml:ProfileApplication"
+					xmi:id="_niem-external-de-profileApplication-3">
+					<appliedProfile
+						href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_Common_Profile"
+					> </appliedProfile>
+				</profileApplication>
+				<profileApplication xmi:type="uml:ProfileApplication"
+					xmi:id="_niem-external-de-profileApplication-4">
+					<appliedProfile
+						href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_PSM_Profile"
+					> </appliedProfile>
+				</profileApplication>
+			</packagedElement>
+		</packagedElement>
+	</uml:Model>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-valueListType-valueListUrn-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-valueListType-valueListUrn" kind="element"
+		nillable="false"/>
+	<NIEM_PIM_Profile:InformationModel
+		xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile"
+		xmi:id="_niem-external-de-1.0-de-appliedStereotypeInstance"
+		base_Package="_niem-external-de-1.0-de" defaultPurpose="reference"
+		targetNamespace="urn:oasis:names:tc:emergency:EDXL:DE:1.0" version="1.0CD"
+		isConformant="false"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-distributionType-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-distributionType"
+		kind="element" nillable="false"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-language-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-language"
+		kind="element" nillable="false"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-nonXMLContentType-size-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-nonXMLContentType-size" kind="element"
+		nillable="false"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-contentObjectType-contentDescription-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-contentObjectType-contentDescription" kind="element"
+		nillable="false"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-contentObjectType-nestedClassifier-nonXMLContent-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-contentObjectType-nestedClassifier-nonXMLContent"
+		kind="element" nillable="false"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-targetAreaType-polygon-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-targetAreaType-polygon" kind="element"
+		nillable="false"/>
+	<NIEM_PSM_Profile:XSDSimpleContent
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-packagedElement-5-appliedStereotypeInstance"
+		base_Realization="_niem-external-de-1.0-de-packagedElement-5"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution"
+		kind="element" nillable="false"/>
+	<NIEM_Common_Profile:Choice
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-external-de-1.0-de-contentObjectType-nestedClassifier-appliedStereotypeInstance"
+		base_Class="_niem-external-de-1.0-de-contentObjectType-nestedClassifier"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-explicitAddress-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-explicitAddress"
+		kind="element" nillable="false"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-targetAreaType-subdivision-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-targetAreaType-subdivision" kind="element"
+		nillable="false"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-nonXMLContentType-mimeType-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-nonXMLContentType-mimeType" kind="element"
+		nillable="false"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-senderID-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-senderID"
+		kind="element" nillable="false"/>
+	<NIEM_PSM_Profile:XSDSimpleContent
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-packagedElement-3-appliedStereotypeInstance"
+		base_Realization="_niem-external-de-1.0-de-packagedElement-3"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-contentObjectType-consumerRole-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-contentObjectType-consumerRole" kind="element"
+		nillable="false"/>
+	<NIEM_PSM_Profile:XSDAnyProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-anyXMLType-any-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-anyXMLType-any" processContents="lax"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-valueSchemeType-explicitAddressValue-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-valueSchemeType-explicitAddressValue" kind="element"
+		nillable="false"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-contentObjectType-incidentDescription-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-contentObjectType-incidentDescription"
+		kind="element" nillable="false"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-targetAreaType-locCodeUN-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-targetAreaType-locCodeUN" kind="element"
+		nillable="false"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-targetAreaType-circle-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-targetAreaType-circle" kind="element"
+		nillable="false"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-dateTimeSent-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-dateTimeSent"
+		kind="element" nillable="false"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-contentObjectType-confidentiality-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-contentObjectType-confidentiality" kind="element"
+		nillable="false"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-nonXMLContentType-uri-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-nonXMLContentType-uri" kind="element"
+		nillable="false"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-distributionStatus-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-distributionStatus"
+		kind="element" nillable="false"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-targetAreaType-country-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-targetAreaType-country" kind="element"
+		nillable="false"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-keyword-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-keyword"
+		kind="element" nillable="false"/>
+	<NIEM_Common_Profile:PropertyHolder
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-appliedStereotypeInstance"
+		base_Class="_niem-external-de-1.0-de-NamespaceElementPropertyHolder"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-contentObject-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-contentObject"
+		kind="element" nillable="false"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-nonXMLContentType-digest-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-nonXMLContentType-digest" kind="element"
+		nillable="false"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-contentObjectType-incidentID-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-contentObjectType-incidentID" kind="element"
+		nillable="false"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-xmlContentType-keyXMLContent-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-xmlContentType-keyXMLContent" kind="element"
+		nillable="false"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-combinedConfidentiality-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-combinedConfidentiality"
+		kind="element" nillable="false"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-recipientRole-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-recipientRole"
+		kind="element" nillable="false"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-senderRole-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-senderRole"
+		kind="element" nillable="false"/>
+	<NIEM_PSM_Profile:XSDAnyProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-anyXMLType-anyAttribute-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-anyXMLType-anyAttribute" processContents="lax"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-xmlContentType-embeddedXMLContent-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-xmlContentType-embeddedXMLContent" kind="element"
+		nillable="false"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-valueSchemeType-explicitAddressScheme-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-valueSchemeType-explicitAddressScheme"
+		kind="element" nillable="false"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-contentObjectType-originatorRole-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-contentObjectType-originatorRole" kind="element"
+		nillable="false"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-contentObjectType-nestedClassifier-xmlContent-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-contentObjectType-nestedClassifier-xmlContent"
+		kind="element" nillable="false"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-distributionReference-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-distributionReference"
+		kind="element" nillable="false"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-targetArea-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-targetArea"
+		kind="element" nillable="false"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-contentObjectType-contentKeyword-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-contentObjectType-contentKeyword" kind="element"
+		nillable="false"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-distributionID-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-NamespaceElementPropertyHolder-EDXLDistribution_._type-distributionID"
+		kind="element" nillable="false"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-valueListType-value-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-valueListType-value" kind="element" nillable="false"/>
+	<NIEM_PSM_Profile:XSDAnyProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-contentObjectType-any-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-contentObjectType-any" processContents="lax"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-external-de-1.0-de-nonXMLContentType-contentData-appliedStereotypeInstance"
+		base_Property="_niem-external-de-1.0-de-nonXMLContentType-contentData" kind="element"
+		nillable="false"/>
+</xmi:XMI>

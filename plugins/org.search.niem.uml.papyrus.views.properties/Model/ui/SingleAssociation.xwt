@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Composite xmlns:ppe="clr-namespace:org.eclipse.papyrus.views.properties.widgets"
+    xmlns:ppel="clr-namespace:org.eclipse.papyrus.views.properties.widgets.layout"
+    xmlns:j="clr-namespace:java.lang" xmlns="http://www.eclipse.org/xwt/presentation"
+    xmlns:x="http://www.eclipse.org/xwt">
+    <Composite.layout>
+        <ppel:PropertiesLayout></ppel:PropertiesLayout>
+    </Composite.layout>
+    <Composite>
+        <Composite.layout>
+            <ppel:PropertiesLayout></ppel:PropertiesLayout>
+        </Composite.layout>
+        <ppe:StringEditor input="{Binding}" property="UML:NamedElement:name"></ppe:StringEditor>
+        <ppe:EnumCombo input="{Binding}" property="UML:NamedElement:visibility"></ppe:EnumCombo>
+        <ppe:ViewEditor numColumns="2" input="{Binding}" view="UML:MemberEnd"
+            property="UML:Association:memberEnd"></ppe:ViewEditor>
+    </Composite>
+    <Composite>
+        <Composite.layout>
+            <ppel:PropertiesLayout></ppel:PropertiesLayout>
+        </Composite.layout>
+        <ppe:MultiReference input="{Binding}"
+            property="UML:Element:ownedComment"></ppe:MultiReference>
+    </Composite>
+</Composite>

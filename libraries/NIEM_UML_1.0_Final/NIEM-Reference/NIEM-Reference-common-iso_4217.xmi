@@ -1,0 +1,1075 @@
+<?xml version="1.0" encoding="UTF-8"?><xmi:XMI xmlns:xmi="http://www.omg.org/spec/XMI/20110701">
+	
+	
+	
+	<uml:Model xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile" xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Model_Package_Description_Profile="http://www.omg.org/spec/NIEM-UML/20120501/Model_Package_Description_Profile" xmlns:uml="http://www.omg.org/spec/UML/20110701" xmi:type="uml:Model" xmi:id="_niem" name="niem"><packagedElement xmi:type="uml:Package" xmi:id="_niem-iso_4217" name="iso_4217"><packagedElement xmi:type="uml:Package" xmi:id="_niem-iso_4217-2.0" name="2.0">
+					<packagedElement xmi:type="uml:Package" xmi:id="_niem-iso_4217-2.0-iso_4217" name="iso_4217">
+						<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-ownedComment" body="Codes for the representation of currencies and funds from the International Organization for Standardization (ISO) 4217:2001.">
+							<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217"/>
+						</ownedComment>
+						
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType" name="CurrencyCodeSimpleType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ownedComment" body="A data type for a currency that qualifies a monetary amount.">
+								<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType"/>
+							</ownedComment>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BHD" name="BHD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BHD-ownedComment" body="Bahraini Dinar: Bahrain">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BHD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ZAR" name="ZAR">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ZAR-ownedComment" body="Rand: Lesotho, Namibia, South Africa">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ZAR"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-UAH" name="UAH">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-UAH-ownedComment" body="Hryvnia: Ukraine">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-UAH"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ZWD" name="ZWD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ZWD-ownedComment" body="Zimbabwe Dollar: Zimbabwe">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ZWD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-LBP" name="LBP">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-LBP-ownedComment" body="Lebanese Pound: Lebanon">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-LBP"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XFO" name="XFO">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XFO-ownedComment" body="Gold-Franc: Special settlement currencies">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XFO"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BEF" name="BEF">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BEF-ownedComment" body="Belgian Franc: Belgium">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BEF"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-VND" name="VND">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-VND-ownedComment" body="Dong: Vietnam">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-VND"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ATS" name="ATS">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ATS-ownedComment" body="Schilling: Austria">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ATS"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SLL" name="SLL">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SLL-ownedComment" body="Leone: Sierra Leone">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SLL"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-YUM" name="YUM">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-YUM-ownedComment" body="New Dinar: Yugoslavia">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-YUM"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-AUD" name="AUD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-AUD-ownedComment" body="Australian Dollar: Australia, Christmas Island, Cocos (Keeling) Islands, Heard and Mcdonald Islands, Kiribati, Nauru, Norfolk Island, Tuvalu">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-AUD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-AFA" name="AFA">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-AFA-ownedComment" body="Afghani: Afghanistan">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-AFA"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-KYD" name="KYD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-KYD-ownedComment" body="Cayman Islands Dollar: Cayman Islands">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-KYD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-TJS" name="TJS">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-TJS-ownedComment" body="Somoni: Tajikistan">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-TJS"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-JOD" name="JOD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-JOD-ownedComment" body="Jordanian Dinar: Jordan">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-JOD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-IDR" name="IDR">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-IDR-ownedComment" body="Rupiah: East Timor, Indonesia">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-IDR"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BBD" name="BBD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BBD-ownedComment" body="Barbados Dollar: Barbados">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BBD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SHP" name="SHP">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SHP-ownedComment" body="St Helena Pound: St Helena">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SHP"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MYR" name="MYR">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MYR-ownedComment" body="Malaysian Ringgit: Malaysia">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MYR"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-KMF" name="KMF">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-KMF-ownedComment" body="Comoro Franc: Comoros">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-KMF"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-KZT" name="KZT">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-KZT-ownedComment" body="Tenge: Kazakhstan">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-KZT"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SAR" name="SAR">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SAR-ownedComment" body="Saudi Riyal: Saudi Arabia">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SAR"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-PGK" name="PGK">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-PGK-ownedComment" body="Kina: Papua New Guinea">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-PGK"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MMK" name="MMK">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MMK-ownedComment" body="Kyat: Myanmar">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MMK"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MRO" name="MRO">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MRO-ownedComment" body="Ouguiya: Mauritania">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MRO"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-GYD" name="GYD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-GYD-ownedComment" body="Guyana Dollar: Guyana">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-GYD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XBB" name="XBB">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XBB-ownedComment" body="European Monetary Unit (E.M.U.-6): Bond Markets Units">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XBB"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-AOR" name="AOR">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-AOR-ownedComment" body="Kwanza Reajustado: Angola">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-AOR"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XAF" name="XAF">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XAF-ownedComment" body="CFA Franc BEAC: Cameroon, Central African Republic, Chad, Congo, Equatorial Guinea, Gabon">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XAF"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-LSL" name="LSL">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-LSL-ownedComment" body="Loti: Lesotho">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-LSL"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MXN" name="MXN">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MXN-ownedComment" body="Mexican Peso: Mexico">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MXN"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BWP" name="BWP">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BWP-ownedComment" body="Pula: Botswana">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BWP"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-PAB" name="PAB">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-PAB-ownedComment" body="Balboa: Panama">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-PAB"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-TND" name="TND">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-TND-ownedComment" body="Tunisian Dinar: Tunisia">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-TND"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ZMK" name="ZMK">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ZMK-ownedComment" body="Kwacha: Zambia">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ZMK"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-KGS" name="KGS">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-KGS-ownedComment" body="Som: Kyrgyzstan">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-KGS"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-EUR" name="EUR">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-EUR-ownedComment" body="Euro: ">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-EUR"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-TWD" name="TWD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-TWD-ownedComment" body="New Taiwan Dollar: Taiwan, Province Of China">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-TWD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-UYU" name="UYU">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-UYU-ownedComment" body="Peso Uruguayo: Uruguay">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-UYU"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SCR" name="SCR">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SCR-ownedComment" body="Seychelles Rupee: Seychelles">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SCR"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-KRW" name="KRW">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-KRW-ownedComment" body="Won: Korea, Republic Of">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-KRW"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CLF" name="CLF">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CLF-ownedComment" body="Unidades de fomento: Chile">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CLF"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ILS" name="ILS">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ILS-ownedComment" body="New Israeli Sheqel: Israel">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ILS"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-PHP" name="PHP">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-PHP-ownedComment" body="Philippine Peso: Philippines">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-PHP"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-TMM" name="TMM">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-TMM-ownedComment" body="Manat: Turkmenistan">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-TMM"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XDR" name="XDR">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XDR-ownedComment" body="SDR: International Monetary Fund (Imf)">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XDR"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CRC" name="CRC">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CRC-ownedComment" body="Costa Rican Colon: Costa Rica">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CRC"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CZK" name="CZK">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CZK-ownedComment" body="Czech Koruna: Czech Republic">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CZK"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-DZD" name="DZD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-DZD-ownedComment" body="Algerian Dinar: Algeria">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-DZD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XOF" name="XOF">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XOF-ownedComment" body="CFA Franc BCEAO: Benin, Burkina Faso, Cote D'ivoire, Guinea-Bissau, Mali, Niger, Senegal, Togo">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XOF"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SKK" name="SKK">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SKK-ownedComment" body="Slovak Koruna: Slovakia">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SKK"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ZAL" name="ZAL">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ZAL-ownedComment" body="(financial Rand): Lesotho">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ZAL"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-EEK" name="EEK">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-EEK-ownedComment" body="Kroon: Estonia">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-EEK"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-GBP" name="GBP">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-GBP-ownedComment" body="Pound Sterling: United Kingdom">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-GBP"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-NIO" name="NIO">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-NIO-ownedComment" body="Cordoba Oro: Nicaragua">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-NIO"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BZD" name="BZD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BZD-ownedComment" body="Belize Dollar: Belize">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BZD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-FRF" name="FRF">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-FRF-ownedComment" body="French Franc: Andorra, France, French Guiana, French Southern Territories, Guadeloupe, Martinique, Monaco, Reunion, St Pierre and Miquelon">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-FRF"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-THB" name="THB">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-THB-ownedComment" body="Baht: Thailand">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-THB"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XBD" name="XBD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XBD-ownedComment" body="European Unit of Account 17 (E.U.A.- 17): Bond Markets Units">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XBD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MDL" name="MDL">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MDL-ownedComment" body="Moldovan Leu: Moldova, Republic Of">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MDL"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MTL" name="MTL">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MTL-ownedComment" body="Maltese Lira: Malta">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MTL"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SOS" name="SOS">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SOS-ownedComment" body="Somali Shilling: Somalia">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SOS"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MKD" name="MKD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MKD-ownedComment" body="Denar: Macedonia, The Former Yugoslav Republic Of">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MKD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SBD" name="SBD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SBD-ownedComment" body="Solomon Islands Dollar: Solomon Islands">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SBD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SIT" name="SIT">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SIT-ownedComment" body="Tolar: Slovenia">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SIT"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-GRD" name="GRD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-GRD-ownedComment" body="Drachma: Greece">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-GRD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XBC" name="XBC">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XBC-ownedComment" body="European Unit of Account 9 (E.U.A.- 9): Bond Markets Units">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XBC"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-HUF" name="HUF">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-HUF-ownedComment" body="Forint: Hungary">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-HUF"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MGF" name="MGF">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MGF-ownedComment" body="Malagasy Franc: Madagascar">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MGF"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-HNL" name="HNL">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-HNL-ownedComment" body="Lempira: Honduras">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-HNL"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-KHR" name="KHR">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-KHR-ownedComment" body="Riel: Cambodia">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-KHR"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-TOP" name="TOP">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-TOP-ownedComment" body="Pa'anga: Tonga">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-TOP"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ESP" name="ESP">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ESP-ownedComment" body="Spanish Peseta: Andorra, Spain">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ESP"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XAG" name="XAG">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XAG-ownedComment" body="Silver: Bond Markets Units">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XAG"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SDD" name="SDD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SDD-ownedComment" body="Sudanese Dinar: Sudan">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SDD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-USS" name="USS">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-USS-ownedComment" body="(Same day): United States">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-USS"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-INR" name="INR">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-INR-ownedComment" body="Indian Rupee: Bhutan, India">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-INR"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BMD" name="BMD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BMD-ownedComment" body="Bermudian Dollar: Bermuda">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BMD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MOP" name="MOP">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MOP-ownedComment" body="Pataca: Macau">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MOP"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MWK" name="MWK">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MWK-ownedComment" body="Kwacha: Malawi">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MWK"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-UZS" name="UZS">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-UZS-ownedComment" body="Uzbekistan Sum: Uzbekistan">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-UZS"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-LKR" name="LKR">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-LKR-ownedComment" body="Sri Lanka Rupee: Sri Lanka">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-LKR"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MZM" name="MZM">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MZM-ownedComment" body="Metical: Mozambique">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MZM"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ERN" name="ERN">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ERN-ownedComment" body="Nakfa: Eritrea">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ERN"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CDF" name="CDF">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CDF-ownedComment" body="Franc Congolais: Congo, The Democratic Republic Of">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CDF"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CVE" name="CVE">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CVE-ownedComment" body="Cape Verde Escudo: Cape Verde">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CVE"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XPF" name="XPF">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XPF-ownedComment" body="CFP Franc: French Polynesia, New Caledonia, Wallis and Futuna Islands">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XPF"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-GNF" name="GNF">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-GNF-ownedComment" body="Guinea Franc: Guinea">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-GNF"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XTS" name="XTS">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XTS-ownedComment" body="Codes specifically reserved for testing purposes: ">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XTS"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-UGX" name="UGX">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-UGX-ownedComment" body="Uganda Shilling: Uganda">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-UGX"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MUR" name="MUR">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MUR-ownedComment" body="Mauritius Rupee: Mauritius">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MUR"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-GTQ" name="GTQ">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-GTQ-ownedComment" body="Quetzal: Guatemala">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-GTQ"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XAU" name="XAU">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XAU-ownedComment" body="Gold Bond Markets Units: ">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XAU"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-NOK" name="NOK">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-NOK-ownedComment" body="Norwegian Krone: Bouvet Island, Norway, Svalbard and Jan Mayen Islands">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-NOK"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XCD" name="XCD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XCD-ownedComment" body="East Caribbean Dollar: Anguilla, Antigua and Barbuda, Dominica, Grenada, Montserrat, St Kitts - Nevis, Saint Lucia, Saint Vincent and The Grenadines">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XCD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-WST" name="WST">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-WST-ownedComment" body="Tala: Samoa">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-WST"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-PTE" name="PTE">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-PTE-ownedComment" body="Portuguese Escudo: Portugal">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-PTE"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-TPE" name="TPE">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-TPE-ownedComment" body="Timor Escudo: East Timor">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-TPE"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-LTL" name="LTL">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-LTL-ownedComment" body="Lithuanian Litas: Lithuania">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-LTL"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ISK" name="ISK">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ISK-ownedComment" body="Iceland Krona: Iceland">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ISK"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CLP" name="CLP">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CLP-ownedComment" body="Chilean Peso: Chile">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CLP"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-GMD" name="GMD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-GMD-ownedComment" body="Dalasi: Gambia">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-GMD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ZRN" name="ZRN">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ZRN-ownedComment" body="New Zaire: Zaire">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ZRN"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-DKK" name="DKK">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-DKK-ownedComment" body="Danish Krone: Denmark, Faeroe Islands, Greenland">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-DKK"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-KPW" name="KPW">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-KPW-ownedComment" body="North Korean Won: Korea, Democratic People's Republic Of">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-KPW"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-NLG" name="NLG">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-NLG-ownedComment" body="Netherlands Guilder: Netherlands">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-NLG"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ECV" name="ECV">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ECV-ownedComment" body="Unidad de Valor Constante (UVC): Ecuador">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ECV"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-KWD" name="KWD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-KWD-ownedComment" body="Kuwaiti Dinar: Kuwait">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-KWD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-DOP" name="DOP">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-DOP-ownedComment" body="Dominican Peso: Dominican Republic">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-DOP"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-GEL" name="GEL">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-GEL-ownedComment" body="Lari: Georgia">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-GEL"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ALL" name="ALL">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ALL-ownedComment" body="Lek: Albania">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ALL"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XFU" name="XFU">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XFU-ownedComment" body="UIC-Franc: Special settlement currencies">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XFU"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ITL" name="ITL">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ITL-ownedComment" body="Italian Lira: Italy, San Marino, Vatican City State (Holy See)">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ITL"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-TTD" name="TTD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-TTD-ownedComment" body="Trinidad and Tobago Dollar: Trinidad and Tobago">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-TTD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-GHC" name="GHC">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-GHC-ownedComment" body="Cedi: Ghana">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-GHC"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-LUF" name="LUF">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-LUF-ownedComment" body="Luxembourg Franc: Luxembourg">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-LUF"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-OMR" name="OMR">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-OMR-ownedComment" body="Rial Omani: Oman">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-OMR"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-USN" name="USN">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-USN-ownedComment" body="(Next day): United States">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-USN"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BTN" name="BTN">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BTN-ownedComment" body="Ngultrum: Bhutan">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BTN"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-HKD" name="HKD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-HKD-ownedComment" body="Hong Kong Dollar: Hong Kong">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-HKD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-STD" name="STD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-STD-ownedComment" body="Dobra: Sao Tome and Principe">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-STD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-PEN" name="PEN">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-PEN-ownedComment" body="Nuevo Sol: Peru">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-PEN"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-RUB" name="RUB">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-RUB-ownedComment" body="Russian Ruble: Russian Federation">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-RUB"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-VUV" name="VUV">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-VUV-ownedComment" body="Vatu: Vanuatu">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-VUV"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-YER" name="YER">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-YER-ownedComment" body="Yemeni Rial: Yemen">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-YER"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-LVL" name="LVL">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-LVL-ownedComment" body="Latvian Lats: Latvia">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-LVL"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MNT" name="MNT">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MNT-ownedComment" body="Tugrik: Mongolia">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MNT"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BSD" name="BSD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BSD-ownedComment" body="Bahamian Dollar: Bahamas">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BSD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BDT" name="BDT">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BDT-ownedComment" body="Taka: Bangladesh">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BDT"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-DJF" name="DJF">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-DJF-ownedComment" body="Djibouti Franc: Djibouti">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-DJF"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-AZM" name="AZM">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-AZM-ownedComment" body="Azerbaijanian Manat: Azerbaijan">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-AZM"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-IEP" name="IEP">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-IEP-ownedComment" body="Irish Pound: Ireland">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-IEP"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ANG" name="ANG">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ANG-ownedComment" body="Antillian Guilder: Netherlands Antilles">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ANG"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XXX" name="XXX">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XXX-ownedComment" body="The codes assigned for transactions where no currency is involved are:: ">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XXX"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-EGP" name="EGP">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-EGP-ownedComment" body="Egyptian Pound: Egypt">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-EGP"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SYP" name="SYP">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SYP-ownedComment" body="Syrian Pound: Syrian Arab Republic">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SYP"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-TRL" name="TRL">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-TRL-ownedComment" body="Turkish Lira: Turkey">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-TRL"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-LRD" name="LRD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-LRD-ownedComment" body="Liberian Dollar: Liberia">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-LRD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-IRR" name="IRR">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-IRR-ownedComment" body="Iranian Rial: Iran (Islamic Republic Of)">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-IRR"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-GWP" name="GWP">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-GWP-ownedComment" body="Guinea-Bissau Peso: Guinea-Bissau">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-GWP"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CUP" name="CUP">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CUP-ownedComment" body="Cuban Peso: Cuba">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CUP"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-TJR" name="TJR">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-TJR-ownedComment" body="Tajik Ruble (old): Tajikistan (Old)">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-TJR"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ARS" name="ARS">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ARS-ownedComment" body="Argentine Peso: Argentina">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ARS"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-GIP" name="GIP">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-GIP-ownedComment" body="Gibraltar Pound: Gibraltar">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-GIP"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ROL" name="ROL">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ROL-ownedComment" body="Leu: Romania">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ROL"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BGN" name="BGN">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BGN-ownedComment" body="Bulgarian LEV: Bulgaria">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BGN"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-TZS" name="TZS">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-TZS-ownedComment" body="Tanzanian Shilling: Tanzania, United Republic Of">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-TZS"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-AWG" name="AWG">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-AWG-ownedComment" body="Aruban Guilder: Aruba">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-AWG"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-JMD" name="JMD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-JMD-ownedComment" body="Jamaican Dollar: Jamaica">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-JMD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ADP" name="ADP">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ADP-ownedComment" body="Andorran Peseta: Andorra">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ADP"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CNY" name="CNY">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CNY-ownedComment" body="Yuan Renminbi: China">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CNY"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-KES" name="KES">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-KES-ownedComment" body="Kenyan Shilling: Kenya">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-KES"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SEK" name="SEK">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SEK-ownedComment" body="Swedish Krona: Sweden">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SEK"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BND" name="BND">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BND-ownedComment" body="Brunei Dollar: Brunei Darussalam">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BND"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-AED" name="AED">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-AED-ownedComment" body="UAE Dirham: United Arab Emirates">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-AED"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-PLN" name="PLN">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-PLN-ownedComment" body="Zloty: Poland">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-PLN"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BIF" name="BIF">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BIF-ownedComment" body="Burundi Franc: Burundi">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BIF"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-HTG" name="HTG">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-HTG-ownedComment" body="Gourde: Haiti">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-HTG"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-RUR" name="RUR">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-RUR-ownedComment" body="Russian Ruble: Russian Federation">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-RUR"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-QAR" name="QAR">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-QAR-ownedComment" body="Qatari Rial: Qatar">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-QAR"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MXV" name="MXV">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MXV-ownedComment" body="Mexican Unidad de Inversion (UDI): Mexico">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MXV"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CHF" name="CHF">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CHF-ownedComment" body="Swiss Franc: Liechtenstein, Switzerland">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CHF"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SVC" name="SVC">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SVC-ownedComment" body="El Salvador Colon: El Salvador">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SVC"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MAD" name="MAD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MAD-ownedComment" body="Moroccan Dirham: Morocco, Western Sahara">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MAD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-NPR" name="NPR">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-NPR-ownedComment" body="Nepalese Rupee: Nepal">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-NPR"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-FKP" name="FKP">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-FKP-ownedComment" body="Pound: Falkland Islands (Malvinas)">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-FKP"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SZL" name="SZL">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SZL-ownedComment" body="Lilangeni: Swaziland">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SZL"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-NZD" name="NZD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-NZD-ownedComment" body="New Zealand Dollar: Cook Islands, New Zealand, Niue, Pitcairn, Tokelau">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-NZD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MVR" name="MVR">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MVR-ownedComment" body="Rufiyaa: Maldives">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-MVR"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BRL" name="BRL">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BRL-ownedComment" body="Brazilian Real: Brazil">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BRL"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-AON" name="AON">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-AON-ownedComment" body="New Kwanza: Angola">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-AON"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XPT" name="XPT">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XPT-ownedComment" body="Platinum: Bond Markets Units">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XPT"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-FJD" name="FJD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-FJD-ownedComment" body="Fiji Dollar: Fiji">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-FJD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CAD" name="CAD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CAD-ownedComment" body="Canadian Dollar: Canada">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CAD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CYP" name="CYP">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CYP-ownedComment" body="Cyprus Pound: Cyprus">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-CYP"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-AMD" name="AMD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-AMD-ownedComment" body="Armenian Dram: Armenia">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-AMD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BAM" name="BAM">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BAM-ownedComment" body="Convertible Marks: Bosnia and Herzegovina">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BAM"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BGL" name="BGL">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BGL-ownedComment" body="Lev: Bulgaria">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BGL"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XBA" name="XBA">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XBA-ownedComment" body="European Composite Unit (EURCO): Bond Markets Units">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XBA"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-PYG" name="PYG">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-PYG-ownedComment" body="Guarani: Paraguay">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-PYG"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XPD" name="XPD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XPD-ownedComment" body="Palladium: Bond Markets Units">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-XPD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-HRK" name="HRK">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-HRK-ownedComment" body="Kuna: Croatia">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-HRK"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SRG" name="SRG">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SRG-ownedComment" body="Surinam Guilder: Suriname">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SRG"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-IQD" name="IQD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-IQD-ownedComment" body="Iraqi Dinar: Iraq">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-IQD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-FIM" name="FIM">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-FIM-ownedComment" body="Markka: Finland">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-FIM"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-LYD" name="LYD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-LYD-ownedComment" body="Libyan Dinar: Libyan Arab Jamahiriya">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-LYD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-DEM" name="DEM">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-DEM-ownedComment" body="Deutsche Mark: Germany">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-DEM"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ECS" name="ECS">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ECS-ownedComment" body="Sucre: Ecuador">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ECS"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-LAK" name="LAK">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-LAK-ownedComment" body="Kip: Lao People's Democratic Republic">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-LAK"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-COP" name="COP">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-COP-ownedComment" body="Colombian Peso: Colombia">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-COP"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ETB" name="ETB">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ETB-ownedComment" body="Ethiopian Birr: Ethiopia">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-ETB"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-VEB" name="VEB">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-VEB-ownedComment" body="Bolivar: Venezuela">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-VEB"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BYR" name="BYR">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BYR-ownedComment" body="Belarussian Ruble: Belarus">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-BYR"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-USD" name="USD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-USD-ownedComment" body="US Dollar: American Samoa, British Indian Ocean Territory,, Guam, Haiti, Marshall Islands, Micronesia, Northern Mariana Islands, Palau, Panama, Puerto Rico, Turks and Caicos Islands, United States, United States Minor Outlaying Islands, Virgin Islands (British), Virgin Islands (U.S.)">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-USD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-RWF" name="RWF">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-RWF-ownedComment" body="Rwanda Franc: Rwanda">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-RWF"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-JPY" name="JPY">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-JPY-ownedComment" body="Yen: Japan">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-JPY"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-PKR" name="PKR">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-PKR-ownedComment" body="Pakistan Rupee: Pakistan">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-PKR"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-NGN" name="NGN">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-NGN-ownedComment" body="Naira: Nigeria">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-NGN"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SGD" name="SGD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SGD-ownedComment" body="Singapore Dollar: Singapore">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-SGD"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-NAD" name="NAD">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-NAD-ownedComment" body="Namibia Dollar: Namibia">
+									<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType-NAD"/>
+								</ownedComment>
+							</ownedLiteral>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Class" xmi:id="_niem-iso_4217-2.0-iso_4217-NamespaceElementPropertyHolder" name="NamespaceElementPropertyHolder"/>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeType" name="CurrencyCodeType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeType-ownedComment" body="A data type for a currency that qualifies a monetary amount.">
+								<annotatedElement xmi:idref="_niem-iso_4217-2.0-iso_4217-CurrencyCodeType"/>
+							</ownedComment>
+							<generalization xmi:type="uml:Generalization" xmi:id="_niem-iso_4217-2.0-iso_4217-CurrencyCodeType-generalization" general="_niem-iso_4217-2.0-iso_4217-CurrencyCodeSimpleType"/>
+						</packagedElement>
+					</packagedElement>
+				</packagedElement><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-iso_4217-profileApplication-1">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_PIM_Profile">
+						
+					</appliedProfile>
+				</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-iso_4217-profileApplication-2">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-Model_Package_Description_Profile">
+						
+					</appliedProfile>
+				</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-iso_4217-profileApplication-3">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_Common_Profile">
+						
+					</appliedProfile>
+				</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-iso_4217-profileApplication-4">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_PSM_Profile">
+						
+					</appliedProfile>
+				</profileApplication></packagedElement></uml:Model>
+	
+	
+	
+	
+	<NIEM_PIM_Profile:InformationModel xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile" xmi:id="_niem-iso_4217-2.0-iso_4217-appliedStereotypeInstance" base_Package="_niem-iso_4217-2.0-iso_4217" targetNamespace="http://niem.gov/niem/iso_4217/2.0" defaultPurpose="reference" isConformant="true" version="1"/>
+	
+	
+	
+	<NIEM_Common_Profile:PropertyHolder xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-iso_4217-2.0-iso_4217-NamespaceElementPropertyHolder-appliedStereotypeInstance" base_Class="_niem-iso_4217-2.0-iso_4217-NamespaceElementPropertyHolder"/>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</xmi:XMI>

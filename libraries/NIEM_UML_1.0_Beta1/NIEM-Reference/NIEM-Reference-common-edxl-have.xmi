@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/spec/XMI/20110701">
+	<uml:Model
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile"
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:Model_Package_Description_Profile="http://www.omg.org/spec/NIEM-UML/20120501/Model_Package_Description_Profile"
+		xmlns:uml="http://www.omg.org/spec/UML/20110701" xmi:type="uml:Model" xmi:id="_niem"
+		name="niem">
+		<packagedElement xmi:type="uml:Package" xmi:id="_niem-external" name="external"/>
+		<packagedElement xmi:type="uml:Package" xmi:id="_niem-edxl-have" name="edxl-have">
+			<packagedElement xmi:type="uml:Package" xmi:id="_niem-edxl-have-2.1" name="2.1">
+				<packagedElement xmi:type="uml:Package" xmi:id="_niem-edxl-have-2.1-edxl-have"
+					name="edxl-have">
+					<ownedComment xmi:type="uml:Comment"
+						xmi:id="_niem-edxl-have-2.1-edxl-have-ownedComment"
+						body="EDXL-HAVE specifies an XML document format that allows the communication of the status of a hospital, its services, and its resources. These include bed capacity and availability, emergency department status, available service coverage, and the status of a hospital's facility and operations.">
+						<annotatedElement xmi:idref="_niem-edxl-have-2.1-edxl-have"/>
+					</ownedComment>
+					<packagedElement xmi:type="uml:Class"
+						xmi:id="_niem-edxl-have-2.1-edxl-have-HaveAdapterType"
+						name="HaveAdapterType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-edxl-have-2.1-edxl-have-HaveAdapterType-ownedComment"
+							body="A data type for EDXL-HAVE which specifies an XML document format that allows the communication of the status of a hospital, its services, and its resources.">
+							<annotatedElement
+								xmi:idref="_niem-edxl-have-2.1-edxl-have-HaveAdapterType"/>
+						</ownedComment>
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-edxl-have-2.1-edxl-have-HaveAdapterType-HospitalStatus"
+							name="HospitalStatus" aggregation="composite"
+							association="_niem-edxl-have-2.1-edxl-have-packagedElement-3">
+							<type
+								href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-external-have.xmi#_niem-external-have-1.0-have-NamespaceElementPropertyHolder-HospitalStatus_._type"> </type>
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-edxl-have-2.1-edxl-have-HaveAdapterType-HospitalStatus-ownedComment"
+								body="The top level container element for reporting status of any number of hospitals. The EDXL-HAVE has no independent routing mechanism, so it requires a routing mechanism that is consistent with the EDXL-DE distribution types. It must contain one or more Hospital elements.&#xA;  ">
+								<annotatedElement
+									xmi:idref="_niem-edxl-have-2.1-edxl-have-HaveAdapterType-HospitalStatus"
+								/>
+							</ownedComment>
+							<lowerValue xmi:type="uml:LiteralInteger"
+								xmi:id="_niem-edxl-have-2.1-edxl-have-HaveAdapterType-HospitalStatus-lowerValue"/>
+							<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+								xmi:id="_niem-edxl-have-2.1-edxl-have-HaveAdapterType-HospitalStatus-upperValue"
+								value="*"/>
+						</ownedAttribute>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Realization"
+						xmi:id="_niem-edxl-have-2.1-edxl-have-packagedElement-2">
+						<client
+							xmi:idref="_niem-edxl-have-2.1-edxl-have-HaveAdapterType-HospitalStatus"/>
+						<supplier
+							href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-external-have.xmi#_niem-external-have-1.0-have-NamespaceElementPropertyHolder-HospitalStatus"
+						> </supplier>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Association"
+						xmi:id="_niem-edxl-have-2.1-edxl-have-packagedElement-3">
+						<memberEnd
+							xmi:idref="_niem-edxl-have-2.1-edxl-have-HaveAdapterType-HospitalStatus"/>
+						<memberEnd
+							xmi:idref="_niem-edxl-have-2.1-edxl-have-packagedElement-3-ownedEnd"/>
+						<ownedEnd xmi:type="uml:Property"
+							xmi:id="_niem-edxl-have-2.1-edxl-have-packagedElement-3-ownedEnd"
+							isUnique="false" type="_niem-edxl-have-2.1-edxl-have-HaveAdapterType"
+							association="_niem-edxl-have-2.1-edxl-have-packagedElement-3"
+						> </ownedEnd>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Class"
+						xmi:id="_niem-edxl-have-2.1-edxl-have-NamespaceElementPropertyHolder"
+						name="NamespaceElementPropertyHolder">
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-edxl-have-2.1-edxl-have-NamespaceElementPropertyHolder-HaveAdapter"
+							name="HaveAdapter" aggregation="composite"
+							type="_niem-edxl-have-2.1-edxl-have-HaveAdapterType">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-edxl-have-2.1-edxl-have-NamespaceElementPropertyHolder-HaveAdapter-ownedComment"
+								body="A standard message distribution framework for data sharing among emergency information systems using the XML-based Emergency Data Exchange Language (EDXL).">
+								<annotatedElement
+									xmi:idref="_niem-edxl-have-2.1-edxl-have-NamespaceElementPropertyHolder-HaveAdapter"
+								/>
+							</ownedComment>
+						</ownedAttribute>
+					</packagedElement>
+				</packagedElement>
+			</packagedElement>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-edxl-have-profileApplication-1">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_PIM_Profile"
+				> </appliedProfile>
+			</profileApplication>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-edxl-have-profileApplication-2">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-Model_Package_Description_Profile"
+				> </appliedProfile>
+			</profileApplication>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-edxl-have-profileApplication-3">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_Common_Profile"
+				> </appliedProfile>
+			</profileApplication>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-edxl-have-profileApplication-4">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_PSM_Profile"
+				> </appliedProfile>
+			</profileApplication>
+		</packagedElement>
+	</uml:Model>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-edxl-have-2.1-edxl-have-NamespaceElementPropertyHolder-HaveAdapter-appliedStereotypeInstance"
+		base_Property="_niem-edxl-have-2.1-edxl-have-NamespaceElementPropertyHolder-HaveAdapter"
+		kind="element" nillable="true"/>
+	<NIEM_Common_Profile:References
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-edxl-have-2.1-edxl-have-packagedElement-2-appliedStereotypeInstance"
+		base_Realization="_niem-edxl-have-2.1-edxl-have-packagedElement-2"/>
+	<NIEM_Common_Profile:AdapterType
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-edxl-have-2.1-edxl-have-HaveAdapterType-appliedStereotypeInstance"
+		base_Class="_niem-edxl-have-2.1-edxl-have-HaveAdapterType"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-edxl-have-2.1-edxl-have-HaveAdapterType-HospitalStatus-appliedStereotypeInstance"
+		base_Property="_niem-edxl-have-2.1-edxl-have-HaveAdapterType-HospitalStatus" kind="element"
+		nillable="false"/>
+	<NIEM_PIM_Profile:InformationModel
+		xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile"
+		xmi:id="_niem-edxl-have-2.1-edxl-have-appliedStereotypeInstance"
+		base_Package="_niem-edxl-have-2.1-edxl-have" isConformant="true" defaultPurpose="reference"
+		targetNamespace="http://niem.gov/niem/edxl-have/2.1" version="1"/>
+	<NIEM_Common_Profile:PropertyHolder
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-edxl-have-2.1-edxl-have-NamespaceElementPropertyHolder-appliedStereotypeInstance"
+		base_Class="_niem-edxl-have-2.1-edxl-have-NamespaceElementPropertyHolder"/>
+</xmi:XMI>

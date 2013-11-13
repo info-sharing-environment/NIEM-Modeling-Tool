@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<environment:Environment
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:environment="http://www.eclipse.org/papyrus/properties/environment/0.9">
+  <constraintTypes
+      label="Is POC Type"
+      constraintClass="org.search.niem.uml.papyrus.views.properties.constraints.IsPOCType"/>
+  <modelElementFactories
+      name="NIEM UML Specific Factory"
+      factoryClass="org.search.niem.uml.papyrus.views.properties.modelelement.POCTypeEditorFactory"/>
+  <modelElementFactories
+      name="NIEM UML Specific Factory"
+      factoryClass="org.search.niem.uml.papyrus.views.properties.modelelement.NIEMUmlModelElementFactory"/>
+</environment:Environment>

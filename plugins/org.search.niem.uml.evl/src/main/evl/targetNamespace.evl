@@ -1,0 +1,21 @@
+pre {
+    var validator = new Native('org.search.niem.uml.evl.validation.NiemValidationTool');
+}
+
+context Package {
+
+    guard : self.getAppliedStereotypes()->exists(s|s.isNiemNamespace()) and self.getTargetNamespace().isDefined()
+
+	critique ValidURI {
+		check : validator.isValidURI(self.getTargetNamespace())
+		message : validator.getMessage('_UI_critique_invalid_targetNamespace', self.name)
+	}
+}
+
+operation Element getTargetNamespace() : String {
+    return self.getValue(self.getAppliedStereotypes().selectOne(s|s.isNiemNamespace()), 'targetNamespace');
+}
+
+operation Stereotype isNiemNamespace() : Boolean {
+    return validator.isNamespace(self.qualifiedName);
+}

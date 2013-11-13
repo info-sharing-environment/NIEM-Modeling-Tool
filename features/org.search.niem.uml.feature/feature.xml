@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.search.niem.uml.feature"
+      label="%featureName"
+      version="1.0.0.qualifier"
+      provider-name="%providerName">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <url>
+      <update label="%updateSiteName" url="http://www.search.org/niem-uml/update-site"/>
+      <discovery label="%updateSiteName" url="http://www.search.org/niem-uml/update-site"/>
+   </url>
+
+   <requires>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.emf.common" version="2.9.0" match="compatible"/>
+      <import plugin="org.eclipse.uml2.uml" version="4.0.0" match="compatible"/>
+      <import plugin="org.apache.commons.lang" version="2.6.0" match="compatible"/>
+      <import plugin="org.search.niem.uml.library" version="1.0.0" match="equivalent"/>
+      <import plugin="org.eclipse.uml2.uml.resources" version="4.0.0" match="compatible"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.eclipse.emf.common.ui" version="2.8.0" match="compatible"/>
+      <import plugin="org.eclipse.gmf.runtime.diagram.core" version="1.6.0" match="compatible"/>
+      <import plugin="org.eclipse.papyrus.infra.core" version="0.10.0" match="compatible"/>
+      <import plugin="org.eclipse.papyrus.infra.hyperlink" version="0.10.0" match="compatible"/>
+      <import plugin="org.eclipse.papyrus.infra.gmfdiag.common" version="0.10.0" match="compatible"/>
+      <import plugin="org.eclipse.papyrus.editor" version="0.10.0" match="compatible"/>
+      <import plugin="org.eclipse.papyrus.uml.tools" version="0.10.0" match="compatible"/>
+      <import plugin="org.eclipse.papyrus.uml.diagram.clazz" version="0.10.0" match="compatible"/>
+      <import plugin="org.eclipse.papyrus.uml.diagram.component" version="0.10.0" match="compatible"/>
+      <import plugin="org.eclipse.papyrus.uml.diagram.pkg" version="0.10.0" match="compatible"/>
+      <import plugin="org.eclipse.papyrus.uml.diagram.wizards" version="0.10.0" match="compatible"/>
+      <import plugin="org.search.niem.uml" version="1.0.0" match="equivalent"/>
+      <import plugin="org.search.niem.uml.ui" version="1.0.0" match="equivalent"/>
+      <import plugin="org.apache.lucene.core" version="3.5.0" match="compatible"/>
+      <import plugin="org.eclipse.emf.edit.ui" version="2.8.0" match="compatible"/>
+      <import plugin="org.eclipse.uml2.uml.edit" version="4.0.0" match="compatible"/>
+      <import plugin="org.eclipse.search" version="3.9.0" match="compatible"/>
+      <import plugin="org.eclipse.papyrus.infra.core.sasheditor" version="0.10.0" match="compatible"/>
+      <import plugin="org.search.niem.uml.merge" version="1.0.0" match="equivalent"/>
+      <import plugin="org.search.niem.uml.papyrus" version="1.0.0" match="equivalent"/>
+      <import plugin="org.search.niem.uml.search" version="1.0.0" match="equivalent"/>
+      <import plugin="org.eclipse.jface" version="3.9.0" match="compatible"/>
+      <import plugin="org.eclipse.emf.ecore" version="2.9.0" match="compatible"/>
+      <import plugin="org.eclipse.draw2d" version="3.9.0" match="compatible"/>
+      <import plugin="org.eclipse.papyrus.uml.diagram.common" version="0.10.0" match="compatible"/>
+      <import plugin="org.eclipse.papyrus.uml.diagram.composite" version="0.10.0" match="compatible"/>
+      <import plugin="org.eclipse.swt"/>
+      <import plugin="org.eclipse.emf.transaction" version="1.4.0" match="compatible"/>
+      <import plugin="org.eclipse.gef" version="3.9.0" match="compatible"/>
+      <import plugin="org.eclipse.gmf.runtime.notation" version="1.5.0" match="compatible"/>
+      <import plugin="org.eclipse.gmf.runtime.emf.commands.core" version="1.4.0" match="compatible"/>
+      <import plugin="org.eclipse.papyrus.uml.extensionpoints" version="0.10.0" match="compatible"/>
+      <import plugin="org.search.niem.uml.resources" version="1.0.0" match="equivalent"/>
+      <import plugin="org.eclipse.ui.views.properties.tabbed" version="3.6.0" match="compatible"/>
+      <import plugin="org.eclipse.core.databinding.observable" version="1.4.0" match="compatible"/>
+      <import plugin="org.eclipse.emf.databinding.edit" version="1.3.0" match="compatible"/>
+      <import plugin="org.eclipse.papyrus.infra.constraints" version="0.10.0" match="compatible"/>
+      <import plugin="org.eclipse.papyrus.infra.emf" version="0.10.0" match="compatible"/>
+      <import plugin="org.eclipse.papyrus.infra.widgets" version="0.10.0" match="compatible"/>
+      <import plugin="org.eclipse.papyrus.views.properties" version="0.10.0" match="compatible"/>
+      <import plugin="org.eclipse.papyrus.views.properties.model" version="0.10.0" match="compatible"/>
+      <import plugin="org.eclipse.papyrus.uml.properties" version="0.10.0" match="compatible"/>
+      <import plugin="org.eclipse.papyrus.uml.tools.utils" version="0.10.0" match="compatible"/>
+      <import plugin="org.eclipse.core.expressions"/>
+      <import plugin="org.eclipse.uml2.uml.editor" version="4.0.0" match="compatible"/>
+      <import plugin="org.eclipse.gmf.runtime.diagram.ui" version="1.7.0" match="compatible"/>
+      <import plugin="org.eclipse.gmf.runtime.diagram.ui.providers" version="1.7.0" match="compatible"/>
+      <import plugin="org.eclipse.papyrus.infra.emf.readonly" version="0.10.0" match="compatible"/>
+      <import plugin="org.eclipse.papyrus.infra.gmfdiag.commands" version="0.10.0" match="compatible"/>
+      <import plugin="org.eclipse.papyrus.extensionpoints.editors" version="0.10.0" match="compatible"/>
+      <import plugin="com.google.guava" version="12.0.0" match="compatible"/>
+      <import plugin="org.search.niem.uml.search.ui" version="1.0.0" match="equivalent"/>
+      <import plugin="org.eclipse.e4.ui.workbench" version="1.0.0" match="compatible"/>
+      <import plugin="javax.annotation"/>
+      <import plugin="org.eclipse.emf.ecore.xmi"/>
+      <import plugin="org.eclipse.wst.xml.core" version="1.1.0" match="compatible"/>
+      <import plugin="org.eclipse.m2m.qvt.oml" version="3.0.0" match="compatible"/>
+      <import plugin="org.eclipse.m2m.qvt.oml.runtime" version="3.0.0" match="compatible"/>
+      <import plugin="org.eclipse.m2m.qvt.oml.common" version="3.0.0" match="compatible"/>
+      <import plugin="org.eclipse.xsd" version="2.9.0" match="compatible"/>
+      <import plugin="org.search.niem.mpd" version="1.0.0" match="equivalent"/>
+      <import plugin="org.eclipse.wst.xml.ui" version="1.1.0" match="compatible"/>
+      <import plugin="org.eclipse.m2m.qvt.oml.project" version="3.0.0" match="compatible"/>
+      <import plugin="org.apache.commons.io" version="2.0.0" match="compatible"/>
+      <import plugin="org.search.niem.uml.qvt" version="1.0.0" match="equivalent"/>
+      <import plugin="org.search.niem.xsd.library" version="1.0.0" match="equivalent"/>
+      <import plugin="org.eclipse.emf.edit" version="2.9.0" match="compatible"/>
+      <import plugin="org.eclipse.emf.edit.ui" version="2.9.0" match="compatible"/>
+      <import plugin="org.eclipse.epsilon.evl.emf.validation" version="1.0.0" match="compatible"/>
+      <import plugin="org.eclipse.epsilon.common.dt" version="1.0.0" match="compatible"/>
+      <import feature="org.eclipse.uml2" version="4.0.0" match="compatible"/>
+      <import feature="org.eclipse.papyrus.customization.feature" version="0.10.0" match="compatible"/>
+      <import feature="org.eclipse.papyrus.editor.feature" version="0.10.0" match="compatible"/>
+      <import feature="org.eclipse.papyrus.infra.core.feature" version="0.10.0" match="compatible"/>
+      <import feature="org.eclipse.papyrus.infra.discovery.feature" version="0.10.0" match="compatible"/>
+      <import feature="org.eclipse.papyrus.infra.emf.feature" version="0.10.0" match="compatible"/>
+      <import feature="org.eclipse.papyrus.infra.feature" version="0.10.0" match="compatible"/>
+      <import feature="org.eclipse.papyrus.infra.gmfdiag.feature" version="0.10.0" match="compatible"/>
+      <import feature="org.eclipse.papyrus.infra.queries.feature" version="0.10.0" match="compatible"/>
+      <import feature="org.eclipse.papyrus.infra.services.feature" version="0.10.0" match="compatible"/>
+      <import feature="org.eclipse.papyrus.infra.table.feature" version="0.10.0" match="compatible"/>
+      <import feature="org.eclipse.papyrus.infra.widget.feature" version="0.10.0" match="compatible"/>
+      <import feature="org.eclipse.papyrus.sdk.feature" version="0.10.0" match="compatible"/>
+      <import feature="org.eclipse.papyrus.uml.alf.feature" version="0.10.0" match="compatible"/>
+      <import feature="org.eclipse.papyrus.uml.diagram.feature" version="0.10.0" match="compatible"/>
+      <import feature="org.eclipse.papyrus.uml.feature" version="0.10.0" match="compatible"/>
+      <import feature="org.eclipse.papyrus.uml.modelexplorer.feature" version="0.10.0" match="compatible"/>
+      <import feature="org.eclipse.papyrus.uml.properties.feature" version="0.10.0" match="compatible"/>
+      <import feature="org.eclipse.papyrus.uml.table.feature" version="0.10.0" match="compatible"/>
+      <import feature="org.eclipse.papyrus.uml.textedit.feature" version="0.10.0" match="compatible"/>
+      <import feature="org.eclipse.papyrus.uml.tools.feature" version="0.10.0" match="compatible"/>
+      <import feature="org.eclipse.papyrus.views.modelexplorer.feature" version="0.10.0" match="compatible"/>
+      <import feature="org.eclipse.papyrus.views.properties.feature" version="0.10.0" match="compatible"/>
+      <import feature="org.eclipse.papyrus.xwt.feature" version="0.10.0" match="compatible"/>
+      <import feature="org.eclipse.m2m.qvt.oml" version="3.3.0" match="compatible"/>
+      <import feature="org.eclipse.m2m.qvt.oml.debug" version="1.3.0" match="compatible"/>
+      <import feature="org.eclipse.m2m.qvt.oml.editor" version="3.3.0" match="compatible"/>
+      <import feature="org.eclipse.m2m.qvt.oml.runtime" version="3.3.0" match="compatible"/>
+      <import feature="org.eclipse.m2m.qvt.oml.sdk" version="3.3.0" match="compatible"/>
+      <import feature="org.eclipse.epsilon.evl.emf.validation.feature" version="1.0.0" match="compatible"/>
+      <import plugin="org.eclipse.gmf.runtime.common.ui" version="1.7.0" match="compatible"/>
+      <import plugin="org.eclipse.papyrus.infra.gmfdiag.dnd" version="0.10.0" match="compatible"/>
+      <import plugin="org.eclipse.osgi"/>
+   </requires>
+
+   <plugin
+         id="org.search.niem.uml"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.search.niem.uml.resources"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.search.niem.uml.papyrus"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.search.niem.uml.search"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.search.niem.uml.search.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.search.niem.uml.merge"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.search.niem.uml.papyrus.palettes"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.search.niem.uml.papyrus.views.properties"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.search.niem.uml.papyrus.editors"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.search.niem.uml.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.search.niem.mpd"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.search.niem.uml.library"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.search.niem.uml.qvt"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.search.niem.uml.qvt.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.search.niem.xsd.library"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.search.niem.uml.examples"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.search.niem.uml.evl"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.commons.io"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.google.guava"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?eclipse version="3.4"?><plugin>
+   <extension point="org.eclipse.m2m.qvt.oml.runtime.qvtTransformation">
+      <transformation file="src/main/qvt/NIEMglobals.qvto" id="org.search.niem.uml.qvt.NIEMglobals">
+      </transformation>
+      <transformation file="src/main/qvt/NIEMmpdartifact2model.qvto" id="org.search.niem.uml.qvt.NIEMmpdartifact2model">
+      </transformation>
+      <transformation file="src/main/qvt/NIEMmpdmodel2artifact.qvto" id="org.search.niem.uml.qvt.NIEMmpdmodel2artifact">
+      </transformation>
+      <transformation file="src/main/qvt/NIEMpim2psm.qvto" id="org.search.niem.uml.qvt.NIEMpim2psm">
+      </transformation>
+      <transformation file="src/main/qvt/NIEMplatformBinding.qvto" id="org.search.niem.uml.qvt.NIEMplatformBinding">
+      </transformation>
+      <transformation file="src/main/qvt/NIEMpsm2xsd.qvto" id="org.search.niem.uml.qvt.NIEMpsm2xsd">
+      </transformation>
+   </extension>
+   <extension
+         point="org.eclipse.m2m.qvt.oml.javaBlackboxUnits">
+      <unit
+            name="NiemQvt"
+            namespace="org.search.niem">
+         <library
+               class="org.search.niem.uml.qvt.NiemQvtLibrary"
+               name="NiemQvtLib">
+            <metamodel
+                  nsURI="http://www.eclipse.org/uml2/4.0.0/UML">
+            </metamodel>
+            <metamodel
+                  nsURI="http://www.eclipse.org/emf/2002/Ecore">
+            </metamodel>
+            <metamodel
+                  nsURI="http://www.eclipse.org/xsd/2002/XSD">
+            </metamodel>
+            <metamodel
+                  nsURI="http://reference.niem.gov/niem/resource/mpd/catalog/1.0/">
+            </metamodel>
+         </library>
+      </unit>
+   </extension>
+</plugin>

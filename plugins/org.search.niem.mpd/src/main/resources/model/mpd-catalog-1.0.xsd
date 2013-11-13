@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema
+    attributeFormDefault="qualified"
+    elementFormDefault="qualified"
+    targetNamespace="http://reference.niem.gov/niem/resource/mpd/catalog/1.0/"
+    xmlns="http://www.w3.org/2001/XMLSchema"
+    xmlns:ca="http://reference.niem.gov/niem/resource/mpd/catalog/1.0/"
+    version="1.0">
+ 
+    <annotation>
+	<documentation>
+	    Model Package Description (MPD) Catalog;
+ 	    XML document element = Catalog;
+	    This schema defines the catalog.xml artifact 
+	    for Model Package Descriptions (MPD) in NIEM.
+	    MPDs include:
+		NIEM releases, core updates, domain updates, 
+		NIEM Information Exchange Package Documentation (IEPD), 
+		and NIEM Enterprise Information Exchange Models (EIEM). 
+
+	    NOTE:  The purpose of this schema is to define/declare metadata 
+	    for NIEM MPDs to search, discover, and process MPDs efficiently. 
+	    Instances of this schema are NOT NIEM data exchanges.  For 
+	    this reason this schema is NOT NIEM conforming, even though 
+	    type definitions and element/attribute declarations generally 
+	    conform to NIEM NDR naming rules.  
+	</documentation>
+    </annotation>
+
+    <element name="Catalog" type="ca:CatalogType"/> <!-- Root element -->
+
+<!-- Artifacts and structures =========================================== -->
+
+    <complexType name="CatalogType">
+        <sequence>
+	    <element ref="ca:Artifact" minOccurs="1" maxOccurs="unbounded"/>
+	    <element ref="ca:Metadata" minOccurs="1" maxOccurs="1"/>
+        </sequence>
+        <attribute	ref="ca:mpdURI"		use="required"/>
+	<attribute	ref="ca:mpdClassCode"	use="required"/>
+        <attribute	ref="ca:mpdName"	use="required"/>
+        <attribute	ref="ca:mpdVersionID"	use="required"/>
+        <attribute	ref="ca:descriptionText" use="optional"/>
+    </complexType>
+
+    <element name="Artifact" abstract="true"/>
+
+    <element name="FileSet" type="ca:FileSetType" substitutionGroup="ca:Artifact"/>
+
+    <complexType name="FileSetType">
+	<sequence>
+	    <element ref="ca:File" minOccurs="0" maxOccurs="unbounded"/>
+	</sequence>
+	<attribute	ref="ca:id"		    	use="required"/>
+	<attribute	ref="ca:externalURI"	    	use="optional"/>
+	<attribute	ref="ca:natureURI"	    	use="required"/>
+	<attribute	ref="ca:purposeURI"	    	use="required"/>
+	<attribute	ref="ca:descriptionText"    	use="optional"/>
+	<attribute 	ref="ca:files" 			use="optional"/>
+    </complexType>
+
+    <element name="Folder" type="ca:FolderType" substitutionGroup="ca:Artifact"/>
+
+    <complexType name="FolderType">
+	<attribute	ref="ca:id"			use="optional"/>
+	<attribute	ref="ca:relativePathName"	use="required"/>
+	<attribute	ref="ca:descriptionText"	use="optional"/>
+    </complexType>
+
+    <element name="File" type="ca:FileType" substitutionGroup="ca:Artifact"/>
+
+    <complexType name="FileType">
+	<attribute	ref="ca:id"		    	use="required"/>
+	<attribute	ref="ca:externalURI"	    	use="optional"/>
+	<attribute	ref="ca:relativePathName"   	use="required"/>
+	<attribute	ref="ca:natureURI"	    	use="required"/>
+	<attribute	ref="ca:purposeURI"	    	use="required"/>
+	<attribute	ref="ca:descriptionText"    	use="optional"/>
+    </complexType>
+
+<!-- Metadata =========================================================== -->
+
+    <element name="Metadata" type="ca:MetadataType"/>
+
+    <complexType name="MetadataType">
+	<sequence>
+	    <element ref="ca:SecurityMarkingText" minOccurs="1" maxOccurs="1"/>
+	    <element ref="ca:CreationDate"	minOccurs="1" maxOccurs="1"/>
+	    <element ref="ca:LastRevisionDate"	minOccurs="0" maxOccurs="1"/>
+	    <element ref="ca:NextRevisionDate"	minOccurs="0" maxOccurs="1"/>
+	    <element ref="ca:StatusText"	minOccurs="0" maxOccurs="1"/>
+	    <element ref="ca:Relationship"	minOccurs="0" maxOccurs="unbounded"/>
+	    <element ref="ca:KeywordText" minOccurs="1" maxOccurs="unbounded"/>
+	    <element ref="ca:DomainText"  minOccurs="1" maxOccurs="unbounded"/>
+	    <element ref="ca:PurposeText" minOccurs="0" maxOccurs="unbounded"/>
+	    <element ref="ca:ExchangePatternText" minOccurs="0" maxOccurs="unbounded"/>
+	    <element ref="ca:ExchangePartnerName" minOccurs="0" maxOccurs="unbounded"/>
+	    <element ref="ca:AuthoritativeSource" minOccurs="1" maxOccurs="1"/>
+	</sequence>
+    </complexType>
+
+    <element name="AuthoritativeSource" type="ca:AuthoritativeSourceType"/>
+
+    <complexType name="AuthoritativeSourceType">
+	<sequence>
+	    <element ref="ca:ASName"	    	minOccurs="1"   maxOccurs="1"/>
+	    <element ref="ca:ASAddressText"   minOccurs="0"   maxOccurs="1"/>
+	    <element ref="ca:ASWebSiteURL"	minOccurs="0"   maxOccurs="1"/>
+	    <element ref="ca:POC"	minOccurs="1"   maxOccurs="unbounded"/>
+	</sequence>
+    </complexType>
+
+    <element name="POC" type="ca:POCType"/>
+
+    <complexType name="POCType">
+	<sequence>
+	   <element ref="ca:POCName"	minOccurs="1"  maxOccurs="1"/>
+	   <element ref="ca:POCEmail" minOccurs="1"  maxOccurs="unbounded"/>
+	   <element ref="ca:POCTelephone" minOccurs="1"   maxOccurs="unbounded"/>
+	</sequence>
+    </complexType>
+
+    <element name="SecurityMarkingText"	type="string"	default="unclassified"/>
+    <element name="CreationDate"		type="date"/>
+    <element name="LastRevisionDate"	type="date"/>
+    <element name="NextRevisionDate"	type="date"/>
+    <element name="StatusText"	    	type="string"/>
+    <element name="Relationship"		type="ca:RelationshipType"/>
+    <element name="KeywordText"		type="string"/>
+    <element name="DomainText"	    	type="string"/>
+    <element name="PurposeText"	    	type="string"/>
+
+    <element name="ExchangePatternText" 	type="string"/>
+    <element name="ExchangePartnerName" 	type="string"/>
+
+    <element name="ASName"			type="string"/>
+    <element name="ASAddressText"	    	type="string"/>
+    <element name="ASWebSiteURL" 		type="anyURI"/>
+    <element name="POCName"	    		type="string"/>
+    <element name="POCEmail"			type="string"/>
+    <element name="POCTelephone"		type="string"/>
+
+    <complexType name="RelationshipType">
+	<attribute ref="ca:relationshipCode"    use="required"/>
+	<attribute ref="ca:resourceURI"	    use="required"/>
+	<attribute ref="ca:descriptionText"     use="optional"/>
+    </complexType>
+
+<!-- Primitives ========================================================= -->
+
+    <attribute name="id"			type="ID"/>
+    <attribute name="mpdURI"			type="ca:URISimpleType"/>
+    <attribute name="mpdClassCode"		type="ca:MPDClassCodeSimpleType"/>
+    <attribute name="mpdName"			type="string"/>
+    <attribute name="mpdVersionID"		type="ca:MPDVersionIDSimpleType"/>
+    <attribute name="externalURI"		type="ca:URISimpleType"/>
+    <attribute name="relativePathName"	type="string"/>
+    <attribute name="natureURI"		type="ca:URISimpleType"/>
+    <attribute name="purposeURI"		type="ca:URISimpleType"/>
+    <attribute name="descriptionText"	type="string"/>
+    <attribute name="files"			type="IDREFS"/>
+    <attribute name="resourceURI"		type="ca:URISimpleType"/>
+    <attribute name="relationshipCode" type="ca:RelationshipCodeSimpleType"/>
+
+    <simpleType name="MPDClassCodeSimpleType">
+	<restriction base="token">
+	    <enumeration value="release"/>
+	    <enumeration value="core-update"/>
+	    <enumeration value="domain-update"/>
+	    <enumeration value="iepd"/>
+	    <enumeration value="eiem"/>
+	</restriction>
+    </simpleType>
+
+    <simpleType name="RelationshipCodeSimpleType">
+	<restriction base="token">
+	    <enumeration value="version_of"/>
+	    <enumeration value="specializes"/>
+	    <enumeration value="generalizes"/>
+	    <enumeration value="supersedes"/>
+	    <enumeration value="deprecates"/>
+	    <enumeration value="adapts"/>
+	    <enumeration value="updates"/>
+	    <enumeration value="conforms_to"/>
+	</restriction>
+    </simpleType>
+
+    <simpleType name="MPDVersionIDSimpleType">
+        <restriction base="token">
+	    <pattern value="[0-9]+(\.[0-9]+)*((alpha|beta|rc|rev)[0-9]+)?"/>
+	    <minLength value="1"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="URISimpleType">
+        <union memberTypes="anyURI ca:SafeCurieSimpleType"/>
+    </simpleType>
+
+    <simpleType name="SafeCurieSimpleType">
+        <restriction base="string">
+            <pattern value="\[(([\i-[:]][\c-[:]]*)?:)?.+\]"/>
+            <minLength value="3"/>
+        </restriction>
+    </simpleType> 
+
+</schema>
+

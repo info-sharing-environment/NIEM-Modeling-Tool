@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8"?><xmi:XMI xmlns:xmi="http://www.omg.org/spec/XMI/20110701">
+	
+	
+	
+	<uml:Model xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile" xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Model_Package_Description_Profile="http://www.omg.org/spec/NIEM-UML/20120501/Model_Package_Description_Profile" xmlns:uml="http://www.omg.org/spec/UML/20110701" xmi:type="uml:Model" xmi:id="_niem" name="niem"><packagedElement xmi:type="uml:Package" xmi:id="_niem-atf" name="atf"><packagedElement xmi:type="uml:Package" xmi:id="_niem-atf-2.0" name="2.0">
+					<packagedElement xmi:type="uml:Package" xmi:id="_niem-atf-2.0-atf" name="atf">
+						<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ownedComment" body="Bureau of Alcohol, Tobacco, and Firearms">
+							<annotatedElement xmi:idref="_niem-atf-2.0-atf"/>
+						</ownedComment>
+						
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType" name="ExplosiveComponentCodeSimpleType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-ownedComment" body="A data type for an item contained within an explosive device designed to cause harm or damage when propelled by an explosion.">
+								<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType"/>
+							</ownedComment>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-4" name="4">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-4-ownedComment" body="Candles">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-4"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-13" name="13">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-13-ownedComment" body="Rubber bands/Straps">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-13"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-19" name="19">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-19-ownedComment" body="Wire Construction">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-19"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-8" name="8">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-8-ownedComment" body="Magnet">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-8"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-7" name="7">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-7-ownedComment" body="Fragmentation">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-7"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-3" name="3">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-3-ownedComment" body="BBs/Buckshot">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-3"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-2" name="2">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-2-ownedComment" body="Balloons">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-2"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-11" name="11">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-11-ownedComment" body="Nuts/Bolts/Screws">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-11"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-6" name="6">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-6-ownedComment" body="Clay">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-6"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-16" name="16">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-16-ownedComment" body="Styrofoam">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-16"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-14" name="14">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-14-ownedComment" body="Shells">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-14"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-5" name="5">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-5-ownedComment" body="Cardboard/Paper">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-5"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-15" name="15">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-15-ownedComment" body="String/Rope">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-15"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-20" name="20">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-20-ownedComment" body="Wood">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-20"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-1" name="1">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-1-ownedComment" body="Aluminum Foil">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-1"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-12" name="12">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-12-ownedComment" body="Pellets">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-12"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-9" name="9">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-9-ownedComment" body="Money/Coins">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-9"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-17" name="17">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-17-ownedComment" body="Tape">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-17"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-21" name="21">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-21-ownedComment" body="Other ">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-21"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-10" name="10">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-10-ownedComment" body="Nails">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-10"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-18" name="18">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-18-ownedComment" body="Wax/Epoxy/Putty/Bondo/etc.">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType-18"/>
+								</ownedComment>
+							</ownedLiteral>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Class" xmi:id="_niem-atf-2.0-atf-NamespaceElementPropertyHolder" name="NamespaceElementPropertyHolder"/>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeType" name="ExplosiveComponentCodeType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeType-ownedComment" body="A data type for an item contained within an explosive device designed to cause harm or damage when propelled by an explosion.">
+								<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveComponentCodeType"/>
+							</ownedComment>
+							<generalization xmi:type="uml:Generalization" xmi:id="_niem-atf-2.0-atf-ExplosiveComponentCodeType-generalization" general="_niem-atf-2.0-atf-ExplosiveComponentCodeSimpleType"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType" name="ExplosiveContainerCodeSimpleType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-ownedComment" body="A data type for an object that contains an explosive substance or agent.">
+								<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType"/>
+							</ownedComment>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-13" name="13">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-13-ownedComment" body="Tubing">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-13"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-15" name="15">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-15-ownedComment" body="Other">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-15"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-10" name="10">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-10-ownedComment" body="Letter/Book">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-10"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-2" name="2">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-2-ownedComment" body="Bottle/Jug">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-2"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-12" name="12">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-12-ownedComment" body="Radio/TV/Tape Player">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-12"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-5" name="5">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-5-ownedComment" body="Can">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-5"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-8" name="8">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-8-ownedComment" body="Gas Cylinder">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-8"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-4" name="4">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-4-ownedComment" body="Brief Case/Luggage">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-4"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-9" name="9">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-9-ownedComment" body="Grenade">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-9"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-6" name="6">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-6-ownedComment" body="CO2 Container">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-6"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-14" name="14">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-14-ownedComment" body="Vehicle">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-14"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-1" name="1">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-1-ownedComment" body="Bag">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-1"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-7" name="7">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-7-ownedComment" body="End Cap/Plugs">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-7"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-11" name="11">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-11-ownedComment" body="Pipe">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-11"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-3" name="3">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-3-ownedComment" body="Box">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType-3"/>
+								</ownedComment>
+							</ownedLiteral>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeType" name="ExplosiveContainerCodeType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeType-ownedComment" body="A data type for an object that contains an explosive substance or agent.">
+								<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveContainerCodeType"/>
+							</ownedComment>
+							<generalization xmi:type="uml:Generalization" xmi:id="_niem-atf-2.0-atf-ExplosiveContainerCodeType-generalization" general="_niem-atf-2.0-atf-ExplosiveContainerCodeSimpleType"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType" name="ExplosiveFillerCodeSimpleType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-ownedComment" body="A data type for a substance that can cause an explosion when ignited or detonated.">
+								<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType"/>
+							</ownedComment>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-10" name="10">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-10-ownedComment" body="Dynamite">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-10"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-19" name="19">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-19-ownedComment" body="PETN">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-19"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-8" name="8">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-8-ownedComment" body="Deta Sheet">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-8"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-27" name="27">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-27-ownedComment" body="Other ">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-27"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-5" name="5">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-5-ownedComment" body="C3">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-5"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-24" name="24">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-24-ownedComment" body="Simulator">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-24"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-2" name="2">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-2-ownedComment" body="Black Powder">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-2"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-20" name="20">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-20-ownedComment" body="Potassium Chlorate/Chemical/Solidox/etc.">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-20"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-4" name="4">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-4-ownedComment" body="Booster">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-4"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-9" name="9">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-9-ownedComment" body="Dynamite Binary">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-9"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-12" name="12">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-12-ownedComment" body="Flam. Solid; Flam. Gas">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-12"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-18" name="18">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-18-ownedComment" body="Pellet Powder">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-18"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-1" name="1">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-1-ownedComment" body="ANFO">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-1"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-25" name="25">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-25-ownedComment" body="Smokeless Powder">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-25"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-22" name="22">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-22-ownedComment" body="Rdx, Nitroguandine">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-22"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-3" name="3">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-3-ownedComment" body="Blasting Agent">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-3"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-16" name="16">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-16-ownedComment" body="Nitroglycerene">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-16"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-15" name="15">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-15-ownedComment" body="Match Heads; Photo Flash Powder">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-15"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-14" name="14">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-14-ownedComment" body="Magnesium">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-14"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-23" name="23">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-23-ownedComment" body="Shape Charge">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-23"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-7" name="7">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-7-ownedComment" body="Composition B">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-7"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-21" name="21">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-21-ownedComment" body="Primer; Ammonium Nitrate/Prill">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-21"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-11" name="11">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-11-ownedComment" body="Flam. Liquid">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-11"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-6" name="6">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-6-ownedComment" body="C4">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-6"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-26" name="26">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-26-ownedComment" body="TNT">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-26"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-17" name="17">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-17-ownedComment" body="Ordnance">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-17"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-13" name="13">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-13-ownedComment" body="Liquid Explosive">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType-13"/>
+								</ownedComment>
+							</ownedLiteral>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeType" name="ExplosiveFillerCodeType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeType-ownedComment" body="A data type for a substance that can cause an explosion when ignited or detonated.">
+								<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveFillerCodeType"/>
+							</ownedComment>
+							<generalization xmi:type="uml:Generalization" xmi:id="_niem-atf-2.0-atf-ExplosiveFillerCodeType-generalization" general="_niem-atf-2.0-atf-ExplosiveFillerCodeSimpleType"/>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType" name="ExplosiveIgnitionCodeSimpleType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-ownedComment" body="A data type for a means by which an explosive is ignited or detonated.">
+								<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType"/>
+							</ownedComment>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-11" name="11">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-11-ownedComment" body="Electrically Initiated">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-11"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-27" name="27">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-27-ownedComment" body="Signal Incendiary Fire">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-27"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-19" name="19">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-19-ownedComment" body="Lamp">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-19"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-33" name="33">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-33-ownedComment" body="Wick">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-33"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-32" name="32">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-32-ownedComment" body="Trailers of Flammable Liquid">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-32"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-25" name="25">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-25-ownedComment" body="Remote Control">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-25"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-13" name="13">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-13-ownedComment" body="Firecracker/Fireworks">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-13"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-4" name="4">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-4-ownedComment" body="Caps Electric">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-4"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-20" name="20">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-20-ownedComment" body="Male/Female Plugs ">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-20"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-34" name="34">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-34-ownedComment" body="Wire">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-34"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-3" name="3">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-3-ownedComment" body="Blasting Machine">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-3"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-9" name="9">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-9-ownedComment" body="Connectors">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-9"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-2" name="2">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-2-ownedComment" body="Batteries">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-2"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-7" name="7">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-7-ownedComment" body="Clock">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-7"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-8" name="8">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-8-ownedComment" body="Clothespin">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-8"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-29" name="29">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-29-ownedComment" body="Squib/Electric Matches">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-29"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-22" name="22">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-22-ownedComment" body="Military Fuse">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-22"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-5" name="5">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-5-ownedComment" body="Caps Non-Electric">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-5"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-16" name="16">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-16-ownedComment" body="Galvanometer">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-16"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-15" name="15">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-15-ownedComment" body="Flash/Light Bulb">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-15"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-28" name="28">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-28-ownedComment" body="Spark Plug">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-28"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-18" name="18">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-18-ownedComment" body="Improvised Detonators/Initiators">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-18"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-26" name="26">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-26-ownedComment" body="Safety Fuse">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-26"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-31" name="31">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-31-ownedComment" body="Timer">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-31"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-1" name="1">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-1-ownedComment" body="Alligator Clips">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-1"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-24" name="24">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-24-ownedComment" body="Mouse/Rat Trap">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-24"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-30" name="30">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-30-ownedComment" body="Switch">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-30"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-21" name="21">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-21-ownedComment" body="Matches">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-21"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-6" name="6">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-6-ownedComment" body="Cigarette">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-6"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-23" name="23">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-23-ownedComment" body="Model Rocket">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-23"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-10" name="10">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-10-ownedComment" body="Detonating Cord">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-10"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-14" name="14">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-14-ownedComment" body="Firing Device">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-14"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-17" name="17">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-17-ownedComment" body="Igniter Cord">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-17"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-12" name="12">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-12-ownedComment" body="Electronic Component">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-12"/>
+								</ownedComment>
+							</ownedLiteral>
+							<ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-35" name="35">
+								<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-35-ownedComment" body="Other">
+									<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType-35"/>
+								</ownedComment>
+							</ownedLiteral>
+						</packagedElement>
+						<packagedElement xmi:type="uml:Enumeration" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeType" name="ExplosiveIgnitionCodeType">
+							<ownedComment xmi:type="uml:Comment" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeType-ownedComment" body="A data type for a means by which an explosive is ignited or detonated.">
+								<annotatedElement xmi:idref="_niem-atf-2.0-atf-ExplosiveIgnitionCodeType"/>
+							</ownedComment>
+							<generalization xmi:type="uml:Generalization" xmi:id="_niem-atf-2.0-atf-ExplosiveIgnitionCodeType-generalization" general="_niem-atf-2.0-atf-ExplosiveIgnitionCodeSimpleType"/>
+						</packagedElement>
+					</packagedElement>
+				</packagedElement><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-atf-profileApplication-1">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_PIM_Profile">
+						
+					</appliedProfile>
+				</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-atf-profileApplication-2">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-Model_Package_Description_Profile">
+						
+					</appliedProfile>
+				</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-atf-profileApplication-3">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_Common_Profile">
+						
+					</appliedProfile>
+				</profileApplication><profileApplication xmi:type="uml:ProfileApplication" xmi:id="_niem-atf-profileApplication-4">
+					<appliedProfile href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_PSM_Profile">
+						
+					</appliedProfile>
+				</profileApplication></packagedElement></uml:Model>
+	
+	
+	
+	
+	
+	
+	<NIEM_Common_Profile:PropertyHolder xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmi:id="_niem-atf-2.0-atf-NamespaceElementPropertyHolder-appliedStereotypeInstance" base_Class="_niem-atf-2.0-atf-NamespaceElementPropertyHolder"/>
+	
+	<NIEM_PIM_Profile:InformationModel xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile" xmi:id="_niem-atf-2.0-atf-appliedStereotypeInstance" base_Package="_niem-atf-2.0-atf" targetNamespace="http://niem.gov/niem/atf/2.0" defaultPurpose="reference" isConformant="true" version="1"/>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</xmi:XMI>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Composite xmlns:ppel="clr-namespace:org.eclipse.papyrus.views.properties.widgets.layout"
+    xmlns="http://www.eclipse.org/xwt/presentation" xmlns:ppe="clr-namespace:org.eclipse.papyrus.views.properties.widgets"
+    xmlns:j="clr-namespace:java.lang" xmlns:x="http://www.eclipse.org/xwt">
+    <Composite.layout>
+        <ppel:PropertiesLayout></ppel:PropertiesLayout>
+    </Composite.layout>
+    <Composite>
+        <Composite.layout>
+            <ppel:PropertiesLayout></ppel:PropertiesLayout>
+        </Composite.layout>
+        <ppe:StringEditor input="{Binding}" property="UML:NamedElement:name"></ppe:StringEditor>
+    </Composite>
+    <Composite>
+        <Composite.layout>
+            <ppel:PropertiesLayout></ppel:PropertiesLayout>
+        </Composite.layout>
+        <ppe:EnumCombo input="{Binding}" property="UML:NamedElement:visibility"></ppe:EnumCombo>
+    </Composite>
+    <Composite>
+        <Composite.layout>
+            <ppel:PropertiesLayout></ppel:PropertiesLayout>
+        </Composite.layout>
+        <ppe:MultiReference input="{Binding}"
+            property="UML:Package:packageMerge"></ppe:MultiReference>
+    </Composite>
+    <Composite>
+        <Composite.layout>
+            <ppel:PropertiesLayout></ppel:PropertiesLayout>
+        </Composite.layout>
+        <ppe:MultiReference input="{Binding}"
+            property="UML:Element:ownedComment"></ppe:MultiReference>
+    </Composite>
+</Composite>

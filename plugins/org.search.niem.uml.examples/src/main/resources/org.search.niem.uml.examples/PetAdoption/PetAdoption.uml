@@ -1,0 +1,1876 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" xmlns:Model_Package_Description_Profile="http://www.omg.org/spec/NIEM-UML/20120501/Model_Package_Description_Profile" xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile" xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" xsi:schemaLocation="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile pathmap://NIEM_UML/NIEM-UML-Profile.xmi#NIEM_UML_Profile-NIEM_Common_Profile-ePackage http://www.omg.org/spec/NIEM-UML/20120501/Model_Package_Description_Profile pathmap://NIEM_UML/NIEM-UML-Profile.xmi#NIEM_UML_Profile-Model_Package_Description_Profile-ePackage http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile pathmap://NIEM_UML/NIEM-UML-Profile.xmi#NIEM_UML_Profile-NIEM_PIM_Profile-ePackage http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile pathmap://NIEM_UML/NIEM-UML-Profile.xmi#NIEM_UML_Profile-NIEM_PSM_Profile-ePackage http://www.omg.org/spec/UML/20110701 http://www.eclipse.org/uml2/4.0.0/UML">
+	<uml:Model
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmi:type="uml:Model" xmi:id='eee_1045467100313_135436_1' name='Data'>
+		<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329450429157_64745_1523' body='Author:Cory-c.&#10;Created:2/16/12 10:47 PM.&#10;Title:.&#10;Comment:.&#10;'>
+			<annotatedElement xmi:idref='eee_1045467100313_135436_1'/>
+		</ownedComment>
+		<packagedElement xmi:type='uml:Package' xmi:id='_17_0_3_7b3022e_1329450445274_400438_1659' name='PetAdoptionPIM'>
+			<packagedElement xmi:type='uml:Package' xmi:id='_17_0_3_7b3022e_1329450471291_982463_1660' name='PetAdoptionNIEMCoreSubset'>
+				<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_1_2_7b3022e_1336672240431_581440_12154' body='Subset of NIEM core for pet example'>
+					<annotatedElement xmi:idref='_17_0_3_7b3022e_1329450471291_982463_1660'/>
+				</ownedComment>
+				<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_1_2_7b3022e_1336672199453_972636_12151' body='A Documented Component'/>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_7b3022e_1329450939979_284540_11328' name='Person'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_1_2_7b3022e_1336672368133_460753_12180' body='A datatype for an individual person'>
+						<annotatedElement xmi:idref='_17_0_3_7b3022e_1329450939979_284540_11328'/>
+					</ownedComment>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329684582436_832999_11430' name='PersonBirthDate' type='_17_0_3_7b3022e_1329516122615_943953_13023'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329684582538_938208_11524' body='A date a person was born.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329684582436_832999_11430'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329684582538_482820_11525'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329684582538_592187_11523' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329451216873_484639_11494' name='PersonSSNIdentification' visibility='private' aggregation='composite' type='_17_0_3_7b3022e_1329498574736_746098_15778'>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329451265463_915468_11496'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329499504018_934433_16142' name='PersonName' visibility='private' aggregation='composite' type='_17_0_3_7b3022e_1329451046513_135923_11373'>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329497622987_125199_15628' name='ContactInformationReference' visibility='private' type='_17_0_3_7b3022e_1329494936006_999882_14994' association='_17_0_3_7b3022e_1329497622986_145515_15627'>
+						<lowerValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329498346380_587581_15680'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329498346380_602021_15681' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329500573474_925996_16261' name='AdoptionByPerson' visibility='private' type='_17_0_3_7b3022e_1329500540891_536740_16224' association='_17_0_3_7b3022e_1329500573474_471043_16259'>
+						<lowerValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329500612467_639902_16290'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329500612467_404686_16291' value='*'/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_7b3022e_1329451046513_135923_11373' name='PersonName'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329451046517_423050_11374' body='A data type for a combination of names and/or titles by which a person is known.'>
+						<annotatedElement xmi:idref='_17_0_3_7b3022e_1329451046513_135923_11373'/>
+					</ownedComment>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329451046518_778292_11375' name='PersonNamePrefixText' aggregation='composite' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329451046534_976048_11384' body='A title or honorific used by a person.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329451046518_778292_11375'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329499452483_27965_16128'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329451046520_274594_11376' name='PersonGivenName' aggregation='composite' type='_17_0_3_7b3022e_1329499295062_934824_16093'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329451046535_250628_11388' body='A first name of a person.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329451046520_274594_11376'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329499456548_19016_16130'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329451046522_743823_11377' name='PersonMiddleName' aggregation='composite' type='_17_0_3_7b3022e_1329499295062_934824_16093'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329451046536_872971_11392' body='A middle name of a person.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329451046522_743823_11377'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329499461515_516293_16132'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329451046524_242050_11378' name='PersonSurName' aggregation='composite' type='_17_0_3_7b3022e_1329499295062_934824_16093'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329451046536_940679_11396' body='A last name or family name of a person.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329451046524_242050_11378'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329499465443_804043_16134'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329451046526_534592_11379' name='PersonNameSuffixText' aggregation='composite' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329451046537_565710_11400' body='A term appended after the family name that qualifies the name.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329451046526_534592_11379'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329499469770_812082_16136'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329451046528_261928_11380' name='PersonMaidenName' aggregation='composite' type='_17_0_3_7b3022e_1329499295062_934824_16093'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329451046537_808282_11404' body='An original surname of a person before changed by marriage.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329451046528_261928_11380'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329499473643_726373_16138'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329451046530_348620_11381' name='PersonFullName' aggregation='composite' type='_17_0_3_7b3022e_1329499295062_934824_16093'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329451046538_298315_11408' body='A complete name of a person.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329451046530_348620_11381'/>
+						</ownedComment>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_7b3022e_1329452294108_517714_11927' name='Address'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329452294228_338152_12052' body='A data type for a geophysical location described by postal information.'>
+						<annotatedElement xmi:idref='_17_0_3_7b3022e_1329452294108_517714_11927'/>
+					</ownedComment>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329452294109_36622_11928' name='StructuredAddress'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329452294229_266071_12054' body='A representation of an address.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329452294109_36622_11928'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329452294229_466619_12055'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329452294228_194199_12053' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329452294082_39338_11916' name='AddressFullText' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329452294116_525203_11934' body='A complete address.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329452294082_39338_11916'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_1_2_7b3022e_1336671714432_442863_11963'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329452294116_638105_11933' value='*'/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_7b3022e_1329454088071_753264_13561' name='Organization'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329454088083_630971_13562' body='A data type for a body of people organized for a particular purpose.'>
+						<annotatedElement xmi:idref='_17_0_3_7b3022e_1329454088071_753264_13561'/>
+					</ownedComment>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329454088089_231257_13565' name='OrganizationBranchName' aggregation='composite' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329454088123_257258_13598' body='A name of the chapter or branch by which an organization is known within a larger group of organizations.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329454088089_231257_13565'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329454951939_751478_14252'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329454088092_569607_13567' name='OrganizationDayContactInformation' aggregation='composite' type='_17_0_3_7b3022e_1329494936006_999882_14994'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329454088123_871221_13605' body='A means of contacting an organization during daytime hours.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329454088092_569607_13567'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329454957098_960243_14254'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329454088093_218818_13568' name='OrganizationDescriptionText' aggregation='composite' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329454088124_266864_13609' body='A description of an organization '>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329454088093_218818_13568'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329454965715_23120_14256'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329454088096_348371_13570' name='OrganizationEmergencyContactInformation' aggregation='composite' type='_17_0_3_7b3022e_1329494936006_999882_14994'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329454088124_647269_13617' body='A means of contacting an organization in the event of an emergency.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329454088096_348371_13570'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329454088124_151819_13618'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329454088124_726508_13616' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329454088101_271048_13573' name='OrganizationIdentification' aggregation='composite' type='_17_0_3_7b3022e_1329498574736_746098_15778'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329454088125_211884_13629' body='An identification that references an organization.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329454088101_271048_13573'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329454088125_453846_13630'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329454088125_870772_13628' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329454088105_42947_13576' name='OrganizationLocation' aggregation='composite' type='_17_0_3_7b3022e_1329454445863_85747_13910' association='_17_0_3_7b3022e_1331655237046_589623_15808'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329454088126_285529_13641' body='A location of an organization.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329454088105_42947_13576'/>
+						</ownedComment>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329516961953_583287_13150' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329454088106_257336_13577' name='OrganizationName' aggregation='composite' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329454088127_350795_13645' body='A name of an organization.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329454088106_257336_13577'/>
+						</ownedComment>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329454088119_232493_13586' name='OrganizationTaxIdentification' aggregation='composite' type='_17_0_3_7b3022e_1329498574736_746098_15778'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329454088129_906220_13680' body='A tax identification assigned to an organization.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329454088119_232493_13586'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329454088129_694359_13681'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329454088129_509313_13679' value='*'/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_7b3022e_1329454445863_85747_13910' name='Location'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329454445873_183376_13911' body='A data type for a geophysical location.'>
+						<annotatedElement xmi:idref='_17_0_3_7b3022e_1329454445863_85747_13910'/>
+					</ownedComment>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329454445877_206152_13914' name='LocationAltitudeMeasure' type='_17_0_3_24a0131_1330115209856_913957_2059'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329454445911_725175_13942' body='A measurement of the height or position of a location above a certain reference.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329454445877_206152_13914'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329454445911_187180_13943'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329454445911_495765_13941' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329454445880_514470_13915' name='LocationArea' type='_17_0_3_24a0131_1330116390297_227288_2091'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329454445911_946637_13946' body='A location identified by geographic boundaries.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329454445880_514470_13915'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329454445911_628573_13947'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329454445911_786223_13945' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329454445875_494478_13913' name='LocationAddressGrid' type='_17_0_3_24a0131_1330119584598_291137_2645'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329454445911_652073_13938' body='A location identified by a unit of a grid system overlaid on an area.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329454445875_494478_13913'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329454445911_624479_13939'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329454445911_438021_13937' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329454445882_725933_13916' name='LocationCategory'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329454445912_699767_13950' body='A kind or functional description of a location.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329454445882_725933_13916'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329454445912_6055_13951'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329454445912_68189_13949' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329454445909_616688_13932' name='LocationUTMCoordinate' type='_17_0_3_24a0131_1330119687285_599357_2656'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329454445918_943349_14013' body='A coordinate from the Universal Transverse Mercator (UTM) Coordinate System, which represents a location with a grid zone, an easting value, and a northing value.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329454445909_616688_13932'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329454445918_541628_14014'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329454445918_887801_14012' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329454445886_652692_13918' name='LocationCrossStreet' type='_17_0_3_24a0131_1330119835446_134675_2686'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329454445912_7475_13957' body='A location identified by two or more streets which intersect.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329454445886_652692_13918'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329454445912_808019_13958'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329454445912_226304_13956' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329454445888_555482_13919' name='LocationDepthMeasure' type='_17_0_3_24a0131_1330115209856_913957_2059'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329454445913_185546_13961' body='A measure of the depth of a location.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329454445888_555482_13919'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329454445913_198667_13962'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329454445913_770652_13960' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329454445890_146285_13920' name='LocationDescriptionText' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329454445913_743075_13965' body='A description of a location.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329454445890_146285_13920'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329454445913_349059_13966'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329454445913_930750_13964' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329454445892_882429_13921' name='LocationGeographicElevation' type='_17_0_3_24a0131_1330120041394_289839_2728'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329454445913_388891_13969' body='A measure of the distance of a point on the Earth from sea level.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329454445892_882429_13921'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329454445914_954572_13970'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329454445913_706529_13968' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329454445894_283577_13922' name='LocationHighway' type='_17_0_3_24a0131_1330120168098_681011_2801'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329454445914_603475_13973' body='A major public road.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329454445894_283577_13922'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329454445914_273944_13974'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329454445914_666758_13972' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329454445896_577439_13923' name='LocationLandmarkText' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329454445914_275641_13977' body='A distinguishing physical feature at a location.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329454445896_577439_13923'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329454445914_809546_13978'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329454445914_140870_13976' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329454445899_73713_13924' name='LocationLocale' type='_17_0_3_24a0131_1330120371841_369486_2820'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329454445915_946578_13981' body='A geopolitical area.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329454445899_73713_13924'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329454445915_637328_13982'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329454445914_125074_13980' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329454445900_465855_13925' name='LocationMapLocation' type='_17_0_3_24a0131_1330120613066_781032_2892'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329454445915_679987_13985' body='A location identified by map or grid coordinates.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329454445900_465855_13925'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329454445915_241330_13986'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329454445915_157571_13984' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329454445901_767548_13926' name='LocationMGRSCoordinate' type='_17_0_3_24a0131_1330120778922_704912_2935'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329454445915_636568_13989' body='A coordinate from the Military Grid Reference System (MGRS) which represents a location with a Universal Transverse Mercator (UTM) coordinate and a unique military grid square.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329454445901_767548_13926'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329454445916_462532_13990'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329454445915_594395_13988' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329454445903_952917_13927' name='LocationName' type='_17_0_3_7b3022e_1329515903184_605618_12905'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329454445916_146960_13993' body='A name of a location.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329454445903_952917_13927'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329454445916_832954_13994'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329454445916_300467_13992' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329454445904_811850_13928' name='LocationRangeDescriptionText' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329454445916_449316_13997' body='A description of the boundary or range of a location.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329454445904_811850_13928'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329454445916_133275_13998'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329454445916_759643_13996' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329454445905_216450_13929' name='LocationRelativeLocation' type='_17_0_3_24a0131_1330119835442_538529_2685'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329454445917_285980_14001' body='A location identified by its proximity to another location.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329454445905_216450_13929'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329454445917_485916_14002'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329454445916_3111_14000' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329454445906_403252_13930' name='LocationSurroundingAreaDescriptionText' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329454445917_238340_14005' body='A description of the immediate area around a location.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329454445906_403252_13930'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329454445917_675366_14006'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329454445917_557189_14004' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329454445908_215069_13931' name='LocationTwoDimensionalGeographicCoordinate' type='_17_0_3_24a0131_1330116502491_370823_2117'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329454445917_19733_14009' body='A location identified by a latitude and longitude.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329454445908_215069_13931'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329454445917_673704_14010'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329454445917_819635_14008' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329454445873_207116_13912' name='LocationAddress' aggregation='composite' type='_17_0_3_7b3022e_1329452294108_517714_11927'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329454445910_335480_13934' body='A geophysical location described by postal information.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329454445873_207116_13912'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329515534798_915_12747'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329454445884_431595_13917' name='LocationContactInformation' aggregation='composite' type='_17_0_3_7b3022e_1329494936006_999882_14994'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329454445912_626998_13953' body='Contact information for a location.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329454445884_431595_13917'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329454445912_8263_13954'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329454445912_904813_13952' value='*'/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_7b3022e_1329492747518_135224_14790' name='TelephoneNumber'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329492747524_73394_14791' body='A data type for a telephone number for a telecommunication device.'>
+						<annotatedElement xmi:idref='_17_0_3_7b3022e_1329492747518_135224_14790'/>
+					</ownedComment>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329492747525_304378_14792' name='InternationalTelephoneNumber' aggregation='composite' type='_17_0_3_7b3022e_1329494126999_410895_14878'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329492747530_232702_14794' body='A telephone number.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329492747525_304378_14792'/>
+						</ownedComment>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_7b3022e_1329494126999_410895_14878' name='InternationalTelephoneNumber'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329494127005_461897_14879' body='A data type for an international telephone number.'>
+						<annotatedElement xmi:idref='_17_0_3_7b3022e_1329494126999_410895_14878'/>
+					</ownedComment>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329494127005_422942_14880' name='TelephoneCountryCodeID'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329494127018_136815_14884' body='An international dialing code for a country.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329494127005_422942_14880'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329494709885_892460_14988'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329494127009_182437_14881' name='TelephoneNumberID'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329494127019_956041_14888' body='A telephone number.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329494127009_182437_14881'/>
+						</ownedComment>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329494127013_407144_14882' name='TelephoneSuffixID'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329494127019_767892_14892' body='Additional numbers to be entered after a call connects to be directed to the appropriate place.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329494127013_407144_14882'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329494721077_374789_14992'/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_7b3022e_1329494936006_999882_14994' name='ContactInformation'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329494936014_275288_14995' body='A data type for how to contact a person or an organization.'>
+						<annotatedElement xmi:idref='_17_0_3_7b3022e_1329494936006_999882_14994'/>
+					</ownedComment>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329494936030_414928_14999' name='ContactInformationDescriptionText' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329494936036_879482_15013' body='A description of the methods available to contact a person or organization.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329494936030_414928_14999'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329494936036_472269_15014'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329494936036_455622_15012' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329494936032_243768_15000' name='ContactResponder' type='_17_0_3_7b3022e_1329450939979_284540_11328'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329494936036_556905_15017' body='A third party person who answers a call and connects or directs the caller to the intended person.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329494936032_243768_15000'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329494936036_339659_15018'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329494936036_63069_15016' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329494936020_243136_14997' name='ContactEntity'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-ENTITY'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329494936035_585236_15005' body='An entity that may be contacted by using the given contact information.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329494936020_243136_14997'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329494936035_148292_15006'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329494936035_464337_15004' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329494936025_712395_14998' name='ContactEntityDescriptionText' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329494936036_430053_15009' body='A description, title or function of a person with the given contact information.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329494936025_712395_14998'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329494936036_502284_15010'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329494936035_584552_15008' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329494936014_963223_14996' name='ContactMeans' aggregation='composite'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329494936035_698933_15002' body='A means of contacting someone.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329494936014_963223_14996'/>
+						</ownedComment>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329497622987_435024_15629' name='PersonReference' visibility='private' type='_17_0_3_7b3022e_1329450939979_284540_11328' association='_17_0_3_7b3022e_1329497622986_145515_15627'>
+						<lowerValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329498350002_429758_15684'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329498350002_723924_15685' value='*'/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:AssociationClass' xmi:id='_17_0_3_7b3022e_1329497622986_145515_15627' name='PersonContactInformationAssociation'>
+					<memberEnd xmi:idref='_17_0_3_7b3022e_1329497622987_125199_15628'/>
+					<memberEnd xmi:idref='_17_0_3_7b3022e_1329497622987_435024_15629'/>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_1_2_7b3022e_1336672534783_993298_12189' body='The association of a person with a set of contact information'>
+						<annotatedElement xmi:idref='_17_0_3_7b3022e_1329497622986_145515_15627'/>
+					</ownedComment>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329497526962_612584_15537' name='ContactInformationIsPrimaryIndicator' aggregation='composite'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-boolean'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329497526979_723503_15553' body='True if the contact information is the primary method for contact; false otherwise.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329497526962_612584_15537'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329497526979_200970_15554'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329497526979_715466_15552' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329497526965_305829_15538' name='ContactInformationIsHomeIndicator' aggregation='composite'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-boolean'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329497526980_492518_15557' body='True if the contact information is the home contact information; false otherwise.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329497526965_305829_15538'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329497526980_44110_15558'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329497526980_759369_15556' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329497526967_649207_15539' name='ContactInformationIsWorkIndicator' aggregation='composite'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-boolean'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329497526980_3227_15561' body='True if the contact information is the employment contact information; false otherwise.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329497526967_649207_15539'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329497526980_121613_15562'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329497526980_889886_15560' value='*'/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_7b3022e_1329498574736_746098_15778' name='Identification'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329498574745_850437_15779' body='A data type for a representation of an identity.'>
+						<annotatedElement xmi:idref='_17_0_3_7b3022e_1329498574736_746098_15778'/>
+					</ownedComment>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329498574745_352628_15780' name='IdentificationID' aggregation='composite'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329498574770_353416_15789' body='A value that identifies something.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329498574745_352628_15780'/>
+						</ownedComment>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329498658234_674952_15861' name='IdentificationCategoryText' aggregation='composite' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329498658241_644409_15867' body='A kind of identification.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329498658234_674952_15861'/>
+						</ownedComment>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329498574755_398157_15782' name='IdentificationCategoryDescriptionText' aggregation='composite' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329498574770_36953_15796' body='A description of a kind of identification.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329498574755_398157_15782'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329498795475_770363_15943'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329498574760_228953_15783' name='IdentificationEffectiveDate' aggregation='composite' type='_17_0_3_7b3022e_1329516122615_943953_13023'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329498574771_913146_15800' body='A date an identification takes effect.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329498574760_228953_15783'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329498800603_910828_15945'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329498574762_350846_15784' name='IdentificationExpirationDate' aggregation='composite' type='_17_0_3_7b3022e_1329516122615_943953_13023'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329498574771_364669_15804' body='A date after which an identification is no longer valid.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329498574762_350846_15784'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329498807034_178625_15947'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329498691588_850026_15894' name='IdentificationJurisdictionText' aggregation='composite' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329498691611_571848_15902' body='An area, region, or unit in which a unique identification is issued.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329498691588_850026_15894'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329498833411_190382_15949'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329498574766_241733_15786' name='IdentificationSourceText' aggregation='composite' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329498574772_234394_15811' body='A person, organization, or locale which issues an identification.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329498574766_241733_15786'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329498849379_228429_15951'/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:PrimitiveType' xmi:id='_17_0_3_7b3022e_1329499295062_934824_16093' name='PersonNameText'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329499295069_217041_16094' body='A data type for a name by which a person is known, referred, or addressed.'>
+						<annotatedElement xmi:idref='_17_0_3_7b3022e_1329499295062_934824_16093'/>
+					</ownedComment>
+					<generalization xmi:type='uml:Generalization' xmi:id='_17_0_3_24a0131_1330118711615_781134_2616' general='_17_0_3_7b3022e_1329515903184_605618_12905'/>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329499295069_233957_16095' name='personNameInitialIndicator'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-boolean'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329499295080_665822_16099' body='True if value represents the first letter or initials of a persons name; false otherwise.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329499295069_233957_16095'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329499295080_968909_16100'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329499295074_516343_16096' name='sequenceID'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-integer'>
+						</type>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329499295081_738204_16102'/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_7b3022e_1329500641391_939648_16302' name='Activity'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329500641400_286982_16303' body='A data type for a single or set of related actions, events, or process steps.&#10;'>
+						<annotatedElement xmi:idref='_17_0_3_7b3022e_1329500641391_939648_16302'/>
+					</ownedComment>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329500641400_445951_16304' name='ActivityIdentification' aggregation='composite' type='_17_0_3_7b3022e_1329498574736_746098_15778'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329500641433_194849_16313' body='An identification that references an activity.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329500641400_445951_16304'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329514090412_806400_12495'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329501838282_511766_16497' name='ActivityDate' aggregation='composite' type='_17_0_3_7b3022e_1329516122615_943953_13023'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329501838291_895249_16504' body='A date of an activity.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329501838282_511766_16497'/>
+						</ownedComment>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329500641415_937059_16307' name='ActivityDescriptionText' aggregation='composite' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329500641434_912761_16324' body='A description of an activity.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329500641415_937059_16307'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329514079077_69184_12489'/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:PrimitiveType' xmi:id='_17_0_3_7b3022e_1329515903184_605618_12905' name='ProperNameText'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329515903187_799553_12906' body='A data type for a word or phrase by which a person or thing is known, referred, or addressed.'>
+						<annotatedElement xmi:idref='_17_0_3_7b3022e_1329515903184_605618_12905'/>
+					</ownedComment>
+					<generalization xmi:type='uml:Generalization' xmi:id='_17_0_3_24a0131_1330118792246_66064_2637' general='_17_0_3_7b3022e_1329515915808_578846_12939'/>
+				</packagedElement>
+				<packagedElement xmi:type='uml:PrimitiveType' xmi:id='_17_0_3_7b3022e_1329515915808_578846_12939' name='Text'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329515915812_801903_12940' body='A data type for a character string.'>
+						<annotatedElement xmi:idref='_17_0_3_7b3022e_1329515915808_578846_12939'/>
+					</ownedComment>
+					<generalization xmi:type='uml:Generalization' xmi:id='_17_0_3_7b3022e_1329515915815_986126_12944'>
+						<general xsi:type="uml:Classifier" href='http://www.omg.org/spec/NIEM-UML/20120501/XMLPrimitiveTypes.xmi#XMLPrimitiveTypes-string'>
+						</general>
+					</generalization>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329515915813_20029_12942' name='partialIndicator'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-boolean'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329515915816_292638_12949' body='True if only partial information was available to the information source at the time when the data was captured in the system; false otherwise.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329515915813_20029_12942'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329515915816_525098_12950'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329515915814_864841_12943' name='truncationIndicator'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-boolean'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329515915816_305659_12952' body='True if the length of a string is greater than the length of the field within which the string was stored in the exporting system; false otherwise.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329515915814_864841_12943'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329515915817_243639_12953'/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_7b3022e_1329516122615_943953_13023' name='Date'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329516122618_504121_13024' body='A data type for a calendar date.'>
+						<annotatedElement xmi:idref='_17_0_3_7b3022e_1329516122615_943953_13023'/>
+					</ownedComment>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329516146574_635551_13068' name='Date' aggregation='composite' isDerived='true'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-date'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329516146585_478475_13083' body='A full date.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329516146574_635551_13068'/>
+						</ownedComment>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_24a0131_1330115209856_913957_2059' name='LengthMeasure'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330115209860_429206_2060' body='A data type for a measurement of length.'>
+						<annotatedElement xmi:idref='_17_0_3_24a0131_1330115209856_913957_2059'/>
+					</ownedComment>
+					<generalization xmi:type='uml:Generalization' xmi:id='_17_0_3_24a0131_1330118368128_721479_2458' general='_17_0_3_24a0131_1330118127378_668142_2366'/>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_24a0131_1330116390297_227288_2091' name='Area'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330116390301_114458_2092' body='A data type for a location identified by geographic boundaries.'>
+						<annotatedElement xmi:idref='_17_0_3_24a0131_1330116390297_227288_2091'/>
+					</ownedComment>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330116390301_439779_2093' name='AreaDescriptionText' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330116390321_357042_2100' body='A description of an area.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330116390301_439779_2093'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330116390321_196905_2101'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330116390321_117361_2099' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330116390305_959091_2094' name='AreaPolygonDescriptionText' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330116390322_519055_2103' body='A description of the sides denoting the boundaries of a geographic area.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330116390305_959091_2094'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330116390322_173505_2104'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330116390321_311043_2102' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330116390308_612395_2095' name='AreaPolygonGeographicCoordinate' type='_17_0_3_24a0131_1330116502491_370823_2117'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330116390322_325150_2106' body='A geographic coordinate identifying a location at the end of a side of a multi-sided region.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330116390308_612395_2095'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330116390322_162278_2107'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330116390322_914910_2105' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330116390312_157908_2096' name='AreaCircularDescriptionText'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330116390323_757062_2109' body='A description of the circular area denoting the boundaries of a geographic area.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330116390312_157908_2096'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330116390323_936222_2110'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330116390323_843734_2108' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330116390315_371871_2097' name='AreaCircularRegion' type='_17_0_3_24a0131_1330116651034_565041_2145'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330116390323_370453_2112' body='A circular area identified by a center coordinate and a radius.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330116390315_371871_2097'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330116390324_947307_2113'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330116390323_295621_2111' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330116390318_751216_2098' name='AreaGeographicCode' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330116390324_633036_2115' body='A local or map-specific geographically-based code used to describe an area.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330116390318_751216_2098'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330116390324_59044_2116'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330116390324_407267_2114' value='*'/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_24a0131_1330116502491_370823_2117' name='TwoDimensionalGeographicCoordinate'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330116502495_767423_2118' body='A data type for a location identified by latitude and longitude.'>
+						<annotatedElement xmi:idref='_17_0_3_24a0131_1330116502491_370823_2117'/>
+					</ownedComment>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330116502498_71826_2120' name='GeographicCoordinateLatitude' type='_17_0_3_24a0131_1330116729243_601764_2155'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330116502507_449120_2126' body='A measurement of the angular distance between a point on the Earth and the Equator.  '>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330116502498_71826_2120'/>
+						</ownedComment>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330116502502_304763_2121' name='GeographicCoordinateLongitude' type='_17_0_3_24a0131_1330116781065_244827_2169'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330116502508_915987_2129' body='A measurement of the angular distance between a point on the Earth and the Prime Meridian.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330116502502_304763_2121'/>
+						</ownedComment>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_24a0131_1330116651034_565041_2145' name='CircularRegion'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330116651041_668320_2146' body='A data type for a circular area identified by a center coordinate and a radius.'>
+						<annotatedElement xmi:idref='_17_0_3_24a0131_1330116651034_565041_2145'/>
+					</ownedComment>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330116651041_796866_2147' name='CircularRegionCenterCoordinate' type='_17_0_3_24a0131_1330116502491_370823_2117'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330116651047_804920_2150' body='A geographic coordinate located at the center of a circular region.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330116651041_796866_2147'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330116651048_536226_2151'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330116651047_628699_2149' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330116651044_848448_2148' name='CircularRegionRadiusLengthMeasure' type='_17_0_3_24a0131_1330115209856_913957_2059'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330116651048_428130_2153' body='A distance from the center point to the circumference or boundary of a circular region.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330116651044_848448_2148'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330116651048_94253_2154'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330116651048_931404_2152' value='*'/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_24a0131_1330116729243_601764_2155' name='LatitudeCoordinate'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330116729246_400189_2156' body='A data type for a measurement of the angular distance between a point on the Earth and the Equator.'>
+						<annotatedElement xmi:idref='_17_0_3_24a0131_1330116729243_601764_2155'/>
+					</ownedComment>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330116729246_915527_2157' name='LatitudeDegreeValue' type='_17_0_3_24a0131_1330116835592_702850_2184'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330116729256_387668_2161' body='A value that specifies the degree of a latitude. The value comes from a restricted range between -90 (inclusive) and +90 (inclusive).'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330116729246_915527_2157'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330116729256_265520_2162'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330116729256_141913_2160' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330116729250_169253_2158' name='LatitudeMinuteValue' type='_17_0_3_24a0131_1330117818741_905636_2324'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330116729257_277557_2164' body='A value that specifies a minute of a degree. The value comes from a restricted range of 0 (inclusive) to 60 (exclusive).'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330116729250_169253_2158'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330116729257_344686_2165'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330116729256_754904_2163' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330116729253_486940_2159' name='LatitudeSecondValue' type='_17_0_3_24a0131_1330117818746_720517_2326'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330116729257_392178_2167' body='A value that specifies a second of a minute. The value comes from a restricted range of 0 (inclusive) to 60 (exclusive).'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330116729253_486940_2159'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330116729257_663782_2168'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330116729257_798776_2166' value='*'/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_24a0131_1330116781065_244827_2169' name='LongitudeCoordinate'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330116781070_723615_2170' body='A data type for a measurement of the angular distance between a point on the Earth and the Prime Meridian.'>
+						<annotatedElement xmi:idref='_17_0_3_24a0131_1330116781065_244827_2169'/>
+					</ownedComment>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330116781070_328288_2171' name='LongitudeDegreeValue' type='_17_0_3_24a0131_1330116835587_32196_2183'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330116781080_393480_2175' body='A value that specifies the degree of a longitude. The value comes from a restricted range between -180 (inclusive) and +180 (exclusive).'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330116781070_328288_2171'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330116781080_347132_2176'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330116781079_295052_2174' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330116781073_656092_2172' name='LongitudeMinuteValue' type='_17_0_3_24a0131_1330117818741_905636_2324'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330116781080_890485_2178' body='A value that specifies a minute of a degree. The value comes from a restricted range of 0 (inclusive) to 60 (exclusive).'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330116781073_656092_2172'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330116781081_280572_2179'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330116781080_359187_2177' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330116781076_776428_2173' name='LongitudeSecondValue' type='_17_0_3_24a0131_1330117818746_720517_2326'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330116781081_333861_2181' body='A value that specifies a second of a minute. The value comes from a restricted range of 0 (inclusive) to 60 (exclusive).'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330116781076_776428_2173'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330116781081_492072_2182'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330116781081_858157_2180' value='*'/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:PrimitiveType' xmi:id='_17_0_3_24a0131_1330116835587_32196_2183' name='LongitudeDegree'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330116835596_278175_2185' body='A data type for a degree of longitude.'>
+						<annotatedElement xmi:idref='_17_0_3_24a0131_1330116835587_32196_2183'/>
+					</ownedComment>
+					<generalization xmi:type='uml:Generalization' xmi:id='_17_0_3_24a0131_1330118625414_341792_2558' general='_17_0_3_24a0131_1330117911797_437588_2349'/>
+				</packagedElement>
+				<packagedElement xmi:type='uml:PrimitiveType' xmi:id='_17_0_3_24a0131_1330116835592_702850_2184' name='LatitudeDegree'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330116835597_54237_2187' body='A data type for a degree of latitude.'>
+						<annotatedElement xmi:idref='_17_0_3_24a0131_1330116835592_702850_2184'/>
+					</ownedComment>
+					<generalization xmi:type='uml:Generalization' xmi:id='_17_0_3_24a0131_1330118584154_866572_2508' general='_17_0_3_24a0131_1330117911793_135850_2348'/>
+				</packagedElement>
+				<packagedElement xmi:type='uml:PrimitiveType' xmi:id='_17_0_3_24a0131_1330117818741_905636_2324' name='AngularMinute'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330117818750_415155_2329' body='A data type for a minute of a degree, with a restricted range of 0 (inclusive) to 60 (exclusive).'>
+						<annotatedElement xmi:idref='_17_0_3_24a0131_1330117818741_905636_2324'/>
+					</ownedComment>
+					<generalization xmi:type='uml:Generalization' xmi:id='_17_0_3_24a0131_1330117818750_314990_2328' general='_17_0_3_24a0131_1330117818744_104304_2325'/>
+				</packagedElement>
+				<packagedElement xmi:type='uml:PrimitiveType' xmi:id='_17_0_3_24a0131_1330117818744_104304_2325' name='AngularMinuteSimple'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330117818754_69726_2332' body='A data type for a minute of a degree, with a restricted range of 0 (inclusive) to 60 (exclusive).'>
+						<annotatedElement xmi:idref='_17_0_3_24a0131_1330117818744_104304_2325'/>
+					</ownedComment>
+					<ownedRule xmi:type='uml:Constraint' xmi:id='_17_0_3_24a0131_1330117818751_792933_2330' name='MinInclusiveFacet'>
+						<constrainedElement xmi:idref='_17_0_3_24a0131_1330117818744_104304_2325'/>
+						<specification xmi:type='uml:LiteralString' xmi:id='_17_0_3_24a0131_1330117818758_671597_2340' value='0'/>
+					</ownedRule>
+					<ownedRule xmi:type='uml:Constraint' xmi:id='_17_0_3_24a0131_1330117818752_491504_2331' name='MaxExclusiveFacet'>
+						<constrainedElement xmi:idref='_17_0_3_24a0131_1330117818744_104304_2325'/>
+						<specification xmi:type='uml:LiteralString' xmi:id='_17_0_3_24a0131_1330117818773_768276_2342' value='60'/>
+					</ownedRule>
+					<generalization xmi:type='uml:Generalization' xmi:id='_17_0_3_24a0131_1330117818754_664778_2333'>
+						<general xsi:type="uml:Classifier" href='http://www.omg.org/spec/NIEM-UML/20120501/XMLPrimitiveTypes.xmi#XMLPrimitiveTypes-decimal'>
+						</general>
+					</generalization>
+				</packagedElement>
+				<packagedElement xmi:type='uml:PrimitiveType' xmi:id='_17_0_3_24a0131_1330117818746_720517_2326' name='AngularSecond'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330117818754_372568_2335' body='A data type for a second of a minute, with a restricted range of 0 (inclusive) to 60 (exclusive).'>
+						<annotatedElement xmi:idref='_17_0_3_24a0131_1330117818746_720517_2326'/>
+					</ownedComment>
+					<generalization xmi:type='uml:Generalization' xmi:id='_17_0_3_24a0131_1330117818754_902839_2334' general='_17_0_3_24a0131_1330117818748_201301_2327'/>
+				</packagedElement>
+				<packagedElement xmi:type='uml:PrimitiveType' xmi:id='_17_0_3_24a0131_1330117818748_201301_2327' name='AngularSecondSimple'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330117818758_578861_2338' body='A data type for a second of a minute, with a restricted range of 0 (inclusive) to 60 (exclusive).'>
+						<annotatedElement xmi:idref='_17_0_3_24a0131_1330117818748_201301_2327'/>
+					</ownedComment>
+					<ownedRule xmi:type='uml:Constraint' xmi:id='_17_0_3_24a0131_1330117818754_460353_2336' name='MinInclusiveFacet'>
+						<constrainedElement xmi:idref='_17_0_3_24a0131_1330117818748_201301_2327'/>
+						<specification xmi:type='uml:LiteralString' xmi:id='_17_0_3_24a0131_1330117818773_201795_2344' value='0'/>
+					</ownedRule>
+					<ownedRule xmi:type='uml:Constraint' xmi:id='_17_0_3_24a0131_1330117818756_556106_2337' name='MaxExclusiveFacet'>
+						<constrainedElement xmi:idref='_17_0_3_24a0131_1330117818748_201301_2327'/>
+						<specification xmi:type='uml:LiteralString' xmi:id='_17_0_3_24a0131_1330117818773_383460_2346' value='60'/>
+					</ownedRule>
+					<generalization xmi:type='uml:Generalization' xmi:id='_17_0_3_24a0131_1330117818758_626574_2339'>
+						<general xsi:type="uml:Classifier" href='http://www.omg.org/spec/NIEM-UML/20120501/XMLPrimitiveTypes.xmi#XMLPrimitiveTypes-decimal'>
+						</general>
+					</generalization>
+				</packagedElement>
+				<packagedElement xmi:type='uml:PrimitiveType' xmi:id='_17_0_3_24a0131_1330117911793_135850_2348' name='LatitudeDegreeSimple'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330117911807_84136_2352' body='A data type for a degree of latitude.'>
+						<annotatedElement xmi:idref='_17_0_3_24a0131_1330117911793_135850_2348'/>
+					</ownedComment>
+					<ownedRule xmi:type='uml:Constraint' xmi:id='_17_0_3_24a0131_1330117911801_466848_2350' name='MaxInclusiveFacet'>
+						<constrainedElement xmi:idref='_17_0_3_24a0131_1330117911793_135850_2348'/>
+						<specification xmi:type='uml:LiteralString' xmi:id='_17_0_3_24a0131_1330117911815_201370_2358' value='90'/>
+					</ownedRule>
+					<ownedRule xmi:type='uml:Constraint' xmi:id='_17_0_3_24a0131_1330117911804_373366_2351' name='MinInclusiveFacet'>
+						<constrainedElement xmi:idref='_17_0_3_24a0131_1330117911793_135850_2348'/>
+						<specification xmi:type='uml:LiteralString' xmi:id='_17_0_3_24a0131_1330117911815_727540_2360' value='-90'/>
+					</ownedRule>
+					<generalization xmi:type='uml:Generalization' xmi:id='_17_0_3_24a0131_1330117911807_388615_2353'>
+						<general xsi:type="uml:Classifier" href='http://www.omg.org/spec/NIEM-UML/20120501/XMLPrimitiveTypes.xmi#XMLPrimitiveTypes-decimal'>
+						</general>
+					</generalization>
+				</packagedElement>
+				<packagedElement xmi:type='uml:PrimitiveType' xmi:id='_17_0_3_24a0131_1330117911797_437588_2349' name='LongitudeDegreeSimple'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330117911814_870290_2356' body='A data type for a degree of longitude.'>
+						<annotatedElement xmi:idref='_17_0_3_24a0131_1330117911797_437588_2349'/>
+					</ownedComment>
+					<ownedRule xmi:type='uml:Constraint' xmi:id='_17_0_3_24a0131_1330117911807_558798_2354' name='MinInclusiveFacet'>
+						<constrainedElement xmi:idref='_17_0_3_24a0131_1330117911797_437588_2349'/>
+						<specification xmi:type='uml:LiteralString' xmi:id='_17_0_3_24a0131_1330117911816_765914_2362' value='-180'/>
+					</ownedRule>
+					<ownedRule xmi:type='uml:Constraint' xmi:id='_17_0_3_24a0131_1330117911811_163092_2355' name='MaxExclusiveFacet'>
+						<constrainedElement xmi:idref='_17_0_3_24a0131_1330117911797_437588_2349'/>
+						<specification xmi:type='uml:LiteralString' xmi:id='_17_0_3_24a0131_1330117911816_846278_2364' value='180'/>
+					</ownedRule>
+					<generalization xmi:type='uml:Generalization' xmi:id='_17_0_3_24a0131_1330117911814_48742_2357'>
+						<general xsi:type="uml:Classifier" href='http://www.omg.org/spec/NIEM-UML/20120501/XMLPrimitiveTypes.xmi#XMLPrimitiveTypes-decimal'>
+						</general>
+					</generalization>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_24a0131_1330118127378_668142_2366' name='Measure'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330118127383_825774_2367' body='A data type for a measurement.'>
+						<annotatedElement xmi:idref='_17_0_3_24a0131_1330118127378_668142_2366'/>
+					</ownedComment>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330118127383_781787_2368' name='MeasureValue'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330118127397_523261_2373' body='A measurement value.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330118127383_781787_2368'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330118127397_884346_2374'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330118127396_604888_2372' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330118127386_252507_2369' name='MeasureUnitText' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330118127397_421959_2376' body='A unit that qualifies the measurement value.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330118127386_252507_2369'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330118127398_838734_2377'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330118127397_659390_2375' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330118127390_219527_2370' name='MeasureCategoryText' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330118127398_659220_2379' body='A method used to make a measurement.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330118127390_219527_2370'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330118127398_117619_2380'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330118127398_115489_2378' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330118127393_357611_2371' name='MeasureEstimatedIndicator'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-boolean'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330118127399_51207_2382' body='True if a measurement has been estimated or guessed; false otherwise.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330118127393_357611_2371'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330118127399_860029_2383'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330118127398_169126_2381' value='*'/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_24a0131_1330119584598_291137_2645' name='AddressGrid'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330119584600_745428_2646' body='A data type for a location identified by a unit of a grid system overlaid on an area.'>
+						<annotatedElement xmi:idref='_17_0_3_24a0131_1330119584598_291137_2645'/>
+					</ownedComment>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330119584600_63099_2647' name='AddressGridID'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330119584604_108457_2650' body='An identifier that references a unique address grid system.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330119584600_63099_2647'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330119584604_564063_2651'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330119584604_131948_2649' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330119584602_226358_2648' name='AddressGridText' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330119584604_940028_2653' body='A unit, quadrant, or other subdivision of an address grid.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330119584602_226358_2648'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330119584604_725726_2654'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330119584604_805710_2652' value='*'/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_24a0131_1330119687285_599357_2656' name='UTMCoordinate'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330119687288_435503_2657' body='A data type for a coordinate from the Universal Transverse Mercator (UTM) Coordinate System, which represents a location with a grid zone, an easting value, and a northing value.'>
+						<annotatedElement xmi:idref='_17_0_3_24a0131_1330119687285_599357_2656'/>
+					</ownedComment>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330119687288_373061_2658' name='UTMCoordinateID'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330119687300_524583_2665' body='An identifier of a Universal Transverse Mercator coordinate value.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330119687288_373061_2658'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330119687300_244560_2666'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330119687300_423189_2664' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330119687290_810750_2659' name='UTMDatumID'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330119687300_567152_2668' body='An identifier of a data standard for UTM coordinates.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330119687290_810750_2659'/>
+						</ownedComment>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330119687292_655888_2660' name='UTMEastingValue'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-nonNegativeInteger'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330119687301_262268_2671' body='A distance east within a UTM zone.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330119687292_655888_2660'/>
+						</ownedComment>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330119687294_167987_2661' name='UTMGridZoneID'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330119687301_262955_2674' body='An identifier of a UTM grid zone.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330119687294_167987_2661'/>
+						</ownedComment>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330119687296_444392_2662' name='UTMGridZoneSquareID'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330119687301_311490_2677' body='An identifier of a specific 100,000 meter squared region within a UTM grid zone.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330119687296_444392_2662'/>
+						</ownedComment>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330119687298_29235_2663' name='UTMNorthingValue'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-nonNegativeInteger'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330119687302_218652_2680' body='A distance north within a UTM zone.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330119687298_29235_2663'/>
+						</ownedComment>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:PrimitiveType' xmi:id='_17_0_3_24a0131_1330119835434_999593_2683' name='RelativeLocationHeadingSimple'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330119835454_57170_2690' body='A data type for a compass heading of a direction from a reference location.'>
+						<annotatedElement xmi:idref='_17_0_3_24a0131_1330119835434_999593_2683'/>
+					</ownedComment>
+					<ownedRule xmi:type='uml:Constraint' xmi:id='_17_0_3_24a0131_1330119835450_137772_2688' name='MinInclusiveFacet'>
+						<constrainedElement xmi:idref='_17_0_3_24a0131_1330119835434_999593_2683'/>
+						<specification xmi:type='uml:LiteralString' xmi:id='_17_0_3_24a0131_1330119835468_798476_2702' value='0'/>
+					</ownedRule>
+					<ownedRule xmi:type='uml:Constraint' xmi:id='_17_0_3_24a0131_1330119835453_307790_2689' name='MaxExclusiveFacet'>
+						<constrainedElement xmi:idref='_17_0_3_24a0131_1330119835434_999593_2683'/>
+						<specification xmi:type='uml:LiteralString' xmi:id='_17_0_3_24a0131_1330119835469_329593_2704' value='360'/>
+					</ownedRule>
+					<generalization xmi:type='uml:Generalization' xmi:id='_17_0_3_24a0131_1330119835455_813973_2691'>
+						<general xsi:type="uml:Classifier" href='http://www.omg.org/spec/NIEM-UML/20120501/XMLPrimitiveTypes.xmi#XMLPrimitiveTypes-decimal'>
+						</general>
+					</generalization>
+				</packagedElement>
+				<packagedElement xmi:type='uml:PrimitiveType' xmi:id='_17_0_3_24a0131_1330119835439_162606_2684' name='RelativeLocationHeading'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330119835455_313901_2692' body='A data type for a compass heading of a direction from a reference location.'>
+						<annotatedElement xmi:idref='_17_0_3_24a0131_1330119835439_162606_2684'/>
+					</ownedComment>
+					<generalization xmi:type='uml:Generalization' xmi:id='_17_0_3_24a0131_1330119835449_841040_2687' general='_17_0_3_24a0131_1330119835434_999593_2683'/>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_24a0131_1330119835442_538529_2685' name='RelativeLocation'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330119835455_297325_2693' body='A data type for a location identified by its proximity to another location.'>
+						<annotatedElement xmi:idref='_17_0_3_24a0131_1330119835442_538529_2685'/>
+					</ownedComment>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330119835455_176457_2694' name='RelativeLocationDescriptionText' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330119835469_834352_2707' body='A description of how to reach a location from a certain starting point.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330119835455_176457_2694'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330119835469_795139_2708'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330119835469_402299_2706' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330119835457_486364_2695' name='RelativeLocationDirection'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330119835469_552718_2710' body='A relative compass direction of a location or movement from a starting point.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330119835457_486364_2695'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330119835469_233435_2711'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330119835469_738665_2709' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330119835459_230719_2696' name='RelativeLocationDistanceText' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330119835470_262708_2713' body='A distance of a location from a starting point.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330119835459_230719_2696'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330119835470_76837_2714'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330119835470_637446_2712' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330119835461_531658_2697' name='RelativeLocationHeadingValue' type='_17_0_3_24a0131_1330119835439_162606_2684'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330119835470_249263_2716' body='A compass heading of a direction from a starting point.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330119835461_531658_2697'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330119835470_127561_2717'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330119835470_555715_2715' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330119835463_389128_2698' name='RelativeLocationReferencePoint' type='_17_0_3_7b3022e_1329454445863_85747_13910'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330119835470_739882_2719' body='A starting point used as a basis to determine the location of another point.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330119835463_389128_2698'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330119835471_123181_2720'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330119835470_100389_2718' value='*'/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_24a0131_1330119835446_134675_2686' name='CrossStreet'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330119835465_414754_2699' body='A data type for a location identified by two or more streets which intersect.'>
+						<annotatedElement xmi:idref='_17_0_3_24a0131_1330119835446_134675_2686'/>
+					</ownedComment>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330119835465_861635_2700' name='CrossStreetDescriptionText' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330119835471_426078_2722' body='A description of a street intersection.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330119835465_861635_2700'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330119835471_212109_2723'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330119835471_510881_2721' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330119835467_749510_2701' name='CrossStreetRelativeLocation' type='_17_0_3_24a0131_1330119835442_538529_2685'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330119835471_105313_2725' body='A location of something relative to a street intersection.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330119835467_749510_2701'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330119835471_784160_2726'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330119835471_419308_2724' value='*'/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_24a0131_1330120041394_289839_2728' name='GeographicElevationMeasure'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120041398_808956_2729' body='A data type for a measure of elevation at a location.'>
+						<annotatedElement xmi:idref='_17_0_3_24a0131_1330120041394_289839_2728'/>
+					</ownedComment>
+					<generalization xmi:type='uml:Generalization' xmi:id='_17_0_3_24a0131_1330120082815_124504_2799' general='_17_0_3_24a0131_1330118127378_668142_2366'/>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120041398_285655_2730' name='GeographicElevationDatumID'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120041402_890625_2733' body='An identifier of a spatial reference system.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120041398_285655_2730'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330120041402_762845_2734'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330120041402_208904_2732' value='*'/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_24a0131_1330120168098_681011_2801' name='Highway'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120168102_474838_2802' body='A data type for a major public road.'>
+						<annotatedElement xmi:idref='_17_0_3_24a0131_1330120168098_681011_2801'/>
+					</ownedComment>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120168103_339_2803' name='HighwayFullText' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120168115_178102_2808' body='A complete reference to a highway.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120168103_339_2803'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330120168115_682037_2809'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330120168115_211246_2807' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120168106_484040_2804' name='HighwayName' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120168116_308705_2811' body='A name of a highway.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120168106_484040_2804'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330120168116_854689_2812'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330120168116_556327_2810' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120168109_127625_2805' name='HighwayID'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120168117_495208_2814' body='An identifier of a highway.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120168109_127625_2805'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330120168117_809971_2815'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330120168116_670481_2813' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120168112_712638_2806' name='HighwayPositionText' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120168117_654376_2817' body='A designation of a specific place on a highway.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120168112_712638_2806'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330120168117_431382_2818'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330120168117_595483_2816' value='*'/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_24a0131_1330120371841_369486_2820' name='Locale'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120371845_658251_2821' body='A data type for a geopolitical area.'>
+						<annotatedElement xmi:idref='_17_0_3_24a0131_1330120371841_369486_2820'/>
+					</ownedComment>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120371845_728032_2822' name='LocaleCensusBlockID'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120371892_108636_2840' body='An identifier of the smallest subdivision of an area designated for a census.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120371845_728032_2822'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330120371892_660540_2841'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330120371891_988061_2839' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120371848_153498_2823' name='LocaleCensusTractID'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120371892_14331_2843' body='An identifier of an area designated for a census.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120371848_153498_2823'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330120371892_644217_2844'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330120371892_726067_2842' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120371851_169916_2824' name='LocaleCommunityName' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120371892_960005_2846' body='A name of a specific community within a region.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120371851_169916_2824'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330120371893_583945_2847'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330120371892_88404_2845' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120371854_142925_2825' name='LocaleDescriptionText' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120371893_832232_2849' body='A description of a geopolitical area.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120371854_142925_2825'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330120371893_559815_2850'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330120371893_978132_2848' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120371857_76440_2826' name='LocaleDistrictName' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120371893_270811_2852' body='A name given to an area of land defined for administrative or official purposes.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120371857_76440_2826'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330120371893_261893_2853'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330120371893_311685_2851' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120371860_247765_2827' name='LocaleEmergencyServicesCityName' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120371893_892780_2855' body='A name of a city containing the emergency services department associated with a region.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120371860_247765_2827'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330120371893_956502_2856'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330120371893_688594_2854' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120371863_411478_2828' name='LocaleFireJurisdictionID'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120371894_652961_2858' body='An identifier of a fire department jurisdiction that encompasses a location.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120371863_411478_2828'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330120371894_291854_2859'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330120371894_768094_2857' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120371868_259657_2829' name='LocaleJudicialDistrictCode' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120371894_934955_2861' body='A judicial district within a region.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120371868_259657_2829'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330120371894_746970_2862'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330120371894_234342_2860' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120371871_160816_2830' name='LocaleJudicialDistrictName' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120371894_551338_2864' body='A name of the judicial district within a region.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120371871_160816_2830'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330120371894_91680_2865'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330120371894_200917_2863' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120371875_961094_2831' name='LocaleNeighborhoodName' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120371895_446725_2867' body='A name of a neighborhood within a region.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120371875_961094_2831'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330120371895_152318_2868'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330120371894_402192_2866' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120371878_334012_2832' name='LocalePoliceBeatText' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120371895_444166_2870' body='An identification of a police beat that encompasses a location.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120371878_334012_2832'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330120371895_884279_2871'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330120371895_394859_2869' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120371882_7176_2833' name='LocalePoliceGridText' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120371895_902468_2873' body='A police grid coordinate associated with a region.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120371882_7176_2833'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330120371895_260324_2874'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330120371895_198750_2872' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120371884_80620_2834' name='LocalePoliceJurisdictionID'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120371895_791277_2876' body='An identifier of a police jurisdiction that encompasses a location.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120371884_80620_2834'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330120371896_66507_2877'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330120371895_325942_2875' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120371886_70750_2835' name='LocaleRegionName' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120371896_224574_2879' body='A name of a region.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120371886_70750_2835'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330120371896_470095_2880'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330120371896_595568_2878' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120371887_930977_2836' name='LocaleSubdivisionName' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120371896_509144_2882' body='A name of a subdivision within a region.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120371887_930977_2836'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330120371896_154304_2883'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330120371896_693224_2881' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120371889_907940_2837' name='LocaleZoneName' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120371896_698258_2885' body='A name of the zone for a region.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120371889_907940_2837'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330120371896_750011_2886'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330120371896_412828_2884' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120371890_599122_2838' name='LocaleEmergencyServicesJurisdictionID'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120371897_601265_2888' body='An identifier of an emergency services jurisdiction that encompasses a location.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120371890_599122_2838'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330120371897_918547_2889'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330120371897_613996_2887' value='*'/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_24a0131_1330120613066_781032_2892' name='MapLocation'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120613070_553568_2893' body='A data type for a location identified by map or grid coordinates.'>
+						<annotatedElement xmi:idref='_17_0_3_24a0131_1330120613066_781032_2892'/>
+					</ownedComment>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120613070_897119_2894' name='MapCoordinateFullText' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120613097_822024_2905' body='A complete coordinate of a point on a map.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120613070_897119_2894'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330120613098_858108_2906'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330120613097_584578_2904' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120613073_117576_2895' name='MapDate' type='_17_0_3_7b3022e_1329516122615_943953_13023'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120613098_764910_2908' body='A date a map was published, copyrighted or became effective for use.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120613073_117576_2895'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330120613098_884818_2909'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330120613098_151652_2907' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120613076_24087_2896' name='MapElevationCoordinateText' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120613098_758663_2911' body='A height or elevation of a point on a map.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120613076_24087_2896'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330120613099_694091_2912'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330120613098_219389_2910' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120613079_650476_2897' name='MapHorizontalCoordinateText' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120613099_144354_2914' body='A horizontal location of a point on a map.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120613079_650476_2897'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330120613099_663227_2915'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330120613099_579727_2913' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120613082_329611_2898' name='MapLocationDescriptionText' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120613099_713837_2917' body='A description of a map location.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120613082_329611_2898'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330120613099_141717_2918'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330120613099_442350_2916' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120613085_329176_2899' name='MapName' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120613100_451500_2920' body='A name of a map.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120613085_329176_2899'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330120613100_739881_2921'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330120613100_244180_2919' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120613087_867103_2900' name='MapPageID'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120613100_573201_2923' body='An identifier of a page number in a map.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120613087_867103_2900'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330120613100_972512_2924'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330120613100_535521_2922' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120613090_508992_2901' name='MapQuadrantText' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120613101_293182_2926' body='A quadrant or square in a map.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120613090_508992_2901'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330120613101_589164_2927'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330120613101_325426_2925' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120613092_202614_2902' name='MapVersionID'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120613101_326162_2929' body='An identifier of a version of a map.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120613092_202614_2902'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330120613102_768439_2930'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330120613101_660836_2928' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120613095_297846_2903' name='MapVerticalCoordinateText' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120613102_1260_2932' body='A vertical location of a point on a map.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120613095_297846_2903'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330120613102_466164_2933'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330120613102_498323_2931' value='*'/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_24a0131_1330120778922_704912_2935' name='MGRSCoordinate'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120778926_536431_2936' body='A data type for a coordinate from the Military Grid Reference System (MGRS) which represents a location with a Universal Transverse Mercator (UTM) coordinate and a unique military grid square.'>
+						<annotatedElement xmi:idref='_17_0_3_24a0131_1330120778922_704912_2935'/>
+					</ownedComment>
+					<generalization xmi:type='uml:Generalization' xmi:id='_17_0_3_24a0131_1330120816646_545744_3015' general='_17_0_3_24a0131_1330119687285_599357_2656'/>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120778927_988912_2937' name='MGRSCoordinateID'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120778933_291102_2941' body='An identifier of a complete Military Grid Reference System (MGRS) coordinate.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120778927_988912_2937'/>
+						</ownedComment>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330120778930_826656_2938' name='MGRSCoordinateSquareID'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330120778934_802865_2944' body='An identifier of a Military Grid Reference System (MGRS) square.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330120778930_826656_2938'/>
+						</ownedComment>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_24a0131_1330121480370_137732_51480' name='DateRepresentationPropertyHolder'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_1_2_7b3022e_1336672101158_269876_12112' body='A Documented Component'/>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330121480374_239845_51481' name='DateRepresentation' isDerived='true'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330121480389_280949_51488' body='A representation of a date.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330121480374_239845_51481'/>
+						</ownedComment>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330121480377_574329_51482' name='Year' isDerived='true'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-gYear'>
+						</type>
+						<subsettedProperty xmi:idref='_17_0_3_24a0131_1330121480374_239845_51481'/>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330121480390_676340_51491' body='A year.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330121480377_574329_51482'/>
+						</ownedComment>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330121480380_20271_51483' name='DateTime' isDerived='true'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-dateTime'>
+						</type>
+						<subsettedProperty xmi:idref='_17_0_3_24a0131_1330121480374_239845_51481'/>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330121480391_911242_51494' body='A full date and time.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330121480380_20271_51483'/>
+						</ownedComment>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330121480383_506510_51484' name='Date' isDerived='true'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-date'>
+						</type>
+						<subsettedProperty xmi:idref='_17_0_3_24a0131_1330121480374_239845_51481'/>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330121480391_290974_51497' body='A full date.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330121480383_506510_51484'/>
+						</ownedComment>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330121480386_577916_51485' name='YearMonth' isDerived='true'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-gYearMonth'>
+						</type>
+						<subsettedProperty xmi:idref='_17_0_3_24a0131_1330121480374_239845_51481'/>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330121480391_512776_51500' body='A year and month.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330121480386_577916_51485'/>
+						</ownedComment>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_24a0131_1330121681242_604505_51551' name='DateRange'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330121681245_519982_51552' body='A data type for a period of time.'>
+						<annotatedElement xmi:idref='_17_0_3_24a0131_1330121681242_604505_51551'/>
+					</ownedComment>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330121681246_793522_51553' name='StartDate' type='_17_0_3_7b3022e_1329516122615_943953_13023'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330121681252_104471_51556' body='A date on which something begins.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330121681246_793522_51553'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330121681252_130235_51557'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330121681252_51148_51555' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330121681249_119721_51554' name='EndDate' type='_17_0_3_7b3022e_1329516122615_943953_13023'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330121681253_747401_51559' body='An end date.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330121681249_119721_51554'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330121681253_309433_51560'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330121681252_253261_51558' value='*'/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_24a0131_1330122102138_38523_51656' name='NANPTelephoneNumber'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330122102141_26483_51657' body='A data type for a North American Numbering Plan telephone number.'>
+						<annotatedElement xmi:idref='_17_0_3_24a0131_1330122102138_38523_51656'/>
+					</ownedComment>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330122102142_618327_51658' name='TelephoneAreaCodeID'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330122102154_466616_51663' body='A dialing code for a state or province for phone numbers in the USA, Canada, Mexico, and the Caribbean. '>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330122102142_618327_51658'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330122102154_641860_51664'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330122102154_838745_51662' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330122102145_163974_51659' name='TelephoneExchangeID'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330122102154_208270_51666' body='A portion of a telephone number that usually represents a central telephone switch.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330122102145_163974_51659'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330122102155_549131_51667'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330122102154_657106_51665' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330122102148_108330_51660' name='TelephoneLineID'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330122102155_582169_51669' body='A portion of a telephone number that identifies the individual circuit within an exchange.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330122102148_108330_51660'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330122102155_363519_51670'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330122102155_232265_51668' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330122102151_34175_51661' name='TelephoneSuffixID'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330122102155_357709_51672' body='Additional numbers to be entered after a call connects to be directed to the appropriate place.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330122102151_34175_51661'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330122102156_4124_51673'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330122102155_910452_51671' value='*'/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_24a0131_1330122134274_283914_51674' name='FullTelephoneNumber'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330122134277_298795_51675' body='A data type for a full telephone number.'>
+						<annotatedElement xmi:idref='_17_0_3_24a0131_1330122134274_283914_51674'/>
+					</ownedComment>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330122134277_182961_51676' name='TelephoneNumberFullID'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330122134283_515116_51679' body='A complete telephone number.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330122134277_182961_51676'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330122134283_202635_51680'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330122134283_612833_51678' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330122134280_810922_51677' name='TelephoneSuffixID'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330122134284_756150_51682' body='Additional numbers to be entered after a call connects to be directed to the appropriate place.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330122134280_810922_51677'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330122134284_952026_51683'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330122134283_743428_51681' value='*'/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_3_7b3022e_1329496238281_742180_15237' name='Horse'/>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_24a0131_1330157691895_568328_129097' name='StructuredAddress'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330157691901_542302_129098' body='A data type for an address.'>
+						<annotatedElement xmi:idref='_17_0_3_24a0131_1330157691895_568328_129097'/>
+					</ownedComment>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330157691901_895760_129099' name='AddressRecipientName' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330157691968_859671_129108' body='A name of a person, organization, or other recipient to whom physical mail may be sent.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330157691901_895760_129099'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330157691968_322478_129109'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330157691968_886549_129107' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330157691906_819105_129100' name='AddressDeliveryPoint'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330157691969_502063_129111' body='A single place or unit at which mail is delivered.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330157691906_819105_129100'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330157691969_919776_129112'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330157691969_712536_129110' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330157691910_173676_129101' name='LocationCityName' type='_17_0_3_7b3022e_1329515903184_605618_12905'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330157691969_73094_129114' body='A name of a city or town.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330157691910_173676_129101'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330157691969_336401_129115'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330157691969_690255_129113' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330157691914_838106_129102' name='LocationCounty'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330157691979_874084_129117' body='A county, parish, vicinage, or other such geopolitical subdivision of a state.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330157691914_838106_129102'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330157691979_373575_129118'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330157691969_384447_129116' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330157691916_493239_129103' name='LocationState'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330157691980_447945_129120' body='A state, commonwealth, province, or other such geopolitical subdivision of a country.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330157691916_493239_129103'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330157691980_872863_129121'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330157691980_283321_129119' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330157691948_956381_129104' name='LocationCountry'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330157691980_425813_129123' body='A country, territory, dependency, or other such geopolitical subdivision of a location.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330157691948_956381_129104'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330157691980_617524_129124'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330157691980_772703_129122' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330157691951_221134_129105' name='LocationPostalCode'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330157691980_701731_129126' body='An identifier of a post office-assigned zone for an address.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330157691951_221134_129105'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330157691980_32319_129127'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330157691980_242168_129125' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_24a0131_1330157691965_258399_129106' name='LocationPostalExtensionCode'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_24a0131_1330157691986_344448_129129' body='An identifier of a smaller area within a post office-assigned zone for an address.'>
+							<annotatedElement xmi:idref='_17_0_3_24a0131_1330157691965_258399_129106'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_24a0131_1330157692000_584787_129130'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_24a0131_1330157691980_584278_129128' value='*'/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Realization' xmi:id='_17_0_3_7b3022e_1331653010513_272637_13393'>
+					<client xmi:idref='_17_0_3_7b3022e_1329450471291_982463_1660'/>
+					<supplier xsi:type="uml:NamedElement" href='pathmap://NIEM_REFERENCE/NIEM-Reference-core.uml#_niem-niem-core-2.0-niem-core'>
+					</supplier>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Realization' xmi:id='_17_0_3_7b3022e_1331653062052_501466_13431'>
+					<client xmi:idref='_17_0_3_7b3022e_1329451046513_135923_11373'/>
+					<supplier xsi:type="uml:NamedElement" href='pathmap://NIEM_REFERENCE/NIEM-Reference-core.uml#_niem-niem-core-2.0-niem-core-PersonNameType'>
+					</supplier>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Realization' xmi:id='_17_0_3_7b3022e_1331653115072_574720_13573'>
+					<client xmi:idref='_17_0_3_7b3022e_1329450939979_284540_11328'/>
+					<supplier xsi:type="uml:NamedElement" href='pathmap://NIEM_REFERENCE/NIEM-Reference-core.uml#_niem-niem-core-2.0-niem-core-PersonType'>
+					</supplier>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Realization' xmi:id='_17_0_3_7b3022e_1331653157634_469139_13655'>
+					<client xmi:idref='_17_0_3_7b3022e_1329454088071_753264_13561'/>
+					<supplier xsi:type="uml:NamedElement" href='pathmap://NIEM_REFERENCE/NIEM-Reference-core.uml#_niem-niem-core-2.0-niem-core-OrganizationType'>
+					</supplier>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Realization' xmi:id='_17_0_3_7b3022e_1331653171163_412841_13681'>
+					<client xmi:idref='_17_0_3_7b3022e_1329454445863_85747_13910'/>
+					<supplier xsi:type="uml:NamedElement" href='pathmap://NIEM_REFERENCE/NIEM-Reference-core.uml#_niem-niem-core-2.0-niem-core-LocationType'>
+					</supplier>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Realization' xmi:id='_17_0_3_7b3022e_1331653232082_165271_13721'>
+					<client xmi:idref='_17_0_3_7b3022e_1329494936006_999882_14994'/>
+					<supplier xsi:type="uml:NamedElement" href='pathmap://NIEM_REFERENCE/NIEM-Reference-core.uml#_niem-niem-core-2.0-niem-core-ContactInformationType'>
+					</supplier>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Realization' xmi:id='_17_0_3_7b3022e_1331653320746_986716_13807'>
+					<client xmi:idref='_17_0_3_7b3022e_1329492747518_135224_14790'/>
+					<supplier xsi:type="uml:NamedElement" href='pathmap://NIEM_REFERENCE/NIEM-Reference-core.uml#_niem-niem-core-2.0-niem-core-TelephoneNumberType'>
+					</supplier>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Realization' xmi:id='_17_0_3_7b3022e_1331653378924_85142_13830'>
+					<client xmi:idref='_17_0_3_7b3022e_1329494126999_410895_14878'/>
+					<supplier xsi:type="uml:NamedElement" href='pathmap://NIEM_REFERENCE/NIEM-Reference-core.uml#_niem-niem-core-2.0-niem-core-InternationalTelephoneNumberType'>
+					</supplier>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Realization' xmi:id='_17_0_3_7b3022e_1331653395947_341929_13851'>
+					<client xmi:idref='_17_0_3_7b3022e_1329452294108_517714_11927'/>
+					<supplier xsi:type="uml:NamedElement" href='pathmap://NIEM_REFERENCE/NIEM-Reference-core.uml#_niem-niem-core-2.0-niem-core-AddressType'>
+					</supplier>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Realization' xmi:id='_17_0_3_7b3022e_1331653480879_470427_14499'>
+					<client xmi:idref='_17_0_3_7b3022e_1329497622986_145515_15627'/>
+					<supplier xsi:type="uml:NamedElement" href='pathmap://NIEM_REFERENCE/NIEM-Reference-core.uml#_niem-niem-core-2.0-niem-core-PersonContactInformationAssociationType'>
+					</supplier>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Realization' xmi:id='_17_0_3_7b3022e_1331653543835_265283_14544'>
+					<client xmi:idref='_17_0_3_7b3022e_1329498574736_746098_15778'/>
+					<supplier xsi:type="uml:NamedElement" href='pathmap://NIEM_REFERENCE/NIEM-Reference-core.uml#_niem-niem-core-2.0-niem-core-IdentificationType'>
+					</supplier>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Realization' xmi:id='_17_0_3_7b3022e_1331653772921_973900_14658'>
+					<client xmi:idref='_17_0_3_7b3022e_1329500641391_939648_16302'/>
+					<supplier xsi:type="uml:NamedElement" href='pathmap://NIEM_REFERENCE/NIEM-Reference-core.uml#_niem-niem-core-2.0-niem-core-ActivityType'>
+					</supplier>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Association' xmi:id='_17_0_3_7b3022e_1331655237046_589623_15808'>
+					<memberEnd xmi:idref='_17_0_3_7b3022e_1331655237046_346329_15809'/>
+					<memberEnd xmi:idref='_17_0_3_7b3022e_1329454088105_42947_13576'/>
+					<ownedEnd xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1331655237046_346329_15809' visibility='private' type='_17_0_3_7b3022e_1329454088071_753264_13561' association='_17_0_3_7b3022e_1331655237046_589623_15808'/>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Realization' xmi:id='_17_0_1_2_7b3022e_1336671257120_484411_11692'>
+					<client xmi:idref='_17_0_3_7b3022e_1329492747525_304378_14792'/>
+					<supplier xsi:type="uml:NamedElement" href='pathmap://NIEM_REFERENCE/NIEM-Reference-core.uml#_niem-niem-core-2.0-niem-core-TelephoneNumberRepresentationPropertyHolder-InternationalTelephoneNumber'>
+					</supplier>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_1_2_7b3022e_1336671357083_42027_11708' name='ContactMeansPropertyHolder'>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_1_2_7b3022e_1336671398840_480668_11734' name='ContactEmailID' aggregation='composite'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_1_2_7b3022e_1336671398841_289156_11735' body='An electronic mailing address by which a person or organization may be contacted.'>
+							<annotatedElement xsi:type="uml:Element" href='pathmap://NIEM_REFERENCE/NIEM-Reference-core.uml#_niem-niem-core-2.0-niem-core-ContactMeansPropertyHolder-ContactEmailID'>
+							</annotatedElement>
+						</ownedComment>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_1_2_7b3022e_1336671398846_460298_11741' name='ContactFaxNumber' aggregation='composite' type='_17_0_1_2_7b3022e_1336671398850_240662_11748'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_1_2_7b3022e_1336671398846_103419_11742' body='A telephone number for a facsimile device by which a person or organization may be contacted.'>
+							<annotatedElement xsi:type="uml:Element" href='pathmap://NIEM_REFERENCE/NIEM-Reference-core.uml#_niem-niem-core-2.0-niem-core-ContactMeansPropertyHolder-ContactFaxNumber'>
+							</annotatedElement>
+						</ownedComment>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_1_2_7b3022e_1336671398851_287877_11750' name='ContactMailingAddress' aggregation='composite' type='_17_0_1_2_7b3022e_1336671398855_620537_11757'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_1_2_7b3022e_1336671398852_289103_11751' body='A postal address by which a person or organization may be contacted.'>
+							<annotatedElement xsi:type="uml:Element" href='pathmap://NIEM_REFERENCE/NIEM-Reference-core.uml#_niem-niem-core-2.0-niem-core-ContactMeansPropertyHolder-ContactMailingAddress'>
+							</annotatedElement>
+						</ownedComment>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_1_2_7b3022e_1336671398856_889372_11759' name='ContactMobileTelephoneNumber' aggregation='composite' type='_17_0_1_2_7b3022e_1336671398850_240662_11748'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_1_2_7b3022e_1336671398856_320079_11760' body='A telephone number for a mobile telecommunication device by which a person or organization may be contacted.'>
+							<annotatedElement xsi:type="uml:Element" href='pathmap://NIEM_REFERENCE/NIEM-Reference-core.uml#_niem-niem-core-2.0-niem-core-ContactMeansPropertyHolder-ContactMobileTelephoneNumber'>
+							</annotatedElement>
+						</ownedComment>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_1_2_7b3022e_1336671398860_287574_11766' name='ContactTelephoneNumber' aggregation='composite' type='_17_0_1_2_7b3022e_1336671398850_240662_11748'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_1_2_7b3022e_1336671398861_881354_11767' body='A telephone number for a telecommunication device by which a person or organization may be contacted.'>
+							<annotatedElement xsi:type="uml:Element" href='pathmap://NIEM_REFERENCE/NIEM-Reference-core.uml#_niem-niem-core-2.0-niem-core-ContactMeansPropertyHolder-ContactTelephoneNumber'>
+							</annotatedElement>
+						</ownedComment>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_1_2_7b3022e_1336671398864_286973_11773' name='ContactWebsiteURI' aggregation='composite'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-anyURI'>
+						</type>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_1_2_7b3022e_1336671398864_621597_11774' body='A website address by which a person or organization may be contacted.'>
+							<annotatedElement xsi:type="uml:Element" href='pathmap://NIEM_REFERENCE/NIEM-Reference-core.uml#_niem-niem-core-2.0-niem-core-ContactMeansPropertyHolder-ContactWebsiteURI'>
+							</annotatedElement>
+						</ownedComment>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_1_2_7b3022e_1336671398850_240662_11748' name='TelephoneNumberType'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_1_2_7b3022e_1336671398851_530317_11749' body='A data type for a telephone number for a telecommunication device.'>
+						<annotatedElement xsi:type="uml:Element" href='pathmap://NIEM_REFERENCE/NIEM-Reference-core.uml#_niem-niem-core-2.0-niem-core-TelephoneNumberType'>
+						</annotatedElement>
+					</ownedComment>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_1_2_7b3022e_1336671398855_620537_11757' name='AddressType'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_1_2_7b3022e_1336671398855_917904_11758' body='A data type for a geophysical location described by postal information.'>
+						<annotatedElement xsi:type="uml:Element" href='pathmap://NIEM_REFERENCE/NIEM-Reference-core.uml#_niem-niem-core-2.0-niem-core-AddressType'>
+						</annotatedElement>
+					</ownedComment>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Realization' xmi:id='_17_0_1_2_7b3022e_1336671984088_474607_12020'>
+					<client xmi:idref='_17_0_3_7b3022e_1329498658234_674952_15861'/>
+					<supplier xsi:type="uml:NamedElement" href='pathmap://NIEM_REFERENCE/NIEM-Reference-core.uml#_niem-niem-core-2.0-niem-core-IdentificationCategoryPropertyHolder-IdentificationCategoryText'>
+					</supplier>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Realization' xmi:id='_17_0_1_2_7b3022e_1336671999015_243393_12035'>
+					<client xmi:idref='_17_0_3_7b3022e_1329498691588_850026_15894'/>
+					<supplier xsi:type="uml:NamedElement" href='pathmap://NIEM_REFERENCE/NIEM-Reference-core.uml#_niem-niem-core-2.0-niem-core-IdentificationJurisdictionPropertyHolder-IdentificationJurisdictionText'>
+					</supplier>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Realization' xmi:id='_17_0_1_2_7b3022e_1336672041456_873499_12077'>
+					<client xmi:idref='_17_0_3_7b3022e_1329501838282_511766_16497'/>
+					<supplier xsi:type="uml:NamedElement" href='pathmap://NIEM_REFERENCE/NIEM-Reference-core.uml#_niem-niem-core-2.0-niem-core-ActivityDateRepresentationPropertyHolder-ActivityDate'>
+					</supplier>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_1_2_24a0131_1336896868320_862607_13394' name='MyPropertyHolder'/>
+			</packagedElement>
+			<packagedElement xmi:type='uml:Package' xmi:id='_17_0_3_7b3022e_1329453270363_60558_13258' name='PetAdoptionExtension'>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_7b3022e_1329453315458_325727_13282' name='Pet'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_3_7b3022e_1329521863773_926434_11267' body='&lt;html&gt;&#10;  &lt;head&gt;&#10;&#9;&#9;&lt;style&gt;&#10;&#9;&#9;&#9;p {padding:0px; margin:0px;}&#10;&#9;&#9;&lt;/style&gt;&#10;&#9;&lt;/head&gt;&#10;&#10;  &lt;body&gt;&#10;    &lt;p&gt;&#10;      A pet is an animal owned for pleasure&#10;    &lt;/p&gt;&#10;&#10;  &lt;/body&gt;&#10;&#10;&lt;/html&gt;&#10;&#10;'>
+						<annotatedElement xmi:idref='_17_0_3_7b3022e_1329453315458_325727_13282'/>
+					</ownedComment>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329453904626_322113_13489' name='PetKind' visibility='private' aggregation='composite' type='_17_0_3_7b3022e_1329453498643_97162_13360'>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329453945946_751362_13491' name='PetName' visibility='private' aggregation='composite'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string'>
+						</type>
+						<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_17_0_3_7b3022e_1329496287546_395334_15241'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329453955354_285175_13493' name='PetBreed' visibility='private' aggregation='composite'>
+						<type xsi:type="uml:PrimitiveType" href='http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi#XMLPrimitiveTypes-string'>
+						</type>
+						<lowerValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329496294035_1397_15243'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329496294035_704940_15244' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329496361658_814154_15245' name='PetIdentification' visibility='private' aggregation='composite' type='_17_0_3_7b3022e_1329498574736_746098_15778'>
+						<lowerValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329496391051_171491_15247'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329496391051_785454_15248' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329500570434_234341_16247' name='AdoptionOfPet' visibility='private' type='_17_0_3_7b3022e_1329500540891_536740_16224' association='_17_0_3_7b3022e_1329500570434_198892_16246'>
+						<lowerValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329500603634_241663_16286'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329500603634_992621_16287' value='*'/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Enumeration' xmi:id='_17_0_3_7b3022e_1329453498643_97162_13360' name='PetKind'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_1_2_7b3022e_1336672393087_109866_12181' body='The kinds of pets often seen in adoption centers'>
+						<annotatedElement xmi:idref='_17_0_3_7b3022e_1329453498643_97162_13360'/>
+					</ownedComment>
+					<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_3_7b3022e_1329496131777_164253_15223' name='Dog'/>
+					<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_3_7b3022e_1329496139833_332770_15225' name='Cat'/>
+					<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_3_7b3022e_1329496146721_212033_15227' name='Bird'/>
+					<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_3_7b3022e_1329496159577_289281_15229' name='Rabbit'/>
+					<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_3_7b3022e_1329496171217_650262_15231' name='GerbilOrHampster'/>
+					<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_3_7b3022e_1329496200721_621706_15233' name='Reptile'/>
+					<ownedLiteral xmi:type='uml:EnumerationLiteral' xmi:id='_17_0_3_7b3022e_1329496210369_983604_15235' name='Other'/>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_7b3022e_1329453550044_524813_13379' name='PetAdoptionCenter'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_1_2_7b3022e_1336672360215_783082_12179' body='The representation of a pet adoption center'>
+						<annotatedElement xmi:idref='_17_0_3_7b3022e_1329453550044_524813_13379'/>
+					</ownedComment>
+					<generalization xmi:type='uml:Generalization' xmi:id='_17_0_3_7b3022e_1329495761514_262489_15196' general='_17_0_3_7b3022e_1329454088071_753264_13561'/>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329496058569_89197_15202' name='PetKindsOffered' visibility='private' aggregation='composite' type='_17_0_3_7b3022e_1329453498643_97162_13360'>
+						<lowerValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329496105211_169856_15221'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329496105211_29278_15222' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329500589162_586114_16274' name='AdoptionByCenter' visibility='private' type='_17_0_3_7b3022e_1329500540891_536740_16224' association='_17_0_3_7b3022e_1329500589162_929030_16272'>
+						<lowerValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329514004430_361524_12345'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329514004432_908629_12346' value='*'/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_7b3022e_1329500540891_536740_16224' name='PetAdoption'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_1_2_7b3022e_1336672345054_194150_12178' body='The activity representing the adoption of a pet'>
+						<annotatedElement xmi:idref='_17_0_3_7b3022e_1329500540891_536740_16224'/>
+					</ownedComment>
+					<generalization xmi:type='uml:Generalization' xmi:id='_17_0_3_7b3022e_1329500660795_471986_16384' general='_17_0_3_7b3022e_1329500641391_939648_16302'/>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329500570434_811378_16248' name='AdoptedPet' visibility='private' type='_17_0_3_7b3022e_1329453315458_325727_13282' association='_17_0_3_7b3022e_1329500570434_198892_16246'>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329500573474_150618_16260' name='AdoptingPerson' visibility='private' type='_17_0_3_7b3022e_1329450939979_284540_11328' association='_17_0_3_7b3022e_1329500573474_471043_16259'>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329500589162_233661_16273' name='AdoptionCenter' visibility='private' type='_17_0_3_7b3022e_1329453550044_524813_13379' association='_17_0_3_7b3022e_1329500589162_929030_16272'>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Association' xmi:id='_17_0_3_7b3022e_1329500570434_198892_16246'>
+					<memberEnd xmi:idref='_17_0_3_7b3022e_1329500570434_234341_16247'/>
+					<memberEnd xmi:idref='_17_0_3_7b3022e_1329500570434_811378_16248'/>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Association' xmi:id='_17_0_3_7b3022e_1329500573474_471043_16259'>
+					<memberEnd xmi:idref='_17_0_3_7b3022e_1329500573474_150618_16260'/>
+					<memberEnd xmi:idref='_17_0_3_7b3022e_1329500573474_925996_16261'/>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Association' xmi:id='_17_0_3_7b3022e_1329500589162_929030_16272'>
+					<memberEnd xmi:idref='_17_0_3_7b3022e_1329500589162_233661_16273'/>
+					<memberEnd xmi:idref='_17_0_3_7b3022e_1329500589162_586114_16274'/>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_7b3022e_1329592334225_501716_11313' name='TelephoneNumberAugmentation'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_1_2_7b3022e_1336672454540_553698_12186' body='Augmentation to hold telephone type'>
+						<annotatedElement xmi:idref='_17_0_3_7b3022e_1329592334225_501716_11313'/>
+					</ownedComment>
+					<generalization xmi:type='uml:Generalization' xmi:id='_17_0_3_7b3022e_1329592518808_929669_11427' general='_17_0_3_7b3022e_1329492747518_135224_14790'/>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329592367042_950856_11335' name='TelephoneTypeDescriptionText' visibility='private' type='_17_0_3_7b3022e_1329515915808_578846_12939'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_1_2_7b3022e_1336672474270_109308_12187' body='The type of phone, e.g. cell, home, business.'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329592367042_950856_11335'/>
+						</ownedComment>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_7b3022e_1329592477256_967463_11404' name='TelephoneNumber'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_1_2_7b3022e_1336672441279_347809_12185' body='A telephone number that includes a description of the type of phone'>
+						<annotatedElement xmi:idref='_17_0_3_7b3022e_1329592477256_967463_11404'/>
+					</ownedComment>
+					<generalization xmi:type='uml:Generalization' xmi:id='_17_0_3_7b3022e_1329592532102_870150_11434' general='_17_0_3_7b3022e_1329592334225_501716_11313'/>
+					<generalization xmi:type='uml:Generalization' xmi:id='_17_0_3_7b3022e_1329592535600_47374_11437' general='_17_0_3_7b3022e_1329492747518_135224_14790'/>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Usage' xmi:id='_17_0_3_7b3022e_1331504320594_65223_22400'>
+					<client xmi:idref='_17_0_3_7b3022e_1329453270363_60558_13258'/>
+					<supplier xmi:idref='_17_0_3_7b3022e_1329450471291_982463_1660'/>
+				</packagedElement>
+			</packagedElement>
+			<packagedElement xmi:type='uml:Package' xmi:id='_17_0_3_7b3022e_1329514607499_935077_12500' name='PetAdoptionExchange'>
+				<packagedElement xmi:type='uml:Class' xmi:id='_17_0_3_7b3022e_1329514640010_851232_12525' name='PetAdoptionExchange'>
+					<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_1_2_7b3022e_1336672498142_901041_12188' body='The information exchanged about pet adoptions'>
+						<annotatedElement xmi:idref='_17_0_3_7b3022e_1329514640010_851232_12525'/>
+					</ownedComment>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329514840456_609208_12679' name='people' visibility='private' aggregation='composite' type='_17_0_3_7b3022e_1329450939979_284540_11328'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_1_2_7b3022e_1336680861137_291603_11732' body='people who adopt pets'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329514840456_609208_12679'/>
+						</ownedComment>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329514913574_231489_12686' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329514878091_218510_12681' name='pets' visibility='private' aggregation='composite' type='_17_0_3_7b3022e_1329453315458_325727_13282'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_1_2_7b3022e_1336680871064_441073_11733' body='Pets that are adopted'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329514878091_218510_12681'/>
+						</ownedComment>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329514901475_952659_12684' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329514917210_2881_12687' name='petAdoptions' visibility='private' aggregation='composite' type='_17_0_3_7b3022e_1329500540891_536740_16224'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_1_2_7b3022e_1336680883951_262108_11734' body='A set of pet adoptions'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329514917210_2881_12687'/>
+						</ownedComment>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329514942616_568712_12690' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329514952514_265142_12691' name='petAdoptionCenters' visibility='private' aggregation='composite' type='_17_0_3_7b3022e_1329453550044_524813_13379'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_1_2_7b3022e_1336680898174_279616_11735' body='A set of pet adoption centers'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329514952514_265142_12691'/>
+						</ownedComment>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329514976310_813398_12694' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329514986354_286081_12695' name='addresses' visibility='private' aggregation='composite' type='_17_0_3_7b3022e_1329452294108_517714_11927'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_1_2_7b3022e_1336680909438_361256_11736' body='Addresses of people and adoption centers'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329514986354_286081_12695'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329515010103_904059_12697'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329515010103_438495_12698' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329515016939_88291_12699' name='contactInformation' visibility='private' aggregation='composite' type='_17_0_3_7b3022e_1329494936006_999882_14994'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_1_2_7b3022e_1336680916207_200961_11737' body='Contact information'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329515016939_88291_12699'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329515032621_760553_12701'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329515032621_250223_12702' value='*'/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type='uml:Property' xmi:id='_17_0_3_7b3022e_1329515290340_275244_12723' name='personContactInformationAssociations' visibility='private' aggregation='composite' type='_17_0_3_7b3022e_1329497622986_145515_15627'>
+						<ownedComment xmi:type='uml:Comment' xmi:id='_17_0_1_2_7b3022e_1336680932927_537823_11738' body='Association between people and contact info'>
+							<annotatedElement xmi:idref='_17_0_3_7b3022e_1329515290340_275244_12723'/>
+						</ownedComment>
+						<lowerValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329515330009_850478_12725'/>
+						<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_17_0_3_7b3022e_1329515330009_339546_12726' value='*'/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type='uml:Usage' xmi:id='_17_0_3_7b3022e_1331504317842_538549_22394'>
+					<client xmi:idref='_17_0_3_7b3022e_1329514607499_935077_12500'/>
+					<supplier xmi:idref='_17_0_3_7b3022e_1329453270363_60558_13258'/>
+				</packagedElement>
+			</packagedElement>
+			<profileApplication xmi:type='uml:ProfileApplication' xmi:id='_17_0_1_2_24a0131_1335266301240_27012_11963'>
+				<appliedProfile href='http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_Common_Profile'>
+				</appliedProfile>
+			</profileApplication>
+			<profileApplication xmi:type='uml:ProfileApplication' xmi:id='_17_0_1_2_24a0131_1335266301869_193577_11964'>
+				<appliedProfile href='http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_PIM_Profile'>
+				</appliedProfile>
+			</profileApplication>
+		</packagedElement>
+		<packagedElement xmi:type='uml:Package' xmi:id='_17_0_3_7b3022e_1329518769276_42028_14147' name='PetAdoptionIEPD'>
+			<packagedElement xmi:type='uml:Component' xmi:id='_17_0_1_2_7b3022e_1336669907440_95067_13199' name='PetAdoptionIEPD'>
+				<elementImport xmi:type='uml:ElementImport' xmi:id='_17_0_1_2_7b3022e_1336669998542_738711_13237' importedElement='_17_0_3_7b3022e_1329514607499_935077_12500'/>
+			</packagedElement>
+			<profileApplication xmi:type='uml:ProfileApplication' xmi:id='_17_0_1_2_24a0131_1335266231863_979480_11962'>
+				<appliedProfile href='http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-Model_Package_Description_Profile'>
+				</appliedProfile>
+			</profileApplication>
+		</packagedElement>
+		<packagedElement xmi:type='uml:Package' xmi:id='_17_0_1_2_24a0131_1335261878228_614227_12537' name='niem'/>
+	</uml:Model>
+
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329454445911_231111_13944' base_Property='_17_0_3_7b3022e_1329454445877_206152_13914' kind='element' nillable='true'/>
+	<NIEM_Common_Profile:References xmi:id='_17_0_3_7b3022e_1331653772921_648763_14659' base_Realization='_17_0_3_7b3022e_1331653772921_973900_14658'/>
+	<NIEM_Common_Profile:PropertyHolder xmi:id='_17_0_1_2_24a0131_1336896868451_440930_13395' base_Class='_17_0_1_2_24a0131_1336896868320_862607_13394'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_1_2_7b3022e_1336671398861_888377_11768' base_Property='_17_0_1_2_7b3022e_1336671398860_287574_11766' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329454088124_487886_13611' base_Property='_17_0_3_7b3022e_1329454088093_218818_13568' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329454445912_100344_13955' base_Property='_17_0_3_7b3022e_1329454445884_431595_13917' kind='element' nillable='true'/>
+	<NIEM_Common_Profile:References xmi:id='_17_0_3_7b3022e_1331653395948_634249_13852' base_Realization='_17_0_3_7b3022e_1331653395947_341929_13851'/>
+	<NIEM_Common_Profile:AugmentationType xmi:id='_17_0_3_7b3022e_1329592867982_950173_11441' base_Class='_17_0_3_7b3022e_1329592334225_501716_11313'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329498574770_622237_15791' base_Property='_17_0_3_7b3022e_1329498574745_352628_15780' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329454445914_502739_13975' base_Property='_17_0_3_7b3022e_1329454445894_283577_13922' kind='element' nillable='true'/>
+	<NIEM_Common_Profile:References xmi:id='_17_0_3_7b3022e_1331653157635_641171_13656' base_Realization='_17_0_3_7b3022e_1331653157634_469139_13655'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329498574771_361254_15806' base_Property='_17_0_3_7b3022e_1329498574762_350846_15784' kind='element' nillable='true'/>
+	<NIEM_Common_Profile:References xmi:id='_17_0_3_7b3022e_1331653010514_208217_13394' base_Realization='_17_0_3_7b3022e_1331653010513_272637_13393'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329454088124_641280_13607' base_Property='_17_0_3_7b3022e_1329454088092_569607_13567' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329498691611_992062_15904' base_Property='_17_0_3_7b3022e_1329498691588_850026_15894' kind='element' nillable='true'/>
+	<NIEM_Common_Profile:PropertyHolder xmi:id='_17_0_1_2_7b3022e_1336672130567_543300_12115' base_Class='_17_0_3_24a0131_1330121480370_137732_51480'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329451046537_751290_11402' base_Property='_17_0_3_7b3022e_1329451046526_534592_11379' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329500641433_336580_16315' base_Property='_17_0_3_7b3022e_1329500641400_445951_16304' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329497526980_655892_15559' base_Property='_17_0_3_7b3022e_1329497526965_305829_15538' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329454445915_208912_13987' base_Property='_17_0_3_7b3022e_1329454445900_465855_13925' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329498574771_387532_15798' base_Property='_17_0_3_7b3022e_1329498574755_398157_15782' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329454088127_309775_13647' base_Property='_17_0_3_7b3022e_1329454088106_257336_13577' kind='element' nillable='true'/>
+	<NIEM_PIM_Profile:InformationModel xmi:id='_17_0_3_7b3022e_1329518940818_660033_14315' base_Package='_17_0_3_7b3022e_1329453270363_60558_13258' isConformant='true' defaultPurpose='extension' version='&quot;1&quot;' targetNamespace='http://www.modeldriven.org/niem/examples/PetAdoptionExtension'/>
+
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329454445913_230348_13959' base_Property='_17_0_3_7b3022e_1329454445886_652692_13918' kind='element' nillable='true'/>
+
+	<NIEM_Common_Profile:References xmi:id='_17_0_3_7b3022e_1331653232083_99814_13722' base_Realization='_17_0_3_7b3022e_1331653232082_165271_13721'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329454445914_325492_13979' base_Property='_17_0_3_7b3022e_1329454445896_577439_13923' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329454445917_387901_14011' base_Property='_17_0_3_7b3022e_1329454445908_215069_13931' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329501838291_642981_16506' base_Property='_17_0_3_7b3022e_1329501838282_511766_16497' kind='element' nillable='true'/>
+
+	<NIEM_Common_Profile:References xmi:id='_17_0_1_2_7b3022e_1336671257120_420946_11693' base_Realization='_17_0_1_2_7b3022e_1336671257120_484411_11692'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329497526981_531469_15563' base_Property='_17_0_3_7b3022e_1329497526967_649207_15539' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329454445916_707506_13991' base_Property='_17_0_3_7b3022e_1329454445901_767548_13926' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329454445913_37390_13963' base_Property='_17_0_3_7b3022e_1329454445888_555482_13919' kind='element' nillable='true'/>
+	<NIEM_PIM_Profile:Augments xmi:id='_17_0_3_7b3022e_1329592528798_7674_11429' base_Generalization='_17_0_3_7b3022e_1329592518808_929669_11427'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329500641434_529552_16326' base_Property='_17_0_3_7b3022e_1329500641415_937059_16307' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329494936036_439790_15015' base_Property='_17_0_3_7b3022e_1329494936030_414928_14999' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_1_2_7b3022e_1336671398852_690074_11752' base_Property='_17_0_1_2_7b3022e_1336671398851_287877_11750' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329454445910_340959_13936' base_Property='_17_0_3_7b3022e_1329454445873_207116_13912' kind='element' nillable='true'/>
+	<Model_Package_Description_Profile:ModelPackageDescription xmi:id='_17_0_1_2_7b3022e_1336669931756_453263_13231' base_Component='_17_0_1_2_7b3022e_1336669907440_95067_13199' StatusText='Prototype' descriptionText='Sample NIEM-UML IEPD for pet adoption' mpdVersionID='1.0' mpdBaseURI='http://modeldriven.org/niem/samples/PetAdoption' mpdClassCode='iepd' SecurityMarkingText='Unclassified' CreationDate='2013-06-05-07:00' ASName='PETA'>
+		<ExchangePartnerName>Adoption Agency</ExchangePartnerName>
+		<PurposeText>Sample NIEM-UML IEPD PIM</PurposeText>
+		<KeywordText>pet adoption</KeywordText>
+		<DomainText>Pet Adoption</DomainText>
+		<POC xmi:type="Model_Package_Description_Profile:POCType" xmi:id="_17_0_1_2_7b3022e_1336669931756_453263_13232" POCName="John Smith">
+			<POCTelephone>202-333-1234</POCTelephone>
+			<POCEmail>john.smith@peta.org</POCEmail>
+		</POC>
+	</Model_Package_Description_Profile:ModelPackageDescription>
+
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329454088123_901674_13600' base_Property='_17_0_3_7b3022e_1329454088089_231257_13565' kind='element' nillable='true'/>
+	<NIEM_Common_Profile:References xmi:id='_17_0_1_2_7b3022e_1336672041456_190867_12078' base_Realization='_17_0_1_2_7b3022e_1336672041456_873499_12077'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329451046535_423500_11390' base_Property='_17_0_3_7b3022e_1329451046520_274594_11376' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_1_2_7b3022e_1336671398847_759692_11743' base_Property='_17_0_1_2_7b3022e_1336671398846_460298_11741' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329451046539_212756_11410' base_Property='_17_0_3_7b3022e_1329451046530_348620_11381' kind='element' nillable='true'/>
+
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329498574772_895939_15813' base_Property='_17_0_3_7b3022e_1329498574766_241733_15786' kind='element' nillable='true'/>
+
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329454445917_775610_14007' base_Property='_17_0_3_7b3022e_1329454445906_403252_13930' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329452294116_708773_11936' base_Property='_17_0_3_7b3022e_1329452294082_39338_11916' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329494936036_206205_15011' base_Property='_17_0_3_7b3022e_1329494936025_712395_14998' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329498574771_41899_15802' base_Property='_17_0_3_7b3022e_1329498574760_228953_15783' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329451046534_953452_11386' base_Property='_17_0_3_7b3022e_1329451046518_778292_11375' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329454088124_129212_13619' base_Property='_17_0_3_7b3022e_1329454088096_348371_13570' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329454445912_168512_13948' base_Property='_17_0_3_7b3022e_1329454445880_514470_13915' kind='element' nillable='true'/>
+	<NIEM_Common_Profile:References xmi:id='_17_0_3_7b3022e_1331653556315_41008_14546' base_Realization='_17_0_3_7b3022e_1331653543835_265283_14544'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329454445918_69567_14015' base_Property='_17_0_3_7b3022e_1329454445909_616688_13932' kind='element' nillable='true'/>
+	<NIEM_PIM_Profile:InformationModel xmi:id='_17_0_3_7b3022e_1329518943105_480248_14318' base_Package='_17_0_3_7b3022e_1329450471291_982463_1660' isConformant='true' defaultPurpose='subset' version='&quot;1&quot;' targetNamespace='http://niem.gov/niem/niem-core/2.0'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329494127019_398309_14890' base_Property='_17_0_3_7b3022e_1329494127009_182437_14881' kind='element' nillable='true'/>
+
+	<NIEM_Common_Profile:References xmi:id='_17_0_1_2_7b3022e_1336671999016_112341_12036' base_Realization='_17_0_1_2_7b3022e_1336671999015_243393_12035'/>
+	<NIEM_PIM_Profile:RolePlayedBy xmi:id='_17_0_3_7b3022e_1329495929063_201259_15198' base_Generalization='_17_0_3_7b3022e_1329495761514_262489_15196'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329516146585_439094_13085' base_Property='_17_0_3_7b3022e_1329516146574_635551_13068' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329454088129_512113_13682' base_Property='_17_0_3_7b3022e_1329454088119_232493_13586' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329497526979_615525_15555' base_Property='_17_0_3_7b3022e_1329497526962_612584_15537' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329454445916_135310_13995' base_Property='_17_0_3_7b3022e_1329454445903_952917_13927' kind='element' nillable='true'/>
+	<NIEM_Common_Profile:References xmi:id='_17_0_3_7b3022e_1331653171163_458972_13682' base_Realization='_17_0_3_7b3022e_1331653171163_412841_13681'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329451046536_570270_11394' base_Property='_17_0_3_7b3022e_1329451046522_743823_11377' kind='element' nillable='true'/>
+	<NIEM_Common_Profile:PropertyHolder xmi:id='_17_0_1_2_7b3022e_1336671357085_295368_11709' base_Class='_17_0_1_2_7b3022e_1336671357083_42027_11708'/>
+
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329454088125_955651_13631' base_Property='_17_0_3_7b3022e_1329454088101_271048_13573' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329451046536_505349_11398' base_Property='_17_0_3_7b3022e_1329451046524_242050_11378' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329454445914_806162_13971' base_Property='_17_0_3_7b3022e_1329454445892_882429_13921' kind='element' nillable='true'/>
+
+	<NIEM_Common_Profile:References xmi:id='_17_0_3_7b3022e_1331653320746_200458_13808' base_Realization='_17_0_3_7b3022e_1331653320746_986716_13807'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329494127018_874213_14886' base_Property='_17_0_3_7b3022e_1329494127005_422942_14880' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329451046538_205174_11406' base_Property='_17_0_3_7b3022e_1329451046528_261928_11380' kind='element' nillable='true'/>
+
+	<NIEM_Common_Profile:References xmi:id='_17_0_3_7b3022e_1331653126099_180760_13574' base_Realization='_17_0_3_7b3022e_1331653115072_574720_13573'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329454445915_201118_13983' base_Property='_17_0_3_7b3022e_1329454445899_73713_13924' kind='element' nillable='true'/>
+
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329454445911_591577_13940' base_Property='_17_0_3_7b3022e_1329454445875_494478_13913' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_1_2_7b3022e_1336671398842_716584_11736' base_Property='_17_0_1_2_7b3022e_1336671398840_480668_11734' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329498658241_475761_15869' base_Property='_17_0_3_7b3022e_1329498658234_674952_15861' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329494936035_49712_15007' base_Property='_17_0_3_7b3022e_1329494936020_243136_14997' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_1_2_7b3022e_1336671398864_826989_11775' base_Property='_17_0_1_2_7b3022e_1336671398864_286973_11773' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329494936036_987140_15019' base_Property='_17_0_3_7b3022e_1329494936032_243768_15000' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329454445916_520450_13999' base_Property='_17_0_3_7b3022e_1329454445904_811850_13928' kind='element' nillable='true'/>
+	<NIEM_Common_Profile:References xmi:id='_17_0_3_7b3022e_1331653062052_261946_13432' base_Realization='_17_0_3_7b3022e_1331653062052_501466_13431'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_1_2_7b3022e_1336671398857_983024_11761' base_Property='_17_0_1_2_7b3022e_1336671398856_889372_11759' kind='element' nillable='true'/>
+	<NIEM_Common_Profile:References xmi:id='_17_0_1_2_7b3022e_1336671984088_901834_12021' base_Realization='_17_0_1_2_7b3022e_1336671984088_474607_12020'/>
+	<NIEM_Common_Profile:References xmi:id='_17_0_3_7b3022e_1331653480896_222174_14500' base_Realization='_17_0_3_7b3022e_1331653480879_470427_14499'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329494127019_318387_14894' base_Property='_17_0_3_7b3022e_1329494127013_407144_14882' kind='element' nillable='true'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329454445913_48031_13967' base_Property='_17_0_3_7b3022e_1329454445890_146285_13920' kind='element' nillable='true'/>
+	<NIEM_Common_Profile:References xmi:id='_17_0_3_7b3022e_1331653378924_392872_13831' base_Realization='_17_0_3_7b3022e_1331653378924_85142_13830'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329684582538_724143_11526' base_Property='_17_0_3_7b3022e_1329684582436_832999_11430' kind='element' nillable='true'/>
+	<NIEM_PIM_Profile:InformationModel xmi:id='_17_0_3_7b3022e_1329518936276_666442_14312' base_Package='_17_0_3_7b3022e_1329514607499_935077_12500' isConformant='true' defaultPurpose='exchange' version='&quot;1&quot;' targetNamespace='http://www.modeldriven.org/niem/examples/PetAdoptionExchange'/>
+	<NIEM_PSM_Profile:XSDProperty xmi:id='_17_0_3_7b3022e_1329454445917_967454_14003' base_Property='_17_0_3_7b3022e_1329454445905_216450_13929' kind='element' nillable='true'/>
+</xmi:XMI>

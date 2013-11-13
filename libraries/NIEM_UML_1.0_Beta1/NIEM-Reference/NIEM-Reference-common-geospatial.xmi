@@ -1,0 +1,1066 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/spec/XMI/20110701">
+	<uml:Model
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile"
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:Model_Package_Description_Profile="http://www.omg.org/spec/NIEM-UML/20120501/Model_Package_Description_Profile"
+		xmlns:uml="http://www.omg.org/spec/UML/20110701" xmi:type="uml:Model" xmi:id="_niem"
+		name="niem">
+		<packagedElement xmi:type="uml:Package" xmi:id="_niem-external" name="external"/>
+		<packagedElement xmi:type="uml:Package" xmi:id="_niem-geospatial" name="geospatial">
+			<packagedElement xmi:type="uml:Package" xmi:id="_niem-geospatial-2.1" name="2.1">
+				<packagedElement xmi:type="uml:Package" xmi:id="_niem-geospatial-2.1-geospatial"
+					name="geospatial">
+					<ownedComment xmi:type="uml:Comment"
+						xmi:id="_niem-geospatial-2.1-geospatial-ownedComment"
+						body="Defines NIEM adapter types for external geospatial components defined by OGC and ISO.  It references local copies of unmodified schemas from external standards in local directory tree fragments that mirror the directory structures of the cannonical schema sources on the world wide web, and a profile of the OGC Open Location Services (XLS) schema that is based on GML version 3.2.1.">
+						<annotatedElement xmi:idref="_niem-geospatial-2.1-geospatial"/>
+					</ownedComment>
+					<packagedElement xmi:type="uml:Class"
+						xmi:id="_niem-geospatial-2.1-geospatial-ArcByCenterPointType"
+						name="ArcByCenterPointType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-geospatial-2.1-geospatial-ArcByCenterPointType-ownedComment"
+							body="A 2D arc defined by its center point, radius, and bearings at start and end.  This variant of the arc requires that the points on the arc shall be computed instead of storing the coordinates directly. The single control point is the center point of the arc plus the radius and the bearing at start and end. This representation can be used only in 2D. The element gml:radius specifies the radius of the arc. The element gml:startAngle specifies the bearing of the arc at the start. The element gml:endAngle specifies the bearing of the arc at the end. The interpolation is fixed as &#34;circularArcCenterPointWithRadius&#34;. Since this type describes always a single arc, the attribute &#34;numArc&#34; is fixed to &#34;1&#34;.">
+							<annotatedElement
+								xmi:idref="_niem-geospatial-2.1-geospatial-ArcByCenterPointType"/>
+						</ownedComment>
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-ArcByCenterPointType-ArcByCenterPoint"
+							name="ArcByCenterPoint" aggregation="composite"
+							association="_niem-geospatial-2.1-geospatial-packagedElement-3">
+							<type
+								href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-external-ogc.xmi#_niem-external-ogc-gml-3.2.1-geometryPrimitives-ArcByCenterPointType"> </type>
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-geospatial-2.1-geospatial-ArcByCenterPointType-ArcByCenterPoint-ownedComment"
+								body="This variant of the arc requires that the points on the arc shall be computed instead of storing the coordinates directly. The single control point is the center point of the arc plus the radius and the bearing at start and end. This representation can be used only in 2D.&#xA;The element radius specifies the radius of the arc.&#xA;The element startAngle specifies the bearing of the arc at the start.&#xA;The element endAngle specifies the bearing of the arc at the end.&#xA;The interpolation is fixed as &#34;circularArcCenterPointWithRadius&#34;.&#xA;Since this type describes always a single arc, the attribute &#34;numArc&#34; is fixed to &#34;1&#34;.&#xA;The content model follows the general pattern for the encoding of curve segments.">
+								<annotatedElement
+									xmi:idref="_niem-geospatial-2.1-geospatial-ArcByCenterPointType-ArcByCenterPoint"
+								/>
+							</ownedComment>
+							<lowerValue xmi:type="uml:LiteralInteger"
+								xmi:id="_niem-geospatial-2.1-geospatial-ArcByCenterPointType-ArcByCenterPoint-lowerValue"/>
+							<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+								xmi:id="_niem-geospatial-2.1-geospatial-ArcByCenterPointType-ArcByCenterPoint-upperValue"
+								value="*"/>
+						</ownedAttribute>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Realization"
+						xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-2">
+						<client
+							xmi:idref="_niem-geospatial-2.1-geospatial-ArcByCenterPointType-ArcByCenterPoint"/>
+						<supplier
+							href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-external-ogc.xmi#_niem-external-ogc-gml-3.2.1-geometryPrimitives-AbstractObjectPropertyHolder-ArcByCenterPoint"
+						> </supplier>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Association"
+						xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-3">
+						<memberEnd
+							xmi:idref="_niem-geospatial-2.1-geospatial-ArcByCenterPointType-ArcByCenterPoint"/>
+						<memberEnd
+							xmi:idref="_niem-geospatial-2.1-geospatial-packagedElement-3-ownedEnd"/>
+						<ownedEnd xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-3-ownedEnd"
+							isUnique="false"
+							type="_niem-geospatial-2.1-geospatial-ArcByCenterPointType"
+							association="_niem-geospatial-2.1-geospatial-packagedElement-3"
+						> </ownedEnd>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Class"
+						xmi:id="_niem-geospatial-2.1-geospatial-ArcType" name="ArcType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-geospatial-2.1-geospatial-ArcType-ownedComment"
+							body="An Arc is an arc string with only one arc unit, i.e. three control points including the start and end point. As arc is an arc string consisting of a single arc, the attribute ?numArc? is fixed to &#34;1&#34;.">
+							<annotatedElement xmi:idref="_niem-geospatial-2.1-geospatial-ArcType"/>
+						</ownedComment>
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-ArcType-Arc" name="Arc"
+							aggregation="composite"
+							association="_niem-geospatial-2.1-geospatial-packagedElement-6">
+							<type
+								href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-external-ogc.xmi#_niem-external-ogc-gml-3.2.1-geometryPrimitives-ArcType"> </type>
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-geospatial-2.1-geospatial-ArcType-Arc-ownedComment"
+								body="An Arc is an arc string with only one arc unit, i.e. three control points including the start and end point. As arc is an arc string consisting of a single arc, the attribute &#34;numArc&#34; is fixed to &#34;1&#34;.">
+								<annotatedElement
+									xmi:idref="_niem-geospatial-2.1-geospatial-ArcType-Arc"/>
+							</ownedComment>
+							<lowerValue xmi:type="uml:LiteralInteger"
+								xmi:id="_niem-geospatial-2.1-geospatial-ArcType-Arc-lowerValue"/>
+							<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+								xmi:id="_niem-geospatial-2.1-geospatial-ArcType-Arc-upperValue"
+								value="*"/>
+						</ownedAttribute>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Association"
+						xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-6">
+						<memberEnd xmi:idref="_niem-geospatial-2.1-geospatial-ArcType-Arc"/>
+						<memberEnd
+							xmi:idref="_niem-geospatial-2.1-geospatial-packagedElement-6-ownedEnd"/>
+						<ownedEnd xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-6-ownedEnd"
+							isUnique="false" type="_niem-geospatial-2.1-geospatial-ArcType"
+							association="_niem-geospatial-2.1-geospatial-packagedElement-6"
+						> </ownedEnd>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Class"
+						xmi:id="_niem-geospatial-2.1-geospatial-CircleByCenterPointType"
+						name="CircleByCenterPointType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-geospatial-2.1-geospatial-CircleByCenterPointType-ownedComment"
+							body="A 2D ArcByCenterPoint with identical start and end angles that forms a full circle. A gml:CircleByCenterPoint is an gml:ArcByCenterPoint with identical start and end angle to form a full circle. Again, this representation can be used only in 2D.">
+							<annotatedElement
+								xmi:idref="_niem-geospatial-2.1-geospatial-CircleByCenterPointType"
+							/>
+						</ownedComment>
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-CircleByCenterPointType-CircleByCenterPoint"
+							name="CircleByCenterPoint" aggregation="composite"
+							association="_niem-geospatial-2.1-geospatial-packagedElement-9">
+							<type
+								href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-external-ogc.xmi#_niem-external-ogc-gml-3.2.1-geometryPrimitives-CircleByCenterPointType"> </type>
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-geospatial-2.1-geospatial-CircleByCenterPointType-CircleByCenterPoint-ownedComment"
+								body="A gml:CircleByCenterPoint is an gml:ArcByCenterPoint with identical start and end angle to form a full circle. Again, this representation can be used only in 2D.">
+								<annotatedElement
+									xmi:idref="_niem-geospatial-2.1-geospatial-CircleByCenterPointType-CircleByCenterPoint"
+								/>
+							</ownedComment>
+							<lowerValue xmi:type="uml:LiteralInteger"
+								xmi:id="_niem-geospatial-2.1-geospatial-CircleByCenterPointType-CircleByCenterPoint-lowerValue"/>
+							<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+								xmi:id="_niem-geospatial-2.1-geospatial-CircleByCenterPointType-CircleByCenterPoint-upperValue"
+								value="*"/>
+						</ownedAttribute>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Association"
+						xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-9">
+						<memberEnd
+							xmi:idref="_niem-geospatial-2.1-geospatial-CircleByCenterPointType-CircleByCenterPoint"/>
+						<memberEnd
+							xmi:idref="_niem-geospatial-2.1-geospatial-packagedElement-9-ownedEnd"/>
+						<ownedEnd xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-9-ownedEnd"
+							isUnique="false"
+							type="_niem-geospatial-2.1-geospatial-CircleByCenterPointType"
+							association="_niem-geospatial-2.1-geospatial-packagedElement-9"
+						> </ownedEnd>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Class"
+						xmi:id="_niem-geospatial-2.1-geospatial-CircleType" name="CircleType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-geospatial-2.1-geospatial-CircleType-ownedComment"
+							body="A Circle is an arc whose ends coincide to form a simple closed loop. The three control points shall be distinct non-co-linear points for the circle to be unambiguously defined. The arc is simply extended past the third control point until the first control point is encountered.">
+							<annotatedElement xmi:idref="_niem-geospatial-2.1-geospatial-CircleType"
+							/>
+						</ownedComment>
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-CircleType-Circle" name="Circle"
+							aggregation="composite"
+							association="_niem-geospatial-2.1-geospatial-packagedElement-12">
+							<type
+								href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-external-ogc.xmi#_niem-external-ogc-gml-3.2.1-geometryPrimitives-CircleType"> </type>
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-geospatial-2.1-geospatial-CircleType-Circle-ownedComment"
+								body="A Circle is an arc whose ends coincide to form a simple closed loop. The three control points shall be distinct non-co-linear points for the circle to be unambiguously defined. The arc is simply extended past the third control point until the first control point is encountered.">
+								<annotatedElement
+									xmi:idref="_niem-geospatial-2.1-geospatial-CircleType-Circle"/>
+							</ownedComment>
+							<lowerValue xmi:type="uml:LiteralInteger"
+								xmi:id="_niem-geospatial-2.1-geospatial-CircleType-Circle-lowerValue"/>
+							<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+								xmi:id="_niem-geospatial-2.1-geospatial-CircleType-Circle-upperValue"
+								value="*"/>
+						</ownedAttribute>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Association"
+						xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-12">
+						<memberEnd xmi:idref="_niem-geospatial-2.1-geospatial-CircleType-Circle"/>
+						<memberEnd
+							xmi:idref="_niem-geospatial-2.1-geospatial-packagedElement-12-ownedEnd"/>
+						<ownedEnd xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-12-ownedEnd"
+							isUnique="false" type="_niem-geospatial-2.1-geospatial-CircleType"
+							association="_niem-geospatial-2.1-geospatial-packagedElement-12"
+						> </ownedEnd>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Class"
+						xmi:id="_niem-geospatial-2.1-geospatial-CurveType" name="CurveType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-geospatial-2.1-geospatial-CurveType-ownedComment"
+							body="A curve is a 1-dimensional primitive. Curves are continuous, connected, and have a measurable length in terms of the coordinate system.  A curve is composed of one or more curve segments. Each curve segment within a curve may be defined using a different interpolation method. The curve segments are connected to one another, with the end point of each segment except the last being the start point of the next segment in the segment list.  The orientation of the curve is positive.">
+							<annotatedElement xmi:idref="_niem-geospatial-2.1-geospatial-CurveType"
+							/>
+						</ownedComment>
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-CurveType-Curve" name="Curve"
+							aggregation="composite"
+							association="_niem-geospatial-2.1-geospatial-packagedElement-15">
+							<type
+								href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-external-ogc.xmi#_niem-external-ogc-gml-3.2.1-geometryPrimitives-CurveType"> </type>
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-geospatial-2.1-geospatial-CurveType-Curve-ownedComment"
+								body="A curve is a 1-dimensional primitive. Curves are continuous, connected, and have a measurable length in terms of the coordinate system. &#xA;A curve is composed of one or more curve segments. Each curve segment within a curve may be defined using a different interpolation method. The curve segments are connected to one another, with the end point of each segment except the last being the start point of the next segment in the segment list.&#xA;The orientation of the curve is positive.&#xA;The element segments encapsulates the segments of the curve.">
+								<annotatedElement
+									xmi:idref="_niem-geospatial-2.1-geospatial-CurveType-Curve"/>
+							</ownedComment>
+							<lowerValue xmi:type="uml:LiteralInteger"
+								xmi:id="_niem-geospatial-2.1-geospatial-CurveType-Curve-lowerValue"/>
+							<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+								xmi:id="_niem-geospatial-2.1-geospatial-CurveType-Curve-upperValue"
+								value="*"/>
+						</ownedAttribute>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Association"
+						xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-15">
+						<memberEnd xmi:idref="_niem-geospatial-2.1-geospatial-CurveType-Curve"/>
+						<memberEnd
+							xmi:idref="_niem-geospatial-2.1-geospatial-packagedElement-15-ownedEnd"/>
+						<ownedEnd xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-15-ownedEnd"
+							isUnique="false" type="_niem-geospatial-2.1-geospatial-CurveType"
+							association="_niem-geospatial-2.1-geospatial-packagedElement-15"
+						> </ownedEnd>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Class"
+						xmi:id="_niem-geospatial-2.1-geospatial-EllipseType" name="EllipseType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-geospatial-2.1-geospatial-EllipseType-ownedComment"
+							body="An ellipse specified by a point, major axis, minor axis and rotation.">
+							<annotatedElement
+								xmi:idref="_niem-geospatial-2.1-geospatial-EllipseType"/>
+						</ownedComment>
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-EllipseType-Ellipse"
+							name="Ellipse" aggregation="composite"
+							association="_niem-geospatial-2.1-geospatial-packagedElement-18">
+							<type
+								href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-external-ogc.xmi#_niem-external-ogc-ols-1.1.0-dhs-gmo-2.1.0-ols-EllipseType"> </type>
+							<lowerValue xmi:type="uml:LiteralInteger"
+								xmi:id="_niem-geospatial-2.1-geospatial-EllipseType-Ellipse-lowerValue"/>
+							<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+								xmi:id="_niem-geospatial-2.1-geospatial-EllipseType-Ellipse-upperValue"
+								value="*"/>
+						</ownedAttribute>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Realization"
+						xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-17">
+						<client xmi:idref="_niem-geospatial-2.1-geospatial-EllipseType-Ellipse"/>
+						<supplier
+							href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-external-ogc.xmi#_niem-external-ogc-ols-1.1.0-dhs-gmo-2.1.0-ols-NamespaceElementPropertyHolder-Ellipse"
+						> </supplier>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Association"
+						xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-18">
+						<memberEnd xmi:idref="_niem-geospatial-2.1-geospatial-EllipseType-Ellipse"/>
+						<memberEnd
+							xmi:idref="_niem-geospatial-2.1-geospatial-packagedElement-18-ownedEnd"/>
+						<ownedEnd xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-18-ownedEnd"
+							isUnique="false" type="_niem-geospatial-2.1-geospatial-EllipseType"
+							association="_niem-geospatial-2.1-geospatial-packagedElement-18"
+						> </ownedEnd>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Class"
+						xmi:id="_niem-geospatial-2.1-geospatial-EnvelopeType" name="EnvelopeType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-geospatial-2.1-geospatial-EnvelopeType-ownedComment"
+							body="Envelope defines an extent using a pair of positions defining opposite corners in arbitrary dimensions. The first direct position is the &#34;lower corner&#34; (a coordinate position consisting of all the minimal ordinates for each dimension for all points within the envelope), the second one the &#34;upper corner&#34; (a coordinate position consisting of all the maximal ordinates for each dimension for all points within the envelope).">
+							<annotatedElement
+								xmi:idref="_niem-geospatial-2.1-geospatial-EnvelopeType"/>
+						</ownedComment>
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-EnvelopeType-Envelope"
+							name="Envelope" aggregation="composite"
+							association="_niem-geospatial-2.1-geospatial-packagedElement-21">
+							<type
+								href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-external-ogc.xmi#_niem-external-ogc-gml-3.2.1-geometryBasic0d1d-EnvelopeType"> </type>
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-geospatial-2.1-geospatial-EnvelopeType-Envelope-ownedComment"
+								body="Envelope defines an extent using a pair of positions defining opposite corners in arbitrary dimensions. The first direct position is the &#34;lower corner&#34; (a coordinate position consisting of all the minimal ordinates for each dimension for all points within the envelope), the second one the &#34;upper corner&#34; (a coordinate position consisting of all the maximal ordinates for each dimension for all points within the envelope).&#xA;The use of the properties &#34;coordinates&#34; and &#34;pos&#34; has been deprecated. The explicitly named properties &#34;lowerCorner&#34; and &#34;upperCorner&#34; shall be used instead.">
+								<annotatedElement
+									xmi:idref="_niem-geospatial-2.1-geospatial-EnvelopeType-Envelope"
+								/>
+							</ownedComment>
+							<lowerValue xmi:type="uml:LiteralInteger"
+								xmi:id="_niem-geospatial-2.1-geospatial-EnvelopeType-Envelope-lowerValue"/>
+							<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+								xmi:id="_niem-geospatial-2.1-geospatial-EnvelopeType-Envelope-upperValue"
+								value="*"/>
+						</ownedAttribute>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Association"
+						xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-21">
+						<memberEnd xmi:idref="_niem-geospatial-2.1-geospatial-EnvelopeType-Envelope"/>
+						<memberEnd
+							xmi:idref="_niem-geospatial-2.1-geospatial-packagedElement-21-ownedEnd"/>
+						<ownedEnd xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-21-ownedEnd"
+							isUnique="false" type="_niem-geospatial-2.1-geospatial-EnvelopeType"
+							association="_niem-geospatial-2.1-geospatial-packagedElement-21"
+						> </ownedEnd>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Class"
+						xmi:id="_niem-geospatial-2.1-geospatial-LineStringType"
+						name="LineStringType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-geospatial-2.1-geospatial-LineStringType-ownedComment"
+							body="A geometric curve that consists of a single segment with linear interpolation.  A gml:LineString is a special curve that consists of a single segment with linear interpolation. It is defined by two or more coordinate tuples, with linear interpolation between them.">
+							<annotatedElement
+								xmi:idref="_niem-geospatial-2.1-geospatial-LineStringType"/>
+						</ownedComment>
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-LineStringType-LineString"
+							name="LineString" aggregation="composite"
+							association="_niem-geospatial-2.1-geospatial-packagedElement-24">
+							<type
+								href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-external-ogc.xmi#_niem-external-ogc-gml-3.2.1-geometryBasic0d1d-LineStringType"> </type>
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-geospatial-2.1-geospatial-LineStringType-LineString-ownedComment"
+								body="A LineString is a special curve that consists of a single segment with linear interpolation. It is defined by two or more coordinate tuples, with linear interpolation between them. The number of direct positions in the list shall be at least two.">
+								<annotatedElement
+									xmi:idref="_niem-geospatial-2.1-geospatial-LineStringType-LineString"
+								/>
+							</ownedComment>
+							<lowerValue xmi:type="uml:LiteralInteger"
+								xmi:id="_niem-geospatial-2.1-geospatial-LineStringType-LineString-lowerValue"/>
+							<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+								xmi:id="_niem-geospatial-2.1-geospatial-LineStringType-LineString-upperValue"
+								value="*"/>
+						</ownedAttribute>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Association"
+						xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-24">
+						<memberEnd
+							xmi:idref="_niem-geospatial-2.1-geospatial-LineStringType-LineString"/>
+						<memberEnd
+							xmi:idref="_niem-geospatial-2.1-geospatial-packagedElement-24-ownedEnd"/>
+						<ownedEnd xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-24-ownedEnd"
+							isUnique="false" type="_niem-geospatial-2.1-geospatial-LineStringType"
+							association="_niem-geospatial-2.1-geospatial-packagedElement-24"
+						> </ownedEnd>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Class"
+						xmi:id="_niem-geospatial-2.1-geospatial-MultiCurveType"
+						name="MultiCurveType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-geospatial-2.1-geospatial-MultiCurveType-ownedComment"
+							body="A geometry collection that includes one or more curves or line strings. A gml:MultiCurve is defined by one or more gml:AbstractCurves. The members of the geometric aggregate may be specified either using the &#34;standard&#34; property (gml:curveMember) or the array property (gml:curveMembers). It is also valid to use both the &#34;standard&#34; and the array properties in the same collection.">
+							<annotatedElement
+								xmi:idref="_niem-geospatial-2.1-geospatial-MultiCurveType"/>
+						</ownedComment>
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-MultiCurveType-MultiCurve"
+							name="MultiCurve" aggregation="composite"
+							association="_niem-geospatial-2.1-geospatial-packagedElement-27">
+							<type
+								href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-external-ogc.xmi#_niem-external-ogc-gml-3.2.1-geometryAggregates-MultiCurveType"> </type>
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-geospatial-2.1-geospatial-MultiCurveType-MultiCurve-ownedComment"
+								body="A gml:MultiCurve is defined by one or more gml:AbstractCurves.&#xA;The members of the geometric aggregate may be specified either using the &#34;standard&#34; property (gml:curveMember) or the array property (gml:curveMembers). It is also valid to use both the &#34;standard&#34; and the array properties in the same collection.">
+								<annotatedElement
+									xmi:idref="_niem-geospatial-2.1-geospatial-MultiCurveType-MultiCurve"
+								/>
+							</ownedComment>
+							<lowerValue xmi:type="uml:LiteralInteger"
+								xmi:id="_niem-geospatial-2.1-geospatial-MultiCurveType-MultiCurve-lowerValue"/>
+							<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+								xmi:id="_niem-geospatial-2.1-geospatial-MultiCurveType-MultiCurve-upperValue"
+								value="*"/>
+						</ownedAttribute>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Association"
+						xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-27">
+						<memberEnd
+							xmi:idref="_niem-geospatial-2.1-geospatial-MultiCurveType-MultiCurve"/>
+						<memberEnd
+							xmi:idref="_niem-geospatial-2.1-geospatial-packagedElement-27-ownedEnd"/>
+						<ownedEnd xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-27-ownedEnd"
+							isUnique="false" type="_niem-geospatial-2.1-geospatial-MultiCurveType"
+							association="_niem-geospatial-2.1-geospatial-packagedElement-27"
+						> </ownedEnd>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Class"
+						xmi:id="_niem-geospatial-2.1-geospatial-MultiGeometryType"
+						name="MultiGeometryType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-geospatial-2.1-geospatial-MultiGeometryType-ownedComment"
+							body="A geometry collection that includes one or more geometries, potentially of different types. Gml:MultiGeometry is a collection of one or more GML geometry objects of arbitrary type. The members of the geometric aggregate may be specified either using the &#34;standard&#34; property (gml:geometryMember) or the array property (gml:geometryMembers). It is also valid to use both the &#34;standard&#34; and the array properties in the same collection.">
+							<annotatedElement
+								xmi:idref="_niem-geospatial-2.1-geospatial-MultiGeometryType"/>
+						</ownedComment>
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-MultiGeometryType-MultiGeometry"
+							name="MultiGeometry" aggregation="composite"
+							association="_niem-geospatial-2.1-geospatial-packagedElement-30">
+							<type
+								href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-external-ogc.xmi#_niem-external-ogc-gml-3.2.1-geometryAggregates-MultiGeometryType"> </type>
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-geospatial-2.1-geospatial-MultiGeometryType-MultiGeometry-ownedComment"
+								body="gml:MultiGeometry is a collection of one or more GML geometry objects of arbitrary type. &#xA;The members of the geometric aggregate may be specified either using the &#34;standard&#34; property (gml:geometryMember) or the array property (gml:geometryMembers). It is also valid to use both the &#34;standard&#34; and the array properties in the same collection.">
+								<annotatedElement
+									xmi:idref="_niem-geospatial-2.1-geospatial-MultiGeometryType-MultiGeometry"
+								/>
+							</ownedComment>
+							<lowerValue xmi:type="uml:LiteralInteger"
+								xmi:id="_niem-geospatial-2.1-geospatial-MultiGeometryType-MultiGeometry-lowerValue"/>
+							<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+								xmi:id="_niem-geospatial-2.1-geospatial-MultiGeometryType-MultiGeometry-upperValue"
+								value="*"/>
+						</ownedAttribute>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Association"
+						xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-30">
+						<memberEnd
+							xmi:idref="_niem-geospatial-2.1-geospatial-MultiGeometryType-MultiGeometry"/>
+						<memberEnd
+							xmi:idref="_niem-geospatial-2.1-geospatial-packagedElement-30-ownedEnd"/>
+						<ownedEnd xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-30-ownedEnd"
+							isUnique="false"
+							type="_niem-geospatial-2.1-geospatial-MultiGeometryType"
+							association="_niem-geospatial-2.1-geospatial-packagedElement-30"
+						> </ownedEnd>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Class"
+						xmi:id="_niem-geospatial-2.1-geospatial-MultiPointType"
+						name="MultiPointType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-geospatial-2.1-geospatial-MultiPointType-ownedComment"
+							body="A geometry collection that includes one or more points. A gml:MultiPoint consists of one or more gml:Points. The members of the geometric aggregate may be specified either using the &#34;standard&#34; property (gml:pointMember) or the array property (gml:pointMembers). It is also valid to use both the &#34;standard&#34; and the array properties in the same collection.">
+							<annotatedElement
+								xmi:idref="_niem-geospatial-2.1-geospatial-MultiPointType"/>
+						</ownedComment>
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-MultiPointType-MultiPoint"
+							name="MultiPoint" aggregation="composite"
+							association="_niem-geospatial-2.1-geospatial-packagedElement-33">
+							<type
+								href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-external-ogc.xmi#_niem-external-ogc-gml-3.2.1-geometryAggregates-MultiPointType"> </type>
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-geospatial-2.1-geospatial-MultiPointType-MultiPoint-ownedComment"
+								body="A gml:MultiPoint consists of one or more gml:Points.&#xA;The members of the geometric aggregate may be specified either using the &#34;standard&#34; property (gml:pointMember) or the array property (gml:pointMembers). It is also valid to use both the &#34;standard&#34; and the array properties in the same collection.">
+								<annotatedElement
+									xmi:idref="_niem-geospatial-2.1-geospatial-MultiPointType-MultiPoint"
+								/>
+							</ownedComment>
+							<lowerValue xmi:type="uml:LiteralInteger"
+								xmi:id="_niem-geospatial-2.1-geospatial-MultiPointType-MultiPoint-lowerValue"/>
+							<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+								xmi:id="_niem-geospatial-2.1-geospatial-MultiPointType-MultiPoint-upperValue"
+								value="*"/>
+						</ownedAttribute>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Association"
+						xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-33">
+						<memberEnd
+							xmi:idref="_niem-geospatial-2.1-geospatial-MultiPointType-MultiPoint"/>
+						<memberEnd
+							xmi:idref="_niem-geospatial-2.1-geospatial-packagedElement-33-ownedEnd"/>
+						<ownedEnd xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-33-ownedEnd"
+							isUnique="false" type="_niem-geospatial-2.1-geospatial-MultiPointType"
+							association="_niem-geospatial-2.1-geospatial-packagedElement-33"
+						> </ownedEnd>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Class"
+						xmi:id="_niem-geospatial-2.1-geospatial-MultiSurfaceType"
+						name="MultiSurfaceType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-geospatial-2.1-geospatial-MultiSurfaceType-ownedComment"
+							body="A geometry collection that includes one or more Polygons or Surfaces.">
+							<annotatedElement
+								xmi:idref="_niem-geospatial-2.1-geospatial-MultiSurfaceType"/>
+						</ownedComment>
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-MultiSurfaceType-MultiSurface"
+							name="MultiSurface" aggregation="composite"
+							association="_niem-geospatial-2.1-geospatial-packagedElement-36">
+							<type
+								href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-external-ogc.xmi#_niem-external-ogc-gml-3.2.1-geometryAggregates-MultiSurfaceType"> </type>
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-geospatial-2.1-geospatial-MultiSurfaceType-MultiSurface-ownedComment"
+								body="A gml:MultiSurface is defined by one or more gml:AbstractSurfaces.&#xA;The members of the geometric aggregate may be specified either using the &#34;standard&#34; property (gml:surfaceMember) or the array property (gml:surfaceMembers). It is also valid to use both the &#34;standard&#34; and the array properties in the same collection.">
+								<annotatedElement
+									xmi:idref="_niem-geospatial-2.1-geospatial-MultiSurfaceType-MultiSurface"
+								/>
+							</ownedComment>
+							<lowerValue xmi:type="uml:LiteralInteger"
+								xmi:id="_niem-geospatial-2.1-geospatial-MultiSurfaceType-MultiSurface-lowerValue"/>
+							<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+								xmi:id="_niem-geospatial-2.1-geospatial-MultiSurfaceType-MultiSurface-upperValue"
+								value="*"/>
+						</ownedAttribute>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Association"
+						xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-36">
+						<memberEnd
+							xmi:idref="_niem-geospatial-2.1-geospatial-MultiSurfaceType-MultiSurface"/>
+						<memberEnd
+							xmi:idref="_niem-geospatial-2.1-geospatial-packagedElement-36-ownedEnd"/>
+						<ownedEnd xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-36-ownedEnd"
+							isUnique="false" type="_niem-geospatial-2.1-geospatial-MultiSurfaceType"
+							association="_niem-geospatial-2.1-geospatial-packagedElement-36"
+						> </ownedEnd>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Class"
+						xmi:id="_niem-geospatial-2.1-geospatial-PointType" name="PointType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-geospatial-2.1-geospatial-PointType-ownedComment"
+							body="A 2D or 3D geometric point.  A gml:Point is defined by a single coordinate tuple. The direct position of a point is specified by the gml:pos element which is of type gml:DirectPositionType.">
+							<annotatedElement xmi:idref="_niem-geospatial-2.1-geospatial-PointType"
+							/>
+						</ownedComment>
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-PointType-Point" name="Point"
+							aggregation="composite"
+							association="_niem-geospatial-2.1-geospatial-packagedElement-39">
+							<type
+								href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-external-ogc.xmi#_niem-external-ogc-gml-3.2.1-geometryBasic0d1d-PointType"> </type>
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-geospatial-2.1-geospatial-PointType-Point-ownedComment"
+								body="A Point is defined by a single coordinate tuple. The direct position of a point is specified by the pos element which is of type DirectPositionType.">
+								<annotatedElement
+									xmi:idref="_niem-geospatial-2.1-geospatial-PointType-Point"/>
+							</ownedComment>
+							<lowerValue xmi:type="uml:LiteralInteger"
+								xmi:id="_niem-geospatial-2.1-geospatial-PointType-Point-lowerValue"/>
+							<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+								xmi:id="_niem-geospatial-2.1-geospatial-PointType-Point-upperValue"
+								value="*"/>
+						</ownedAttribute>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Association"
+						xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-39">
+						<memberEnd xmi:idref="_niem-geospatial-2.1-geospatial-PointType-Point"/>
+						<memberEnd
+							xmi:idref="_niem-geospatial-2.1-geospatial-packagedElement-39-ownedEnd"/>
+						<ownedEnd xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-39-ownedEnd"
+							isUnique="false" type="_niem-geospatial-2.1-geospatial-PointType"
+							association="_niem-geospatial-2.1-geospatial-packagedElement-39"
+						> </ownedEnd>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Class"
+						xmi:id="_niem-geospatial-2.1-geospatial-PolygonType" name="PolygonType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-geospatial-2.1-geospatial-PolygonType-ownedComment"
+							body="A polygon; a geometric surface defined by a single surface patch whose boundary is coplanar.  A gml:Polygon is a special surface that is defined by a single surface patch (see D.3.6). The boundary of this patch is coplanar and the polygon uses planar interpolation in its interior.">
+							<annotatedElement
+								xmi:idref="_niem-geospatial-2.1-geospatial-PolygonType"/>
+						</ownedComment>
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-PolygonType-Polygon"
+							name="Polygon" aggregation="composite"
+							association="_niem-geospatial-2.1-geospatial-packagedElement-42">
+							<type
+								href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-external-ogc.xmi#_niem-external-ogc-gml-3.2.1-geometryBasic2d-PolygonType"> </type>
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-geospatial-2.1-geospatial-PolygonType-Polygon-ownedComment"
+								body="A Polygon is a special surface that is defined by a single surface patch (see D.3.6). The boundary of this patch is coplanar and the polygon uses planar interpolation in its interior. &#xA;The elements exterior and interior describe the surface boundary of the polygon.">
+								<annotatedElement
+									xmi:idref="_niem-geospatial-2.1-geospatial-PolygonType-Polygon"
+								/>
+							</ownedComment>
+							<lowerValue xmi:type="uml:LiteralInteger"
+								xmi:id="_niem-geospatial-2.1-geospatial-PolygonType-Polygon-lowerValue"/>
+							<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+								xmi:id="_niem-geospatial-2.1-geospatial-PolygonType-Polygon-upperValue"
+								value="*"/>
+						</ownedAttribute>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Association"
+						xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-42">
+						<memberEnd xmi:idref="_niem-geospatial-2.1-geospatial-PolygonType-Polygon"/>
+						<memberEnd
+							xmi:idref="_niem-geospatial-2.1-geospatial-packagedElement-42-ownedEnd"/>
+						<ownedEnd xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-42-ownedEnd"
+							isUnique="false" type="_niem-geospatial-2.1-geospatial-PolygonType"
+							association="_niem-geospatial-2.1-geospatial-packagedElement-42"
+						> </ownedEnd>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Class"
+						xmi:id="_niem-geospatial-2.1-geospatial-SurfaceType" name="SurfaceType">
+						<ownedComment xmi:type="uml:Comment"
+							xmi:id="_niem-geospatial-2.1-geospatial-SurfaceType-ownedComment"
+							body="A Surface is a 2-dimensional primitive and is composed of one or more surface patches.  The surface patches are connected to one another.">
+							<annotatedElement
+								xmi:idref="_niem-geospatial-2.1-geospatial-SurfaceType"/>
+						</ownedComment>
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-SurfaceType-Surface"
+							name="Surface" aggregation="composite"
+							association="_niem-geospatial-2.1-geospatial-packagedElement-45">
+							<type
+								href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-external-ogc.xmi#_niem-external-ogc-gml-3.2.1-geometryPrimitives-SurfaceType"> </type>
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-geospatial-2.1-geospatial-SurfaceType-Surface-ownedComment"
+								body="A Surface is a 2-dimensional primitive and is composed of one or more surface patches as specified in ISO 19107:2003, 6.3.17.1. The surface patches are connected to one another.&#xA;patches encapsulates the patches of the surface.">
+								<annotatedElement
+									xmi:idref="_niem-geospatial-2.1-geospatial-SurfaceType-Surface"
+								/>
+							</ownedComment>
+							<lowerValue xmi:type="uml:LiteralInteger"
+								xmi:id="_niem-geospatial-2.1-geospatial-SurfaceType-Surface-lowerValue"/>
+							<upperValue xmi:type="uml:LiteralUnlimitedNatural"
+								xmi:id="_niem-geospatial-2.1-geospatial-SurfaceType-Surface-upperValue"
+								value="*"/>
+						</ownedAttribute>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Association"
+						xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-45">
+						<memberEnd xmi:idref="_niem-geospatial-2.1-geospatial-SurfaceType-Surface"/>
+						<memberEnd
+							xmi:idref="_niem-geospatial-2.1-geospatial-packagedElement-45-ownedEnd"/>
+						<ownedEnd xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-45-ownedEnd"
+							isUnique="false" type="_niem-geospatial-2.1-geospatial-SurfaceType"
+							association="_niem-geospatial-2.1-geospatial-packagedElement-45"
+						> </ownedEnd>
+					</packagedElement>
+					<packagedElement xmi:type="uml:Class"
+						xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder"
+						name="NamespaceElementPropertyHolder">
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Point"
+							name="Point" aggregation="composite"
+							type="_niem-geospatial-2.1-geospatial-PointType">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Point-ownedComment"
+								body="A 2D or 3D geometric point.  A gml:Point is defined by a single coordinate tuple. The direct position of a point is specified by the gml:pos element which is of type gml:DirectPositionType.">
+								<annotatedElement
+									xmi:idref="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Point"
+								/>
+							</ownedComment>
+						</ownedAttribute>
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-CircleByCenterPoint"
+							name="CircleByCenterPoint" aggregation="composite"
+							type="_niem-geospatial-2.1-geospatial-CircleByCenterPointType">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-CircleByCenterPoint-ownedComment"
+								body="A 2D ArcByCenterPoint with identical start and end angles that forms a full circle.  A gml:CircleByCenterPoint is an gml:ArcByCenterPoint with identical start and end angle to form a full circle. Again, this representation can be used only in 2D.">
+								<annotatedElement
+									xmi:idref="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-CircleByCenterPoint"
+								/>
+							</ownedComment>
+						</ownedAttribute>
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-MultiPoint"
+							name="MultiPoint" aggregation="composite"
+							type="_niem-geospatial-2.1-geospatial-MultiPointType">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-MultiPoint-ownedComment"
+								body="A geometry collection that includes one or more points.  A gml:MultiPoint consists of one or more gml:Points. The members of the geometric aggregate may be specified either using the &#34;standard&#34; property (gml:pointMember) or the array property (gml:pointMembers). It is also valid to use both the &#34;standard&#34; and the array properties in the same collection.">
+								<annotatedElement
+									xmi:idref="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-MultiPoint"
+								/>
+							</ownedComment>
+						</ownedAttribute>
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Polygon"
+							name="Polygon" aggregation="composite"
+							type="_niem-geospatial-2.1-geospatial-PolygonType">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Polygon-ownedComment"
+								body="A polygon; a geometric surface defined by a single surface patch whose boundary is coplanar. A gml:Polygon is a special surface that is defined by a single surface patch (see D.3.6). The boundary of this patch is coplanar and the polygon uses planar interpolation in its interior.">
+								<annotatedElement
+									xmi:idref="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Polygon"
+								/>
+							</ownedComment>
+						</ownedAttribute>
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Surface"
+							name="Surface" aggregation="composite"
+							type="_niem-geospatial-2.1-geospatial-SurfaceType">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Surface-ownedComment"
+								body="A Surface is a 2-dimensional primitive and is composed of one or more surface patches.  The surface patches are connected to one another.">
+								<annotatedElement
+									xmi:idref="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Surface"
+								/>
+							</ownedComment>
+						</ownedAttribute>
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-ArcByCenterPoint"
+							name="ArcByCenterPoint" aggregation="composite"
+							type="_niem-geospatial-2.1-geospatial-ArcByCenterPointType">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-ArcByCenterPoint-ownedComment"
+								body="A 2D arc defined by its center point, radius, and bearings at start and end.  This variant of the arc requires that the points on the arc shall be computed instead of storing the coordinates directly. The single control point is the center point of the arc plus the radius and the bearing at start and end. This representation can be used only in 2D. The element gml:radius specifies the radius of the arc. The element gml:startAngle specifies the bearing of the arc at the start. The element gml:endAngle specifies the bearing of the arc at the end. The interpolation is fixed as &#34;circularArcCenterPointWithRadius&#34;. Since this type describes always a single arc, the attribute &#34;numArc&#34; is fixed to &#34;1&#34;.">
+								<annotatedElement
+									xmi:idref="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-ArcByCenterPoint"
+								/>
+							</ownedComment>
+						</ownedAttribute>
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Ellipse"
+							name="Ellipse" aggregation="composite"
+							type="_niem-geospatial-2.1-geospatial-EllipseType">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Ellipse-ownedComment"
+								body="An ellipse specified by a point, major axis, minor axis and rotation.">
+								<annotatedElement
+									xmi:idref="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Ellipse"
+								/>
+							</ownedComment>
+						</ownedAttribute>
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Envelope"
+							name="Envelope" aggregation="composite"
+							type="_niem-geospatial-2.1-geospatial-EnvelopeType">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Envelope-ownedComment"
+								body="Envelope defines an extent using a pair of positions defining opposite corners in arbitrary dimensions. The first direct position is the &#34;lower corner&#34; (a coordinate position consisting of all the minimal ordinates for each dimension for all points within the envelope), the second one the &#34;upper corner&#34; (a coordinate position consisting of all the maximal ordinates for each dimension for all points within the envelope).">
+								<annotatedElement
+									xmi:idref="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Envelope"
+								/>
+							</ownedComment>
+						</ownedAttribute>
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Arc"
+							name="Arc" aggregation="composite"
+							type="_niem-geospatial-2.1-geospatial-ArcType">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Arc-ownedComment"
+								body="An Arc is an arc string with only one arc unit, i.e. three control points including the start and end point. As arc is an arc string consisting of a single arc, the attribute ?numArc? is fixed to &#34;1&#34;.">
+								<annotatedElement
+									xmi:idref="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Arc"
+								/>
+							</ownedComment>
+						</ownedAttribute>
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-MultiSurface"
+							name="MultiSurface" aggregation="composite"
+							type="_niem-geospatial-2.1-geospatial-MultiSurfaceType">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-MultiSurface-ownedComment"
+								body="A geometry collection that includes one or more Polygons or Surfaces.">
+								<annotatedElement
+									xmi:idref="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-MultiSurface"
+								/>
+							</ownedComment>
+						</ownedAttribute>
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-MultiCurve"
+							name="MultiCurve" aggregation="composite"
+							type="_niem-geospatial-2.1-geospatial-MultiCurveType">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-MultiCurve-ownedComment"
+								body="A geometry collection that includes one or more curves or line strings  A gml:MultiCurve is defined by one or more gml:AbstractCurves. The members of the geometric aggregate may be specified either using the &#34;standard&#34; property (gml:curveMember) or the array property (gml:curveMembers). It is also valid to use both the &#34;standard&#34; and the array properties in the same collection.">
+								<annotatedElement
+									xmi:idref="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-MultiCurve"
+								/>
+							</ownedComment>
+						</ownedAttribute>
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Curve"
+							name="Curve" aggregation="composite"
+							type="_niem-geospatial-2.1-geospatial-CurveType">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Curve-ownedComment"
+								body="A curve is a 1-dimensional primitive. Curves are continuous, connected, and have a measurable length in terms of the coordinate system.  A curve is composed of one or more curve segments. Each curve segment within a curve may be defined using a different interpolation method. The curve segments are connected to one another, with the end point of each segment except the last being the start point of the next segment in the segment list.  The orientation of the curve is positive.">
+								<annotatedElement
+									xmi:idref="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Curve"
+								/>
+							</ownedComment>
+						</ownedAttribute>
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-MultiGeometry"
+							name="MultiGeometry" aggregation="composite"
+							type="_niem-geospatial-2.1-geospatial-MultiGeometryType">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-MultiGeometry-ownedComment"
+								body="A geometry collection that includes one or more geometries, potentially of different types.  gml:MultiGeometry is a collection of one or more GML geometry objects of arbitrary type. The members of the geometric aggregate may be specified either using the &#34;standard&#34; property (gml:geometryMember) or the array property (gml:geometryMembers). It is also valid to use both the &#34;standard&#34; and the array properties in the same collection.">
+								<annotatedElement
+									xmi:idref="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-MultiGeometry"
+								/>
+							</ownedComment>
+						</ownedAttribute>
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Circle"
+							name="Circle" aggregation="composite"
+							type="_niem-geospatial-2.1-geospatial-CircleType">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Circle-ownedComment"
+								body="A Circle is an arc whose ends coincide to form a simple closed loop. The three control points shall be distinct non-co-linear points for the circle to be unambiguously defined. The arc is simply extended past the third control point until the first control point is encountered.">
+								<annotatedElement
+									xmi:idref="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Circle"
+								/>
+							</ownedComment>
+						</ownedAttribute>
+						<ownedAttribute xmi:type="uml:Property"
+							xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-LineString"
+							name="LineString" aggregation="composite"
+							type="_niem-geospatial-2.1-geospatial-LineStringType">
+							<ownedComment xmi:type="uml:Comment"
+								xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-LineString-ownedComment"
+								body="A geometric curve that consists of a single segment with linear interpolation.  A gml:LineString is a special curve that consists of a single segment with linear interpolation. It is defined by two or more coordinate tuples, with linear interpolation between them.">
+								<annotatedElement
+									xmi:idref="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-LineString"
+								/>
+							</ownedComment>
+						</ownedAttribute>
+					</packagedElement>
+				</packagedElement>
+			</packagedElement>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-geospatial-profileApplication-1">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_PIM_Profile"
+				> </appliedProfile>
+			</profileApplication>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-geospatial-profileApplication-2">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-Model_Package_Description_Profile"
+				> </appliedProfile>
+			</profileApplication>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-geospatial-profileApplication-3">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_Common_Profile"
+				> </appliedProfile>
+			</profileApplication>
+			<profileApplication xmi:type="uml:ProfileApplication"
+				xmi:id="_niem-geospatial-profileApplication-4">
+				<appliedProfile
+					href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi#NIEM_UML_Profile-NIEM_PSM_Profile"
+				> </appliedProfile>
+			</profileApplication>
+		</packagedElement>
+	</uml:Model>
+	<NIEM_Common_Profile:AdapterType
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-PointType-appliedStereotypeInstance"
+		base_Class="_niem-geospatial-2.1-geospatial-PointType"/>
+	<NIEM_Common_Profile:References
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-17-appliedStereotypeInstance"
+		base_Realization="_niem-geospatial-2.1-geospatial-packagedElement-17"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Point-appliedStereotypeInstance"
+		base_Property="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Point"
+		nillable="true" kind="element"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-LineStringType-LineString-appliedStereotypeInstance"
+		base_Property="_niem-geospatial-2.1-geospatial-LineStringType-LineString" nillable="false"
+		kind="element"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Polygon-appliedStereotypeInstance"
+		base_Property="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Polygon"
+		nillable="true" kind="element"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-ArcType-Arc-appliedStereotypeInstance"
+		base_Property="_niem-geospatial-2.1-geospatial-ArcType-Arc" nillable="false" kind="element"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-MultiGeometry-appliedStereotypeInstance"
+		base_Property="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-MultiGeometry"
+		nillable="true" kind="element"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-MultiCurveType-MultiCurve-appliedStereotypeInstance"
+		base_Property="_niem-geospatial-2.1-geospatial-MultiCurveType-MultiCurve" nillable="false"
+		kind="element"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Curve-appliedStereotypeInstance"
+		base_Property="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Curve"
+		nillable="true" kind="element"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Ellipse-appliedStereotypeInstance"
+		base_Property="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Ellipse"
+		nillable="true" kind="element"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-LineString-appliedStereotypeInstance"
+		base_Property="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-LineString"
+		nillable="true" kind="element"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-MultiSurface-appliedStereotypeInstance"
+		base_Property="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-MultiSurface"
+		nillable="true" kind="element"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-CircleByCenterPoint-appliedStereotypeInstance"
+		base_Property="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-CircleByCenterPoint"
+		nillable="true" kind="element"/>
+	<NIEM_Common_Profile:AdapterType
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-EnvelopeType-appliedStereotypeInstance"
+		base_Class="_niem-geospatial-2.1-geospatial-EnvelopeType"/>
+	<NIEM_Common_Profile:PropertyHolder
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-appliedStereotypeInstance"
+		base_Class="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-EnvelopeType-Envelope-appliedStereotypeInstance"
+		base_Property="_niem-geospatial-2.1-geospatial-EnvelopeType-Envelope" nillable="false"
+		kind="element"/>
+	<NIEM_Common_Profile:AdapterType
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-CurveType-appliedStereotypeInstance"
+		base_Class="_niem-geospatial-2.1-geospatial-CurveType"/>
+	<NIEM_Common_Profile:AdapterType
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-ArcType-appliedStereotypeInstance"
+		base_Class="_niem-geospatial-2.1-geospatial-ArcType"/>
+	<NIEM_Common_Profile:AdapterType
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-CircleType-appliedStereotypeInstance"
+		base_Class="_niem-geospatial-2.1-geospatial-CircleType"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-ArcByCenterPoint-appliedStereotypeInstance"
+		base_Property="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-ArcByCenterPoint"
+		nillable="true" kind="element"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-PolygonType-Polygon-appliedStereotypeInstance"
+		base_Property="_niem-geospatial-2.1-geospatial-PolygonType-Polygon" nillable="false"
+		kind="element"/>
+	<NIEM_Common_Profile:AdapterType
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-CircleByCenterPointType-appliedStereotypeInstance"
+		base_Class="_niem-geospatial-2.1-geospatial-CircleByCenterPointType"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-CurveType-Curve-appliedStereotypeInstance"
+		base_Property="_niem-geospatial-2.1-geospatial-CurveType-Curve" nillable="false"
+		kind="element"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-EllipseType-Ellipse-appliedStereotypeInstance"
+		base_Property="_niem-geospatial-2.1-geospatial-EllipseType-Ellipse" nillable="false"
+		kind="element"/>
+	<NIEM_Common_Profile:AdapterType
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-ArcByCenterPointType-appliedStereotypeInstance"
+		base_Class="_niem-geospatial-2.1-geospatial-ArcByCenterPointType"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-PointType-Point-appliedStereotypeInstance"
+		base_Property="_niem-geospatial-2.1-geospatial-PointType-Point" nillable="false"
+		kind="element"/>
+	<NIEM_Common_Profile:AdapterType
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-LineStringType-appliedStereotypeInstance"
+		base_Class="_niem-geospatial-2.1-geospatial-LineStringType"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-MultiSurfaceType-MultiSurface-appliedStereotypeInstance"
+		base_Property="_niem-geospatial-2.1-geospatial-MultiSurfaceType-MultiSurface"
+		nillable="false" kind="element"/>
+	<NIEM_Common_Profile:References
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-packagedElement-2-appliedStereotypeInstance"
+		base_Realization="_niem-geospatial-2.1-geospatial-packagedElement-2"/>
+	<NIEM_Common_Profile:AdapterType
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-PolygonType-appliedStereotypeInstance"
+		base_Class="_niem-geospatial-2.1-geospatial-PolygonType"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-SurfaceType-Surface-appliedStereotypeInstance"
+		base_Property="_niem-geospatial-2.1-geospatial-SurfaceType-Surface" nillable="false"
+		kind="element"/>
+	<NIEM_PIM_Profile:InformationModel
+		xmlns:NIEM_PIM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-appliedStereotypeInstance"
+		base_Package="_niem-geospatial-2.1-geospatial" version="1" defaultPurpose="reference"
+		isConformant="true" targetNamespace="http://niem.gov/niem/geospatial/2.1"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-MultiPoint-appliedStereotypeInstance"
+		base_Property="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-MultiPoint"
+		nillable="true" kind="element"/>
+	<NIEM_Common_Profile:AdapterType
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-EllipseType-appliedStereotypeInstance"
+		base_Class="_niem-geospatial-2.1-geospatial-EllipseType"/>
+	<NIEM_Common_Profile:AdapterType
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-MultiPointType-appliedStereotypeInstance"
+		base_Class="_niem-geospatial-2.1-geospatial-MultiPointType"/>
+	<NIEM_Common_Profile:AdapterType
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-MultiGeometryType-appliedStereotypeInstance"
+		base_Class="_niem-geospatial-2.1-geospatial-MultiGeometryType"/>
+	<NIEM_Common_Profile:AdapterType
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-MultiSurfaceType-appliedStereotypeInstance"
+		base_Class="_niem-geospatial-2.1-geospatial-MultiSurfaceType"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-CircleByCenterPointType-CircleByCenterPoint-appliedStereotypeInstance"
+		base_Property="_niem-geospatial-2.1-geospatial-CircleByCenterPointType-CircleByCenterPoint"
+		nillable="false" kind="element"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-MultiGeometryType-MultiGeometry-appliedStereotypeInstance"
+		base_Property="_niem-geospatial-2.1-geospatial-MultiGeometryType-MultiGeometry"
+		nillable="false" kind="element"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-ArcByCenterPointType-ArcByCenterPoint-appliedStereotypeInstance"
+		base_Property="_niem-geospatial-2.1-geospatial-ArcByCenterPointType-ArcByCenterPoint"
+		nillable="false" kind="element"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Arc-appliedStereotypeInstance"
+		base_Property="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Arc"
+		nillable="true" kind="element"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Envelope-appliedStereotypeInstance"
+		base_Property="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Envelope"
+		nillable="true" kind="element"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-MultiCurve-appliedStereotypeInstance"
+		base_Property="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-MultiCurve"
+		nillable="true" kind="element"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Surface-appliedStereotypeInstance"
+		base_Property="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Surface"
+		nillable="true" kind="element"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-CircleType-Circle-appliedStereotypeInstance"
+		base_Property="_niem-geospatial-2.1-geospatial-CircleType-Circle" nillable="false"
+		kind="element"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-MultiPointType-MultiPoint-appliedStereotypeInstance"
+		base_Property="_niem-geospatial-2.1-geospatial-MultiPointType-MultiPoint" nillable="false"
+		kind="element"/>
+	<NIEM_PSM_Profile:XSDProperty
+		xmlns:NIEM_PSM_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Circle-appliedStereotypeInstance"
+		base_Property="_niem-geospatial-2.1-geospatial-NamespaceElementPropertyHolder-Circle"
+		nillable="true" kind="element"/>
+	<NIEM_Common_Profile:AdapterType
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-MultiCurveType-appliedStereotypeInstance"
+		base_Class="_niem-geospatial-2.1-geospatial-MultiCurveType"/>
+	<NIEM_Common_Profile:AdapterType
+		xmlns:NIEM_Common_Profile="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile"
+		xmi:id="_niem-geospatial-2.1-geospatial-SurfaceType-appliedStereotypeInstance"
+		base_Class="_niem-geospatial-2.1-geospatial-SurfaceType"/>
+</xmi:XMI>
