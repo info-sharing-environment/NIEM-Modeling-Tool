@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/spec/XMI/20110701"
+  xmlns:uml="http://www.omg.org/spec/UML/20110701"
+  xmlns:StandardProfileL2="http://www.omg.org/spec/UML/20100901/StandardProfileL2">
+<!-- change xmlns:xmi per Issue 18180: Problem with XmiPrimitiveTypes.xmi in the NIEM specification (niem-uml-ftf)
 <xmi:XMI xmlns:xmi="http://schema.omg.org/spec/XMI/2.1"
   xmlns:uml="http://www.omg.org/spec/UML/20110701"
   xmlns:StandardProfileL2="http://www.omg.org/spec/UML/20100901/StandardProfileL2">
+  -->
   <uml:Model xmi:id="XMLPrimitiveTypes" xmi:uuid="725A27D7-D31F-496C-9AC9-0FAB06445254"
     xmi:type="uml:Model">
     <name>XMLPrimitiveTypes</name>
