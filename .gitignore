@@ -2,6 +2,10 @@
 ######################
 target/
 
+# Tycho generated files #
+######################
+workspace/
+
 # Eclipse generated files #
 ######################
 .settings/
@@ -18,4 +22,3 @@ target/
 Icon?
 ehthumbs.db
 Thumbs.db
-
