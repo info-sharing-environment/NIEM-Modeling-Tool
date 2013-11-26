@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmof="http://schema.omg.org/spec/CMOF" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.omg.org/spec/UML/20110701" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.omg.org/spec/UML/20110701 http://www.eclipse.org/uml2/4.0.0/UML" xmlns:cmof="http://www.omg.org/spec/MOF/20110701/cmof.xmi">
+<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.omg.org/spec/UML/20110701" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.omg.org/spec/UML/20110701 http://www.eclipse.org/uml2/4.0.0/UML" xmlns:cmof="http://www.omg.org/spec/MOF/20110701/cmof.xmi">
   <uml:Package xmi:id="NIEM_UML_Profile" name="NIEM_UML_Profile">
     <ownedComment xmi:type="uml:Comment" xmi:id="NIEM_UML_Profile-ownedComment" annotatedElement="NIEM_UML_Profile">
       <body>NIEM-UML leverages three profiles. The NIEM PIM Profile is used for NIEM PIMs. The NIEM
@@ -15,7 +15,7 @@
     <packagedElement xmi:type="uml:Profile" xmi:id="NIEM_UML_Profile-NIEM_Common_Profile" name="NIEM_Common_Profile" URI="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" metamodelReference="NIEM_UML_Profile-NIEM_Common_Profile-packageImport">
       <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_QkA-4FY8EeO9lbaNv599nw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <contents xmi:type="ecore:EPackage" xmi:id="_QkA-4VY8EeO9lbaNv599nw" name="NIEM_Common_Profile" nsURI="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" nsPrefix="NIEM_Common_Profile">
+          <contents xmi:type="ecore:EPackage" xmi:id="NIEM_UML_Profile-NIEM_Common_Profile-ePackage" name="NIEM_Common_Profile" nsURI="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile" nsPrefix="NIEM_Common_Profile">
             <eClassifiers xmi:type="ecore:EClass" xmi:id="_QkA-4lY8EeO9lbaNv599nw" name="Documentation">
               <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
                 <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_QkA-41Y8EeO9lbaNv599nw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="NIEM_UML_Profile-NIEM_Common_Profile-Documentation"/>
@@ -2279,7 +2279,7 @@
     <packagedElement xmi:type="uml:Profile" xmi:id="NIEM_UML_Profile-Model_Package_Description_Profile" name="Model_Package_Description_Profile" URI="http://www.omg.org/spec/NIEM-UML/20120501/Model_Package_Description_Profile" metamodelReference="NIEM_UML_Profile-Model_Package_Description_Profile-packageImport">
       <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_R1emwFY8EeO9lbaNv599nw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <contents xmi:type="ecore:EPackage" xmi:id="_R1emwVY8EeO9lbaNv599nw" name="Model_Package_Description_Profile" nsURI="http://www.omg.org/spec/NIEM-UML/20120501/Model_Package_Description_Profile" nsPrefix="Model_Package_Description_Profile">
+          <contents xmi:type="ecore:EPackage" xmi:id="NIEM_UML_Profile-Model_Package_Description_Profile-ePackage" name="Model_Package_Description_Profile" nsURI="http://www.omg.org/spec/NIEM-UML/20120501/Model_Package_Description_Profile" nsPrefix="Model_Package_Description_Profile">
             <eClassifiers xmi:type="ecore:EClass" xmi:id="_R1emwlY8EeO9lbaNv599nw" name="POCType">
               <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
                 <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_R1fN0FY8EeO9lbaNv599nw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="NIEM_UML_Profile-Model_Package_Description_Profile-POCType"/>
@@ -6777,7 +6777,7 @@
     <packagedElement xmi:type="uml:Profile" xmi:id="NIEM_UML_Profile-NIEM_PSM_Profile" name="NIEM_PSM_Profile" URI="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" metamodelReference="NIEM_UML_Profile-NIEM_PSM_Profile-packageImport-2">
       <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TDhHMFY8EeO9lbaNv599nw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <contents xmi:type="ecore:EPackage" xmi:id="_TDhuQFY8EeO9lbaNv599nw" name="NIEM_PSM_Profile" nsURI="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" nsPrefix="NIEM_PSM_Profile">
+          <contents xmi:type="ecore:EPackage" xmi:id="NIEM_UML_Profile-NIEM_PSM_Profile-ePackage" name="NIEM_PSM_Profile" nsURI="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PSM_Profile" nsPrefix="NIEM_PSM_Profile">
             <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
               <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TDhuQVY8EeO9lbaNv599nw" source="http://www.eclipse.org/uml2/4.0.0/UML" references="NIEM_UML_Profile-NIEM_Common_Profile"/>
             </xmi:Extension>
@@ -7463,7 +7463,7 @@
     <packagedElement xmi:type="uml:Profile" xmi:id="NIEM_UML_Profile-NIEM_PIM_Profile" name="NIEM_PIM_Profile" URI="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile" metamodelReference="NIEM_UML_Profile-NIEM_PIM_Profile-packageImport-2">
       <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UOcpQFY8EeO9lbaNv599nw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <contents xmi:type="ecore:EPackage" xmi:id="_UOcpQVY8EeO9lbaNv599nw" name="NIEM_PIM_Profile" nsURI="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile" nsPrefix="NIEM_PIM_Profile">
+          <contents xmi:type="ecore:EPackage" xmi:id="NIEM_UML_Profile-NIEM_PIM_Profile-ePackage" name="NIEM_PIM_Profile" nsURI="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile" nsPrefix="NIEM_PIM_Profile">
             <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
               <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_UOcpQlY8EeO9lbaNv599nw" source="http://www.eclipse.org/uml2/4.0.0/UML" references="NIEM_UML_Profile-NIEM_Common_Profile"/>
             </xmi:Extension>
@@ -7776,8 +7776,7 @@
     <packagedElement xmi:type="uml:Profile" xmi:id="NIEM_UML_Profile-NIEM_UML_Profile" name="NIEM_UML_Profile" URI="http://www.omg.org/spec/NIEM-UML/20120501" metamodelReference="NIEM_UML_Profile-NIEM_UML_Profile-packageImport-1">
       <xmi:Extension extender="http://www.eclipse.org/emf/2002/Ecore">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_IH7jYFY8EeO9lbaNv599nw" source="http://www.eclipse.org/uml2/2.0.0/UML">
-          <contents xmi:type="ecore:EPackage" xmi:id="_VqxdUFY8EeO9lbaNv599nw" name="NIEM_UML_Profile" nsURI="http://www.omg.org/spec/NIEM-UML/20120501" nsPrefix="NIEM_UML_Profile"/>
-          <contents xmi:type="ecore:EPackage" xmi:id="_IH-msFY8EeO9lbaNv599nw" name="NIEM_UML_Profile" nsURI="http://www.omg.org/spec/NIEM-UML/20120501" nsPrefix="NIEM_UML_Profile"/>
+          <contents xmi:type="ecore:EPackage" xmi:id="NIEM_UML_Profile-NIEM_UML_Profile-ePackage" name="NIEM_UML_Profile" nsURI="http://www.omg.org/spec/NIEM-UML/20120501" nsPrefix="NIEM_UML_Profile"/>
         </eAnnotations>
       </xmi:Extension>
       <ownedComment xmi:type="uml:Comment" xmi:id="NIEM_UML_Profile-NIEM_UML_Profile-ownedComment" annotatedElement="NIEM_UML_Profile-NIEM_UML_Profile">
