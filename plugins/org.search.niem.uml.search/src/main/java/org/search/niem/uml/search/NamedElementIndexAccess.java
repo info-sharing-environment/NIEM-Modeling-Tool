@@ -42,7 +42,7 @@ import org.eclipse.uml2.uml.UMLPackage;
 
 class NamedElementIndexAccess extends ElementIndexAccess {
 
-    private static final long INDEX_VERSION = 1;
+    private static final long INDEX_VERSION = 2;
     private static final String INDEX_LOCATION = "NamedElement_" + INDEX_VERSION;
 
     private static final String FIELD_NAME = "NAME";

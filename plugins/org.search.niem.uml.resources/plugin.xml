@@ -5,11 +5,11 @@
       </mapping>
    </extension>
    <extension point="org.eclipse.emf.ecore.uri_mapping">
-      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi" target="pathmap://NIEM_UML/XmlPrimitiveTypes.xmi">
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes" target="pathmap://NIEM_UML/XmlPrimitiveTypes.xmi">
       </mapping>
    </extension>
    <extension point="org.eclipse.emf.ecore.uri_mapping">
-      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile.xmi" target="pathmap://NIEM_UML/NIEM-UML-Profile.xmi">
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile" target="pathmap://NIEM_UML/NIEM-UML-Profile.xmi">
       </mapping>
    </extension>
    <extension point="org.eclipse.emf.ecore.uri_mapping">

@@ -313,7 +313,7 @@ public class NIEMUmlExt {
     }
 
     public static boolean isXmlPrimitiveType(final EObject e) {
-        return e != null && e.eResource().getURI().lastSegment().equals("XmlPrimitiveTypes.xmi");
+        return e != null && e.eResource().getURI().lastSegment().startsWith("XmlPrimitiveTypes");
     }
 
     private static EClass getThePOCType(final Element theMPD) {

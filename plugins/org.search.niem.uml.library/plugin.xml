@@ -1,11 +1,56 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?eclipse version="3.4"?><plugin>
    <extension point="org.eclipse.emf.ecore.uri_mapping">
-      <mapping source="pathmap://NIEM_REFERENCE/" target="platform:/plugin/org.search.niem.uml.library/uml/NIEM-Reference/">
-      </mapping>
+      <mapping source="pathmap://NIEM_REFERENCE/" target="platform:/plugin/org.search.niem.uml.library/uml/NIEM-Reference/"></mapping>
    </extension>
    <extension point="org.eclipse.emf.ecore.uri_mapping">
-      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference" target="pathmap://NIEM_REFERENCE">
-      </mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-ansi_d20" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-ansi_d20.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-apco" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-apco.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-atf" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-atf.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-cbrncl" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-cbrncl.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-census" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-census.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-dea" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-dea.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-dod_jcs-pub2.0-misc" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-dod_jcs-pub2.0-misc.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-edxl-cap" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-edxl-cap.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-edxl-de" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-edxl-de.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-edxl-have" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-edxl-have.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-edxl" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-edxl.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-fbi" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-fbi.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-fips_10-4" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-fips_10-4.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-fips_5-2" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-fips_5-2.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-fips_6-4" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-fips_6-4.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-geospatial" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-geospatial.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-have-codes" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-have-codes.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-hazmat" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-hazmat.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-icism" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-icism.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-iso_3166" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-iso_3166.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-iso_4217" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-iso_4217.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-iso_639-3" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-iso_639-3.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-itis" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-itis.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-lasd" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-lasd.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-mmucc_2" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-mmucc_2.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-mn_offense" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-mn_offense.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-nga" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-nga.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-nlets" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-nlets.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-nonauthoritative-code" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-nonauthoritative-code.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-post-canada" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-post-canada.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-sar" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-sar.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-twpdes" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-twpdes.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-ucr" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-ucr.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-unece_rec20-misc" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-unece_rec20-misc.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-usps_states" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-usps_states.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-common-ut_offender-tracking-misc" target="pathmap://NIEM_REFERENCE/NIEM-Reference-common-ut_offender-tracking-misc.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-core" target="pathmap://NIEM_REFERENCE/NIEM-Reference-core.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-domains-emergencyManagement" target="pathmap://NIEM_REFERENCE/NIEM-Reference-domains-emergencyManagement.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-domains-familyServices" target="pathmap://NIEM_REFERENCE/NIEM-Reference-domains-familyServices.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-domains-infrastructureProtection" target="pathmap://NIEM_REFERENCE/NIEM-Reference-domains-infrastructureProtection.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-domains-intelligence" target="pathmap://NIEM_REFERENCE/NIEM-Reference-domains-intelligence.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-domains-jxdm" target="pathmap://NIEM_REFERENCE/NIEM-Reference-domains-jxdm.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-domains-maritime" target="pathmap://NIEM_REFERENCE/NIEM-Reference-domains-maritime.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-domains-screening" target="pathmap://NIEM_REFERENCE/NIEM-Reference-domains-screening.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-external-cap" target="pathmap://NIEM_REFERENCE/NIEM-Reference-external-cap.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-external-de" target="pathmap://NIEM_REFERENCE/NIEM-Reference-external-de.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-external-have" target="pathmap://NIEM_REFERENCE/NIEM-Reference-external-have.uml"></mapping>
+      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference/NIEM-Reference-external-ogc" target="pathmap://NIEM_REFERENCE/NIEM-Reference-external-ogc.uml"></mapping>
    </extension>
 </plugin>

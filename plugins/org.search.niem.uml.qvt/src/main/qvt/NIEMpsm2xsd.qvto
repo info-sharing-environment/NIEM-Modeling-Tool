@@ -2148,6 +2148,7 @@ property prefixToNamespace:Sequence(Tuple(prefix:String,namespace:String)) = Seq
 		Tuple{prefix:String="have",namespace:String="urn:oasis:names:tc:emergency:EDXL:HAVE:1.0"},
 		Tuple{prefix:String="have-codes",namespace:String="http://niem.gov/niem/have-codes/2.1"},
 		Tuple{prefix:String="hazmat",namespace:String="http://niem.gov/niem/hazmat/2.1"},
+		Tuple{prefix:String="icism",namespace:String="urn:us:gov:ic:ism:v2"},
 		Tuple{prefix:String="im",namespace:String="http://niem.gov/niem/domains/immigration/2.1"},
 		Tuple{prefix:String="intel",namespace:String="http://niem.gov/niem/domains/intelligence/2.1"},
 		Tuple{prefix:String="ip",namespace:String="http://niem.gov/niem/domains/infrastructureProtection/2.1"},

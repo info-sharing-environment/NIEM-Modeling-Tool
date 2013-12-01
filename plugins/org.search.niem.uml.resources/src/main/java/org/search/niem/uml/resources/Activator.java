@@ -29,11 +29,11 @@ public class Activator extends EMFPlugin {
     }
 
     public static Resource getNiemUmlProfile(final ResourceSet resourceSet) {
-        return resourceSet.getResource(URI.createURI("pathmap://NIEM_UML/NIEM-UML-Profile.xmi"), true);
+        return resourceSet.getResource(URI.createURI("http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile"), true);
     }
 
     public static Resource getXmlPrimitiveTypes(final ResourceSet resourceSet) {
-        return resourceSet.getResource(URI.createURI("http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi"),
+        return resourceSet.getResource(URI.createURI("http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes"),
                 true);
     }
 

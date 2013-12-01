@@ -27,7 +27,7 @@ import org.eclipse.uml2.uml.UMLPackage;
 
 class PropertyIndexAccess extends ElementIndexAccess {
 
-    private static final long INDEX_VERSION = 1;
+    private static final long INDEX_VERSION = 2;
     private static final String INDEX_LOCATION = "Property_" + INDEX_VERSION;
 
     private static final String FIELD_SUBSTITUTION_GROUP = "SUBSTITUTION_GROUP";

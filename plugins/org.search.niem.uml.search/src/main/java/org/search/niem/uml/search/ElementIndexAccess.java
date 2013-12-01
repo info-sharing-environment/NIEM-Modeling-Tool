@@ -10,7 +10,7 @@
  */
 package org.search.niem.uml.search;
 
-import static org.search.niem.uml.library.Activator.REFERENCE_LIBRARY_PATH;
+import static org.search.niem.uml.library.Activator.REFERENCE_LIBRARY_URI;
 
 import java.io.File;
 import java.io.IOException;
@@ -62,7 +62,7 @@ public abstract class ElementIndexAccess implements IndexAccess {
     @Override
     public final EObject fromDocument(final Document d) {
         return getResourceSet().getEObject(
-                REFERENCE_LIBRARY_PATH.appendSegment(d.get(FIELD_RESOURCE)).appendFragment(d.get(FIELD_ID)), true);
+                REFERENCE_LIBRARY_URI.appendSegment(d.get(FIELD_RESOURCE)).appendFragment(d.get(FIELD_ID)), true);
     }
 
     private File getIndexDirectory() {

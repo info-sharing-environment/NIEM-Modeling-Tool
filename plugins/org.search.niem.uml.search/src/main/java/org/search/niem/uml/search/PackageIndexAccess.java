@@ -27,7 +27,7 @@ import org.eclipse.uml2.uml.UMLPackage;
 
 class PackageIndexAccess extends ElementIndexAccess {
 
-    private static final long INDEX_VERSION = 1;
+    private static final long INDEX_VERSION = 2;
     private static final String INDEX_LOCATION = "Package_" + INDEX_VERSION;
 
     private static final String FIELD_TARGET_NAMESPACE = "TARGET_NAMESPACE";

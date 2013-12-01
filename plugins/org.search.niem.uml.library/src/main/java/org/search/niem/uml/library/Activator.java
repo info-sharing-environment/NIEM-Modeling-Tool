@@ -26,10 +26,8 @@ public class Activator extends EMFPlugin {
 
     public static final String PLUGIN_ID = "org.search.niem.uml.library"; //$NON-NLS-1$
 
-    private static final String LIBRARY_RELATIVE_PATH = "uml/NIEM-Reference";
-
-    public static final URI REFERENCE_LIBRARY_PATH = URI.createPlatformPluginURI(PLUGIN_ID + "/" + LIBRARY_RELATIVE_PATH,
-            true);
+    public static final URI REFERENCE_LIBRARY_URI = URI.createURI(
+            "http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference", true);
 
     public static int LIBRARY_COUNT = 47;
 
@@ -79,53 +77,54 @@ public class Activator extends EMFPlugin {
 
         // @formatter:off
         private static final Collection<URI> referenceLibraries = asList(
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-ansi_d20.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-apco.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-atf.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-cbrncl.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-census.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-dea.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-dod_jcs-pub2.0-misc.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-edxl-cap.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-edxl-de.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-edxl-have.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-edxl.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-fbi.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-fips_10-4.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-fips_5-2.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-fips_6-4.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-geospatial.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-have-codes.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-hazmat.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-iso_3166.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-iso_4217.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-iso_639-3.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-itis.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-lasd.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-mmucc_2.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-mn_offense.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-nga.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-nlets.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-nonauthoritative-code.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-post-canada.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-sar.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-twpdes.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-ucr.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-unece_rec20-misc.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-usps_states.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-common-ut_offender-tracking-misc.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-core.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-domains-emergencyManagement.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-domains-familyServices.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-domains-infrastructureProtection.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-domains-intelligence.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-domains-jxdm.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-domains-maritime.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-domains-screening.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-external-cap.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-external-de.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-external-have.uml"),
-                    REFERENCE_LIBRARY_PATH.appendSegment("NIEM-Reference-external-ogc.uml")
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-ansi_d20"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-apco"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-atf"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-cbrncl"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-census"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-dea"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-dod_jcs-pub2.0-misc"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-edxl-cap"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-edxl-de"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-edxl-have"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-edxl"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-fbi"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-fips_10-4"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-fips_5-2"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-fips_6-4"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-geospatial"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-have-codes"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-hazmat"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-icism"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-iso_3166"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-iso_4217"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-iso_639-3"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-itis"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-lasd"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-mmucc_2"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-mn_offense"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-nga"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-nlets"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-nonauthoritative-code"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-post-canada"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-sar"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-twpdes"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-ucr"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-unece_rec20-misc"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-usps_states"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-common-ut_offender-tracking-misc"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-core"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-domains-emergencyManagement"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-domains-familyServices"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-domains-infrastructureProtection"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-domains-intelligence"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-domains-jxdm"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-domains-maritime"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-domains-screening"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-external-cap"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-external-de"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-external-have"),
+                REFERENCE_LIBRARY_URI.appendSegment("NIEM-Reference-external-ogc")
                 );
         // @formatter:on
     }
@@ -169,6 +168,7 @@ public class Activator extends EMFPlugin {
             m.put("have", "urn:oasis:names:tc:emergency:EDXL:HAVE:1.0");
             m.put("have-codes", "http://niem.gov/niem/have-codes/2.1");
             m.put("hazmat", "http://niem.gov/niem/hazmat/2.1");
+            m.put("icism", "urn:us:gov:ic:ism:v2");
             m.put("im", "http://niem.gov/niem/domains/immigration/2.1");
             m.put("intel", "http://niem.gov/niem/domains/intelligence/2.1");
             m.put("ip", "http://niem.gov/niem/domains/infrastructureProtection/2.1");

@@ -20,7 +20,7 @@ public class NiemModelSetServiceFactory extends ModelSetServiceFactory {
     @Override
     public Object createServiceInstance() {
         final ResourceSet resourceSet = UMLResourcesUtil.init((ResourceSet) super.createServiceInstance());
-        resourceSet.getResource(URI.createURI("http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes.xmi"), true);
+        resourceSet.getResource(URI.createURI("http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes"), true);
         return resourceSet;
     }
 }
