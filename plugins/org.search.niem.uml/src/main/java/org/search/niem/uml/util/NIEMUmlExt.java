@@ -173,7 +173,7 @@ public class NIEMUmlExt {
     }
 
     public static EnumerationLiteral getMPDClassCode(final Element e) {
-        return getStereotypeValue(getMpdStereotypeApplication(e), "mpdClassCode", true);
+        return getStereotypeValue(getMpdStereotypeApplication(e), "mpdClassCode");
     }
 
     public static void setMPDDescription(final Element e, final String mpdDescription) {

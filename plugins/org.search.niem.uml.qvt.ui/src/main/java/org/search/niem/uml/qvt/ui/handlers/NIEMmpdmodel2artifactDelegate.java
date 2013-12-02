@@ -251,11 +251,19 @@ final class NIEMmpdmodel2artifactDelegate extends NIEMpsm2xsdDelegate {
 
     private XSDSchema findSchemaFor(final FileType file) {
         final Iterable<XSDSchema> targetSchemas = getTargetSchemas();
-        for (final XSDSchema xsdSchema : targetSchemas) {
-            final String schemaName = xsdSchema.eResource().getURI().lastSegment();
-            if (schemaName.equals(file.getRelativePathName().replaceFirst("^\\./", ""))) {
-                return xsdSchema;
+        final String[] pathSegments = file.getRelativePathName().replaceFirst("^\\./", "").split("/");
+        NEXT_SCHEMA: for (final XSDSchema nextSchema : targetSchemas) {
+            final URI nextSchemaURI = nextSchema.eResource().getURI();
+            final int segmentCount = nextSchemaURI.segmentCount();
+            if (pathSegments.length > segmentCount) {
+                continue NEXT_SCHEMA;
             }
+            for (int i = 0; i < pathSegments.length; i++) {
+                if (!pathSegments[pathSegments.length - 1 - i].equals(nextSchemaURI.segment(segmentCount - 1 - i))) {
+                    continue NEXT_SCHEMA;
+                }
+            }
+            return nextSchema;
         }
         return null;
     }
