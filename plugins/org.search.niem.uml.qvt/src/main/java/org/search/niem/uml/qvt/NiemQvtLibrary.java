@@ -18,14 +18,19 @@ import static org.search.niem.mpd.Constants.NATURE_TYPE;
 import static org.search.niem.mpd.Constants.PURPOSE_TYPE;
 import static org.search.niem.mpd.cat.util.CatExt.getCatalogFileExtensions;
 import static org.search.niem.mpd.cat.util.CatExt.isACatalog;
-import static org.search.niem.uml.qvt.util.NIEMXsdUtil.addAppinfo;
-import static org.search.niem.uml.qvt.util.NIEMXsdUtil.findElementByTag;
-import static org.search.niem.uml.qvt.util.NIEMXsdUtil.setAppinfoAttributes;
+import static org.search.niem.uml.library.Activator.APPINFO2_NAMESPACE;
+import static org.search.niem.uml.library.Activator.APPINFO_NAMESPACE;
+import static org.search.niem.uml.qvt.util.NIEMXsdUtil.createAppinfoElement;
+import static org.search.niem.uml.qvt.util.NIEMXsdUtil.getOrCreateAppinfoElement;
+import static org.search.niem.uml.qvt.util.NIEMXsdUtil.setAttribute;
+import static org.search.niem.uml.qvt.util.NIEMXsdUtil.setContent;
 import static org.search.niem.uml.resources.Activator.getNiemUmlProfile;
 import static org.search.niem.uml.resources.Activator.getXmlPrimitiveTypes;
 import static org.search.niem.uml.util.NIEMTypes.NIEM_PIM_Profile;
 import static org.search.niem.uml.util.NIEMUmlExt.createPOC;
+import static org.search.niem.uml.util.NIEMUmlExt.getAppliedReferencesStereotype;
 import static org.search.niem.uml.util.NIEMUmlExt.getMPDPointsOfContact;
+import static org.search.niem.uml.util.NIEMUmlExt.getReferenceNameStereotypeApplication;
 import static org.search.niem.uml.util.NIEMUmlExt.setMPDAuthoritativeSourceAddress;
 import static org.search.niem.uml.util.NIEMUmlExt.setMPDAuthoritativeSourceName;
 import static org.search.niem.uml.util.NIEMUmlExt.setMPDAuthoritativeSourceWebsiteURL;
@@ -70,6 +75,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.m2m.qvt.oml.blackbox.java.Operation;
 import org.eclipse.uml2.uml.Comment;
+import org.eclipse.uml2.uml.Dependency;
 import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.Enumeration;
 import org.eclipse.uml2.uml.EnumerationLiteral;
@@ -120,8 +126,10 @@ public class NiemQvtLibrary {
                     + self.eClass().getName() + "!");
             return null;
         }
-        if (self instanceof NamedElement && "PetAdoptionIEPD".equalsIgnoreCase(((NamedElement) self).getName())) {
-            Activator.INSTANCE.log("Applying the stereotype " + stereotype.getName() + " to PetAdoptionIEPD");
+        if (self.isStereotypeApplied(stereotype)) {
+            Activator.INSTANCE.log("Re-applying stereotype " + stereotype.getName() + " that is already applied to "
+                    + self.eClass().getName() + " " + UMLExt.getName(self) + "!");
+            return self.getStereotypeApplication(stereotype);
         }
         return self.applyStereotype(stereotype);
     }
@@ -337,6 +345,20 @@ public class NiemQvtLibrary {
         }
     }
 
+    // retrieve the string value of the natureCode tag from a <<ModelPackageDescriptionFile>>
+    // additional query to support issues including Issue 18179: NIEM-UML Issue � Changelog
+    @Operation(contextual = true, kind = Operation.Kind.QUERY)
+    public static String getFileTypeNatureCode(final EObject self) {
+        return uriFromEnumerationLiteral(UMLExt.<EnumerationLiteral> getStereotypeValue(self, "natureCode"), PURPOSE_TYPE);
+    }
+
+    // retrieve the string value of the natureCode tag from a <<ModelPackageDescriptionFileSet>>
+    // additional query to support issues including Issue 18179: NIEM-UML Issue � Changelog
+    @Operation(contextual = true, kind = Operation.Kind.QUERY)
+    public static String getFileSetTypeNatureCode(final EObject self) {
+        return uriFromEnumerationLiteral(UMLExt.<EnumerationLiteral> getStereotypeValue(self, "natureCode"), PURPOSE_TYPE);
+    }
+
     @Operation(contextual = true, kind = Operation.Kind.QUERY)
     public static String getFileTypePurposeURI(final EObject self) {
         return uriFromEnumerationLiteral(UMLExt.<EnumerationLiteral> getStereotypeValue(self, "purposeCode"), PURPOSE_TYPE);
@@ -371,6 +393,12 @@ public class NiemQvtLibrary {
     @Operation(contextual = true, kind = Operation.Kind.QUERY)
     public static String getSchemaTargetNamespace(final EObject self) {
         return getStereotypeValue(self, "targetNamespace");
+    }
+
+    // Issue 17572: NIEM-UML FTF Issue: Namespace prefix (niem-uml-ftf):
+    @Operation(contextual = true, kind = Operation.Kind.QUERY)
+    public static String getSchemaDefaultPrefix(final EObject self) {
+        return getStereotypeValue(self, "defaultPrefix");
     }
 
     // get <<Namespace>> isConformant
@@ -631,6 +659,13 @@ public class NiemQvtLibrary {
         return getStereotypeValue(self, "descriptionText");
     }
 
+    // return value of tag relativePathName within <<ModelPackageDescriptionFile>>; as part of Issue 18361: PSM
+    // Representation for XSD Complex Type
+    @Operation(contextual = true, kind = Operation.Kind.QUERY)
+    public static String getFileTypeRelativePathName(final EObject self) {
+        return getStereotypeValue(self, "relativePathName");
+    }
+
     // get <<ModelPackageDescriptionRelationship>> descriptionText
     @Operation(contextual = true, kind = Operation.Kind.QUERY)
     public static String getRelationshipDescriptionText(final EObject self) {
@@ -757,8 +792,56 @@ public class NiemQvtLibrary {
     }
 
     /*
-     * Resolve and load the schema referenced by the XSDImport context.
+     * <p>perform platform-specific provisioning of changelog, where self context is a package representing a changelog.</p>
+     * <p>hook to platform-specific implementation per Issue 18179: NIEM-UML Issue � Changelog</p>
      */
+    @Operation(contextual = true, kind = Operation.Kind.HELPER)
+    public static Package changelog(final Package self, final Package psmPackage) {
+        // TODO: WTF is this doing?
+        return psmPackage;
+    }
+
+    /*
+     * <p>part of Issue 18251: NIEM-UML Issue: Constraint schema</p> <p>find any explicitly specified constraint models for
+     * given <<InformationModel>> (the client of a <<References>> for which given model is supplier)</p>
+     */
+    @Operation(contextual = true, kind = Operation.Kind.QUERY)
+    public static LinkedHashSet<Package> getPimConstraintModels(final Package self) {
+        final LinkedHashSet<Package> pimConstraintModels = new LinkedHashSet<>();
+        for (final Dependency d : self.getClientDependencies()) {
+            if (UMLPackage.Literals.REALIZATION.isInstance(d) && getAppliedReferencesStereotype(d) != null) {
+                pimConstraintModels
+                        .addAll(EcoreUtil.<Package> getObjectsByType(d.getClients(), UMLPackage.Literals.PACKAGE));
+            }
+        }
+        return pimConstraintModels;
+    }
+
+    /*
+     * <p>returns Dependencies for which the context NamedElement is the supplier, as part of Issue 18361: PSM Representation
+     * for XSD Complex Type</p>
+     */
+    @Operation(contextual = true, kind = Operation.Kind.QUERY)
+    public static LinkedHashSet<Dependency> getSupplierDependency(final NamedElement self) {
+        return new LinkedHashSet<>(self.getClientDependencies());
+    }
+
+    /*
+     * <p>if <<NIEMName>> applied, return the <<NIEMName>> name, otherwise umlName, added as part of Issue 18361: PSM
+     * Representation for XSD Complex Type with Simple Content</p> <p>This should read
+     * "if <<ReferenceName>> applied, return the <<ReferenceName>>#NIEMName name, otherwise umlName, added as part of Issue 18361: PSM Representation for XSD Complex Type with Simple Content"
+     * </p>
+     */
+    @Operation(contextual = true, kind = Operation.Kind.QUERY)
+    public static String getBaseNiemName(final Element self, final String umlName) {
+        final EObject referenceNameStereotypeApplication = getReferenceNameStereotypeApplication(self);
+        if (referenceNameStereotypeApplication == null) {
+            return umlName;
+        }
+        final String baseName = getStereotypeValue(referenceNameStereotypeApplication, "NIEMName", true);
+        return baseName == null ? umlName : baseName;
+    }
+
     @Operation(contextual = true, kind = Operation.Kind.HELPER)
     public static void importSchema(final XSDImport self) {
         throw new UnsupportedOperationException("Not yet implemented");
@@ -854,7 +937,8 @@ public class NiemQvtLibrary {
     @Operation(contextual = true, kind = Operation.Kind.HELPER)
     public static void setAppinfo2Element(final XSDAnnotation self, final String value, final XSDSchema owningSchema,
             final String name) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        final String qualifiedName = prefix(name, APPINFO2_NAMESPACE);
+        setContent(getOrCreateAppinfoElement(self, qualifiedName), value);
     }
 
     /*
@@ -863,12 +947,8 @@ public class NiemQvtLibrary {
      */
     @Operation(contextual = true, kind = Operation.Kind.HELPER)
     public static void setAppinfoElementValue(final XSDAnnotation self, final String value, final String name) {
-        final org.w3c.dom.Element element = findElementByTag(self, name);
-        if (element == null) {
-            addAppinfo(self, name, value);
-        } else {
-            element.setTextContent(value);
-        }
+        final String qualifiedName = prefix(name, APPINFO_NAMESPACE);
+        setContent(getOrCreateAppinfoElement(self, qualifiedName), value);
     }
 
     /*
@@ -880,16 +960,16 @@ public class NiemQvtLibrary {
     @Operation(contextual = true, kind = Operation.Kind.HELPER)
     public static void setAppinfoElement(final XSDAnnotation self, final String elementName, final String name,
             final String namespace) {
-        if ("i:AppliesTo".equals(elementName)) {
-            addAppinfo(self, elementName, name, namespace);
-            return;
-        }
-        final org.w3c.dom.Element element = findElementByTag(self, elementName);
-        if (element == null) {
-            addAppinfo(self, elementName, name, namespace);
-        } else {
-            setAppinfoAttributes(element, name, namespace);
-        }
+        final String qualifiedName = prefix(elementName, APPINFO_NAMESPACE);
+        final String nameTag = prefix("name", APPINFO_NAMESPACE);
+        final String namespaceTag = prefix("namespace", APPINFO_NAMESPACE);
+        final org.w3c.dom.Element element = "AppliesTo".equals(elementName) ? createAppinfoElement(self, qualifiedName)
+                : getOrCreateAppinfoElement(self, qualifiedName);
+        setAttribute(setAttribute(element, nameTag, name), namespaceTag, namespace);
+    }
+
+    private static String prefix(final String tag, final String namespace) {
+        return org.search.niem.uml.library.Activator.INSTANCE.toPrefix(namespace) + ":" + tag;
     }
 
     /*

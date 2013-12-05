@@ -1,12 +1,8 @@
 import NIEMpsm2xsd;
 modeltype UML uses 'http://www.eclipse.org/uml2/4.0.0/UML';
-//modeltype UML uses 'http://www.nomagic.com/magicdraw/UML/2.4.1';
 
-modeltype CMOF  uses 'http://www.eclipse.org/emf/2002/Ecore';
 modeltype XSD  uses 'http://www.eclipse.org/xsd/2002/XSD';
 modeltype CAT  uses 'http://reference.niem.gov/niem/resource/mpd/catalog/1.0/';
-//modeltype CHANGELOG uses 'http://reference.niem.gov/niem/resource/mpd/changelog/1.0/';
-//modeltype PROXY uses 'http://niem.gov/niem/proxy/xsd/2.0';
 
 transformation NIEMmpdmodel2artifact(in uml:UML,
 	in schemaForProxy:XSD,in schemaForStructures:XSD,in schemaForAppinfo:XSD,in schemaForAppinfo2:XSD,
@@ -122,6 +118,11 @@ mapping UML::Usage::ModelPackageDescriptionFile(inout catalog:CAT::CatalogType):
 	var schemaPackage:UML::NamedElement=self.supplier->asSequence()->first();
 	relativePathName:=schemaPackage.toRelativePathName(schemaPackage.getNearestPackage().getNearesProfileApplication(niemXsdProfile),false);
 	var pimmpd:Stdlib::Element=self.GetStereotypeApplication(NIEMModelPackageDescriptionFileStereotype).oclAsType(Stdlib::Element);
+	// if relativePathName explicitly specified in <<ModelPackageDescriptionFile>>, use it; part of Issue 18361: PSM Representation for XSD Complex Type 
+	var explicitRelativePathName:String =pimmpd.getFileTypeRelativePathName();
+	if(not(explicitRelativePathName.oclIsUndefined()) and (explicitRelativePathName<>''))then{
+		relativePathName:=explicitRelativePathName;
+	}endif;
 	descriptionText:=pimmpd.getFileDescriptionText();
 	id:='file_'+self.getFileId();
 	externalURI:=pimmpd.getFileTypeExternalURI();
@@ -131,8 +132,14 @@ mapping UML::Usage::ModelPackageDescriptionFile(inout catalog:CAT::CatalogType):
 mapping UML::Usage::ModelPackageDescriptionFile(inout fileSet:CAT::FileSetType):CAT::FileType{
 	fileSet.file+=result;
 	var schemaPackage:UML::NamedElement=self.supplier->asSequence()->first();
+	
 	relativePathName:=schemaPackage.toRelativePathName(schemaPackage.getNearestPackage().getNearesProfileApplication(niemXsdProfile),false);
 	var pimmpd:Stdlib::Element=self.GetStereotypeApplication(NIEMModelPackageDescriptionFileStereotype).oclAsType(Stdlib::Element);
+	// if relativePathName explicitly specified in <<ModelPackageDescriptionFile>>, use it; part of Issue 18361: PSM Representation for XSD Complex Type 
+	var explicitRelativePathName:String =pimmpd.getFileTypeRelativePathName();
+	if(not(explicitRelativePathName.oclIsUndefined()) and (explicitRelativePathName<>''))then{
+		relativePathName:=explicitRelativePathName;
+	}endif;
 	descriptionText:=pimmpd.getFileDescriptionText();
 	id:=fileSet.id+'_'+self.getFileId();
 	externalURI:=pimmpd.getFileTypeExternalURI();

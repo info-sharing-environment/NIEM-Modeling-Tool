@@ -35,5 +35,6 @@ public interface NIEMTypes {
     String Choice = NIEM_Common_Profile + SEPARATOR + "Choice"; //$NON-NLS-1$
     String List = NIEM_Common_Profile + SEPARATOR + "List"; //$NON-NLS-1$
     String RoleOf = NIEM_PIM_Profile + SEPARATOR + "RoleOf"; //$NON-NLS-1$
+    String ReferenceName = NIEM_PIM_Profile + SEPARATOR + "ReferenceName"; //$NON-NLS-1$
 
 }

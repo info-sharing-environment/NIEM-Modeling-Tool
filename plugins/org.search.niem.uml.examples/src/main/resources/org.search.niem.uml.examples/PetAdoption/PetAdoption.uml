@@ -5023,7 +5023,7 @@
 	<NIEM_Common_Profile:AssociationType xmi:id="_17_0_2_2_7b3022e_1359845177234_561883_19710" base_Class="_17_0_2_2_7b3022e_1359845177231_939844_19708"/>
 	<NIEM_PSM_Profile:XSDProperty xmi:id="_17_0_2_2_7b3022e_1359738153191_240474_14852" base_Property="_17_0_2_2_7b3022e_1359738153190_37228_14850" kind="element" nillable="true"/>
 	<NIEM_PSM_Profile:XSDProperty xmi:id="_17_0_2_2_7b3022e_1359844123567_93582_19542" base_Property="_17_0_2_2_7b3022e_1359844123566_938835_19540" kind="element" nillable="false"/>
-	<NIEM_PIM_Profile:InformationModel xmi:id="_17_0_2_2_7b3022e_1359586992943_169329_13419" base_Package="_17_0_2_2_7b3022e_1359586992939_51311_13366" defaultPrefix="PetExchange" version="&quot;1&quot;" targetNamespace="http://www.modeldriven.org/niem/examples/PetAdoptionExchange" isConformant="true" defaultPurpose="exchange"/>
+	<NIEM_PIM_Profile:InformationModel xmi:id="_17_0_2_2_7b3022e_1359586992943_169329_13419" base_Package="_17_0_2_2_7b3022e_1359586992939_51311_13366" defaultPrefix="PetExchange" version="1" targetNamespace="http://www.modeldriven.org/niem/examples/PetAdoptionExchange" isConformant="true" defaultPurpose="exchange"/>
 	<Model_Package_Description_Profile:ModelPackageDescription xmi:id="_17_0_2_2_7b3022e_1359586992951_599284_13544" base_Component="_17_0_2_2_7b3022e_1359586992943_852308_13415" SecurityMarkingText="Unclassified/public" mpdVersionID="2.0" ASName="PetAdoption" descriptionText="The model demonstrates NIEM-UML by modeling pet adoptions." CreationDate="2013-01-30" mpdClassCode="iepd" mpdBaseURI="http://PetAdoption.com/mpd">
 		<KeywordText>Pet</KeywordText>
 		<DomainText>Pet</DomainText>
@@ -5044,7 +5044,7 @@
 	<NIEM_Common_Profile:References xmi:id="_17_0_2_2_7b3022e_1359738153220_227447_14884" base_Realization="_17_0_2_2_7b3022e_1359738153220_782718_14883"/>
 	<NIEM_PSM_Profile:XSDProperty xmi:id="_17_0_2_2_7b3022e_1359846179549_280555_20329" base_Property="_17_0_2_2_7b3022e_1359846179547_488676_20327" kind="element" nillable="true"/>
 	<NIEM_Common_Profile:References xmi:id="_17_0_2_2_7b3022e_1359925049655_106962_21473" base_Realization="_17_0_2_2_7b3022e_1359925049654_594302_21472"/>
-	<NIEM_PIM_Profile:InformationModel xmi:id="_17_0_2_2_7b3022e_1359586992950_39691_13507" base_Package="_17_0_2_2_7b3022e_1359586992945_556891_13438" defaultPrefix="PetExtension" version="&quot;1&quot;" targetNamespace="http://www.modeldriven.org/niem/examples/PetAdoptionExtension" isConformant="true" defaultPurpose="extension"/>
+	<NIEM_PIM_Profile:InformationModel xmi:id="_17_0_2_2_7b3022e_1359586992950_39691_13507" base_Package="_17_0_2_2_7b3022e_1359586992945_556891_13438" defaultPrefix="PetExtension" version="1" targetNamespace="http://www.modeldriven.org/niem/examples/PetAdoptionExtension" isConformant="true" defaultPurpose="extension"/>
 	
 	<NIEM_PSM_Profile:XSDProperty xmi:id="_17_0_2_2_7b3022e_1359846583338_380552_20804" base_Property="_17_0_2_2_7b3022e_1359846583336_616496_20802" kind="element" nillable="true"/>
 	<NIEM_Common_Profile:PropertyHolder xmi:id="_17_0_2_2_7b3022e_1359586992951_431282_13540" base_Class="_17_0_2_2_7b3022e_1359586992946_783066_13461"/>

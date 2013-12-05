@@ -18,6 +18,7 @@ import static org.search.niem.uml.util.NIEMTypes.InformationModel;
 import static org.search.niem.uml.util.NIEMTypes.ModelPackageDescription;
 import static org.search.niem.uml.util.NIEMTypes.Model_Package_Description_Profile;
 import static org.search.niem.uml.util.NIEMTypes.NIEM_PIM_Profile;
+import static org.search.niem.uml.util.NIEMTypes.ReferenceName;
 import static org.search.niem.uml.util.NIEMTypes.References;
 import static org.search.niem.uml.util.UMLExt.getNearestPackage;
 import static org.search.niem.uml.util.UMLExt.getNestedPackages;
@@ -99,6 +100,14 @@ public class NIEMUmlExt {
 
     private static Stereotype getAppliedNiemNamespaceStereotype(final EObject e) {
         return UMLPackage.Literals.ELEMENT.isInstance(e) ? ((Element) e).getAppliedStereotype(InformationModel) : null;
+    }
+
+    public static EObject getReferenceNameStereotypeApplication(final Element e) {
+        return e.getStereotypeApplication(getAppliedReferenceNameStereotype(e));
+    }
+
+    private static Stereotype getAppliedReferenceNameStereotype(final Element e) {
+        return e.getAppliedStereotype(ReferenceName);
     }
 
     private static EObject getMpdStereotypeApplication(final Element e) {

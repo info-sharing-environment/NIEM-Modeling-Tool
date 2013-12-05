@@ -1,16 +1,9 @@
 import NIEMglobals;
-
 import org.search.niem.NiemQvt;
-
-modeltype XSD  uses 'http://www.eclipse.org/xsd/2002/XSD';
-
-//modeltype UML uses 'http://www.omg.org/spec/UML/20110701';
-// platform variants for UML
 modeltype ECORE uses 'http://www.eclipse.org/emf/2002/Ecore';
 modeltype UML uses 'http://www.eclipse.org/uml2/4.0.0/UML';
-//modeltype UML uses 'http://www.nomagic.com/magicdraw/UML/2.4.1';
+modeltype XSD  uses 'http://www.eclipse.org/xsd/2002/XSD';
 modeltype CAT  uses 'http://reference.niem.gov/niem/resource/mpd/catalog/1.0/';
-// modeltype MPD  uses 'http://www.omg.org/spec/NIEM-UML/20120501/Model_Package_Description_Profile';
 
 transformation NIEMplatformBinding;
 	main() {}	
@@ -23,6 +16,17 @@ transformation NIEMplatformBinding;
 // abstract helper UML::MultiplicityElement::setLower(lower:Integer);// set the lower value of a MultiplicityElement
 // abstract helper UML::MultiplicityElement::setUpper(upper:Integer);// set the upper value of a MultiplicityElement
 // abstract query UML::Element::GetStereotypeApplication(stereotype:UML::Stereotype):Stdlib::Element;// get the instance of the stereotype applied to the context Element
+// get nearest containing <<Namespace>> Package, part of Issue 18251: NIEM-UML Issue: Constraint schema 
+query UML::Element::getNearestNIEMSchemaPackage():UML::Package{
+    var schemaPackage:UML::Package=self.getNearestPackage();
+    if(schemaPackage.IsStereotypeApplied(NIEMSchemaStereotype) or schemaPackage.IsStereotypeApplied(NIEMInformationModelStereotype)) then {return schemaPackage;} endif;
+        if(schemaPackage.name=XMLPrimitiveTypesPackageName)then{return schemaPackage;}endif;
+        if(schemaPackage.name=UMLPrimitiveTypesPackageName)then{return schemaPackage;}endif;
+
+    var nestingPackage:UML::Package=schemaPackage.nestingPackage;
+    if(nestingPackage.oclIsUndefined())then{return null;}endif;
+    return nestingPackage.getNearestNIEMSchemaPackage();
+}
 
 /*
 	Stereotype instance tag value setters.
@@ -117,6 +121,14 @@ helper  Stdlib::Element::setNIEMAnyPropertyValueNamespace(valueNamespace:String)
 // abstract helper CAT::CatalogType::addCatalogFolder(folderIn:CAT::FolderType);
 // abstract helper CAT::CatalogType::addCatalogFile(fileIn:CAT::FileType);
 // abstract helper CAT::FileSetType::addFileSetFiles(value:String);
+// retrieve the string value of the natureCode tag from a <<ModelPackageDescriptionFile>>
+query Stdlib::Element::getFileTypeNatureCode():String { // additional query to support issues including Issue 18179: NIEM-UML Issue � Changelog 
+    return self.oclAsType(ECORE::EObject).getFileTypeNatureCode();
+}
+// retrieve the string value of the natureCode tag from a <<ModelPackageDescriptionFileSet>>
+query Stdlib::Element::getFileSetTypeNatureCode():String { // additional query to support issues including Issue 18179: NIEM-UML Issue � Changelog
+    return self.oclAsType(ECORE::EObject).getFileSetTypeNatureCode();
+}
 
 query Stdlib::Element::getFileTypePurposeURI():String {
     return self.oclAsType(ECORE::EObject).getFileTypePurposeURI(); // TODO: make this statically typed
@@ -142,6 +154,7 @@ helper Stdlib::Element::splitSchemas(referenceTarget:Stdlib::Element) {
 query  Stdlib::Element::getInformationModelDefaultPurpose():String { // get <<InformationModel>> defaultPurpose
 	return self.oclAsType(ECORE::EObject).getInformationModelDefaultPurpose();
 }
+query   UML::Package::getSchemaTargetNamespace():String=self.GetStereotypeApplication(NIEMSchemaStereotype).oclAsType(Stdlib::Element).getSchemaTargetNamespace();
 query  Stdlib::Element::getSchemaTargetNamespace():String { // get <<Namespace>> targetNamespace
 	return self.oclAsType(ECORE::EObject).getSchemaTargetNamespace();
 }
@@ -151,6 +164,10 @@ query  Stdlib::Element::getPimSchemaConformantIndicator():Boolean { // get <<Nam
 query  Stdlib::Element::getPimSchemaVersion():String { // get <<Namespace>> version
 	return self.oclAsType(ECORE::EObject).getPimSchemaVersion();
 }
+query  Stdlib::Element::getSchemaDefaultPrefix():String { // Issue 17572: NIEM-UML FTF Issue: Namespace prefix (niem-uml-ftf):
+    return self.oclAsType(ECORE::EObject).getSchemaDefaultPrefix();
+}
+
 query  Stdlib::Element::getNIEMSimpleTypeFractionDigits():Integer { // get <<ValueRestriction>> fractionDigits
 	return self.oclAsType(ECORE::EObject).getNIEMSimpleTypeFractionDigits();
 }
@@ -168,6 +185,10 @@ query  Stdlib::Element::getNIEMSimpleTypeTotalDigits():Integer { // get <<ValueR
 }
 query  Stdlib::Element::getNIEMSimpleTypePattern():Sequence(String) { // get <<ValueRestriction>> pattern
 	return self.oclAsType(ECORE::EObject).getNIEMSimpleTypePattern();
+}
+// return value of tag relativePathName within <<ModelPackageDescriptionFile>>; as part of Issue 18361: PSM Representation for XSD Complex Type 
+query  Stdlib::Element::getFileTypeRelativePathName():String {
+	return self.oclAsType(ECORE::EObject).getFileTypeRelativePathName();
 }
 query  Stdlib::Element::getNIEMSimpleTypeMaxExclusive():String { // get <<ValueRestriction>> maxExclusive
 	return self.oclAsType(ECORE::EObject).getNIEMSimpleTypeMaxExclusive();
@@ -268,6 +289,11 @@ query  Stdlib::Element::getFileSetDescriptionText():String { // get <<ModelPacka
 query  Stdlib::Element::getFileTypePurposeCode():String { // get <<ModelPackageDescriptionFile>> purposeCode (as full URI, not the abbreviated code in the Enumeration)
 	return self.oclAsType(ECORE::EObject).getFileTypePurposeCode();
 }
+// if <<NIEMName>> applied, return the <<NIEMName>> name, otherwise umlName, added as part of Issue 18361: PSM Representation for XSD Complex Type with Simple Content  
+// abstract query UML::Element::getBaseNiemName(umlName:String ):String;
+// if <<NIEMName>> applied, return the <<NIEMName>> name, otherwise the UML name, added as part of Issue 18361: PSM Representation for XSD Complex Type with Simple Content  
+query UML::NamedElement::getBaseNiemName():String=self.getBaseNiemName(self.name);
+
 query  Stdlib::Element::getFileTypeExternalURI():String { // get <<ModelPackageDescriptionFile>> externalURI
 	return self.oclAsType(ECORE::EObject).getFileTypeExternalURI();
 }
@@ -620,6 +646,46 @@ query String::isRoleOfName():Boolean=self.startsWith('RoleOf') and (self<>'RoleO
 */
 query String::toNCName():String=self.replace('/','_').replace(' ','')
 	.replace('<','_').replace('>','_').replace('(','_').replace(')','_').replace(',','_').replace('=','');
+    
+// true if given Classifier context is in a niem-conformant model part of Issue 18251: NIEM-UML Issue: Constraint schema    
+ helper UML::Classifier::isNIEMConformant():Boolean{
+        var schemaContainer:UML::Package=self.getNearestNIEMSchemaPackage();
+        if(not(schemaContainer.oclIsUndefined()))then{
+            var pimStereotypeInstance:Stdlib::Element=schemaContainer.GetStereotypeApplication(NIEMSchemaStereotype).oclAsType(Stdlib::Element);
+            if(not(pimStereotypeInstance.oclIsUndefined()))then{
+                var appinfoConformantIndicator:Boolean=pimStereotypeInstance.getPimSchemaConformantIndicator();
+                if(appinfoConformantIndicator.oclIsUndefined())then{appinfoConformantIndicator:=true;}endif;
+                return appinfoConformantIndicator;
+            }endif;
+        }endif;
+        return false;
+}
+ 
+// perform platform-specific provisioning of changelog, where self context is a package representing a changelog
+// helper UML::Package::changelog(inout psmPackage:UML::Package);// hook to platform-specific implementation per Issue 18179: NIEM-UML Issue � Changelog
+ 
+// part of Issue 18251: NIEM-UML Issue: Constraint schema 
+// find any explicitly specified constraint models for given <<InformationModel>> (the client of a <<References>> for which given model is supplier)        
+// abstract query UML::Package::getPimConstraintModels():Set(UML::Package);
+// returns Dependencies for which the context NamedElement is the supplier, as part of Issue 18361: PSM Representation for XSD Complex Type 
+// abstract query UML::NamedElement::getSupplierDependency():Set(UML::Dependency); 
+
+/////////////tjd added
+    // tjd added isPimComplexTypeSimpleContentRestriction
+    
+// test if this is a restriction on a niem proxy (complexType), per Issue 18361: PSM Representation for XSD Complex Type with Simple Content 
+query UML::Classifier::isProxyRestriction():Boolean=false;
+query UML::DataType::isProxyRestriction():Boolean=self.getRestrictions()->exists(r|not(r._mapping.oclIsUndefined()));
+// for given Classifier context, return <<Restriction>>s , part of Issue 18361: PSM Representation for XSD Complex Type with Simple Content         
+query UML::Classifier::getRestrictions():Set(UML::Realization)=
+        self.clientDependency
+        ->select(d|d.IsStereotypeApplied(NIEMRestrictionStereotype)).oclAsType(UML::Realization)
+        ->asSet();
+query   UML::Property::referencesTopLevelProperty():UML::Property=
+    self.clientDependency->select(d|d.IsStereotypeApplied(NIEMReferencesStereotype))
+    .supplier->select(s|s.oclIsKindOf(UML::Property))
+    .oclAsType(UML::Property)->asSequence()->first();
+        
 
 query UML::NamedElement::toRelativePathName(mpdRootPackage:UML::Package,isFolder:Boolean):String{
     var umlPackagePath:String=self.qualifiedName.substringAfter(mpdRootPackage.qualifiedName).replace('::','/');

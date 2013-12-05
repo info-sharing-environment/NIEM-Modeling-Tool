@@ -1,24 +1,24 @@
 //modeltype UML uses 'http://www.omg.org/spec/UML/20110701';
-// platform variants for UML
 modeltype UML uses 'http://www.eclipse.org/uml2/4.0.0/UML';
-//modeltype UML uses 'http://www.nomagic.com/magicdraw/UML/2.4.1';
 modeltype XSD  uses 'http://www.eclipse.org/xsd/2002/XSD';
 
 transformation NIEMGlobals()
 	;
 	main() {
 	}
-	
 property substitutionGroupAffiliationTag:String='substitutionGroupAffiliation';
 property attributeGroupDefinitionPackageName:String='attributeGroupDefinition';
 property elementDeclarationClassName:String='elementDeclaration';
 property attributeDeclarationClassName:String='attributeDeclaration';
 
+property UMLPrimitiveTypesPackageName:String='PrimitiveTypes';// added UML Primitive Types Package name, part of QVT Stack Overflow reduction in Issue 18251: NIEM-UML Issue: Constraint schema
 property XMLPrimitiveTypesPackageName:String='XMLPrimitiveTypes';
 property schemaForSchemaNamespace:String='http://www.w3.org/2001/XMLSchema';
 
+property baseMPDNamespace:String='http://reference.niem.gov/niem/resource/mpd/lexicon/1.1/';
 property baseNiemNamespace:String='http://niem.gov/niem/';
-property appinfo2Namespace:String=baseNiemNamespace+'appinfo/2.1';
+property appinfo2Namespace:String=baseNiemNamespace+'appinfo/2.1';	
+property natureURI:String=baseMPDNamespace+'nature#';
 property structuresNamespace:String=baseNiemNamespace+'structures/2.0';
 
 property provisioningMpdStereotypeName:String='ModelPackageDescription';
@@ -42,12 +42,12 @@ property niemCoreSchemaNamespace:String='http://niem.gov/niem/niem-core/2.0';
 property NIEMBaseTypeObject:String='Object';
 property NIEMBaseTypeAssociation:String='Association';
 
-property appinfoNamespace:String=baseNiemNamespace+'appinfo/2.0';
-
-property baseMPDNamespace:String='http://reference.niem.gov/niem/resource/mpd/lexicon/1.1/';
+property appinfoNamespace:String=baseNiemNamespace+'appinfo/2.0';	
 property purposeURI:String=baseMPDNamespace+'purpose#';
 property purposeExchangeSchema:String='exchange-schema';
-property purposeExchangeSchemaURI:String=purposeURI+purposeExchangeSchema;	
+property purposeExchangeSchemaURI:String=purposeURI+purposeExchangeSchema;
+property natureFilesetURI:String=natureURI+'file-set';
+	
 property purposeConstraintSchemaURI:String=purposeURI+'constraint-schema';
 property purposeExtensionSchemaURI:String=purposeURI+'extension-schema';
 property purposeSubsetSchemaURI:String=purposeURI+'subset-schema';
@@ -56,6 +56,8 @@ property purposeExchangeSchemaSetURI:String=purposeURI+'exchange-schema-set';
 property purposeExtensionSchemaSetURI:String=purposeURI+'extension-schema-set';
 property purposeSubsetSchemaSetURI:String=purposeURI+'subset-schema-set';
 property purposeReferenceSchemaSetURI:String=purposeURI+'reference-schema-set';
+property purposeConstraintSchemaSetURI:String=purposeURI+'constraint-schema-set';// part of Issue 18251: NIEM-UML Issue: Constraint schema 
+
 property purposeMasterDocumentURI:String=purposeURI+'master-document';
 property purposeChangelogURI:String=purposeURI+'changelog';
 property purposeCatalogURI:String=purposeURI+'catalog';
@@ -63,9 +65,7 @@ property purposeTransformationURI:String=purposeURI+'transformation';
 property purposeDisplayURI:String=purposeURI+'display';
 property purposeSchemaURI:String=purposeURI+'schema';
 property purposeSetMemberURI:String=purposeURI+'set-member';
-    
-property natureURI:String=baseMPDNamespace+'nature#';
-property natureFilesetURI:String=natureURI+'file-set';
+
 property natureZipURI:String=natureURI+'zip';
 property natureGifURI:String=natureURI+'gif';
 property natureXsltURI:String=natureURI+'xslt';

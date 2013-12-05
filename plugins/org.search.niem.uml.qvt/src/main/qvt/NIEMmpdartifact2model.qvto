@@ -1,8 +1,6 @@
 import NIEMplatformBinding;
 //modeltype UML uses 'http://www.omg.org/spec/UML/20110701';
-// platform variants for UML
 modeltype UML uses 'http://www.eclipse.org/uml2/4.0.0/UML';
-//modeltype UML uses 'http://www.nomagic.com/magicdraw/UML/2.4.1';
 modeltype XSD  uses 'http://www.eclipse.org/xsd/2002/XSD';
 modeltype CAT  uses 'http://reference.niem.gov/niem/resource/mpd/catalog/1.0/';
 
@@ -193,12 +191,21 @@ helper UML::Property::makeTargetSubsetPropertyHolder(
 		
 		if(self.getNearestPackage()=schemaPackage)then{
 			propertyHolder.ownedAttribute+=headProperty;
+			// if untyped, then make it abstract by setting isDerivedUnion to true; part of Issue 18361: PSM Representation for XSD Complex Type 
+			//headProperty.isDerivedUnion:=true;
+			if(headProperty.type.oclIsUndefined())then{
 			headProperty.isDerivedUnion:=true;
+			}endif;
+			
 		}else{
 			// generalization required
+			// unless generalization already exists; part of Issue 18361: PSM Representation for XSD Complex Type 
+			// note that this generalization may need to change if headProperty is later moved to another <<PropertyHolder>>
+			if(propertyHolder.generalization->select(g|g.general=headProperty.owner)->isEmpty())then{
 			var generalization:UML::Generalization=new UML::Generalization@pimUml(); 
 			generalization.specific:=propertyHolder;
 			generalization.general:=headProperty.owner.oclAsType(UML::Classifier);
+		}endif;	
 		}endif;	
         propertyHolder.ownedAttribute+=sourceSubsettingProperties->select(p|p.subsetsSource(self));
 		propertyHolder.name:=self.name+'PropertyHolder';  
@@ -377,7 +384,12 @@ mapping 	XSD::XSDSchema::MPDSchema():UML::Package@pimUml
 		log("informationModel "+pimNdrSchemaInstance.repr());
 		// set version, conformant, purpose
 		pimNdrSchemaInstance.setSchemaAppinfoConformantIndicator(self.appinfoConformantIndicator());
-		pimNdrSchemaInstance.setSchemaVersion(self.version);
+		// version is required; if undefined from source, then force a default value; part of Issue 18361: PSM Representation for XSD Complex Type 
+		//pimNdrSchemaInstance.setSchemaVersion(self.version);
+		var version:String=self.version;
+		if(version.oclIsUndefined())then{version:="1";}endif;
+		pimNdrSchemaInstance.setSchemaVersion(version);
+		
 		pimNdrSchemaInstance.setSchemaNamespace(self.targetNamespace);
 	
 		self.setModelInformationDefaultPurpose(null,pimNdrSchemaInstance);
@@ -416,6 +428,12 @@ mapping 	XSD::XSDElementDeclaration::NDRElementDeclaration_topLevel(umlOwningCla
  	when {not(self.elementDeclarationReference)
  	}
 {
+	// multiplicity nominally does not matter as top level element, 
+	// however, to support instance document construction for substitutionGroups and cross-namespace resolution
+	//		we need to allow unconstrained multiplicity; as part of Issue 18361: PSM Representation for XSD Complex Type 
+	result.setUpper(-1);
+	result.setLower(0);
+
 	// the appliesTo should really be at the top level
 	if(not(self.type.oclIsUndefined())
 		and self.type.oclIsKindOf(XSD::XSDComplexTypeDefinition)
@@ -1138,18 +1156,23 @@ mapping 	XSD::XSDImport::XSDImport_init(umlContainer:UML::Element):UML::ElementI
  	inherits XSD::XSDSchemaDirective::XSDSchemaDirective
 {
 	init{
+		// force resolution of imported schema, if necessary;  part of Issue 18361: PSM Representation for XSD Complex Type 
+		if(self.resolvedSchema.oclIsUndefined())then{self.importSchema();}endif;
 		result.importingNamespace:=self.schema.mapAbstractXSDSchema();
 
 	}
 }
 mapping 	XSD::XSDImport::XSDImport(umlContainer:UML::Element):UML::ElementImport@pimUml
  	inherits XSD::XSDImport::XSDImport_init
+ 	// when mapped to uml (i.e., not infrastructure schema); part of Issue 18361: PSM Representation for XSD Complex Type 
+ 	when{self.isImportMapped()}
 {
 	init{
 	}
 	self.annotation.mapXSDAnnotation(result);
 	////////////////////////////////////////
-	self.importSchema();
+	// importing schema and schema resolution moved to XSDImport_init; part of Issue 18361: PSM Representation for XSD Complex Type 
+	//self.importSchema();
 	assert error (not(self.resolvedSchema.oclIsUndefined())) with log('failed to resolve schema at '+self.schemaLocation+' from schema '+self.schema.targetNamespace+' at '+self.schema.schemaLocation);
 	importedElement:=self.resolvedSchema.mapAbstractXSDSchema();
 }
@@ -1275,7 +1298,9 @@ mapping XSD::XSDModelGroup::XSDModelGroup(umlContainer:UML::Element):UML::Class@
 		 	var otherProperty:UML::Property=new UML::Property@pimUml();
 		 	otherProperty.type:=result.owner.oclAsType(UML::Type);
 		 	otherProperty.aggregation:=UML::AggregationKind::none;
-			otherProperty.setLower(1);
+		 	// make inverse optional; part of Issue 18361: PSM Representation for XSD Complex Type 
+//			otherProperty.setLower(1);
+			otherProperty.setLower(0);
 			otherProperty.setUpper(1);
 			otherProperty.isDerived:=false;
 			otherProperty.isReadOnly:=false;
@@ -1698,9 +1723,22 @@ query XSD::XSDSchema::isMapped():Boolean{
 	if((targetNamespace=schemaForSchemaNamespace)
 	or (targetNamespace=structuresSchemaNamespace)
 	or (targetNamespace=appinfoSchemaNamespace)
+	// include appinfo 2 namespace;  part of Issue 18361: PSM Representation for XSD Complex Type 
+	or (targetNamespace=appinfo2SchemaNamespace)
 	or (targetNamespace=proxySchemaNamespace))then {return false;}endif;
 	return true;
 }
+// true if imported schema is mapped to uml (i.e., not an infrastructure schema) part of Issue 18361: PSM Representation for XSD Complex Type 
+query XSD::XSDImport::isImportMapped():Boolean{
+	var targetNamespace=self.namespace;
+	if((targetNamespace=schemaForSchemaNamespace)
+	or (targetNamespace=structuresSchemaNamespace)
+	or (targetNamespace=appinfoSchemaNamespace)
+	or (targetNamespace=appinfo2SchemaNamespace)
+	or (targetNamespace=proxySchemaNamespace))then {return false;}endif;
+	return true;
+}
+
 helper UML::Package::applyProfile(profile : UML::Profile){
 	var profileApplication: UML::ProfileApplication=new UML::ProfileApplication@pimUml();
 	profileApplication.applyingPackage:=self;

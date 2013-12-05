@@ -26,6 +26,9 @@ public class Activator extends EMFPlugin {
 
     public static final String PLUGIN_ID = "org.search.niem.uml.library"; //$NON-NLS-1$
 
+    public static final String APPINFO_NAMESPACE = "http://niem.gov/niem/appinfo/2.0";
+    public static final String APPINFO2_NAMESPACE = "http://niem.gov/niem/appinfo/2.1";
+
     public static final URI REFERENCE_LIBRARY_URI = URI.createURI(
             "http://www.omg.org/spec/NIEM-UML/20120501/NIEM-Reference", true);
 
@@ -196,7 +199,8 @@ public class Activator extends EMFPlugin {
             m.put("ut_offender", "http://niem.gov/niem/ut_offender-tracking-misc/2.0");
             m.put("xhtml", "http://www.w3.org/1999/xhtml");
             m.put("xlink", "http://www.w3.org/1999/xlink");
-            m.put("i", "http://niem.gov/niem/appinfo/2.0");
+            m.put("i", APPINFO_NAMESPACE);
+            m.put("i2", APPINFO2_NAMESPACE);
             m.put("s", "http://niem.gov/niem/structures/2.0");
             m.put("xls", "http://niem.gov/niem/external/ogc/xls/1.1.0/dhs-gmo/2.1.0");
             m.put("ct", "urn:oasis:names:tc:ciq:ct:3");

@@ -60,46 +60,31 @@ mapping UML::Property::XSDParticle(inout xsdContainer:XSD::XSDConcreteComponent)
         Tuple{prefix:String="xnl",namespace:String="urn:oasis:names:tc:ciq:xnl:3"}
         Tuple{prefix:String="xpil",namespace:String="urn:oasis:names:tc:ciq:xpil:3"}
         
-* Needed to change the way the XSDImport namespace was resolved (or rather NOT properly resolved) by changing the mapping from
-        mapping     UML::Package::XSDImport(inout xsdContainer:XSD::XSDSchema):XSD::XSDImport@xsd
-            inherits 
-                UML::Package::XSDImport_init
-        {
-            var xsdImport:XSD::XSDImport=result;
+* Needed to change the way the XSDImport namespace was resolved (or rather NOT properly resolved) in the mappings in NIEMpsm2xsd.qvto 
+**  from
             var importSchema:XSD::XSDSchema=xsdImport.resolvedSchema;
             var importNamespace:String=importSchema.targetNamespace;
-                var appinfoConformantIndicator:Boolean=
-                    (self.GetStereotypeApplication(NIEMSchemaStereotype).oclAsType(Stdlib::Element).getPimSchemaConformantIndicator())
-                ;
-                if(not(appinfoConformantIndicator))then{
-                    var schemaAnnotation:XSD::XSDAnnotation=getAnnotation(result);
-                    schemaAnnotation.setAppinfoElementValue(appinfoConformantIndicator.repr(),'i:ConformantIndicator');
-                }endif; 
-                    
-            if(importNamespace.oclIsUndefined())then{}else{
-                namespace:=importNamespace;
-                xsdContainer.setPrefixForNamespace(importNamespace);
-            }endif;
-        }
     to
-        mapping     UML::Package::XSDImport(inout xsdContainer:XSD::XSDSchema):XSD::XSDImport@xsd
-            inherits 
-                UML::Package::XSDImport_init
-        {
             var pimStereotypeInstance:Stdlib::Element=self.GetStereotypeApplication(NIEMSchemaStereotype).oclAsType(Stdlib::Element);
             var importNamespace:String=pimStereotypeInstance.getSchemaTargetNamespace();
-        
-            var appinfoConformantIndicator:Boolean=pimStereotypeInstance.getPimSchemaConformantIndicator();
-            if(not(appinfoConformantIndicator))then{
-                var schemaAnnotation:XSD::XSDAnnotation=getAnnotation(result);
-                schemaAnnotation.setAppinfoElementValue(appinfoConformantIndicator.repr(),'i:ConformantIndicator');
-            }endif; 
-                    
-            if(importNamespace.oclIsUndefined())then{}else{
-                namespace:=importNamespace;
-                xsdContainer.setPrefixForNamespace(importNamespace);
-            }endif;
-        }
+**  from
+            var importNamespace:String=result.resolvedSchema.targetNamespace;
+    to
+            var pimStereotypeInstance:Stdlib::Element=self.GetStereotypeApplication(NIEMSchemaStereotype).oclAsType(Stdlib::Element);
+            var importNamespace:String=pimStereotypeInstance.getSchemaTargetNamespace();
+            
+**  from
+            var schemaDirective:XSD::XSDSchemaDirective=result;
+            var referencedSchema:String=schemaDirective.resolvedSchema.schemaLocation;
+    to
+            // This will not work if mapping UML::PackageImport::XSDInclude is activated
+            var schemaDirective:XSD::XSDSchemaDirective=result;
+            var referencedSchemaLocation:String=self.getNearestNIEMSchemaPackage().map AbstractXSDSchema().schemaLocation;
+            var referencedSchema:String=referencedSchemaLocation.startsWithXmlSchemasFolder();
+
+* In NIEMpsm2xsd.qvto, in order to support sibling schemas, needed to add a helper function startsWithXmlSchemasFolder
+** Updated mapping  UML::Element::XSDSchemaDirective to use it
+** Updated mapping  XSD::XSDSchema::XSDImport_infrastructure to use it
         
 * Because of bug in substitution group serialization, needed to change XSDElementDeclaration_topLevel mapping in NIEMpsm2xsd.qvto from
         self.subsettedProperty.toPsmTopLevelElement()->forEach(targetSubsettedProperty){
@@ -234,6 +219,31 @@ mapping UML::Property::XSDParticle(inout xsdContainer:XSD::XSDConcreteComponent)
             return allFileSets->asSet();
         }
 ** In the NIEMpsm2xsd.qvto, using this new query in the getSchemaImports() and the getTopNiemFolders() queries.
+*** Changed getSchemaImports from
+        query getSchemaImports():Set(UML::Usage)=
+            mpdComponent.clientDependency
+            ->select(i|i.IsStereotypeApplied(NIEMModelPackageDescriptionFileStereotype))
+            .oclAsType(UML::Usage)->asSet();
+to
+        query getSchemaImports():Set(UML::Usage)=
+            mpdComponent.withAllFileSets().clientDependency
+            ->select(i|i.IsStereotypeApplied(NIEMModelPackageDescriptionFileStereotype))
+            .oclAsType(UML::Usage)->asSet();
+*** Changed getTopNiemFolders from
+        query UML::Component::getTopNiemFolders():Set(UML::Package)=
+            self.elementImport.importedElement.oclAsType(UML::NamedElement)->asSet()
+            ->union(self.clientDependency.supplier->asSet())
+                ->select(e|e.oclIsKindOf(UML::Package))
+                .oclAsType(UML::Package)
+                .getNearesProfileApplication(structureProfile)->asSet();
+    to
+        query UML::Component::getTopNiemFolders():Set(UML::Package) {
+            var allFileSets:Set(UML::Component)=self.withAllFileSets();
+            allFileSets.elementImport.importedElement.oclAsType(UML::NamedElement)->asSet()
+                ->union(allFileSets.clientDependency.supplier->asSet())
+                ->select(e|e.oclIsKindOf(UML::Package)).oclAsType(UML::Package)
+                .getNearesProfileApplication(structureProfile)->asSet();
+        }
 ** In the NIEMmpdmodel2artifact.qvto, modified how the file ids are generated so that they are unique within FileSet elements.
 ** Added new properties to NIEMglobals.qvto to support natureURIs and purposeURIs inside filesets: baseMPDNamespace, purposeSetMemberURI, natureSubsetSchemaURI, natureExtensionSchemaURI, natureExchangeSchemaURI
 ** In the NIEMmpdmodel2artifact.qvto, modified the UML::Usage::ModelPackageDescriptionFile(inout fileSet:CAT::FileSetType):CAT::FileType mapping to set the natureURI and purposeURI based on whether the defaultPurpose is subset, exchange or extension.
@@ -288,4 +298,6 @@ mapping UML::Property::XSDParticle(inout xsdContainer:XSD::XSDConcreteComponent)
         self.allSubobjectsOfKind(UML::Property).oclAsType(UML::Property).subsettedProperty
             ->forEach(p){packageRefs+=p.getNearestNIEMSchemaPackage();};
 
-* In order to support namespaced appinfo elements, in the NIEMpsm2xsd.qvto, changed all references from 'AppliesTo', 'ReferenceTarget' and 'Base' to 'i:AppliesTo', 'i:ReferenceTarget' and 'i:Base', respectively.
+* Needed to change NIEMplatformBinding.qvto query UML::Element::getNearestNIEMSchemaPackage():UML::Package{ to check for NIEMInformationModelStereotype application as well as NIEMSchemaStereotype application
+
+* Changed references from "isStereotypeApplied" to "IsStereotypeApplied" for consistency
