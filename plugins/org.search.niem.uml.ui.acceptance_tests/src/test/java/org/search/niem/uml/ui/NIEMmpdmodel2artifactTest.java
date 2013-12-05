@@ -10,36 +10,24 @@
  */
 package org.search.niem.uml.ui;
 
-import static org.junit.Assert.assertThat;
+import static java.util.Arrays.asList;
 import static org.search.niem.uml.qvt.ui.Activator.NIEM_MPD_2_CAT_ID;
 import static org.search.niem.uml.qvt.ui.Activator.NIEM_PIM_2_PSM_ID;
-import static org.search.niem.uml.ui.acceptance_tests.CommandUtils.run_the_command;
-import static org.search.niem.uml.ui.acceptance_tests.NIEMMatchers.exists;
 
-import org.eclipse.core.resources.IProject;
-import org.eclipse.core.runtime.CoreException;
-import org.eclipse.jface.viewers.StructuredSelection;
-import org.eclipse.ui.IPageLayout;
-import org.eclipse.ui.navigator.CommonNavigator;
-import org.junit.Rule;
-import org.junit.Test;
-import org.search.niem.uml.ui.acceptance_tests.UIUtils;
-import org.search.niem.uml.ui.acceptance_tests.rules.CreatesAnExampleProject;
+import java.util.ArrayList;
+import java.util.Collection;
 
-public class NIEMmpdmodel2artifactTest {
+public class NIEMmpdmodel2artifactTest extends NIEMpsm2xsdTest {
+    @Override
+    protected Iterable<String> transforms() {
+        return asList(NIEM_PIM_2_PSM_ID, NIEM_MPD_2_CAT_ID);
+    }
 
-    @Rule
-    public final CreatesAnExampleProject projectProvider = new CreatesAnExampleProject();
-
-    @Test
-    public void can_generate_a_catalog_from_an_mpd_model() throws CoreException {
-        final IProject theProject = projectProvider.get();
-        UIUtils.<CommonNavigator> activate_the_view(IPageLayout.ID_PROJECT_EXPLORER).selectReveal(
-                new StructuredSelection(theProject.getFile("PetAdoption/PetAdoption.uml")));
-
-        run_the_command(NIEM_PIM_2_PSM_ID);
-        run_the_command(NIEM_MPD_2_CAT_ID);
-
-        assertThat(theProject.getFile("PetAdoption/PetAdoption/MPD_Catalog.xml"), exists());
+    @Override
+    protected Collection<String> expectedArtifacts() {
+        final Collection<String> expectedArtifacts = new ArrayList<>(super.expectedArtifacts());
+        expectedArtifacts.addAll(asList("PetAdoption/PetAdoption/MPD_Catalog.xml",
+                "PetAdoption/PetAdoption/XMLsamples/PetAdoptionExchange_Sample.xml"));
+        return expectedArtifacts;
     }
 }

@@ -68,6 +68,7 @@
       <import plugin="org.eclipse.ui.views.properties.tabbed" version="3.6.0" match="compatible"/>
       <import plugin="org.eclipse.core.databinding.observable" version="1.4.0" match="compatible"/>
       <import plugin="org.eclipse.emf.databinding.edit" version="1.3.0" match="compatible"/>
+      <import plugin="org.eclipse.gmf.runtime.common.ui" version="1.7.0" match="compatible"/>
       <import plugin="org.eclipse.papyrus.infra.constraints" version="0.10.0" match="compatible"/>
       <import plugin="org.eclipse.papyrus.infra.emf" version="0.10.0" match="compatible"/>
       <import plugin="org.eclipse.papyrus.infra.widgets" version="0.10.0" match="compatible"/>
@@ -81,6 +82,7 @@
       <import plugin="org.eclipse.gmf.runtime.diagram.ui.providers" version="1.7.0" match="compatible"/>
       <import plugin="org.eclipse.papyrus.infra.emf.readonly" version="0.10.0" match="compatible"/>
       <import plugin="org.eclipse.papyrus.infra.gmfdiag.commands" version="0.10.0" match="compatible"/>
+      <import plugin="org.eclipse.papyrus.infra.gmfdiag.dnd" version="0.10.0" match="compatible"/>
       <import plugin="org.eclipse.papyrus.extensionpoints.editors" version="0.10.0" match="compatible"/>
       <import plugin="com.google.guava" version="12.0.0" match="compatible"/>
       <import plugin="org.search.niem.uml.search.ui" version="1.0.0" match="equivalent"/>
@@ -132,9 +134,7 @@
       <import feature="org.eclipse.m2m.qvt.oml.runtime" version="3.3.0" match="compatible"/>
       <import feature="org.eclipse.m2m.qvt.oml.sdk" version="3.3.0" match="compatible"/>
       <import feature="org.eclipse.epsilon.evl.emf.validation.feature" version="1.0.0" match="compatible"/>
-      <import plugin="org.eclipse.gmf.runtime.common.ui" version="1.7.0" match="compatible"/>
-      <import plugin="org.eclipse.papyrus.infra.gmfdiag.dnd" version="0.10.0" match="compatible"/>
-      <import plugin="org.eclipse.osgi"/>
+      <import plugin="org.eclipse.wst.xsd.ui" version="1.2.0" match="compatible"/>
    </requires>
 
    <plugin
