@@ -9,7 +9,7 @@ Comment:${comment}
 </body>
     </ownedComment>
     <packageImport xmi:type="uml:PackageImport" xmi:id="_OcSGYM6BEeKCzt4Pk4Naug">
-      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/XMLPrimitiveTypes.library.uml#_0"/>
+      <importedPackage xmi:type="uml:Model" href="http://www.omg.org/spec/NIEM-UML/20120501/XmlPrimitiveTypes#XMLPrimitiveTypes"/>
     </packageImport>
     <packagedElement xmi:type="uml:Package" xmi:id="_17_0_3_7b3022e_1329450445274_400438_1659" name="${model_name}PIM">
       <packagedElement xmi:type="uml:Package" xmi:id="_17_0_3_7b3022e_1329450471291_982463_1660" name="${model_name}NIEMCoreSubset">
@@ -29,12 +29,21 @@ Comment:${comment}
         <packagedElement xmi:type="uml:Usage" xmi:id="_17_0_3_7b3022e_1331504317842_538549_22394" client="_17_0_3_7b3022e_1329514607499_935077_12500" supplier="_17_0_3_7b3022e_1329453270363_60558_13258"/>
       </packagedElement>
       <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_17_0_1_2_24a0131_1335266301240_27012_11963">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_73UqEI-NEeKWqrTisKkBnA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_Common_Profile-ePackage"/>
+        </eAnnotations>
         <appliedProfile xmi:type="uml:Profile" href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_Common_Profile" />
       </profileApplication>
       <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_17_0_1_2_24a0131_1335266301869_193577_11964">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_73VRII-NEeKWqrTisKkBnA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_PIM_Profile-ePackage"/>
+        </eAnnotations>
         <appliedProfile xmi:type="uml:Profile" href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_PIM_Profile" />
       </profileApplication>
       <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_7aMnoLFXEeKdh9PEkZ3oGA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_7aWYoLFXEeKdh9PEkZ3oGA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_PSM_Profile-ePackage"/>
+        </eAnnotations>
         <appliedProfile xmi:type="uml:Profile" href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_PSM_Profile" />
       </profileApplication>
     </packagedElement>
@@ -43,6 +52,9 @@ Comment:${comment}
         <elementImport xmi:type="uml:ElementImport" xmi:id="_17_0_1_2_7b3022e_1336669998542_738711_13237" importedElement="_17_0_3_7b3022e_1329514607499_935077_12500"/>
       </packagedElement>
       <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_17_0_1_2_24a0131_1335266231863_979480_11962">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__xeygI-NEeKWqrTisKkBnA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-Model_Package_Description_Profile-ePackage"/>
+        </eAnnotations>
         <appliedProfile xmi:type="uml:Profile" href="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-Model_Package_Description_Profile" />
       </profileApplication>
     </packagedElement>

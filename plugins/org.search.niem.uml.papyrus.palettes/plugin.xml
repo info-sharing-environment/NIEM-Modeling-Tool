@@ -3,7 +3,7 @@
 <plugin>
     <extension point="org.eclipse.papyrus.uml.extensionpoints.UMLProfile">
         <profile description="NIEM UML Profile" iconpath="icons/full/obj16/niem_profile.png" name="NIEM_UML_Profile"
-            path="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile" provider="niem.gov">
+            path="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile#NIEM_UML_Profile-NIEM_UML_Profile" provider="niem.gov">
         </profile>
     </extension>
     <extension point="org.eclipse.papyrus.uml.extensionpoints.UMLLibrary">

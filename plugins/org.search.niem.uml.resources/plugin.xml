@@ -28,10 +28,6 @@
       <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_PIM_Profile" target="pathmap://NIEM_UML/NIEM-UML-Profile.xmi#NIEM_UML_Profile-NIEM_PIM_Profile">
       </mapping>
    </extension>
-   <extension point="org.eclipse.emf.ecore.uri_mapping">
-      <mapping source="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_UML_Profile" target="pathmap://NIEM_UML/NIEM-UML-Profile.xmi#NIEM_UML_Profile-NIEM_UML_Profile">
-      </mapping>
-   </extension>
    <extension point="org.eclipse.uml2.uml.dynamic_package">
       <profile location="pathmap://NIEM_UML/NIEM-UML-Profile.xmi#NIEM_UML_Profile-NIEM_Common_Profile" uri="http://www.omg.org/spec/NIEM-UML/20120501/NIEM_Common_Profile">
       </profile>

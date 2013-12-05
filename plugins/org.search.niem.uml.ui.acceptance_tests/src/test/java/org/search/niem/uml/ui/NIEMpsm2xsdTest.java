@@ -10,6 +10,7 @@
  */
 package org.search.niem.uml.ui;
 
+import static java.util.Arrays.asList;
 import static org.junit.Assert.assertThat;
 import static org.search.niem.uml.qvt.ui.Activator.NIEM_PIM_2_PSM_ID;
 import static org.search.niem.uml.qvt.ui.Activator.NIEM_PSM_2_XSD_ID;
@@ -31,6 +32,17 @@ public class NIEMpsm2xsdTest {
     @Rule
     public final CreatesAnExampleProject projectProvider = new CreatesAnExampleProject();
 
+    private static final Iterable<String> EXPECTED_FILES = asList(
+            "PetAdoption/PetAdoption/XMLschemas/exchange/PetAdoptionExchange.xsd",
+            "PetAdoption/PetAdoption/XMLschemas/extension/PetAdoptionExtension.xsd",
+            "PetAdoption/PetAdoption/XMLschemas/subset/niem/niem-core/2.0/PetAdoptionNIEMCoreSubset.xsd",
+            "PetAdoption/PetAdoption/XMLschemas/subset/2.0/fips_10-4.xsd",
+            "PetAdoption/PetAdoption/XMLschemas/subset/2.0/iso_3166.xsd",
+            "PetAdoption/PetAdoption/XMLschemas/appinfo/2.0/appinfo.xsd",
+            "PetAdoption/PetAdoption/XMLschemas/appinfo/2.1/appinfo.xsd",
+            "PetAdoption/PetAdoption/XMLschemas/proxy/xsd/2.0/xsd.xsd",
+            "PetAdoption/PetAdoption/XMLschemas/structures/2.0/structures.xsd");
+
     @Test
     public void can_generate_xsds_from_a_psm() throws CoreException {
         final IProject theProject = projectProvider.get();
@@ -40,12 +52,8 @@ public class NIEMpsm2xsdTest {
         run_the_command(NIEM_PIM_2_PSM_ID);
         run_the_command(NIEM_PSM_2_XSD_ID);
 
-        assertThat(theProject.getFile("PetAdoption/PetAdoption/PetAdoptionExchange.xsd"), exists());
-        assertThat(theProject.getFile("PetAdoption/PetAdoption/PetAdoptionExtension.xsd"), exists());
-        assertThat(theProject.getFile("PetAdoption/PetAdoption/PetAdoptionNIEMCoreSubset.xsd"), exists());
-        assertThat(theProject.getFile("PetAdoption/PetAdoption/XMLschemas/appinfo/2.0/appinfo.xsd"), exists());
-        assertThat(theProject.getFile("PetAdoption/PetAdoption/XMLschemas/appinfo/2.1/appinfo.xsd"), exists());
-        assertThat(theProject.getFile("PetAdoption/PetAdoption/XMLschemas/proxy/xsd/2.0/xsd.xsd"), exists());
-        assertThat(theProject.getFile("PetAdoption/PetAdoption/XMLschemas/structures/2.0/structures.xsd"), exists());
+        for (final String file : EXPECTED_FILES) {
+            assertThat(theProject.getFile(file), exists());
+        }
     }
 }

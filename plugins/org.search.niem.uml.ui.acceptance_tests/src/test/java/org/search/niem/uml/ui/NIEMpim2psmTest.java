@@ -43,7 +43,7 @@ public class NIEMpim2psmTest {
 
         run_the_command(NIEM_PIM_2_PSM_ID);
 
-        final Package thePSM = get_the_root_model(theFile).getNestedPackage("PSM").getNestedPackage("PetAdoptionIEPD");
+        final Package thePSM = get_the_root_model(theFile).getNestedPackage("PSM").getNestedPackage("example");
 
         assertThat(thePSM, has_applied_profile(NIEM_Common_Profile));
         assertThat(thePSM, has_applied_profile(NIEM_PSM_Profile));
