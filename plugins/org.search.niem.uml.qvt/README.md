@@ -144,7 +144,9 @@ mapping UML::Property::XSDParticle(inout xsdContainer:XSD::XSDConcreteComponent)
         {
             init{}
             psmOwner.content:=result;   
-            self.map NIEMSimpleObjectAttributeGroup(psmOwner);
+            if(self.isPsmComplexTypeContentSimpleTypeDefinition())then{
+               self.map NIEMSimpleObjectAttributeGroup(psmOwner);
+            } endif;
         }
     to
         mapping UML::Classifier::NIEMComplexTypeContentSimpleTypeDefinition(inout psmOwner:XSD::XSDComplexTypeDefinition):XSD::XSDSimpleTypeDefinition@xsd
@@ -154,7 +156,7 @@ mapping UML::Property::XSDParticle(inout xsdContainer:XSD::XSDConcreteComponent)
         {
             init{}
             psmOwner.content:=result;
-            if(not(self.simpleContent()->exists(c|c.isXmlPrimitive()))) then {
+            if(self.isPsmComplexTypeContentSimpleTypeDefinition() and not(self.simpleContent()->exists(c|c.isXmlPrimitive() and not(c.getUmlProxySchemaType().oclIsUndefined()))))then{
                self.map NIEMSimpleObjectAttributeGroup(psmOwner);
             } endif;
         }

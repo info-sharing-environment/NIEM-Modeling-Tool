@@ -779,7 +779,7 @@ mapping UML::Classifier::NIEMComplexTypeContentSimpleTypeDefinition(inout psmOwn
 {
 	init{}
 	psmOwner.content:=result;
-	if(self.isPsmComplexTypeContentSimpleTypeDefinition())then{
+	if(self.isPsmComplexTypeContentSimpleTypeDefinition() and not(self.simpleContent()->exists(c|c.isXmlPrimitive() and not(c.getUmlProxySchemaType().oclIsUndefined()))))then{
 	self.map NIEMSimpleObjectAttributeGroup(psmOwner);
 	}endif;
 }
