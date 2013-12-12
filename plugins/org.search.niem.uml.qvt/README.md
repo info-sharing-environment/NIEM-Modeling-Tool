@@ -139,8 +139,9 @@ mapping UML::Property::XSDParticle(inout xsdContainer:XSD::XSDConcreteComponent)
 * Because of a bug where complex types of simple content (e.g., nc:TextType) are not being emitted properly as XSDs, changed the following in NIEMpsm2xsd.qvto:
         mapping UML::Classifier::NIEMComplexTypeContentSimpleTypeDefinition(inout psmOwner:XSD::XSDComplexTypeDefinition):XSD::XSDSimpleTypeDefinition@xsd
         //  inherits UML::Classifier::XSDTypeDefinition
-            when{self.isPsmComplexTypeContentSimpleTypeDefinition()}
-            
+            when{self.isPsmComplexTypeContentSimpleTypeDefinition()
+                or self.inheritsPimSimpleTypeDefinition()
+            }
         {
             init{}
             psmOwner.content:=result;   
@@ -151,8 +152,9 @@ mapping UML::Property::XSDParticle(inout xsdContainer:XSD::XSDConcreteComponent)
     to
         mapping UML::Classifier::NIEMComplexTypeContentSimpleTypeDefinition(inout psmOwner:XSD::XSDComplexTypeDefinition):XSD::XSDSimpleTypeDefinition@xsd
         //  inherits UML::Classifier::XSDTypeDefinition
-            when{self.isPsmComplexTypeContentSimpleTypeDefinition()}
-            
+            when{self.isPsmComplexTypeContentSimpleTypeDefinition()
+                or self.inheritsPimSimpleTypeDefinition()
+            }
         {
             init{}
             psmOwner.content:=result;

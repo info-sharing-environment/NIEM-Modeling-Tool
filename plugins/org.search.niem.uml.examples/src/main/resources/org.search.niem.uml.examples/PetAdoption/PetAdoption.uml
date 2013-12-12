@@ -446,13 +446,13 @@
 											</ownedComment>
 										</ownedAttribute>
 										<ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_2_2_7b3022e_1359935253105_241162_22875" name="IdentificationJurisdictionFIPS10-4Code" aggregation="composite" type="_17_0_2_2_7b3022e_1359935253121_277813_22896">
-											<subsettedProperty xmi:idref="_17_0_2_2_7b3022e_1359738153209_929299_14869"/>
+											<subsettedProperty xmi:idref="_17_0_2_2_7b3022e_1359738153215_138702_14876"/>
 											<ownedComment xmi:type="uml:Comment" xmi:id="_17_0_2_2_7b3022e_1359935253106_710161_22876" body="An area, region, or unit in which a unique identification is issued.">
 												<annotatedElement xmi:idref="_17_0_2_2_7b3022e_1359935253105_241162_22875"/>
 											</ownedComment>
 										</ownedAttribute>
 										<ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_2_2_7b3022e_1359935253416_122178_23434" name="IdentificationJurisdictionISO3166Alpha3Code" aggregation="composite" type="_17_0_2_2_7b3022e_1359935253424_858477_23441">
-											<subsettedProperty xmi:idref="_17_0_2_2_7b3022e_1359738153209_929299_14869"/>
+											<subsettedProperty xmi:idref="_17_0_2_2_7b3022e_1359738153215_138702_14876"/>
 											<ownedComment xmi:type="uml:Comment" xmi:id="_17_0_2_2_7b3022e_1359935253416_237694_23435" body="An area, region, or unit in which a unique identification is issued.">
 												<annotatedElement xmi:idref="_17_0_2_2_7b3022e_1359935253416_122178_23434"/>
 											</ownedComment>
@@ -794,7 +794,7 @@
 											</ownedComment>
 										</ownedAttribute>
 										<ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_2_2_7b3022e_1359845003961_696540_19677" name="ActivityDateRange" aggregation="composite" type="_17_0_2_2_7b3022e_1359845003971_200925_19684">
-											<subsettedProperty xmi:idref="_17_0_2_2_7b3022e_1359844123560_399225_19533"/>
+											<subsettedProperty xmi:idref="_17_0_2_2_7b3022e_1359844123566_938835_19540"/>
 											<ownedComment xmi:type="uml:Comment" xmi:id="_17_0_2_2_7b3022e_1359845003962_385975_19678" body="A period of time over which an activity occurs.">
 												<annotatedElement xmi:idref="_17_0_2_2_7b3022e_1359845003961_696540_19677"/>
 											</ownedComment>
