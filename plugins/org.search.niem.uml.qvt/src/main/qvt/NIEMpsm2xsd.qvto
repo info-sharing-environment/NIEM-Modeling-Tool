@@ -401,6 +401,9 @@ mapping UML::Class::ObjectType_datatypeSimpleContent(inout psmOwner:XSD::XSDSche
                 derivationMethod:=XSD::XSDDerivationMethod::extension;
 				var baseType:XSD::XSDTypeDefinition=general.toPsmClassifier();
 				baseType.mapBaseTypeDefinition(result);
+				// base proxy issue: if base is in proxy schema, set appinfo:Base to the proxy type (instead of structures:Object)
+                var proxyClassifier:XSD::XSDTypeDefinition=general.getUmlProxySchemaType();
+                if(not(proxyClassifier.oclIsUndefined()))then{result.appInfoBase(proxyClassifier);}endif;
 			}endif;
 			};
 }

@@ -305,3 +305,20 @@ to
 * Needed to change NIEMplatformBinding.qvto query UML::Element::getNearestNIEMSchemaPackage():UML::Package{ to check for NIEMInformationModelStereotype application as well as NIEMSchemaStereotype application
 
 * Changed references from "isStereotypeApplied" to "IsStereotypeApplied" for consistency
+
+* In order to fix a problem where the NIEMpsm2xsd.qvto transformation produces an appinfo:Base of structures:Object when the base type is in the NIEM proxy schema when it should be producing an appinfo:Base with a target namespace of "http://niem.gov/niem/proxy/xsd/2.0", changed the else clause in the NIEMpsm2xsd.qvto mapping UML::Class::ObjectType_datatypeSimpleContent from
+        }else{          
+            derivationMethod:=XSD::XSDDerivationMethod::extension;
+            var baseType:XSD::XSDTypeDefinition=general.toPsmClassifier();
+            baseType.mapBaseTypeDefinition(result);
+        }endif;
+  to
+         
+        }else{          
+            derivationMethod:=XSD::XSDDerivationMethod::extension;
+            var baseType:XSD::XSDTypeDefinition=general.toPsmClassifier();
+            baseType.mapBaseTypeDefinition(result);
+            // base proxy issue: if base is in proxy schema, set appinfo:Base to the proxy type (instead of structures:Object)
+            var proxyClassifier:XSD::XSDTypeDefinition=general.getUmlProxySchemaType();
+            if(not(proxyClassifier.oclIsUndefined()))then{result.appInfoBase(proxyClassifier);}endif;
+        }endif;
