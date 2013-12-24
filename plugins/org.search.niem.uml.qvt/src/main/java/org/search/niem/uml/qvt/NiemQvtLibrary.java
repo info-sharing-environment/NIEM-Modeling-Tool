@@ -146,7 +146,15 @@ public class NiemQvtLibrary {
 
     @Operation(contextual = true, kind = Operation.Kind.QUERY)
     public static EObject GetStereotypeApplication(final Element self, final Stereotype stereotype) {
-        return self.getStereotypeApplication(stereotype);
+        final EObject theStereotypeApplication = self.getStereotypeApplication(stereotype);
+        if (theStereotypeApplication != null) {
+            return theStereotypeApplication;
+        }
+        final List<Stereotype> theAppliedSubstereotypes = self.getAppliedSubstereotypes(stereotype);
+        if (!theAppliedSubstereotypes.isEmpty()) {
+            return self.getStereotypeApplication(theAppliedSubstereotypes.get(0));
+        }
+        return null;
     }
 
     /*
