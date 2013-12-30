@@ -12,6 +12,9 @@ package org.search.niem.uml.papyrus.editors;
 
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.papyrus.uml.diagram.clazz.part.UMLDiagramEditorPlugin;
+import org.osgi.framework.BundleContext;
+import org.search.niem.uml.papyrus.diagram.clazz.providers.ElementInitializers;
 
 public class Activator extends EMFPlugin {
 
@@ -40,6 +43,13 @@ public class Activator extends EMFPlugin {
             super();
 
             plugin = this;
+        }
+
+        @Override
+        public void start(final BundleContext context) throws Exception {
+            super.start(context);
+
+            UMLDiagramEditorPlugin.getInstance().setElementInitializers(new ElementInitializers());
         }
     }
 }
