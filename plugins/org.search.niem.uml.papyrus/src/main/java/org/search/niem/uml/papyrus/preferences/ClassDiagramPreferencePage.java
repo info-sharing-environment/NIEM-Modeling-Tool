@@ -14,6 +14,7 @@ import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_CLAS
 import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_CLASS_DIAGRAM_COLUMN_WIDTH;
 import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_CLASS_DIAGRAM_ELEMENT_WIDTH;
 import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_CLASS_DIAGRAM_VERTICAL_PADDING;
+import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_INITIAL_PROPERTY_AGGREGATION;
 import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_NIEM_REFERENCE_ELEMENT_ILLEGAL_COLOR;
 import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_NIEM_REFERENCE_ELEMENT_ILLEGAL_FONT;
 import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_NIEM_REFERENCE_ELEMENT_LEGAL_COLOR;
@@ -23,11 +24,13 @@ import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_SYNC
 
 import org.eclipse.jface.preference.BooleanFieldEditor;
 import org.eclipse.jface.preference.ColorFieldEditor;
+import org.eclipse.jface.preference.ComboFieldEditor;
 import org.eclipse.jface.preference.FieldEditorPreferencePage;
 import org.eclipse.jface.preference.FontFieldEditor;
 import org.eclipse.jface.preference.IntegerFieldEditor;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
+import org.eclipse.uml2.uml.AggregationKind;
 import org.search.niem.uml.papyrus.Activator;
 
 public class ClassDiagramPreferencePage extends FieldEditorPreferencePage implements IWorkbenchPreferencePage {
@@ -45,6 +48,12 @@ public class ClassDiagramPreferencePage extends FieldEditorPreferencePage implem
                 getFieldEditorParent()));
         addField(new BooleanFieldEditor(P_RESTRICT_NIEM_SUBSET_CONTENT,
                 Activator.INSTANCE.getString("_UI_ClassDiagramPreferencePage_restrictNiemSubsetContent"),
+                getFieldEditorParent()));
+        addField(new ComboFieldEditor(P_INITIAL_PROPERTY_AGGREGATION,
+                Activator.INSTANCE.getString("_UI_ClassDiagramPreferencePage_initialPropertyAggregation"), new String[][] {
+                        { AggregationKind.NONE_LITERAL.getName(), AggregationKind.NONE_LITERAL.getName() },
+                        { AggregationKind.SHARED_LITERAL.getName(), AggregationKind.SHARED_LITERAL.getName() },
+                        { AggregationKind.COMPOSITE_LITERAL.getName(), AggregationKind.COMPOSITE_LITERAL.getName() } },
                 getFieldEditorParent()));
         addField(new ColorFieldEditor(P_NIEM_REFERENCE_ELEMENT_ILLEGAL_COLOR,
                 Activator.INSTANCE.getString("_UI_ClassDiagramPreferencePage_niemReferenceElementIllegalColor"),

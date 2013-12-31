@@ -36,6 +36,7 @@ import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.preference.PreferenceConverter;
 import org.eclipse.papyrus.uml.diagram.wizards.pages.NewModelFilePage;
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.uml2.uml.AggregationKind;
 import org.search.niem.uml.papyrus.Activator;
 
 public class PreferenceInitializer extends AbstractPreferenceInitializer {
@@ -58,6 +59,8 @@ public class PreferenceInitializer extends AbstractPreferenceInitializer {
 
         store.setDefault(P_SYNC_CLASS_DIAGRAMS_WITH_UML, true);
         store.setDefault(P_RESTRICT_NIEM_SUBSET_CONTENT, true);
+        NIEMPreferenceConverter.setDefault(store, PreferenceConstants.P_INITIAL_PROPERTY_AGGREGATION,
+                AggregationKind.COMPOSITE_LITERAL);
         PreferenceConverter.setDefault(store, P_NIEM_REFERENCE_ELEMENT_ILLEGAL_COLOR, new RGB(0xFF, 0, 0));
         store.setDefault(P_CLASS_DIAGRAM_COLUMNS, 3);
         store.setDefault(P_CLASS_DIAGRAM_COLUMN_WIDTH, 264);

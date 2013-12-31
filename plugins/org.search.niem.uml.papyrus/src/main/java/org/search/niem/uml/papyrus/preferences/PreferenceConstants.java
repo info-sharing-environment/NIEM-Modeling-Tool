@@ -31,6 +31,7 @@ public interface PreferenceConstants {
 
     String P_SYNC_CLASS_DIAGRAMS_WITH_UML = "synchClassDiagramsWithUML";
     String P_RESTRICT_NIEM_SUBSET_CONTENT = "restrictNiemSubsetContent";
+    String P_INITIAL_PROPERTY_AGGREGATION = "initialPropertyAggregation";
     String P_NIEM_REFERENCE_ELEMENT_LEGAL_FONT = "niemReferenceElementLegalFont";
     String P_NIEM_REFERENCE_ELEMENT_LEGAL_COLOR = "niemReferenceElementLegalColor";
     String P_NIEM_REFERENCE_ELEMENT_ILLEGAL_FONT = "niemReferenceElementIllegalFont";
