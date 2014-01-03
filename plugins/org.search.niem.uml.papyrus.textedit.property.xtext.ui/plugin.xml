@@ -80,6 +80,7 @@
     <extension
             point="org.eclipse.ui.preferencePages">
         <page
+            category="org.eclipse.papyrus.embeddededitors"
             class="org.search.niem.uml.papyrus.textedit.property.xtext.ui.NIEMUmlPropertyExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
             id="org.search.niem.uml.papyrus.textedit.property.xtext.NIEMUmlProperty"
             name="NIEMUmlProperty">
@@ -225,6 +226,7 @@
 
 
     <!-- marker definitions for org.search.niem.uml.papyrus.textedit.property.xtext.NIEMUmlProperty -->
+    <!--
     <extension
             id="niemumlproperty.check.fast"
             name="NIEMUmlProperty Problem"
@@ -277,6 +279,7 @@
 	        <filter name="projectNature" value="org.eclipse.xtext.ui.shared.xtextNature"/>
         </page>
     </extension>
+    -->
 
 	<!-- Quick Outline -->
 	<extension
@@ -340,6 +343,7 @@
         </markerResolutionGenerator>
     </extension>
    	<!-- Rename Refactoring -->
+   	<!--
 	<extension point="org.eclipse.ui.handlers">
 		<handler 
 			class="org.search.niem.uml.papyrus.textedit.property.xtext.ui.NIEMUmlPropertyExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.DefaultRenameElementHandler"
@@ -392,6 +396,7 @@
             extensions="niemumlproperty">
     </provider>
   </extension>
+    -->
  
    <!-- MANUAL EXTENSION POINT-->
    <extension
