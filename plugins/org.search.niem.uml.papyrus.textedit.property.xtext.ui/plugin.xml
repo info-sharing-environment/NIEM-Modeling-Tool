@@ -226,7 +226,6 @@
 
 
     <!-- marker definitions for org.search.niem.uml.papyrus.textedit.property.xtext.NIEMUmlProperty -->
-    <!--
     <extension
             id="niemumlproperty.check.fast"
             name="NIEMUmlProperty Problem"
@@ -249,6 +248,7 @@
         <persistent value="true"/>
     </extension>
 
+   <!--
    <extension
          point="org.eclipse.xtext.builder.participant">
       <participant
