@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.search.niem.uml.papyrus.textedit.property.xtext/src/main/src-gen"
+    editDirectory="/org.search.niem.uml.papyrus.textedit.property.xtext.edit/src/main/java"
+    editorDirectory="/org.search.niem.uml.papyrus.textedit.property.xtext.editor/src/main/java"
+    modelPluginID="org.search.niem.uml.papyrus.textedit.property.xtext" forceOverwrite="true"
+    modelName="NIEMUmlProperty" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="org.search.niem.uml.papyrus.textedit.property.xtext.edit"
+    editorPluginID="org.search.niem.uml.papyrus.textedit.property.xtext.editor" runtimeVersion="2.9"
+    usedGenPackages="../../src/main/java/org/search/niem/uml/papyrus/textedit/property/xtext/UmlProperty.genmodel#//umlProperty">
+  <genPackages prefix="NiemUmlProperty" basePackage="org.search.niem.uml.papyrus.textedit.property.xtext"
+      resource="XML" disposableProviderFactory="true" fileExtensions="niemumlproperty"
+      ecorePackage="NIEMUmlProperty.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="NIEMUmlProperty.ecore#//AggregationKind">
+      <genEnumLiterals ecoreEnumLiteral="NIEMUmlProperty.ecore#//AggregationKind/none"/>
+      <genEnumLiterals ecoreEnumLiteral="NIEMUmlProperty.ecore#//AggregationKind/shared"/>
+      <genEnumLiterals ecoreEnumLiteral="NIEMUmlProperty.ecore#//AggregationKind/composite"/>
+    </genEnums>
+    <genClasses ecoreClass="NIEMUmlProperty.ecore#//PropertyRule">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference NIEMUmlProperty.ecore#//PropertyRule/aggregation"/>
+    </genClasses>
+    <genClasses ecoreClass="NIEMUmlProperty.ecore#//AggregationRule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute NIEMUmlProperty.ecore#//AggregationRule/aggregation"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -63,6 +63,8 @@
     <module>org.search.niem.uml.merge</module>
     <module>org.search.niem.uml.papyrus.views.properties</module>
     <module>org.search.niem.uml.papyrus.palettes</module>
+    <module>org.search.niem.uml.papyrus.textedit.property.xtext</module>
+    <module>org.search.niem.uml.papyrus.textedit.property.xtext.ui</module>
     <module>org.search.niem.uml.papyrus.editors</module>
     <module>org.search.niem.uml.evl</module>
     <module>org.search.niem.uml.ui</module>

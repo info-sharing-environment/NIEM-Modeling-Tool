@@ -9,7 +9,7 @@ Bundle-Activator: org.search.niem.uml.qvt.ui.Activator$Implementation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.expressions,
  org.eclipse.core.resources,
- org.eclipse.ui.ide,
+ org.eclipse.ui.ide;bundle-version="[3.5.0,4.0.0)",
  org.eclipse.emf.common.ui;bundle-version="[2.8.0,3.0.0)",
  org.eclipse.emf.transaction;bundle-version="[1.4.0,2.0.0)",
  org.eclipse.uml2.uml;bundle-version="[4.0.0,5.0.0)",

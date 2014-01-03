@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="niemUmlProperty" nsURI="http://search.org/niem/uml/papyrus/textedit/property/xtext/NiemUmlProperty"
+    nsPrefix="niemUmlProperty">
+  <eClassifiers xsi:type="ecore:EClass" name="NiemPropertyRule" eSuperTypes="./UmlProperty.ecore#//PropertyRule">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="aggregation" eType="#//AggregationKind"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AggregationKind">
+    <eLiterals name="none"/>
+    <eLiterals name="shared" value="1"/>
+    <eLiterals name="composite" value="2"/>
+  </eClassifiers>
+</ecore:EPackage>

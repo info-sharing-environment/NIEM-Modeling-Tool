@@ -311,4 +311,32 @@
          version="0.0.0"
          unpack="false"/>
          
+   <plugin
+         id="org.search.niem.uml.papyrus.textedit.property.xtext"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+ 
+   <plugin
+         id="org.search.niem.uml.papyrus.textedit.property.xtext.source"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.search.niem.uml.papyrus.textedit.property.xtext.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.search.niem.uml.papyrus.textedit.property.xtext.ui.source"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+         
 </feature>

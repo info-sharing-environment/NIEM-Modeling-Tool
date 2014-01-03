@@ -4,8 +4,9 @@
     <extension
           point="org.eclipse.papyrus.extensionpoints.editors.DirectEditor">
        <DirectEditor
+             contributor="org.search"
              icon="platform:/plugin/org.eclipse.uml2.uml.edit/icons/full/obj16/Class.gif"
-             language="Class Name Editor"
+             language="NIEM Class Name Editor"
              objectToEdit="org.eclipse.uml2.uml.Class">
           <popupeditor
                 editorConfiguration="org.search.niem.uml.papyrus.editors.ClassNamePopupEditorConfiguration">
@@ -15,8 +16,9 @@
           </Priority>
        </DirectEditor>
        <DirectEditor
+             contributor="org.search"
              icon="platform:/plugin/org.eclipse.uml2.uml.edit/icons/full/obj16/Enumeration.gif"
-             language="Enumeration Name Editor"
+             language="NIEM Enumeration Name Editor"
              objectToEdit="org.eclipse.uml2.uml.Enumeration">
           <popupeditor
                 editorConfiguration="org.search.niem.uml.papyrus.editors.EnumerationNamePopupEditorConfiguration">
@@ -26,8 +28,9 @@
           </Priority>
        </DirectEditor>
        <DirectEditor
+             contributor="org.search"
              icon="platform:/plugin/org.eclipse.uml2.uml.edit/icons/full/obj16/PrimitiveType.gif"
-             language="PrimitiveType Name Editor"
+             language="NIEM PrimitiveType Name Editor"
              objectToEdit="org.eclipse.uml2.uml.PrimitiveType">
           <popupeditor
                 editorConfiguration="org.search.niem.uml.papyrus.editors.PrimitiveTypeNamePopupEditorConfiguration">
@@ -37,8 +40,9 @@
           </Priority>
        </DirectEditor>
        <DirectEditor
+             contributor="org.search"
              icon="platform:/plugin/org.eclipse.uml2.uml.edit/icons/full/obj16/DataType.gif"
-             language="DataType Name Editor"
+             language="NIEM DataType Name Editor"
              objectToEdit="org.eclipse.uml2.uml.DataType">
           <popupeditor
                 editorConfiguration="org.search.niem.uml.papyrus.editors.DataTypeNamePopupEditorConfiguration">

@@ -1,0 +1,22 @@
+grammar org.search.niem.uml.papyrus.textedit.property.xtext.NIEMUmlProperty with org.eclipse.papyrus.uml.textedit.property.xtext.UmlProperty
+
+import "http://www.eclipse.org/papyrus/uml/textedit/property/xtext/UmlProperty" as umlProperty
+
+generate niemUmlProperty "http://search.org/niem/uml/papyrus/textedit/property/xtext/NiemUmlProperty"
+
+PropertyRule:
+    visibility = VisibilityKind
+    (isDerived = "/")? 
+    name=ID ':' ((type=TypeRule) | "<Undefined>")
+    (multiplicity = MultiplicityRule) ? 
+    (modifiers = ModifiersRule) ?  
+    (aggregation = AggregationRule) ? 
+    (default = DefaultValueRule) ? ;
+
+enum AggregationKind:
+    none = "none"
+    | shared = "shared"
+    | composite = "composite";
+
+AggregationRule:
+    '@' aggregation = AggregationKind ;

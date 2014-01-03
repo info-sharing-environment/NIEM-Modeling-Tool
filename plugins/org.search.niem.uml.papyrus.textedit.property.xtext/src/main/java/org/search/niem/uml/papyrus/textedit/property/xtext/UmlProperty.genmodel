@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.papyrus.uml.textedit.property.xtext/src-gen"
+    editDirectory="/org.eclipse.papyrus.uml.textedit.property.xtext.edit/src" editorDirectory="/org.eclipse.papyrus.uml.textedit.property.xtext.editor/src"
+    modelPluginID="org.eclipse.papyrus.uml.textedit.property.xtext" forceOverwrite="true"
+    modelName="UmlProperty" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="org.eclipse.papyrus.uml.textedit.property.xtext.edit"
+    editorPluginID="org.eclipse.papyrus.uml.textedit.property.xtext.editor" runtimeVersion="2.9"
+    usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore platform:/plugin/org.eclipse.uml2.uml/model/UML.genmodel#//uml">
+  <genPackages prefix="UmlProperty" basePackage="org.eclipse.papyrus.uml.textedit.property.xtext"
+      resource="XML" disposableProviderFactory="true" ecorePackage="UmlProperty.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="UmlProperty.ecore#//VisibilityKind">
+      <genEnumLiterals ecoreEnumLiteral="UmlProperty.ecore#//VisibilityKind/public"/>
+      <genEnumLiterals ecoreEnumLiteral="UmlProperty.ecore#//VisibilityKind/private"/>
+      <genEnumLiterals ecoreEnumLiteral="UmlProperty.ecore#//VisibilityKind/protected"/>
+      <genEnumLiterals ecoreEnumLiteral="UmlProperty.ecore#//VisibilityKind/package"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="UmlProperty.ecore#//ModifierKind">
+      <genEnumLiterals ecoreEnumLiteral="UmlProperty.ecore#//ModifierKind/readOnly"/>
+      <genEnumLiterals ecoreEnumLiteral="UmlProperty.ecore#//ModifierKind/union"/>
+      <genEnumLiterals ecoreEnumLiteral="UmlProperty.ecore#//ModifierKind/ordered"/>
+      <genEnumLiterals ecoreEnumLiteral="UmlProperty.ecore#//ModifierKind/unique"/>
+    </genEnums>
+    <genClasses ecoreClass="UmlProperty.ecore#//PropertyRule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UmlProperty.ecore#//PropertyRule/visibility"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UmlProperty.ecore#//PropertyRule/isDerived"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UmlProperty.ecore#//PropertyRule/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UmlProperty.ecore#//PropertyRule/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UmlProperty.ecore#//PropertyRule/multiplicity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UmlProperty.ecore#//PropertyRule/modifiers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UmlProperty.ecore#//PropertyRule/default"/>
+    </genClasses>
+    <genClasses ecoreClass="UmlProperty.ecore#//TypeRule">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UmlProperty.ecore#//TypeRule/path"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference UmlProperty.ecore#//TypeRule/type"/>
+    </genClasses>
+    <genClasses ecoreClass="UmlProperty.ecore#//QualifiedName">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference UmlProperty.ecore#//QualifiedName/path"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UmlProperty.ecore#//QualifiedName/remaining"/>
+    </genClasses>
+    <genClasses ecoreClass="UmlProperty.ecore#//MultiplicityRule">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UmlProperty.ecore#//MultiplicityRule/bounds"/>
+    </genClasses>
+    <genClasses ecoreClass="UmlProperty.ecore#//BoundSpecification">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UmlProperty.ecore#//BoundSpecification/value"/>
+    </genClasses>
+    <genClasses ecoreClass="UmlProperty.ecore#//ModifiersRule">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UmlProperty.ecore#//ModifiersRule/values"/>
+    </genClasses>
+    <genClasses ecoreClass="UmlProperty.ecore#//ModifierSpecification">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UmlProperty.ecore#//ModifierSpecification/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UmlProperty.ecore#//ModifierSpecification/redefines"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference UmlProperty.ecore#//ModifierSpecification/subsets"/>
+    </genClasses>
+    <genClasses ecoreClass="UmlProperty.ecore#//RedefinesRule">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference UmlProperty.ecore#//RedefinesRule/property"/>
+    </genClasses>
+    <genClasses ecoreClass="UmlProperty.ecore#//SubsetsRule">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference UmlProperty.ecore#//SubsetsRule/property"/>
+    </genClasses>
+    <genClasses ecoreClass="UmlProperty.ecore#//DefaultValueRule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute UmlProperty.ecore#//DefaultValueRule/default"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
