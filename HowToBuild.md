@@ -4,7 +4,8 @@ How To Build the NIEM Modeling Tool from Source
 0. Install the latest versions of maven and git
 1. git clone https://github.com/info-sharing-environment/NIEM-Modeling-Tool.git
 2. cd NIEM-Modeling-Tool
-3. mvn clean verify
+3. Set your MAVEN_OPTS to "-Xms512m -Xmx1024m -XX:MaxPermSize=128m"
+4. mvn clean verify
 
 How To Import The NIEM Modeling Tool Into Eclipse
 =================================================
