@@ -107,7 +107,7 @@ public class NIEMXwtTabDescriptorProvider extends XWTTabDescriptorProvider {
             previousPart = part;
 
             final List<ITabDescriptor> descriptors = new LinkedList<ITabDescriptor>();
-            final Set<View> views = ConfigurationManager.instance.constraintEngine.getViews(selection);
+            final Set<View> views = ConfigurationManager.getInstance().getConstraintEngine().getViews(selection);
             if (!views.isEmpty()) {
                 descriptors.addAll(getDisplay(part).getTabDescriptors(views));
             }

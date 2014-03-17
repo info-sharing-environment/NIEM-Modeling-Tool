@@ -25,7 +25,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.xtext.util;bundle-version="[2.4.0,3.0.0)",
  org.apache.commons.logging;bundle-version="[1.0.0,2.0.0)";resolution:=optional,
  org.antlr.runtime;bundle-version="[3.2.0,4.0.0)",
- org.eclipse.papyrus.uml.textedit.property.xtext;bundle-version="[0.10.0,1.0.0)";visibility:=reexport
+ org.eclipse.papyrus.uml.textedit.property.xtext;bundle-version="[0.10.2,1.0.0)";visibility:=reexport
 Import-Package: org.apache.log4j,
  org.eclipse.xtext.xbase.lib
 Export-Package: org.search.niem.uml.papyrus.textedit.property.xtext,
