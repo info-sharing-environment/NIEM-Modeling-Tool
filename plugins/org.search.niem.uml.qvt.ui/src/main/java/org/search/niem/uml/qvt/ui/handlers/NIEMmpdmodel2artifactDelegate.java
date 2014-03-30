@@ -279,11 +279,12 @@ final class NIEMmpdmodel2artifactDelegate extends NIEMpsm2xsdDelegate {
     }
 
     private void refresh() {
+        final URI targetFolder = targetFolder();
         Display.getDefault().asyncExec(new Runnable() {
             @Override
             public void run() {
                 try {
-                    toIFolder(targetFolder()).refreshLocal(DEPTH_INFINITE, new NullProgressMonitor());
+                    toIFolder(targetFolder).refreshLocal(DEPTH_INFINITE, new NullProgressMonitor());
                 } catch (final CoreException e) {
                     Activator.INSTANCE.log(e);
                 }
@@ -316,5 +317,11 @@ final class NIEMmpdmodel2artifactDelegate extends NIEMpsm2xsdDelegate {
             }
         }
         return theXmlSamples;
+    }
+
+    @Override
+    public void close() throws Exception {
+        theTargetContents = null;
+        super.close();
     }
 }

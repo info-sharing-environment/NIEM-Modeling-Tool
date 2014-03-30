@@ -258,7 +258,6 @@ to
 ** Put the line "pimNdrSchemaInstance.setFileTypeRelativePathName(self.relativePathName);" in the mapping CAT::FileType::FileType(inout pimPackage:UML::NamedElement,inout pimComponent:UML::Component):UML::Usage@pimUml
 * Needed to add a new query in the NIEMpim2psm.qvto called substringWithDefault to handle cases where substring was being called on a string and the result returned was oclUndefined; e.g., when toUnassociationName is called on 'AssociationType'. This problem exists in the queries toUntypedName, toUnaugmentationName, toUnmetadataName, toUnadapterName, toUnassociationName, toUnsimpleName, toUncodeName and toUncodesimpleName
 * Needed to change the adjustPropertyHolders helper function in the NIEMmpdartifact2model.qvto so that if an owned attributes of a PropertyHolder is not a source property, then it is removed from the PropertyHolder and if any property holders end up empty, then they are removed as well.
-* Needed to add a new check in the NIEMmpdartifact2model.qvto to ensure that only schema and schema set files get added to the PIM.
 * Needed to move the toRelativePathName() query from the NIEMmpdmodel2artifact.qvto to the NIEMplatformBinding.qvto so that it can be used by the NIEMpim2psm.qvto. The mapping UML::Package::NIEMNamespace and mapping UML::ElementImport::ModelPackageDescriptionFile in the NIEMpim2psm.qvto have been changed to set the relativePathName on the NIEMModelPackageDescriptionFileStereotype of UML Usages in the generated PSM because of error markers appearing in the problems view.
 * Since users can now add PropertyHolders to NIEM library subset, we need to make sure the comments for elements declared within classes get propagated up.
 ** In the NIEMpim2psm.qvto, modified the function helper  UML::Property::resolvePIMPropertyReference(psmContext:UML::Property,domainContext:UML::Package):UML::Property with a new else block:
@@ -322,3 +321,11 @@ to
             var proxyClassifier:XSD::XSDTypeDefinition=general.getUmlProxySchemaType();
             if(not(proxyClassifier.oclIsUndefined()))then{result.appInfoBase(proxyClassifier);}endif;
         }endif;
+
+* In the NIEMmpdartifact2model.qvto, the documentRoot property was not being set properly, even though it is referenced in the expandURI query function.
+
+* In the NIEMmpdartifact2model.qvto, calls to the setModelInformationDefaultPurpose helper function now pass the fileTypeNatureURI rather than the fileTypePurposeURI.
+
+* In the NIEMmpdartifact2model.qvto, the FileType mapping sets the MPD FileType PurposeCode for UML::Usages based on the Catalog FileType natureURI attribute rather than the purposeURI if the UML::Usage refers to an InformationModel.
+
+* In the NIEMpim2psm.qvto, added a collectMpdFiles helper function that looks for all UML::Usages in a Component or its sub-components that are stereotyped as MPD Files so that they can be mapped correctly from a PIM to a PSM.

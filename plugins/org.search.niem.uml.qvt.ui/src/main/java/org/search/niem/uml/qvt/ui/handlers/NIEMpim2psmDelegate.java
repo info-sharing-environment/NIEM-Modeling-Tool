@@ -49,6 +49,12 @@ final class NIEMpim2psmDelegate extends TransformDelegate {
         theSelectedResource.save(resourceSet.getLoadOptions());
     }
 
+    @Override
+    public void close() throws Exception {
+        niemUml = null;
+        super.close();
+    }
+
     private static Collection<EObject> filterDanglingStereotypeApplications(final Collection<EObject> toFilter) {
         final Collection<EObject> filtered = new ArrayList<>();
         for (final EObject e : toFilter) {

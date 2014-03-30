@@ -13,8 +13,6 @@ package org.search.niem.uml.qvt.ui.handlers;
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.core.runtime.IProgressMonitor;
-import org.eclipse.core.runtime.ISafeRunnable;
-import org.eclipse.jface.util.SafeRunnable;
 import org.eclipse.swt.widgets.Shell;
 import org.search.niem.uml.qvt.ui.Activator;
 
@@ -35,31 +33,23 @@ class ComposedTransformer implements Transformer {
 
     @Override
     public void runTransform(final Shell theShell, final IProgressMonitor monitor) throws InvocationTargetException {
+        final Exception es = new Exception("Errors closing transformer delegates.");
         for (final Transformer delegate : delegates) {
-            monitor.subTask(Activator.INSTANCE.getString("_UI_Transform_progress", new Object[] { delegate.name() }));
-            delegate.runTransform(theShell, monitor);
-            monitor.worked(1);
+            try (final Transformer d = delegate) {
+                monitor.subTask(Activator.INSTANCE.getString("_UI_Transform_progress", new Object[] { delegate.name() }));
+                delegate.runTransform(theShell, monitor);
+                monitor.worked(1);
+            } catch (final Exception e) {
+                es.addSuppressed(e);
+            }
+        }
+        if (es.getSuppressed().length > 0) {
+            throw new InvocationTargetException(es);
         }
     }
 
     @Override
     public void close() throws Exception {
-        final Exception e = new Exception("Errors closing transformer delegates.");
-        for (final Transformer delegate : delegates) {
-            SafeRunnable.run(new ISafeRunnable() {
-                @Override
-                public void run() throws Exception {
-                    delegate.close();
-                }
-
-                @Override
-                public void handleException(final Throwable t) {
-                    e.addSuppressed(t);
-                }
-            });
-        }
-        if (e.getSuppressed().length > 0) {
-            throw e;
-        }
+        // no-op by default
     }
 }

@@ -107,4 +107,12 @@ class NIEMpsm2xsdDelegate extends TransformDelegate {
     protected final URI targetFolder() {
         return targetFolder;
     }
+
+    @Override
+    public void close() throws Exception {
+        targetContents = null;
+        targetFolder = null;
+        infrastructureResources.clear();
+        super.close();
+    }
 }

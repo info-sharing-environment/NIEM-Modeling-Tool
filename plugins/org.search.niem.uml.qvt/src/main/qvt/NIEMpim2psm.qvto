@@ -405,9 +405,7 @@ mapping UML::Component::ModelPackageDescription(inout psmOwner:UML::Model,domain
 		isFirstComponent:=false;
 	}endif;
 	// map any explicit <<ModelPackageDefinitionFile>> Usages
-	self.clientDependency
-		->select(s|s.IsStereotypeApplied(NIEMModelPackageDescriptionFileStereotype)).oclAsType(Usage)
-		->forEach(mpdFile){
+	self.collectMpdFiles()->forEach(mpdFile){
 			mpdFile.supplier->select(p|p.oclIsKindOf(UML::Package)).oclAsType(UML::Package)
 			->forEach(pimPackage){
 				var psmPackage:UML::Package=pimPackage.getPsmPackage(pimPackage);
@@ -434,10 +432,7 @@ mapping UML::Component::ModelPackageDescription(inout psmOwner:UML::Model,domain
 	pimmpdStereotypeInstance.deepcloneStereotypeApplication(prompdStereotype,result);
 	// known filesets
 	
-	var allFiles:Set(UML::Usage)=result.clientDependency
-		->select(d|d.IsStereotypeApplied(NIEMModelPackageDescriptionFileStereotype))
-		.oclAsType(UML::Usage)
-		->asSet();
+	var allFiles:Set(UML::Usage)=result.collectMpdFiles()->asSet();
 	var extensionSchemas:Set(UML::Usage)=allFiles->select(p|p.isPsmExtensionSchema())->asSet();
 	var exchangeSchemas:Set(UML::Usage)=allFiles->select(p|p.isPsmExchangeSchema())->asSet();
 	var subsetSchemas:Set(UML::Usage)=allFiles->select(p|p.isPsmSubsetSchema())->asSet();
@@ -451,6 +446,9 @@ mapping UML::Component::ModelPackageDescription(inout psmOwner:UML::Model,domain
 	self.mapModelPackageDescription(psmOwner,domainContext,result);
 	log('ModelPackageDescription done: '+extensionSchemas->size().repr()+' extension schemas, '+exchangeSchemas->size().repr()+' exchange schemas, '+subsetSchemas->size().repr()+' subset schemas, '+referenceSchemas->size().repr()+' reference schemas');
 }
+query UML::Component::collectMpdFiles():Bag(UML::Usage) =
+    return self.allSubobjectsOfType(UML::Usage).oclAsType(UML::Usage)->select(u|u.IsStereotypeApplied(NIEMModelPackageDescriptionFileStereotype));
+
 helper UML::Component::mapModelPackageDescription(inout psmOwner:UML::Model,domainContext:UML::Package,inout resultComponent:UML::Component){
 	// for possible override
 }

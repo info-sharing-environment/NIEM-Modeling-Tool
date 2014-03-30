@@ -16,7 +16,7 @@ property documentRoot:CAT::DocumentRoot=null;
 	
 helper NIEMmpd2pim_run() {
 	
-	var documentRoot:CAT::DocumentRoot = cat.rootObjects()
+	documentRoot := cat.rootObjects()
             ->select(r|r.oclIsKindOf(CAT::DocumentRoot)).oclAsType(CAT::DocumentRoot)
             ->asSequence()->first();
             
@@ -251,10 +251,10 @@ helper XSD::XSDSchemaContent::mapAbstractXSDSchemaContent(umlContainer:UML::Elem
 helper UML::Package::applyNIEMSchemaStereotype():Stdlib::Element{
 	return self.ApplyStereotype(NIEMInformationModelStereotype);
 }
-helper XSD::XSDSchema::setModelInformationDefaultPurpose(fileTypePurposeURI:String,pimNdrSchemaInstance:Stdlib::Element){
+helper XSD::XSDSchema::setModelInformationDefaultPurpose(fileTypeNatureURI:String,pimNdrSchemaInstance:Stdlib::Element){
 	var defaultPurpose:String='extension';
 	var schemaKind:String=null;
-	if(not(fileTypePurposeURI.oclIsUndefined()))then{schemaKind:=fileTypePurposeURI.substringAfter('#').replace('-schema','');}endif;
+	if(not(fileTypeNatureURI.oclIsUndefined()))then{schemaKind:=fileTypeNatureURI.substringAfter('#').replace('niem-','').replace('-schema','');}endif;
 	if(schemaKind.oclIsUndefined())then{
 		if(self.targetNamespace.startsWith(baseNiemNamespace))then{
 			defaultPurpose:='subset';
@@ -1848,10 +1848,10 @@ mapping 	CAT::CatalogType::MpdCatalog_ProvisioningComponent(
 	name:=baseModelName+'.component';
 	// process all content
 	// create the items, establish containment, set stereotypes and apply tags discretely
-	self.artifact->select(f|f.oclIsKindOf(CAT::FileType) and f.oclAsType(CAT::FileType).isSchemaType()).oclAsType(CAT::FileType)->forEach(file){
+	self.artifact->select(f|f.oclIsKindOf(CAT::FileType)).oclAsType(CAT::FileType)->forEach(file){
 		file.addFileType(mpdComponent);
 	};
-	self.artifact->select(f|f.oclIsKindOf(CAT::FileSetType) and f.oclAsType(CAT::FileSetType).isSchemaSetType()).oclAsType(CAT::FileSetType).map FileSetType();
+	self.artifact->select(f|f.oclIsKindOf(CAT::FileSetType)).oclAsType(CAT::FileSetType).map FileSetType();
 	
 	var pimmpd:Stdlib::Element=result.applyStereotype(prompdStereotype);
 	pimmpd.setMpdVersionID(self.mpdVersionID);
@@ -1886,22 +1886,6 @@ mapping 	CAT::CatalogType::MpdCatalog_ProvisioningComponent(
 	
 }
 
-query CAT::FileType::isSchemaType():Boolean {
-    return self.purposeURI=purposeExchangeSchemaURI 
-        or self.purposeURI=purposeConstraintSchemaURI
-        or self.purposeURI=purposeExtensionSchemaURI
-        or self.purposeURI=purposeSubsetSchemaURI
-        or self.purposeURI=purposeReferenceSchemaURI
-        or self.purposeURI=purposeSchemaURI;
-};
-
-query CAT::FileSetType::isSchemaSetType():Boolean {
-    return self.purposeURI=purposeExchangeSchemaSetURI 
-        or self.purposeURI=purposeExtensionSchemaSetURI
-        or self.purposeURI=purposeSubsetSchemaSetURI
-        or self.purposeURI=purposeReferenceSchemaSetURI;
-}
-
 mapping 	CAT::FileType::FileType(
 	inout pimPackage:UML::NamedElement,inout pimComponent:UML::Component)
 	:UML::Usage@pimUml
@@ -1913,12 +1897,18 @@ mapping 	CAT::FileType::FileType(
 	// set version, conformant, purpose
 	pimNdrSchemaInstance.setFileTypeDescriptionText(self.descriptionText);
 	pimNdrSchemaInstance.setFileTypeExternalURI(self.externalURI.expandURI());
-	pimNdrSchemaInstance.setFileTypeNatureCode(self.natureURI.expandURI());
-	pimNdrSchemaInstance.setFileTypePurposeCode(self.purposeURI.expandURI());
 	pimNdrSchemaInstance.setFileTypeRelativePathName(self.relativePathName);
 	if(pimPackage.IsStereotypeApplied(NIEMInformationModelStereotype))then{
 		pimNdrSchemaInstance.setFileTypeNatureCode(natureXsdURI);
-	}endif;
+        pimNdrSchemaInstance.setFileTypePurposeCode(self.natureURI.expandURI().toPurposeCode());
+	} else {
+        pimNdrSchemaInstance.setFileTypeNatureCode(self.natureURI.expandURI());
+        pimNdrSchemaInstance.setFileTypePurposeCode(self.purposeURI.expandURI());
+	} endif;
+}
+
+query String::toPurposeCode():String {
+	return purposeURI+self.substringAfter('#').replace('niem-','');
 }
 
 mapping 	CAT::FileType::FileTypePackage(inout ownerPackage:UML::Package):UML::Package@pimUml
@@ -1945,7 +1935,7 @@ helper 	CAT::FileType::addFileType(inout pimComponent:UML::Component):UML::Usage
 			var stereotypeInstance:Stdlib::Element=fileTypePackage.GetStereotypeApplication(NIEMInformationModelStereotype).oclAsType(Stdlib::Element);
 			if(not(stereotypeInstance.oclIsUndefined()))then{
 				
-				schema.setModelInformationDefaultPurpose(self.purposeURI.expandURI(),stereotypeInstance);
+				schema.setModelInformationDefaultPurpose(self.natureURI.expandURI(),stereotypeInstance);
 			}endif;
 		}endif;
 	}endif;	

@@ -158,8 +158,12 @@ public class NIEMmpdartifact2modelDelegate extends TransformDelegate {
     @Override
     public void close() throws Exception {
         try {
+            thePIM = null;
+            thePIMExtent = null;
+            theModelSet = null;
             if (theServicesRegistry != null) {
                 disposeServicesRegistry(theServicesRegistry);
+                theServicesRegistry = null;
             }
         } finally {
             super.close();

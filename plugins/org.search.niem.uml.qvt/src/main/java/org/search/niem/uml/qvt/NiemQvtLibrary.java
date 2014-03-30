@@ -13,6 +13,7 @@ package org.search.niem.uml.qvt;
 import static java.util.Arrays.asList;
 import static org.apache.commons.lang.StringUtils.defaultIfBlank;
 import static org.eclipse.uml2.uml.util.UMLUtil.getBaseElement;
+import static org.eclipse.uml2.uml.util.UMLUtil.setBaseElement;
 import static org.search.niem.mpd.Constants.BASE_MPD_NAMESPACE;
 import static org.search.niem.mpd.Constants.NATURE_TYPE;
 import static org.search.niem.mpd.Constants.PURPOSE_TYPE;
@@ -79,7 +80,6 @@ import org.eclipse.uml2.uml.Dependency;
 import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.Enumeration;
 import org.eclipse.uml2.uml.EnumerationLiteral;
-import org.eclipse.uml2.uml.Extension;
 import org.eclipse.uml2.uml.Model;
 import org.eclipse.uml2.uml.MultiplicityElement;
 import org.eclipse.uml2.uml.NamedElement;
@@ -693,16 +693,13 @@ public class NiemQvtLibrary {
     @Operation(contextual = true, kind = Operation.Kind.HELPER)
     public static EObject deepCloneStereotypeApplication(final EObject self, final Stereotype stereotype,
             final Element target) {
-        final EObject theCopy = EcoreUtil.copy(self);
-        for (final EStructuralFeature feature : theCopy.eClass().getEAllStructuralFeatures()) {
-            if (feature.getName().startsWith(Extension.METACLASS_ROLE_PREFIX)) {
-                theCopy.eSet(feature, target);
-                target.eResource().getContents().add(theCopy);
-                return theCopy;
-            }
+        final EObject aCopy = EcoreUtil.copy(self);
+        setBaseElement(aCopy, target);
+        final EObject theAppliedStereotypeClone = target.applyStereotype(stereotype);
+        for (final EStructuralFeature feature : aCopy.eClass().getEAllStructuralFeatures()) {
+            theAppliedStereotypeClone.eSet(feature, aCopy.eGet(feature));
         }
-        Activator.INSTANCE.log("Unable to find the base_ property for the copied stereotype application.");
-        return null;
+        return theAppliedStereotypeClone;
     }
 
     /*

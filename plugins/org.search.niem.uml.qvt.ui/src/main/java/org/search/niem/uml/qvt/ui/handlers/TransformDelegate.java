@@ -177,7 +177,8 @@ abstract class TransformDelegate implements Transformer {
 
     @Override
     public void close() throws Exception {
-        // no-op by default
+        theSelectedResource = null;
+        resourceSet = null;
     }
 
     protected void postExecute() {
