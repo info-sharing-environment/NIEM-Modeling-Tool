@@ -14,7 +14,7 @@ pre {
 
 context Package {
 
-    guard : self.getAppliedStereotypes()->exists(s|s.isNiemNamespace()) and self.getTargetNamespace().isDefined()
+    guard : self.appliedStereotypes->exists(s|s.isNiemNamespace()) and self.getTargetNamespace().isDefined()
 
 	critique ValidURI {
 		check : validator.isValidURI(self.getTargetNamespace())
@@ -23,7 +23,7 @@ context Package {
 }
 
 operation Element getTargetNamespace() : String {
-    return self.getValue(self.getAppliedStereotypes().selectOne(s|s.isNiemNamespace()), 'targetNamespace');
+    return self.getValue(self.appliedStereotypes.selectOne(s|s.isNiemNamespace()), 'targetNamespace');
 }
 
 operation Stereotype isNiemNamespace() : Boolean {

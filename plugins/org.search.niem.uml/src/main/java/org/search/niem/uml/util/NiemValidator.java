@@ -41,6 +41,10 @@ public class NiemValidator {
         return NIEMTypes.NIEM_PIM_Profile.equals(qualifiedName);
     }
 
+    public boolean isPropertyHolder(final String qualifiedName) {
+        return NIEMTypes.PropertyHolder.equals(qualifiedName);
+    }
+
     public boolean isInformationModel(final String qualifiedName) {
         return NIEMTypes.InformationModel.equals(qualifiedName);
     }

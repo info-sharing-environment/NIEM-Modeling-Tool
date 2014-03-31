@@ -98,6 +98,7 @@ public class ModelValidator {
         @Override
         public boolean validate(final EClass eClass, final EObject eObject, final DiagnosticChain diagnostics,
                 final Map<Object, Object> context) {
+            checkCanceled(monitor);
             return super.validate(eClass, eObject, diagnostics, context);
         }
     }
@@ -139,7 +140,15 @@ public class ModelValidator {
         final Job validationJob = new Job(validationJobFamily) {
             @Override
             protected IStatus run(final IProgressMonitor monitor) {
-                final Diagnostic diagnostic = validate(theRootModel, monitor);
+                final Diagnostic diagnostic;
+                try {
+                    diagnostic = validate(theRootModel, monitor);
+                } catch (final OperationCanceledException e) {
+                    return Status.CANCEL_STATUS; // this is expected
+                } catch (final Exception e) {
+                    Activator.INSTANCE.log(e);
+                    return Status.CANCEL_STATUS; // treat any other error that happens in here as cancellation
+                }
                 checkCanceled(monitor);
                 final Job job = new UIJob(Activator.INSTANCE.getString("_UI_ModelValidator_marker_job_name",
                         new Object[] { resource.getURI() })) {

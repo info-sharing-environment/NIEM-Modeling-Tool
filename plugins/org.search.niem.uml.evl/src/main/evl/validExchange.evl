@@ -17,30 +17,48 @@ context Model {
     guard : self.hasPimProfile()
     
 	critique ContainsExchange {
-		check : self.getNestedPackages()->exists(p|p.hasExchange())
+		check : self.nestedPackages->exists(p|p.hasExchange())
 		message : validator.getMessage('_UI_critique_no_exchange_package')
 	}
 }
 
+context Package {
+
+    guard : self.isExchange()
+    
+    critique ContainsRootElement {
+        check : self.ownedTypes->exists(t|t.hasRootElement())
+        message : validator.getMessage('_UI_critique_no_root_element', self.name)
+    }
+}
+
+operation Type hasRootElement() : Boolean {
+    return self.isKindOf(Class) and self.appliedStereotypes->exists(s|s.isPropertyHolder()) and self.ownedElements->exists(e|e.isKindOf(Property));
+}
+
 operation Package hasExchange() : Boolean {
-    return self.isExchange() or self.getNestedPackages()->exists(p|p.hasExchange());
+    return self.isExchange() or self.nestedPackages->exists(p|p.hasExchange());
 }
 
 operation Package hasPimProfile() : Boolean {
-    return self.getAppliedProfiles()->exists(p|p.isPimProfile()) or self.getNestedPackages()->exists(p|p.hasPimProfile());
+    return self.appliedProfiles->exists(p|p.isPimProfile()) or self.nestedPackages->exists(p|p.hasPimProfile());
 }
 
 operation Package isExchange() : Boolean {
     var defaultPurpose:EnumerationLiteral=self.getDefaultPurpose();
-    return defaultPurpose.isDefined() and defaultPurpose.getName() = 'exchange';
+    return defaultPurpose.isDefined() and defaultPurpose.name = 'exchange';
 }
 
 operation Package getDefaultPurpose() : EnumerationLiteral {
-    var appliedInformationModel:Stereotype=self.getAppliedStereotypes().selectOne(s|s.isInformationModel());
+    var appliedInformationModel:Stereotype=self.appliedStereotypes.selectOne(s|s.isInformationModel());
     if(appliedInformationModel.isDefined()) {
         return self.getValue(appliedInformationModel, 'defaultPurpose');
     }
     return null;
+}
+
+operation Stereotype isPropertyHolder() : Boolean {
+    return validator.isPropertyHolder(self.qualifiedName);
 }
 
 operation Stereotype isInformationModel() : Boolean {
