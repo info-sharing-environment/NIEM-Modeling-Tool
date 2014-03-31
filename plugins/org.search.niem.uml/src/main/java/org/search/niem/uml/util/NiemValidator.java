@@ -37,6 +37,14 @@ public class NiemValidator {
         return isNotBlank(s);
     }
 
+    public boolean isPimProfile(final String qualifiedName) {
+        return NIEMTypes.NIEM_PIM_Profile.equals(qualifiedName);
+    }
+
+    public boolean isInformationModel(final String qualifiedName) {
+        return NIEMTypes.InformationModel.equals(qualifiedName);
+    }
+
     public boolean isNamespace(final String qualifiedName) {
         return NAMESPACE_QUALIFIED_NAMES.contains(qualifiedName);
     }

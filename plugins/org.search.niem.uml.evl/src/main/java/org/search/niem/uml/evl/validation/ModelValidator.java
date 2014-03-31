@@ -19,6 +19,7 @@ import java.util.Map;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.NullProgressMonitor;
+import org.eclipse.core.runtime.OperationCanceledException;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -40,13 +41,74 @@ import org.search.niem.uml.evl.Activator;
 
 public class ModelValidator {
 
+    private static final class NiemDiagnostician extends Diagnostician {
+        private final AdapterFactory adapterFactory;
+        private final IProgressMonitor monitor;
+
+        private NiemDiagnostician(final AdapterFactory adapterFactory, final IProgressMonitor monitor) {
+            this.adapterFactory = adapterFactory;
+            this.monitor = monitor;
+        }
+
+        @Override
+        public String getObjectLabel(final EObject eObject) {
+            if (adapterFactory != null && !eObject.eIsProxy()) {
+                final IItemLabelProvider itemLabelProvider = (IItemLabelProvider) adapterFactory.adapt(eObject,
+                        IItemLabelProvider.class);
+
+                if (itemLabelProvider != null) {
+                    return itemLabelProvider.getText(eObject);
+                }
+            }
+            return super.getObjectLabel(eObject);
+        }
+
+        protected boolean doValidateStereotypeApplications(final EObject eObject, final DiagnosticChain diagnostics,
+                final Map<Object, Object> context) {
+            final List<EObject> stereotypeApplications = eObject instanceof Element ? ((Element) eObject)
+                    .getStereotypeApplications() : Collections.<EObject> emptyList();
+
+            if (!stereotypeApplications.isEmpty()) {
+                final Iterator<EObject> i = stereotypeApplications.iterator();
+                boolean result = validate(i.next(), diagnostics, context);
+
+                while (i.hasNext() && (result || diagnostics != null)) {
+                    result &= validate(i.next(), diagnostics, context);
+                }
+
+                return result;
+            } else {
+                return true;
+            }
+        }
+
+        @Override
+        protected boolean doValidateContents(final EObject eObject, final DiagnosticChain diagnostics,
+                final Map<Object, Object> context) {
+            checkCanceled(monitor);
+            boolean result = doValidateStereotypeApplications(eObject, diagnostics, context);
+
+            if (result || diagnostics != null) {
+                result &= super.doValidateContents(eObject, diagnostics, context);
+            }
+
+            return result;
+        }
+
+        @Override
+        public boolean validate(final EClass eClass, final EObject eObject, final DiagnosticChain diagnostics,
+                final Map<Object, Object> context) {
+            return super.validate(eClass, eObject, diagnostics, context);
+        }
+    }
+
     private final Resource resource;
 
     public ModelValidator(final Resource resource) {
         this.resource = resource;
     }
 
-    private Diagnostic validate(final EObject eObject) {
+    private Diagnostic validate(final EObject eObject, final IProgressMonitor monitor) {
         final AdapterFactoryEditingDomain domain = (AdapterFactoryEditingDomain) AdapterFactoryEditingDomain
                 .getEditingDomainFor(eObject);
         if (domain == null) { // the resource editor is closed
@@ -54,63 +116,15 @@ public class ModelValidator {
         }
         final AdapterFactory adapterFactory = domain.getAdapterFactory();
 
-        final Diagnostician diagnostician = new Diagnostician() {
-
-            @Override
-            public String getObjectLabel(final EObject eObject) {
-
-                if (adapterFactory != null && !eObject.eIsProxy()) {
-                    final IItemLabelProvider itemLabelProvider = (IItemLabelProvider) adapterFactory.adapt(eObject,
-                            IItemLabelProvider.class);
-
-                    if (itemLabelProvider != null) {
-                        return itemLabelProvider.getText(eObject);
-                    }
-                }
-
-                return super.getObjectLabel(eObject);
-            }
-
-            protected boolean doValidateStereotypeApplications(final EObject eObject, final DiagnosticChain diagnostics,
-                    final Map<Object, Object> context) {
-                final List<EObject> stereotypeApplications = eObject instanceof Element ? ((Element) eObject)
-                        .getStereotypeApplications() : Collections.<EObject> emptyList();
-
-                if (!stereotypeApplications.isEmpty()) {
-                    final Iterator<EObject> i = stereotypeApplications.iterator();
-                    boolean result = validate(i.next(), diagnostics, context);
-
-                    while (i.hasNext() && (result || diagnostics != null)) {
-
-                        result &= validate(i.next(), diagnostics, context);
-                    }
-
-                    return result;
-                } else {
-                    return true;
-                }
-            }
-
-            @Override
-            protected boolean doValidateContents(final EObject eObject, final DiagnosticChain diagnostics,
-                    final Map<Object, Object> context) {
-                boolean result = doValidateStereotypeApplications(eObject, diagnostics, context);
-
-                if (result || diagnostics != null) {
-                    result &= super.doValidateContents(eObject, diagnostics, context);
-                }
-
-                return result;
-            }
-
-            @Override
-            public boolean validate(final EClass eClass, final EObject eObject, final DiagnosticChain diagnostics,
-                    final Map<Object, Object> context) {
-                return super.validate(eClass, eObject, diagnostics, context);
-            }
-        };
+        final Diagnostician diagnostician = new NiemDiagnostician(adapterFactory, monitor);
 
         return diagnostician.validate(eObject);
+    }
+
+    private static void checkCanceled(final IProgressMonitor monitor) {
+        if (monitor.isCanceled()) {
+            throw new OperationCanceledException();
+        }
     }
 
     public void run() {
@@ -118,17 +132,40 @@ public class ModelValidator {
         if (theResourceContents.isEmpty()) {
             return;
         }
+        final String validationJobFamily = Activator.INSTANCE.getString("_UI_ModelValidator_job_name",
+                new Object[] { resource.getURI() });
+        Job.getJobManager().cancel(validationJobFamily);
         final EObject theRootModel = theResourceContents.get(0);
-        final Job job = new UIJob(Activator.INSTANCE.getString("_UI_ModelValidator_job_name",
-                new Object[] { resource.getURI() })) {
+        final Job validationJob = new Job(validationJobFamily) {
             @Override
-            public IStatus runInUIThread(final IProgressMonitor monitor) {
-                handleDiagnostic(validate(theRootModel));
+            protected IStatus run(final IProgressMonitor monitor) {
+                final Diagnostic diagnostic = validate(theRootModel, monitor);
+                checkCanceled(monitor);
+                final Job job = new UIJob(Activator.INSTANCE.getString("_UI_ModelValidator_marker_job_name",
+                        new Object[] { resource.getURI() })) {
+                    @Override
+                    public IStatus runInUIThread(final IProgressMonitor monitor) {
+                        handleDiagnostic(diagnostic);
+                        return Status.OK_STATUS;
+                    }
+
+                    @Override
+                    public boolean belongsTo(final Object family) {
+                        return validationJobFamily.equals(family);
+                    }
+                };
+                job.setPriority(Job.DECORATE);
+                job.schedule();
                 return Status.OK_STATUS;
             }
+
+            @Override
+            public boolean belongsTo(final Object family) {
+                return validationJobFamily.equals(family);
+            }
         };
-        job.setPriority(Job.DECORATE);
-        job.schedule();
+        validationJob.setPriority(Job.BUILD);
+        validationJob.schedule();
     }
 
     private void handleDiagnostic(final Diagnostic diagnostic) {

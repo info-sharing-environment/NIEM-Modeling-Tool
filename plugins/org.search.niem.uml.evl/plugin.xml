@@ -7,6 +7,10 @@
             constraints="src/main/evl/targetNamespace.evl"
             namespaceURI="http://www.eclipse.org/uml2/4.0.0/UML">
       </constraintsBinding>
+      <constraintsBinding
+            constraints="src/main/evl/validExchange.evl"
+            namespaceURI="http://www.eclipse.org/uml2/4.0.0/UML">
+      </constraintsBinding>
    </extension>
    <extension
          point="org.eclipse.ui.ide.markerResolution">

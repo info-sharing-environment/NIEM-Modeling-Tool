@@ -17,4 +17,8 @@ public class NiemValidationTool extends NiemValidator {
     public String getMessage(final String key, final Object substitution) {
         return Activator.INSTANCE.getString(key, new Object[] { substitution });
     }
+
+    public String getMessage(final String key) {
+        return Activator.INSTANCE.getString(key);
+    }
 }

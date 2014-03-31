@@ -1,0 +1,52 @@
+/*
+ * This program and the accompanying materials are made available
+ * under the terms of the Eclipse Public License v1.0 which
+ * accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *   SEARCH Group, Incorporated - initial API and implementation
+ *
+ */
+pre {
+    var validator = new Native('org.search.niem.uml.evl.validation.NiemValidationTool');
+}
+
+context Model {
+
+    guard : self.hasPimProfile()
+    
+	critique ContainsExchange {
+		check : self.getNestedPackages()->exists(p|p.hasExchange())
+		message : validator.getMessage('_UI_critique_no_exchange_package')
+	}
+}
+
+operation Package hasExchange() : Boolean {
+    return self.isExchange() or self.getNestedPackages()->exists(p|p.hasExchange());
+}
+
+operation Package hasPimProfile() : Boolean {
+    return self.getAppliedProfiles()->exists(p|p.isPimProfile()) or self.getNestedPackages()->exists(p|p.hasPimProfile());
+}
+
+operation Package isExchange() : Boolean {
+    var defaultPurpose:EnumerationLiteral=self.getDefaultPurpose();
+    return defaultPurpose.isDefined() and defaultPurpose.getName() = 'exchange';
+}
+
+operation Package getDefaultPurpose() : EnumerationLiteral {
+    var appliedInformationModel:Stereotype=self.getAppliedStereotypes().selectOne(s|s.isInformationModel());
+    if(appliedInformationModel.isDefined()) {
+        return self.getValue(appliedInformationModel, 'defaultPurpose');
+    }
+    return null;
+}
+
+operation Stereotype isInformationModel() : Boolean {
+    return validator.isInformationModel(self.qualifiedName);
+}
+
+operation Profile isPimProfile() : Boolean {
+    return validator.isPimProfile(self.qualifiedName);
+}
