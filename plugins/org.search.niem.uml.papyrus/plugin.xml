@@ -15,6 +15,9 @@
       <startup
             class="org.search.niem.uml.papyrus.editor.NIEMModelLifecycleRegistry">
       </startup>
+      <startup
+            class="org.search.niem.uml.papyrus.editor.PaletteChangedListener">
+      </startup>
    </extension>
    <extension
          point="org.eclipse.ui.newWizards">

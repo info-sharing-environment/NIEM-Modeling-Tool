@@ -16,13 +16,11 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.atomic.AtomicReference;
 
-import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.ISafeRunnable;
 import org.eclipse.core.runtime.InvalidRegistryObjectException;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.core.runtime.SafeRunner;
-import org.eclipse.papyrus.editor.PapyrusMultiDiagramEditor;
 import org.eclipse.papyrus.infra.core.lifecycleevents.DoSaveEvent;
 import org.eclipse.papyrus.infra.core.lifecycleevents.IEditorInputChangedListener;
 import org.eclipse.papyrus.infra.core.lifecycleevents.ISaveAndDirtyService;
@@ -31,20 +29,13 @@ import org.eclipse.papyrus.infra.core.lifecycleevents.SaveAndDirtyService;
 import org.eclipse.papyrus.infra.core.resource.ModelSet;
 import org.eclipse.papyrus.infra.core.services.ServiceException;
 import org.eclipse.papyrus.infra.core.services.ServicesRegistry;
-import org.eclipse.swt.widgets.Display;
-import org.eclipse.ui.IEditorReference;
-import org.eclipse.ui.IPartListener2;
-import org.eclipse.ui.IStartup;
-import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.IWorkbenchPartReference;
-import org.eclipse.ui.IWorkbenchWindow;
-import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.part.FileEditorInput;
 import org.osgi.framework.Bundle;
 import org.search.niem.uml.papyrus.Activator;
 import org.search.niem.uml.papyrus.lifecycleevents.LifecycleListener;
 
-public class NIEMModelLifecycleRegistry implements LifecycleListener, IStartup, IPartListener2 {
+public class NIEMModelLifecycleRegistry extends NIEMPartAdapter implements LifecycleListener {
 
     private static final String LIFECYCLE_LISTENER_EXTENSION_ID = Activator.PLUGIN_ID
             + ".lifecycleevents.lifecycleListeners";
@@ -80,18 +71,6 @@ public class NIEMModelLifecycleRegistry implements LifecycleListener, IStartup, 
             return newLifecycleListeners;
         }
         return listeners.get();
-    }
-
-    @Override
-    public void earlyStartup() {
-        Display.getDefault().asyncExec(new Runnable() {
-            @Override
-            public void run() {
-                final IWorkbenchWindow workbenchWindow = PlatformUI.getWorkbench().getActiveWorkbenchWindow();
-                initializeOpenEditors(workbenchWindow);
-                workbenchWindow.getPartService().addPartListener(NIEMModelLifecycleRegistry.this);
-            }
-        });
     }
 
     @Override
@@ -170,18 +149,10 @@ public class NIEMModelLifecycleRegistry implements LifecycleListener, IStartup, 
         SafeRunner.run(r);
     }
 
-    private void initializeOpenEditors(final IWorkbenchWindow theWorkbenchWindow) {
-        for (final IWorkbenchPage page : theWorkbenchWindow.getPages()) {
-            for (final IEditorReference editor : page.getEditorReferences()) {
-                partOpened(editor);
-            }
-        }
-    }
-
     @Override
     public void partOpened(final IWorkbenchPartReference part) {
         if (canListenToLifecycle(part)) {
-            final ServicesRegistry servicesRegistry = getServicesRegistry(part.getPart(true));
+            final ServicesRegistry servicesRegistry = getServiceRegistry(part);
             opened(getModelSet(servicesRegistry));
             listen(part, servicesRegistry);
         }
@@ -215,19 +186,15 @@ public class NIEMModelLifecycleRegistry implements LifecycleListener, IStartup, 
     @Override
     public void partClosed(final IWorkbenchPartReference part) {
         if (canListenToLifecycle(part)) {
-            final ServicesRegistry servicesRegistry = getServicesRegistry(part.getPart(true));
+            final ServicesRegistry servicesRegistry = getServiceRegistry(part);
             closed(getModelSet(servicesRegistry));
             unlisten(part, servicesRegistry);
         }
     }
 
     private boolean canListenToLifecycle(final IWorkbenchPartReference part) {
-        return PapyrusMultiDiagramEditor.EDITOR_ID.equals(part.getId())
-                && getModelSet(getServicesRegistry(part.getPart(true))).getURIWithoutExtension().isPlatformResource();
-    }
-
-    private ServicesRegistry getServicesRegistry(final IAdaptable servicesRegistryAdapter) {
-        return (ServicesRegistry) servicesRegistryAdapter.getAdapter(ServicesRegistry.class);
+        return itIsThePapyrusEditor(part)
+                && getModelSet(getServiceRegistry(part)).getURIWithoutExtension().isPlatformResource();
     }
 
     private SaveAndDirtyService getSaveAndDirtyService(final ServicesRegistry servicesRegistry) {
@@ -244,36 +211,6 @@ public class NIEMModelLifecycleRegistry implements LifecycleListener, IStartup, 
         } catch (final ServiceException e) {
             throw new IllegalStateException("Unable to get the ModelSet from the ServiceRegistry.");
         }
-    }
-
-    @Override
-    public void partActivated(final IWorkbenchPartReference partRef) {
-        // no-op
-    }
-
-    @Override
-    public void partBroughtToTop(final IWorkbenchPartReference partRef) {
-        // no-op
-    }
-
-    @Override
-    public void partDeactivated(final IWorkbenchPartReference partRef) {
-        // no-op
-    }
-
-    @Override
-    public void partHidden(final IWorkbenchPartReference partRef) {
-        // no-op
-    }
-
-    @Override
-    public void partVisible(final IWorkbenchPartReference partRef) {
-        // no-op
-    }
-
-    @Override
-    public void partInputChanged(final IWorkbenchPartReference partRef) {
-        // no-op
     }
 
     private final class ChangeListener implements IEditorInputChangedListener {
