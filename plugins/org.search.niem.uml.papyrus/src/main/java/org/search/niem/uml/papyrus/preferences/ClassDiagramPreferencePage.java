@@ -14,6 +14,7 @@ import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_CLAS
 import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_CLASS_DIAGRAM_COLUMN_WIDTH;
 import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_CLASS_DIAGRAM_ELEMENT_WIDTH;
 import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_CLASS_DIAGRAM_VERTICAL_PADDING;
+import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_DISPLAY_MESSAGE_FOR_DELETE_ACTION;
 import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_INITIAL_PROPERTY_AGGREGATION;
 import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_NIEM_REFERENCE_ELEMENT_ILLEGAL_COLOR;
 import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_NIEM_REFERENCE_ELEMENT_ILLEGAL_FONT;
@@ -48,6 +49,10 @@ public class ClassDiagramPreferencePage extends FieldEditorPreferencePage implem
                 getFieldEditorParent()));
         addField(new BooleanFieldEditor(P_RESTRICT_NIEM_SUBSET_CONTENT,
                 Activator.INSTANCE.getString("_UI_ClassDiagramPreferencePage_restrictNiemSubsetContent"),
+                getFieldEditorParent()));
+        // TODO: remove this in Luna
+        addField(new BooleanFieldEditor(P_DISPLAY_MESSAGE_FOR_DELETE_ACTION,
+                Activator.INSTANCE.getString("_UI_ClassDiagramPreferencePage_displayMessageForDeleteAction"),
                 getFieldEditorParent()));
         addField(new ComboFieldEditor(P_INITIAL_PROPERTY_AGGREGATION,
                 Activator.INSTANCE.getString("_UI_ClassDiagramPreferencePage_initialPropertyAggregation"), new String[][] {

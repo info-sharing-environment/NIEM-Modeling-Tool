@@ -40,4 +40,7 @@ public interface PreferenceConstants {
     String P_CLASS_DIAGRAM_VERTICAL_PADDING = "classDiagramVerticalPadding";
     String P_CLASS_DIAGRAM_COLUMN_WIDTH = "classDiagramColumnWidth";
     String P_CLASS_DIAGRAM_ELEMENT_WIDTH = "classDiagramElementWidth";
+
+    // TODO: remove this in Luna
+    String P_DISPLAY_MESSAGE_FOR_DELETE_ACTION = "displayMessageForDeleteActionPreferenceKey";
 }

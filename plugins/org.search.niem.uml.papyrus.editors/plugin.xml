@@ -81,6 +81,46 @@
              class="org.search.niem.uml.papyrus.editors.handlers.UpdateSubset"
              commandId="org.search.niem.uml.papyrus.editors.commands.updateSubset">
        </handler>
+       <handler
+             class="org.search.niem.uml.papyrus.editors.handlers.DeleteFromModelCommandHandler"
+             commandId="org.eclipse.ui.edit.delete">
+          <activeWhen>
+         <and>
+             <with
+                   variable="activeContexts">
+                <iterate
+                      ifEmpty="false"
+                      operator="or">
+                   <equals
+                         value="org.search.niem.uml.papyrus.editors.context">
+                   </equals>
+                </iterate>
+             </with>
+            <with
+                  variable="deleteInDiagram">
+               <equals
+                     value="enabled">
+               </equals>
+            </with>
+            <with
+                  variable="activeEditorId">
+               <equals
+                     value="org.eclipse.papyrus.infra.core.papyrusEditor">
+               </equals>
+            </with>
+            <with
+                  variable="selection">
+               <iterate
+                     ifEmpty="false"
+                     operator="and">
+                  <instanceof
+                        value="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+                  </instanceof>
+               </iterate>
+            </with>
+         </and>
+          </activeWhen>
+       </handler>
     </extension>
     <extension
           point="org.eclipse.ui.bindings">
@@ -160,5 +200,13 @@
        <strategy
             strategy="org.search.niem.uml.papyrus.editors.dnd.ClassifierAsClassifierWithAttributesToAttributeCompartmentDropStrategy">
        </strategy>
+    </extension>
+    <extension
+          point="org.eclipse.ui.contexts">
+       <context
+             description="%_UI_NIEM_UML_Editor_Context_description"
+             id="org.search.niem.uml.papyrus.editors.context"
+             name="%_UI_NIEM_UML_Editor_Context_name">
+       </context>
     </extension>
 </plugin>
