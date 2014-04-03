@@ -1,8 +1,36 @@
 org.search.niem.uml.qvt
 ========================================================================
 
-In order to get the QVTO files to compile, you must configure the project Properties -> QVT Settings -> Metamodel Mappings with this Target Model URI: platform:/resource/org.search.niem.uml.resources/src/main/resources/xsd/mpd-catalog-1.0.ecore
-You must also Export -> Deployable plugins and fragments -> org.search.niem.uml.qvt into your Eclipse host in order for the org.search.niem.NiemQvt Java blackbox extensions to be recognized.
+In order to get the QVTO files to compile, you must Export -> Deployable plugins and fragments -> org.search.niem.uml.qvt into your Eclipse host in order for the org.search.niem.NiemQvt Java blackbox extensions to be recognized.
+Then you must configure the project Properties -> QVT Settings -> Metamodel Mappings with this Target Model URI: platform:/resource/org.search.niem.mpd/src/main/resources/model/mpd-catalog-1.0.ecore
+Then you should add the following to the .project file
+
+
+<code lang="xml">
+<?xml version="1.0" encoding="UTF-8"?>
+&lt;projectDescription&gt;
+	....
+	&lt;buildSpec&gt;
+		....
+		&lt;buildCommand&gt;
+			&lt;name&gt;org.eclipse.m2m.qvt.oml.project.QVTOBuilder&lt;/name&gt;
+			&lt;arguments&gt;
+				&lt;dictionary&gt;
+					&lt;key&gt;src_container&lt;/key&gt;
+					&lt;value&gt;src/main/qvt&lt;/value&gt;
+				&lt;/dictionary&gt;
+			&lt;/arguments&gt;
+		&lt;/buildCommand&gt;
+	&lt;/buildSpec&gt;
+	&lt;natures&gt;
+		....
+		&lt;nature&gt;org.eclipse.m2m.qvt.oml.project.QVTONature&lt;/nature&gt;
+	&lt;/natures&gt;
+&lt;/projectDescription&gt;
+</code>
+
+
+
 
 * Needed to change getNearesProfileApplication in NIEMpsm2xsd.qvto from
 query UML::Package::getNearesProfileApplication(profile:UML::Profile):UML::Package=
