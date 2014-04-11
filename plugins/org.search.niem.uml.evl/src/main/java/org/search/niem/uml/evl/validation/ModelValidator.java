@@ -135,11 +135,13 @@ public class ModelValidator {
         }
         final String validationJobFamily = Activator.INSTANCE.getString("_UI_ModelValidator_job_name",
                 new Object[] { resource.getURI() });
+        final Job[] jobs = Job.getJobManager().find(validationJobFamily);
         Job.getJobManager().cancel(validationJobFamily);
         final EObject theRootModel = theResourceContents.get(0);
         final Job validationJob = new Job(validationJobFamily) {
             @Override
             protected IStatus run(final IProgressMonitor monitor) {
+                waitFor(jobs);
                 final Diagnostic diagnostic;
                 try {
                     diagnostic = validate(theRootModel, monitor);
@@ -171,6 +173,16 @@ public class ModelValidator {
             @Override
             public boolean belongsTo(final Object family) {
                 return validationJobFamily.equals(family);
+            }
+
+            private void waitFor(final Job[] jobs) {
+                for (final Job j : jobs) {
+                    try {
+                        j.join();
+                    } catch (final InterruptedException e) {
+                        throw new OperationCanceledException();
+                    }
+                }
             }
         };
         validationJob.setPriority(Job.BUILD);

@@ -98,12 +98,10 @@ final class NiemReferencesSelectionDialog extends NiemCheckedTreeSelectionDialog
             // if a similar tree item is already expanded then use its check state
             // otherwise, if the tree item data exists in the PIM and its parent has not been unchecked, then gray it
             final TreeItem theParent = treeItem.getParentItem();
-            final Collection<TreeItem> similar = new ArrayList<>(theTreeViewer.findTreeItems(treeItem.getData()));
-            similar.remove(treeItem);
-            if (similar.size() > 0) {
-                final TreeItem model = similar.iterator().next();
-                treeItem.setChecked(model.getChecked());
-                treeItem.setGrayed(model.getGrayed());
+            final TreeItem similar = theTreeViewer.findFirstMatch(treeItem);
+            if (similar != null) {
+                treeItem.setChecked(similar.getChecked());
+                treeItem.setGrayed(similar.getGrayed());
             } else if (theParent != null && theParent.getChecked() && !theParent.getGrayed()) {
                 treeItem.setChecked(true);
             } else if (getExistingItems(cachedReference, expanded).contains(treeItem)) {
@@ -164,8 +162,20 @@ final class NiemReferencesSelectionDialog extends NiemCheckedTreeSelectionDialog
             @Override
             public void treeExpanded(final TreeEvent e) {
                 final TreeItem widget = (TreeItem) e.item;
-                final TreeItem[] items = widget.getItems();
-                updateExpanded(asList(items), theTreeViewer);
+                if (widget == theTreeViewer.getTree().getItem(0)) {
+                    updateExpanded(asList(widget), theTreeViewer);
+                    getShell().getDisplay().asyncExec(new Runnable() {
+                        @Override
+                        public void run() {
+                            if (widget.isDisposed()) {
+                                return;
+                            }
+                            updateExpanded(asList(widget.getItems()), theTreeViewer);
+                        }
+                    });
+                } else {
+                    updateExpanded(asList(widget.getItems()), theTreeViewer);
+                }
             }
 
             @Override
@@ -311,7 +321,7 @@ final class NiemReferencesSelectionDialog extends NiemCheckedTreeSelectionDialog
 
         private Object[] getChildren(final Property p) {
             if (isAbstract(p)) {
-                return findSubsitutions(p);
+                return findSubstitutions(p);
             }
             return getChildren(p.getType());
         }
@@ -324,7 +334,7 @@ final class NiemReferencesSelectionDialog extends NiemCheckedTreeSelectionDialog
             return Indexer.create(p.eResource().getResourceSet()).countSubstitutions(toSubstitutionGroupName(p)) > 0;
         }
 
-        private Object[] findSubsitutions(final Property p) {
+        private Object[] findSubstitutions(final Property p) {
             return Indexer.create(p.eResource().getResourceSet()).findSubstitutions(toSubstitutionGroupName(p)).toArray();
         }
 

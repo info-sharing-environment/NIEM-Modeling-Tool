@@ -15,11 +15,11 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.concurrent.CopyOnWriteArraySet;
 
-import org.eclipse.core.runtime.ISafeRunnable;
-import org.eclipse.core.runtime.SafeRunner;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Event;
+import org.eclipse.swt.widgets.Item;
 import org.eclipse.swt.widgets.TreeItem;
 import org.eclipse.swt.widgets.Widget;
 import org.eclipse.ui.dialogs.ContainerCheckedTreeViewer;
@@ -81,17 +81,11 @@ public class NiemContainerCheckedTreeViewer extends ContainerCheckedTreeViewer {
     private void fire(final Lambda l) {
         final Exception aggregator = new Exception("Exceptions while firing event.");
         for (final NiemCheckedTreeSelectionListener listener : niemCheckedTreeSelectionListeners) {
-            SafeRunner.run(new ISafeRunnable() {
-                @Override
-                public void run() throws Exception {
-                    l._(listener);
-                }
-
-                @Override
-                public void handleException(final Throwable exception) {
-                    aggregator.addSuppressed(exception);
-                }
-            });
+            try {
+                l._(listener);
+            } catch (final Exception e) {
+                aggregator.addSuppressed(e);
+            }
         }
         if (aggregator.getSuppressed().length > 0) {
             Activator.INSTANCE.log(aggregator);
@@ -106,7 +100,7 @@ public class NiemContainerCheckedTreeViewer extends ContainerCheckedTreeViewer {
     }
 
     private void handleItemGreyed(final TreeItem theSource) {
-        final Collection<TreeItem> similarItems = findTreeItems(theSource.getData());
+        final Collection<TreeItem> similarItems = findAll(theSource.getData());
         final Collection<TreeItem> grayedItems = new ArrayList<>(similarItems);
         collectChangedParents(theSource.getParentItem(), grayedItems, true);
         setStates(grayedItems, true, true);
@@ -114,7 +108,7 @@ public class NiemContainerCheckedTreeViewer extends ContainerCheckedTreeViewer {
     }
 
     private void handleItemChecked(final TreeItem theSource) {
-        final Collection<TreeItem> similarItems = findTreeItems(theSource.getData());
+        final Collection<TreeItem> similarItems = findAll(theSource.getData());
         final Collection<TreeItem> checkedItems = new ArrayList<>(similarItems);
         final Collection<TreeItem> grayedItems = new ArrayList<>();
         collectChangedProgeny(theSource, checkedItems, Collections.<TreeItem> emptyList(), true);
@@ -126,7 +120,7 @@ public class NiemContainerCheckedTreeViewer extends ContainerCheckedTreeViewer {
     }
 
     private void handleItemUnchecked(final TreeItem theSource) {
-        final Collection<TreeItem> similarItems = findTreeItems(theSource.getData());
+        final Collection<TreeItem> similarItems = findAll(theSource.getData());
         final Collection<TreeItem> uncheckedItems = new ArrayList<>(similarItems);
         final Collection<TreeItem> grayedItems = new ArrayList<>();
         collectChangedProgeny(theSource, Collections.<TreeItem> emptyList(), uncheckedItems, false);
@@ -137,10 +131,19 @@ public class NiemContainerCheckedTreeViewer extends ContainerCheckedTreeViewer {
         fireItemsGreyed(grayedItems);
     }
 
-    public Collection<TreeItem> findTreeItems(final Object element) {
+    public TreeItem findFirstMatch(final TreeItem treeItem) {
+        final Object element = treeItem.getData();
+        for (final Widget w : findItems(element)) {
+            if (w != treeItem && w instanceof TreeItem) {
+                return (TreeItem) w;
+            }
+        }
+        return null;
+    }
+
+    private Collection<TreeItem> findAll(final Object element) {
         final Collection<TreeItem> treeItems = new ArrayList<>();
-        final Widget[] ws = findItems(element);
-        for (final Widget w : ws) {
+        for (final Widget w : findItems(element)) {
             if (w instanceof TreeItem) {
                 treeItems.add((TreeItem) w);
             }
@@ -186,9 +189,9 @@ public class NiemContainerCheckedTreeViewer extends ContainerCheckedTreeViewer {
             final TreeItem current = item;
             if (current.getData() != null && current.getChecked() != anAncestorIsBeingChecked || current.getGrayed()) {
                 if (anAncestorIsBeingChecked) {
-                    checked.addAll(findTreeItems(current.getData()));
+                    checked.addAll(findAll(current.getData()));
                 } else {
-                    unchecked.addAll(findTreeItems(current.getData()));
+                    unchecked.addAll(findAll(current.getData()));
                 }
                 collectChangedProgeny(current, checked, unchecked, anAncestorIsBeingChecked);
             }
@@ -203,9 +206,18 @@ public class NiemContainerCheckedTreeViewer extends ContainerCheckedTreeViewer {
         if (item.getData() != null
                 && (aProgenyIsBeingChecked && !item.getChecked() && !item.getGrayed() || !aProgenyIsBeingChecked
                         && item.getChecked() && !item.getGrayed())) {
-            grayed.addAll(findTreeItems(item.getData()));
+            grayed.addAll(findAll(item.getData()));
             collectChangedParents(item.getParentItem(), grayed, aProgenyIsBeingChecked);
         }
+    }
+
+    @Override
+    protected void setExpanded(final Item item, final boolean expand) {
+        super.setExpanded(item, expand);
+        final Event event = new Event();
+        event.item = item;
+        event.type = expand ? SWT.Expand : SWT.Collapse;
+        getTree().notifyListeners(event.type, event);
     }
 
     private static interface Lambda {
