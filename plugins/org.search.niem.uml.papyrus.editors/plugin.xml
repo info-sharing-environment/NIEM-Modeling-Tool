@@ -74,6 +74,18 @@
              id="org.search.niem.uml.papyrus.editors.commands.updateSubset"
              name="%_UI_Update_Subset_Command_name">
        </command>
+       <command
+             categoryId="org.search.niem.uml.papyrus.editors.commands.category"
+             description="%_UI_Show_Qualified_Name_Command_description"
+             id="org.search.niem.uml.papyrus.editors.commands.showQualifiedName"
+             name="%_UI_Show_Qualified_Name_Command_name">
+       </command>
+       <command
+             categoryId="org.search.niem.uml.papyrus.editors.commands.category"
+             description="%_UI_Show_Local_Name_Command_description"
+             id="org.search.niem.uml.papyrus.editors.commands.showLocalName"
+             name="%_UI_Show_Local_Name_Command_name">
+       </command>
     </extension>
     <extension
           point="org.eclipse.ui.handlers">
@@ -121,6 +133,14 @@
          </and>
           </activeWhen>
        </handler>
+       <handler
+             class="org.search.niem.uml.papyrus.editors.handlers.ShowQualifiedName"
+             commandId="org.search.niem.uml.papyrus.editors.commands.showQualifiedName">
+       </handler>
+       <handler
+             class="org.search.niem.uml.papyrus.editors.handlers.ShowLocalName"
+             commandId="org.search.niem.uml.papyrus.editors.commands.showLocalName">
+       </handler>
     </extension>
     <extension
           point="org.eclipse.ui.bindings">
@@ -129,6 +149,18 @@
              contextId="org.eclipse.ui.contexts.window"
              schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
              sequence="M2+M3+U U">
+       </key>
+       <key
+             commandId="org.search.niem.uml.papyrus.editors.commands.showQualifiedName"
+             contextId="org.eclipse.ui.contexts.window"
+             schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+             sequence="M2+M3+U Q">
+       </key>
+       <key
+             commandId="org.search.niem.uml.papyrus.editors.commands.showLocalName"
+             contextId="org.eclipse.ui.contexts.window"
+             schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+             sequence="M2+M3+U L">
        </key>
     </extension>
     <extension
@@ -184,6 +216,88 @@
              </visibleWhen>
           </command>
        </menuContribution>
+       <menuContribution
+             allPopups="false"
+             locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu?endof=editMenu">
+          <command
+                commandId="org.search.niem.uml.papyrus.editors.commands.showQualifiedName"
+                disabledIcon="icons/full/obj16/show_qualified_name_disabled.png"
+                icon="icons/full/obj16/show_qualified_name.png"
+                id="org.search.niem.uml.papyrus.editors.popup.showQualifiedName"
+                label="%_UI_Show_Qualified_Name_Command_name"
+                mnemonic="Q"
+                style="push"
+                tooltip="%_UI_Show_Qualified_Name_Command_description">
+             <visibleWhen
+                   checkEnabled="false">
+                <and>
+                   <with
+                         variable="activePartId">
+                      <equals
+                            value="org.eclipse.papyrus.infra.core.papyrusEditor">
+                      </equals>
+                   </with>
+                   <count
+                         value="1">
+                   </count>
+                   <with
+                         variable="selection">
+                      <iterate
+                            ifEmpty="false">
+                         <instanceof
+                               value="org.eclipse.papyrus.uml.diagram.common.editparts.NamedElementEditPart">
+                         </instanceof>
+                         <not>
+                            <test
+                                  property="org.search.niem.uml.papyrus.editors.propertyTesters.usesQualifiedName">
+                            </test>
+                         </not>
+                      </iterate>
+                   </with>
+                </and>
+             </visibleWhen>
+          </command>
+       </menuContribution>
+       <menuContribution
+             allPopups="false"
+             locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu?endof=editMenu">
+          <command
+                commandId="org.search.niem.uml.papyrus.editors.commands.showLocalName"
+                disabledIcon="icons/full/obj16/show_local_name_disabled.png"
+                icon="icons/full/obj16/show_local_name.png"
+                id="org.search.niem.uml.papyrus.editors.popup.showLocalName"
+                label="%_UI_Show_Local_Name_Command_name"
+                mnemonic="L"
+                style="push"
+                tooltip="%_UI_Show_Local_Name_Command_description">
+             <visibleWhen
+                   checkEnabled="false">
+                <and>
+                   <with
+                         variable="activePartId">
+                      <equals
+                            value="org.eclipse.papyrus.infra.core.papyrusEditor">
+                      </equals>
+                   </with>
+                   <count
+                         value="1">
+                   </count>
+                   <with
+                         variable="selection">
+                      <iterate
+                            ifEmpty="false">
+                         <instanceof
+                               value="org.eclipse.papyrus.uml.diagram.common.editparts.NamedElementEditPart">
+                         </instanceof>
+                         <test
+                               property="org.search.niem.uml.papyrus.editors.propertyTesters.usesQualifiedName">
+                         </test>
+                      </iterate>
+                   </with>
+                </and>
+             </visibleWhen>
+          </command>
+       </menuContribution>
     </extension>
     <extension
           point="org.eclipse.core.expressions.propertyTesters">
@@ -193,6 +307,13 @@
              namespace="org.search.niem.uml.papyrus.editors.propertyTesters"
              properties="isInReferenceLibrarySubset"
              type="org.eclipse.papyrus.uml.diagram.common.editparts.IUMLEditPart">
+       </propertyTester>
+       <propertyTester
+             class="org.search.niem.uml.papyrus.editors.propertyTesters.UsesQualifiedName"
+             id="org.search.niem.uml.papyrus.editors.propertyTesters.usesQualifiedName"
+             namespace="org.search.niem.uml.papyrus.editors.propertyTesters"
+             properties="usesQualifiedName"
+             type="org.eclipse.papyrus.uml.diagram.common.editparts.UMLNodeEditPart">
        </propertyTester>
     </extension>
     <extension
