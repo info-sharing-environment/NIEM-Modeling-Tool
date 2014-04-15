@@ -12,7 +12,7 @@ package org.search.niem.uml.papyrus.editors.handlers;
 
 public class ShowQualifiedName extends ShowName {
 
-    static final int QUALIFIED_NAME_DEPTH = 0;
+    static final int QUALIFIED_NAME_DEPTH = 1;
 
     @Override
     protected int getDepth() {
