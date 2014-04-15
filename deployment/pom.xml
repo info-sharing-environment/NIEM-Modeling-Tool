@@ -18,7 +18,7 @@
             <properties>
                 <productArtifactId>org.search.niem.update-site</productArtifactId>
                 <productClassifier></productClassifier>
-                <productName>org.search.niem.update-site-1.0.0-SNAPSHOT.zip</productName>
+                <productName>org.search.niem.update-site-1.0.0.zip</productName>
             </properties>
         </profile>
         <profile>
