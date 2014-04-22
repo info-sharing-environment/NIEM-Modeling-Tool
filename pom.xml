@@ -93,6 +93,11 @@
             <url>http://download.eclipse.org/releases/kepler/</url>
         </repository>
         <repository>
+            <id>eclipse-mdt</id>
+            <layout>p2</layout>
+            <url>http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/kepler/</url>
+        </repository>
+        <repository>
             <id>eclipse-epsilon</id>
             <layout>p2</layout>
             <url>http://download.eclipse.org/epsilon/updates/</url>
