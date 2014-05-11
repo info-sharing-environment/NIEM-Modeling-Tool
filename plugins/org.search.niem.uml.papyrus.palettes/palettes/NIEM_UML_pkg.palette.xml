@@ -2,7 +2,7 @@
 <paletteDefinition>
     <content>
         <drawer iconpath="/icons/drawer.gif" id="NIEM_UML_Drawer" name="NIEM UML">
-            <aspectTool description="Create a NIEM-conformant Namespace"
+            <aspectTool description="A «Namespace» package models a NIEM data schema"
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_namespace.png" id="package.tool.package_NIEM_COMMON_NAMESPACE"
                 name="NIEM-conformant Namespace" refToolId="package.tool.package">
                 <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
@@ -13,7 +13,7 @@
                 <postAction id="org.search.niem.uml.papyrus.palettes.createDiagramActionProvider">
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a PIM Information Model"
+            <aspectTool description="An «InformationModel» package models a NIEM data schema"
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_pim_information_model.png"
                 id="package.tool.package_NIEM_PIM_INFORMATION_DIMENSION" name="PIM Information Model" refToolId="package.tool.package">
                 <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">

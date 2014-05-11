@@ -2,7 +2,7 @@
 <paletteDefinition>
     <content>
         <drawer iconpath="/icons/drawer.gif" id="NIEM_UML_Drawer" name="NIEM UML">
-            <aspectTool description="Create a NIEM Adapter Type (AssociationClass)"
+            <aspectTool description="An adapter type is a NIEM object type that adapts external models for use within NIEM. An adapter type creates a new class of object that embodies a single concept composed of external elements."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_adapter_type_association_class.png"
                 id="clazz.tool.associationclass_NIEM_COMMON_ADAPTER_TYPE" name="Adapter Type (AssociationClass)" refToolId="clazz.tool.associationclass">
                 <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
@@ -11,7 +11,7 @@
                     </stereotypesToApply>
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a NIEM Adapter Type (Class)"
+            <aspectTool description="An adapter type is a NIEM object type that adapts external models for use within NIEM. An adapter type creates a new class of object that embodies a single concept composed of external elements."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_adapter_type_class.png"
                 id="clazz.tool.class_NIEM_COMMON_ADAPTER_TYPE" name="Adapter Type (Class)" refToolId="clazz.tool.class">
                 <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
@@ -20,7 +20,7 @@
                     </stereotypesToApply>
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a NIEM Association Type (AssociationClass)"
+            <aspectTool description="A NIEM association is a specific relationship between NIEM objects. Associations are used when a simple NIEM property is insufficient to model the relationship clearly and when properties of the relationship exist that are not attributable to the objects being related. Each end of the NIEM association is represented by a UML association end.&#xd;Note that a UML association class may also be used."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_association_type_association_class.png"
                 id="clazz.tool.associationclass_NIEM_COMMON_ASSOCIATION_TYPE" name="Association Type (AssociationClass)"
                 refToolId="clazz.tool.associationclass">
@@ -30,7 +30,7 @@
                     </stereotypesToApply>
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a NIEM Association Type (Class)"
+            <aspectTool description="A NIEM association is a specific relationship between NIEM objects. Associations are used when a simple NIEM property is insufficient to model the relationship clearly and when properties of the relationship exist that are not attributable to the objects being related. Each end of the NIEM association is represented by a UML association end.&#xd;Note that a UML association class may also be used."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_association_type_class.png"
                 id="clazz.tool.class_NIEM_COMMON_ASSOCIATION_TYPE" name="Association Type (Class)" refToolId="clazz.tool.class">
                 <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
@@ -39,7 +39,7 @@
                     </stereotypesToApply>
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a NIEM Augmentation Application (Usage)"
+            <aspectTool description="Augmentation application is a relation between a property whose type is an «AugmentationType» and a class. It restricts the classes that may have the property.&#xd;Note that an «Augments» generalization may also be used."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_augmentation_application_usage.png"
                 id="clazz.tool.usage_NIEM_COMMON_AUGMENTATION_APPLICATION" name="Augmentation Application (Usage)" refToolId="clazz.tool.usage">
                 <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
@@ -48,7 +48,7 @@
                     </stereotypesToApply>
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a NIEM Augmentation Type (AssociationClass)"
+            <aspectTool description="A NIEM augmentation type is a complex type that provides a reusable block of data that may be added to object types or association types."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_augmentation_type_association_class.png"
                 id="clazz.tool.associationclass_NIEM_COMMON_AUGMENTATION_TYPE" name="Augmentation Type (AssociationClass)"
                 refToolId="clazz.tool.associationclass">
@@ -58,7 +58,7 @@
                     </stereotypesToApply>
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a NIEM Augmentation Type (Class)"
+            <aspectTool description="A NIEM augmentation type is a complex type that provides a reusable block of data that may be added to object types or association types."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_augmentation_type_class.png"
                 id="clazz.tool.class_NIEM_COMMON_AUGMENTATION_TYPE" name="Augmentation Type (Class)" refToolId="clazz.tool.class">
                 <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
@@ -67,7 +67,7 @@
                     </stereotypesToApply>
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a NIEM Augments (Generalization)"
+            <aspectTool description="Augments specifies what type an augmentation augments. Multiple augmentations may be inherited by a type or used as the types of properties.&#xd;Note that a property with an «AugmentationApplication» as its type may also be used."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_augments_generalization.png"
                 id="clazz.tool.generalization_NIEM_PIM_AUGMENTS" name="Augments (Generalization)" refToolId="clazz.tool.generalization">
                 <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
@@ -76,7 +76,7 @@
                     </stereotypesToApply>
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a NIEM Choice (Class)"
+            <aspectTool description="A choice is a group of properties such that when used as the type of a property exactly one of them may have a value in any instance of an enclosing type."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_choice_class.png" id="clazz.tool.class_NIEM_COMMON_CHOICE"
                 name="Choice (Class)" refToolId="clazz.tool.class">
                 <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
@@ -85,7 +85,7 @@
                     </stereotypesToApply>
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a NIEM List"
+            <aspectTool description="A list is a simple type having values each of which consists of a finite-length (possibly empty) sequence of atomic values. The values in a list are drawn from some atomic simple type (or from a union of atomic simple types), which is the item type of the list."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_list_data_type.png" id="clazz.tool.datatype_NIEM_COMMON_LIST"
                 name="List (DataType)" refToolId="clazz.tool.datatype">
                 <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
@@ -94,7 +94,7 @@
                     </stereotypesToApply>
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a NIEM Metadata Application (Usage)"
+            <aspectTool description="Metadata application is a relation between a «MetadataType» class and any other class. It restricts the types that may have the metadata."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_metadata_application_usage.png"
                 id="clazz.tool.usage_NIEM_COMMON_METADATA_APPLICATION" name="Metadata Application (Usage)" refToolId="clazz.tool.usage">
                 <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
@@ -103,7 +103,7 @@
                     </stereotypesToApply>
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a NIEM Metadata Type (AssociationClass)"
+            <aspectTool description="NIEM metadata is defined as &quot;data about data.&quot; This may include information such as the security of a piece of data or the source of the data. A Metadata Type models metadata."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_metadata_type_association_class.png"
                 id="clazz.tool.associationclass_NIEM_COMMON_METADATA_TYPE" name="Metadata Type (AssociationClass)" refToolId="clazz.tool.associationclass">
                 <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
@@ -112,7 +112,7 @@
                     </stereotypesToApply>
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a NIEM Metadata Type (Class)"
+            <aspectTool description="NIEM metadata is defined as &quot;data about data.&quot; This may include information such as the security of a piece of data or the source of the data. A Metadata Type models metadata."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_metadata_type_class.png"
                 id="clazz.tool.class_NIEM_COMMON_METADATA_TYPE" name="Metadata Type (Class)" refToolId="clazz.tool.class">
                 <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
@@ -121,7 +121,7 @@
                     </stereotypesToApply>
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a NIEM Object Type (Association Class)"
+            <aspectTool description="Object type is the default for UML classes.&#xd;A NIEM object type represents data about things with their own identity and lifespan that have some existence. An object may or may not represent a physical thing. It may represent something conceptual."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_object_type_association_class.png"
                 id="clazz.tool.associationclass_NIEM_COMMON_OBJECT_TYPE" name="Object Type (AssociationClass)" refToolId="clazz.tool.associationclass">
                 <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
@@ -130,7 +130,7 @@
                     </stereotypesToApply>
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a NIEM Object Type (Class)"
+            <aspectTool description="Object type is the default for UML classes.&#xd;A NIEM object type represents data about things with their own identity and lifespan that have some existence. An object may or may not represent a physical thing. It may represent something conceptual."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_object_type_class.png"
                 id="clazz.tool.class_NIEM_COMMON_OBJECT_TYPE" name="Object Type (Class)" refToolId="clazz.tool.class">
                 <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
@@ -139,7 +139,7 @@
                     </stereotypesToApply>
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a NIEM Property Holder (Class)"
+            <aspectTool description="Property holders are used to define properties that have no specific owner, or &quot;top level&quot; properties. These properties are generally referenced by other properties."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_property_holder_class.png"
                 id="clazz.tool.class_NIEM_COMMON_PROPERTY_HOLDER" name="Property Holder (Class)" refToolId="clazz.tool.class">
                 <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
@@ -148,7 +148,7 @@
                     </stereotypesToApply>
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a NIEM References (Realization)"
+            <aspectTool description="A References realization reuses class and property definitions from another class or namespace and is the basis for reusing NIEM reference namespaces."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_references_realization.png"
                 id="clazz.tool.realization_NIEM_COMMON_REFERENCES" name="References (Realization)" refToolId="clazz.tool.realization">
                 <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
@@ -157,7 +157,7 @@
                     </stereotypesToApply>
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a NIEM Restriction (InterfaceRealization)"
+            <aspectTool description="A Restriction Realization represents a relationship between two type definitions: the first is derived by restriction from the second. The two types must either both be NIEMType Classes or both be DataTypes. If the two types are Classes, then the attributes of the client class must be a subset of the attributes of the supplier class and omitted attributes must have a multiplicity lower bound of zero. if the two classes are DataTypes, then the client type is considered to have a value space that is a subset of that of the supplier, as may be further specified using a ValueRestriction stereotype on the client.&#xd;This relationship is implemented in XML Schema through the base attribute on the xsd:restriction element of the first type definition, the actual value of which resolves to the second type definition. If a type is a ValueRestriction the generalization owned by that type is implicitly an XSDRestriction."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_code_type_interface_realization.png"
                 id="clazz.tool.interfacerealization_NIEM_COMMON_RESTRICTION" name="Restriction (InterfaceRealization)"
                 refToolId="clazz.tool.interfacerealization">
@@ -167,7 +167,7 @@
                     </stereotypesToApply>
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a NIEM Restriction (Realization)"
+            <aspectTool description="A Restriction Realization represents a relationship between two type definitions: the first is derived by restriction from the second. The two types must either both be NIEMType Classes or both be DataTypes. If the two types are Classes, then the attributes of the client class must be a subset of the attributes of the supplier class and omitted attributes must have a multiplicity lower bound of zero. if the two classes are DataTypes, then the client type is considered to have a value space that is a subset of that of the supplier, as may be further specified using a ValueRestriction stereotype on the client.&#xd;This relationship is implemented in XML Schema through the base attribute on the xsd:restriction element of the first type definition, the actual value of which resolves to the second type definition. If a type is a ValueRestriction the generalization owned by that type is implicitly an XSDRestriction."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_code_type_realization.png"
                 id="clazz.tool.realization_NIEM_COMMON_RESTRICTION" name="Restriction (Realization)" refToolId="clazz.tool.realization">
                 <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
@@ -176,7 +176,7 @@
                     </stereotypesToApply>
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a NIEM Restriction (Substitution)"
+            <aspectTool description="A Restriction Realization represents a relationship between two type definitions: the first is derived by restriction from the second. The two types must either both be NIEMType Classes or both be DataTypes. If the two types are Classes, then the attributes of the client class must be a subset of the attributes of the supplier class and omitted attributes must have a multiplicity lower bound of zero. if the two classes are DataTypes, then the client type is considered to have a value space that is a subset of that of the supplier, as may be further specified using a ValueRestriction stereotype on the client.&#xd;This relationship is implemented in XML Schema through the base attribute on the xsd:restriction element of the first type definition, the actual value of which resolves to the second type definition. If a type is a ValueRestriction the generalization owned by that type is implicitly an XSDRestriction."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_code_type_substitution.png"
                 id="clazz.tool.substitution_NIEM_COMMON_RESTRICTION" name="Restriction (Substitution)" refToolId="clazz.tool.substitution">
                 <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
@@ -185,7 +185,7 @@
                     </stereotypesToApply>
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a NIEM Role Of (Property)"
+            <aspectTool description="NIEM differentiates between an object and a role of the object. The term &quot;role&quot; is used here to mean a function or part played by some object. Having a «RoleOf» property defines the owning class as a role. The role may have multiple occurrences for each base type."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_role_of_property.png"
                 id="clazz.tool.property_NIEM_PIM_ROLE_OF" name="Role Of (Property)" refToolId="clazz.tool.property">
                 <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
@@ -194,7 +194,7 @@
                     </stereotypesToApply>
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a NIEM Role Played By (Generalization)"
+            <aspectTool description="RolePlayedBy defines the subtype as a role of the supertype. Such a role may have at most one instance per base type."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_role_played_by_generalization.png"
                 id="clazz.tool.generalization_NIEM_PIM_ROLE_PLAYED_BY" name="Role Played By (Generalization)" refToolId="clazz.tool.generalization">
                 <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
@@ -203,7 +203,7 @@
                     </stereotypesToApply>
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a NIEM Union"
+            <aspectTool description="A union is a simple type whose values are the union of the values of one or more other simple types, which are the member types of the union."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_union_data_type.png"
                 id="clazz.tool.datatype_NIEM_COMMON_UNION" name="Union (DataType)" refToolId="clazz.tool.datatype">
                 <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
@@ -212,7 +212,7 @@
                     </stereotypesToApply>
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a NIEM Union Of (Usage)"
+            <aspectTool description="A union is a simple type whose values are the union of the values of one or more other simple types, which are the member types of the union."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_union_of_usage.png" id="clazz.tool.usage_NIEM_COMMON_UNION"
                 name="Union Of (Usage)" refToolId="clazz.tool.usage">
                 <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
@@ -221,7 +221,7 @@
                     </stereotypesToApply>
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a NIEM Value Restriction (DataType)"
+            <aspectTool description="The «ValueRestriction» stereotype applies to a UML data type that is a specialization of a more general data type. It defines restrictions on which values of the general data type are allowed as values of the specialized data type."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_value_restriction_data_type.png"
                 id="clazz.tool.datatype_NIEM_COMMON_VALUE_RESTRICTION" name="Value Restriction (DataType)" refToolId="clazz.tool.datatype">
                 <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
@@ -230,7 +230,7 @@
                     </stereotypesToApply>
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a NIEM Value Restriction (Enumeration)"
+            <aspectTool description="The «ValueRestriction» stereotype applies to a UML data type that is a specialization of a more general data type. It defines restrictions on which values of the general data type are allowed as values of the specialized data type."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_value_restriction_enumeration.png"
                 id="clazz.tool.enumeration_NIEM_COMMON_VALUE_RESTRICTION" name="Value Restriction (Enumeration)" refToolId="clazz.tool.enumeration">
                 <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
@@ -239,7 +239,7 @@
                     </stereotypesToApply>
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a NIEM Value Restriction (PrimitiveType)"
+            <aspectTool description="The «ValueRestriction» stereotype applies to a UML data type that is a specialization of a more general data type. It defines restrictions on which values of the general data type are allowed as values of the specialized data type."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_value_restriction_primitive_type.png"
                 id="clazz.tool.primitivetype_NIEM_COMMON_VALUE_RESTRICTION" name="Value Restriction (PrimitiveType)"
                 refToolId="clazz.tool.primitivetype">
@@ -249,7 +249,7 @@
                     </stereotypesToApply>
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a NIEM XSD Any Property"
+            <aspectTool description="An «XSDAnyProperty» property may have a value of any type. It is implemented in XML schema as an xsd:any."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_xsd_any_property.png"
                 id="clazz.tool.property_NIEM_PSM_XSD_ANY_PROPERTY" name="XSD Any Property (Property)" refToolId="clazz.tool.property">
                 <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
@@ -258,7 +258,7 @@
                     </stereotypesToApply>
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a NIEM XSD Property"
+            <aspectTool description="A property relates a NIEM object (the subject) to another object or to a value (the object). Property data describes an object as having a characteristic with a specific value or a particular relationship to another object."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_xsd_property.png" id="clazz.tool.property_NIEM_PSM_XSD_PROPERTY"
                 name="XSD Property (Property)" refToolId="clazz.tool.property">
                 <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
@@ -267,7 +267,7 @@
                     </stereotypesToApply>
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a NIEM XSD Representation Restriction (DataType)"
+            <aspectTool description="Restricts how data is formatted in XML."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_xsd_representation_restriction_data_type.png"
                 id="clazz.tool.datatype_NIEM_PSM_XSD_REPRESENTATION_RESTRICTION" name="XSD Representation Restriction (DataType)"
                 refToolId="clazz.tool.datatype">
@@ -277,7 +277,7 @@
                     </stereotypesToApply>
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a NIEM XSD Representation Restriction (Enumeration)"
+            <aspectTool description="Restricts how data is formatted in XML."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_xsd_representation_restriction_enumeration.png"
                 id="clazz.tool.enumeration_NIEM_PSM_XSD_REPRESENTATION_RESTRICTION" name="XSD Representation Restriction (Enumeration)"
                 refToolId="clazz.tool.enumeration">
@@ -287,7 +287,7 @@
                     </stereotypesToApply>
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a NIEM XSD Representation Restriction (PrimitiveType)"
+            <aspectTool description="Restricts how data is formatted in XML."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_xsd_representation_restriction_primitive_type.png"
                 id="clazz.tool.primitivetype_NIEM_PSM_XSD_REPRESENTATION_RESTRICTION" name="XSD Representation Restriction (PrimitiveType)"
                 refToolId="clazz.tool.primitivetype">
@@ -297,7 +297,7 @@
                     </stereotypesToApply>
                 </postAction>
             </aspectTool>
-            <aspectTool description="Create a NIEM XSD Simple Content (Realization)"
+            <aspectTool description="The «XSDSimpleContent» stereotype represents a relationship between two type definitions: the first is a complex type definition with simple content whose content type is the second. This relationship is implemented in XML Schema through base attribute on the xsd:extension or xsd:restriction element of the first type definition, the actual value of which resolves to the second type definition."
                 iconpath="platform:/plugin/org.search.niem.uml.papyrus.palettes/icons/full/obj16/niem_xsd_simple_content_realization.png"
                 id="clazz.tool.realization_NIEM_PSM_XSD_SIMPLE_CONTENT" name="XSD Simple Content (Realization)" refToolId="clazz.tool.realization">
                 <postAction id="org.eclipse.papyrus.applystereotypeactionprovider">
