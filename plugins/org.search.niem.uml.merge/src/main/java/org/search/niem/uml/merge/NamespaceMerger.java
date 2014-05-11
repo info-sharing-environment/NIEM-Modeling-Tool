@@ -10,10 +10,10 @@
  */
 package org.search.niem.uml.merge;
 
+import static org.apache.commons.lang.StringUtils.capitalize;
 import static org.apache.commons.lang.StringUtils.defaultIfBlank;
 import static org.eclipse.emf.common.util.ECollections.indexOf;
 import static org.search.niem.uml.merge.NamespaceMergeUtil.findEquivalent;
-import static org.search.niem.uml.merge.NamespaceMergeUtil.normalize;
 import static org.search.niem.uml.util.NIEMUmlExt.isNiemNamespace;
 import static org.search.niem.uml.util.UMLExt.getName;
 import static org.search.niem.uml.util.UMLExt.isStereotypeApplication;
@@ -125,6 +125,24 @@ public class NamespaceMerger extends Copier {
             newPackagedElements.add(theCopy);
         }
         return theCopy;
+    }
+
+    private static String normalize(final String referenceLibraryName, final EObject aPIMElement) {
+        final StringBuilder theNormalizedName = new StringBuilder(getThePIMModelName(aPIMElement));
+        final String[] segments = referenceLibraryName.split("-");
+        for (final String segment : segments) {
+            theNormalizedName.append(isTitleCase(segment) ? segment.toUpperCase() : capitalize(segment));
+        }
+        theNormalizedName.append("Subset");
+        return theNormalizedName.toString();
+    }
+
+    private static String getThePIMModelName(final EObject aPIMElement) {
+        return aPIMElement.eResource().getURI().trimFileExtension().lastSegment();
+    }
+
+    private static boolean isTitleCase(final String word) {
+        return "niem".equalsIgnoreCase(word);
     }
 
     private void copyAttributes(final EObject source, final EObject target) {

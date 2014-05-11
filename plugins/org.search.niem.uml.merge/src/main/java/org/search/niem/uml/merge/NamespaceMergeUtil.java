@@ -10,9 +10,7 @@
  */
 package org.search.niem.uml.merge;
 
-import static org.apache.commons.lang.StringUtils.capitalize;
 import static org.apache.commons.lang.StringUtils.isBlank;
-import static org.apache.commons.lang.StringUtils.join;
 import static org.eclipse.uml2.uml.util.UMLUtil.findNamedElements;
 import static org.eclipse.uml2.uml.util.UMLUtil.getBaseElement;
 import static org.search.niem.uml.util.CollectionExt.allAreNull;
@@ -21,6 +19,8 @@ import static org.search.niem.uml.util.EcoreExt.get;
 import static org.search.niem.uml.util.EcoreExt.getEClass;
 import static org.search.niem.uml.util.EcoreExt.getNsURI;
 import static org.search.niem.uml.util.EcoreExt.getPackage;
+import static org.search.niem.uml.util.NIEMUmlExt.findNearestNiemNamespacePackage;
+import static org.search.niem.uml.util.NIEMUmlExt.getTargetNamespace;
 import static org.search.niem.uml.util.NIEMUmlExt.isNiemNamespace;
 import static org.search.niem.uml.util.NIEMUmlExt.isXmlPrimitiveType;
 import static org.search.niem.uml.util.UMLExt.getBody;
@@ -35,8 +35,6 @@ import static org.search.niem.uml.util.UMLExt.isStereotypeApplication;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.List;
 
 import org.apache.commons.lang.ObjectUtils;
@@ -56,25 +54,6 @@ import org.search.niem.uml.util.EcoreExt;
 import org.search.niem.uml.util.UMLExt;
 
 public class NamespaceMergeUtil {
-
-    static final String normalize(final String referenceLibraryName, final EObject aPIMElement) {
-        final StringBuilder theNormalizedName = new StringBuilder(getThePIMModelName(aPIMElement));
-        final String[] segments = referenceLibraryName.split("-");
-        for (final String segment : segments) {
-            theNormalizedName.append(isTitleCase(segment) ? segment.toUpperCase() : capitalize(segment));
-        }
-        theNormalizedName.append("Subset");
-        return theNormalizedName.toString();
-    }
-
-    private static String getThePIMModelName(final EObject aPIMElement) {
-        return aPIMElement.eResource().getURI().trimFileExtension().lastSegment();
-    }
-
-    private static boolean isTitleCase(final String word) {
-        return "niem".equalsIgnoreCase(word);
-    }
-
     public static Collection<Element> mapEquivalents(final Collection<EObject> referenceLibraryElements,
             final Package inThePIM) {
         final Collection<Element> pimEquivalents = new ArrayList<>();
@@ -111,8 +90,10 @@ public class NamespaceMergeUtil {
             return equivalentStereotypeApplication;
         }
         if (!isBlank(UMLExt.getName(referenceLibraryElement)) && theNameIsUnique((NamedElement) referenceLibraryElement)) {
-            return findEquivalentNamedElement(namespaceRelativePath(new LinkedList<EObject>(), referenceLibraryElement),
-                    inThePIM);
+            final NamedElement ne = (NamedElement) referenceLibraryElement;
+            if (theNameIsUnique(ne)) {
+                return findEquivalentNamedElement(ne, inThePIM);
+            }
         }
         final EObject inTheEquivalentParent = findEquivalent(getOwner(referenceLibraryElement), inThePIM);
         if (inTheEquivalentParent == null) {
@@ -121,18 +102,32 @@ public class NamespaceMergeUtil {
         return findImmediatelyContainedEquivalent(referenceLibraryElement, inTheEquivalentParent, inThePIM);
     }
 
-    private static <T extends NamedElement> T findEquivalentNamedElement(final List<EObject> ontheNamespaceRelativePath,
+    private static <T extends NamedElement> T findEquivalentNamedElement(final NamedElement referenceLibraryElement,
             final Package inThePIM) {
-        final List<String> nameSegments = new ArrayList<>(ontheNamespaceRelativePath.size() + 1);
-        nameSegments.add(inThePIM.getQualifiedName());
-        final Iterator<EObject> segments = ontheNamespaceRelativePath.iterator();
-        nameSegments.add(normalize(UMLExt.getName(segments.next()), inThePIM));
-        while (segments.hasNext()) {
-            nameSegments.add(UMLExt.getName(segments.next()));
+        // first find the target namespace of the referenceLibraryElement
+        final Package namespaceInTheReferenceLibrary = findNearestNiemNamespacePackage(referenceLibraryElement
+                .getNearestPackage());
+        if (namespaceInTheReferenceLibrary == null) {
+            return null;
         }
-        final String qualifiedName = join(nameSegments, NamedElement.SEPARATOR);
+        // then strip off the qualified path up to the namespace package qualified name - this is the relative path to the
+        // named element
+        final String referenceLibraryRelativeName = referenceLibraryElement.getQualifiedName().substring(
+                namespaceInTheReferenceLibrary.getQualifiedName().length());
+
+        // find the Package with the same targetNamespace in the PIM
+        final Package namespaceInThePIM = findPackageWithTargetNamespace(inThePIM,
+                getTargetNamespace(namespaceInTheReferenceLibrary));
+        if (namespaceInThePIM == null) {
+            return null;
+        }
+        // get the qualified name of the equivalent target namespace in the PIM
+        // append the relative path to the named element to the equivalent target namespace qualified name
+        final String qualifiedName = namespaceInThePIM.getQualifiedName() + referenceLibraryRelativeName;
+
+        // lookup the named element in the PIM
         final Collection<T> matches = findNamedElements(inThePIM.eResource(), qualifiedName, false,
-                ontheNamespaceRelativePath.get(ontheNamespaceRelativePath.size() - 1).eClass());
+                referenceLibraryElement.eClass());
         if (matches.isEmpty()) {
             return null;
         }
@@ -140,6 +135,19 @@ public class NamespaceMergeUtil {
             Activator.INSTANCE.log("Ambiguous matches found for element " + qualifiedName);
         }
         return matches.iterator().next();
+    }
+
+    private static Package findPackageWithTargetNamespace(final Package inThePackage, final String targetNamespace) {
+        if (isNiemNamespace(inThePackage) && areEqual(getTargetNamespace(inThePackage), targetNamespace)) {
+            return inThePackage;
+        }
+        for (final Package p : inThePackage.getNestedPackages()) {
+            final Package packageWithTargetNamespace = findPackageWithTargetNamespace(p, targetNamespace);
+            if (packageWithTargetNamespace != null) {
+                return packageWithTargetNamespace;
+            }
+        }
+        return null;
     }
 
     private static EObject findEquivalentStereotypeApplication(final EObject referenceLibraryElement, final Package inThePIM) {
@@ -197,8 +205,8 @@ public class NamespaceMergeUtil {
 
     private static boolean areEquivalent(final EObject aReferenceLibraryElement, final EObject aPIMElement,
             final Package inThePIM) {
-        /* @formatter:off */ 
-        return allAreNull(aReferenceLibraryElement, aPIMElement) || 
+        /* @formatter:off */
+        return allAreNull(aReferenceLibraryElement, aPIMElement) ||
                 !anyIsNull(aReferenceLibraryElement, aPIMElement)
                 && classesAreTheSame(aReferenceLibraryElement, aPIMElement)
                 && namesAreTheSame(aReferenceLibraryElement, aPIMElement)
@@ -288,8 +296,11 @@ public class NamespaceMergeUtil {
     }
 
     private static boolean namesAreTheSame(final EObject aReferenceLibraryElement, final EObject aPIMElement) {
-        return areEqual(isNiemNamespace(aPIMElement) ? normalize(UMLExt.getName(aReferenceLibraryElement), aPIMElement)
-                : UMLExt.getName(aReferenceLibraryElement), UMLExt.getName(aPIMElement));
+        if (isNiemNamespace(aReferenceLibraryElement) && isNiemNamespace(aPIMElement)) {
+            return areEqual(getTargetNamespace((Element) aReferenceLibraryElement),
+                    getTargetNamespace((Element) aPIMElement));
+        }
+        return areEqual(UMLExt.getName(aReferenceLibraryElement), UMLExt.getName(aPIMElement));
     }
 
     private static boolean areEqual(final Object left, final Object right) {
@@ -298,13 +309,5 @@ public class NamespaceMergeUtil {
 
     private static boolean theNameIsUnique(final NamedElement e) {
         return findNamedElements(e.eResource(), e.getQualifiedName()).size() == 1;
-    }
-
-    private static List<EObject> namespaceRelativePath(final List<EObject> acc, final EObject e) {
-        if (e == null) {
-            return acc;
-        }
-        acc.add(0, e);
-        return isNiemNamespace(e) ? acc : namespaceRelativePath(acc, getOwner(e));
     }
 }

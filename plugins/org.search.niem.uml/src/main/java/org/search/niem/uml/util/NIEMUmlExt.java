@@ -63,17 +63,26 @@ public class NIEMUmlExt {
         return p.getAppliedProfile(Model_Package_Description_Profile) != null;
     }
 
-    public static EObject findNearestNiemNamespace(final Package p) {
+    public static Package findNearestNiemNamespacePackage(final Package p) {
         if (p == null) {
             return null;
         }
-        return isNiemNamespace(p) ? p.getStereotypeApplication(getAppliedNiemNamespaceStereotype(p))
-                : findNearestNiemNamespace(p.getNestingPackage());
+        return isNiemNamespace(p) ? p : findNearestNiemNamespacePackage(p.getNestingPackage());
+    }
+
+    public static EObject findNearestNiemNamespace(final Package p) {
+        final Package _p = findNearestNiemNamespacePackage(p);
+        return _p == null ? null : _p.getStereotypeApplication(getAppliedNiemNamespaceStereotype(_p));
     }
 
     public static boolean isInReferenceLibrarySubset(final EObject e) {
         final EObject namespace = findNearestNiemNamespace(getNearestPackage(e));
         return namespace == null ? false : isReferenceLibrarySubset(getBaseElement(namespace));
+    }
+
+    public static String getReferenceLibraryNamespace(final EObject e) {
+        final EObject namespace = findNearestNiemNamespace(getNearestPackage(e));
+        return namespace == null ? null : getTargetNamespace(getBaseElement(namespace));
     }
 
     public static boolean isReferenceLibrarySubset(final EObject e) {
@@ -317,8 +326,8 @@ public class NIEMUmlExt {
 
     private static String getXSDElementQualifiedName(final Property p) {
         return new StringBuilder()
-                .append(org.search.niem.uml.library.Activator.INSTANCE.toPrefix(findTargetNamespace(p.getNearestPackage())))
-                .append(':').append(UMLExt.getName(p)).toString();
+        .append(org.search.niem.uml.library.Activator.INSTANCE.toPrefix(findTargetNamespace(p.getNearestPackage())))
+        .append(':').append(UMLExt.getName(p)).toString();
     }
 
     public static boolean isXmlPrimitiveType(final EObject e) {
