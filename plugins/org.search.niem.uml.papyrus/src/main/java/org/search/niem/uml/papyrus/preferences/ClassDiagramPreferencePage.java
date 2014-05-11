@@ -15,6 +15,7 @@ import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_CLAS
 import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_CLASS_DIAGRAM_ELEMENT_WIDTH;
 import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_CLASS_DIAGRAM_VERTICAL_PADDING;
 import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_DISPLAY_MESSAGE_FOR_DELETE_ACTION;
+import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_DISPLAY_MESSAGE_FOR_HIDE_ACTION;
 import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_INITIAL_PROPERTY_AGGREGATION;
 import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_NIEM_REFERENCE_ELEMENT_ILLEGAL_COLOR;
 import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_NIEM_REFERENCE_ELEMENT_ILLEGAL_FONT;
@@ -54,12 +55,15 @@ public class ClassDiagramPreferencePage extends FieldEditorPreferencePage implem
         addField(new BooleanFieldEditor(P_DISPLAY_MESSAGE_FOR_DELETE_ACTION,
                 Activator.INSTANCE.getString("_UI_ClassDiagramPreferencePage_displayMessageForDeleteAction"),
                 getFieldEditorParent()));
+        addField(new BooleanFieldEditor(P_DISPLAY_MESSAGE_FOR_HIDE_ACTION,
+                Activator.INSTANCE.getString("_UI_ClassDiagramPreferencePage_displayMessageForHideAction"),
+                getFieldEditorParent()));
         addField(new ComboFieldEditor(P_INITIAL_PROPERTY_AGGREGATION,
                 Activator.INSTANCE.getString("_UI_ClassDiagramPreferencePage_initialPropertyAggregation"), new String[][] {
-                        { AggregationKind.NONE_LITERAL.getName(), AggregationKind.NONE_LITERAL.getName() },
-                        { AggregationKind.SHARED_LITERAL.getName(), AggregationKind.SHARED_LITERAL.getName() },
-                        { AggregationKind.COMPOSITE_LITERAL.getName(), AggregationKind.COMPOSITE_LITERAL.getName() } },
-                getFieldEditorParent()));
+            { AggregationKind.NONE_LITERAL.getName(), AggregationKind.NONE_LITERAL.getName() },
+            { AggregationKind.SHARED_LITERAL.getName(), AggregationKind.SHARED_LITERAL.getName() },
+            { AggregationKind.COMPOSITE_LITERAL.getName(), AggregationKind.COMPOSITE_LITERAL.getName() } },
+            getFieldEditorParent()));
         addField(new ColorFieldEditor(P_NIEM_REFERENCE_ELEMENT_ILLEGAL_COLOR,
                 Activator.INSTANCE.getString("_UI_ClassDiagramPreferencePage_niemReferenceElementIllegalColor"),
                 getFieldEditorParent()));

@@ -134,6 +134,46 @@
           </activeWhen>
        </handler>
        <handler
+             class="org.search.niem.uml.papyrus.editors.handlers.DeleteFromDiagramCommandHandler"
+             commandId="org.eclipse.papyrus.uml.diagram.common.commands.DeleteFromDiagram">
+          <activeWhen>
+             <and>
+                <with
+                      variable="activeContexts">
+                   <iterate
+                         ifEmpty="false"
+                         operator="or">
+                      <equals
+                            value="org.search.niem.uml.papyrus.editors.context">
+                      </equals>
+                   </iterate>
+                </with>
+                <with
+                      variable="deleteInDiagram">
+                   <equals
+                         value="enabled">
+                   </equals>
+                </with>
+                <with
+                      variable="activeEditorId">
+                   <equals
+                         value="org.eclipse.papyrus.infra.core.papyrusEditor">
+                   </equals>
+                </with>
+                <with
+                      variable="selection">
+                   <iterate
+                         ifEmpty="false"
+                         operator="and">
+                      <instanceof
+                            value="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+                      </instanceof>
+                   </iterate>
+                </with>
+             </and>
+          </activeWhen>
+       </handler>
+       <handler
              class="org.search.niem.uml.papyrus.editors.handlers.ShowQualifiedName"
              commandId="org.search.niem.uml.papyrus.editors.commands.showQualifiedName">
        </handler>

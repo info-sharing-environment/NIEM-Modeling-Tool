@@ -19,6 +19,7 @@ import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_CLAS
 import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_CLASS_DIAGRAM_VERTICAL_PADDING;
 import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_DEFAULT_MODEL_NAME;
 import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_DISPLAY_MESSAGE_FOR_DELETE_ACTION;
+import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_DISPLAY_MESSAGE_FOR_HIDE_ACTION;
 import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_DOMAINS;
 import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_EXCHANGE_MODEL_TARGET_NAMESPACE;
 import static org.search.niem.uml.papyrus.preferences.PreferenceConstants.P_EXTENSION_MODEL_TARGET_NAMESPACE;
@@ -70,5 +71,6 @@ public class PreferenceInitializer extends AbstractPreferenceInitializer {
 
         // TODO: remove this in Luna
         store.setDefault(P_DISPLAY_MESSAGE_FOR_DELETE_ACTION, true);
+        store.setDefault(P_DISPLAY_MESSAGE_FOR_HIDE_ACTION, true);
     }
 }

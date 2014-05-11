@@ -43,4 +43,5 @@ public interface PreferenceConstants {
 
     // TODO: remove this in Luna
     String P_DISPLAY_MESSAGE_FOR_DELETE_ACTION = "displayMessageForDeleteActionPreferenceKey";
+    String P_DISPLAY_MESSAGE_FOR_HIDE_ACTION = "displayMessageForHideActionPreferenceKey";
 }
