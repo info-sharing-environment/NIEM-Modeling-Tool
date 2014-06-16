@@ -10,15 +10,26 @@
  */
 package org.search.niem.uml.evl.validation;
 
+import org.eclipse.uml2.uml.Element;
 import org.search.niem.uml.evl.Activator;
+import org.search.niem.uml.util.NIEMUmlExt;
 import org.search.niem.uml.util.NiemValidator;
 
 public class NiemValidationTool extends NiemValidator {
+
+    public String getMessage(final String key) {
+        return Activator.INSTANCE.getString(key);
+    }
+
     public String getMessage(final String key, final Object substitution) {
         return Activator.INSTANCE.getString(key, new Object[] { substitution });
     }
 
-    public String getMessage(final String key) {
-        return Activator.INSTANCE.getString(key);
+    public String getMessage(final String key, final Object substitution1, final Object substitution2) {
+        return Activator.INSTANCE.getString(key, new Object[] { substitution1, substitution2 });
+    }
+
+    public boolean isInReferenceLibrarySubset(final Element e) {
+        return NIEMUmlExt.isInReferenceLibrarySubset(e);
     }
 }

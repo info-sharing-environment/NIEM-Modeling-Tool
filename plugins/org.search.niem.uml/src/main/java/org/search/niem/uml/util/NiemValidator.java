@@ -17,6 +17,8 @@ import static org.apache.commons.lang.StringUtils.isNotBlank;
 import java.util.Collection;
 import java.util.List;
 
+import org.eclipse.uml2.uml.Element;
+
 public class NiemValidator {
 
     private static final Collection<String> NAMESPACE_QUALIFIED_NAMES = asList(NIEMTypes.Namespace,
@@ -41,6 +43,10 @@ public class NiemValidator {
         return NIEMTypes.NIEM_PIM_Profile.equals(qualifiedName);
     }
 
+    public boolean isReferenceName(final String qualifiedName) {
+        return NIEMTypes.ReferenceName.equals(qualifiedName);
+    }
+
     public boolean isPropertyHolder(final String qualifiedName) {
         return NIEMTypes.PropertyHolder.equals(qualifiedName);
     }
@@ -62,6 +68,10 @@ public class NiemValidator {
                 return false;
             }
         }
+        return true;
+    }
+
+    public boolean isValidNiemName(final Element e) {
         return true;
     }
 }

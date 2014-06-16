@@ -1,0 +1,61 @@
+/*
+ * This program and the accompanying materials are made available
+ * under the terms of the Eclipse Public License v1.0 which
+ * accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *   SEARCH Group, Incorporated - initial API and implementation
+ *
+ */
+pre {
+    var validator = new Native('org.search.niem.uml.evl.validation.NiemValidationTool');
+}
+
+context Classifier {
+
+    guard : self.isInReferenceLibrarySubset() and self.hasNiemName()
+    
+    critique ValidNiemName {
+        check : validator.isValidNiemName(self)
+        message : validator.getMessage('_UI_critique_invalid_niemName', self.name, self.getNiemName())
+    }
+    
+    critique NotDuplicateNiemName {
+        check : not(self.isDuplicateNiemName())
+        message : validator.getMessage('_UI_critique_duplicate_niemName', self.name, self.getNiemName())
+    }
+    
+    critique NotConflictingNiemName {
+        check : not(self.isConflictingNiemName())
+        message : validator.getMessage('_UI_critique_conflicting_niemName', self.name, self.getNiemName())
+    }
+}
+
+operation Element isConflictingNiemName() : Boolean {
+    var niemName:String = self.getNiemName();
+    var niemNameWithType:String = niemName + 'Type';
+    return self.owner.ownedElements->exists(e|e <> self and e.isKindOf(NamedElement) and e.name.isDefined() and (niemName = e.name or niemNameWithType = e.name or niemName = e.name + 'Type'));
+}
+
+operation Element isDuplicateNiemName() : Boolean {
+    var niemName:String = self.getNiemName();
+    var niemNameWithType:String = niemName + 'Type';
+    return self.owner.ownedElements->exists(e|e <> self and e.hasNiemName() and (niemName = e.getNiemName() or niemNameWithType = e.getNiemName() or niemName = e.getNiemName() + 'Type'));
+}
+
+operation Element isInReferenceLibrarySubset() : Boolean {
+    return validator.isInReferenceLibrarySubset(self);
+}
+
+operation Element getNiemName() : String {
+    return self.getValue(self.appliedStereotypes.selectOne(s|s.isNiemReferenceName()), 'NIEMName');
+}
+
+operation Stereotype isNiemReferenceName() : Boolean {
+    return validator.isReferenceName(self.qualifiedName);
+}
+
+operation Element hasNiemName() : Boolean {
+    return self.appliedStereotypes->exists(s|s.isNiemReferenceName()) and self.getNiemName().isDefined();
+}
