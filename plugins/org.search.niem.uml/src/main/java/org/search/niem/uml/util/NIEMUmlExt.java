@@ -11,6 +11,7 @@
 package org.search.niem.uml.util;
 
 import static java.util.Collections.singletonList;
+import static org.apache.commons.lang.StringUtils.isBlank;
 import static org.eclipse.uml2.uml.util.UMLUtil.getBaseElement;
 import static org.eclipse.uml2.uml.util.UMLUtil.setTaggedValue;
 import static org.search.niem.uml.util.EcoreExt.get;
@@ -31,6 +32,7 @@ import java.util.Date;
 import java.util.LinkedHashSet;
 import java.util.List;
 
+import org.apache.commons.lang.ObjectUtils;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EFactory;
 import org.eclipse.emf.ecore.EObject;
@@ -107,6 +109,10 @@ public class NIEMUmlExt {
         return getAppliedReferencesStereotype(e) != null;
     }
 
+    public static boolean hasNiemName(final EObject e) {
+        return getAppliedReferenceNameStereotype(e) != null;
+    }
+
     private static Stereotype getAppliedNiemNamespaceStereotype(final EObject e) {
         return UMLPackage.Literals.ELEMENT.isInstance(e) ? ((Element) e).getAppliedStereotype(InformationModel) : null;
     }
@@ -115,8 +121,8 @@ public class NIEMUmlExt {
         return e.getStereotypeApplication(getAppliedReferenceNameStereotype(e));
     }
 
-    private static Stereotype getAppliedReferenceNameStereotype(final Element e) {
-        return e.getAppliedStereotype(ReferenceName);
+    private static Stereotype getAppliedReferenceNameStereotype(final EObject e) {
+        return UMLPackage.Literals.ELEMENT.isInstance(e) ? ((Element) e).getAppliedStereotype(ReferenceName) : null;
     }
 
     private static EObject getMpdStereotypeApplication(final Element e) {
@@ -164,6 +170,10 @@ public class NIEMUmlExt {
 
     public static Element findMPD(final Resource theUmlResource) {
         return findMPD(getTheRoot(theUmlResource));
+    }
+
+    public static String getReferenceNiemName(final Element e) {
+        return (String) e.getValue(getAppliedReferenceNameStereotype(e), "NIEMName");
     }
 
     public static String getTargetNamespace(final Element e) {
@@ -326,8 +336,8 @@ public class NIEMUmlExt {
 
     private static String getXSDElementQualifiedName(final Property p) {
         return new StringBuilder()
-        .append(org.search.niem.uml.library.Activator.INSTANCE.toPrefix(findTargetNamespace(p.getNearestPackage())))
-        .append(':').append(UMLExt.getName(p)).toString();
+                .append(org.search.niem.uml.library.Activator.INSTANCE.toPrefix(findTargetNamespace(p.getNearestPackage())))
+                .append(':').append(UMLExt.getName(p)).toString();
     }
 
     public static boolean isXmlPrimitiveType(final EObject e) {
@@ -354,4 +364,29 @@ public class NIEMUmlExt {
         setMPDPointOfContactPhoneNumbers(thePOCTypeInstance, phoneNumbers);
         return thePOCTypeInstance;
     }
+
+    public static boolean namesMatch(final EObject aReferenceLibraryElement, final EObject aPIMElement) {
+        return niemNameMatches(aPIMElement, aReferenceLibraryElement)
+                || namesMatch(UMLExt.getName(aPIMElement), UMLExt.getName(aReferenceLibraryElement));
+    }
+
+    private static boolean niemNameMatches(final EObject pimElement, final EObject referenceLibraryElement) {
+        if (hasNiemName(pimElement)) {
+            final String niemName = getReferenceNiemName((Element) pimElement);
+            if (!isBlank(niemName)) {
+                return namesMatch(niemName, UMLExt.getName(referenceLibraryElement));
+            }
+        }
+        return false;
+    }
+
+    private static boolean namesMatch(final String pimElementName, final String referenceLibraryElementName) {
+        return areEqual(referenceLibraryElementName, pimElementName) || referenceLibraryElementName.endsWith("Type")
+                && areEqual(referenceLibraryElementName, pimElementName + "Type");
+    }
+
+    private static boolean areEqual(final Object left, final Object right) {
+        return ObjectUtils.equals(left, right);
+    }
+
 }

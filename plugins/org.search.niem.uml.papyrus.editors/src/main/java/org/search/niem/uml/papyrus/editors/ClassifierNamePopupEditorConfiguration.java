@@ -10,17 +10,22 @@
  */
 package org.search.niem.uml.papyrus.editors;
 
+import static org.apache.commons.lang.StringUtils.isBlank;
 import static org.eclipse.emf.ecore.util.EcoreUtil.getObjectsByType;
 import static org.eclipse.jface.dialogs.MessageDialog.openConfirm;
 import static org.eclipse.papyrus.infra.gmfdiag.common.model.NotationUtils.getNotationResource;
 import static org.search.niem.uml.papyrus.util.PapyrusExt.delete;
+import static org.search.niem.uml.util.NIEMUmlExt.getReferenceNiemName;
+import static org.search.niem.uml.util.NIEMUmlExt.hasNiemName;
 import static org.search.niem.uml.util.NIEMUmlExt.isInReferenceLibrarySubset;
 import static org.search.niem.uml.util.UMLExt.collectOwnedElementsAndRelationships;
 import static org.search.niem.uml.util.UMLExt.getName;
 import static org.search.niem.uml.util.UMLExt.setName;
 
 import java.util.Collection;
+import java.util.Collections;
 
+import org.apache.commons.lang.ObjectUtils;
 import org.eclipse.core.commands.operations.IOperationHistory;
 import org.eclipse.core.commands.operations.IOperationHistoryListener;
 import org.eclipse.core.commands.operations.IUndoContext;
@@ -47,9 +52,10 @@ import org.eclipse.ui.PlatformUI;
 import org.eclipse.uml2.uml.Comment;
 import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.UMLPackage;
+import org.search.niem.uml.util.UMLExt;
 
 public abstract class ClassifierNamePopupEditorConfiguration extends DefaultDirectEditorConfiguration implements
-        IPopupEditorConfiguration {
+IPopupEditorConfiguration {
 
     private final EClass type;
 
@@ -84,12 +90,12 @@ public abstract class ClassifierNamePopupEditorConfiguration extends DefaultDire
                 final TransactionalEditingDomain theDomain, final CommandStack theCommandStack) {
             final SetName setName = theCommandStack instanceof IWorkspaceCommandStack
                     && theLastOperationCreatedTheElement(theSemanticElement, (IWorkspaceCommandStack) theCommandStack) ? new SetNameTheFirstTime(
-                    theDomain, theNewName, theSemanticElement, (IWorkspaceCommandStack) theCommandStack) : new Rename(
-                    theDomain, theNewName, theSemanticElement, graphicalEditPart.getViewer().getControl().getShell());
-            if (setName.confirm()) {
-                theCommandStack.execute(setName);
-                setName.after();
-            }
+                            theDomain, theNewName, theSemanticElement, (IWorkspaceCommandStack) theCommandStack) : new Rename(
+                                    theDomain, theNewName, theSemanticElement, graphicalEditPart.getViewer().getControl().getShell());
+                            if (setName.confirm()) {
+                                theCommandStack.execute(setName);
+                                setName.after();
+                            }
         }
 
         private void handleCancelation(final EObject theSemanticElement, final TransactionalEditingDomain theDomain,
@@ -157,7 +163,7 @@ public abstract class ClassifierNamePopupEditorConfiguration extends DefaultDire
         }
 
         private static abstract class SetName extends RecordingCommand {
-            private final String theNewName;
+            protected final String theNewName;
             protected final EObject theSemanticElement;
 
             public SetName(final TransactionalEditingDomain domain, final String label, final String theNewName,
@@ -212,8 +218,24 @@ public abstract class ClassifierNamePopupEditorConfiguration extends DefaultDire
                 this.shell = shell;
             }
 
+            private boolean theNameIsTheSame() {
+                if (hasNiemName(theSemanticElement) && !isBlank(getReferenceNiemName((Element) theSemanticElement))) {
+                    return true;
+                }
+                final String theOldName = UMLExt.getName(theSemanticElement);
+                if (ObjectUtils.equals(theOldName + "Type", theNewName)
+                        || ObjectUtils.equals(theOldName, theNewName + "Type")) {
+                    return true;
+                }
+                return false;
+            }
+
             @Override
             protected final boolean confirm() {
+                if (theNameIsTheSame()) {
+                    ownedElementsAndRelationships = Collections.emptySet();
+                    return true;
+                }
                 ownedElementsAndRelationships = collectOwnedElementsAndRelationships(theSemanticElement);
                 if (ownedElementsAndRelationships.isEmpty()) {
                     return true;
@@ -275,7 +297,7 @@ public abstract class ClassifierNamePopupEditorConfiguration extends DefaultDire
                                 theCommandStack.undo();
                             } else {
                                 Activator.INSTANCE
-                                        .log("Unable to cascade the undo after the element label change was undone. The Reference Library Subset may be in an illegal state.");
+                                .log("Unable to cascade the undo after the element label change was undone. The Reference Library Subset may be in an illegal state.");
                                 stopListening();
                             }
                         }
@@ -296,7 +318,7 @@ public abstract class ClassifierNamePopupEditorConfiguration extends DefaultDire
                                 theCommandStack.redo();
                             } else {
                                 Activator.INSTANCE
-                                        .log("Unable to cascade the redo after the create element change was redone. The Reference Library Subset may be in an illegal state.");
+                                .log("Unable to cascade the redo after the create element change was redone. The Reference Library Subset may be in an illegal state.");
                                 stopListening();
                             }
                         }

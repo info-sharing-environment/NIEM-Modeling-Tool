@@ -13,16 +13,15 @@ package org.search.niem.uml.papyrus.editors.handlers;
 import static org.eclipse.ui.handlers.HandlerUtil.getActiveEditorChecked;
 import static org.eclipse.ui.handlers.HandlerUtil.getActiveShellChecked;
 import static org.eclipse.ui.handlers.HandlerUtil.getCurrentSelectionChecked;
-import static org.eclipse.uml2.uml.util.UMLUtil.findNamedElements;
 import static org.eclipse.uml2.uml.util.UMLUtil.getBaseElement;
 import static org.search.niem.uml.util.NIEMUmlExt.findNearestNiemNamespace;
 import static org.search.niem.uml.util.NIEMUmlExt.findTargetNamespace;
+import static org.search.niem.uml.util.NIEMUmlExt.namesMatch;
 import static org.search.niem.uml.util.UMLExt.getNearestPackage;
-import static org.search.niem.uml.util.UMLExt.getQualifiedName;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
-import java.util.Collection;
+import java.util.LinkedList;
 
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
@@ -30,11 +29,13 @@ import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.jface.dialogs.ProgressMonitorDialog;
 import org.eclipse.jface.operation.IRunnableWithProgress;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.papyrus.infra.core.services.ServicesRegistry;
+import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.NamedElement;
 import org.eclipse.uml2.uml.Package;
 import org.search.niem.uml.papyrus.editors.Activator;
@@ -66,16 +67,13 @@ public class UpdateSubset extends AbstractHandler {
         if (theReferenceLibraryNamespace == null) {
             return null;
         }
-        final Collection<NamedElement> referenceLibraryElements = findNamedElements(
-                theReferenceLibraryNamespace.eResource(),
-                resolveQualifiedName(theSubsetElement, theSubsetNamespace, theReferenceLibraryNamespace), false,
-                theSubsetElement.eClass());
-        if (referenceLibraryElements.isEmpty()) {
-            return null;
-        } else if (referenceLibraryElements.size() > 1) {
-            throw new IllegalArgumentException("The element name is not unique in its namespace so it cannot be resolved.");
+        final LinkedList<Element> pathToSubsetElement = new LinkedList<>();
+        NamedElement next = (NamedElement) theSubsetElement;
+        while (next != theSubsetNamespace) {
+            pathToSubsetElement.addFirst(next);
+            next = next.getNamespace();
         }
-        return referenceLibraryElements.iterator().next();
+        return findNamedElement(theReferenceLibraryNamespace, pathToSubsetElement);
     }
 
     // TODO: move this into the indexer
@@ -102,13 +100,27 @@ public class UpdateSubset extends AbstractHandler {
         }
     }
 
-    private String resolveQualifiedName(final EObject theSubsetElement, final Package theSubsetNamespace,
-            final Package theReferenceLibraryNamespace) {
-        final String qualifiedNameOfTheSubsetElement = getQualifiedName(theSubsetElement);
-        final String qualifiedNameOfTheSubsetNamespace = getQualifiedName(theSubsetNamespace);
-        final String qualifiedNameOfTheReferenceLibraryNamespace = getQualifiedName(theReferenceLibraryNamespace);
-        final String qualifiedNameOfTheReferenceLibraryElement = qualifiedNameOfTheReferenceLibraryNamespace
-                + qualifiedNameOfTheSubsetElement.replace(qualifiedNameOfTheSubsetNamespace, "");
-        return qualifiedNameOfTheReferenceLibraryElement;
+    private Element findNamedElement(final Package inTheNamespace, final Iterable<Element> withThePath) {
+        // foreach path element, look for an element in the namespace with either a matching NIEMName, a matching name or, if
+        // the path element ends with 'Type', the name without the 'Type' suffix
+        Element nextNamespaceElement = inTheNamespace;
+        for (final Element nextPathElement : withThePath) {
+            final Element match = findMatching(nextPathElement, nextNamespaceElement);
+            if (match == null) {
+                return null;
+            }
+            nextNamespaceElement = match;
+        }
+        return nextNamespaceElement;
+    }
+
+    private Element findMatching(final Element pimElement, final Element inTheReferenceLibrary) {
+        for (final Element member : EcoreUtil.<Element> getObjectsByType(inTheReferenceLibrary.getOwnedElements(),
+                pimElement.eClass())) {
+            if (namesMatch(member, pimElement)) {
+                return member;
+            }
+        }
+        return null;
     }
 }

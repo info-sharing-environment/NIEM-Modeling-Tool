@@ -12,10 +12,9 @@ package org.search.niem.uml.search.ui;
 
 import static java.util.Arrays.asList;
 import static org.search.niem.uml.merge.NamespaceMergeUtil.findEquivalent;
-import static org.search.niem.uml.util.EcoreExt.getEClass;
+import static org.search.niem.uml.merge.NamespaceMergeUtil.findMatching;
 import static org.search.niem.uml.util.NIEMUmlExt.getSubstitutionGroupName;
 import static org.search.niem.uml.util.NIEMUmlExt.isReference;
-import static org.search.niem.uml.util.UMLExt.getName;
 import static org.search.niem.uml.util.UMLExt.getOwner;
 
 import java.util.ArrayList;
@@ -137,7 +136,7 @@ final class NiemReferencesSelectionDialog extends NiemCheckedTreeSelectionDialog
             if (theEquivalentOwnerInThePIM == null) {
                 continue;
             }
-            if (theEquivalentOwnerInThePIM.getMember(getName(visibleElement), false, getEClass(visibleElement)) != null) {
+            if (findMatching(visibleElement, theEquivalentOwnerInThePIM) != null) {
                 existingItems.add(item);
             }
         }
@@ -378,7 +377,7 @@ final class NiemReferencesSelectionDialog extends NiemCheckedTreeSelectionDialog
     }
 
     private static final class TreeViewerItemProviderAdapterFactory extends NamespaceDecoratingItemProviderAdapterFactory
-            implements IAdaptable {
+    implements IAdaptable {
 
         final UncheckedElementsProvider delegate;
 
@@ -505,7 +504,7 @@ final class NiemReferencesSelectionDialog extends NiemCheckedTreeSelectionDialog
         }
 
         private static final class TreeViewerEnumerationLiteralItemProvider extends
-                SearchResultsEnumerationLiteralItemProvider {
+        SearchResultsEnumerationLiteralItemProvider {
 
             public TreeViewerEnumerationLiteralItemProvider(final TreeViewerItemProviderAdapterFactory adapterFactory) {
                 super(adapterFactory);

@@ -23,6 +23,7 @@ import static org.search.niem.uml.util.NIEMUmlExt.findNearestNiemNamespacePackag
 import static org.search.niem.uml.util.NIEMUmlExt.getTargetNamespace;
 import static org.search.niem.uml.util.NIEMUmlExt.isNiemNamespace;
 import static org.search.niem.uml.util.NIEMUmlExt.isXmlPrimitiveType;
+import static org.search.niem.uml.util.NIEMUmlExt.namesMatch;
 import static org.search.niem.uml.util.UMLExt.getBody;
 import static org.search.niem.uml.util.UMLExt.getClients;
 import static org.search.niem.uml.util.UMLExt.getGeneral;
@@ -35,6 +36,7 @@ import static org.search.niem.uml.util.UMLExt.isStereotypeApplication;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
 
 import org.apache.commons.lang.ObjectUtils;
@@ -89,7 +91,7 @@ public class NamespaceMergeUtil {
                     inThePIM);
             return equivalentStereotypeApplication;
         }
-        if (!isBlank(UMLExt.getName(referenceLibraryElement)) && theNameIsUnique((NamedElement) referenceLibraryElement)) {
+        if (!isBlank(UMLExt.getName(referenceLibraryElement))) {
             final NamedElement ne = (NamedElement) referenceLibraryElement;
             if (theNameIsUnique(ne)) {
                 return findEquivalentNamedElement(ne, inThePIM);
@@ -102,7 +104,7 @@ public class NamespaceMergeUtil {
         return findImmediatelyContainedEquivalent(referenceLibraryElement, inTheEquivalentParent, inThePIM);
     }
 
-    private static <T extends NamedElement> T findEquivalentNamedElement(final NamedElement referenceLibraryElement,
+    private static <T extends EObject> T findEquivalentNamedElement(final NamedElement referenceLibraryElement,
             final Package inThePIM) {
         // first find the target namespace of the referenceLibraryElement
         final Package namespaceInTheReferenceLibrary = findNearestNiemNamespacePackage(referenceLibraryElement
@@ -110,31 +112,44 @@ public class NamespaceMergeUtil {
         if (namespaceInTheReferenceLibrary == null) {
             return null;
         }
-        // then strip off the qualified path up to the namespace package qualified name - this is the relative path to the
-        // named element
-        final String referenceLibraryRelativeName = referenceLibraryElement.getQualifiedName().substring(
-                namespaceInTheReferenceLibrary.getQualifiedName().length());
-
         // find the Package with the same targetNamespace in the PIM
         final Package namespaceInThePIM = findPackageWithTargetNamespace(inThePIM,
                 getTargetNamespace(namespaceInTheReferenceLibrary));
         if (namespaceInThePIM == null) {
             return null;
         }
-        // get the qualified name of the equivalent target namespace in the PIM
-        // append the relative path to the named element to the equivalent target namespace qualified name
-        final String qualifiedName = namespaceInThePIM.getQualifiedName() + referenceLibraryRelativeName;
+        final LinkedList<Element> pathToReferenceLibraryElement = new LinkedList<>();
+        NamedElement next = referenceLibraryElement;
+        while (next != namespaceInTheReferenceLibrary) {
+            pathToReferenceLibraryElement.addFirst(next);
+            next = next.getNamespace();
+        }
+        return findNamedElement(namespaceInThePIM, pathToReferenceLibraryElement);
+    }
 
-        // lookup the named element in the PIM
-        final Collection<T> matches = findNamedElements(inThePIM.eResource(), qualifiedName, false,
-                referenceLibraryElement.eClass());
-        if (matches.isEmpty()) {
-            return null;
+    public static Element findMatching(final EObject referenceLibraryElement, final Element inTheNamespace) {
+        for (final Element member : EcoreUtil.<Element> getObjectsByType(inTheNamespace.getOwnedElements(),
+                referenceLibraryElement.eClass())) {
+            if (namesMatch(referenceLibraryElement, member)) {
+                return member;
+            }
         }
-        if (matches.size() > 1) {
-            Activator.INSTANCE.log("Ambiguous matches found for element " + qualifiedName);
+        return null;
+    }
+
+    @SuppressWarnings("unchecked")
+    private static <T extends EObject> T findNamedElement(final Package inTheNamespace, final Iterable<Element> withThePath) {
+        // foreach path element, look for an element in the namespace with either a matching NIEMName, a matching name or, if
+        // the path element ends with 'Type', the name without the 'Type' suffix
+        Element nextNamespaceElement = inTheNamespace;
+        for (final Element nextPathElement : withThePath) {
+            final Element match = findMatching(nextPathElement, nextNamespaceElement);
+            if (match == null) {
+                return null;
+            }
+            nextNamespaceElement = match;
         }
-        return matches.iterator().next();
+        return (T) nextNamespaceElement;
     }
 
     private static Package findPackageWithTargetNamespace(final Package inThePackage, final String targetNamespace) {
@@ -300,7 +315,7 @@ public class NamespaceMergeUtil {
             return areEqual(getTargetNamespace((Element) aReferenceLibraryElement),
                     getTargetNamespace((Element) aPIMElement));
         }
-        return areEqual(UMLExt.getName(aReferenceLibraryElement), UMLExt.getName(aPIMElement));
+        return namesMatch(aReferenceLibraryElement, aPIMElement);
     }
 
     private static boolean areEqual(final Object left, final Object right) {
