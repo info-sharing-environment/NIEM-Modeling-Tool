@@ -17,8 +17,6 @@ import static org.apache.commons.lang.StringUtils.isNotBlank;
 import java.util.Collection;
 import java.util.List;
 
-import org.eclipse.uml2.uml.Element;
-
 public class NiemValidator {
 
     private static final Collection<String> NAMESPACE_QUALIFIED_NAMES = asList(NIEMTypes.Namespace,
@@ -68,10 +66,6 @@ public class NiemValidator {
                 return false;
             }
         }
-        return true;
-    }
-
-    public boolean isValidNiemName(final Element e) {
         return true;
     }
 }

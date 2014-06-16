@@ -10,6 +10,8 @@
  */
 package org.search.niem.uml.evl.validation;
 
+import static org.search.niem.uml.search.ui.ReferenceLibrarySearchUtil.findTheReferenceLibraryEquivalentOf;
+
 import org.eclipse.uml2.uml.Element;
 import org.search.niem.uml.evl.Activator;
 import org.search.niem.uml.util.NIEMUmlExt;
@@ -31,5 +33,9 @@ public class NiemValidationTool extends NiemValidator {
 
     public boolean isInReferenceLibrarySubset(final Element e) {
         return NIEMUmlExt.isInReferenceLibrarySubset(e);
+    }
+
+    public boolean isValidNiemName(final Element e) {
+        return findTheReferenceLibraryEquivalentOf(e) != null;
     }
 }

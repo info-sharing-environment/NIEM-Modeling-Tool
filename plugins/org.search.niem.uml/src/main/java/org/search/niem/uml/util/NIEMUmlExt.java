@@ -336,8 +336,8 @@ public class NIEMUmlExt {
 
     private static String getXSDElementQualifiedName(final Property p) {
         return new StringBuilder()
-                .append(org.search.niem.uml.library.Activator.INSTANCE.toPrefix(findTargetNamespace(p.getNearestPackage())))
-                .append(':').append(UMLExt.getName(p)).toString();
+        .append(org.search.niem.uml.library.Activator.INSTANCE.toPrefix(findTargetNamespace(p.getNearestPackage())))
+        .append(':').append(UMLExt.getName(p)).toString();
     }
 
     public static boolean isXmlPrimitiveType(final EObject e) {
@@ -366,18 +366,13 @@ public class NIEMUmlExt {
     }
 
     public static boolean namesMatch(final EObject aReferenceLibraryElement, final EObject aPIMElement) {
-        return niemNameMatches(aPIMElement, aReferenceLibraryElement)
-                || namesMatch(UMLExt.getName(aPIMElement), UMLExt.getName(aReferenceLibraryElement));
-    }
-
-    private static boolean niemNameMatches(final EObject pimElement, final EObject referenceLibraryElement) {
-        if (hasNiemName(pimElement)) {
-            final String niemName = getReferenceNiemName((Element) pimElement);
+        if (hasNiemName(aPIMElement)) {
+            final String niemName = getReferenceNiemName((Element) aPIMElement);
             if (!isBlank(niemName)) {
-                return namesMatch(niemName, UMLExt.getName(referenceLibraryElement));
+                return namesMatch(niemName, UMLExt.getName(aReferenceLibraryElement));
             }
         }
-        return false;
+        return namesMatch(UMLExt.getName(aPIMElement), UMLExt.getName(aReferenceLibraryElement));
     }
 
     private static boolean namesMatch(final String pimElementName, final String referenceLibraryElementName) {
