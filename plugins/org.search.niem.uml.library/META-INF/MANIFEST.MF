@@ -8,7 +8,7 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-Activator: org.search.niem.uml.library.Activator$Implementation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.common;bundle-version="[2.9.0,3.0.0)",
- com.google.guava;bundle-version="[12.0.0,13.0.0)",
+ com.google.guava;bundle-version="[12.0.0,16.0.0)",
  org.search.niem.uml.resources;bundle-version="[1.0.0,1.1.0)"
 Bundle-Localization: plugin
 Bundle-ActivationPolicy: lazy
