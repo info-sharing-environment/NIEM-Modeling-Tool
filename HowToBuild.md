@@ -16,13 +16,14 @@ How To Import The NIEM Modeling Tool Into Eclipse
     -Xmx1024m
 
 1. Add the following update sites through the update site manager:
+    http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/kepler/
     http://download.eclipse.org/epsilon/updates/
-    http://download.eclipse.org/tools/orbit/downloads/drops/R20130827064939/repository/
+    http://download.eclipse.org/tools/orbit/downloads/drops/R20140114142710/repository/
 
 2. Select "--All Available Sites--" from the "Work with:" dropdown and install the following features:
     + Collaboration
      - Eclipse Git Team Provider
-     - m2e - Maven Integratio for Eclipse
+     - m2e - Maven Integration for Eclipse
     + Eclipse Java Development Tools
      - Eclipse Java Development Tools
     + Eclipse Plug-in Development Tools
@@ -41,8 +42,8 @@ How To Import The NIEM Modeling Tool Into Eclipse
      - EMF Model Transaction SDK
      - EMF Validation Framework SDK
      - Graphical Modeling Framework (GMF) Notation SDK
-     - Graphical Modeling Framework (GMF) Runtime
-     - Graphical Modeling Framework (GMF) Tooling
+     - Graphical Modeling Framework (GMF) Runtime SDK
+     - Graphical Modeling Framework (GMF) Tooling SDK
      - OCL End User SDK
      - Papyrus UML
      - QVT Operational SDK
