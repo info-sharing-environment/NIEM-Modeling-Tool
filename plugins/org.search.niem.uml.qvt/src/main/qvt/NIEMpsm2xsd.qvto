@@ -2676,7 +2676,7 @@ query UML::Classifier::isComplexTypeSimpleContent():Boolean{
 }
 
 query String::startsWithXmlSchemasFolder():String {
-	if(self.indexOf(xmlSchemasFolder) > 0) then {
+	if(self.indexOf('/'+xmlSchemasFolder+'/') > 0) then {
 	  return xmlSchemasFolder+'/'+self.substringAfter('/'+xmlSchemasFolder+'/');
 	} endif;
 	return self;
